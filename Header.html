@@ -1,0 +1,77 @@
+<!-- <nav class="navbar navbar-default" role="navigation" data-ng-controller="HeaderController"> -->
+<body>
+  <div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>     
+    </div>             
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="account">
+      <ul class="navbar-nav nav">
+        <li data-ng-repeat="item in menus.main" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" class="join add">
+          <a mean-token="item.link" ui-sref='{{item.link}}' class="add">
+            {{item.title}}
+          </a> 
+        </li>
+        <ul class="userlog" data-ng-show="global.authenticated">
+          <li class="pull-right">
+            <a href="/logout">
+              <span class="glyphicon glyphicon-log-out logouter"></span>
+            </a>
+          </li>
+
+          <li class="pull-right">
+            <a href="/logout" class="login hovercraft2">
+              <span class="glyphicon glyphicon-cog"></span>
+              Preferences
+            </a>
+          </li>
+
+          <li class="pull-right">
+            <a href="/logout" class="login hovercraft2">
+              <span class="glyphicon glyphicon-user"></span>
+              Profile
+            </a>
+          </li>
+
+          <li class="pull-right">
+            <a href="/orders" class="login hovercraft2">
+              <span class="glyphicon glyphicon-th-list"></span>
+              Orders
+            </a>
+          </li>
+
+          <li class="pull-right">
+            <a href="/orders" class="login hovercraft2">
+              <span class="glyphicon glyphicon-home"></span>
+              Home
+            </a>
+          </li>                        
+        </ul>   
+      </ul>
+
+      <div class="account">
+        <div class="text-edit">
+          <div class="pull-right" data-ng-show="global.authenticated" mean-token-editable></div>
+          <div class="pull-right" data-ng-show="global.authenticated" mean-translate>
+          </div>
+        </div>
+        <ul class="navbar-nav nav" data-ng-hide="global.authenticated">
+          <li><a ui-sref='auth.login' class="login">Join / Login</a>
+          </li>
+          <li><a ui-sref='learn' class="login">Learn</a>
+          </li>
+          <li><a ui-sref='auth.login' class="login">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+        <!-- </nav> -->
