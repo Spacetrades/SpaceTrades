@@ -1,0 +1,162 @@
+/* SpaceTrades Styling Sheet */
+
+/****** GLOBAL ******/
+
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #404040;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:link {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:active {
+    color: #404040;
+    text-decoration: none;
+}
+
+
+/****** GLOBAL END ******/
+
+/****** HEADER ******/
+
+.mainnav {
+    color: #404040;
+    background-color: #f8504b;
+    width: 100%;
+    text-align: right;
+}
+
+.mainnav ul {
+    display: inline-block;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+}
+
+.mainnav ul li a {
+    color: #404040;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px;
+    font-weight: 700;
+
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: #404040;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
+/** Field Area **/
+
+
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: #404040;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+
+}
+
+.search {
+    height: 30px;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+}
+
+
+/** Search Field End **/
+
+
+
+
+/****** HEADER END ******/
+
+/****** FOOTER ******/
+
+.footitems {
+    padding: 0;
+    margin: 0;
+}
+
+.foot ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 2px 0 2px;
+    margin: 0 5px 0 5px;
+}
+
+.foot ul p {
+    padding: 0 2px 0 2px;
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: 'sans-serif';
+}
+
+
+
+
+
+/****** FOOTER END ******/
+
+/****** HOMEPAGE ******/
+
+
+
+/****** HOMEPAGE END ******/
