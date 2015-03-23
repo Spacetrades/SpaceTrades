@@ -6,4 +6,4 @@ https://trello.com/b/IETMH34k/meteor-development
 https://travis-ci.org/chackerian/SpaceTrades
 </br>
 Velocity - Testing
-
+https://help.github.com/categories/collaborating/
