@@ -42,8 +42,37 @@ a:active {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
 
 /****** GLOBAL END ******/
+
+/****** GLOBAL CLASSES END ******/
+
+.div {
+    margin: 0 20% 0 20%;
+}
+
+.email {
+    color: #f8504b;
+    font-weight: 700;
+}
+
+/****** GLOBAL CLASSES END ******/
 
 /****** HEADER ******/
 
@@ -146,7 +175,6 @@ a:active {
     margin: 0 0 5px 0;
     font-size: 0.7rem;
     font-weight: bold;
-    font-family: 'sans-serif';
 }
 
 
@@ -160,3 +188,57 @@ a:active {
 
 
 /****** HOMEPAGE END ******/
+
+/****** FAQ ******/
+
+.faq {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.faq ul {
+    padding: 0;
+}
+
+.faq ul li ul li p {
+    width: 70%;
+}
+
+.faqsec {
+    margin-left: 1rem;
+}
+
+.faqheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqpar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+    line-height: 1.5rem;
+}
+
+.faqinfo {
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+/****** FAQ END ******/
+
+/****** SAFETY ******/
+
+
+
+
+
+
+/****** SAFETY END ******/
+
+
+
+
