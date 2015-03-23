@@ -1,5 +1,5 @@
 # SpaceTrades
-Sell Locally
+##Sell Locally
 </br>
 https://trello.com/b/IETMH34k/meteor-development
 </br>
