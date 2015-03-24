@@ -85,6 +85,7 @@ h4 {
 
 .mainnav ul {
     display: inline-block;
+    margin-top: 15px;
 }
 
 .mainnav ul li {
@@ -96,7 +97,7 @@ h4 {
 .mainnav ul li a {
     color: #404040;
     padding: 8px 12px 8px 12px;
-    margin: 0 3px 0 3px;
+    margin: 0 3px 0 3px !important;
     font-weight: 700;
 
 }
