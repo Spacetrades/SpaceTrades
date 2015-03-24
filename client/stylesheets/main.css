@@ -2,6 +2,16 @@
 
 /****** GLOBAL ******/
 
+.card {
+    display: inline-block !important;
+    float: right;
+    margin: 2em;
+    background-color: #f3f3f3;
+}
+
+.listing-title-inner{
+    color: #f8504b;
+}
 
 html, body {
     min-height: 100%;
@@ -15,6 +25,8 @@ body {
 
 footer {
     text-align: center;
+    display: inline-block;
+    margin-left: 30%;
 }
 
 a {
@@ -140,13 +152,18 @@ h4 {
 }
 
 .search {
-    height: 30px;
+    height: 3.5em;
     width: 40%;
     background: #fff;
     border: 1px solid #d3d3d3;
     font-size: 0.8rem;
     color: #262626;
     padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: #db560d !important;
 }
 
 
@@ -227,6 +244,10 @@ h4 {
 .faqinfo {
     text-align: center;
     margin: 3rem 0 0 0;
+}
+
+::selection {
+    background: yellow;
 }
 
 /****** FAQ END ******/
