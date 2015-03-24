@@ -9,3 +9,6 @@ autopublish
 insecure
 mike:mocha
 accounts-facebook
+mdg:geolocation
+mdg:camera
+iron:router
