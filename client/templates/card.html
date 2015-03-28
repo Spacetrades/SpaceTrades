@@ -1,44 +1,46 @@
 <template name="card">
-	<div class="card">
-		<div class="thumbnail">
-			<a ng-href="#!/{{shoe}}">
-			<img class="hovercraft" src="/public/images/retro8.jpg" alt="shoe">
-			</a>     
-			<div class="caption">
-				<div class="row white">
-					<div class="col-md-9">
-						<a ng-href="#!/{{shoe}}">
-							<h2 class="listing-title-inner">Air Jordan Retro 8 {{shoe}}</h2>
-						</a>   
+	<li>
+		<div class="card">
+			<div class="thumbnail">
+				<a ng-href="#!/{{shoe}}">
+				<img class="hovercraft" src="/public/images/retro8.jpg" alt="shoe">
+				</a>     
+				<div class="caption">
+					<div class="row white">
+						<div class="col-md-9">
+							<a ng-href="#!/{{shoe}}">
+								<h2 class="listing-title-inner">Air Jordan Retro 8 {{shoe}}</h2>
+							</a>   
+						</div>
+						<div class="col-md-3">
+							<span class="money">$310 {{price}}</span>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<span class="money">$310 {{price}}</span>
+					<!-- <span ng-show="enabled">OR</span> 
+					<a ng-href="#!/{{shoe}}" ng-show="swap">Swap</a>  -->
+					<div class="row white">    
+						<div class="col-md-3">
+							<b class="size">'10 {{size}}</b> 
+						</div>
+						<div class="col-md-9 text-right">  
+							<b class="location">Manhattan, New York {{location}}</b>
+							<!-- We want some Google Api location stuff here -->
+						</div>
+					</div>  
+					<div class="row action white">
+						<div class="col-md-6">
+							<p class="text-left">    
+								<a href="#" class="btn btn-warning" role="button">Save</a>
+							</p>
+						</div>
+						<div class="col-md-6">
+							<p>
+								<a ng-href="#!/user/{{username}}" class="username pull-right">George {{username}}</a>
+							</p>  
+						</div>
 					</div>
-				</div>
-				<!-- <span ng-show="enabled">OR</span> 
-				<a ng-href="#!/{{shoe}}" ng-show="swap">Swap</a>  -->
-				<div class="row white">    
-					<div class="col-md-3">
-						<b class="size">'10 {{size}}</b> 
-					</div>
-					<div class="col-md-9 text-right">  
-						<b class="location">Manhattan, New York {{location}}</b>
-						<!-- We want some Google Api location stuff here -->
-					</div>
-				</div>  
-				<div class="row action white">
-					<div class="col-md-6">
-						<p class="text-left">    
-							<a href="#" class="btn btn-warning" role="button">Save</a>
-						</p>
-					</div>
-					<div class="col-md-6">
-						<p>
-							<a ng-href="#!/user/{{username}}" class="username pull-right">George {{username}}</a>
-						</p>  
-					</div>
-				</div>
-			</div>   
+				</div>   
+			</div>
 		</div>
-	</div>
+	</li>
 </template>
