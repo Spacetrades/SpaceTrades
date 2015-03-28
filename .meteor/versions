@@ -42,6 +42,7 @@ less@1.0.13
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
+matteodem:easy-search@1.5.2
 matthew:foundation5-sass@1.0.0
 mdg:camera@1.1.4
 mdg:geolocation@1.0.2
@@ -52,6 +53,7 @@ minifiers@1.1.4
 minimongo@1.0.7
 mobile-status-bar@1.0.3
 mongo@1.1.0
+mongo-livedata@1.0.8
 npm-bcrypt@0.7.8_1
 oauth@1.1.4
 oauth2@1.1.3
