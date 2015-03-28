@@ -1,17 +1,13 @@
-/* SpaceTrades Styling Sheet */
+/* SpaceTrades Official Styling Sheet */
+
+/*****************************************************************
+    CRUCIAL
+******************************************************************/
+/**                 INCLUDES THE FOLLOWING
+            GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
+
 
 /****** GLOBAL ******/
-
-.card {
-    display: inline-block !important;
-    float: right;
-    margin: 2em;
-    background-color: #f3f3f3;
-}
-
-.listing-title-inner{
-    color: #f8504b;
-}
 
 html, body {
     min-height: 100%;
@@ -25,8 +21,6 @@ body {
 
 footer {
     text-align: center;
-    display: inline-block;
-    margin-left: 30%;
 }
 
 a {
@@ -73,18 +67,19 @@ h4 {
 
 /****** GLOBAL END ******/
 
+
 /****** GLOBAL CLASSES END ******/
 
 .div {
-    margin: 0 20% 0 20%;
+    margin: 0 15% 0 15%;
 }
 
 .email {
     color: #f8504b;
-    font-weight: 700;
 }
 
 /****** GLOBAL CLASSES END ******/
+
 
 /****** HEADER ******/
 
@@ -111,7 +106,6 @@ h4 {
     padding: 8px 12px 8px 12px;
     margin: 0 3px 0 3px !important;
     font-weight: 700;
-
 }
 
 .mainnav ul li a:hover {
@@ -132,7 +126,6 @@ h4 {
 
 /** Field Area **/
 
-
 .logo {
     text-align: center;
     font-size: 4rem;
@@ -148,7 +141,6 @@ h4 {
     margin-right: 5px;
     border: 1px solid #d3d3d3;
     padding: 6px 8px 8px 8px;
-
 }
 
 .search {
@@ -166,19 +158,18 @@ h4 {
     border-color: #db560d !important;
 }
 
-
 /** Search Field End **/
 
-
-
-
 /****** HEADER END ******/
-
-/****** FOOTER ******/
 
 .footitems {
     padding: 0;
     margin: 0;
+}
+
+.foot {
+    padding: 0;
+        text-align: center !important;
 }
 
 .foot ul li {
@@ -195,17 +186,64 @@ h4 {
     font-weight: bold;
 }
 
-
-
-
-
 /****** FOOTER END ******/
 
-/****** HOMEPAGE ******/
+
+/*****************************************************************
+    CRUCIAL END
+******************************************************************/
 
 
+/*****************************************************************
+    HELP CENTER
+******************************************************************/
+/**                 INCLUDES THE FOLLOWING
+    HELPNAV | HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
 
-/****** HOMEPAGE END ******/
+
+/****** HELP NAV ******/
+
+.helpnav ul {
+    display: inline-block;
+}
+
+.helpnav ul li {
+    display: inline-block;
+}
+
+.helpnav ul li a {
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.helpnav ul li a:hover {
+    background-color: #f8504b;
+    color: #fff;
+}
+
+.helpiteml {
+    position: right;
+}
+
+
+/****** HELP NAV END ******/
+
+
+/****** HELP ******/
+/****** HELP END ******/
+
+
+/****** ABOUT ******/
+/****** ABOUT END ******/
+
+
+/****** BUYING ******/
+/****** BUYING END ******/
+
+
+/****** SELLING ******/
+/****** SELLING END ******/
+
 
 /****** FAQ ******/
 
@@ -246,21 +284,39 @@ h4 {
     margin: 3rem 0 0 0;
 }
 
-::selection {
-    background: yellow;
-}
-
 /****** FAQ END ******/
 
 /****** SAFETY ******/
-
-
-
-
-
-
 /****** SAFETY END ******/
 
+
+/****** PRIVACY & TERMS ******/
+/****** PRIVACY & TERMS END ******/
+
+
+/****** CONTACT ******/
+/****** CONTACT END ******/
+
+
+/****************************************************
+    HELP CENTER END
+****************************************************/
+
+
+/****** HOMEPAGE ******/
+
+.card {
+    display: inline-block !important;
+    float: right;
+    margin: 2em;
+    background-color: #f3f3f3;
+}
+
+.listing-title-inner{
+    color: #f8504b;
+}
+
+/****** HOMEPAGE END ******/
 
 
 
