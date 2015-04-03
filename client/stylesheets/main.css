@@ -253,6 +253,16 @@ h4 {
 
 
 /****** ABOUT ******/
+
+.aboutdiv {
+    text-align: center;
+}
+
+.aboutpar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
 /****** ABOUT END ******/
 
 
