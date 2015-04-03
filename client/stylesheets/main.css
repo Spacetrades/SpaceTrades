@@ -371,7 +371,7 @@ h4 {
 .contactsubmit input {
     padding: 8px 15px;
     font-size: 1rem;
-    color: #404040;
+    color: #f8504b;
     background-color: #fff;
     border: none;
     border: 1px solid #f8504b;
@@ -406,5 +406,33 @@ h4 {
 /****** HOMEPAGE END ******/
 
 
+/****** ERROR 404 ******/
+
+.errordiv {
+    text-align: center;
+}
+
+.errorm {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.errorh {
+    margin: 2rem 0 2rem 0;
+}
+
+.errorh a {
+    padding: 8px 12px;
+    color: #f8504b;
+    background-color: #fff;
+    border: 1px solid #f8504b;
+}
+
+.errorh a:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
+/****** ERROR 404 END ******/
 
 
