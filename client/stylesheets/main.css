@@ -1,4 +1,4 @@
-/* SpaceTrades Official Styling Sheet */
+/* SpaceTrades Styling Sheet */
 
 /*****************************************************************
     CRUCIAL
@@ -50,6 +50,7 @@ a:active {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 h2 {
@@ -122,6 +123,10 @@ h4 {
 .navbox a:hover {
     background-color: #fff !important;
     color: #404040 !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
 }
 
 /** Field Area **/
@@ -197,18 +202,15 @@ h4 {
 /*****************************************************************
     HELP CENTER
 ******************************************************************/
-/**                 INCLUDES THE FOLLOWING
-    HELPNAV | HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
+/**                 INCLUDES THE FOLLOWING PAGES
+    HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 /****** HELP NAV ******/
 
-.helpnav ul {
-    display: inline-block;
-}
-
 .helpnav ul li {
     display: inline-block;
+    font-size: 1rem;
 }
 
 .helpnav ul li a {
@@ -221,24 +223,27 @@ h4 {
     color: #fff;
 }
 
+.helpiteml {
+    margin-top: -2.8rem;
+    text-align: right;
+}
+
+.helplogo {
+    color: #f8504b;
+}
 
 /****** HELP NAV END ******/
 
 
 /****** HELP ******/
+
+
+
 /****** HELP END ******/
 
 
 /****** ABOUT ******/
 /****** ABOUT END ******/
-
-
-/****** BUYING ******/
-/****** BUYING END ******/
-
-
-/****** SELLING ******/
-/****** SELLING END ******/
 
 
 /****** FAQ ******/
@@ -313,6 +318,7 @@ h4 {
 }
 
 /****** HOMEPAGE END ******/
+
 
 
 
