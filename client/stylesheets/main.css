@@ -350,6 +350,38 @@ h4 {
 
 
 /****** CONTACT ******/
+
+.contactdiv {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.contactname input, .contactemail input {
+   width: 30%;
+   height: 20px;
+   padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #404040;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #f8504b;
+}
+
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
 /****** CONTACT END ******/
 
 
