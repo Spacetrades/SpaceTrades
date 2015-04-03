@@ -1,0 +1,131 @@
+<template name="addlisting">
+<section data-ng-controller="ArticlesController" class="creation">
+
+  <!-- Badges and alerts on home-->
+  <h1>Add Listing</h1>
+  <div class="row selector2">
+    <div class="col-md-12">
+      <label>Choose A Category</label>
+      <select ng-model="checked" ng-options="item.name for item in items">
+      </select>
+    </div> 
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="checked-name">{{checked.name}}</h2>
+    </div>
+  </div>
+  <div class="row selector2" ng-if="checked.name=='Shoes' ">
+    <div class="col-md-12">
+      <label>Choose an Item</label>
+      <select ng-model="category" ng-options="shoe.name for shoe in shoes">
+      </select>
+    </div> 
+  </div>
+
+  <div class="row selector2" ng-if="checked.name=='Electronics' ">
+    <div class="col-md-12">
+      <label>Choose an Item</label>
+      <select ng-model="category" ng-options="electronic.name for electronic in electronics">
+      </select>
+    </div> 
+  </div>
+
+  <div class="row selector2" ng-if="checked.name == 'Clothing' ">
+    <div class="col-md-12">
+      <label>Choose an Item</label>
+      <select ng-model="category" ng-options="clothing.name for clothing in clothings">
+      </select>
+    </div> 
+  </div>
+
+  <form name="articleForm" class="form-horizontal" role="form" data-ng-submit="create(articleForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid }" ng-if="checked.name">
+      <h2>Listing Title</h2>
+      <div class="col-md-8">
+        <input name="title" type="text" class="form-control" data-ng-model="title" id="title" placeholder="The retail name of your item" required>
+        <div ng-show="submitted && articleForm.title.$invalid" class="help-block">
+          <p ng-show="articleForm.title.$error.required">Title is required</p>
+        </div> 
+      </div>
+    </div>  
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid }" ng-if="checked.name">
+      <h2>Price</h2>
+      <div class="col-md-4">
+      <span class="dollar">$</span>
+      <input name="title" type="number" class="form-control moneygreen right-right" data-ng-model="price" id="title" placeholder="The price your asking for" required>
+        <div ng-show="submitted && articleForm.title.$invalid" class="help-block">
+          <p ng-show="articleForm.title.$error.required">Price is required</p>
+        </div> 
+      </div>  
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid } " ng-if="checked.name">
+      <h2>Size</h2>
+      <label>Choose an Item</label>
+      <select ng-model="category" ng-options="size.name for size in sizes">
+      </select>  
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.title.$invalid }" ng-if="checked.name">
+      <h2>Location</h2>
+      <h3>City, State</h3>
+      <div class="col-md-9">
+        <input name="title" type="text" class="form-control" data-ng-model="location" id="title" placeholder="The general location you can meetup" required>
+        <div ng-show="submitted && articleForm.title.$invalid" class="help-block">
+          <p ng-show="articleForm.title.$error.required">Size is required</p>
+        </div> 
+      </div>  
+    </div>  
+    <input type="file" flow-btn flow-directory />
+    Image
+    <!--   <span flow-btn>Upload Image</span> -->
+
+    <div ng-controller="DatepickerDemoCtrl">
+      <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+ <!--    <h4>Inline</h4>
+    <div style="display:inline-block; min-height:290px;">
+      <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+    </div> -->
+
+    <h4>Date</h4>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label>Format:</label> <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+      </div>
+    </div>
+    <hr />
+    <button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="dt = '2009-08-24'">2009-08-24</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>
+    <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" tooltip="After today restriction">Min date</button>
+  </div>
+
+  <div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.content.$invalid }">
+    <label mean-token="'create-content'" for="content" class="col-md-3 control-label">Content</label>
+    <div class="col-md-9">
+      <textarea name="content" data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content" class="form-control" required></textarea>
+      <div ng-show="submitted && articleForm.content.$invalid" class="help-block">
+        <p ng-show="articleForm.content.$error.required">Content is required</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-offset-3 col-md-9">
+      <button mean-token="'create-submit'" type="submit" class="btn btn-info">Submit</button>
+    </div>
+  </div>
+</form>
+</section>
+</template>
