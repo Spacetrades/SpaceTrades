@@ -237,7 +237,17 @@ h4 {
 
 /****** HELP ******/
 
+.helpdiv {
+    text-align: center;
+}
 
+.helpwel {
+    font-weight: 400;
+}
+
+.helpimg {
+    width: 30%;
+}
 
 /****** HELP END ******/
 
