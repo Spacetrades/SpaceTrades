@@ -273,11 +273,6 @@ h4 {
 
 /****** FAQ ******/
 
-.faq {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
 .faq ul {
     padding: 0;
 }
@@ -332,6 +327,25 @@ h4 {
 
 
 /****** PRIVACY & TERMS ******/
+
+.termssec {
+    margin-left: 1rem;
+}
+
+.termsheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.termspar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
 /****** PRIVACY & TERMS END ******/
 
 
