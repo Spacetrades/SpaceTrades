@@ -308,6 +308,21 @@ h4 {
 /****** FAQ END ******/
 
 /****** SAFETY ******/
+
+.safetyheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.safetypar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
 /****** SAFETY END ******/
 
 
