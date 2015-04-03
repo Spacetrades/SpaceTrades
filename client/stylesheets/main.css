@@ -1,4 +1,4 @@
-/* SpaceTrades Official Styling Sheet */
+/* SpaceTrades Styling Sheet */
 
 /*****************************************************************
     CRUCIAL
@@ -50,6 +50,7 @@ a:active {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 h2 {
@@ -122,6 +123,10 @@ h4 {
 .navbox a:hover {
     background-color: #fff !important;
     color: #404040 !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
 }
 
 /** Field Area **/
@@ -197,18 +202,15 @@ h4 {
 /*****************************************************************
     HELP CENTER
 ******************************************************************/
-/**                 INCLUDES THE FOLLOWING
-    HELPNAV | HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
+/**                 INCLUDES THE FOLLOWING PAGES
+    HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 /****** HELP NAV ******/
 
-.helpnav ul {
-    display: inline-block;
-}
-
 .helpnav ul li {
     display: inline-block;
+    font-size: 1rem;
 }
 
 .helpnav ul li a {
@@ -221,32 +223,55 @@ h4 {
     color: #fff;
 }
 
+.helpiteml {
+    margin-top: -2.8rem;
+    text-align: right;
+}
+
+.helplogo {
+    color: #f8504b;
+}
 
 /****** HELP NAV END ******/
 
 
 /****** HELP ******/
+
+.helpdiv {
+    text-align: center;
+}
+
+.helpwel {
+    font-weight: 400;
+}
+
+.helpimg {
+    width: 30%;
+}
+
+.helppar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
 /****** HELP END ******/
 
 
 /****** ABOUT ******/
+
+.aboutdiv {
+    text-align: center;
+}
+
+.aboutpar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
 /****** ABOUT END ******/
 
 
-/****** BUYING ******/
-/****** BUYING END ******/
-
-
-/****** SELLING ******/
-/****** SELLING END ******/
-
-
 /****** FAQ ******/
-
-.faq {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
 
 .faq ul {
     padding: 0;
@@ -283,14 +308,80 @@ h4 {
 /****** FAQ END ******/
 
 /****** SAFETY ******/
+
+.safetyheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.safetypar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
 /****** SAFETY END ******/
 
 
 /****** PRIVACY & TERMS ******/
+
+.termssec {
+    margin-left: 1rem;
+}
+
+.termsheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.termspar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
 /****** PRIVACY & TERMS END ******/
 
 
 /****** CONTACT ******/
+
+.contactdiv {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.contactname input, .contactemail input {
+   width: 30%;
+   height: 20px;
+   padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #404040;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #f8504b;
+}
+
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
 /****** CONTACT END ******/
 
 
@@ -313,6 +404,7 @@ h4 {
 }
 
 /****** HOMEPAGE END ******/
+
 
 
 
