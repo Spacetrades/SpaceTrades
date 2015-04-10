@@ -53,6 +53,10 @@ ul {
     padding: 0;
 }
 
+p {
+    line-height: 1.5rem;
+}
+
 h2 {
     font-size: 1.7rem;
 }
@@ -72,7 +76,7 @@ h4 {
 /****** GLOBAL CLASSES END ******/
 
 .div {
-    margin: 0 15% 0 15%;
+    margin: 3rem 15% 2rem 15%;
 }
 
 .email {
@@ -84,21 +88,24 @@ h4 {
 
 /****** HEADER ******/
 
+/** Home Header Pre **/
 .mainnav {
     color: #404040;
     background-color: #f8504b;
     width: 100%;
     text-align: right;
+    max-height: 50px;
 }
 
 .mainnav ul {
     display: inline-block;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .mainnav ul li {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 0px;
 }
 
@@ -106,7 +113,7 @@ h4 {
     color: #404040;
     padding: 8px 12px 8px 12px;
     margin: 0 3px 0 3px !important;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .mainnav ul li a:hover {
@@ -128,6 +135,44 @@ h4 {
 .navverify {
     margin-right: 0.5rem;
 }
+
+/** Home Header Post **/
+
+.navprofile li img {
+  border-radius: 25%;
+  vertical-align: middle;
+  line-height: 1;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.navprofile li a {
+    border: 1px solid #f8504b;
+}
+
+.navprofile li a:hover {
+    background-color: #f8504b;
+    color: #404040;
+    border: 1px solid #404040;
+}
+
+.navdown:hover {
+    border: 1px solid #f8504b !important;
+}
+
+.navfa:hover {
+    background-color: #f8504b!important;
+    color: #171717 !important;
+}
+
+
+
+
+
+
+/** Header Pre **/
+
+/** Header Post **/
 
 /** Field Area **/
 
@@ -202,8 +247,8 @@ h4 {
 /*****************************************************************
     HELP CENTER
 ******************************************************************/
-/**             INCLUDES THE FOLLOWING PAGES
-    HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
+/**                 INCLUDES THE FOLLOWING PAGES
+    HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 /****** HELP NAV ******/
@@ -246,12 +291,7 @@ h4 {
 }
 
 .helpimg {
-    width: 30%;
-}
-
-.helppar {
-    margin-right: 15%;
-    margin-left: 15%;
+    width: 70%;
 }
 
 /****** HELP END ******/
@@ -297,7 +337,6 @@ h4 {
     margin-bottom: 1.5rem;
     margin-top: 2px;
     margin-left: 3rem;
-    line-height: 1.5rem;
 }
 
 .faqinfo {
@@ -371,7 +410,7 @@ h4 {
 .contactsubmit input {
     padding: 8px 15px;
     font-size: 1rem;
-    color: #f8504b;
+    color: #404040;
     background-color: #fff;
     border: none;
     border: 1px solid #f8504b;
@@ -434,5 +473,3 @@ h4 {
 }
 
 /****** ERROR 404 END ******/
-
-
