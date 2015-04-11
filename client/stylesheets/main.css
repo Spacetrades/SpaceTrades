@@ -148,6 +148,10 @@ h4 {
     margin-bottom: 15.5px !important;
 }
 
+.navcat li a {
+    border: 1px solid #404040;
+}
+
 .navprofile {
     margin-top: 13px !important;
     margin-bottom: 13px !important;
@@ -156,8 +160,6 @@ h4 {
 .navprofile:first-child {
     vertical-align: middle;
 }
-
-
 
 .navprofile li a {
     border: 1px solid #f8504b;
