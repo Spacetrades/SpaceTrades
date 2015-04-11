@@ -157,10 +157,6 @@ h4 {
     margin-bottom: 13px !important;
 }
 
-.navprofile:first-child {
-    vertical-align: middle;
-}
-
 .navprofile li a {
     border: 1px solid #f8504b;
 }
@@ -209,7 +205,7 @@ h4 {
 .navsicon {
     width: 28px;
     height: 28px !important;
-    padding: 4px;
+    padding: 4px 6px;
     border: 1px solid #404040;
     margin-right: 2.5px;
 }
