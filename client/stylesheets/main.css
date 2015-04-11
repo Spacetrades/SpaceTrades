@@ -176,9 +176,14 @@ h4 {
     color: #171717 !important;
 }
 
+.navdown {
+    margin-right: 0.5rem;
+}
+
 .navdown:hover {
-    border: 1px solid #f8504b !important;
+    border: 1px solid #404040 !important;
     color: #fff !important;
+    background-color: #404040 !important;
 }
 
 /** Header Post **/
