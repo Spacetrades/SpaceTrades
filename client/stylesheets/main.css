@@ -148,16 +148,15 @@ h4 {
     margin-bottom: 15.5px !important;
 }
 
+.navcat li a {
+    border: 1px solid #404040;
+}
+
 .navprofile {
     margin-top: 13px !important;
     margin-bottom: 13px !important;
+    margin-right: 0.5rem;
 }
-
-.navprofile:first-child {
-    vertical-align: middle;
-}
-
-
 
 .navprofile li a {
     border: 1px solid #f8504b;
@@ -179,8 +178,9 @@ h4 {
 }
 
 .navdown:hover {
-    border: 1px solid #f8504b !important;
+    border: 1px solid #404040 !important;
     color: #fff !important;
+    background-color: #404040 !important;
 }
 
 /** Header Post **/
@@ -207,7 +207,7 @@ h4 {
 .navsicon {
     width: 28px;
     height: 28px !important;
-    padding: 4px;
+    padding: 4px 6px;
     border: 1px solid #404040;
     margin-right: 2.5px;
 }
