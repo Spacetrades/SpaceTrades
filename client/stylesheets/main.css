@@ -94,7 +94,7 @@ h4 {
     background-color: #f8504b;
     width: 100%;
     text-align: right;
-    max-height: 50px;
+    height: 50px;
 }
 
 .mainnav ul {
@@ -107,6 +107,7 @@ h4 {
     display: inline-block;
     font-size: 0.8rem;
     letter-spacing: 0px;
+    vertical-align: middle;
 }
 
 .mainnav ul li a {
@@ -136,15 +137,27 @@ h4 {
     margin-right: 0.5rem;
 }
 
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
 /** Home Header Post **/
 
-.navprofile li img {
-  border-radius: 25%;
-  vertical-align: middle;
-  line-height: 1;
-  overflow: hidden;
-  margin-right: 8px;
+.navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
 }
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+
 
 .navprofile li a {
     border: 1px solid #f8504b;
@@ -156,8 +169,8 @@ h4 {
     border: 1px solid #404040;
 }
 
-.navdown:hover {
-    border: 1px solid #f8504b !important;
+.navfa {
+    padding: 4px 6px !important;
 }
 
 .navfa:hover {
@@ -165,14 +178,54 @@ h4 {
     color: #171717 !important;
 }
 
+.navdown:hover {
+    border: 1px solid #f8504b !important;
+    color: #fff !important;
+}
 
+/** Header Post **/
 
+.navsearch {
+    float: left !important;
+    margin-top: 11px !important;
+    margin-bottom: 11px !important;
+    vertical-align: middle !important;
+}
 
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
 
+.navlogo:hover {
+    color: #404040 !important;
+    background-color: #f8504b!important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 5px;
+    border: 1px solid #404040;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 28px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
 
 /** Header Pre **/
 
-/** Header Post **/
+
 
 /** Field Area **/
 
@@ -205,7 +258,7 @@ h4 {
 }
 
 .search:focus {
-    border-color: #db560d !important;
+    border-color: #f8504b !important;
 }
 
 /** Search Field End **/
@@ -471,6 +524,5 @@ h4 {
     color: #fff;
     background-color: #f8504b;
 }
-
 
 /****** ERROR 404 END ******/
