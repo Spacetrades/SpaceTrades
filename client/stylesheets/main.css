@@ -155,6 +155,7 @@ h4 {
 .navprofile {
     margin-top: 13px !important;
     margin-bottom: 13px !important;
+    margin-right: 0.5rem;
 }
 
 .navprofile li a {
@@ -174,10 +175,6 @@ h4 {
 .navfa:hover {
     background-color: #f8504b!important;
     color: #171717 !important;
-}
-
-.navdown {
-    margin-right: 0.5rem;
 }
 
 .navdown:hover {
