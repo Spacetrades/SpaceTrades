@@ -187,8 +187,8 @@ h4 {
 
 .navsearch {
     float: left !important;
-    margin-top: 11px !important;
-    margin-bottom: 11px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
     vertical-align: middle !important;
 }
 
@@ -207,14 +207,14 @@ h4 {
 .navsicon {
     width: 28px;
     height: 28px !important;
-    padding: 5px;
+    padding: 4px;
     border: 1px solid #404040;
     margin-right: 2.5px;
 }
 
 .navsearchf {
     width: 17.5rem;
-    height: 28px;
+    height: 26px;
     border: 1px solid #fff;
     border-radius: 1px;
     outline: none;
