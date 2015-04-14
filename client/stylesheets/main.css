@@ -53,6 +53,10 @@ ul {
     padding: 0;
 }
 
+p {
+    line-height: 1.5rem;
+}
+
 h2 {
     font-size: 1.7rem;
 }
@@ -65,6 +69,21 @@ h4 {
     font-size: 1rem;
 }
 
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /****** GLOBAL END ******/
 
@@ -72,7 +91,7 @@ h4 {
 /****** GLOBAL CLASSES END ******/
 
 .div {
-    margin: 0 15% 0 15%;
+    margin: 3rem 15% 2rem 15%;
 }
 
 .email {
@@ -84,29 +103,33 @@ h4 {
 
 /****** HEADER ******/
 
+/** Home Header Pre **/
 .mainnav {
     color: #404040;
     background-color: #f8504b;
     width: 100%;
     text-align: right;
+    height: 50px;
 }
 
 .mainnav ul {
     display: inline-block;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .mainnav ul li {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 0px;
+    vertical-align: middle;
 }
 
 .mainnav ul li a {
     color: #404040;
     padding: 8px 12px 8px 12px;
     margin: 0 3px 0 3px !important;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .mainnav ul li a:hover {
@@ -128,6 +151,102 @@ h4 {
 .navverify {
     margin-right: 0.5rem;
 }
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+/** Home Header Post **/
+
+.navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid #404040;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 0.5rem;
+}
+
+.navprofile li a {
+    border: 1px solid #f8504b;
+}
+
+.navprofile li a:hover {
+    background-color: #f8504b;
+    color: #404040;
+    border: 1px solid #404040;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: #f8504b!important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid #404040 !important;
+    color: #fff !important;
+    background-color: #404040 !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+/** Header Post **/
+
+.navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.navlogo:hover {
+    color: #404040 !important;
+    background-color: #f8504b!important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 4px 6px;
+    border: 1px solid #404040;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+/** Header Pre **/
+
+
 
 /** Field Area **/
 
@@ -160,7 +279,7 @@ h4 {
 }
 
 .search:focus {
-    border-color: #db560d !important;
+    border-color: #f8504b !important;
 }
 
 /** Search Field End **/
@@ -202,8 +321,8 @@ h4 {
 /*****************************************************************
     HELP CENTER
 ******************************************************************/
-/**             INCLUDES THE FOLLOWING PAGES
-    HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
+/**                 INCLUDES THE FOLLOWING PAGES
+    HELP | ABOUT | BUYING | SELLING | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 /****** HELP NAV ******/
@@ -246,12 +365,7 @@ h4 {
 }
 
 .helpimg {
-    width: 30%;
-}
-
-.helppar {
-    margin-right: 15%;
-    margin-left: 15%;
+    width: 70%;
 }
 
 /****** HELP END ******/
@@ -297,7 +411,6 @@ h4 {
     margin-bottom: 1.5rem;
     margin-top: 2px;
     margin-left: 3rem;
-    line-height: 1.5rem;
 }
 
 .faqinfo {
@@ -371,7 +484,7 @@ h4 {
 .contactsubmit input {
     padding: 8px 15px;
     font-size: 1rem;
-    color: #f8504b;
+    color: #404040;
     background-color: #fff;
     border: none;
     border: 1px solid #f8504b;
@@ -434,5 +547,3 @@ h4 {
 }
 
 /****** ERROR 404 END ******/
-
-
