@@ -23,7 +23,7 @@
 							<b class="size">'10 {{size}}</b> 
 						</div>
 						<div class="col-md-9 text-right">  
-							<b class="location">Manhattan, New York {{location}}</b>
+							<span class="neighborhood">Manhattan</span>, <b class="state">New York</b>
 							<!-- We want some Google Api location stuff here -->
 						</div>
 					</div>  
@@ -43,4 +43,11 @@
 			</div>
 		</div>
 	</li>
+</template>
+
+<template name="home">
+    {{>card}}
+    {{>card}}
+    {{>card}}
+    {{>card}}
 </template>
