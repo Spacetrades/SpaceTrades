@@ -10,8 +10,11 @@
 <link href="main.css" rel="stylesheet">
 </head>
 <body>
-{{>header}}
-{{>loginButtons}}
+</body>
+
+<template name="LayoutDefault">
+{{> headerpre}}
+{{> loginButtons}}
     <section class="fieldarea">
         <h1 class="logo">SpaceTrades</h1>
         <div class="searchfield">
@@ -19,9 +22,15 @@
             <input type="search" class="search" id="search" placeholder="Brand, Name, Neighborhood, Size, Price..." />
         </div>
     </section>
-    {{>searchBox}}
-    {{>footer}}
-    <noscript>
-        Enable Javascript
-    </noscript>
-</body>
+    {{> searchBox}}
+     <article>
+      {{> yield}}
+    </article>
+    {{> footer}}
+</template>
+
+<template name="LayoutHelp">
+{{> headerpre}}
+{{> HelpCenterNav}}
+{{> yield}}
+</template>
