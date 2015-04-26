@@ -23,7 +23,15 @@
         </div>
     </section>
     {{> searchBox}}
-     <article>
+    <div class="carddiv div">
+        <ul class="cardul">
+            {{> card}}
+            {{> card}}
+            {{> card}}
+            {{> card}}
+        </ul>
+    </div>
+    <article>
       {{> yield}}
     </article>
     {{> footer}}
