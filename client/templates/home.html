@@ -13,17 +13,11 @@
 </body>
 
 <template name="LayoutDefault">
-{{> headerpre}}
+{{> homeheaderpre}}
 {{> loginButtons}}
-    <section class="fieldarea">
-        <h1 class="logo">SpaceTrades</h1>
-        <div class="searchfield">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" class="search" id="search" placeholder="Brand, Name, Neighborhood, Size, Price..." />
-        </div>
-    </section>
-    {{> searchBox}}
-    <div class="carddiv">
+{{> fieldarea}}
+{{> searchBox}}
+    <div class="carddiv div">
         <ul class="cardul">
             {{> card}}
             {{> card}}
