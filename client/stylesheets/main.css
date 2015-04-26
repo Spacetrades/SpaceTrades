@@ -91,7 +91,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /****** GLOBAL CLASSES END ******/
 
 .div {
-    margin: 3rem 10% 2rem 10%;
+    margin: 3rem 10% 2rem 10% !important;
 }
 
 .email {
@@ -519,6 +519,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     border: none;
     width: 20%;
     display: inline-block;
+    padding-bottom: 5px;
     margin: 0.8rem .6rem;
     background-color: rgba(239, 239, 239, 0.52);
 }
