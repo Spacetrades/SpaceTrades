@@ -44,13 +44,13 @@ less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
-matteodem:easy-search@1.5.4
+matteodem:easy-search@1.5.6
 matthew:foundation5-sass@1.0.0
 mdg:camera@1.1.4
 mdg:geolocation@1.0.2
 meteor@1.1.6
 meteor-platform@1.2.2
-mike:mocha@0.5.3
+mike:mocha@0.5.4
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
@@ -86,7 +86,7 @@ ui@1.0.6
 underscore@1.0.3
 url@1.0.4
 velocity:chokidar@0.12.6_1
-velocity:core@0.6.0
+velocity:core@0.6.1
 velocity:html-reporter@0.5.3
 velocity:meteor-internals@1.1.0_7
 velocity:shim@0.1.0
