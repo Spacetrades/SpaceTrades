@@ -533,6 +533,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-color: rgba(239, 239, 239, 0.52);
 }
 
+.carddiv ul li:hover {
+    background-color: #fff;
+}
+
 .carditp a img {
     width: 100%;
 }
