@@ -1,6 +1,4 @@
-/*
-Colors
-*/
+/* Colors */
 
 $color-clothing:    #ff5700;
 $color-electronics: #006eff;
@@ -12,7 +10,7 @@ $color-banana:      #ffff00;
 $color-gold:        #ffd700;
 
 /*****************************************************************
-    CRUCIAL
+                            CRUCIAL
 ******************************************************************/
 /**                 INCLUDES THE FOLLOWING
             GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
@@ -233,6 +231,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-weight: 700 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding: 3px 12px 3px 15px;
 }
 
 .navlogo:hover {
@@ -243,7 +242,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .navsicon {
     width: 28px;
     height: 28px !important;
-    padding: 4px 6px;
+    padding: 6px 7px;
     border: 1px solid #404040;
     margin-right: 2.5px;
 }
@@ -257,6 +256,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     padding-left: 5px;
     font-size: 0.75rem;
     background-color: #fff;
+}
+
+.navsearchbtn {
+    color: #fff !important;
+    border: 1px solid #fff;
+    padding: 6px 10px !important;  
+}
+
+.navsearchbtn:hover {
+    background-color: #f8504b !important;
 }
 
 /** Header Pre **/
@@ -283,7 +292,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .search {
-    height: 3.5em;
+    height: 48px;
     width: 40%;
     background: #fff;
     border: 1px solid #d3d3d3;
@@ -295,6 +304,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .search:focus {
     border-color: #f8504b !important;
+}
+
+.homesearchbtn {
+    padding: 11px 16px;
+    background-color: #f8504b;
+    color: #fff !important;
+    margin-left: 10px;
 }
 
 /** Search Field End **/
@@ -533,6 +549,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     padding-bottom: 5px;
     margin: 0.8rem .6rem;
     background-color: rgba(239, 239, 239, 0.52);
+}
+
+.carddiv ul li:hover {
+    background-color: #fff;
 }
 
 .carditp a img {
