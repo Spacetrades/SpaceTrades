@@ -3,14 +3,14 @@
         <div>
             <div class="carditp">
                 <a href="#"><img src="images/shoe.jpg"></a>                       
-                <p><a href="#">ItemListingTitleGoesHere</a></p>
+                <p><a href="#">{{listing_title}}</a></p>
             </div>
             <div class="cardpsa">
-                <p class="cardprice">$000</p>
+                <p class="cardprice">${{price}}</p>
                 <p class="cardsl"><span class="cardsize">'0</span>Borough, <span class="cardny">NY</span></p>
             </div>
             <div class="cardna">
-                <a class="cardname" href="#">FirstName</a>
+                <a class="cardname" href="#">{{user_name}}</a>
                 <!-- Different categories will have different size values. ex. Shoes '11, Apparel Medium, Electronics 16GB, etc -->
             </div>
         </div>
