@@ -13,14 +13,6 @@
 <template name="LayoutDefault">
     {{> homeheaderpre}}
     {{> loginButtons}}
-    {{> fieldarea}}
-    <div class="carddiv div">
-        <ul class="cardul">
-            {{#each cards}}
-            {{> card}}
-            {{/each}}
-        </ul>
-    </div>
-    {{> footer}}
+    {{> yield}}
 </template>
 
