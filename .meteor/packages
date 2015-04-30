@@ -12,9 +12,12 @@ mdg:geolocation
 mdg:camera
 iron:router
 matthew:foundation5-sass
-accounts-ui
 accounts-password
 matteodem:easy-search
 afruth:chapp
 ccorcos:clientside-image-manipulation
 fourseven:scss
+accounts-ui
+email
+underscore
+jquery
