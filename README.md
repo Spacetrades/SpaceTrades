@@ -15,10 +15,10 @@ https://help.github.com/categories/collaborating/
 
 ## Git Workflow
 
-Feature branches
-Release branches
-Hotfix branches
-release-*, or hotfix-*
+    Feature branches
+    Release branches
+    Hotfix branches
+    release-*, or hotfix-*
     
 ## Resources
 
