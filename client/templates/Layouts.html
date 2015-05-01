@@ -10,8 +10,21 @@
 <body>
 </body>
 
-<template name="LayoutDefault">
+<template name="LayoutDefaultPre">
+ {{#if currentUser}}
+    {{> homeheaderpost}}
+    {{> loginButtons}}
+    {{> yield}}
+    {{else}}
     {{> homeheaderpre}}
+    {{> loginButtons}}
+    {{> yield}}
+{{/if}}
+
+</template>
+
+<template name="LayoutDefaultPost">
+    {{> homeheaderpost}}
     {{> loginButtons}}
     {{> yield}}
 </template>
