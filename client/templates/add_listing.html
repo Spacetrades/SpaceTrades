@@ -14,9 +14,10 @@
                 </p>
             </div>
             <div>
-                <p>Title: <input type="text" class="listtitlebox" id="listtitlebox" placeholder="" /></p>
+                <p>Title: <input type="text" class="listtitlebox" id="listtitlebox" placeholder="The official title of the product your listing" /></p>
                 <p>Price: <input type="text" class="listpricebox" id="listpricebox" placeholder="" /></p>
-                <p>Location: <input type="text" class="listlocbox" id="listlocbox" placeholder="" /></p>
+                <p>State: <input type="text" class="listlocbox" id="listlocbox" placeholder="" /></p>
+                <p>City: <input type="text" class="listlocbox" id="listlocbox" placeholder="" /></p>
                 <p>Allow Trades? <input type="radio" name="allowtrades" value="yes">Yes<input type="radio" name="allowtrades" value="no">No</p>
             </div>
         </div>
@@ -35,7 +36,7 @@
                 </select>
                 <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
             </p>
-            <p>Size:
+            <p>Size (US):
                 <select>
                   <option value="">Lorum</option>
                   <option value=""></option>
@@ -45,7 +46,7 @@
                 <!-- Size for Shoes is 4, 5, 6, 7, 8, etc. | Size for Apparel is XSmall, Small, Medium, Large, XLarge, Size is not applicable for Electronics -->
             </p>
             <p>Condition:
-                <select>
+                <select class="condition">
                   <option value="new">New</option>
                   <option value="likenew">Like New</option>
                   <option value="used">Used</option>
@@ -76,6 +77,6 @@
             <input type="text" class="listdesc" id="listdesc" placeholder="" />
         </div>
     </div>
-    <button type="button">Submit</button>
+    <button type="button" class="add">Submit</button>
 </div>
 </template>
