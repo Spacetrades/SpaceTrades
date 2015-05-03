@@ -11,15 +11,16 @@
 </body>
 
 <template name="LayoutDefaultPre">
- {{#if currentUser}}
+<!--  {{#if currentUser}}
     {{> homeheaderpost}}
     {{> loginButtons}}
     {{> yield}}
-    {{else}}
+    {{else}} -->
     {{> homeheaderpre}}
     {{> loginButtons}}
+    {{ listingShow }}
     {{> yield}}
-{{/if}}
+<!-- {{/if}} -->
 
 </template>
 
