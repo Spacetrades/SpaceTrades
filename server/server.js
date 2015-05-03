@@ -13,6 +13,23 @@ if (Meteor.isServer) {
       subject: subject,
       text: text
     });
+  },
+   addListing: function (options) {
+    Listing.insert({
+      createdAt: new Date(),
+      listing_title: options.listing_title,
+      category: options.category,
+      username: Meteor.user().username,
+      price: options.price,
+      city: options.city,
+      state: options.state,
+      size: options.size,
+      // condition: condition,
+      // color: color,
+      description: options.description
+      // trade: trade 
+    });
   }
+
 });
 }

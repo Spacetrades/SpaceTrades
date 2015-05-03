@@ -1,82 +1,86 @@
 <template name="addlisting">
-<div class="addlistdiv div">
+  <div class="addlistdiv div">
+  </div>
     <h2 class="addlistlogo">Create Listing</h2>
     <div>
+      <div>
         <div>
-            <div>
-                <p>Category
-                <select>
-                  <option value="Apparel">Apparel</option>
-                  <option value="Electronics">Electronics</option>
-                  <option value="Shoes">Shoes</option>
-                  <option value="Other">Other</option>
-                </select>
-                </p>
-            </div>
-            <div>
-                <p>Title: <input type="text" class="listtitlebox" id="listtitlebox" placeholder="The official title of the product your listing" /></p>
-                <p>Price: <input type="text" class="listpricebox" id="listpricebox" placeholder="" /></p>
-                <p>State: <input type="text" class="listlocbox" id="listlocbox" placeholder="" /></p>
-                <p>City: <input type="text" class="listlocbox" id="listlocbox" placeholder="" /></p>
-                <p>Allow Trades? <input type="radio" name="allowtrades" value="yes">Yes<input type="radio" name="allowtrades" value="no">No</p>
-            </div>
+
+        <!-- 
+        Should be a selector that connects category and sub categories
+        !-->
+          <p>Category
+            <select class="listcategory">
+              <option value="Apparel">Apparel</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p>Brand:
+          <select>
+            <option value="">Lorum</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
+        </p>
         </div>
         <div>
-            <input type="file" flow-btn flow-directory />
+          <p>Listing Title: <input type="text" class="listtitle" id="listtitlebox" placeholder="The official title of the product your listing"></p>
+          <p>Price: <input type="text" class="listprice"></p>
+          <p>State: <input type="text" class="liststate"></p>
+          <p>City: <input type="text" class="listcity"></p>
+          <!-- <p>Allow Trades? <input type="radio" name="allowtrades" value="yes">Yes<input type="radio" name="allowtrades" value="no">No</p> -->
         </div>
+      </div>
+      <div>
+        <input type="file"/>
+      </div>
     </div>
     <div>
-        <div>
-            <p>Brand:
-                <select>
-                  <option value="">Lorum</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select>
-                <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
-            </p>
-            <p>Size (US):
-                <select>
-                  <option value="">Lorum</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select>
-                <!-- Size for Shoes is 4, 5, 6, 7, 8, etc. | Size for Apparel is XSmall, Small, Medium, Large, XLarge, Size is not applicable for Electronics -->
-            </p>
-            <p>Condition:
-                <select class="condition">
-                  <option value="new">New</option>
-                  <option value="likenew">Like New</option>
-                  <option value="used">Used</option>
-                  <option value="broken">Broken</option>
-                </select>
-            </p>
-            <p>Type:
-                <select>
-                  <option value="">Lorum</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select>
-                <!-- Type for shoes is basketball, running, etc. | Type for Apparel is Shirt, T-Shirt, Hoodie, etc. | Type for Electronics is phone, tablet, laptop, game console, game, etc-->
-            </p>
-            <p>Color:
-                <select>
-                  <option value="">Lorum</option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                </select>
-                <!-- All Common Colors -->
-            </p>
-        </div>
-        <div>
-            <p>Description</p>
-            <input type="text" class="listdesc" id="listdesc" placeholder="" />
-        </div>
+      <div>
+        <p>Size (US):
+          <select class="listsize">
+            <option value="">Lorum</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <!-- Size for Shoes is 4, 5, 6, 7, 8, etc. | Size for Apparel is XSmall, Small, Medium, Large, XLarge, Size is not applicable for Electronics -->
+        </p>
+        <p>Condition:
+          <select class="condition">
+            <option value="new">New</option>
+            <option value="likenew">Like New</option>
+            <option value="used">Used</option>
+            <option value="broken">Broken</option>
+          </select>
+        </p>
+        <p>Type:
+          <select>
+            <option value="">Lorum</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <!-- Type for shoes is basketball, running, etc. | Type for Apparel is Shirt, T-Shirt, Hoodie, etc. | Type for Electronics is phone, tablet, laptop, game console, game, etc-->
+        </p>
+        <p>Color:
+          <select>
+            <option value="">Lorum</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <!-- All Common Colors -->
+        </p>
+      </div>
+      <div>
+        <p>Description</p>
+        <input type="text" class="listdescription" placeholder="Briefly explain any other information helpful to buyers">
+      </div>
     </div>
-    <button type="button" class="add">Submit</button>
-</div>
+    <input type="submit" class="add">
 </template>
