@@ -1,4 +1,6 @@
 if (Meteor.isServer) {
+
+  console.log(Listing.find().count());
   Meteor.methods({
     sendEmail: function (to, from, subject, text) {
       check([to, from, subject, text], [String]);
@@ -24,12 +26,18 @@ if (Meteor.isServer) {
       city: options.city,
       state: options.state,
       size: options.size,
-      // condition: condition,
-      // color: color,
+      // condition: options.condition,
+      // color: options.color,
       description: options.description
-      // trade: trade 
+      // trade: options.trade 
     });
+  },
+  listingShow: function (count) {
+    return count
   }
-
 });
+
+  Meteor.publish('listingShow', function () {
+    return Listing.find({}, {limit: 10})
+  });
 }
