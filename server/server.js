@@ -31,13 +31,15 @@ if (Meteor.isServer) {
       description: options.description
       // trade: options.trade 
     });
-  },
-  listingShow: function (count) {
-    return count
   }
+  // listingShow: function (count) {
+  //   return Listing.find().count();
+  // }
 });
 
   Meteor.publish('listingShow', function () {
-    return Listing.find({}, {limit: 10})
+    return Listing.find({}, {limit: 100})
   });
+
+  Meteor.publish('addListing');
 }

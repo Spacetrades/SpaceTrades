@@ -1,8 +1,10 @@
 <template name="home">
     <div class="carddiv div">
         <ul class="cardul">
+            {{#each listing}}
             {{> card}}
+            {{/each}}
         </ul>
     </div>
-  {{> footer}}
+    {{> footer}}
 </template>
