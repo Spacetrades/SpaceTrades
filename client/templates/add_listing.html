@@ -6,10 +6,23 @@
       <div>
         <div>
 
+        <!--
+        Types
+
+        Apparel: Shirt, T-Shirt, Hoodie, etc.
+
+        Electronics: phone, tablet, laptop, game console, game, etc.
+
+        Shoes: basketball, running, etc.
+
+        Other:
+
+         -->
+
         <!-- 
         Should be a selector that connects category and sub categories
         !-->
-          <p>Category
+          <p>Category:
             <select class="listcategory">
               <option value="Apparel">Apparel</option>
               <option value="Electronics">Electronics</option>
@@ -17,6 +30,14 @@
               <option value="Other">Other</option>
             </select>
           </p>
+          <p>Type:
+          <select>
+            <option value="">Lorum</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </p>
           <p>Brand:
           <select>
             <option value="">Lorum</option>
@@ -28,10 +49,10 @@
         </p>
         </div>
         <div>
-          <p>Listing Title: <input type="text" class="listtitle" id="listtitlebox" placeholder="The official title of the product your listing"></p>
-          <p>Price: <input type="text" class="listprice"></p>
-          <p>State: <input type="text" class="liststate"></p>
-          <p>City: <input type="text" class="listcity"></p>
+          <p>Listing Title: <br /> <input type="text" class="listtitle" id="listtitlebox" placeholder="The official title of the product your listing"></p>
+          <p>Price: <br /> <input type="text" class="listprice"></p>
+          <p>State: <br /> <input type="text" class="liststate"></p>
+          <p>City: <br /> <input type="text" class="listcity"></p>
           <!-- <p>Allow Trades? <input type="radio" name="allowtrades" value="yes">Yes<input type="radio" name="allowtrades" value="no">No</p> -->
         </div>
       </div>
@@ -58,22 +79,8 @@
             <option value="broken">Broken</option>
           </select>
         </p>
-        <p>Type:
-          <select>
-            <option value="">Lorum</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-          </select>
-          <!-- Type for shoes is basketball, running, etc. | Type for Apparel is Shirt, T-Shirt, Hoodie, etc. | Type for Electronics is phone, tablet, laptop, game console, game, etc-->
-        </p>
         <p>Color:
-          <select>
-            <option value="">Lorum</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-          </select>
+          <input type="color">
           <!-- All Common Colors -->
         </p>
       </div>
@@ -81,6 +88,7 @@
         <p>Description</p>
         <input type="text" class="listdescription" placeholder="Briefly explain any other information helpful to buyers">
       </div>
+      <!-- Expand the description box, use the twitter size. Limit 300 words-->
     </div>
     <input type="submit" class="add">
 </template>
