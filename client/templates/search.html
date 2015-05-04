@@ -1,8 +1,8 @@
 <template name="searchBox">
-    {{> esInput index="players" placeholder="Search..." }}
+    {{> esInput index="listing" placeholder="Search..." }}
 
     <ul>
-        {{#esEach index="players"}}
+        {{#esEach index="listing"}}
             <li>Name of the player: {{name}}</li>
         {{/esEach}}
     </ul>

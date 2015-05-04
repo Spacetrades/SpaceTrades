@@ -1,5 +1,42 @@
 if (Meteor.isServer) {
 
+Listing.initEasySearch([
+'createdAt',
+'listing_title',
+'category',
+'username',
+'price', 
+'city',
+'state', 
+'size'
+], {
+  'limit' : 20,
+  'use' : 'mongo-db'
+});
+
+EasySearch.createSearchIndex('listing', {
+  'collection': Listing,
+  'field': [
+  'createdAt',
+  'listing_title',
+  'category',
+  'username',
+  'price', 
+  'city',
+  'state', 
+  'size'
+  ], // array of fields to be searchable
+  'limit' : 20,
+  'use' : 'minimongo',
+  'query' : function (searchString, opts) {
+    var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
+    return query
+  }
+
+}
+
+);
+
   console.log(Listing.find().count());
   Meteor.methods({
     sendEmail: function (to, from, subject, text) {
