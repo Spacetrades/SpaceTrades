@@ -10,22 +10,25 @@
 <body>
 </body>
 
-<template name="LayoutDefaultPre">
-<!--  {{#if currentUser}}
+<template name="LayoutDefault">
+ {{#if currentUser}}
     {{> homeheaderpost}}
     {{> loginButtons}}
+    {{listingShow}}
     {{> yield}}
-    {{else}} -->
+    {{else}}
     {{> homeheaderpre}}
     {{> loginButtons}}
-    {{ listingShow }}
+    {{listingShow}}
+    {{ Meteor.user }}
     {{> yield}}
-<!-- {{/if}} -->
-
+{{/if}}
 </template>
 
-<template name="LayoutDefaultPost">
+<!-- <template name="LayoutDefaultPost">
     {{> homeheaderpost}}
     {{> loginButtons}}
+    {{listingShow}}
     {{> yield}}
 </template>
+ -->
