@@ -40,3 +40,12 @@ https://www.discovermeteor.com/blog/javascript-for-meteor/
 http://www.meteorinaction.com/
 https://kadira.io/academy/
 https://forums.meteor.com/
+http://www.eventedmind.com/
+http://meteortips.com/book/
+http://joshowens.me/
+http://thisweekinmeteor.com/
+http://meteorpodcast.com/
+http://crater.io/
+https://github.com/oortcloud/unofficial-meteor-faq
+https://github.com/awatson1978/meteor-cookbook
+http://projectricochet.com/blog/meteor-js-performance
