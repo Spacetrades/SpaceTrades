@@ -1,0 +1,82 @@
+<template>
+<div class="mrdiv div">
+	<h2>Meetup Request</h2>
+	<div class="mrinfo">
+		<div class="mrinfoleft">
+			<div class="mrinfofield">
+				<ul>
+					<li>Nike Jaguar X7</li>
+					<li>
+						<ul>
+							<li>Price: $370</li>
+							<li>Offer: <input type="text" class="mroffer" id="mroffer" placeholder=""></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>Date: <i class="fa fa-calendar"></i><!-- Calender When Selected --></li>
+							<li>May</li>
+							<li>7</li>
+							<li>2015</li>
+							<!-- Values for date are taken from calender -->
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="mrapi">
+				<p>Location: <input type="text" class="mrloc" id="mrloc" placeholder=""></p>
+				<!-- Google Maps API Here -->
+				<!-- Location on the GMaps API is based from the user input in Location -->
+			</div>
+		</div>
+		<div class="mrinforight">
+			<img src="#" class="prodimg">
+			<!-- Image Slider -->
+		</div>
+	</div>
+	<div class="mrtrade">
+		<h2>Trade Offer</h2>
+		<div>
+			<p>Add an Item<i class="fa fa-plus"></i></p> 
+		</div>
+		<div>
+			<!-- Loads Catepory Template -->
+			<!-- Loads Trade Offer Based On Category Choice -->
+		</div>
+	</div>
+	<div class="mrbutton">
+		<button type="button">Review</button>
+		<button type="button">Send</button>
+	</div>
+</div>
+</template>
+
+<template name="categories">
+	<div class="categories">
+		<p>Category:
+            <select class="category">
+              <option value="apparel">Apparel</option>
+              <option value="electronics">Electronics</option>
+              <option value="shoes">Shoes</option>
+              <option value="other">Other</option>
+            </select>
+        </p>
+	</div>
+</template>
+
+<template>
+	<div class="tradeoffer">
+	<!-- Different for Each Category  -->
+		<div class="tradeofferleft">
+			<p>1.</p>
+			<ul>
+				<li>Title: <input type="text" class="tradeoffertitle" id="tradeoffertitle" placeholder=""></li>
+				<li>Condition: <input type="text" class="tradeofferconfition" id="tradeoffertitlecondition" placeholder=""></li>
+				<li>Size: <input type="text" class="tradeoffersize" id="tradeoffersize" placeholder=""></li>
+			</ul>
+		</div>
+		<div class="tradeofferright">
+			<input type="file"/>
+		</div>
+	</div>
+</template>
