@@ -1,7 +1,13 @@
 <template name="LayoutHelp">
-    {{> homeheaderpre}}
+    {{#if currentUser}}
+    {{> headerpost}}
     {{> HelpCenterNav}}
     {{> yield}}
+    {{else}}
+    {{> headerpre}}
+    {{> HelpCenterNav}}
+    {{> yield}}
+{{/if}}
 </template>
 
 <template name="help">
