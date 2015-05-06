@@ -71,7 +71,7 @@ EasySearch.createSearchIndex('listing', {
       createdAt: new Date(),
       listing_title: options.listing_title,
       category: options.category,
-      username: Meteor.user().username,
+      username: Meteor.user().profile.name,
       price: options.price,
       city: options.city,
       state: options.state,
