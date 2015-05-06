@@ -63,6 +63,7 @@ EasySearch.createSearchIndex('listing', {
     });
   },
    addListing: function (options) {
+
     if (! Meteor.userId()) {
       throw new Meteor.Error("Not Authorized")
     }
