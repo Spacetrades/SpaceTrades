@@ -28,16 +28,9 @@ EasySearch.createSearchIndex('listing', {
   ], // array of fields to be searchable
   'limit' : 20,
   'use' : 'mongo-db',
-  'props': {
-    'sortBy': 'price'
-  },
-  'sort': function () {
-    if (this.props.sortBy === 'listing_title') {
-      return { 'listing_title': 1 };
-    }  
-  },
   'query': function (searchString) {
     var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
+    console.log(query);
     return query;
   }
 
