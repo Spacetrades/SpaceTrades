@@ -1,14 +1,14 @@
 <template name="contact">
-<div class="contactdiv div">
-    <h2 class="contactlogo">Contact</h2>
-    <pre>Interested in getting in touch with us.
-     Have any comments or questions not answered in the help center.
-      Send us a message</pre>
-    <form class="contactform">
+    <div class="contactdiv div">
+        <h2 class="contactlogo">Contact</h2>
+        <h4>Interested in getting in touch with us.
+           Have any comments or questions not answered in the help center.
+           Send us a message</h4>
+           <form class="contactform">
 
-        <p class="contactname">
-            <input type="text" name="contactname" id="contactname" placeholder="Name" />
-        </p>
+            <p class="contactname">
+                <input type="text" name="contactname" id="contactname" placeholder="Name" />
+            </p>
 
 <!--         <p class="contactemail">
             <input type="text" name="email" id="contactemail" placeholder="Email" />
@@ -21,7 +21,10 @@
         <p class="contactsubmit">
             <button type="button" value="Send" class="send">Send</button>
         </p>
-        <p class="sent"></p>
     </form>
+    <div class="sent">
+    <p><h2>Message Sent</h2></p>
+    <p>We will respond as soon as we can</p>
+    </div>
 </div>
 </template>
