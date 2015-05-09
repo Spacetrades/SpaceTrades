@@ -51,7 +51,7 @@ https://help.github.com/categories/collaborating/
 	[Book: Meteor-Cookbook](https://github.com/awatson1978/meteor-cookbook)
 	[Site: Improving Meteor performance]](http://projectricochet.com/blog/meteor-js-performance)
 
-## To Do log
+## To Do Log
 
 - [ ] Stylize Add Listing
 - [ ] Get Contact page JS working
