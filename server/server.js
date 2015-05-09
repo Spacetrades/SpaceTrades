@@ -1,40 +1,31 @@
 if (Meteor.isServer) {
 
-// Listing.initEasySearch([
-// 'createdAt',
-// 'listing_title',
-// 'category',
-// 'username',
-// 'price', 
-// 'city',
-// 'state', 
-// 'size'
-// ], {
-//   'limit' : 20,
-//   'use' : 'minimongo'
-// });
-
-EasySearch.createSearchIndex('listing', {
-  'collection': Listing,
-  'field': [
-  'createdAt',
-  'listing_title',
-  'category',
-  'username',
-  'price', 
-  'city',
-  'state', 
-  'size'
-  ], // array of fields to be searchable
-  'limit' : 20,
-  'use' : 'mongo-db',
-  'query': function (searchString) {
-    var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
-    console.log(query);
-    return query;
-  }
-
+Listing.initEasySearch(['listing_title', 'category'], {
+    'limit' : 20,
+    'use' : 'mongo-db'
 });
+
+// EasySearch.createSearchIndex('listing', {
+//   'collection': Listing,
+//   'field': [ // array of fields to be searchable
+//   'createdAt',
+//   'listing_title',
+//   'category',
+//   'username',
+//   'price', 
+//   'city',
+//   'state', 
+//   'size'
+//   ], {
+//   'limit' : 10,
+//   'use' : 'mongo-db'
+//     },
+//   'query': function (searchString) {
+//     var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
+//     console.log(query);
+//     return query;
+//   }
+// });
 
   Meteor.methods({
     sendEmail : function (to, from, subject, text) {
