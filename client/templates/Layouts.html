@@ -25,6 +25,19 @@
 {{/if}}
 </template>
 
+<template name="LayoutHelp">
+{{> sAlert}}
+    {{#if currentUser}}
+    {{> headerpost}}
+    {{> HelpCenterNav}}
+    {{> yield}}
+    {{else}}
+    {{> headerpre}}
+    {{> HelpCenterNav}}
+    {{> yield}}
+{{/if}}
+</template>
+
 <!-- <template name="LayoutDefaultPost">
     {{> homeheaderpost}}
     {{> loginButtons}}
