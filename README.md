@@ -23,35 +23,35 @@ https://help.github.com/categories/collaborating/
     
 ## Resources
 
-	http://meteorcapture.com/spacebars/
-	http://docs.meteor.com/
-	https://github.com/meteor/simple-todos
-	http://meteortips.com/book/forms/
-	https://www.discovermeteor.com/
-	https://github.com/iron-meteor/iron-router/blob/dev/DOCS.md
-	https://github.com/iron-meteor/iron-router/tree/devel/examples
-	https://github.com/oortcloud/unofficial-meteor-faq
-	https://meteorhacks.com/
-	http://matteodem.github.io/meteor-easy-search/
-	http://docs.mongodb.org/manual/
-	http://stackoverflow.com/questions/tagged/meteor
-	http://meteorpad.com/
-	https://atmospherejs.com
-	https://www.discovermeteor.com/blog/javascript-for-meteor/
-	http://www.meteorinaction.com/
-	https://kadira.io/academy/
-	https://forums.meteor.com/
-	http://www.eventedmind.com/
-	http://meteortips.com/book/
-	http://joshowens.me/
-	http://thisweekinmeteor.com/
-	http://meteorpodcast.com/
-	http://crater.io/
-	https://github.com/oortcloud/unofficial-meteor-faq
-	https://github.com/awatson1978/meteor-cookbook
-	http://projectricochet.com/blog/meteor-js-performance
+	[Site: Spacebars Docs](http://meteorcapture.com/spacebars/)
+	[Site: Meteor Docs](http://docs.meteor.com/)
+	[Site: Unofficial Meteor Faq](https://github.com/oortcloud/unofficial-meteor-faq)
+	[Site: Todo Example Site](https://github.com/meteor/simple-todos)
+	[Book: Meteor Tips](http://meteortips.com/book/forms/)
+	[Site: Discover Meteor](https://www.discovermeteor.com/)
+	[Site: Iron Router Docs](https://github.com/iron-meteor/iron-router/blob/dev/DOCS.md)
+	[Site: Iron Router](https://github.com/iron-meteor/iron-router/tree/devel/examples)
+	[Site: General](https://meteorhacks.com/)
+	[Site: Easy Search](http://matteodem.github.io/meteor-easy-search/)
+	[Site: MongoDB](http://docs.mongodb.org/manual/)
+	[Site: SO Meteor Q's](http://stackoverflow.com/questions/tagged/meteor)
+	[Site: Edit Meteor Online](http://meteorpad.com/)
+	[Site: Meteor packages online](https://atmospherejs.com)
+	[Site: General](https://www.discovermeteor.com/blog/javascript-for-meteor/)
+	[Site: General](http://www.meteorinaction.com/)
+	[Site: Meteor Tut's](https://kadira.io/academy/)
+	[Site: Meteor Forum](https://forums.meteor.com/)
+	[Site: Meteor Tut's](http://www.eventedmind.com/)
+	[Book: Meteor tips](http://meteortips.com/book/)
+	[Site: General Blog](http://joshowens.me/)
+	[News: Meteor News](http://thisweekinmeteor.com/)
+	[Podcast](http://meteorpodcast.com/)
+	[News: Meteor News](http://crater.io/)
+	[Site: Meteor FAQ](https://github.com/oortcloud/unofficial-meteor-faq)
+	[Book: Meteor-Cookbook](https://github.com/awatson1978/meteor-cookbook)
+	[Site: Improving Meteor performance]](http://projectricochet.com/blog/meteor-js-performance)
 
-## To Do log
+## To Do Log
 
 - [ ] Stylize Add Listing
 - [ ] Get Contact page JS working

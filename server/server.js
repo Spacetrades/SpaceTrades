@@ -28,27 +28,16 @@ EasySearch.createSearchIndex('listing', {
   ], // array of fields to be searchable
   'limit' : 20,
   'use' : 'mongo-db',
-  'props': {
-    'sortBy': 'listing_title'
-  },
-  'sort': function() {
-    if (this.props.sortBy === 'listing_title') {
-      return { 'name': 1 };
-    }  else if (this.props.sortBy === 'lowest-score') {
-      return { 'score': 1 };
-    }
-    return { 'score': -1 };
-  },
   'query': function (searchString) {
     var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
+    console.log(query);
     return query;
   }
 
 });
 
-  console.log(Listing.find().count());
   Meteor.methods({
-    sendEmail: function (to, from, subject, text) {
+    sendEmail : function (to, from, subject, text) {
       check([to, from, subject, text], [String]);
 
     // Let other method calls from the same client start running,
@@ -62,7 +51,7 @@ EasySearch.createSearchIndex('listing', {
       text: text
     });
   },
-   addListing: function (options) {
+   addListing : function (options) {
 
     if (! Meteor.userId()) {
       throw new Meteor.Error("Not Authorized")
@@ -83,14 +72,15 @@ EasySearch.createSearchIndex('listing', {
       // trade: options.trade 
     });
   },
-  listingShow: function () {
+  allDocs : function () {
     return Listing.find().count();
   }
 });
 
-  Meteor.publish('listingShow', function () {
-    return Listing.find({}, { limit: 100 })
-  });
+  // Meteor.publish('allDocs', function () {
+  //   return Listing.find({}, { limit: 10 });
+  // });
 
-  Meteor.publish('addListing');
+  // Meteor.publish('addListing');
+  // Meteor.publish('sendEmail');
 }
