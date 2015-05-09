@@ -36,7 +36,6 @@ EasySearch.createSearchIndex('listing', {
 
 });
 
-  console.log(Listing.find().count());
   Meteor.methods({
     sendEmail : function (to, from, subject, text) {
       check([to, from, subject, text], [String]);
@@ -78,9 +77,10 @@ EasySearch.createSearchIndex('listing', {
   }
 });
 
-  Meteor.publish('allDocs', function () {
-    return Listing.find({}, { limit: 10 });
-  });
+  // Meteor.publish('allDocs', function () {
+  //   return Listing.find({}, { limit: 10 });
+  // });
 
-  Meteor.publish('addListing');
+  // Meteor.publish('addListing');
+  // Meteor.publish('sendEmail');
 }
