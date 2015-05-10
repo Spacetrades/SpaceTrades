@@ -556,7 +556,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .carddiv ul li:hover {
-    background-color: #fff;
+    outline-style: solid;
+    outline-width: thin;
+    outline-color: rgb(248, 80, 75);
 }
 
 .carditp a img {
