@@ -1,6 +1,6 @@
 if (Meteor.isServer) {
 
-Listing.initEasySearch(['listing_title', 'category'], {
+Listing.initEasySearch(['listing_title'], {
     'limit' : 20,
     'use' : 'mongo-db'
 });
@@ -68,10 +68,10 @@ Listing.initEasySearch(['listing_title', 'category'], {
   }
 });
 
-  // Meteor.publish('allDocs', function () {
-  //   return Listing.find({}, { limit: 10 });
-  // });
+  Meteor.publish('listingShow', function () {
+    return Listing.find({}, { limit: 10 });
+  });
 
-  // Meteor.publish('addListing');
-  // Meteor.publish('sendEmail');
+  Meteor.publish('addListing');
+  Meteor.publish('sendEmail');
 }
