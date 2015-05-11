@@ -69,7 +69,7 @@ Listing.initEasySearch(['listing_title'], {
 });
 
   Meteor.publish('listingShow', function () {
-    return Listing.find({}, { limit: 10 });
+    return Listing.find({}, { limit: 100 });
   });
 
   Meteor.publish('addListing');
