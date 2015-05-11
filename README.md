@@ -45,7 +45,7 @@ https://help.github.com/categories/collaborating/
 - [:book: Meteor tips](http://meteortips.com/book/)
 - [:computer: General Blog](http://joshowens.me/)
 - [:newspaper: Meteor News](http://thisweekinmeteor.com/)
-- [:musical_note:](http://meteorpodcast.com/)
+- [:musical_note: Meteor Podcast](http://meteorpodcast.com/)
 - [:newspaper: Meteor News](http://crater.io/)
 - [:computer: Meteor FAQ](https://github.com/oortcloud/unofficial-meteor-faq)
 - [:book: Meteor-Cookbook](https://github.com/awatson1978/meteor-cookbook)
