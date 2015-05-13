@@ -2,7 +2,9 @@
 	<li>
         <div>
             <div class="carditp">
-                <a href="#"><img src="images/shoe.jpg"></a>                       
+            {{#with imagesShow}}
+                <a href="#"><img src="{{this.url}}"></a>
+            {{/with}}                       
                 <p><a href="#">{{listing_title}}</a></p>
             </div>
             <div class="cardpsa">
