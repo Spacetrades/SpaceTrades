@@ -10,7 +10,7 @@
 <body>
 </body>
 
-<template name="LayoutDefault">
+<template name="LayoutHome">
 {{> sAlert}}
  {{#if currentUser}}
     {{> homeheaderpost}}
@@ -34,6 +34,36 @@
     {{else}}
     {{> headerpre}}
     {{> HelpCenterNav}}
+    {{> yield}}
+{{/if}}
+</template>
+
+<template name="LayoutProfile">
+{{> sAlert}}
+ {{#if currentUser}}
+    {{> homeheaderpost}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+    {{else}}
+    {{> homeheaderpre}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+{{/if}}
+</template>
+
+<template name="LayoutDefault">
+{{> sAlert}}
+ {{#if currentUser}}
+    {{> headerpost}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+    {{else}}
+    {{> headerpre}}
+    {{> loginButtons}}
+    {{listingShow}}
     {{> yield}}
 {{/if}}
 </template>

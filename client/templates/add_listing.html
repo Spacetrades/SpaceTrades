@@ -1,6 +1,5 @@
 <template name="addlisting">
   <div class="addlistdiv div">
-  </div>
   <h2 class="addlistlogo">Create Listing</h2>
   <div>
     <div>
@@ -29,14 +28,6 @@
         </select>
       </p>
 
-      <p>Category:
-        <select class="listcategory">
-          <option value="apparel">Apparel</option>
-          <option value="electronics">Electronics</option>
-          <option value="shoes">Shoes</option>
-          <option value="other">Other</option>
-        </select>
-      </p>
       <p>Type:
         <select>
           <option value="">Lorum</option>
@@ -45,6 +36,7 @@
           <option value=""></option>
         </select>
       </p>
+
       <p>Brand:
         <select>
           <option value="">Lorum</option>
@@ -79,7 +71,7 @@
     </div>
   </div>
   <div>
-    <input type="file"/>
+    <input type="file" class="imageupload"/>
   </div>
 </div>
 <div>
@@ -102,8 +94,7 @@
       </select>
     </p>
     <p>Color:
-      <input type="color">
-      <!-- All Common Colors -->
+      <input type="color" class="color">
     </p>
   </div>
   <div>
@@ -114,4 +105,7 @@
 </div>
 <input type="submit" class="add">
 <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
+  </div>
+<div class="review">
+</div>
 </template>

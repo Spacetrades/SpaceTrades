@@ -43,7 +43,6 @@ Listing.initEasySearch(['listing_title'], {
     });
   },
    addListing : function (options) {
-
     if (! Meteor.userId()) {
       throw new Meteor.Error("Not Authorized")
     }
@@ -57,8 +56,8 @@ Listing.initEasySearch(['listing_title'], {
       city: options.city,
       state: options.state,
       size: options.size,
-      // condition: options.condition,
-      // color: options.color,
+      condition: options.condition,
+      color: options.color,
       description: options.description
       // trade: options.trade 
     });
@@ -69,7 +68,11 @@ Listing.initEasySearch(['listing_title'], {
 });
 
   Meteor.publish('listingShow', function () {
-    return Listing.find({}, { limit: 10 });
+    return Listing.find({}, { limit: 100 });
+  });
+
+   Meteor.publish('imagesShow', function () {
+    return Images.find({}, { limit: 100 });
   });
 
   Meteor.publish('addListing');

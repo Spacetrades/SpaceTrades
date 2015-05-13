@@ -20,6 +20,8 @@ cfs:collection@0.5.5
 cfs:collection-filters@0.2.4
 cfs:data-man@0.0.6
 cfs:file@0.1.17
+cfs:filesystem@0.1.2
+cfs:graphicsmagick@0.0.18
 cfs:http-methods@0.0.29
 cfs:http-publish@0.0.13
 cfs:power-queue@0.9.11
@@ -56,7 +58,7 @@ iron:router@1.0.7
 iron:url@1.0.7
 jquery@1.11.3_2
 json@1.0.3
-juliancwirko:s-alert@2.3.1
+juliancwirko:s-alert@2.3.3
 launch-screen@1.0.2
 less@1.0.14
 livedata@1.0.13
