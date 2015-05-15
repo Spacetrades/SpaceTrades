@@ -59,7 +59,9 @@ Listing.initEasySearch(['listing_title'], {
       condition: options.condition,
       color: options.color,
       description: options.description
-      // trade: options.trade 
+      // trade: options.trade
+      // image name and path 
+      // Challenge is for images collection and listing collection to have associated documents so that correct images are grouped with correct listing
     });
   },
   allDocs : function () {
