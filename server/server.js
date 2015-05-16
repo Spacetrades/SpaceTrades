@@ -1,5 +1,6 @@
 if (Meteor.isServer) {
 
+// jsdoc = Npm.require('meteor-jsdoc');
 Listing.initEasySearch(['listing_title'], {
     'limit' : 20,
     'use' : 'mongo-db'
@@ -42,6 +43,12 @@ Listing.initEasySearch(['listing_title'], {
       text: text
     });
   },
+  /**
+ * @summary Add listing with params
+ * @locus Anywhere
+ * @instancename collection
+ * @class
+ */
    addListing : function (options) {
     if (! Meteor.userId()) {
       throw new Meteor.Error("Not Authorized")
@@ -64,6 +71,14 @@ Listing.initEasySearch(['listing_title'], {
       // Challenge is for images collection and listing collection to have associated documents so that correct images are grouped with correct listing
     });
   },
+
+
+/**
+ * @summary Returns listing count
+ * @locus Anywhere
+ * @instancename collection
+ * @class
+ */
   allDocs : function () {
     return Listing.find().count();
   }
