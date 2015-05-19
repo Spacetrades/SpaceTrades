@@ -50,3 +50,6 @@ https://help.github.com/categories/collaborating/
 - [:computer: Meteor FAQ](https://github.com/oortcloud/unofficial-meteor-faq)
 - [:book: Meteor-Cookbook](https://github.com/awatson1978/meteor-cookbook)
 - [:computer: Improving Meteor performance](http://projectricochet.com/blog/meteor-js-performance)
+- [:computer: Deploy to personal linux server (1)](http://lukaszkups.net/blog/0006_deploying_meteorjs_app_to_own_server_via_ssh/)
+- [:computer: Deploy to personal linux server (2)](https://gentlenode.com/journal/meteor-19-deploying-your-applications-in-a-snap-with-meteor-up-mup/41)
+
