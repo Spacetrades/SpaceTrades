@@ -340,6 +340,23 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-weight: bold;
 }
 
+.functionality {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.itemtitle {
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+}
+
+.money{
+    color: $color-money
+}
+
 /****** FOOTER END ******/
 
 
@@ -391,7 +408,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .helpwel {
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .helpimg {
@@ -404,7 +421,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /****** ABOUT ******/
 
 .aboutdiv {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .aboutpar {
@@ -493,11 +510,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
 /****** CONTACT ******/
-
-.contactdiv {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-}
 
 .contactname input, .contactemail input {
    width: 30%;

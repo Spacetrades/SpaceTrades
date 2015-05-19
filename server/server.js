@@ -88,6 +88,10 @@ Listing.initEasySearch(['listing_title'], {
     return Listing.find({}, { limit: 100 });
   });
 
+  Meteor.publish('listingId', function (id) { 
+    return Listing.find({ _id: id });
+  });
+
    Meteor.publish('imagesShow', function () {
     return Images.find({}, { limit: 100 });
   });

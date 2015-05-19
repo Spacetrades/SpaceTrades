@@ -1,14 +1,15 @@
 <template name="item">
+<!-- {{#with listingId}} -->
 <div class="itemdiv div">
     <div class="itemtitle">
-        <h2><a href="#">Nike Air Force Black Edition</a></h2>
+        <h2><a href="#">{{listing_title}}</a></h2>
     </div>
     <div class="itempmcql">
         <div>
-            <div>
-                <p>$240</p>
+            <div class="money">
+                <p>${{price}}</p>
             </div>
-            <div>
+            <div class="functionality">
                 <ul>
                     <li><a href="#">Meetup Request</a></li>
                     <li><a href="#">Contact</a></li>
@@ -17,8 +18,8 @@
         </div>
         <div>
             <ul>
-                <li>Quantity: 1</li>
-                <li>Upper West Side, Manhattan, NY</li>
+                <li>Quantity: {{quantity}}</li>
+                <li>{{city}}, {{state}}</li>
             </ul>
         </div>
     </div>
@@ -30,14 +31,14 @@
             <!-- Google Maps API -->
         </div>
     </div>
-    <div class="itemrimgn">
+    <div class="functionality">
         <div>
             <div>
                 <!-- Rating 5 Stars-->
             </div>
             <div>
                 <ul>
-                    <li><a href="#"><p>Steve</p></a></li>
+                    <li><u><a href="#"><p>{{username}}</p></a></u></li>
                     <li><a href="#"><img href="#" src="#"></a></li>
                 </ul>
             </div>
@@ -53,17 +54,18 @@
         <div>
             <h4>Details</h4>
             <ul>
-                <li>Color: Black</li>
-                <li>Brand: Nike</li>
-                <li>Condition: Like New</li>
-                <li>Style: Basketball Shoes</li>
-                <li>Size: 11</li>
+                <li>Color: {{color}}</li>
+                <li>Brand: {{brand}}</li>
+                <li>Condition: {{condition}}</li>
+                <li>Style: {{style}}</li>
+                <li>Size: {{size}}</li>
             </ul>
         </div>
-        <div>
+        <div class="description">
             <h4>Description</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut quam mauris. Vestibulum eget lorem justo. Donec in tincidunt leo. Suspendisse quis sagittis turpis. Praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut quam mauris. Vestibulum eget lorem justo. Donec in tincidunt leo. Suspendisse quis sagittis turpis. Praesent.</p>
+            <p>{{description}}</p>
         </div>
     </div>
 </div>
+<!-- {{/with}} -->
 </template>
