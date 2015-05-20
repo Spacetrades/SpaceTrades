@@ -621,6 +621,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-weight: 400;
 }
 
+.gimg {
+  width: 300px;
+  height: 500px;
+  max-width: 100%;
+  margin-left: 80%;
+}
 
 
 /****** HOMEPAGE END ******/
@@ -651,6 +657,110 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .errorh a:hover {
     color: #fff;
     background-color: #f8504b;
+}
+
+/*************************** PH FROM 3rd party ***************************/
+.ph-button {
+    
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;    
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;    
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;   
+    padding: 19px 39px 18px;
+    font-size: 18px;
+    
+}
+/*Green
+==========================*/
+.ph-btn-green {
+
+    border-color: #3AC162;
+    background-color: #5FCF80;
+
+}
+.ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
+    background-color: #4BC970;
+    border-color: #3AC162;    
+}
+
+/*Blue
+==========================*/
+.ph-btn-mr {
+
+    border-color: #38A172;
+    background-color: #2DBB7B;
+    color: white !important;
+}
+
+.ph-btn-mr:hover, .ph-btn-mr:focus, .ph-btn-mr:active {
+    background-color: #38A172;
+    border-color: #338661;   
+    color: white !important;
+}
+
+/*Grey
+==========================*/
+.ph-btn-grey {
+
+     background-color: #C6CCD2;
+     border-color: #AAB3BB;
+}
+.ph-btn-grey:hover, .ph-btn-grey:focus, .ph-btn-grey:active {
+    background-color: #B8BFC7;
+    border-color: #AAB3BB; 
+}
+
+/*Red
+==========================*/
+.ph-btn-red {
+
+    background-color: #ED5A5A !important;
+    border-color: #EA4343 !important;
+    color: white !important;
+
+}
+.ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
+    background: none repeat scroll 0 0 #EB4848 !important;
+    border-color: #E83131 !important; 
+    color: white !important;   
+}
+
+
+/*DEMO ONLY FOR CENTER POSITION*/
+.ph-container {
+  
+  margin: 0 auto;
+  display: inline;
+
+  
+}
+
+.ph-float {
+  
+  float: left;
+  width: 22%;
+  padding: 10px;  
+  padding-top: 50px;  
+  text-align: center;
+  margin-left: 80%;
+}
+
+.ph-clear {
+  
+  clear: both;
+   
 }
 
 /****** ERROR 404 END ******/
