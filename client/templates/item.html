@@ -1,37 +1,44 @@
 <template name="item">
-<!-- {{#with listingId}} -->
-<div class="itemdiv div">
-    <div class="itemtitle">
-        <h2><a href="#">{{listing_title}}</a></h2>
-    </div>
-    <div class="itempmcql">
+    <div class="itemdiv div">
         <div>
-            <div class="money">
-                <p>${{price}}</p>
+            <h2 class="itemtitle"><a href="#">{{listing_title}}</a></h2>
+        </div>
+        <div class="itempmcql">
+            <div>
+                <div class="money">
+                    <p>${{price}}</p>
+                </div>
+                <div class="functionality">
+                    <ul>
+                        <li>
+                            <div class="ph-float">
+                                <a href='#' class='ph-button ph-btn-mr'>Meetup Request</a>
+                            </div>
+                        </li>
+                    <li>  
+                        <div class="ph-float">
+                            <a href='#' class='ph-button ph-btn-red'>Contact</a>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
             </div>
-            <div class="functionality">
+            <div>
                 <ul>
-                    <li><a href="#">Meetup Request</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>Quantity: {{quantity}}</li>
+                    <li>{{city}}, {{state}}</li>
                 </ul>
             </div>
         </div>
-        <div>
-            <ul>
-                <li>Quantity: {{quantity}}</li>
-                <li>{{city}}, {{state}}</li>
-            </ul>
-        </div>
-    </div>
-    <div class="itemimgmap">
-        <div>
+        <div class="itemimgmap">
+            <div>
             <!-- Img Slider -->
+            </div>
+            <div class="gimg">
+            {{> googleMap name="listing" options=exampleMapOptions}}
+            </div>
         </div>
-        <div>
-            <!-- Google Maps API -->
-        </div>
-    </div>
-    <div class="functionality">
+        <div class="functionality">
         <div>
             <div>
                 <!-- Rating 5 Stars-->
@@ -67,5 +74,4 @@
         </div>
     </div>
 </div>
-<!-- {{/with}} -->
 </template>
