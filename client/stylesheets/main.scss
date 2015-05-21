@@ -347,14 +347,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .itemtitle {
     text-align: center;
+    font-size: 2.5em;
 }
 
 .description {
     text-align: center;
 }
 
-.money{
-    color: $color-money
+.money {
+    color: $color-money;
+    font-family: 'Abel', sans-serif;
 }
 
 /****** FOOTER END ******/
@@ -676,7 +678,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     white-space: nowrap;    
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
     font-weight: 700;   
     padding: 19px 39px 18px;
     font-size: 18px;
