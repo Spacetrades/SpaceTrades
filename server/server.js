@@ -70,7 +70,9 @@ Listing.initEasySearch(['listing_title'], {
       size: options.size,
       condition: options.condition,
       color: options.color,
-      description: options.description
+      description: options.description,
+      lat: options.lat,
+      lng: options.lng
     });
   },
 
