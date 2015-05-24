@@ -53,3 +53,12 @@ https://help.github.com/categories/collaborating/
 - [:computer: Deploy to personal linux server (1)](http://lukaszkups.net/blog/0006_deploying_meteorjs_app_to_own_server_via_ssh/)
 - [:computer: Deploy to personal linux server (2)](https://gentlenode.com/journal/meteor-19-deploying-your-applications-in-a-snap-with-meteor-up-mup/41)
 
+## Commit Messages
+	INIT - First Commit
+	EDIT - Edit existing file
+	ADD - Add new file
+	RM - Remove File
+	RN - ReName existing file or files
+
+
+
