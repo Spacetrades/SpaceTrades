@@ -1,9 +1,9 @@
 <template name="addlisting">
   <div class="addlistdiv div">
-  <h2 class="addlistlogo">Create Listing</h2>
-  <div>
+    <h2 class="addlistlogo">Create Listing</h2>
     <div>
       <div>
+        <div>
 
         <!--
         Types
@@ -18,7 +18,6 @@
 
 
       -->
-
       <p>Category:
         <select class="listcategory">
           <option value="Apparel">Apparel</option>
@@ -108,7 +107,9 @@
 </div>
 <input type="submit" class="add">
 <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
-  </div>
+</div>
 <div class="review">
 </div>
+<p class='lat'>{{lat}}</p>
+<p class='lng'>{{lng}}</p>
 </template>
