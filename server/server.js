@@ -96,6 +96,12 @@ Listing.initEasySearch(['listing_title'], {
     return Listing.find({ _id: id });
   });
 
+  // Meteor.publish('listingLatLng', function () {
+  //   return {
+  //     Listing.find( {_})
+  //   }
+  // })
+
    Meteor.publish('imagesShow', function () {
     return Images.find({}, { limit: 100 });
   });
