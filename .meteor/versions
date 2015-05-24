@@ -38,6 +38,7 @@ coffeescript@1.0.6
 dburles:google-maps@1.1.1
 ddp@1.1.0
 deps@1.0.7
+edgee:slingshot@0.7.1
 ejson@1.0.6
 email@1.0.6
 facebook@1.2.0
