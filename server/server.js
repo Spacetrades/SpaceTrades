@@ -70,7 +70,9 @@ Listing.initEasySearch(['listing_title'], {
       size: options.size,
       condition: options.condition,
       color: options.color,
-      description: options.description
+      description: options.description,
+      lat: options.lat,
+      lng: options.lng
     });
   },
 
@@ -93,6 +95,12 @@ Listing.initEasySearch(['listing_title'], {
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
   });
+
+  // Meteor.publish('listingLatLng', function () {
+  //   return {
+  //     Listing.find( {_})
+  //   }
+  // })
 
    Meteor.publish('imagesShow', function () {
     return Images.find({}, { limit: 100 });
