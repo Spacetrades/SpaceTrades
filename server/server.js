@@ -6,6 +6,10 @@ Listing.initEasySearch(['listing_title'], {
     'use' : 'mongo-db'
 });
 
+// Meteor.onConnection( function (con) {
+//   Address.insert({ user: Meteor.user().profile.name, ip: con.clientAddress });
+// });
+
 // EasySearch.createSearchIndex('listing', {
 //   'collection': Listing,
 //   'field': [ // array of fields to be searchable
@@ -62,13 +66,13 @@ Listing.initEasySearch(['listing_title'], {
       price: options.price,
       city: options.city,
       state: options.state,
+      trade: options.trade,
       size: options.size,
       condition: options.condition,
       color: options.color,
-      description: options.description
-      // trade: options.trade
-      // image name and path 
-      // Challenge is for images collection and listing collection to have associated documents so that correct images are grouped with correct listing
+      description: options.description,
+      lat: options.lat,
+      lng: options.lng
     });
   },
 
@@ -91,6 +95,12 @@ Listing.initEasySearch(['listing_title'], {
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
   });
+
+  // Meteor.publish('listingLatLng', function () {
+  //   return {
+  //     Listing.find( {_})
+  //   }
+  // })
 
    Meteor.publish('imagesShow', function () {
     return Images.find({}, { limit: 100 });

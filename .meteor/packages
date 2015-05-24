@@ -28,3 +28,5 @@ cfs:standard-packages
 cfs:filesystem
 cfs:graphicsmagick
 cfs:ejson-file
+jeremy:snapsvg
+meteorhacks:kadira

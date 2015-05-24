@@ -1,9 +1,9 @@
 <template name="addlisting">
   <div class="addlistdiv div">
-  <h2 class="addlistlogo">Create Listing</h2>
-  <div>
+    <h2 class="addlistlogo">Create Listing</h2>
     <div>
       <div>
+        <div>
 
         <!--
         Types
@@ -18,7 +18,6 @@
 
 
       -->
-
       <p>Category:
         <select class="listcategory">
           <option value="Apparel">Apparel</option>
@@ -47,7 +46,7 @@
       </p>
 
       <p>Quantity:
-        <select>
+        <select class="listquantity">
           <option value="">1</option>
           <option value="">2</option>
           <option value="">3</option>
@@ -93,6 +92,9 @@
         <option value="broken">Broken</option>
       </select>
     </p>
+    <input type="radio" name="trade"> I'm OK with accepting Trades ( I'm willing to accept items as exchange for my listing )
+    <br />
+    <input type="radio" name="trade"> I'm not OK with accepting Trades 
     <p>Color:
       <input type="color" class="color">
     </p>
@@ -105,7 +107,9 @@
 </div>
 <input type="submit" class="add">
 <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
-  </div>
+</div>
 <div class="review">
 </div>
+<p class='lat'>{{lat}}</p>
+<p class='lng'>{{lng}}</p>
 </template>
