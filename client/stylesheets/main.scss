@@ -323,7 +323,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .foot {
     padding: 0;
-        text-align: center !important;
+    text-align: center !important;
+    background-color: #404040;
+    color: white !important;
+    padding-bottom: 144px;
+    margin-bottom: 0;
 }
 
 .foot ul li {
@@ -338,6 +342,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     margin: 0 0 5px 0;
     font-size: 0.7rem;
     font-weight: bold;
+}
+
+.foota {
+    color: white !important;
 }
 
 .functionality {
