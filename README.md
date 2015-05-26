@@ -60,5 +60,7 @@ https://help.github.com/categories/collaborating/
 	RM - Remove File
 	RN - ReName existing file or files
 
+## Stock Images
 
+[Gucci Belt](http://www.exoticexcess.com/wp-content/uploads/2013/07/Gucci-Belt-with-Interlocking-G-Buckle.jpg)
 
