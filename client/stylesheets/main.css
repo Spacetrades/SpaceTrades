@@ -1,0 +1,606 @@
+/* SpaceTrades Styling Sheet */
+
+/*****************************************************************
+    CRUCIAL
+******************************************************************/
+/**                 INCLUDES THE FOLLOWING
+            GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
+
+
+/****** GLOBAL ******/
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #404040;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:link {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:active {
+    color: #404040;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/****** GLOBAL END ******/
+
+
+/****** GLOBAL CLASSES END ******/
+
+.div {
+    margin: 3rem 10% 2rem 10%;
+}
+
+.email {
+    color: #f8504b;
+}
+
+/****** GLOBAL CLASSES END ******/
+
+
+/****** HEADER ******/
+
+/** Home Header Pre **/
+.mainnav {
+    color: #404040;
+    background-color: #f8504b;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.mainnav ul {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    vertical-align: middle;
+}
+
+.mainnav ul li a {
+    color: #404040;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px !important;
+    font-weight: 400;
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: #404040;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
+}
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+/** Home Header Post **/
+
+.navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid #404040;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 0.5rem;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+.navprofile li a {
+    border: 1px solid #f8504b;
+}
+
+.navprofile li a:hover {
+    background-color: #f8504b;
+    color: #404040;
+    border: 1px solid #404040;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: #f8504b!important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid #404040 !important;
+    color: #fff !important;
+    background-color: #404040 !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+/** Header Post **/
+
+.navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.navlogo:hover {
+    color: #404040 !important;
+    background-color: #f8504b!important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 4px 6px;
+    border: 1px solid #404040;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+/** Header Pre **/
+
+
+
+/** Field Area **/
+
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: #404040;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+}
+
+.search {
+    height: 3.5em;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: #f8504b !important;
+}
+
+/** Search Field End **/
+
+/****** HEADER END ******/
+
+.footitems {
+    padding: 0;
+    margin: 0;
+}
+
+.foot {
+    padding: 0;
+        text-align: center !important;
+}
+
+.foot ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 2px 0 2px;
+    margin: 0 5px 0 5px;
+}
+
+.foot ul p {
+    padding: 0 2px 0 2px;
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/****** FOOTER END ******/
+
+
+/*****************************************************************
+    CRUCIAL END
+******************************************************************/
+
+
+/*****************************************************************
+    HELP CENTER
+******************************************************************/
+/**                 INCLUDES THE FOLLOWING PAGES
+    HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
+
+
+/****** HELP NAV ******/
+
+.helpnav ul li {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.helpnav ul li a {
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.helpnav ul li a:hover {
+    background-color: #f8504b;
+    color: #fff;
+}
+
+.helpiteml {
+    margin-top: -2.8rem;
+    text-align: right;
+}
+
+.helplogo {
+    color: #f8504b;
+}
+
+/****** HELP NAV END ******/
+
+
+/****** HELP ******/
+
+.helpdiv {
+    text-align: center;
+}
+
+.helpwel {
+    font-weight: 400;
+}
+
+.helpimg {
+    width: 70%;
+}
+
+/****** HELP END ******/
+
+
+/****** ABOUT ******/
+
+.aboutdiv {
+    text-align: center;
+}
+
+.aboutpar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/****** ABOUT END ******/
+
+
+/****** FAQ ******/
+
+.faq ul {
+    padding: 0;
+}
+
+.faq ul li ul li p {
+    width: 70%;
+}
+
+.faqsec {
+    margin-left: 1rem;
+}
+
+.faqheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqpar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+.faqinfo {
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+/****** FAQ END ******/
+
+/****** SAFETY ******/
+
+.safetyheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.safetypar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+/****** SAFETY END ******/
+
+
+/****** PRIVACY & TERMS ******/
+
+.termssec {
+    margin-left: 1rem;
+}
+
+.termsheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.termspar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+/****** PRIVACY & TERMS END ******/
+
+
+/****** CONTACT ******/
+
+.contactdiv {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.contactname input, .contactemail input {
+   width: 30%;
+   height: 20px;
+   padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #404040;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #f8504b;
+}
+
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
+/****** CONTACT END ******/
+
+
+/****************************************************
+    HELP CENTER END
+****************************************************/
+
+
+/****** HOMEPAGE ******/
+
+
+/** Listing Card **/
+.carddiv {
+    text-align: center;
+}
+
+.carddiv ul li {
+    border: none;
+    width: 20%;
+    display: inline-block;
+    margin: 0.8rem .6rem;
+    background-color: rgba(239, 239, 239, 0.52);
+}
+
+.carditp a img {
+    width: 100%;
+}
+
+.carditp p, .cardpsa p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.carditp p a {
+    margin: 5px 5px 2px 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f8504b;
+    overflow: hidden;
+}
+
+.cardprice {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #396;
+    margin: 2px 1.6rem 2px 10px !important;
+    float: left;
+}
+
+.cardsize {
+    font-size: 0.9rem !important;
+    margin-right: 5px !important;
+}
+
+.cardny {
+    font-weight: 700;
+}
+
+.cardsl {
+    margin: 2px 10px 2px 1.6rem !important;
+    font-size: 0.9rem;
+}
+
+.cardname {
+    float: right;
+    margin: 2px 10px 5px 2px !important;
+    font-size: 0.8rem;
+    text-decoration: underline !important;
+    font-weight: 400;
+}
+
+
+
+/****** HOMEPAGE END ******/
+
+
+/****** ERROR 404 ******/
+
+.errordiv {
+    text-align: center;
+}
+
+.errorm {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.errorh {
+    margin: 2rem 0 2rem 0;
+}
+
+.errorh a {
+    padding: 8px 12px;
+    color: #f8504b;
+    background-color: #fff;
+    border: 1px solid #f8504b;
+}
+
+.errorh a:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
+/****** ERROR 404 END ******/
