@@ -1,0 +1,42 @@
+<template name="listingActive">
+	<div class="listingIASDiv div">
+		<div class="listingIASTitle">
+			<h3>Active Listings</h3>
+		</div>
+		<div class="listingIASCards">
+			<ul name="fullCardUl">
+				<!-- {{#each listing}} -->
+					{{> listing_status}}
+				<!-- {/each} -->
+			</ul>
+		</div>
+	</div>
+</template>
+
+<template name="listingInactive">
+	<div class="listingIASDiv div">
+		<div class="listingIASTitle">
+			<h3>Inactive Listings</h3>
+		</div>
+		<div class="listingIASCards">
+		<!-- {{#each listing}} -->
+			{{> listing_status}}
+		<!-- {/each} -->
+		</div>
+	</div>
+</template>
+
+<template name="listingSold">
+	<div class="listingIASDiv div">
+		<div class="listingIASTitle">
+			<h3>Sold Listings</h3>
+		</div>
+		<div class="listingIASCards">
+			<ul class="fullCardUl">
+				<!-- {{#each listing}} -->
+					{{> listing_status}}
+				<!-- {/each} -->
+			</ul>
+		</div>
+	</div>
+</template>

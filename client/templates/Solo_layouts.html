@@ -1,0 +1,77 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpaceTrades</title>
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+</body>
+
+<template name="LayoutHome">
+{{> sAlert}}
+ {{#if currentUser}}
+    {{> homeheaderpost}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+    {{else}}
+    {{> homeheaderpre}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+{{/if}}
+</template>
+
+<template name="LayoutHelp">
+{{> sAlert}}
+    {{#if currentUser}}
+    {{> headerpost}}
+    {{> HelpCenterNav}}
+    {{> yield}}
+    {{else}}
+    {{> headerpre}}
+    {{> HelpCenterNav}}
+    {{> yield}}
+{{/if}}
+</template>
+
+<template name="LayoutProfile">
+{{> sAlert}}
+ {{#if currentUser}}
+    {{> homeheaderpost}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+    {{else}}
+    {{> homeheaderpre}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+{{/if}}
+</template>
+
+<template name="LayoutDefault">
+{{> sAlert}}
+ {{#if currentUser}}
+    {{> headerpost}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+    {{else}}
+    {{> headerpre}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+{{/if}}
+</template>
+
+<!-- <template name="LayoutDefaultPost">
+    {{> homeheaderpost}}
+    {{> loginButtons}}
+    {{listingShow}}
+    {{> yield}}
+</template>
+ -->
