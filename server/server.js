@@ -6,31 +6,24 @@ Listing.initEasySearch(['listing_title'], {
     'use' : 'mongo-db'
 });
 
-// Meteor.onConnection( function (con) {
-//   Address.insert({ user: Meteor.user().profile.name, ip: con.clientAddress });
-// });
+Slingshot.createDirective("listingImages", Slingshot.S3Storage, {
+  bucket: "listing-images-spacetrades",
+  acl: "public-read",
 
-// EasySearch.createSearchIndex('listing', {
-//   'collection': Listing,
-//   'field': [ // array of fields to be searchable
-//   'createdAt',
-//   'listing_title',
-//   'category',
-//   'username',
-//   'price', 
-//   'city',
-//   'state', 
-//   'size'
-//   ], {
-//   'limit' : 10,
-//   'use' : 'mongo-db'
-//     },
-//   'query': function (searchString) {
-//     var query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString);
-//     console.log(query);
-//     return query;
-//   }
-// });
+  authorize : function () {
+    if (!this.userId) {
+      var message = "Please login in order to upload files"
+      throw new Meteor.Error("Login is required", message)
+    }
+    return true;
+  },
+
+  key: function (file) {
+    // Store file in directory of user name 
+    var user = Meteor.userId();
+    return user + '/' + file.name;
+  }
+});
 
   Meteor.methods({
     sendEmail : function (to, from, subject, text) {
