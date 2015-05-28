@@ -145,6 +145,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background-color: #404040;
 }
 
+.meetupitems {
+    color: $color-spacered;
+}
+
 .navbox a {
     border: 1px solid #fff !important;
     color: #fff !important;
