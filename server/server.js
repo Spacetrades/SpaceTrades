@@ -2,19 +2,26 @@ if (Meteor.isServer) {
 
 // jsdoc = Npm.require('meteor-jsdoc');
 Listing.initEasySearch(['listing_title'], {
-    'limit' : 20,
-    'use' : 'mongo-db'
+  'limit' : 20,
+  'use' : 'mongo-db'
+});
+
+Slingshot.fileRestrictions("listingImages", {
+  allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
+  maxSize: 10 * 1024 * 1024 // 10 MB
 });
 
 Slingshot.createDirective("listingImages", Slingshot.S3Storage, {
   bucket: "listing-images-spacetrades",
+  region: "us-west-2",
   acl: "public-read",
 
   authorize : function () {
     if (!this.userId) {
-      var message = "Please login in order to upload files"
-      throw new Meteor.Error("Login is required", message)
+      var message = "Please login in order to upload files";
+      throw new Meteor.Error("Login is required", message);
     }
+
     return true;
   },
 
@@ -25,9 +32,9 @@ Slingshot.createDirective("listingImages", Slingshot.S3Storage, {
   }
 });
 
-  Meteor.methods({
-    sendEmail : function (to, from, subject, text) {
-      check([to, from, subject, text], [String]);
+Meteor.methods({
+  sendEmail : function (to, from, subject, text) {
+    check([to, from, subject, text], [String]);
 
     // Let other method calls from the same client start running,
     // without waiting for the email sending to complete.
@@ -46,28 +53,28 @@ Slingshot.createDirective("listingImages", Slingshot.S3Storage, {
  * @instancename collection
  * @class
  */
-   addListing : function (options) {
-    if (! Meteor.userId()) {
-      throw new Meteor.Error("Not Authorized")
-    }
+ addListing : function (options) {
+  if (! Meteor.userId()) {
+    throw new Meteor.Error("Not Authorized")
+  }
 
-    Listing.insert({
-      createdAt: new Date(),
-      listing_title: options.listing_title,
-      category: options.category,
-      username: Meteor.user().profile.name,
-      price: options.price,
-      city: options.city,
-      state: options.state,
-      trade: options.trade,
-      size: options.size,
-      condition: options.condition,
-      color: options.color,
-      description: options.description,
-      lat: options.lat,
-      lng: options.lng
-    });
-  },
+  Listing.insert({
+    createdAt: new Date(),
+    listing_title: options.listing_title,
+    category: options.category,
+    username: Meteor.user().profile.name,
+    price: options.price,
+    city: options.city,
+    state: options.state,
+    trade: options.trade,
+    size: options.size,
+    condition: options.condition,
+    color: options.color,
+    description: options.description,
+    lat: options.lat,
+    lng: options.lng
+  });
+},
 
 
 /**
@@ -76,9 +83,9 @@ Slingshot.createDirective("listingImages", Slingshot.S3Storage, {
  * @instancename collection
  * @class
  */
-  allDocs : function () {
-    return Listing.find().count();
-  }
+ allDocs : function () {
+  return Listing.find().count();
+}
 });
 
   Meteor.publish('listingShow', function () {
@@ -95,10 +102,11 @@ Slingshot.createDirective("listingImages", Slingshot.S3Storage, {
   //   }
   // })
 
-   Meteor.publish('imagesShow', function () {
-    return Images.find({}, { limit: 100 });
-  });
+ Meteor.publish('imagesShow', function () {
+  return Images.find({}, { limit: 100 });
+});
 
-  Meteor.publish('addListing');
-  Meteor.publish('sendEmail');
+ Meteor.publish('addListing');
+ Meteor.publish('sendEmail');
+
 }
