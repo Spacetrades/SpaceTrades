@@ -1,5 +1,4 @@
 /* Colors */
-
 $color-clothing:    #ff5700;
 $color-electronics: #006eff;
 $color-shoes:       #34dddd;
@@ -182,7 +181,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .navprofile {
     margin-top: 13px !important;
     margin-bottom: 13px !important;
-    margin-right: 0.5rem;
+    margin-right: 5.5rem;
 }
 
 .navprofile:first-child {
@@ -360,6 +359,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .itemtitle {
     text-align: center;
     font-size: 2.5em;
+}
+.itemdd {
+    padding-top: 20%;
+
+}
+
+.imagebox {
+    float: left;
 }
 
 .description {
@@ -772,7 +779,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   padding: 10px;  
   padding-top: 50px;  
   text-align: center;
-  margin-left: 80%;
+  // margin-left: 80%;
 }
 
 .ph-clear {
