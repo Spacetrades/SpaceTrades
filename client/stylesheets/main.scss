@@ -367,6 +367,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .imagebox {
     float: left;
+    width:95%;
 }
 
 .description {
@@ -585,7 +586,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     display: inline-block;
     padding-bottom: 5px;
     margin: 0.8rem .6rem;
-    background-color: rgba(239, 239, 239, 0.52);
+    outline: black dotted thin;
 }
 
 .carddiv ul li:hover {
