@@ -81,6 +81,7 @@ mike:mocha@0.6.0
 mike:mocha-core@0.1.0
 minifiers@1.1.5
 minimongo@1.0.8
+mizzao:bootboxjs@4.4.0
 mizzao:build-fetcher@0.2.0
 mizzao:jquery-ui@1.11.2
 mizzao:timesync@0.3.1
