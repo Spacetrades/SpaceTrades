@@ -1,0 +1,115 @@
+<template name="addlisting">
+  <div class="addlistdiv div">
+    <h2 class="addlistlogo">Create Listing</h2>
+    <div>
+      <div>
+        <div>
+
+        <!--
+        Types
+
+        Apparel: Shirt, T-Shirt, Hoodie, etc.
+
+        Electronics: phone, tablet, laptop, game console, game, etc.
+
+        Shoes: basketball, running, etc.
+
+        Other:
+
+
+      -->
+      <p>Category:
+        <select class="listcategory">
+          <option value="Apparel">Apparel</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Other">Other</option>
+        </select>
+      </p>
+
+      <p>Type:
+        <select>
+          <option value="">Lorum</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
+
+      <p>Brand:
+        <select>
+          <option value="">Lorum</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
+
+      <p>Quantity:
+        <select class="listquantity">
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+          <option value="">8</option>
+          <option value="">9</option>
+          <option value="">10</option>
+        </select>
+        <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
+      </p>
+    </div>
+    <div>
+      <p>Listing Title: <br /> <input type="text" class="listtitle" id="listtitlebox" placeholder="The official title of the product your listing"></p>
+      <p>Price: <br /> <input type="text" class="listprice"></p>
+      <p>State: <br /> <input type="text" class="liststate"></p>
+      <p>City: <br /> <input type="text" class="listcity"></p>
+      <!-- <p>Allow Trades? <input type="radio" name="allowtrades" value="yes">Yes<input type="radio" name="allowtrades" value="no">No</p> -->
+    </div>
+  </div>
+  <div>
+    <input type="file" class="imageupload"/>
+  </div>
+</div>
+<div>
+  <div>
+    <p>Size (US):
+      <select class="listsize">
+        <option value="">Lorum</option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <!-- Size for Shoes is 4, 5, 6, 7, 8, etc. | Size for Apparel is XSmall, Small, Medium, Large, XLarge, Size is not applicable for Electronics -->
+    </p>
+    <p>Condition:
+      <select class="condition">
+        <option value="new">New</option>
+        <option value="likenew">Like New</option>
+        <option value="used">Used</option>
+        <option value="broken">Broken</option>
+      </select>
+    </p>
+    <input type="radio" name="trade"> I'm OK with accepting Trades ( I'm willing to accept items as exchange for my listing )
+    <br />
+    <input type="radio" name="trade"> I'm not OK with accepting Trades 
+    <p>Color:
+      <input type="color" class="color">
+    </p>
+  </div>
+  <div>
+    <p>Description</p>
+    <input type="text" class="listdescription" placeholder="Briefly explain any other information helpful to buyers">
+  </div>
+  <!-- Expand the description box, use the twitter size. Limit 300 words-->
+</div>
+<input type="submit" class="add">
+<!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
+</div>
+<div class="review">
+</div>
+<p class='lat'>{{lat}}</p>
+<p class='lng'>{{lng}}</p>
+</template>

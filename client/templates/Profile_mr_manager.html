@@ -1,3 +1,18 @@
+<template name="meetupRequestBuyer">
+	<div class="meetupRequestSHBDiv div">
+		<div class="meetupRequestSHBTitle">
+			<h3>Meetup Requests (Buyer)</h3>
+		</div>
+		<div class="meetupRequestSHBCards">
+			<ul class="fullCardUl">
+				<!-- {{#each listing}} -->
+					{{> meetup_request_status}}
+				<!-- {/each} -->
+			</ul>
+		</div>
+	</div>
+</template>
+
 <template name="meetupRequestSeller">
 	<div class="meetupRequestSHBDiv div">
 		<div class="meetupRequestSHBTitle">
@@ -10,6 +25,5 @@
 				<!-- {/each} -->
 			</ul>
 		</div>
-
 	</div>
 </template>
