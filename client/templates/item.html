@@ -1,0 +1,76 @@
+<template name="item">
+    <div class="itemdiv div">
+        <div>
+            <h2 class="itemtitle"><a href="#">{{listing_title}}</a></h2>
+        </div>
+        <div class="itempmcql">
+            <div>
+                <div class="money">
+                    <p>${{price}}</p>
+                </div>
+                <div class="functionality">
+                    <ul>
+                        <li>
+                            <div class="ph-float">
+                                <a href='#' class='ph-button ph-btn-mr'>Meetup Request</a>
+                            </div>
+                        </li>
+                        <li>  
+                            <div class="ph-float">
+                                <a href='#' class='ph-button ph-btn-red'>Contact</a>
+                            </div>
+                        </li>
+                        <li>  
+                            <div class="ph-float">
+                            <li>Quantity: {{quantity}}</li>
+                            <li>{{city}}, <b>{{state}}</b></li>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="imagebox">
+            <img src="http://placehold.it/600x600">
+        </div>
+        <div class="itemimgmap">
+            <div class="gimg">
+            {{> googleMap name="listingImage" options=exampleMapOptions}}
+            </div>
+        </div>
+        <div class="functionality">
+        <div>
+            <div>
+                <!-- Rating 5 Stars-->
+            </div>
+            <div>
+                <ul>
+                    <li><u><a href="#"><p>{{username}}</p></a></u></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#"><i class="fa fa-plus"></i>Save</a></li>
+                <li><a href="#"><i class="fa fa-flag"></i>Report</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="itemdd">
+        <div>
+            <h3>Details</h3>
+            <ul>
+                <li>Color: {{color}}</li>
+                <li>Brand: {{brand}}</li>
+                <li>Condition: {{condition}}</li>
+                <li>Style: {{style}}</li>
+                <li>Size: {{size}}</li>
+            </ul>
+        </div>
+        <div class="description">
+            <h3>Description</h3>
+            <p>{{description}}</p>
+        </div>
+    </div>
+</div>
+</template>
