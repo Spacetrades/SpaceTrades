@@ -251,7 +251,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .navsearchf {
     width: 17.5rem;
-    height: 26px;
+    height: 30px;
     border: 1px solid #fff;
     border-radius: 1px;
     outline: none;
@@ -272,6 +272,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /** Header Pre **/
 
+.searchfield2 {
+    margin-top: 20px !important;
+}
+
+.search2 {
+    width: 60% !important;
+}
 
 
 /** Field Area **/
@@ -325,12 +332,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .foot {
-    padding: 0;
+    padding: 0 !important;
     text-align: center !important;
-    background-color: #404040;
-    color: white !important;
-    padding-bottom: 144px;
-    margin-bottom: 0;
+    background-color: #fff;
+    color: #404040;
+    margin-bottom: 2rem !important;
 }
 
 .foot ul li {
@@ -345,10 +351,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     margin: 0 0 5px 0;
     font-size: 0.7rem;
     font-weight: bold;
-}
-
-.foota {
-    color: white !important;
 }
 
 .functionality {
@@ -442,14 +444,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /****** ABOUT ******/
 
-.aboutdiv {
-    /*text-align: center;*/
-}
 
-.aboutpar {
-    margin-right: 15%;
-    margin-left: 15%;
-}
 
 /****** ABOUT END ******/
 
@@ -790,3 +785,678 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 /****** ERROR 404 END ******/
+
+
+
+
+/******************************
+
+    Official Style Sheet
+    Website - https://spacetrades.com
+    Copyright SpaceTrades
+
+******************************/
+
+/*******************
+    Global
+*******************/
+
+html {
+    min-height: 100%;
+}
+
+body {
+    color: #404040;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:link {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:active {
+    color: #404040;
+    text-decoration: none;
+}
+
+/* Lists*/
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+/* Text */
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+h1 { 
+    font-size: 1.7rem; 
+}
+
+h2 { 
+    font-size: 1.7rem; 
+}
+
+h3 { 
+    font-size: 1.2rem; 
+}
+
+h4 { 
+    font-size: 1rem; 
+}
+
+/* Input */
+input {
+    font-family: 'Lato', sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline-color: #f8504b;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+    height: 0; 
+    width : 0; 
+}
+input[type=text]::-ms-reveal {  
+    display: none;
+    height: 0;
+    width : 0;  
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}
+
+input[type=text]::-ms-clear {  
+    display: none;
+    height: 0;
+    width : 0; 
+}
+
+input[type=text]::-ms-reveal {  
+    display: none;
+    height: 0;
+    width : 0;  
+}
+
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}
+
+button {
+    background-color: #fff;
+    border: none;
+}
+
+/****** END *******/
+
+/*******************
+    Global Classes
+*******************/
+
+.oneDiv {
+    margin: 3rem 10% 2rem 10% !important;
+}
+
+/****** END *******/
+
+
+/*******************
+    Feedback
+*******************/
+
+/**********
+ Feedback Initial
+**********/
+
+.feedBackMeat div {
+    display: inline-block;
+}
+
+.feedBackOptions {
+    height: 330px;
+    margin-left: 10%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.feedBackOptions ul li button {
+    background-color: #f8504b;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 80px;
+    margin: 10px;
+    outline: 0;
+    padding: 15px 20px;
+    width: 70%;
+}
+
+.feedBackDocs {
+    border-left: 1px solid #404040;
+    padding-left: 6%;
+    vertical-align: middle;
+    width: 60%;
+}
+
+.feedBackDocs ul li p {
+    font-size: 0.95rem;
+}
+
+/**********
+ Feedback Meetup
+**********/
+
+/** Stars **/
+fieldset, label { margin: 0; padding: 0; }
+
+
+/* Style Star Rating Widget */
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+.feedBackMeetupDiv div {
+    display: inline-block;
+}
+
+.feedBackForm {
+    margin-left: 10%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.feedBackDocs2 {
+    border-left: 1px solid #404040;
+    padding: 1% 4%;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.feedBackExp ul li {
+    display: inline-block;
+    padding: 2px;
+    margin: 2px 4px 2px 0;
+}
+
+.feedBackExp ul li:nth-child(1) {
+    margin-left: -25px !important;
+}
+
+.feedBackExp h4, .feedBackExp ul, .feedBackStars h4, .feedBackText h4 {
+    margin: 0;
+    margin: 5px 0;
+    padding: 1px;
+}
+
+.feedBackExp ul, .rating, .feedBackText h4 {
+    margin-bottom: 10px;
+}
+
+.feedBackText input {
+    height: 25px;
+    padding-left: 5px;
+}
+
+.feedBackText input:focus {
+    outline-color: #f8504b;
+}
+
+.feedBackText button {
+    outline: none;
+    margin: 20px 0 0 0;
+    text-align: right !important;
+    background-color: #f8504b;
+    padding: 10px 16px;
+    color: #fff;
+    margin-left: 7rem;
+}
+
+/****** END *******/
+
+
+/*******************
+    Headers
+*******************/
+/**********
+ Header Home Pre
+**********/
+
+.mainnav {
+    color: #404040;
+    background-color: #f8504b;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.mainnav ul {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    vertical-align: middle;
+}
+
+.mainnav ul li a {
+    color: #404040;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px !important;
+    font-weight: 400;
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: #404040;
+}
+
+.meetupitems {
+    color: $color-spacered;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
+}
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+/* Search Area*/
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: #404040;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+}
+
+.search {
+    height: 48px;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: #f8504b !important;
+}
+
+.homesearchbtn {
+    padding: 11px 16px;
+    background-color: #f8504b;
+    color: #fff !important;
+    margin-left: 8px;
+}
+
+/**********
+ Header Home Post
+**********/
+
+.navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid #404040;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 5.5rem;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+.navprofile li a {
+    border: 1px solid #f8504b;
+}
+
+.navprofile li a:hover {
+    background-color: #f8504b;
+    color: #404040;
+    border: 1px solid #404040;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: #f8504b!important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid #404040 !important;
+    color: #fff !important;
+    background-color: #404040 !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+/**********
+ Header Pre
+**********/
+
+/* NOT YET */
+
+/**********
+ Header Post
+**********/
+
+.navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding: 3px 12px 3px 15px;
+}
+
+.navlogo:hover {
+    color: #404040 !important;
+    background-color: #f8504b!important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 6px 7px;
+    border: 1px solid #404040;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+.navsearchbtn {
+    color: #fff !important;
+    border: 1px solid #fff;
+    padding: 6px 10px !important;  
+}
+
+.navsearchbtn:hover {
+    background-color: #f8504b !important;
+}
+
+/**********
+ Header Search Pre
+**********/
+
+.searchfield2 {
+    margin-top: 20px !important;
+}
+
+.search2 {
+    width: 60% !important;
+}
+
+/**********
+ Header Search Post
+**********/
+
+/* None Yet */
+
+/****** END *******/
+
+
+/*******************
+    Help Center
+*******************/
+
+/**********
+ About
+**********/
+
+.aboutDiv {
+    text-align: center;
+}
+
+.helpPagesPar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.helpAboutUl li ul li, .helpDiv ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.helpAboutUl li ul li img {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+/**********
+ Help
+**********/
+
+.helpDiv {
+    text-align: center;
+}
+
+.helpIntro {
+    font-weight: 700;
+}
+
+.helpDiv ul li img {
+    width: 100%;
+    margin: 3rem 0 1rem 0;
+}
+
+/**********
+ Contact
+**********/
+
+.contactdiv {
+    text-align: center;
+}
+
+.contactname input, .contactemail input {
+   width: 30%;
+   height: 20px;
+   padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit button {
+    outline: none;
+    margin: 0;
+    text-align: right !important;
+    background-color: #f8504b;
+    padding: 10px 16px;
+    color: #fff;
+    margin-left: 17rem;
+}
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
+.sent { 
+    display: none;
+}
+
+/**********
+ FAQs
+**********/
+
+.faqDiv ul {
+    padding: 0;
+}
+
+.faqDiv ul li ul li p {
+    width: 70%;
+}
+
+.faqSec {
+    margin-left: 1rem;
+}
+
+.faqHeading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqPar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+.faqInfo {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.faqInfo h3, .faqInfo p {
+    margin: 0;
+    margin: 5px 0;
+}
+
+
+/****** END *******/
+
+
+/*******************
+    Feedback
+*******************/
+
+/****** END *******/
+
+
+/*******************
+    Feedback
+*******************/
+
+/****** END *******/
+
+
+/*******************
+    Feedback
+*******************/
+
+/****** END *******/
