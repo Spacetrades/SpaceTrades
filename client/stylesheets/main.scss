@@ -363,13 +363,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-size: 2.5em;
 }
 .itemdd {
-    padding-top: 20%;
+    padding-top: 35%;
 
 }
 
 .imagebox {
     float: left;
-    width:95%;
+    width:65%;
+    display: inline-block;
 }
 
 .description {
