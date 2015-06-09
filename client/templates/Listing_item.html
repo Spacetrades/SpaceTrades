@@ -15,30 +15,61 @@
                                 <a href='#' class='ph-button ph-btn-mr'>Meetup Request</a>
                             </div>
                         </li>
-                    <li>  
-                        <div class="ph-float">
-                            <a href='#' class='ph-button ph-btn-red'>Contact</a>
-                        </div>
-                    </li>
+                        <li>  
+                            <div class="ph-float">
+                                <a href='#' class='ph-button ph-btn-red'>Contact</a>
+                            </div>
+                        </li>
+                        <li>  
+                            <div class="ph-float">
+                                <li>Quantity: {{quantity}}</li>
+                                <li>{{city}}, <b>{{state}}</b></li>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div>
-                <ul>
-                    <li>Quantity: {{quantity}}</li>
-                    <li>{{city}}, {{state}}</li>
-                </ul>
-            </div>
         </div>
-        <div class="itemimgmap">
-            <div>
-            <!-- Img Slider -->
-            </div>
-            <div class="gimg">
+        <div class="imagebox">
+            <div id="slider" class="flexslider">
+             <ul class="slides">
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>        
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>        
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>                
+            </ul>
+        </div>
+        <div id="carousel" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>        
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>        
+                <li>
+                    <img src="http://www.changefood.org/wp-content/uploads/2013/09/feel-healthier-bodymind-fresh-food-better-than-canned_32.jpg">
+                </li>                
+            </ul>
+        </div>
+    </div>
+    <div class="itemimgmap">
+        <div class="gimg">
             {{> googleMap name="listingImage" options=exampleMapOptions}}
-            </div>
         </div>
-        <div class="functionality">
+    </div>
+    <div class="functionality">
         <div>
             <div>
                 <!-- Rating 5 Stars-->
@@ -58,7 +89,7 @@
     </div>
     <div class="itemdd">
         <div>
-            <h4>Details</h4>
+            <h3>Details</h3>
             <ul>
                 <li>Color: {{color}}</li>
                 <li>Brand: {{brand}}</li>
@@ -68,7 +99,7 @@
             </ul>
         </div>
         <div class="description">
-            <h4>Description</h4>
+            <h3>Description</h3>
             <p>{{description}}</p>
         </div>
     </div>
