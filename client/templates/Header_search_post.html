@@ -1,0 +1,42 @@
+<template name="headersearchpre">
+    <nav class="mainnav">
+        <ul class="navsearch">
+            <li><a href="/" class="navlogo">SpaceTrades</a></li>
+            <li><span class="navsicon"><i class="fa fa-search"></i></span></li>
+            <li><input type="search" class="navsearchf" id="navsearchf" placeholder="Brand, Name, Size, Price..." /></li>
+            <li><a href="#" class="navsearchbtn">Search</a></li>
+        </ul>
+        <ul class="navcat">
+            <li><a href="#" class="navitem">Categories</a></li>
+        </ul>
+        <ul class="navprofile">
+            <li><a href="/" class="navusername"><span>{{username}}</span></a></li>
+            <li><a href="/" class="navhome">Home</a></li>
+            <li><a href="#" class="navbarsdown navfa navfai"><i class="fa fa-bars"></i></a></li>
+            <li><a href="#" class="navnotif navfa navfai"><i class="fa fa-globe"></i></a><span class="notificationCount">23</span></li>
+            <li><a href="#" class="navmess navfa navfai"><i class="fa fa-envelope"></i></a><span class="messageCount">43</span></li>
+            <li><a href="#" class="navdown navfa"><i class="fa fa-sort-down"></i></a></li>
+        </ul>
+    </nav>
+    <div class="searchfield searchfield2">
+        {{> esInput index="listing" id="search search2" class="search search2" placeholder="Brand, Name, Neighborhood, Size, Price..."}}
+        <a href="#" class="homesearchbtn">Search</a>
+    </div>
+    <div>
+    {{#esEach index="listing"}}
+            <li>Name of the player: {{listing_name}}</li>
+    {{/esEach}}
+
+    {{#ifEsIsSearching index="listing" logic="OR" }}
+        <div>Searching...</div>
+    {{/ifEsIsSearching}}
+
+    {{#ifEsInputIsEmpty index="listing" }}
+        Start searching!
+    {{/ifEsInputIsEmpty}}       
+
+    {{#ifEsHasNoResults index="listing" id="search" logic="OR" }}
+            <div class="no-results">No results found!</div>
+    {{/ifEsHasNoResults}}
+    </div>	    
+</template>
