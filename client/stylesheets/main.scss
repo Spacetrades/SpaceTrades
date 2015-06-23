@@ -16,6 +16,14 @@ $color-gold:        #ffd700;
 
 /****** GLOBAL ******/
 
+
+.imagesquare {
+    height: 100px;
+    width: 100px;
+    border: 2px solid $color-spacegrey;
+    display: inline-block;
+}
+
 html, body {
     min-height: 100%;
 }
