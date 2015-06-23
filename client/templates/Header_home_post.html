@@ -21,21 +21,4 @@
         <a href="#" class="homesearchbtn">Search</a>
     </div>
 
-    {{#ifEsIsSearching index="listing" id="search" logic="OR" }}
-    <div>Searching...</div>
-    {{/ifEsIsSearching}}
-
-    {{#esEach index="listing" id="search"}}
-    <li>Name of the player: {{listing_name}}</li>
-    {{/esEach}}
-
-    
-    {{#ifEsInputIsEmpty index="listing" id="search" }}
-    Start searching!
-    {{/ifEsInputIsEmpty}}       
-
-    {{#ifEsHasNoResults index="listing" id="search" logic="OR" }}
-    <div class="no-results">No results found!</div>
-    {{/ifEsHasNoResults}}
-
 </template>
