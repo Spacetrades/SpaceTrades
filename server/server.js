@@ -1,6 +1,5 @@
 if (Meteor.isServer) {
 
-// jsdoc = Npm.require('meteor-jsdoc');
 Listing.initEasySearch(['listing_title'], {
   'limit' : 20,
   'use' : 'mongo-db'
