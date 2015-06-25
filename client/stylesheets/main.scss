@@ -18,10 +18,19 @@ $color-gold:        #ffd700;
 
 
 .imagesquare {
-    height: 100px;
-    width: 100px;
-    border: 2px solid $color-spacegrey;
+    height: 13em;
+    width: 22em;
     display: inline-block;
+}
+
+.imagepreview {
+    float: right;
+    width: 32%;
+}
+
+.uploadimg { 
+    height: 13em;
+    width: 22em;
 }
 
 html, body {
