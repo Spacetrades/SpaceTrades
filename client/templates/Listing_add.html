@@ -1,25 +1,22 @@
 <template name="addlisting">
   <div class="addlistdiv div">
     <h2 class="addlistlogo">Create Listing</h2>
+    <div class="imagesquare">
+      <img class="img1" src="#" />
+    </div>
+    <div class="imagesquare">
+      <img class="img2">
+    </div>
+    <div class="imagesquare">
+      <img class="img3">
+    </div>
     <div>
       <div>
         <div>
 
-        <!--
-        Types
-
-        Apparel: Shirt, T-Shirt, Hoodie, etc.
-
-        Electronics: phone, tablet, laptop, game console, game, etc.
-
-        Shoes: basketball, running, etc.
-
-        Other:
-
-
-      -->
       <p>Category:
         <select class="listcategory">
+          <option value="Select">Select</option>
           <option value="Apparel">Apparel</option>
           <option value="Electronics">Electronics</option>
           <option value="Shoes">Shoes</option>
@@ -28,11 +25,7 @@
       </p>
 
       <p>Type:
-        <select>
-          <option value="">Lorum</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+        <select class="listtype">
         </select>
       </p>
 
@@ -95,7 +88,7 @@
     <input type="radio" name="trade"> I'm OK with accepting Trades ( I'm willing to accept items as exchange for my listing )
     <br />
     <input type="radio" name="trade"> I'm not OK with accepting Trades 
-    <p>Color:
+    <p>Primary Item Color:
       <input type="color" class="color">
     </p>
   </div>
@@ -106,7 +99,7 @@
   <!-- Expand the description box, use the twitter size. Limit 300 words-->
 </div>
 <input type="submit" class="add">
-<!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
+
 </div>
 <div class="review">
 </div>
