@@ -41,5 +41,6 @@ mizzao:bootboxjs
 practicalmeteor:chai
 ryanswapp:spectrum-colorpicker
 aldeed:autoform
-appcache
 raix:handlebar-helpers
+multiply:iron-router-progress
+lookback:dropdowns
