@@ -5,6 +5,14 @@ Listing.initEasySearch(['listing_title'], {
   'use' : 'mongo-db'
 });
 
+// New users receive a verification email
+Accounts.config({'sendVerificationEmail': true});
+
+// Accounts.onLogin( function () {
+//   //Show new vital information
+// })
+
+
 Slingshot.fileRestrictions("listingImages", {
   allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
   maxSize: 10 * 1024 * 1024 // 10 MB
