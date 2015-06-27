@@ -31,7 +31,6 @@ cfs:ejson-file
 jeremy:snapsvg
 meteorhacks:kadira
 edgee:slingshot
-datariot:ganalytics
 markdown
 richsilv:owl-carousel
 mizzao:jquery-ui
@@ -41,5 +40,7 @@ mizzao:bootboxjs
 practicalmeteor:chai
 ryanswapp:spectrum-colorpicker
 aldeed:autoform
-appcache
 raix:handlebar-helpers
+multiply:iron-router-progress
+lookback:dropdowns
+percolatestudio:segment.io
