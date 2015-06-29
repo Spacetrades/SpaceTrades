@@ -1,10 +1,17 @@
 if (Meteor.isServer) {
 
-// jsdoc = Npm.require('meteor-jsdoc');
 Listing.initEasySearch(['listing_title'], {
   'limit' : 20,
   'use' : 'mongo-db'
 });
+
+// New users receive a verification email
+Accounts.config({'sendVerificationEmail': true});
+
+// Accounts.onLogin( function () {
+//   //Show new vital information
+// })
+
 
 Slingshot.fileRestrictions("listingImages", {
   allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
