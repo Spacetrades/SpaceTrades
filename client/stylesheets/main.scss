@@ -1485,26 +1485,57 @@ fieldset, label { margin: 0; padding: 0; }
     margin: 5px 0;
 }
 
+/**********
+ Help Nav
+**********/
+
+/**********
+ Privacy & Terms
+**********/
+
+/**********
+ Safety
+**********/
 
 /****** END *******/
 
 
 /*******************
-    Feedback
+    Home Pages
 *******************/
 
-/****** END *******/
+/**********
+ Card
+**********/
 
+/**********
+ Home Main
+**********/
 
-/*******************
-    Feedback
-*******************/
+/**********
+ Register
+**********/
 
-/****** END *******/
+.registerDiv div {
+    display: inline-block;
+    margin-top: 1rem;
+}
 
+.registerDocs {
+    width: 50%;
+    vertical-align: middle;
+    padding-left: 4rem;
+    border-left: 1px solid #404040;
+}
 
-/*******************
-    Feedback
-*******************/
+.registerMain {
+    width: 40%;
+    vertical-align: top;   
+} 
+
+.fb-login-button {
+    margin-top: 1rem !important;
+}
+
 
 /****** END *******/
