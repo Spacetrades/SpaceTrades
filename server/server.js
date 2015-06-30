@@ -12,6 +12,13 @@ Accounts.config({'sendVerificationEmail': true});
 //   //Show new vital information
 // })
 
+Accounts.onCreateUser( function (options, user) {
+  if (options.profile) {
+    options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
+    user.profile = options.profile;
+  }
+return user;
+})
 
 Slingshot.fileRestrictions("listingImages", {
   allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],

@@ -20,10 +20,35 @@ $color-gold:        #ffd700;
     background-color: white;
 }
 
+.logout {
+    color: red;
+}
+
+.profilepic {
+    border-radius: 50%;
+}
+
+div[data-momentum] div {
+    left: 77% !important;
+    top: 15% !important;
+    text-align: left !important;
+}
+
 .imagesquare {
     height: 13em;
     width: 22em;
     display: inline-block;
+}
+
+.propic {
+    background-color: transparent;
+    margin-left: 40%;
+}
+
+.colorsquare {
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
 }
 
 .imagepreview {
@@ -38,9 +63,6 @@ $color-gold:        #ffd700;
 
 html, body {
     min-height: 100%;
-}
-
-body {
     font-family: 'Lato', sans-serif;
     color: #404040;
     margin: 0;
@@ -210,6 +232,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .navprofile li a {
     border: 1px solid #f8504b;
+}
+
+.proname {
+    text-align: center;
 }
 
 .navprofile li a:hover {
