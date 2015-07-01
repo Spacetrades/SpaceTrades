@@ -16,6 +16,7 @@ Accounts.onCreateUser( function (options, user) {
   if (options.profile) {
     options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
     user.profile = options.profile;
+    options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
   }
 return user;
 })
@@ -76,6 +77,8 @@ Meteor.methods({
     createdAt: new Date(),
     listing_title: options.listing_title,
     category: options.category,
+    type: options.type,
+    brand: options.brand,
     username: Meteor.user().profile.name,
     price: options.price,
     city: options.city,
@@ -105,6 +108,10 @@ Meteor.methods({
   Meteor.publish('listingShow', function () {
     return Listing.find({}, { limit: 100 });
   });
+
+  Meteor.publish('listingUser', function () {
+    return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
+  })
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
