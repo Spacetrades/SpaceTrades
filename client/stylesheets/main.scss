@@ -20,6 +20,10 @@ $color-gold:        #ffd700;
     background-color: white;
 }
 
+.listtitle {
+    width: 36%;
+}
+
 .logout {
     color: red;
 }
@@ -925,6 +929,8 @@ input {
 
 input:focus, textarea:focus {
     outline-color: #f8504b;
+    outline-width: 1px;
+    outline-offset: -3px;
 }
 
 input[type=text]::-ms-clear {
