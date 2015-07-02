@@ -1,12 +1,40 @@
 if (Meteor.isServer) {
 
-Listing.initEasySearch(['listing_title'], {
-  'limit' : 20,
-  'use' : 'mongo-db'
-});
-
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
+
+SearchSource.defineSource('listings', function (searchText, options) {
+  var options = { sort: {isoScore:  -1}, limit: 20} 
+
+if (searchText) {
+  var regExp = buildRegExp(searchText);
+  console.log(regExp);
+  var selector = {
+    listing_title: regExp,
+    username: regExp,
+    category: regExp, 
+    type: regExp, 
+    city: regExp
+    };
+    console.log("1:" + Listing.find(selector, options).fetch());
+    return Listing.find(selector, options).fetch();
+}
+
+else {
+  console.log("2:" + Listing.find({}, options).fetch());
+  return Listing.find({}, options).fetch();
+}
+
+function buildRegExp (searchText) {
+  var words = searchText.trim().split(/[ \-\:]+/);
+  var exps = _.map(words, function (word) {
+    return "(?=.*" + word +  ")";
+  });
+  var fullExp = exps.join('') + '.+';
+  return new RegExp(fullExp, "i");
+}
+
+});
 
 // Accounts.onLogin( function () {
 //   //Show new vital information
@@ -16,6 +44,7 @@ Accounts.onCreateUser( function (options, user) {
   if (options.profile) {
     options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
     user.profile = options.profile;
+    options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
   }
 return user;
 })
@@ -76,6 +105,8 @@ Meteor.methods({
     createdAt: new Date(),
     listing_title: options.listing_title,
     category: options.category,
+    type: options.type,
+    brand: options.brand,
     username: Meteor.user().profile.name,
     price: options.price,
     city: options.city,
@@ -87,6 +118,13 @@ Meteor.methods({
     description: options.description,
     lat: options.lat,
     lng: options.lng
+  });
+},
+
+addHistory : function (options) {
+  console.log(Meteor.user());
+  Meteor.user().history.insert({
+    search: options.search
   });
 },
 
@@ -105,6 +143,10 @@ Meteor.methods({
   Meteor.publish('listingShow', function () {
     return Listing.find({}, { limit: 100 });
   });
+
+  Meteor.publish('listingUser', function () {
+    return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
+  })
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });

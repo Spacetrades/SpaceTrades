@@ -43,12 +43,12 @@
 <template name="LayoutProfile">
 {{> sAlert}}
  {{#if currentUser}}
-    {{> homeheaderpost}}
-    {{listingShow}}
+    {{> headerpost}}
+    {{listingUser}}
     {{> yield}}
     {{else}}
-    {{> homeheaderpre}}
-    {{listingShow}}
+    {{> headerpre}}
+    {{listingUser}}
     {{> yield}}
 {{/if}}
 </template>
@@ -57,11 +57,9 @@
 {{> sAlert}}
  {{#if currentUser}}
     {{> headerpost}}
-    {{listingShow}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
-    {{listingShow}}
     {{> yield}}
 {{/if}}
 </template>
