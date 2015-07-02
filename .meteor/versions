@@ -5,6 +5,7 @@ accounts-password@1.1.1
 accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
 afruth:chapp@0.1.6
+alanning:roles@1.2.13
 aldeed:autoform@5.3.0
 aldeed:simple-schema@1.1.0
 amplify@1.0.0
@@ -46,6 +47,7 @@ email@1.0.6
 facebook@1.2.0
 fastclick@1.0.3
 fourseven:scss@1.2.3
+francocatena:compass@0.5.1
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
@@ -133,6 +135,7 @@ spacebars-compiler@1.0.6
 spacejamio:chai@1.9.2_3
 srp@1.0.3
 templating@1.1.1
+tmeasday:publish-counts@0.4.0
 tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
