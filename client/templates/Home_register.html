@@ -1,9 +1,28 @@
 <template name="register">
-<div class="registerdiv div">
-	<h1>Sign Up With Facebook</h1>
-	<p>We will never post without your permission</p>
-	<button type="button"><i class="fa fa-facebook-official"></i>Signup With Facebook</button>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=403772073107923";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
-	Also, Location is used site wide with listings. To ensure 
-</div>
+	<div class="registerDiv oneDiv">
+		<h1>Sign Up</h1>
+	    <div class="registerMain">
+			<p>We will never post without your permission Lorem Ipsum Dolarum Structorum Bentorarum Summros Lorem Ipsum Dolarum Structorum Bentorarum Summros Lorem Ipsum Dolarum Structorum Bentorarum Summros</p>
+			<b>Sign Up With Facebook</b> 
+			<div class="fb-login-button" data-max-rows="3" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+		 </div>
+	    <div class="registerDocs">
+{{#markdown}}
+1. Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames
+
+2. Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames
+
+3. Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames Lorem Ipsum Dolarum Structorum Bentorarum Summros Lames
+{{/markdown}}
+	    </div>
+	</div>
 </template>
