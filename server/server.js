@@ -147,10 +147,17 @@ addHistory : function (options) {
   Meteor.publish('listingUser', function () {
     return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
   })
+  // Meteor.user().profile.name
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
   });
+
+  Meteor.publish('userId', function (id) {
+    // return users.find( { _id: id })
+  });
+
+
 
   // Meteor.publish('listingLatLng', function () {
   //   return {
@@ -158,9 +165,9 @@ addHistory : function (options) {
   //   }
   // })
 
- Meteor.publish('imagesShow', function () {
-  return Images.find({}, { limit: 100 });
-});
+//  Meteor.publish('imagesShow', function () {
+//   return Images.find({}, { limit: 100 });
+// });
 
  Meteor.publish('addListing');
  Meteor.publish('sendEmail');
