@@ -67,32 +67,11 @@
           </li>
 
           <li>
-           {{#dropdownTrigger name="messages" class="drops" }}
-          <i class="navbarsdown navfa navfai fa fa-envelope dropdown__trigger"></i>
-          {{/dropdownTrigger}}
-
-          {{#dropdown name="messages"}}
-                  <a href="/activities"><span class="dropdownitem">Nathan</span></a>
-                  <br />
-                  <br />
-                  <br />
-                  <a href="/meetuprequest"><span class="dropdownitem">Peter</span></a>
-                  <br />
-                  <br />
-                  <br />
-                  <a href="/listingmanager"><span class="dropdownitem">Paul</span></a>
-                  <br />
-                  <br />
-                  <br />
-                  <a href="/meetuphistory"><span class="dropdownitem">John</span></a>
-                  <br />
-                  <br />
-                  <br />
-                  <a href="/accountsettings"><span class="dropdownitem">James</span></a>
-              {{/dropdown}}
-
-
+          <a href="https://www.messenger.com" target="_blank">
+          <i class="fa fa-envelope dropdown__trigger"></i>
+          </a>
           </li>
+
           <li>
            {{#dropdownTrigger name="general" }}
           <i class="navbarsdown navdown navfa navfai fa fa-sort-down dropdown__trigger"></i>
@@ -107,7 +86,7 @@
                   <br />
                   <br />
                   <br />
-                  <a href="/listingmanager"><span class="dropdownitem">Advertising</span></a>
+                  <a href="/advertise"><span class="dropdownitem">Advertising</span></a>
                   <br />
                   <br />
                   <br />
@@ -117,9 +96,9 @@
       </ul>
   </nav>
   <h1 class="logo"><a href="/">SpaceTrades</a></h1>
-  <div class="searchfield">
-    {{> esInput index="listing" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price..."}}
-    <a href="#" class="homesearchbtn">Search</a>
+  <div class="searchfield job">
+     <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
+    <a href="/search" class="homesearchbtn">Search</a>
 </div>
 
 </template>
