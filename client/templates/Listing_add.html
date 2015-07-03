@@ -37,16 +37,16 @@
 
           <p>Quantity:
             <select class="listquantity">
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-              <option value="">6</option>
-              <option value="">7</option>
-              <option value="">8</option>
-              <option value="">9</option>
-              <option value="">10</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </select>
             <!-- Brands for Shoes are Nike, Jordan, Addidas, etc. | Brands for Apparel is Supreme, Bape, etc. | Brands for Electronics are Apple, Samsung, Sony, etc. -->
           </p>
@@ -117,7 +117,7 @@
          <!-- <p>Allow Trades? <input type="radio" name="allowtrades" value="yes">Yes<input type="radio" name="allowtrades" value="no">No</p> -->
        </div>
      </div>
-     <div>
+     <div> Images (select multiple in the uploader)
       <input type="file" class="imageupload" multiple/>
     </div>
   </div>
@@ -147,19 +147,19 @@
       </p>
       <p>Condition:
         <select class="condition">
-          <option value="new">New</option>
-          <option value="likenew">Like New</option>
-          <option value="used">Used</option>
-          <option value="broken">Broken</option>
+          <option value="New">New</option>
+          <option value="Like New">Like New</option>
+          <option value="Used">Used</option>
+          <option value="Broken">Broken</option>
         </select>
       </p>
       <div>
-        <input type="radio" id="radio01" name="radio" />
+        <input type="radio" id="radio01" name="radio" value="true" />
         <label for="radio01"><span></span>I'm OK with accepting Trades ( I'm willing to accept items as exchange for my listing )</label>
       </div>
 
       <div>
-       <input type="radio" id="radio02" name="radio" />
+       <input type="radio" id="radio02" name="radio" value="false" />
        <label for="radio02"><span></span>I'm not OK with accepting Trades</label>
      </div>
      <p>Primary Color of Item:
