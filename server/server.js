@@ -122,7 +122,10 @@ Meteor.methods({
     color: options.color,
     description: options.description,
     lat: options.lat,
-    lng: options.lng
+    lng: options.lng,
+    img1: options.img1,
+    img2: options.img2,
+    img3: options.img3
   });
 },
 
