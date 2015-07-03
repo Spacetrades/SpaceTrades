@@ -49,6 +49,10 @@ Accounts.onCreateUser( function (options, user) {
 return user;
 })
 
+//           //
+// Amazon S3 //
+//           //
+
 Slingshot.fileRestrictions("listingImages", {
   allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
   maxSize: 10 * 1024 * 1024 // 10 MB
@@ -108,6 +112,7 @@ Meteor.methods({
     type: options.type,
     brand: options.brand,
     username: Meteor.user().profile.name,
+    quantity: options.quantity,
     price: options.price,
     city: options.city,
     state: options.state,
