@@ -1,10 +1,26 @@
 <template name="searchpage">
 <div class="searchdiv div">
+
+<div class="searchfield job">
+     <input type="text" id="search" class=" search search2" placeholder="Brand, Name, Neighborhood, Size, Price..." value="{{search}}" >
+    <a href="/search" class="homesearchbtn">Search</a>
+</div>
+<h1 class="searchopts">{{getListings.length}} <span class="searchtext"> {{search}}</span></h1>
 {{#each getListings}}
-<p>asdA</p>
+{{> card}}
 {{/each}}
 
-    <p>{{results}} results for {{search}}</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div>
         <p>Refine Search</p>
         <div>
@@ -82,7 +98,7 @@
             </ul>
         </div>
     </div>
-    <div>
+   <!--  <div>
         <div>
             <ul>
                 <li>
@@ -102,6 +118,6 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
 </div>
 </template>

@@ -7,6 +7,7 @@ $color-spacered:    #f8504b;
 $color-spacegrey:   #404040;
 $color-banana:      #ffff00;
 $color-gold:        #ffd700;
+$color-facebook:    #46629E;
 
 /*****************************************************************
                             CRUCIAL
@@ -15,6 +16,96 @@ $color-gold:        #ffd700;
             GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
+
+.shiftright{
+    margin-left: 48% !important;
+}
+
+.facebook {
+    background-color: $color-facebook;
+}
+
+.listingtitle:hover {
+    text-decoration: underline;
+}
+
+
+input[type="radio"] {
+    display:none;
+}
+
+.large {
+    font-size: 4em;
+}
+
+.s-alert-error {
+    font-family: 'Baskerville';
+}
+
+.s-alert-sucess{
+    font-family: 'Baskerville';
+}
+
+input[type="radio"] + label {
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type="radio"] + label span {
+     background-color:black;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:$color-spacered;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+// STOP
+
+.searchdiv {
+    list-style: none;
+}
+
+textarea {
+    font-family: 'Abel', sans-serif;
+}
+
+.listdescription {
+    resize: none;
+    width: 37%;
+    height: 5em;
+}
+
+.listprice {
+    text-align: center;
+}
+
+.add {
+    margin-left: 40%;
+    background-color: #f8504b;
+}
+
+.searchopts {
+    color: red;
+}
+
+.searchtext {
+    margin-left: 50%;
+}
 
 #iron-router-progress {
     background-color: white;
@@ -413,9 +504,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     text-align: center;
     font-size: 2.5em;
 }
-.itemdd {
-    padding-top: 35%;
 
+.itemdd {
+    padding-top: 40%;
 }
 
 .imagebox {
@@ -656,11 +747,19 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     margin: 5px 5px 2px 5px;
     font-size: 1rem;
     font-weight: 700;
-    color: #f8504b;
     overflow: hidden;
 }
 
+.carditp p a:hover {
+    margin: 5px 5px 2px 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+
 .cardprice {
+    font-family: 'Abel';
     font-size: 0.95rem;
     font-weight: 400;
     color: #396;
@@ -875,7 +974,7 @@ a {
 }
 
 a:link {
-    color: #404040;
+    color: #f8504b;
     text-decoration: none;
 }
 
@@ -924,7 +1023,7 @@ h4 {
 
 /* Input */
 input {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Abel', sans-serif;
 }
 
 input:focus, textarea:focus {

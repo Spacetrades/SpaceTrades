@@ -49,6 +49,10 @@ Accounts.onCreateUser( function (options, user) {
 return user;
 })
 
+//           //
+// Amazon S3 //
+//           //
+
 Slingshot.fileRestrictions("listingImages", {
   allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
   maxSize: 10 * 1024 * 1024 // 10 MB
@@ -108,6 +112,7 @@ Meteor.methods({
     type: options.type,
     brand: options.brand,
     username: Meteor.user().profile.name,
+    quantity: options.quantity,
     price: options.price,
     city: options.city,
     state: options.state,
@@ -147,10 +152,17 @@ addHistory : function (options) {
   Meteor.publish('listingUser', function () {
     return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
   })
+  // Meteor.user().profile.name
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
   });
+
+  Meteor.publish('userId', function (id) {
+    // return users.find( { _id: id })
+  });
+
+
 
   // Meteor.publish('listingLatLng', function () {
   //   return {
@@ -158,9 +170,9 @@ addHistory : function (options) {
   //   }
   // })
 
- Meteor.publish('imagesShow', function () {
-  return Images.find({}, { limit: 100 });
-});
+//  Meteor.publish('imagesShow', function () {
+//   return Images.find({}, { limit: 100 });
+// });
 
  Meteor.publish('addListing');
  Meteor.publish('sendEmail');
