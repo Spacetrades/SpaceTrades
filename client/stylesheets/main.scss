@@ -7,6 +7,7 @@ $color-spacered:    #f8504b;
 $color-spacegrey:   #404040;
 $color-banana:      #ffff00;
 $color-gold:        #ffd700;
+$color-facebook:    #46629E;
 
 /*****************************************************************
                             CRUCIAL
@@ -16,8 +17,25 @@ $color-gold:        #ffd700;
 
 /****** GLOBAL ******/
 
+.shiftright{
+    margin-left: 48% !important;
+}
+
+.facebook {
+    background-color: $color-facebook;
+}
+
+.listingtitle:hover {
+    text-decoration: underline;
+}
+
+
 input[type="radio"] {
     display:none;
+}
+
+.large {
+    font-size: 4em;
 }
 
 .s-alert-error {
@@ -486,9 +504,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     text-align: center;
     font-size: 2.5em;
 }
-.itemdd {
-    padding-top: 35%;
 
+.itemdd {
+    padding-top: 40%;
 }
 
 .imagebox {
@@ -729,9 +747,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     margin: 5px 5px 2px 5px;
     font-size: 1rem;
     font-weight: 700;
-    color: #f8504b;
     overflow: hidden;
 }
+
+.carditp p a:hover {
+    margin: 5px 5px 2px 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+}
+
 
 .cardprice {
     font-family: 'Abel';
@@ -949,7 +974,7 @@ a {
 }
 
 a:link {
-    color: #404040;
+    color: #f8504b;
     text-decoration: none;
 }
 
