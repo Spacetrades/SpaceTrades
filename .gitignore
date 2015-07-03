@@ -7,3 +7,5 @@ client/.DS_Store
 client/templates/.DS_Store
 
 /settings.json
+
+settings.json
