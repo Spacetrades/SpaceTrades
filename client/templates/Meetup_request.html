@@ -2,31 +2,26 @@
 <div class="mrdiv div">
 	<h2>Offer</h2>
 	<div class="mrinfo">
+	<h2 class="itemtitle"><a href="/listing/{{_id}}">{{listing_title}}</a></h2>
 		<div class="mrinfoleft">
 			<div class="mrinfofield">
 				<ul>
-					<li>Nike Jaguar X7</li>
 					<li>
 						<ul>
-							<li>Price: $370</li>
-							<li>Offer: <input type="text" class="mroffer" id="mroffer" placeholder=""></li>
+							<li class="money price">{{price}}</li>
+							<li>Offer Price: <input type="text" class="mroffer" id="mroffer" placeholder=""></li>
 						</ul>
 					</li>
 					<li>
 						<ul>
 							<li>Date: <i class="fa fa-calendar"></i><input type="text" id="datepicker"></li>
-							<li>May</li>
-							<li>7</li>
-							<li>2015</li>
 							<!-- Values for date are taken from calender -->
 						</ul>
 					</li>
 				</ul>
 			</div>
 			<div class="mrapi">
-				<p>Location: <input type="text" class="mrloc" id="mrloc" placeholder=""></p>
-				<!-- Google Maps API Here -->
-				<!-- Location on the GMaps API is based from the user input in Location -->
+				{{> googleMap name="offerImage" options=offerMapOptions }}
 			</div>
 		</div>
 		<div class="mrinforight">
@@ -35,8 +30,7 @@
 		</div>
 	</div>
 	<div class="mrbutton">
-		<button type="button">Review</button>
-		<button type="button">Send</button>
+		<button type="button" class="ph-button redskin">Review</button>
 	</div>
 </div>
 </template>
