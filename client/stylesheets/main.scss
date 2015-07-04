@@ -17,6 +17,23 @@ $color-facebook:    #46629E;
 
 /****** GLOBAL ******/
 
+.redskin {
+    background-color: $color-spacered;
+}
+
+.price {
+    font-size: 1.5em;
+}
+
+.mrbutton {
+    text-align: center;
+}
+
+.mrapi {
+    height: 13em;
+    width: 100%;
+}
+
 .shiftright{
     margin-left: 48% !important;
 }
