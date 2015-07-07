@@ -6,13 +6,13 @@
         <div class="itempmcql">
             <div>
                 <div class="money">
-                    <p>${{price}}</p>
+                    <p class="price">${{price}}</p>
                 </div>
                 <div class="functionality">
                     <ul>
                         <li>
                             <div class="ph-float">
-                                <a href='/request' class='ph-button ph-btn-mr'>Offer</a>
+                                <a href='{{current}}/request' class='ph-button ph-btn-mr'>Offer</a>
                             </div>
                         </li>
                         <li>  
@@ -70,7 +70,7 @@
             </div>
             <div>
                 <ul>
-                    <li><u><a href="#"><p>{{username}}</p></a></u></li>
+                    <li><u><a href="/{{creator_id}}"><p>{{username}}</p></a></u></li>
                 </ul>
             </div>
         </div>
