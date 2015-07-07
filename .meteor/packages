@@ -24,10 +24,6 @@ reactjs:react
 dburles:google-maps
 mizzao:user-status
 juliancwirko:s-alert
-cfs:standard-packages
-cfs:filesystem
-cfs:graphicsmagick
-cfs:ejson-file
 jeremy:snapsvg
 meteorhacks:kadira
 edgee:slingshot
@@ -54,3 +50,7 @@ francocatena:compass
 tomi:upload-server
 tomi:upload-jquery
 gadicohen:headers
+nemo64:bootstrap
+less
+service-configuration
+http
