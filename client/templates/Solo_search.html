@@ -7,7 +7,7 @@
 </div>
 <h1 class="searchopts">{{getListings.length}} <span class="searchtext"> {{search}}</span></h1>
 {{#each getListings}}
-{{> card}}
+{{> searchcard}}
 {{/each}}
 
     <br />
@@ -24,7 +24,7 @@
     <div>
         <p>Refine Search</p>
         <div>
-            <ul>
+          <!--   <ul>
                 <p>Categories</p>
                 <li><a href="">Apparel</a></li>
                 <li><a href="">Electronics</a></li>
@@ -91,7 +91,7 @@
                 <p>Accepts Trades</p>
                 <li><input type="radio" name="Yes" value="Yes">Yes</li>
                 <li><input type="radio" name="No" value="No">No</li>
-            </ul>
+            </ul> -->
             <ul>
                 <p>Seller Rating</p>
                 <li><!-- Stars Go Here --></li>
