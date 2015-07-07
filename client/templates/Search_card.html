@@ -1,0 +1,25 @@
+<template name="searchcard">
+	<li>
+        <div>
+            <div class="searchcarditp">
+                <a href="#"><img src="{{img1}}"></a>                      
+                <!-- Underline Listing title onhover -->
+            </div>
+            <div class="listinglink">
+            <a href="/listing/{{_id}}" class="listingtitle">{{listing_title}}</a>
+            </div>
+            <div class="cardpsa">
+                <p class="cardprice">${{price}}</p>
+                <p class="cardsl"><span class="cardsize">
+                '{{size}}</span>
+                {{county}}
+                </p>
+            </div>
+            <div class="cardna">
+                <a class="cardname" href="#">{{username}}</a>
+
+                <!-- Different categories will have different size values. ex. Shoes '11, Apparel Medium, Electronics 16GB, etc -->
+            </div>
+        </div>
+    </li>
+</template>

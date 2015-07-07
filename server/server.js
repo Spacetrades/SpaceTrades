@@ -107,6 +107,7 @@ Meteor.methods({
 
   Listing.insert({
     createdAt: new Date(),
+    creator_id: options.creator_id,
     listing_title: options.listing_title,
     category: options.category,
     type: options.type,
@@ -126,6 +127,15 @@ Meteor.methods({
     img1: options.img1,
     img2: options.img2,
     img3: options.img3
+  });
+},
+
+addOffer: function (options) {
+  Offer.insert({
+    offerprice: options.offerprice,
+    date: options.date,
+    location: options.location,
+    listingId: options.listingId
   });
 },
 
