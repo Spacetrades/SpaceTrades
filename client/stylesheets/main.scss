@@ -17,9 +17,21 @@ $color-facebook:    #46629E;
 
 /****** GLOBAL ******/
 
-.searchcarditp{
+.formspace li {
+    padding-bottom: 1em;
+}
+
+.searchcarditp {
   display: inline-block;
   float: left;
+}
+
+.descriptionbox {
+    border: 1px solid $color-spacegrey;
+}
+
+.descriptionbox li {
+    margin-left: 1em;
 }
 
 .searchcarditp a img {
@@ -599,8 +611,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .imagebox {
     float: left;
-    width:65%;
+    width: 65%;
     display: inline-block;
+}
+
+.imageboxcenter {
+    float: left;
+    width: 65%;
+    display: inline-block;
+    margin-left: 15%;
 }
 
 .description {

@@ -32,7 +32,7 @@
         </div>
         <div class="imagebox">
             <div id="slider" class="flexslider">
-             <ul class="slides">
+               <ul class="slides">
                 <li>
                     <img src="{{img1}}">
                 </li>
@@ -84,13 +84,15 @@
     <div class="itemdd">
         <div>
             <h2>Details</h2>
-            <ul>
+            <ul class="descriptionbox">
                 <li><h3>Color:</h3>
-                <div class="colorsquare" style="background-color: {{color}}">
-                </div>
+                    <div class="colorsquare" style="background-color: {{color}}">
+                    </div>
                 </li>
                 <li><h3>Brand:</h3> {{brand}}</li>
                 <li><h3>Condition:</h3> {{condition}}</li>
+<!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
+
                 <li><h3>Size:</h3> {{size}}</li>
             </ul>
         </div>

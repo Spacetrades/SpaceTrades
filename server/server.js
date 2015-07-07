@@ -6,33 +6,33 @@ Accounts.config({'sendVerificationEmail': true});
 SearchSource.defineSource('listings', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20} 
 
-if (searchText) {
-  var regExp = buildRegExp(searchText);
-  console.log(regExp);
-  var selector = {
-    listing_title: regExp,
-    username: regExp,
-    category: regExp, 
-    type: regExp, 
-    city: regExp
+  if (searchText) {
+    var regExp = buildRegExp(searchText);
+    console.log(regExp);
+    var selector = {
+      listing_title: regExp,
+      username: regExp,
+      category: regExp, 
+      type: regExp, 
+      city: regExp
     };
     console.log("1:" + Listing.find(selector, options).fetch());
     return Listing.find(selector, options).fetch();
-}
+  }
 
-else {
-  console.log("2:" + Listing.find({}, options).fetch());
-  return Listing.find({}, options).fetch();
-}
+  else {
+    console.log("2:" + Listing.find({}, options).fetch());
+    return Listing.find({}, options).fetch();
+  }
 
-function buildRegExp (searchText) {
-  var words = searchText.trim().split(/[ \-\:]+/);
-  var exps = _.map(words, function (word) {
-    return "(?=.*" + word +  ")";
-  });
-  var fullExp = exps.join('') + '.+';
-  return new RegExp(fullExp, "i");
-}
+  function buildRegExp (searchText) {
+    var words = searchText.trim().split(/[ \-\:]+/);
+    var exps = _.map(words, function (word) {
+      return "(?=.*" + word +  ")";
+    });
+    var fullExp = exps.join('') + '.+';
+    return new RegExp(fullExp, "i");
+  }
 
 });
 
@@ -40,14 +40,24 @@ function buildRegExp (searchText) {
 //   //Show new vital information
 // })
 
-Accounts.onCreateUser( function (options, user) {
-  if (options.profile) {
-    options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
-    user.profile = options.profile;
-    options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
+  Accounts.onCreateUser( function (options, user) {
+    if (options.profile) {
+      options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
+      user.profile = options.profile;
+      options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
+    // options.profile.city = 
   }
-return user;
-})
+  return user;
+});
+
+  if (!ServiceConfiguration.configurations.find()) { 
+    ServiceConfiguration.configurations.insert({
+      service: 'facebook',
+      appId: '403772073107923',
+      secret: '4663665d518fef59dbf6643280281a85'
+    });
+
+  }
 
 //           //
 // Amazon S3 //
@@ -134,17 +144,17 @@ addOffer: function (options) {
   Offer.insert({
     offerprice: options.offerprice,
     date: options.date,
-    location: options.location,
-    listingId: options.listingId
+    location: options.location
+    // listingId: options.listingId
   });
 },
 
-addHistory : function (options) {
-  console.log(Meteor.user());
-  Meteor.user().history.insert({
-    search: options.search
-  });
-},
+// addHistory : function (options) {
+//   console.log(Meteor.user());
+//   Meteor.user().history.insert({
+//     search: options.search
+//   });
+// },
 
 
 /**

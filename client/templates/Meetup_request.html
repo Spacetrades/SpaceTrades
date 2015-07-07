@@ -5,7 +5,7 @@
 	<h2 class="itemtitle"><a href="/listing/{{_id}}">{{listing_title}}</a></h2>
 		<div class="mrinfoleft">
 			<div class="mrinfofield">
-				<ul>
+				<ul class="formspace">
 					<li>
 						<ul>
 							<li class="money price">${{price}}</li>
@@ -14,7 +14,7 @@
 					</li>
 					<li>
 						<ul>
-							<li><i class="fa fa-calendar"></i> Date of the Meetup:<input type="text" id="datepicker"></li>
+							<li class="formpad"><i class="fa fa-calendar"></i> Date of the Meetup:<input type="text" id="datepicker"></li>
 							<!-- Values for date are taken from calender -->
 						</ul>
 					</li>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="mrinforight">
-			  <div class="imagebox">
+			  <div class="imageboxcenter">
             <div id="slider" class="flexslider">
              <ul class="slides">
                 <li>
@@ -57,7 +57,7 @@
 			</div>
 	</div>
 	<div class="mrbutton">
-		<button type="button" class="ph-button redskin send">Send Offer</button>
+		<input type="submit" value="Send Offer" class="ph-button add">
 	</div>
 </div>
 </template>
