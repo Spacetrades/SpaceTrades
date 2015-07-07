@@ -8,29 +8,56 @@
 				<ul>
 					<li>
 						<ul>
-							<li class="money price">{{price}}</li>
-							<li>Offer Price: <input type="text" class="mroffer" id="mroffer" placeholder=""></li>
+							<li class="money price">${{price}}</li>
+							<li>Offer Price (USD): <input type="text" class="listprice" id="mroffer" placeholder="Offer Price"></li>
 						</ul>
 					</li>
 					<li>
 						<ul>
-							<li>Date: <i class="fa fa-calendar"></i><input type="text" id="datepicker"></li>
+							<li><i class="fa fa-calendar"></i> Date of the Meetup:<input type="text" id="datepicker"></li>
 							<!-- Values for date are taken from calender -->
 						</ul>
 					</li>
 				</ul>
 			</div>
+		</div>
+		<div class="mrinforight">
+			  <div class="imagebox">
+            <div id="slider" class="flexslider">
+             <ul class="slides">
+                <li>
+                    <img src="{{img1}}">
+                </li>
+                <li>
+                    <img src="{{img2}}">
+                </li>        
+                <li>
+                    <img src="{{img3}}">
+                </li>                     
+            </ul>
+        </div>
+        <div id="carousel" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="{{img1}}">
+                </li>
+                <li>
+                    <img src="{{img2}}">
+                </li>        
+                <li>
+                    <img src="{{img3}}">
+                </li>                       
+            </ul>
+        </div>
+    </div>
+		</div>
+		<input id="pac-input" class="controls" type="text" placeholder="Search for a location">
 			<div class="mrapi">
 				{{> googleMap name="offerImage" options=offerMapOptions }}
 			</div>
-		</div>
-		<div class="mrinforight">
-			<img src="#" class="prodimg">
-			<!-- Image Slider -->
-		</div>
 	</div>
 	<div class="mrbutton">
-		<button type="button" class="ph-button redskin">Review</button>
+		<button type="button" class="ph-button redskin send">Send Offer</button>
 	</div>
 </div>
 </template>
