@@ -1,42 +1,17 @@
 <template name="ListingActive">
+<!-- Task -->
+<!-- Edit and Delete -->
 	<div class="listingIASDiv div">
 		<div class="listingIASTitle">
-			<h3>Active Listings</h3>
+			<h3>Active</h3>
 		</div>
 		<div class="listingIASCards">
 			<ul name="fullCardUl">
-				<!-- {{#each listing}} -->
+				{{#each listing}}
 					{{> listing_status}}
-				<!-- {/each} -->
+				{{/each}}
 			</ul>
 		</div>
 	</div>
-</template>
-
-<template name="listingInactive">
-	<div class="listingIASDiv div">
-		<div class="listingIASTitle">
-			<h3>Inactive Listings</h3>
-		</div>
-		<div class="listingIASCards">
-		<!-- {{#each listing}} -->
-			{{> listing_status}}
-		<!-- {/each} -->
-		</div>
-	</div>
-</template>
-
-<template name="listingSold">
-	<div class="listingIASDiv div">
-		<div class="listingIASTitle">
-			<h3>Sold Listings</h3>
-		</div>
-		<div class="listingIASCards">
-			<ul class="fullCardUl">
-				<!-- {{#each listing}} -->
-					{{> listing_status}}
-				<!-- {/each} -->
-			</ul>
-		</div>
-	</div>
+	<!-- Notification  -->
 </template>
