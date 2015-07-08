@@ -47,11 +47,10 @@
 {{> sAlert}}
  {{#if currentUser}}
     {{> headerpost}}
-    {{listingUser}}
+    {{ProfileCenterNav}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
-    {{listingUser}}
     {{> yield}}
 {{/if}}
 </template>
