@@ -50,14 +50,18 @@ SearchSource.defineSource('listings', function (searchText, options) {
   return user;
 });
 
-  if (!ServiceConfiguration.configurations.find()) { 
+  // Removes the config b/c dupliation error and re-defines it 
+
+    ServiceConfiguration.configurations.remove({
+      service: "facebook"
+    });
+
     ServiceConfiguration.configurations.insert({
       service: 'facebook',
       appId: '403772073107923',
       secret: '4663665d518fef59dbf6643280281a85'
     });
 
-  }
 
 //           //
 // Amazon S3 //
