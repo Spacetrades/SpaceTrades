@@ -1,4 +1,5 @@
 <template name="addlisting">
+<!-- TASK - Allow user to add only one image -->
   <div class="addlistdiv div">
     <h2 class="addlistlogo">Create Listing</h2>
     <div class="imagepreview">
@@ -58,6 +59,7 @@
 
           <p>State:
             <select class="liststate">
+              <option value="Select">Select</option>
               <option value="Alabama">Alabama </option>           
               <option value="Alaska">Alaska </option>           
               <option value="Arizona">Arizona </option>           
@@ -171,13 +173,22 @@
     <p>Description</p>
     <textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers"></textarea>
   </div>
-  <!-- Expand the description box, use the twitter size. Limit 300 words-->
+  <!-- TASK - Expand the description box, use the twitter size. Limit 300 words-->
+</div>
+<div class="terms">
+<h3 style='text-align: center;'>By checking this you are in agreement with the terms and condition</h3>
+<div class='errorh'>
+<a class="link" href='/help/terms'>Terms and Conditions</a>
+</div>
+<input type='checkbox' class='agree'>
 </div>
 <input type="submit" class="add ph-button" value="Add Listing">
+</div>
 
+<div class="success">
 </div>
-<div class="review">
-</div>
+
+<!-- TASK - This should be hidden ASAP -->
 <p class='lat'>{{lat}}</p>
 <p class='lng'>{{lng}}</p>
 </template>
