@@ -12,7 +12,6 @@ mdg:camera
 iron:router
 matthew:foundation5-sass
 accounts-password
-matteodem:easy-search
 afruth:chapp
 ccorcos:clientside-image-manipulation
 fourseven:scss
@@ -54,3 +53,4 @@ nemo64:bootstrap
 less
 service-configuration
 http
+fortawesome:fontawesome
