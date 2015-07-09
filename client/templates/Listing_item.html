@@ -1,106 +1,130 @@
 <template name="item">
+    <!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
+    <!-- TASK - Move description box up next to descriptors -->
     <div class="itemdiv div">
         <div>
-            <h2 class="itemtitle"><a href="#">{{listing_title}}</a></h2>
-        </div>
-        <div class="itempmcql">
-            <div>
-                <div class="money">
-                    <p class="price">${{price}}</p>
-                </div>
-                <div class="functionality">
-                    <ul>
-                        <li>
-                            <div class="ph-float">
-                                <a href='{{current}}/request' class='ph-button ph-btn-mr'>Offer</a>
-                            </div>
-                        </li>
-                        <li>  
-                            <div class="ph-float">
-                                <a href='{{messenger}}' target="_blank" class='ph-button ph-btn-red'>Contact</a>
-                            </div>
-                        </li>
-                        <li>  
-                            <div class="ph-float">
-                                <li>Quantity: {{quantity}}</li>
-                                <li>{{city}}, <b>{{state}}</b></li>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="imagebox">
-            <div id="slider" class="flexslider">
-               <ul class="slides">
-                <li>
-                    <img src="{{img1}}">
-                </li>
-                <li>
-                    <img src="{{img2}}">
-                </li>        
-                <li>
-                    <img src="{{img3}}">
-                </li>                     
-            </ul>
-        </div>
-        <div id="carousel" class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="{{img1}}">
-                </li>
-                <li>
-                    <img src="{{img2}}">
-                </li>        
-                <li>
-                    <img src="{{img3}}">
-                </li>                       
-            </ul>
-        </div>
-    </div>
-    <div class="itemimgmap">
-        <div class="gimg">
-            {{> googleMap name="listingImage" options=exampleMapOptions}}
-        </div>
-    </div>
-    <div class="functionality">
-        <div>
-            <div>
-                <!-- Rating 5 Stars-->
-            </div>
-            <div>
-                <ul>
-                    <li><u><a href="/{{creator_id}}"><p>{{username}}</p></a></u></li>
+            <h2 class="itemtitle"><div class="freeze">{{listing_title}}</div></h2>
+            <div class="btn-group open options-dropdown">
+            <a class="btn btn-primary">Options</a>
+              <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="fa fa-caret-down"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+                    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
                 </ul>
             </div>
         </div>
-<!--         <div>
-            <ul>
-                <li><a href="#"><i class="fa fa-plus"></i>Save</a></li>
-                <li><a href="#"><i class="fa fa-flag"></i>Report</a></li>
-            </ul>
-        </div> -->
-    </div>
-    <!-- TASK - Shift elements to the right  -->
-    <div class="itemdd">
-        <div>
-            <h2>Details</h2>
-            <ul class="descriptionbox">
-                <li><h3>Color:</h3>
-                    <div class="colorsquare" style="background-color: {{color}}">
-                    </div>
-                </li>
-                <li><h3>Brand:</h3> {{brand}}</li>
-                <li><h3>Condition:</h3> {{condition}}</li>
-<!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
 
-                <li><h3>Size:</h3> {{size}}</li>
-            </ul>
+
+   <!--      {{#if username}}
+        <div class="btn-group open">
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+                        <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+                    </ul>
+                </div>
+                {{/if}} -->
+
+                <div class="itempmcql">
+                    <div>
+                        <div class="money">
+                            <p class="price">${{price}}</p>
+                        </div>
+                        <div class="functionality">
+                            <ul>
+                                <li>
+                                    <div class="ph-float">
+                                        <a href='{{current}}/request' class='ph-button ph-btn-mr'>Offer</a>
+                                    </div>
+                                </li>
+                                <li>  
+                                    <div class="ph-float">
+                                        <a href='{{messenger}}' target="_blank" class='ph-button ph-btn-red'>Contact</a>
+                                    </div>
+                                </li>
+                                <li>  
+                                    <div class="ph-float">
+                                        <li>Quantity: {{quantity}}</li>
+                                        <li>{{city}}, <b>{{state}}</b></li>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagebox">
+                    <div id="slider" class="flexslider">
+                       <ul class="slides">
+                        <li>
+                            <img src="{{img1}}">
+                        </li>
+                        <li>
+                            <img src="{{img2}}">
+                        </li>        
+                        <li>
+                            <img src="{{img3}}">
+                        </li>                     
+                    </ul>
+                </div>
+                <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="{{img1}}">
+                        </li>
+                        <li>
+                            <img src="{{img2}}">
+                        </li>        
+                        <li>
+                            <img src="{{img3}}">
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+            <div class="itemimgmap">
+                <div class="gimg">
+                    {{> googleMap name="listingImage" options=exampleMapOptions}}
+                </div>
+            </div>
+            <div class="functionality">
+                <div>
+                    <div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><u><a href="/{{creator_id}}"><p>{{username}}</p></a></u></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="itemdd">
+                <div>
+                    <h2>Details</h2>
+                    <ul class="descriptorbox">
+                        <li>
+                            <h3>Color:</h3>
+                            <div class="colorsquare" style="background-color: {{color}}">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Brand:</h3>
+                            <p class="descriptor-item">{{brand}}</p>
+                        </li>
+                        <li>
+                            <h3>Condition:</h3> 
+                            <p class="descriptor-item">{{condition}}</p>
+                        </li>
+                        <li>
+                            <h3>Size:</h3>
+                            <p class="descriptor-item">{{size}}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="description">
+                    <h3>Description</h3>
+                    <p>{{description}}</p>
+                </div>
+            </div>
         </div>
-        <div class="description">
-            <h3>Description</h3>
-            <p>{{description}}</p>
-        </div>
-    </div>
-</div>
-</template>
+    </template>
