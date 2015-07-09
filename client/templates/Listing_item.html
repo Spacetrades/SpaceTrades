@@ -4,6 +4,8 @@
     <div class="itemdiv div">
         <div>
             <h2 class="itemtitle"><div class="freeze">{{listing_title}}</div></h2>
+
+            {{#if currentUser}}
             <div class="btn-group open options-dropdown">
             <a class="btn btn-primary">Options</a>
               <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
@@ -13,6 +15,7 @@
                     <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
                 </ul>
             </div>
+            {{/if}}
         </div>
 
 
