@@ -4,22 +4,6 @@
 ## Trello
 
 https://trello.com/b/IETMH34k/meteor-development
-
-## Velocity - Testing
-
-## Collaboration
-
-https://help.github.com/categories/collaborating/
-
-## Resources
-
-## Git Workflow
-
-    Feature branches
-    Release branches
-    Hotfix branches
-    Potentially use gitflow
-    Commit separation based on individual task
     
 ## Resources
 
@@ -54,6 +38,9 @@ https://help.github.com/categories/collaborating/
 - [:computer: Deploy to personal linux server (2)](https://gentlenode.com/journal/meteor-19-deploying-your-applications-in-a-snap-with-meteor-up-mup/41)
 
 ## Commit Messages Language ( CML )
+```
+Extensive undertandability is less crucial in the beginning stage of development and for this reason it is not necessarily helpful to use highly descriptive commit messages. Once everything works, better documentation can be added.
+```
 ### Keywords:
 	INIT - First Commit
 	UPDATE - Changes due to involuntary updating of versions
@@ -62,3 +49,4 @@ https://help.github.com/categories/collaborating/
 	RM - Remove File
 	RN - Rename existing file or files
 	// - Comment
+	Rm - Readme
