@@ -6,7 +6,7 @@ accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
 afruth:chapp@0.1.6
 alanning:roles@1.2.13
-aldeed:autoform@5.3.0
+aldeed:autoform@5.3.2
 aldeed:simple-schema@1.1.0
 amplify@1.0.0
 autoupdate@1.2.1
@@ -74,8 +74,8 @@ minimongo@1.0.8
 mizzao:bootboxjs@4.4.0
 mizzao:build-fetcher@0.2.0
 mizzao:jquery-ui@1.11.2
-mizzao:timesync@0.3.1
-mizzao:user-status@0.6.4
+mizzao:timesync@0.3.2
+mizzao:user-status@0.6.5
 mobile-status-bar@1.0.3
 momentjs:moment@2.9.0
 mongo@1.1.0
