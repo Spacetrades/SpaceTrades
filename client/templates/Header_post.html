@@ -1,0 +1,100 @@
+<template name="headerpost">
+<nav class="mainnav">
+    <ul class="navsearch">
+        <li><a href="/" class="navlogo">SpaceTrades</a></li>
+        <li><span class="navsicon"><i class="fa fa-search"></i></span></li>
+        <li><input type="search" class="navsearchf" id="navsearchf" placeholder="Brand, Name, Size, Price..." /></li>
+        <li><a href="/search" class="navsearchbtn">Search</a></li>
+    </ul>
+    <ul class="navcat">
+            <li><a href="#" class="navitem">Categories</a></li>
+        </ul>
+        <ul class="navprofile">
+            <li><a href="/profile" class="navusername"><span>{{usernameCurrent}}</span></a></li>
+            <li><a href="/" class="navhome">Home</a></li>
+            <li>
+            {{#dropdownTrigger name="global"}}
+            <i class="navbarsdown navfa navfai fa fa-bars"></i>
+            {{/dropdownTrigger}}
+
+             {{#dropdown name="global"}}
+                  <a href="/add"><span class="dropdownitem">Add Listing</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/meetuprequest"><span class="dropdownitem">Meetup Request Manager</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/listing"><span class="dropdownitem">Listing Manager</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/request"><span class="dropdownitem">Meetup History</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/settings"><span class="dropdownitem">Account Settings</span></a>
+              {{/dropdown}}
+
+            </li>
+                <!-- <ul>
+                <li><a href="#" class="addlisting">Add Listing</a></li>
+            </ul> -->
+            <li>
+                {{#dropdownTrigger name="notifications"}}
+               <i class="navbarsdown navfa navfai fa fa-globe dropdown__trigger"></i>
+                {{/dropdownTrigger}}
+
+                {{#dropdown name="notifications"}}
+                  <a href="/activities"><span class="dropdownitem">Nathan</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/meetuprequest"><span class="dropdownitem">Yusuf</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/listing"><span class="dropdownitem">Topalov</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/request"><span class="dropdownitem">Carlsen</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/settings"><span class="dropdownitem">Vishy</span></a>
+              {{/dropdown}}
+
+          </li>
+
+          <li>
+          <a href="https://www.facebook.com/messages/other/" target="_blank">
+          <i class="fa fa-envelope dropdown__trigger"></i>
+          </a>
+          </li>
+
+          <li>
+          {{#dropdownTrigger name="general"}}
+          <i class="navdown navbarsdown navfa navfai fa fa-sort-down dropdown__trigger"></i>
+          {{/dropdownTrigger}}
+
+          {{#dropdown name="general"}}
+           <a href="/report"><span class="dropdownitem">Reporting</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/help"><span class="dropdownitem">Help Center</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/advertise"><span class="dropdownitem">Advertising</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="#"><span class="dropdownitem logout">Logout</span></a>
+          {{/dropdown}}
+          </li>
+      </ul>
+</nav>
+</template>

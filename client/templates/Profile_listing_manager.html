@@ -1,0 +1,17 @@
+<template name="ListingActive">
+<!-- Task -->
+<!-- Edit and Delete -->
+	<div class="listingIASDiv div">
+		<div class="listingIASTitle">
+			<h3>Active</h3>
+		</div>
+		<div class="listingIASCards">
+			<ul name="fullCardUl">
+				{{#each listing}}
+					{{> listing_status}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<!-- Notification  -->
+</template>

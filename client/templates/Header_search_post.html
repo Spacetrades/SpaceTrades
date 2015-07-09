@@ -1,0 +1,99 @@
+<template name="headersearchpost">
+    <nav class="mainnav">
+       <ul class="navcat">
+            <li><a href="#" class="navitem">Categories</a></li>
+        </ul>
+        <ul class="navprofile">
+            <li><a href="/profile" class="navusername"><span>{{usernameCurrent}}</span></a></li>
+            <li><a href="/" class="navhome">Home</a></li>
+            <li>
+            {{#dropdownTrigger name="global" class="drops" }}
+            <i class="navbarsdown navfa navfai fa fa-bars"></i>
+            {{/dropdownTrigger}}
+
+             {{#dropdown name="global"}}
+                  <a href="/activities"><span class="dropdownitem">Activities</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/meetuprequest"><span class="dropdownitem">Meetup Request Manager</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/listing"><span class="dropdownitem">Listing Manager</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/request"><span class="dropdownitem">Meetup History</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/settings"><span class="dropdownitem">Account Settings</span></a>
+              {{/dropdown}}
+
+            </li>
+                <!-- <ul>
+                <li><a href="#" class="addlisting">Add Listing</a></li>
+            </ul> -->
+            <li>
+                {{#dropdownTrigger name="notifications"}}
+               <i class="navbarsdown navfa navfai fa fa-globe dropdown__trigger"></i>
+                {{/dropdownTrigger}}
+
+                {{#dropdown name="notifications"}}
+                  <a href="/activities"><span class="dropdownitem">Nathan</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/meetuprequest"><span class="dropdownitem">Yusuf</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/listing"><span class="dropdownitem">Topalov</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/request"><span class="dropdownitem">Carlsen</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/profile/settings"><span class="dropdownitem">Vishy</span></a>
+              {{/dropdown}}
+
+          </li>
+
+          <li>
+           {{#dropdownTrigger name="messages" class="drops" }}
+          <i class="navbarsdown navfa navfai fa fa-envelope dropdown__trigger"></i>
+          {{/dropdownTrigger}}
+
+          {{#dropdown name="messages"}}
+                  <a href="/activities"><span class="dropdownitem">Nathan</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/meetuprequest"><span class="dropdownitem">Peter</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/listingmanager"><span class="dropdownitem">Paul</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/meetuphistory"><span class="dropdownitem">John</span></a>
+                  <br />
+                  <br />
+                  <br />
+                  <a href="/accountsettings"><span class="dropdownitem">James</span></a>
+              {{/dropdown}}
+
+
+          </li>
+          <li><a href="#" class="navdown navfa"><i class="navbarsdown navfa navfai fa fa-sort-down dropdown__trigger"></i></a></li>
+      </ul>
+    </nav>
+    <div class="searchfield searchfield2">
+        <input type="text" class="search search2" placeholder="Brand, Name, Neighborhood, Size, Price...">
+        <a href="#" class="homesearchbtn">Search</a>
+    </div>    
+</template>

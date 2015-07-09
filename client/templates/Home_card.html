@@ -1,0 +1,24 @@
+<template name="card">
+<!-- TASK - Username link is set to go to id of listing not user creator -->
+    <li>
+        <div>
+            <div class="carditp">
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>                      
+                <p><a href="/listing/{{_id}}" class="listingtitle">{{listing_title}}</a></p>
+                <!-- Underline Listing title onhover -->
+            </div>
+            <div class="cardpsa">
+                <p class="cardprice">${{price}}</p>
+                <p class="cardsl"><span class="cardsize">
+                '{{size}}</span>
+                </p>
+            </div>
+            <div class="cardna">
+                {{offers}}
+                <a class="cardname" href="/profile/{{creator_id}}">{{username}}</a>
+
+                <!-- Different categories will have different size values. ex. Shoes '11, Apparel Medium, Electronics 16GB, etc -->
+            </div>
+        </div>
+    </li>
+</template>

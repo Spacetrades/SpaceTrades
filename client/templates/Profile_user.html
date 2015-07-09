@@ -1,0 +1,53 @@
+<template name="UserProfile">
+	<div class="profilediv div">
+		<div class="profilecontent">
+			<div class="profileleft">
+				<div class="propic">
+					<img class="profilepic" src="{{picture}}">
+				</div>
+				<div class="profreq">
+					<!-- Frequency Graph Goes Here -->
+				</div>
+			</div>
+			<div class="btn-group open right">
+				<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+					<span class="fa fa-caret-down"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"><i class="fa fa-pencil fa-fw"></i>Report</a></li>
+					</ul>
+				</div>
+				<div class="profileright">
+					<div class="proname">
+						<h2>{{username}}</h2>
+						<h2>{{online}}</h2>
+						<ul>
+							<div class="rating">
+								<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+							</div>
+						</ul>
+					</div>
+					<div class="profileloc">
+						<h2>Location</h2>
+						<ul>
+							<li>Brooklyn, NY</li>
+							<li><i class="fa fa-facebook-official"></i></li>
+						</ul>
+					</div>
+					<div class="promssg">
+						<p>I like z coding and z Chess </p>
+					</div>
+					<div class="procontact">
+						<button type="button">Contact</button>
+					</div>	
+				</div>
+			</div>
+			<div class="profilesale">
+				<p>Items For Sale</p>
+				<ul>
+					{{> home}}
+					<li><img src="#" class="prosaleimg"></li>
+				</ul>
+				<a>See More</a>
+			</div>
+		</div>
+	</template>

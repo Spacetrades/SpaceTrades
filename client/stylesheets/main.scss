@@ -1,0 +1,1863 @@
+/****** COLORS ******/
+ $color-clothing:    #ff5700;
+ $color-electronics: #006eff;
+ $color-shoes:       #34dddd;
+ $color-money:       #339966;
+ $color-spacered:    #f8504b;
+ $color-spacegrey:   #404040;
+ $color-banana:      #ffff00;
+ $color-gold:        #ffd700;
+ $color-facebook:    #46629E;
+ $color-link:        #0c65a5;
+ $color-linkhover:   #0c65a5;
+
+/****** FONT STACKS ******/
+ $font_stack-header: 'Lato', sans-serif;
+ $font_stack-secondary: 'Roboto', sans-serif;
+ $font_stack-alfred: 'Baskerville', sans-serif;
+
+
+/****** FONT SIZES ******/
+
+
+
+/****** ST Grid (our own bootstrap) ******/
+
+
+/**
+TASK - Split up css into different files and use imports (for categorization sake)
+
+CSS class rules
+Use underscores (_) in beteween words 
+AND
+Use tacks (-) in between descriptor
+
+All classes should be in this form
+[Broad category] - [Specific Item]
+If the class is one word it should be [Specific Item]
+
+FIND and INCLUDE:
+CSS/SASS style guide
+https://github.com/styleguide/css
+http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+https://github.com/necolas/idiomatic-css
+http://csswizardry.com/2012/04/my-html-css-coding-style/
+http://coding.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/  
+http://make.wordpress.org/core/handbook/coding-standards/css/
+http://smacss.com/
+
+Be consistant with indentation
+Be consistant about where spaces before/after colons/braces go
+One selector per line, One rule per line
+List related properties together
+Have a plan for class name naming
+Don't use ID's #hotdrama
+etc
+
+Organize css properties Alphabetically and -moz like properties go at the beginning
+
+
+
+CSS Principles
+
+**/
+
+
+/*****************************************************************
+                            CRUCIAL
+******************************************************************/
+/**                 INCLUDES THE FOLLOWING
+GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
+
+/****** GLOBAL ******/
+
+.options-dropdown {
+    background-color: orange;
+    border-radius: 5px;
+    margin-left: 80%;
+    padding: 9px 40px 12px;
+}
+
+.freeze {
+    color: $color-spacered !important;
+}
+
+.freeze:hover {
+    color: $color-spacered !important;
+}
+
+.btn {
+    color: white !important;
+}
+
+
+.link {
+    color: $color-link !important;
+    font-family: 'arial';
+}
+
+.link:hover {
+    color: black !important;
+    text-decoration: underline;
+
+}
+
+.formspace li {
+    padding-bottom: 1em;
+}
+
+input[type=checkbox] {
+    zoom: 2;
+}
+
+.right {
+    float: right;
+}
+
+.searchcarditp {
+  display: inline-block;
+  float: left;
+}
+
+.descriptorbox {
+    border: 1px solid $color-spacegrey;
+    margin-right: 75%;
+}
+
+.descriptorbox li {
+    margin-left: 3em;
+}
+
+.searchcarditp a img {
+    width: 10em;
+}
+
+.itemtitle, 
+.listingtitle {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+
+#mroffer {
+    height: 2em;
+}
+
+#target {
+    width: 345px;
+}
+
+.controls {
+    -moz-box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    height: 32px;
+    margin-top: 16px;
+    outline: none;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
+
+.redskin {
+    background-color: $color-spacered;
+}
+
+.addlistlogo {
+    font-family: 'Roboto';
+}
+
+.price {
+    font-size: 1.5em;
+}
+
+.mrbutton {
+    text-align: center;
+}
+
+.mrapi {
+    height: 13em;
+    width: 100%;
+}
+
+.shiftright{
+    margin-left: 48% !important;
+}
+
+.facebook {
+    background-color: $color-facebook;
+}
+
+.listingtitle:hover {
+    text-decoration: underline;
+}
+
+
+input[type="radio"] {
+    display:none;
+}
+
+.large {
+    font-size: 4em;
+}
+
+.s-alert-error {
+    font-family: 'Baskerville';
+}
+
+.s-alert-sucess{
+    font-family: 'Baskerville';
+}
+
+input[type="radio"] + label {
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type="radio"] + label span {
+   background-color:black;
+}
+
+input[type="radio"]:checked + label span{
+   background-color:$color-spacered;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+// STOP
+
+.searchdiv {
+    list-style: none;
+}
+
+textarea {
+    font-family: 'Abel', sans-serif;
+}
+
+.listdescription {
+    resize: none;
+    width: 37%;
+    height: 5em;
+}
+
+.listprice {
+    text-align: center;
+    color: $color-money;
+    font-weight: bold;
+}
+
+.add {
+    margin-left: 40%;
+    background-color: #f8504b;
+}
+
+.searchopts {
+    color: red;
+}
+
+.searchtext {
+    margin-left: 50%;
+}
+
+#iron-router-progress {
+    background-color: white;
+}
+
+.listtitle {
+    width: 36%;
+}
+
+.logout {
+    color: red;
+}
+
+.profilepic {
+    border-radius: 50%;
+}
+
+div[data-momentum] div {
+    left: 77% !important;
+    top: 15% !important;
+    text-align: left !important;
+}
+
+.imagesquare {
+    height: 13em;
+    width: 22em;
+    display: inline-block;
+}
+
+.propic {
+    background-color: transparent;
+    margin-left: 40%;
+}
+
+.colorsquare {
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+}
+
+.imagepreview {
+    float: right;
+    width: 32%;
+}
+
+.uploadimg { 
+    height: 13em;
+    width: 22em;
+}
+
+html, body {
+    min-height: 100%;
+    font-family: 'Lato', sans-serif;
+    color: #404040;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:link {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:active {
+    color: #404040;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/****** GLOBAL END ******/
+
+
+/****** GLOBAL CLASSES END ******/
+
+.div {
+    margin: 3rem 10% 2rem 10% !important;
+}
+
+.email {
+    color: #f8504b;
+}
+
+/****** GLOBAL CLASSES END ******/
+
+
+/****** HEADER ******/
+
+/** Home Header Pre **/
+.mainnav {
+    color: #404040;
+    background-color: #f8504b;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.mainnav ul {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    vertical-align: middle;
+}
+
+.mainnav ul li a {
+    color: #404040;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px !important;
+    font-weight: 400;
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: #404040;
+}
+
+.meetupitems {
+    color: $color-spacered;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
+}
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+/** Home Header Post **/
+
+.navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid #404040;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 5.5rem;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+.navprofile li a {
+    border: 1px solid #f8504b;
+}
+
+.proname {
+    text-align: center;
+}
+
+.navprofile li a:hover {
+    background-color: #f8504b;
+    color: #404040;
+    border: 1px solid #404040;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: #f8504b!important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid #404040 !important;
+    color: #fff !important;
+    background-color: #404040 !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+/** Header Post **/
+
+.navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding: 3px 12px 3px 15px;
+}
+
+.navlogo:hover {
+    color: #404040 !important;
+    background-color: #f8504b!important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 6px 7px;
+    border: 1px solid #404040;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+.navsearchbtn {
+    color: #fff !important;
+    border: 1px solid #fff;
+    padding: 6px 10px !important;  
+}
+
+.navsearchbtn:hover {
+    background-color: #f8504b !important;
+}
+
+/** Header Pre **/
+
+.searchfield2 {
+    margin-top: 20px !important;
+}
+
+.search2 {
+    width: 60% !important;
+}
+
+
+/** Field Area **/
+
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: #404040;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+}
+
+.search {
+    height: 48px;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: #f8504b !important;
+}
+
+.homesearchbtn {
+    padding: 11px 16px;
+    background-color: #f8504b;
+    color: #fff !important;
+    margin-left: 8px;
+    border-radius: 0.3em;
+}
+
+/** Search Field End **/
+
+/****** HEADER END ******/
+
+.footitems {
+    padding: 0;
+    margin: 0;
+}
+
+.foot {
+    padding: 0 !important;
+    text-align: center !important;
+    background-color: #fff;
+    color: #404040;
+    margin-bottom: 2rem !important;
+}
+
+.foot ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 2px 0 2px;
+    margin: 0 5px 0 5px;
+}
+
+.foot ul p {
+    padding: 0 2px 0 2px;
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.functionality {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.itemtitle {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.itemdd {
+    padding-top: 55%;
+}
+
+.imagebox {
+    float: left;
+    width: 65%;
+    display: inline-block;
+}
+
+.imageboxcenter {
+    float: left;
+    width: 65%;
+    display: inline-block;
+    margin-left: 15%;
+}
+
+.description {
+    text-align: center;
+}
+
+.money {
+    color: $color-money;
+    font-family: 'Abel', sans-serif;
+}
+
+/****** FOOTER END ******/
+
+
+/*****************************************************************
+    CRUCIAL END
+    ******************************************************************/
+
+
+/*****************************************************************
+    HELP CENTER
+    ******************************************************************/
+/**                 INCLUDES THE FOLLOWING PAGES
+HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
+
+
+/****** HELP NAV ******/
+
+.helpnav ul li {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.helpnav ul li a {
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.helpnav ul li a:hover {
+    background-color: #f8504b;
+    color: #fff;
+}
+
+.helpiteml {
+    margin-top: -2.8rem;
+    text-align: right;
+}
+
+.helplogo {
+    color: #f8504b;
+}
+
+/****** HELP NAV END ******/
+
+
+/****** HELP ******/
+
+.helpdiv {
+    text-align: center;
+}
+
+.helpwel {
+    font-weight: bold;
+}
+
+.helpimg {
+    width: 70%;
+}
+
+/****** HELP END ******/
+
+
+/****** ABOUT ******/
+
+
+
+/****** ABOUT END ******/
+
+
+/****** FAQ ******/
+
+.faq ul {
+    padding: 0;
+}
+
+.faq ul li ul li p {
+    width: 70%;
+}
+
+.faqsec {
+    margin-left: 1rem;
+}
+
+.faqheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqpar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+.faqinfo {
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+/****** FAQ END ******/
+
+/****** SAFETY ******/
+
+.safetyheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.safetypar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+/****** SAFETY END ******/
+
+
+/****** PRIVACY & TERMS ******/
+
+.termssec {
+    margin-left: 1rem;
+}
+
+.termsheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.termspar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+/****** PRIVACY & TERMS END ******/
+
+
+/****** CONTACT ******/
+
+.contactname input, .contactemail input {
+ width: 30%;
+ height: 20px;
+ padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #404040;
+    background-color: #fff;
+    border: none;
+    border: 1px solid #f8504b;
+}
+
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
+.sent { 
+    display: none;
+}
+
+
+/****** CONTACT END ******/
+
+
+/****************************************************
+    HELP CENTER END
+    ****************************************************/
+
+
+    /****** HOMEPAGE ******/
+
+
+    /** Listing Card **/
+    .carddiv {
+        text-align: center;
+    }
+
+    .carddiv ul li {
+        border: none;
+        width: 20%;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin: 0.8rem .6rem;
+        outline: black dotted thin;
+    }
+
+    .carddiv ul li:hover {
+        outline-style: solid;
+        outline-width: thin;
+        outline-color: rgb(248, 80, 75);
+
+        // Add a linear gradient to the border outline
+    }
+
+    .carditp a img {
+        width: 100%;
+    }
+
+    .carditp p, .cardpsa p {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .carditp p a {
+        margin: 5px 5px 2px 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+    }
+
+    .carditp p a:hover {
+        margin: 5px 5px 2px 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+    }
+
+
+    .cardprice {
+        font-family: 'Abel';
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #396;
+        margin: 2px 1.6rem 2px 10px !important;
+        float: left;
+    }
+
+    .cardsize {
+        font-size: 0.9rem !important;
+        margin-right: 5px !important;
+    }
+
+    .cardny {
+        font-weight: 700;
+    }
+
+    .cardsl {
+        margin: 2px 10px 2px 1.6rem !important;
+        font-size: 0.9rem;
+    }
+
+    .cardname {
+        float: right;
+        margin: 2px 10px 5px 2px !important;
+        font-size: 0.8rem;
+        text-decoration: underline !important;
+        font-weight: 400;
+    }
+
+    .gimg {
+      width: 300px;
+      height: 500px;
+      max-width: 100%;
+      margin-left: 80%;
+  }
+
+  .lat, 
+  .lng {
+    display: none;
+}
+
+
+/****** HOMEPAGE END ******/
+
+
+/****** ERROR 404 ******/
+
+.errordiv {
+    text-align: center;
+}
+
+.errorm {
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: 'Baskerville', arial;
+}
+
+.errorh {
+    margin: 2rem 0 2rem 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+// .errorh a {
+//     padding: 8px 12px;
+//     color: #f8504b;
+//     background-color: #fff;
+//     border: 1px solid #f8504b;
+// }
+
+// .errorh a:hover {
+//     color: #fff;
+//     background-color: #f8504b;
+// }
+
+/*************************** PH FROM 3rd party ***************************/
+.ph-button {
+
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;    
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;    
+    font-weight: 700;   
+    padding: 19px 39px 18px;
+    font-size: 18px;
+    
+}
+/*Green
+==========================*/
+.ph-btn-green {
+
+    border-color: #3AC162;
+    background-color: #5FCF80;
+
+}
+.ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
+    background-color: #4BC970;
+    border-color: #3AC162;    
+}
+
+/*Blue
+==========================*/
+.ph-btn-mr {
+
+    border-color: #38A172;
+    background-color: #2DBB7B;
+    color: white !important;
+}
+
+.ph-btn-mr:hover, .ph-btn-mr:focus, .ph-btn-mr:active {
+    background-color: #38A172;
+    border-color: #338661;   
+    color: white !important;
+}
+
+/*Grey
+==========================*/
+.ph-btn-grey {
+
+   background-color: #C6CCD2;
+   border-color: #AAB3BB;
+}
+.ph-btn-grey:hover, .ph-btn-grey:focus, .ph-btn-grey:active {
+    background-color: #B8BFC7;
+    border-color: #AAB3BB; 
+}
+
+/*Red
+==========================*/
+.ph-btn-red {
+
+    background-color: #ED5A5A !important;
+    border-color: #EA4343 !important;
+    color: white !important;
+    font-family: inherit !important;
+
+}
+.ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
+    background: none repeat scroll 0 0 #EB4848 !important;
+    border-color: #E83131 !important; 
+    color: white !important;   
+}
+
+
+/*DEMO ONLY FOR CENTER POSITION*/
+.ph-container {
+  margin: 0 auto;
+  display: inline;
+}
+
+.ph-float {
+
+  float: left;
+  width: 22%;
+  padding: 10px;  
+  padding-top: 50px;  
+  text-align: center;
+  // margin-left: 80%;
+}
+
+.ph-clear {
+
+  clear: both;
+
+}
+
+/****** ERROR 404 END ******/
+
+
+
+
+/******************************
+
+    Official Style Sheet
+    Website - https://spacetrades.com
+    Copyright SpaceTrades
+
+    ******************************/
+
+/*******************
+    Global
+    *******************/
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        color: #404040;
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        color: black;
+    }
+
+    footer a:visited {
+        color: #f8504b !important;
+    }
+
+    .foota {
+        color: black !important;
+    }
+
+    /* Links */
+    a {
+        color: #404040;
+        text-decoration: none;
+    }
+
+    a:link {
+        color: #f8504b;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Lists*/
+    ul, ol {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Text */
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    h1 { 
+        font-size: 1.7rem; 
+    }
+
+    h2 { 
+        font-size: 1.7rem; 
+    }
+
+    h3 { 
+        font-size: 1.2rem; 
+    }
+
+    h4 { 
+        font-size: 1rem; 
+    }
+
+    /* Input */
+    input {
+        font-family: 'Abel', sans-serif;
+    }
+
+    input:focus, 
+    textarea:focus {
+        outline-color: #f8504b;
+        outline-width: 1px;
+        outline-offset: -3px;
+    }
+
+    input[type=text]::-ms-clear {
+        display: none;
+        height: 0; 
+        width : 0; 
+    }
+    input[type=text]::-ms-reveal {  
+        display: none;
+        height: 0;
+        width : 0;  
+    }
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { 
+        display: none; 
+    }
+
+    input[type=text]::-ms-clear {  
+        display: none;
+        height: 0;
+        width : 0; 
+    }
+
+    input[type=text]::-ms-reveal {  
+        display: none;
+        height: 0;
+        width : 0;  
+    }
+
+    input[type="search"]::-webkit-search-decoration, 
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { 
+        display: none; 
+    }
+
+    button {
+        background-color: #fff;
+        border: none;
+    }
+
+    /****** END *******/
+
+/*******************
+    Global Classes
+    *******************/
+
+    .oneDiv {
+        margin: 3rem 10% 2rem 10% !important;
+    }
+
+    /****** END *******/
+
+
+/*******************
+    Feedback
+    *******************/
+
+/**********
+ Feedback Initial
+ **********/
+
+ .feedBackMeat div {
+    display: inline-block;
+}
+
+.feedBackOptions {
+    height: 330px;
+    margin-left: 10%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.feedBackOptions ul li button {
+    background-color: #f8504b;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 80px;
+    margin: 10px;
+    outline: 0;
+    padding: 15px 20px;
+    width: 70%;
+}
+
+.feedBackDocs {
+    border-left: 1px solid #404040;
+    padding-left: 6%;
+    vertical-align: middle;
+    width: 60%;
+}
+
+.feedBackDocs ul li p {
+    font-size: 0.95rem;
+}
+
+/**********
+ Feedback Meetup
+ **********/
+
+ /** Stars **/
+ fieldset, label { margin: 0; padding: 0; }
+
+
+ /* Style Star Rating Widget */
+
+ .rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+.feedBackMeetupDiv div {
+    display: inline-block;
+}
+
+.feedBackForm {
+    margin-left: 10%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.feedBackDocs2 {
+    border-left: 1px solid #404040;
+    padding: 1% 4%;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.feedBackExp ul li {
+    display: inline-block;
+    padding: 2px;
+    margin: 2px 4px 2px 0;
+}
+
+.feedBackExp ul li:nth-child(1) {
+    margin-left: -25px !important;
+}
+
+.feedBackExp h4, .feedBackExp ul, .feedBackStars h4, .feedBackText h4 {
+    margin: 0;
+    margin: 5px 0;
+    padding: 1px;
+}
+
+.feedBackExp ul, .rating, .feedBackText h4 {
+    margin-bottom: 10px;
+}
+
+.feedBackText input {
+    height: 25px;
+    padding-left: 5px;
+}
+
+.feedBackText input:focus {
+    outline-color: #f8504b;
+}
+
+.feedBackText button {
+    outline: none;
+    margin: 20px 0 0 0;
+    text-align: right !important;
+    background-color: #f8504b;
+    padding: 10px 16px;
+    color: #fff;
+    margin-left: 7rem;
+}
+
+/****** END *******/
+
+
+/*******************
+    Headers
+    *******************/
+/**********
+ Header Home Pre
+ **********/
+
+ .mainnav {
+    color: #404040;
+    background-color: #f8504b;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.mainnav ul {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    vertical-align: middle;
+}
+
+.mainnav ul li a {
+    color: #404040;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px !important;
+    font-weight: 400;
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: #404040;
+}
+
+.meetupitems {
+    color: $color-spacered;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
+}
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+/* Search Area*/
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: #404040;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+}
+
+.search {
+    height: 48px;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: #f8504b !important;
+}
+
+.homesearchbtn {
+    padding: 11px 16px;
+    background-color: #f8504b;
+    color: #fff !important;
+    margin-left: 8px;
+}
+
+/**********
+ Header Home Post
+ **********/
+
+ .navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid #404040;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 5.5rem;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+.navprofile li a {
+    border: 1px solid #f8504b;
+}
+
+.navprofile li a:hover {
+    background-color: #f8504b;
+    color: #404040;
+    border: 1px solid #404040;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: #f8504b!important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid #404040 !important;
+    color: #fff !important;
+    background-color: #404040 !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+/**********
+ Header Pre
+ **********/
+
+ /* NOT YET */
+
+/**********
+ Header Post
+ **********/
+
+ .navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding: 3px 12px 3px 15px;
+}
+
+.navlogo:hover {
+    color: #404040 !important;
+    background-color: #f8504b!important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 6px 7px;
+    border: 1px solid #404040;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+.navsearchbtn {
+    color: #fff !important;
+    border: 1px solid #fff;
+    padding: 6px 10px !important;  
+}
+
+.navsearchbtn:hover {
+    background-color: #f8504b !important;
+}
+
+/**********
+ Header Search Pre
+ **********/
+
+ .searchfield2 {
+    margin-top: 20px !important;
+}
+
+.search2 {
+    width: 60% !important;
+}
+
+/**********
+ Header Search Post
+ **********/
+
+ /* None Yet */
+
+ /****** END *******/
+
+
+/*******************
+    Help Center
+    *******************/
+
+/**********
+ About
+ **********/
+
+ .aboutDiv {
+    text-align: center;
+}
+
+.helpPagesPar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.helpAboutUl li ul li, .helpDiv ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.helpAboutUl li ul li img {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+/**********
+ Help
+ **********/
+
+ .helpDiv {
+    text-align: center;
+}
+
+.helpIntro {
+    font-weight: 700;
+}
+
+.helpDiv ul li img {
+    width: 100%;
+    margin: 3rem 0 1rem 0;
+}
+
+/**********
+ Contact
+ **********/
+
+ .contactdiv {
+    text-align: center;
+}
+
+.contactname input, .contactemail input {
+ width: 30%;
+ height: 20px;
+ padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit button {
+    outline: none;
+    margin: 0;
+    text-align: right !important;
+    background-color: #f8504b;
+    padding: 10px 16px;
+    color: #fff;
+    margin-left: 17rem;
+}
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: #f8504b;
+}
+
+.sent { 
+    display: none;
+}
+
+/**********
+ FAQs
+ **********/
+
+ .faqDiv ul {
+    padding: 0;
+}
+
+.faqDiv ul li ul li p {
+    width: 70%;
+}
+
+.faqSec {
+    margin-left: 1rem;
+}
+
+.faqHeading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqPar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+.faqInfo {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.faqInfo h3, .faqInfo p {
+    margin: 0;
+    margin: 5px 0;
+}
+
+/**********
+ Help Nav
+ **********/
+
+/**********
+ Privacy & Terms
+ **********/
+
+/**********
+ Safety
+ **********/
+
+ /****** END *******/
+
+
+/*******************
+    Home Pages
+    *******************/
+
+/**********
+ Card
+ **********/
+
+/**********
+ Home Main
+ **********/
+
+/**********
+ Register
+ **********/
+
+ .registerDiv div {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.registerDocs {
+    width: 50%;
+    vertical-align: middle;
+    padding-left: 4rem;
+    border-left: 1px solid #404040;
+}
+
+.registerMain {
+    width: 40%;
+    vertical-align: top;   
+} 
+
+.fb-login-button {
+    margin-top: 1rem !important;
+}
+
+
+/****** END ******/
