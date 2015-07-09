@@ -2,9 +2,11 @@ if (Meteor.isServer) {
 
 
 // Get the region
-var info = HTTP.get("http://ipinfo.io", function (error, result) {
-  console.log(result.content);
-});
+// var info = HTTP.get("http://ipinfo.io", function (error, result) {
+//   console.log(result.content);
+// });
+
+console.log(Meteor.users.find({_id: this.userId}).fetch());
 
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
@@ -167,6 +169,10 @@ addOffer: function (options) {
   });
 },
 
+userStatus: function () {
+  return Meteor.user().status;
+},
+
 // addHistory : function (options) {
 //   console.log(Meteor.user());
 //   Meteor.user().history.insert({
@@ -217,5 +223,7 @@ addOffer: function (options) {
 
  Meteor.publish('addListing');
  Meteor.publish('sendEmail');
+ Meteor.publish('addOffer');
+ Meteor.publish('userStatus');
 
 }
