@@ -13,8 +13,8 @@
     "buttons"              : false,
 
     "component-animations" : false,
-    "dropdowns"            : false,
-    "button-groups"        : false,
+    "dropdowns"            : true,
+    "button-groups"        : true,
     "input-groups"         : false,
     "navs"                 : false,
     "navbar"               : false,
