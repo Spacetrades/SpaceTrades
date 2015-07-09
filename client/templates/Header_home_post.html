@@ -4,7 +4,7 @@
             <li><a href="#" class="navitem">Categories</a></li>
         </ul>
         <ul class="navprofile">
-            <li><a href="/profile" class="navusername"><span>{{username}}</span></a></li>
+            <li><a href="/profile/{{profile}}" class="navusername"><span>{{usernameCurrent}}</span></a></li>
             <li><a href="/" class="navhome">Home</a></li>
             <li>
             {{#dropdownTrigger name="global" class="drops" }}
@@ -13,10 +13,6 @@
 
              {{#dropdown name="global"}}
                   <a href="/add"><span class="dropdownitem">Add Listing</span></a>
-                  <br />
-                  <br />
-                  <br />
-                  <a href="/activities"><span class="dropdownitem">Activities</span></a>
                   <br />
                   <br />
                   <br />
@@ -67,7 +63,7 @@
           </li>
 
           <li>
-          <a href="https://www.messenger.com" target="_blank">
+          <a href="https://www.facebook.com/messages/other/" target="_blank">
           <i class="fa fa-envelope dropdown__trigger"></i>
           </a>
           </li>
@@ -95,7 +91,7 @@
           </li>
       </ul>
   </nav>
-  <h1 class="logo"><a href="/">SpaceTrades</a></h1>
+  <h1 class="logo">SpaceTrades</h1>
   <div class="searchfield job">
      <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
     <a href="/search" class="homesearchbtn">Search</a>
