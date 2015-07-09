@@ -39,7 +39,7 @@ https://trello.com/b/IETMH34k/meteor-development
 
 ## Commit Messages Language ( CML )
 ```
-Extensive undertandability is less crucial in the beginning stage of development and for this reason it is not necessarily helpful to use highly descriptive commit messages. Once everything works, better documentation can be added.
+Extensive undertandability is less crucial in the beginning stage of development and for this reason it is not necessarily helpful to use highly descriptive commit messages. Once everything works, better documentation can be added. 
 ```
 ### Keywords:
 	INIT - First Commit
