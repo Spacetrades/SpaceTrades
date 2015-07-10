@@ -16,20 +16,23 @@ SearchSource.defineSource('listing', function (searchText, options) {
     var regExp = buildRegExp(searchText);
     console.log(regExp);
     var selector = {
-      listing_title: regExp,
-      username: regExp,
-      category: regExp, 
-      type: regExp, 
-      city: regExp
+      listing_title: regExp
+      // username: regExp,
+      // category: regExp, 
+      // type: regExp, 
+      // city: regExp
     };
+    console.log(selector);
     console.log("1:" + Listing.find(selector, options).fetch());
     return Listing.find(selector, options).fetch();
   }
 
-  else {
-    console.log("2:" + Listing.find({}, options).fetch());
-    return Listing.find({}, options).fetch();
-  }
+  // else {
+  //   console.log("2:" + Listing.find({}, options).fetch());
+  //   return Listing.find({}, options).fetch();
+  // }
+
+// TASK - Learn the right way to make a RegExp
 
   function buildRegExp (searchText) {
     var words = searchText.trim().split(/[ \-\:]+/);

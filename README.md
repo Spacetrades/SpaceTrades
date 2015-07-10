@@ -50,3 +50,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	RN - Rename existing file or files
 	// - Comment
 	Rm - Readme
+	md - Markdown
+	STYLE
+	FIX
+	USE
