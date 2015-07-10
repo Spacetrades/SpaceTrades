@@ -1861,3 +1861,83 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 /****** END ******/
+
+
+.reportMain, .reportMain div, .reportText {
+    margin-left: 1rem;
+}
+
+.reportName {
+    margin-left: 20px;
+}
+
+.reportName ul li, .reportCheck ul {
+    display: inline-block;
+}
+
+
+.reportListingImg img {
+    height: 6rem;
+    width: 9rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
+
+.reportName ul li a p {
+    font-size: 1.4rem;
+    padding: 2px;
+    margin: 0 10px;
+    
+}
+
+.reportCheck p {
+    margin: 35px 0 2px 20px;
+}
+
+.reportCheck ul li {
+    margin: 2px 20px 25px 20px;
+    text-align: center;
+}
+
+.reportCheck ul li input {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.reportBtn {
+    text-align: right;
+    margin-right: 3rem;
+}
+
+.reportBtn button {
+    background-color: #f8504b;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 100px;
+    height: 50px;
+    margin: 0px;
+    outline: 0;
+    padding: 15px 20px;
+}
+
+.reportText p {
+    margin-left: 20px;
+}
+
+.reportText textarea {
+    margin: 2px 5px 20px 20px;
+    width: 40%;
+    height: 6rem;
+    font-size: 1.rem;
+    color: #404040;
+}
+
+.reportUserImg img {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
