@@ -6,13 +6,11 @@ if (Meteor.isServer) {
 //   console.log(result.content);
 // });
 
-console.log(Meteor.users.find({_id: this.userId}).fetch());
-
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
 
-SearchSource.defineSource('listings', function (searchText, options) {
-  var options = { sort: {isoScore:  -1}, limit: 20} 
+SearchSource.defineSource('listing', function (searchText, options) {
+  var options = { sort: {isoScore:  -1}, limit: 20}; 
 
   if (searchText) {
     var regExp = buildRegExp(searchText);
