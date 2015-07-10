@@ -16,7 +16,7 @@
  $font_stack-secondary: 'Roboto', sans-serif;
  $font_stack-alfred: 'Baskerville', sans-serif;
  $font_stack-text: 'Abel', sans-serif;
- $font-stack-norm: 'Helvetica Neue', sans-serif;
+ $font_stack-norm: 'Helvetica Neue', sans-serif;
 
  // Open Sans
 
@@ -74,6 +74,22 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
 
+.hidden {
+    display: hidden;
+}
+
+.helpcenternav {
+    font-family: $font_stack-header !important;
+}
+
+.descriptorbox {
+    font-family: $font_stack-norm;
+}
+
+.description {
+    font-family: $font_stack-norm;
+}
+
 code {
   background: $color-spacered;
   color: white;
@@ -89,14 +105,14 @@ code {
 }
 
 .oneDiv {
-    font-family: $font-stack-norm !important;
+    font-family: $font_stack-norm !important;
 }
 
 
-.mrinfoleft {
-    border: 1px solid;
-    border-image: -webkit-linear-gradient(45deg,yellow,#f8504b) 20 stretch;
-}
+// .mrinfoleft {
+//     border: 1px solid;
+//     border-image: -webkit-linear-gradient(45deg,yellow,#f8504b) 20 stretch;
+// }
 
 
 .pika-button:hover {
@@ -142,13 +158,12 @@ code {
 }
 
 .link:hover {
-    color: #404040 !important;
+    color: #0890F2 !important;
     text-decoration: underline;
-
 }
 
 .searchtext {
-    font-family: $font-stack-text;
+    font-family: $font_stack-text;
 }
 
 .formspace li {
@@ -167,11 +182,6 @@ input[type=checkbox] {
 .searchcarditp {
   display: inline-block;
   float: left;
-}
-
-.descriptorbox {
-    border: 1px solid $color-spacegrey;
-    margin-right: 75%;
 }
 
 .descriptorbox li {
@@ -244,9 +254,9 @@ input[type=checkbox] {
     background-color: $color-spacered;
 }
 
-.addlistlogo {
-    font-family: 'Roboto';
-}
+// .addlistlogo {
+//     font-family: 'Roboto';
+// }
 
 .price {
     font-size: 1.5em;
@@ -261,7 +271,7 @@ input[type=checkbox] {
     width: 100%;
 }
 
-.shiftright{
+.shiftright {
     margin-left: 48% !important;
 }
 
@@ -326,6 +336,7 @@ input[type="radio"]:checked + label span {
 
 textarea {
     font-family: 'Abel', sans-serif;
+    padding-left: 0.4em;
 }
 
 .listdescription {
@@ -974,48 +985,66 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     /** Listing Card **/
     .carddiv {
         text-align: center;
-    }
 
-    .carddiv ul li {
+        ul li {
         border: none;
         width: 20%;
         display: inline-block;
         padding-bottom: 5px;
         margin: 0.8rem .6rem;
         outline: black dotted thin;
-    }
+        }
 
-    .carddiv ul li:hover {
+        ul li:hover {
         outline-style: solid;
         outline-width: thin;
         outline-color: rgb(248, 80, 75);
-
-        // Add a linear gradient to the border outline
+        // Add a radial gradient to the border outline
+        }
     }
 
-    .carditp a img {
+    .carditp {
+
+        a img {
         width: 100%;
-    }
+        }
 
-    .carditp p, .cardpsa p {
+        p a {
+        margin: 5px 5px 2px 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+        }
+
+        p a:hover {
+        margin: 5px 5px 2px 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+        }   
+
+    } 
+
+    .carditp p, 
+    .cardpsa p {
         margin: 0;
         padding: 0;
         display: inline-block;
     }
 
-    .carditp p a {
-        margin: 5px 5px 2px 5px;
-        font-size: 1rem;
-        font-weight: 700;
-        overflow: hidden;
-    }
+    // .carditp p a {
+    //     margin: 5px 5px 2px 5px;
+    //     font-size: 1rem;
+    //     font-weight: 700;
+    //     overflow: hidden;
+    // }
 
-    .carditp p a:hover {
-        margin: 5px 5px 2px 5px;
-        font-size: 1rem;
-        font-weight: 700;
-        overflow: hidden;
-    }
+    // .carditp p a:hover {
+    //     margin: 5px 5px 2px 5px;
+    //     font-size: 1rem;
+    //     font-weight: 700;
+    //     overflow: hidden;
+    // }
 
 
     .cardprice {
@@ -1047,6 +1076,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         font-size: 0.8rem;
         text-decoration: underline !important;
         font-weight: 400;
+        font-family: $font_stack-norm;
     }
 
     .gimg {
@@ -1265,7 +1295,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     /* Lists*/
-    ul, ol {
+    ul {
         list-style: none;
         padding: 0;
     }
@@ -1295,7 +1325,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     /* Input */
     input {
         font-family: 'Abel', sans-serif;
+        padding-left: 0.4em;
     }
+
 
     input:focus, 
     textarea:focus {
@@ -1644,6 +1676,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #f8504b;
     color: #404040;
     border: 1px solid #404040;
+}
+
+// .navprofile li i {
+//     font-size: 1.3em;
+// }
+
+.navprofile li i:hover {
+    cursor: pointer;
 }
 
 .navfa {
