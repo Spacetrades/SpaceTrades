@@ -1,4 +1,4 @@
-/****** COLORS ******/
+/***** COLORS ******/
  $color-clothing:    #ff5700;
  $color-electronics: #006eff;
  $color-shoes:       #34dddd;
@@ -16,6 +16,9 @@
  $font_stack-secondary: 'Roboto', sans-serif;
  $font_stack-alfred: 'Baskerville', sans-serif;
  $font_stack-text: 'Abel', sans-serif;
+ $font-stack-norm: 'Helvetica Neue', sans-serif;
+
+ // Open Sans
 
 /****** FONT SIZES ******/
 
@@ -70,6 +73,44 @@ CSS Principles
 GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
+
+code {
+  background: $color-spacered;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 3px;
+}
+
+.safetydiv,
+.termsDiv,
+.reportdiv,
+.faqdiv {
+    padding-right: 25%;
+}
+
+.oneDiv {
+    font-family: $font-stack-norm !important;
+}
+
+
+.mrinfoleft {
+    border: 1px solid;
+    border-image: -webkit-linear-gradient(45deg,yellow,#f8504b) 20 stretch;
+}
+
+
+.pika-button:hover {
+    background-color: $color-spacered !important;
+}
+
+.is-selected .pika-button {
+    background-color: $color-spacered !important;
+    box-shadow: none;
+}
+
+.is-today .pika-button {
+    color: crimson !important;
+}
 
 .cardul {
     border-top: 1px solid $color-spacegrey;
@@ -667,6 +708,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
+}
+
+.homesearchbtn:hover {
+    background-color: red;
 }
 
 /** Search Field End **/
@@ -1869,4 +1914,4 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 
-/****** END ******/
+/****** END *****/
