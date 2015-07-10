@@ -15,7 +15,7 @@
  $font_stack-header: 'Lato', sans-serif;
  $font_stack-secondary: 'Roboto', sans-serif;
  $font_stack-alfred: 'Baskerville', sans-serif;
-
+ $font_stack-text: 'Abel', sans-serif;
 
 /****** FONT SIZES ******/
 
@@ -71,6 +71,10 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
 
+.cardul {
+    border-top: 1px solid $color-spacegrey;
+}
+
 .options-dropdown {
     background-color: orange;
     border-radius: 5px;
@@ -102,8 +106,13 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 }
 
+.searchtext {
+    font-family: $font-stack-text;
+}
+
 .formspace li {
     padding-bottom: 1em;
+    margin-left: 15%;
 }
 
 input[type=checkbox] {

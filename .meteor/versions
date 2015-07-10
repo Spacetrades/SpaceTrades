@@ -82,6 +82,7 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 mrt:moment@2.8.1
 multiply:iron-router-progress@1.0.1
+natestrauser:animate-css@3.2.6
 nemo64:bootstrap@3.3.5_1
 nemo64:bootstrap-data@3.3.5
 npm-bcrypt@0.7.8_2
