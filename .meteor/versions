@@ -47,6 +47,7 @@ iron:router@1.0.9
 iron:url@1.0.9
 jeremy:snapsvg@0.4.1_2
 johannesma:meteor-flexslider@0.0.1
+joshowens:shareit@0.3.1
 jquery@1.11.3_2
 json@1.0.3
 juliancwirko:s-alert@2.4.1
@@ -119,6 +120,7 @@ sha@1.0.3
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 spacejamio:chai@1.9.2_3
+spiderable@1.0.7
 srp@1.0.3
 templating@1.1.1
 tmeasday:publish-counts@0.4.0

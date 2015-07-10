@@ -165,8 +165,8 @@ addOffer: function (options) {
   Offer.insert({
     offerprice: options.offerprice,
     date: options.date,
-    location: options.location
-    // listingId: options.listingId
+    location: options.location,
+    listingId: options.listingId
   });
 },
 
