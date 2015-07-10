@@ -101,7 +101,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .link:hover {
-    color: black !important;
+    color: #404040 !important;
     text-decoration: underline;
 
 }
@@ -232,10 +232,10 @@ input[type=checkbox] {
     text-decoration: underline;
 }
 
-
+/*
 input[type="radio"] {
     display:none;
-}
+} */
 
 .large {
     font-size: 4em;
@@ -262,7 +262,7 @@ input[type="radio"] + label span {
 }
 
 input[type="radio"] + label span {
-   background-color:black;
+   background-color: #404040;
 }
 
 input[type="radio"]:checked + label span{
@@ -1181,7 +1181,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     footer {
         text-align: center;
-        color: black;
+        color: #404040;
     }
 
     footer a:visited {
@@ -1189,13 +1189,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     .foota {
-        color: black !important;
+        color: #404040 !important;
     }
 
     /* Links */
     a {
         color: #404040;
         text-decoration: none;
+        transition: all 0.2s linear;
     }
 
     a:link {
@@ -1204,17 +1205,17 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     a:visited {
-        color: black;
+        color: #404040;
         text-decoration: none;
     }
 
     a:hover {
-        color: black;
+        color: #404040;
         text-decoration: none;
     }
 
     a:active {
-        color: black;
+        color: #404040;
         text-decoration: none;
     }
 
@@ -1416,11 +1417,16 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .feedBackExp ul li {
     display: inline-block;
+    text-align: center;
     padding: 2px;
     margin: 2px 4px 2px 0;
 }
 
-.feedBackExp ul li:nth-child(1) {
+.feedBackExp ul li input {
+    margin-right: 3px;
+}
+
+.feedBackExp ul li:nth-child(0) {
     margin-left: -25px !important;
 }
 
@@ -1435,6 +1441,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .feedBackText input {
+    width: 85%;
     height: 25px;
     padding-left: 5px;
 }
@@ -1451,6 +1458,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     padding: 10px 16px;
     color: #fff;
     margin-left: 7rem;
+    font-size: 1rem !important;
 }
 
 /****** END *******/
@@ -1658,7 +1666,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border: 1px solid #fff;
     border-radius: 1px;
     outline: none;
-    padding-left: 5px;
+    padding-left: 10px;
     font-size: 0.75rem;
     background-color: #fff;
 }
@@ -1870,3 +1878,83 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 /****** END ******/
+
+
+.reportMain, .reportMain div, .reportText {
+    margin-left: 1rem;
+}
+
+.reportName {
+    margin-left: 20px;
+}
+
+.reportName ul li, .reportCheck ul {
+    display: inline-block;
+}
+
+
+.reportListingImg img {
+    height: 6rem;
+    width: 9rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
+
+.reportName ul li a p {
+    font-size: 1.4rem;
+    padding: 2px;
+    margin: 0 10px;
+    
+}
+
+.reportCheck p {
+    margin: 35px 0 2px 20px;
+}
+
+.reportCheck ul li {
+    margin: 2px 20px 25px 20px;
+    text-align: center;
+}
+
+.reportCheck ul li input {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.reportBtn {
+    text-align: right;
+    margin-right: 3rem;
+}
+
+.reportBtn button {
+    background-color: #f8504b;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 100px;
+    height: 50px;
+    margin: 0px;
+    outline: 0;
+    padding: 15px 20px;
+}
+
+.reportText p {
+    margin-left: 20px;
+}
+
+.reportText textarea {
+    margin: 2px 5px 20px 20px;
+    width: 40%;
+    height: 6rem;
+    font-size: 1rem;
+    color: #404040;
+}
+
+.reportUserImg img {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
