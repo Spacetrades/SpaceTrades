@@ -97,7 +97,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .link:hover {
-    color: black !important;
+    color: #404040 !important;
     text-decoration: underline;
 
 }
@@ -223,10 +223,10 @@ input[type=checkbox] {
     text-decoration: underline;
 }
 
-
+/*
 input[type="radio"] {
     display:none;
-}
+} */
 
 .large {
     font-size: 4em;
@@ -253,7 +253,7 @@ input[type="radio"] + label span {
 }
 
 input[type="radio"] + label span {
-   background-color:black;
+   background-color: #404040;
 }
 
 input[type="radio"]:checked + label span{
@@ -1172,7 +1172,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     footer {
         text-align: center;
-        color: black;
+        color: #404040;
     }
 
     footer a:visited {
@@ -1180,13 +1180,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     .foota {
-        color: black !important;
+        color: #404040 !important;
     }
 
     /* Links */
     a {
         color: #404040;
         text-decoration: none;
+        transition: all 0.2s linear;
     }
 
     a:link {
@@ -1195,17 +1196,17 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     a:visited {
-        color: black;
+        color: #404040;
         text-decoration: none;
     }
 
     a:hover {
-        color: black;
+        color: #404040;
         text-decoration: none;
     }
 
     a:active {
-        color: black;
+        color: #404040;
         text-decoration: none;
     }
 
@@ -1407,11 +1408,16 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .feedBackExp ul li {
     display: inline-block;
+    text-align: center;
     padding: 2px;
     margin: 2px 4px 2px 0;
 }
 
-.feedBackExp ul li:nth-child(1) {
+.feedBackExp ul li input {
+    margin-right: 3px;
+}
+
+.feedBackExp ul li:nth-child(0) {
     margin-left: -25px !important;
 }
 
@@ -1426,6 +1432,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .feedBackText input {
+    width: 85%;
     height: 25px;
     padding-left: 5px;
 }
@@ -1442,6 +1449,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     padding: 10px 16px;
     color: #fff;
     margin-left: 7rem;
+    font-size: 1rem !important;
 }
 
 /****** END *******/
@@ -1649,7 +1657,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border: 1px solid #fff;
     border-radius: 1px;
     outline: none;
-    padding-left: 5px;
+    padding-left: 10px;
     font-size: 0.75rem;
     background-color: #fff;
 }
