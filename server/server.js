@@ -1,10 +1,14 @@
 if (Meteor.isServer) {
 
+  console.log(meteor_runtime_settings);
+
 
 // Get the region
 // var info = HTTP.get("http://ipinfo.io", function (error, result) {
 //   console.log(result.content);
 // });
+
+//
 
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
