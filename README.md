@@ -37,6 +37,11 @@ https://trello.com/b/IETMH34k/meteor-development
 - [:computer: Deploy to personal linux server (1)](http://lukaszkups.net/blog/0006_deploying_meteorjs_app_to_own_server_via_ssh/)
 - [:computer: Deploy to personal linux server (2)](https://gentlenode.com/journal/meteor-19-deploying-your-applications-in-a-snap-with-meteor-up-mup/41)
 
+## Beginning Principles
+1. If it works, don't fix it
+2.
+3.
+
 ## Commit Messages Language ( CML )
 ```
 Extensive undertandability is less crucial in the beginning stage of development and for this reason it is not necessarily helpful to use highly descriptive commit messages. Once everything works, better documentation can be added. 
@@ -54,3 +59,8 @@ Extensive undertandability is less crucial in the beginning stage of development
 	STYLE
 	FIX
 	USE
+
+## Inline Comments:
+	TASK - A task to complete in a certain file
+	BREAK - Something is breaking 
+	BREAK CRUCIAL - Something is breaking which is crucial for the site
