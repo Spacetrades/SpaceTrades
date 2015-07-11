@@ -4,7 +4,7 @@
             <li><a href="#" class="navitem">Categories</a></li>
         </ul>
         <ul class="navprofile">
-            <li><a href="/profile/{{profile}}" class="navusername"><span>{{usernameCurrent}}</span></a></li>
+            <li><a href="/profile/{{profile}}" class="navusername"><img src="#"><span>{{usernameCurrent}}</span></a></li>
             <li><a href="/" class="navhome">Home</a></li>
             <li>
             {{#dropdownTrigger name="global" class="drops" }}
@@ -40,34 +40,34 @@
                   </ul>
               {{/dropdown}}
 
-          </li>
+            </li>
 
-          <li>
-          <a href="https://www.facebook.com/messages/other/" target="_blank">
-          <i class="fa fa-envelope dropdown__trigger"></i>
-          </a>
-          </li>
+            <li class="navMessage">
+              <a href="https://www.facebook.com/messages/other/" target="_blank">
+              <i class="fa fa-envelope dropdown__trigger"></i>
+              </a>
+            </li>
 
-          <li>
-           {{#dropdownTrigger name="general" }}
-          <i class="navbarsdown navdown navfa navfai fa fa-sort-down dropdown__trigger"></i>
-          {{/dropdownTrigger}}
+            <li>
+            {{#dropdownTrigger name="general" }}
+            <i class="navbarsdown navdown navfa navfai fa fa-sort-down dropdown__trigger"></i>
+            {{/dropdownTrigger}}
 
-          {{#dropdown name="general"}}
-                  <ul>
-                      <li><a href="/report"><span class="dropdownitem">Reporting</span></a></li>
-                      <li><a href="/help"><span class="dropdownitem">Help Center</span></a></li>
-                      <li><a href="/advertise"><span class="dropdownitem">Advertising</span></a></li>
-                      <li><a href="#"><span class="dropdownitem logout">Logout</span></a></li>
-                  </ul>
-          {{/dropdown}}
-          </li>
-      </ul>
-  </nav>
-  <h1 class="logo">SpaceTrades</h1>
-  <div class="searchfield job">
-     <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
-    <a href="/search" class="homesearchbtn">Search</a>
+            {{#dropdown name="general"}}
+                    <ul>
+                        <li><a href="/report"><span class="dropdownitem">Reporting</span></a></li>
+                        <li><a href="/help"><span class="dropdownitem">Help Center</span></a></li>
+                        <li><a href="/advertise"><span class="dropdownitem">Advertising</span></a></li>
+                        <li><a href="#"><span class="dropdownitem logout">Logout</span></a></li>
+                    </ul>
+            {{/dropdown}}
+            </li>
+        </ul>
+    </nav>
+    <h1 class="logo">SpaceTrades</h1>
+    <div class="searchfield job">
+       <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
+      <a href="/search" class="homesearchbtn">Search</a>
 </div>
 
 </template>

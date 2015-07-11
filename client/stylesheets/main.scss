@@ -523,7 +523,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     display: inline-block;
     font-size: 0.8rem;
     letter-spacing: 0px;
-    vertical-align: middle;
 }
 
 .mainnav ul li a {
@@ -2042,4 +2041,40 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin: 5px 10px 0 20px;
     vertical-align: middle;
 }
+
+.mainnav ul li a img {
+    vertical-align: middle !important;
+}
+
+.navMessage a {
+    padding: 4px 6px !important;
+    border: none !important;
+}
+
+.navfa {
+    border: none !important;
+}
+
+.navMessage a:hover {
+    color: #303030 !important;
+    background-color: #f8504b !important;
+    border: none !important;
+    padding: 4px 6px !important;
+}
+
+.mainnav ul li ul li {
+    display: inline !important;
+    border: none !important;
+    background-color: #404040 !important;
+    color: #fff !important;
+    float: none;
+}
+
+.mainnav ul li ul li a {
+    display: inline !important;
+    border: none !important;
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
 
