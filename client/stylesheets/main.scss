@@ -13,12 +13,17 @@
 
 /****** FONT STACKS ******/
  $font_stack-header: 'Lato', sans-serif;
+
  $font_stack-secondary: 'Roboto', sans-serif;
+
  $font_stack-alfred: 'Baskerville', sans-serif;
- $font_stack-text: 'Abel', sans-serif;
+/* Button */
+ $font_stack-text: 'Abel', sans-serif; 
+
  $font_stack-norm: 'Helvetica Neue', sans-serif;
 
  // Open Sans
+ // Droid Sans
 
 /****** FONT SIZES ******/
 
@@ -128,15 +133,16 @@ code {
     color: crimson !important;
 }
 
-.cardul {
-    border-top: 1px solid $color-spacegrey;
-}
+// .cardul {
+//     border-top: 1px solid $color-spacegrey;
+// }
 
 .options-dropdown {
-    background-color: orange;
+    background-color: $color-spacered;
     border-radius: 5px;
     margin-left: 80%;
     padding: 9px 40px 12px;
+    font-family: 'Abel';
 }
 
 .freeze {
@@ -719,6 +725,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
+    font-family: $font_stack-text;
 }
 
 .homesearchbtn:hover {
@@ -1003,6 +1010,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         }
     }
 
+    /*maybe darkgrey or gainsboro */
+
     .carditp {
 
         a img {
@@ -1153,7 +1162,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     border-color: #3AC162;
     background-color: #5FCF80;
-
+    font-family: $font_stack-text !important;
 }
 .ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
     background-color: #4BC970;
@@ -1167,6 +1176,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border-color: #38A172;
     background-color: #2DBB7B;
     color: white !important;
+    font-family: $font_stack-text !important;
 }
 
 .ph-btn-mr:hover, .ph-btn-mr:focus, .ph-btn-mr:active {
@@ -1194,7 +1204,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #ED5A5A !important;
     border-color: #EA4343 !important;
     color: white !important;
-    font-family: inherit !important;
+    font-family: $font_stack-text !important;
 
 }
 .ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
@@ -1271,7 +1281,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     a {
         color: #404040;
         text-decoration: none;
-        transition: all 0.2s linear;
+        transition: all 0.1s linear;
     }
 
     a:link {
@@ -1605,16 +1615,23 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-bottom: 15.5px !important;
 }
 
-/* Search Area*/
+/* Search Area
+Remove logo when logged in. Users don't need to be reminded with a giant logo, facebook, twitter does't do this
+*/
+
 .logo {
     text-align: center;
     font-size: 4rem;
     color: #404040;
+    font-family: 'Droid sans';
 }
 
 .searchfield {
     text-align: center;
     margin: -20px 0 10px 0;
+    border-bottom: 1px solid $color-spacered;
+    // IDEAL - Gradient Here with rainbow or ST colors
+    padding-bottom: 3em;
 }
 
 .icon {
