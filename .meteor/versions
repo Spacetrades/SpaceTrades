@@ -45,6 +45,7 @@ iron:location@1.0.9
 iron:middleware-stack@1.0.9
 iron:router@1.0.9
 iron:url@1.0.9
+jamgold:cropuploader@0.0.3_3
 jeremy:snapsvg@0.4.1_2
 johannesma:meteor-flexslider@0.0.1
 joshowens:shareit@0.3.1
@@ -100,6 +101,7 @@ percolatestudio:segment.io@3.0.0
 practicalmeteor:chai@2.1.0_1
 practicalmeteor:loglevel@1.1.0_2
 raix:handlebar-helpers@0.2.4
+raix:md5@1.0.2
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5
@@ -122,6 +124,7 @@ spacebars-compiler@1.0.6
 spacejamio:chai@1.9.2_3
 spiderable@1.0.7
 srp@1.0.3
+standard-app-packages@1.0.5
 templating@1.1.1
 tmeasday:publish-counts@0.4.0
 tomi:upload-jquery@2.1.6
