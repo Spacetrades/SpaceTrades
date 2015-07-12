@@ -10,6 +10,7 @@
  $color-facebook:    #46629E;
  $color-link:        #0c65a5;
  $color-linkhover:   #0c65a5;
+ $color-royal:;
 
 /****** FONT STACKS ******/
  $font_stack-header: 'Lato', sans-serif;
@@ -17,6 +18,7 @@
  $font_stack-secondary: 'Roboto', sans-serif;
 
  $font_stack-alfred: 'Baskerville', sans-serif;
+
 /* Button */
  $font_stack-text: 'Abel', sans-serif; 
 
@@ -64,8 +66,6 @@ etc
 
 Organize css properties Alphabetically and -moz like properties go at the beginning
 
-
-
 CSS Principles
 
 **/
@@ -94,13 +94,15 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 .description {
     font-family: $font_stack-norm;
 }
+/*Code */
 
-code {
+.listingitem {
   background: $color-spacered;
   color: white;
+  font-family: $font_stack-norm;
   border-radius: 5px;
   padding: 1px 3px;
-}
+} 
 
 .safetydiv,
 .termsDiv,
@@ -404,9 +406,7 @@ div[data-momentum] div {
 }
 
 .colorsquare {
-    width: 2em;
-    height: 2em;
-    background-color: transparent;
+    height: 2px;
 }
 
 .imagepreview {

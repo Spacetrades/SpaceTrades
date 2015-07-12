@@ -1,6 +1,6 @@
 if (Meteor.isServer) {
 
-  console.log(meteor_runtime_settings);
+  // console.log(meteor_runtime_settings);
 
 
 // Get the region
