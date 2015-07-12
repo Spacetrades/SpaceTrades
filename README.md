@@ -39,8 +39,8 @@ https://trello.com/b/IETMH34k/meteor-development
 
 ## Beginning Principles
 1. If it works, don't fix it
-2.
-3.
+2. Remain consistent (Keep order in chaos)
+3. 
 
 ## Commit Messages Language ( CML )
 ```
@@ -56,11 +56,14 @@ Extensive undertandability is less crucial in the beginning stage of development
 	// - Comment
 	Rm - Readme
 	md - Markdown
-	STYLE
-	FIX
-	USE
+	STYLE - Commits mostly for styling purposes
+	FIX - Something broken has been fixed, not just a change for likea
+	USE - Something new is finally being used
+	LOTS - I'm to lazy to create commit messages for all the changes
+	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
 
 ## Inline Comments:
 	TASK - A task to complete in a certain file
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
+	IDEAL - A suggestion to do something differently 
