@@ -44,7 +44,9 @@
 			<div class="profilesale">
 				<p>Items For Sale</p>
 				<ul>
-					{{> home}}
+				{{#each listing}}
+					{{> card}}
+				{{/each}}	
 					<li><img src="#" class="prosaleimg"></li>
 				</ul>
 				<a>See More</a>

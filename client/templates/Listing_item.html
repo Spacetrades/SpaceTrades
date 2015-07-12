@@ -39,7 +39,7 @@
                             <ul>
                                 <li>
                                     <div class="ph-float">
-                                        <a href='{{current}}/request' class='ph-button ph-btn-mr'>Offer</a>
+                                        <a href='{{current}}/request' class='ph-button ph-btn-red'>Offer</a>
                                     </div>
                                 </li>
                                 <li>  
@@ -49,6 +49,7 @@
                                 </li>
                                 <li>  
                                     <div class="ph-float">
+                                    <!-- TASK - Increase font size -->
                                         <li>Quantity: {{quantity}}</li>
                                         <li>{{city}}, <b>{{state}}</b></li>
                                     </div>
@@ -106,21 +107,17 @@
                     <h2>Details</h2>
                     <ul class="descriptorbox">
                         <li>
-                            <h3>Color:</h3>
-                            <div class="colorsquare" style="background-color: {{color}}">
+                            <b>Color</b> <div class="colorsquare" style="background-color: {{color}}">
                             </div>
                         </li>
                         <li>
-                            <h3>Brand:</h3>
-                            <p class="descriptor-item">{{brand}}</p>
+                            <p class="descriptor-item"> <b>Brand: </b> <code class="listingitem">{{brand}}</code></p>
                         </li>
                         <li>
-                            <h3>Condition:</h3> 
-                            <p class="descriptor-item">{{condition}}</p>
+                            <p class="descriptor-item"> <b>Condition: </b> <code class="listingitem"> {{condition}}</code> </p>
                         </li>
                         <li>
-                            <h3>Size:</h3>
-                            <p class="descriptor-item">{{size}}</p>
+                            <p class="descriptor-item"> <b>Size: </b> <code class="listingitem"> {{size}} </code> </p>
                         </li>
                     </ul>
                 </div>
