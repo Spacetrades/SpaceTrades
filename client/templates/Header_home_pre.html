@@ -1,19 +1,41 @@
 <template name="homeheaderpre">
-    <nav class="mainnav">
-        <ul class="navdropdown">
-            <li class="navdrop"><a href="" class="navitem">Apparel</a></li>
-            <li class="navdrop"><a href="" class="navitem">Electronics</a></li>
-            <li class="navdrop"><a href="" class="navitem">Shoes</a></li>
-            <li class="navdrop"><a href="" class="navitem">Other</a></li>
+    <nav class="headerNav headerHomePost">
+        <ul class="headerCat">
+            <li class="headerDropDown">
+                <a href="#">Apparel</a>
+                <ul class="headerDropDownNav">
+                    <li><a href="#">Tees</a></li>
+                    <li><a href="#">Hoodies</a></li>
+                    <li><a href="#">Jackets</a></li>
+                    <li><a href="#">Jeans</a></li>
+                    <li><a href="#">Shorts</a></li>
+                </ul>
+            </li>
+            <li class="headerDropDown">
+                <a href="#">Electronics</a>
+                <ul class="headerDropDownNav">
+                    <li><a href="#">Phones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Computers</a></li>
+                    <li><a href="#">TV's</a></li>
+                    <li><a href="#">Headphones</a></li>
+                </ul>
+            </li>
+            <li class="headerDropDown">
+                <a href="#">Shoes</a>
+                <ul class="headerDropDownNav">
+                    <li><a href="#">Asics</a></li>
+                    <li><a href="#">Addidas</a></li>
+                    <li><a href="#">Converse</a></li>
+                    <li><a href="#">Nike</a></li>
+                    <li><a href="#">Jordan</a></li>
+                </ul>
+            </li>
+            <li class="headerNotDrop"><a>Other</a></li>
         </ul>
-        <ul class="navverify">
-            <li class="navbox"><a href="/register" class="navitem join">Join</a></li>
-            <li class="navbox"><a href="#" class="navitem login">Login</a></li>
+        <ul class="headerAuth">
+            <li><a href="/register">Join</a></li>
+            <li><a href="#">Login</a></li>
         </ul>
     </nav>
-    <h1 class="logo"><a href="/">SpaceTrades</a></h1>
-    <div class="searchfield">
-         <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
-        <a href="/search" class="homesearchbtn">Search</a>
-    </div>
 </template>

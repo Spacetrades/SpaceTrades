@@ -17,14 +17,14 @@
 
 <template name="LayoutHome">
 {{> sAlert}}
- {{#if currentUser}}
+    {{#if currentUser}}
     {{> homeheaderpost}}
     {{listingShow}}
     {{> yield}}
     {{else}}
     {{> homeheaderpre}}
     {{listingShow}}
-    {{> yield}}
+    {{> yield}} 
 {{/if}}
 </template>
 
