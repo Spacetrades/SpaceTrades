@@ -14,12 +14,11 @@
  $color-blue:        #0266C8;
 
 /****** FONT STACKS ******/
- $font_stack-header: 'Lato', sans-serif;
+ $font_stack-header: 'Droid Sans', sans-serif;
  $font_stack-secondary: 'Roboto', sans-serif;
  $font_stack-alfred: 'Baskerville', sans-serif;
  $font_stack-text: 'Abel', sans-serif;
  $font_stack-norm: 'Helvetica Neue', sans-serif;
-
  // Open Sans
 
 /****** FONT SIZES ******/
@@ -93,10 +92,14 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 code {
-  background: $color-spacered;
+  background: $color-royal;
   color: white;
   border-radius: 5px;
   padding: 1px 3px;
+
+  .listingtitle {
+    font-family: $font_stack-norm;
+  }
 }
 
 .safetydiv,
@@ -238,7 +241,7 @@ input[type=checkbox] {
 }
 
 .pac-container {
-    font-family: Roboto;
+    font-family: 'Roboto';
 }
 
 #type-selector {
@@ -248,7 +251,7 @@ input[type=checkbox] {
 }
 
 #type-selector label {
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 13px;
     font-weight: 300;
 }
@@ -420,7 +423,7 @@ div[data-momentum] div {
 
 html, body {
     min-height: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: $font_stack-norm;
     color: #404040;
     margin: 0;
 }
@@ -694,6 +697,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .searchfield {
     text-align: center;
     margin: -20px 0 10px 0;
+    border-bottom: 1px solid red;
+    padding-bottom: 3em;
 }
 
 .icon {
@@ -737,6 +742,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     padding: 0;
     margin: 0;
 }
+
+.exampleImage {
+    img {
+            outline: 1px solid darkgrey;
+            width: 100%;
+        }
+    }
 
 .foot {
     padding: 0 !important;
