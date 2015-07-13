@@ -1,66 +1,57 @@
 <template name="homeheaderpost">
-    <nav class="mainnav">
-        <ul class="navcat">
-            <li><a href="#" class="navitem">Categories</a></li>
+    <nav class="headerNav headerPost">
+        <ul class="headerBigCat">
+            <li class="headerDropDown">
+                <a href="#">Categories</a>
+                <ul class="headerDropDownNav">
+                    <li><a href="#">Apparel</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </li>
         </ul>
-        <ul class="navprofile">
-            <li><a href="/profile/{{profile}}" class="navusername"><img src="#"><span>{{usernameCurrent}}</span></a></li>
-            <li><a href="/" class="navhome">Home</a></li>
+        <ul class="headerNameOptions">
             <li>
-            {{#dropdownTrigger name="global" class="drops" }}
-            <i class="navbarsdown navfa navfai fa fa-bars"></i>
-            {{/dropdownTrigger}}
-
-             {{#dropdown name="global"}}
-                  <ul>
-                      <li><a href="/add"><span class="dropdownitem">Add Listing</span></a></li>
-                      <li><a href="/meetuprequest"><span class="dropdownitem">Meetup Request Manager</span></a></li>
-                      <li><a href="/profile/listing"><span class="dropdownitem">Listing Manager</span></a></li>
-                      <li><a href="/request"><span class="dropdownitem">Meetup History</span></a></li>
-                      <li><a href="/profile/settings"><span class="dropdownitem">Account Settings</span></a></li>
-                  </ul>
-              {{/dropdown}}
-
+                <a href="/profile/{{profile}}">
+                    <img src="http://microlancer.lancerassets.com/assets/placeholder/60x60_user_avatar-9430f08439593cd390e188f13919d5e0.png">
+                    <span>{{usernameCurrent}}</span>
+                </a>
             </li>
-                <!-- <ul>
-                <li><a href="#" class="addlisting">Add Listing</a></li>
-            </ul> -->
-            <li>
-                {{#dropdownTrigger name="notifications"}}
-               <i class="navbarsdown navfa navfai fa fa-globe dropdown__trigger"></i>
-                {{/dropdownTrigger}}
-
-                {{#dropdown name="notifications"}}
-                  <ul>
-                      <li><a href="/activities"><span class="dropdownitem">Offer for Nike Infrared</span></a></li>
-                      <li><a href="/meetuprequest"><span class="dropdownitem">Yusuf</span></a></li>
-                      <li><a href="/profile/listing"><span class="dropdownitem">Topalov</span></a></li>
-                      <li><a href="/request"><span class="dropdownitem">Carlsen</span></a></li>
-                      <li><a href="/profile/settings"><span class="dropdownitem">Vishy</span></a></li>
-                  </ul>
-              {{/dropdown}}
-
+        </ul>
+        <ul class="headerHomeButton">
+            <li><a href="/">Home</a></li>
+        </ul>
+        <ul class="headerPostOptions headerLine">
+            <li class="headerDropDown">
+                <a href="#"><i class="fa fa-bars"></i></a>
+                <ul class="headerDropDownNav">
+                    <li><a href="/add">Add Listing</a></li>
+                    <li><a href="/store">Your Store</a></li>
+                    <li><a href="/saved">Saved Items</a></li>
+                    <li><a href="/history">History</a></li>
+                    <li><a href="profile/settings">Account Settings</a></li>
+                    <!-- ex user/history  -->
+                </ul>
             </li>
-
-            <li class="navMessage">
-              <a href="https://www.facebook.com/messages/other/" target="_blank">
-              <i class="fa fa-envelope dropdown__trigger"></i>
-              </a>
+            <li class="headerDropDown">
+                <a href="#"><i class="fa fa-globe"></i></a>
+                <ul class="headerDropDownNav">
+                    <li><a href="#">Offer From Jack</a></li>
+                    <li><a href="#">Offer Accepted By Paul</a></li>
+                    <li><a href="#">Your Listing Expired</a></li>
+                    <li><a href="#">Saved Listing Ended</a></li>
+                </ul>
             </li>
-
-            <li>
-            {{#dropdownTrigger name="general" }}
-            <i class="navbarsdown navdown navfa navfai fa fa-sort-down dropdown__trigger"></i>
-            {{/dropdownTrigger}}
-
-            {{#dropdown name="general"}}
-                    <ul>
-                        <li><a href="/report"><span class="dropdownitem">Reporting</span></a></li>
-                        <li><a href="/help"><span class="dropdownitem">Help Center</span></a></li>
-                        <li><a href="/advertise"><span class="dropdownitem">Advertising</span></a></li>
-                        <li><a href="#"><span class="dropdownitem logout">Logout</span></a></li>
-                    </ul>
-            {{/dropdown}}
+            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li class="headerDropDown">
+                <a href="#"><i class="fa fa-caret-square-o-down"></i></a>
+                <ul class="headerDropDownNav">
+                    <li><a href="/help">Help Center</a></li>
+                    <li><a href="/advertise">Advertise</a></li>
+                    <li><a href="/help/report">Report</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
             </li>
         </ul>
     </nav>
