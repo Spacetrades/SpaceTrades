@@ -55,8 +55,9 @@ SearchSource.defineSource('listing', function (searchText, options) {
 
   Accounts.onCreateUser( function (options, user) {
     if (options.profile) {
-      options.profile.picture = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
+      options.profile.picturelrg = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
       user.profile = options.profile;
+      options.profile.picturesm = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=small";
       options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
     // options.profile.city = 
   }
@@ -138,6 +139,13 @@ Meteor.methods({
  addListing : function (options) {
   if (! Meteor.userId()) {
     throw new Meteor.Error("Not Authorized")
+  }
+
+  if (options.trade == "true") {
+    options.trade = "Trades Denied";
+  }
+  else {
+    options.trade = "Trades Denied";
   }
 
   Listing.insert({

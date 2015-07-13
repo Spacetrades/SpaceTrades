@@ -10,6 +10,8 @@
  $color-facebook:    #46629E;
  $color-link:        #0c65a5;
  $color-linkhover:   #0c65a5;
+ $color-royal:       #523f8c;
+ $color-blue:        #0266C8;
 
 /****** FONT STACKS ******/
  $font_stack-header: 'Lato', sans-serif;
@@ -136,7 +138,10 @@ code {
     background-color: orange;
     border-radius: 5px;
     margin-left: 80%;
+    padding: 9px 44px 12px;
+    font-family: 'Abel';
     padding: 9px 40px 12px;
+
 }
 
 .freeze {
@@ -1271,6 +1276,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         color: #404040;
         text-decoration: none;
         transition: all 0.2s linear;
+
     }
 
     a:link {
@@ -2073,7 +2079,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .headerNav a {
-    transition: all 0.2s linear;
+    // transition: all 0.1s linear;
 }
 
 .headerCat li, .headerAuth {
@@ -2126,7 +2132,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     display: none;
     position: absolute;
     background-color: #404040;
-    transition: all 0.2s linear;
+    // transition: all 0.1s linear;
     font-size: 0.8rem;
 }
 
@@ -2150,7 +2156,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .headerDropDown ul li:hover {
     color: #fff;
     background-color: #555;
-    transition: all 0.2s linear;
+    // transition: all 0.1s linear;
     
 }
 
