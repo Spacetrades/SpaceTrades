@@ -15,17 +15,12 @@
 
 /****** FONT STACKS ******/
  $font_stack-header: 'Lato', sans-serif;
-
  $font_stack-secondary: 'Roboto', sans-serif;
-
  $font_stack-alfred: 'Baskerville', sans-serif;
-
-/* Button */
- $font_stack-text: 'Abel', sans-serif; 
-
+ $font_stack-text: 'Abel', sans-serif;
  $font_stack-norm: 'Helvetica Neue', sans-serif;
 
- $font_stack-header: 'Droid Sans', sans-serif;
+ // Open Sans
 
 /****** FONT SIZES ******/
 
@@ -38,7 +33,7 @@
 TASK - Split up css into different files and use imports (for categorization sake)
 
 CSS class rules
-Use underscores (_) in between words 
+Use underscores (_) in beteween words 
 AND
 Use tacks (-) in between descriptor
 
@@ -66,6 +61,8 @@ etc
 
 Organize css properties Alphabetically and -moz like properties go at the beginning
 
+
+
 CSS Principles
 
 **/
@@ -78,16 +75,6 @@ CSS Principles
 GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
-.options-dropdown{
-    .orange {
-        color: orange !important;
-    }
-}
-
-.exampleImage img {
-    width: 124%;
-    border: 1px solid darkgrey;
-}
 
 .hidden {
     display: none;
@@ -104,15 +91,13 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 .description {
     font-family: $font_stack-norm;
 }
-/*Code */
 
-.listingitem {
-  background: $color-royal;
+code {
+  background: $color-spacered;
   color: white;
-  font-family: $font_stack-norm;
   border-radius: 5px;
   padding: 1px 3px;
-} 
+}
 
 .safetydiv,
 .termsDiv,
@@ -145,17 +130,18 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     color: crimson !important;
 }
 
-// .cardul {
-//     border-top: 1px solid $color-spacegrey;
-// }
+.cardul {
+    border-top: 1px solid $color-spacegrey;
+}
 
 .options-dropdown {
-    // background-color: $color-spacered;
+    background-color: orange;
     border-radius: 5px;
-    border: 1px solid orange;
     margin-left: 80%;
     padding: 9px 44px 12px;
     font-family: 'Abel';
+    padding: 9px 40px 12px;
+
 }
 
 .freeze {
@@ -417,7 +403,9 @@ div[data-momentum] div {
 }
 
 .colorsquare {
-    height: 2px;
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
 }
 
 .imagepreview {
@@ -432,7 +420,7 @@ div[data-momentum] div {
 
 html, body {
     min-height: 100%;
-    font-family: 'Heleica', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #404040;
     margin: 0;
 }
@@ -735,7 +723,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
-    font-family: $font_stack-text;
 }
 
 .homesearchbtn:hover {
@@ -1020,8 +1007,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         }
     }
 
-    /*maybe darkgrey or gainsboro */
-
     .carditp {
 
         a img {
@@ -1172,7 +1157,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     border-color: #3AC162;
     background-color: #5FCF80;
-    font-family: $font_stack-text !important;
+
 }
 .ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
     background-color: #4BC970;
@@ -1186,7 +1171,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border-color: #38A172;
     background-color: #2DBB7B;
     color: white !important;
-    font-family: $font_stack-text !important;
 }
 
 .ph-btn-mr:hover, .ph-btn-mr:focus, .ph-btn-mr:active {
@@ -1214,7 +1198,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #ED5A5A !important;
     border-color: #EA4343 !important;
     color: white !important;
-    font-family: $font_stack-text !important;
+    font-family: inherit !important;
 
 }
 .ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
@@ -1269,7 +1253,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     body {
         color: #404040;
-        // font-family: 'Lato', sans-serif;
+        font-family: 'Lato', sans-serif;
         margin: 0;
         width: 100%;
     }
@@ -1291,7 +1275,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     a {
         color: #404040;
         text-decoration: none;
-        // transition: all 0.1s linear;
+        transition: all 0.2s linear;
+
     }
 
     a:link {
@@ -1625,23 +1610,16 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-bottom: 15.5px !important;
 }
 
-/* Search Area
-Remove logo when logged in. Users don't need to be reminded with a giant logo, facebook, twitter does't do this
-*/
-
+/* Search Area*/
 .logo {
     text-align: center;
     font-size: 4rem;
     color: #404040;
-    font-family: 'Droid sans';
 }
 
 .searchfield {
     text-align: center;
     margin: -20px 0 10px 0;
-    border-bottom: 1px solid $color-spacered;
-    // IDEAL - Gradient Here with rainbow or ST colors
-    padding-bottom: 3em;
 }
 
 .icon {
@@ -1862,9 +1840,9 @@ Remove logo when logged in. Users don't need to be reminded with a giant logo, f
  Contact
  **********/
 
-//  .contactdiv {
-//     text-align: center;
-// }
+ .contactdiv {
+    text-align: center;
+}
 
 .contactname input, .contactemail input {
  width: 30%;
@@ -2223,4 +2201,72 @@ Remove logo when logged in. Users don't need to be reminded with a giant logo, f
     margin-right: 10px;
     font-size: 1.4rem !important;
     font-weight: 700;
+}
+
+
+.headerNameOptions {
+    margin: 13px 2px 7px 2px !important;
+}
+
+.headerNameOptions li img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.headerBigCat li {
+    margin: 0 2px;
+    margin-right: 0 !important;
+}
+
+.headerBigCat li a {
+    padding: 12px 14px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.headerBigCat li ul li a {
+    border: none;
+    border-bottom: 1px solid #555;
+}
+
+.headerBigCat li a:hover  {
+    background-color: #404040;
+    color: #fff;
+    border: #404040;
+    margin-bottom: 0;
+    padding-bottom: 15px !important;
+    margin-bottom: 15px;
+}
+
+.headerNameOptions li {
+    margin: 0 2px;
+}
+
+.headerNameOptions li a, .headerHomeButton li a {
+    padding: 12px !important;
+}
+
+.headerNameOptions li a:hover, .headerHomeButton li a:hover {
+    color: #fff;
+    background-color: #404040 !important;
+} 
+
+.headerLine {
+    margin-left: 20px !important;
+    border-left: 1px solid #404040;
+}
+
+.headerPostOptions {
+    margin: 16px 25px 10px 5px !important;
+}
+
+.headerPostOptions li a i {
+    font-size: 1rem;
+    padding: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
 }
