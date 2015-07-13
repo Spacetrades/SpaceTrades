@@ -11,6 +11,7 @@
  $color-link:        #0c65a5;
  $color-linkhover:   #0c65a5;
  $color-royal:       #523f8c;
+ $color-blue:        #0266C8;
 
 /****** FONT STACKS ******/
  $font_stack-header: 'Lato', sans-serif;
@@ -153,7 +154,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     border-radius: 5px;
     border: 1px solid orange;
     margin-left: 80%;
-    padding: 9px 40px 12px;
+    padding: 9px 44px 12px;
     font-family: 'Abel';
 }
 
@@ -1290,7 +1291,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     a {
         color: #404040;
         text-decoration: none;
-        transition: all 0.1s linear;
+        // transition: all 0.1s linear;
     }
 
     a:link {
@@ -2100,7 +2101,7 @@ Remove logo when logged in. Users don't need to be reminded with a giant logo, f
 }
 
 .headerNav a {
-    transition: all 0.2s linear;
+    // transition: all 0.1s linear;
 }
 
 .headerCat li, .headerAuth {
@@ -2153,7 +2154,7 @@ Remove logo when logged in. Users don't need to be reminded with a giant logo, f
     display: none;
     position: absolute;
     background-color: #404040;
-    transition: all 0.2s linear;
+    // transition: all 0.1s linear;
     font-size: 0.8rem;
 }
 
@@ -2177,7 +2178,7 @@ Remove logo when logged in. Users don't need to be reminded with a giant logo, f
 .headerDropDown ul li:hover {
     color: #fff;
     background-color: #555;
-    transition: all 0.2s linear;
+    // transition: all 0.1s linear;
     
 }
 
