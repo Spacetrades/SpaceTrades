@@ -1,35 +1,29 @@
 <template name="item">
     <!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
     <!-- TASK - Move description box up next to descriptors -->
+    <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied -->
     <div class="itemdiv div">
         <div>
             <h2 class="itemtitle"><div>{{listing_title}}</div></h2>
 
+            <!-- TASK - Make the background white, border a certain color and text color a certain color
+            we need to differentiate between the main buttons and the settings button -->
             {{#if currentUser}}
             <div class="btn-group open options-dropdown">
-            <a class="btn btn-primary">Options</a>
-              <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+            <a class="btn btn-primary orange">Options</a>
+              <a class="btn btn-primary dropdown-toggle orange" data-toggle="dropdown" href="#">
                 <span class="fa fa-caret-down"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-                    <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+                    <li class="listingOptionsReport"><a href="#"><i class="fa fa fa-gavel fa-fw"></i> Report</a></li>
+                   <!--  {{#if correctUser}} -->
+                    <li class="listingOptionsEdit"><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+                    <li class="listingOptionsDelete"><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+                    <!-- {{/if}} -->
+
                 </ul>
             </div>
             {{/if}}
         </div>
-
-
-   <!--      {{#if username}}
-        <div class="btn-group open">
-                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-                    <span class="fa fa-caret-down"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-                        <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
-                    </ul>
-                </div>
-                {{/if}} -->
-
                 <div class="itempmcql">
                     <div>
                         <div class="money">
@@ -39,7 +33,7 @@
                             <ul>
                                 <li>
                                     <div class="ph-float">
-                                        <a href='{{current}}/request' class='ph-button ph-btn-mr'>Offer</a>
+                                        <a href='{{current}}/request' class='ph-button ph-btn-red'>Offer</a>
                                     </div>
                                 </li>
                                 <li>  
@@ -49,6 +43,7 @@
                                 </li>
                                 <li>  
                                     <div class="ph-float">
+                                    <!-- TASK - Increase font size -->
                                         <li>Quantity: {{quantity}}</li>
                                         <li>{{city}}, <b>{{state}}</b></li>
                                     </div>
@@ -96,6 +91,7 @@
                     </div>
                     <div>
                         <ul>
+                        <!-- TASK - Add font awesom user image -->
                             <li><u><a href="/profile/{{creator_id}}"><p>{{username}}</p></a></u></li>
                         </ul>
                     </div>
@@ -106,21 +102,17 @@
                     <h2>Details</h2>
                     <ul class="descriptorbox">
                         <li>
-                            <h3>Color:</h3>
-                            <div class="colorsquare" style="background-color: {{color}}">
+                            <b>Color</b> <div class="colorsquare" style="background-color: {{color}}">
                             </div>
                         </li>
                         <li>
-                            <h3>Brand:</h3>
-                            <p class="descriptor-item">{{brand}}</p>
+                            <p class="descriptor-item"> <b>Brand: </b> <code class="listingitem">{{brand}}</code></p>
                         </li>
                         <li>
-                            <h3>Condition:</h3> 
-                            <p class="descriptor-item">{{condition}}</p>
+                            <p class="descriptor-item"> <b>Condition: </b> <code class="listingitem"> {{condition}}</code> </p>
                         </li>
                         <li>
-                            <h3>Size:</h3>
-                            <p class="descriptor-item">{{size}}</p>
+                            <p class="descriptor-item"> <b>Size: </b> <code class="listingitem"> {{size}} </code> </p>
                         </li>
                     </ul>
                 </div>
