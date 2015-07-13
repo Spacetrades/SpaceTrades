@@ -2264,3 +2264,74 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-left: 5px;
     vertical-align: middle;
 }
+
+.addListDiv div {
+    display: inline-block !important;
+}
+
+.addListSecOne {
+    width: 40%;
+    vertical-align: top;
+    margin-top: 5px;
+}
+
+.addListSecTwo {
+    width: 50%;
+    vertical-align: top;
+}
+
+.addListInfo, .addListImg {
+    margin-top: 0;
+}
+
+.addListInfo li, .addListDetails li {
+    padding: 2px;
+    margin: 5px 0;
+}
+
+.addListInfo li ul li, .addListDetails li ul li {
+    display: inline-block;
+    padding: 0 2px 0 0;
+    margin: 0 5px 0 0;
+}
+
+.addListInfo li input, .addListDetails li select {
+    margin-left: 3px;
+}
+
+.addListImg li {
+    display: inline-block;
+    margin: 0 2px;  
+}
+
+.addListImg li img {
+    width: 150px;
+    height: 150px;
+}
+
+.addListImg i {
+    vertical-align: middle;
+}
+
+.addListDesc li textarea {
+    height: 130px;
+    width: 85%;
+}
+
+.addListImg p, .addListDesc li p {
+    margin-bottom: 6px;
+}
+
+.addListImg p {
+    margin-top: 0;
+}
+
+.addListTerms {
+    font-size: 0.8rem;
+}
+
+.addListSubmit input {
+    float: right !important;
+    margin-right: 4.5rem;
+    margin-top: 10px;
+}
