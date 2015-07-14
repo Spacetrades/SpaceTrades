@@ -8,7 +8,6 @@ if (Meteor.isServer) {
 //   console.log(result.content);
 // });
 
-//
 
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
