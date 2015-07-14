@@ -21,22 +21,28 @@ SearchSource.defineSource('listing', function (searchText, options) {
 
   if (searchText) {
     var regExp = buildRegExp(searchText);
-    console.log(regExp);
-    var selector = {
-      listing_title: regExp,
-      brand: regExp
-      // username: regExp,
-      // category: regExp, 
-      // type: regExp, 
-      // city: regExp
-    };
-    console.log(selector);
-    console.log("1:" + Listing.find(selector, options).fetch());
-    var query = Listing.find({ $or:[ selector ] }).fetch();
+    // var selector = {
+    //   listing_title: regExp,
+    //   brand: regExp
+    //   // username: regExp,
+    //   // category: regExp, 
+    //   // type: regExp, 
+    //   // city: regExp
+    // };
+
+    var selector1 = {
+      listing_title:  regExp
+    }
+    var selector2 = {
+      brand:  regExp
+    }
+    console.log(selector1);
+    console.log(selector2);
+    var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
     console.log(query);
     return query;
     // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
-    // Listing.find({ $or:[ { listing_title: /(?=.*chicken).+/i, brand: /(?=.*chicken).+/i } ] }).fetch();
+    // Listing.find({ $or:[ { listing_title: /(?=.*Runn).+/i},{ brand: /(?=.*Runn).+/i } ] }).fetch();
   }
 
   // else {
