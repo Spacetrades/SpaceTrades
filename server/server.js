@@ -15,11 +15,16 @@ Accounts.config({'sendVerificationEmail': true});
 SearchSource.defineSource('listing', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20}; 
 
+
+// TASK - Get the selector to use || instead of AND 
+// When searching Nike returns listing where either brand is nike or all listing_title is Nike
+
   if (searchText) {
     var regExp = buildRegExp(searchText);
     console.log(regExp);
     var selector = {
-      listing_title: regExp
+      listing_title: regExp,
+      brand: regExp
       // username: regExp,
       // category: regExp, 
       // type: regExp, 
@@ -27,7 +32,11 @@ SearchSource.defineSource('listing', function (searchText, options) {
     };
     console.log(selector);
     console.log("1:" + Listing.find(selector, options).fetch());
-    return Listing.find(selector, options).fetch();
+    var query = Listing.find({ $or:[ selector ] }).fetch();
+    console.log(query);
+    return query;
+    // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
+    // Listing.find({ $or:[ { listing_title: /(?=.*chicken).+/i, brand: /(?=.*chicken).+/i } ] }).fetch();
   }
 
   // else {
@@ -140,8 +149,8 @@ Meteor.methods({
     throw new Meteor.Error("Not Authorized")
   }
 
-  if (options.trade == "true") {
-    options.trade = "Trades Denied";
+  if (options.trade == "1") {
+    options.trade = "Trades Allowed";
   }
   else {
     options.trade = "Trades Denied";

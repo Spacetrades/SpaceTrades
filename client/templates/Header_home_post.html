@@ -3,21 +3,15 @@
         <ul class="headerBigCat">
             <li class="headerDropDown">
                 <a href="#">Categories</a>
-                <ul class="headerDropDownNav">
-                    <li><a href="/search">Apparel</a></li>
-                    <li><a href="/search">Electronics</a></li>
-                    <li><a href="/search">Shoes</a></li>
-                    <li><a href="/search">Other</a></li>
+                <ul class="headerDropDownNav catDropDown">
+                    <li><a href="/search" class="catApparel">Apparel</a></li>
+                    <li><a href="/search" class="catElectronics">Electronics</a></li>
+                    <li><a href="/search" class="catShoes">Shoes</a></li>
+                    <li><a href="/search" class="catOther">Other</a></li>
                 </ul>
             </li>
         </ul>
-<!-- <<<<<<< HEAD
-        <ul class="navprofile">
-            <li><a href="/profile/{{profile}}" class="navusername"><img src="{{profilesm}}"><span>{{usernameCurrent}}</span></a></li>
-            <li><a href="/" class="navhome">Home</a></li>
-======= -->
         <ul class="headerNameOptions">
-<!-- >>>>>>> upstream/master -->
             <li>
                 <a href="/profile/{{profile}}">
                     <img src="{{picturesmall}}">
@@ -43,13 +37,13 @@
             <li class="headerDropDown">
                 <a href="#"><i class="fa fa-globe"></i></a>
                 <ul class="headerDropDownNav">
-                    <li><a href="#">Offer From Jack</a></li>
+                    <li><a href="#">Offer From <span class="notifyUser">Jack</span></a></li>
                     <li><a href="#">Offer Accepted By Paul</a></li>
                     <li><a href="#">Your Listing Expired</a></li>
                     <li><a href="#">Saved Listing Ended</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="{{messenger}}" target="_blank"><i class="fa fa-envelope"></i></a></li>
             <li class="headerDropDown">
                 <a href="#"><i class="fa fa-caret-square-o-down"></i></a>
                 <ul class="headerDropDownNav">

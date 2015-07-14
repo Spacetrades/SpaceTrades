@@ -406,8 +406,8 @@ div[data-momentum] div {
 }
 
 .colorsquare {
-    width: 2em;
-    height: 2em;
+    width: 100%;
+    height: 3px;
     background-color: transparent;
 }
 
@@ -720,6 +720,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .search:focus {
     border-color: #f8504b !important;
+}
+
+.message {
+    width: 32em;
+    height: 7em; 
 }
 
 .homesearchbtn {
@@ -1265,7 +1270,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     body {
         color: #404040;
-        font-family: 'Lato', sans-serif;
+        font-family: $font_stack-header;
         margin: 0;
         width: 100%;
     }
@@ -1462,6 +1467,12 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
  .rating { 
   border: none;
   float: left;
+}
+
+.star-custom {
+    content: "\f005";
+    color: #ddd; 
+    float: right; 
 }
 
 .rating > input { display: none; } 
@@ -1852,9 +1863,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
  Contact
  **********/
 
- .contactdiv {
-    text-align: center;
-}
+//  .contactdiv {
+//     text-align: center;
+// }
 
 .contactname input, .contactemail input {
  width: 30%;
@@ -2257,6 +2268,16 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin: 0 2px;
 }
 
+.headerLine {
+    margin-left: 20px !important;
+    padding-right: 7em !important;
+    border-left: 1px solid #404040;
+}
+
+.notifyUser {
+    color: $color-spacered;
+}
+
 .headerNameOptions li a, .headerHomeButton li a {
     padding: 12px !important;
 }
@@ -2266,13 +2287,12 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #404040 !important;
 } 
 
-.headerLine {
-    margin-left: 20px !important;
-    border-left: 1px solid #404040;
-}
-
 .headerPostOptions {
     margin: 16px 25px 10px 5px !important;
+}
+
+.headerPostOptions li ul li {
+    font-family: 'Lato', sans-serif;
 }
 
 .headerPostOptions li a i {
