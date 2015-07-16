@@ -67,3 +67,9 @@ Extensive undertandability is less crucial in the beginning stage of development
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
 	IDEAL - A suggestion to do something differently 
+
+## Server:
+	/opt/spacetrades - Location of ST files
+	server - ~/.bash_profile command for ssh server login
+## Tasks:
+	Implement Hubot in some way
