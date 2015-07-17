@@ -233,9 +233,9 @@ userStatus: function () {
     return Offer.find({}, { limit: 100 });
   });
 
-  Meteor.publish('offerNum', function (id) {
-    return Offer.find({ listingId: id }).count();
-  });
+  // Meteor.publish('offerNum', function (id) {
+  //   return Offer.find({ listingId: id }).count();
+  // });
 
   Meteor.publish('userShow', function () {
     return Meteor.users.find({}, { limit: 100 });
