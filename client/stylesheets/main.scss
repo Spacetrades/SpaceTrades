@@ -2158,7 +2158,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .headerDropDown ul {
     margin: 0;
     padding: 0;
-    margin-top: 15px;
+    margin-top: 10px;
     display: none;
     position: absolute;
     background-color: #404040;
@@ -2267,8 +2267,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     color: #fff;
     border: #404040;
     margin-bottom: 0;
-    padding-bottom: 15px !important;
-    margin-bottom: 15px;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px;
 }
 
 .headerNameOptions li {
@@ -2308,6 +2308,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 5px;
     margin-left: 5px;
     vertical-align: middle;
+}
+
+.headerPostOptions li a:hover {
+    padding-bottom: 20px !important;
 }
 
 .addListDiv div {
