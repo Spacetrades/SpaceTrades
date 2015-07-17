@@ -73,3 +73,8 @@ Extensive undertandability is less crucial in the beginning stage of development
 	server - ~/.bash_profile command for ssh server login
 ## Tasks:
 	Implement Hubot in some way
+## Formatting:
+	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
+## Tasks
+	Home Page card images aren't being cached and are rendering on every refresh
+	FIX annoying Nav Dropdowns

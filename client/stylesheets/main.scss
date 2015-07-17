@@ -12,13 +12,14 @@
  $color-linkhover:   #0c65a5;
  $color-royal:       #523f8c;
  $color-blue:        #0266C8;
+ $color-visited:     #0c65a5;
 
 /****** FONT STACKS ******/
- $font_stack-header: 'Droid Sans', sans-serif;
- $font_stack-secondary: 'Roboto', sans-serif;
- $font_stack-alfred: 'Baskerville', sans-serif;
- $font_stack-text: 'Abel', sans-serif;
- $font_stack-norm: 'Helvetica Neue', sans-serif;
+ $font_stack-header:        'Droid Sans', sans-serif;
+ $font_stack-secondary:         'Roboto', sans-serif;
+ $font_stack-alfred:       'Baskerville', sans-serif;
+ $font_stack-text:                'Abel', sans-serif;
+ $font_stack-norm:      'Helvetica Neue', sans-serif;
  // Open Sans
 
 /****** FONT SIZES ******/
@@ -449,10 +450,10 @@ a:link {
     text-decoration: none;
 }
 
-a:visited {
-    color: #404040;
-    text-decoration: none;
-}
+// a:visited {
+//     color: $color-visited;
+//     text-decoration: none;
+// }
 
 a:hover {
     color: #404040;
@@ -1246,7 +1247,13 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
   padding-top: 50px;  
   text-align: center;
   // margin-left: 80%;
+
+  li {
+    padding: 4px;
+  }
 }
+
+
 
 .ph-clear {
 
@@ -1305,11 +1312,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     a:link {
         color: #f8504b;
-        text-decoration: none;
-    }
-
-    a:visited {
-        color: #404040;
         text-decoration: none;
     }
 
@@ -2164,6 +2166,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #404040;
     // transition: all 0.1s linear;
     font-size: 0.8rem;
+    z-index: 1000;
 }
 
 .headerDropDown ul li {
@@ -2231,6 +2234,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 10px;
     font-size: 1.4rem !important;
     font-weight: 700;
+    color: #404040 !important;
 }
 
 
