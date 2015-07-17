@@ -1,20 +1,20 @@
-<template name="headersearchpost">
+<template name="headersearch">
     <nav class="headerNav headerPost">
         <ul class="headerBigCat">
             <li class="headerDropDown">
                 <a href="#">Categories</a>
-                <ul class="headerDropDownNav">
-                    <li><a href="#">Apparel</a></li>
-                    <li><a href="#">Electronics</a></li>
-                    <li><a href="#">Shoes</a></li>
-                    <li><a href="#">Other</a></li>
+                <ul class="headerDropDownNav catDropDown">
+                    <li><a href="/search" class="catApparel">Apparel</a></li>
+                    <li><a href="/search" class="catElectronics">Electronics</a></li>
+                    <li><a href="/search" class="catShoes">Shoes</a></li>
+                    <li><a href="/search" class="catOther">Other</a></li>
                 </ul>
             </li>
         </ul>
         <ul class="headerNameOptions">
             <li>
                 <a href="/profile/{{profile}}">
-                    <img src="http://microlancer.lancerassets.com/assets/placeholder/60x60_user_avatar-9430f08439593cd390e188f13919d5e0.png">
+                    <img src="{{picturesmall}}">
                     <span>{{usernameCurrent}}</span>
                 </a>
             </li>
@@ -30,20 +30,20 @@
                     <li><a href="/store">Your Store</a></li>
                     <li><a href="/saved">Saved Items</a></li>
                     <li><a href="/history">History</a></li>
-                    <li><a href="profile/settings">Account Settings</a></li>
+                    <li><a href="profile/settings">Profile Settings</a></li>
                     <!-- ex user/history  -->
                 </ul>
             </li>
             <li class="headerDropDown">
                 <a href="#"><i class="fa fa-globe"></i></a>
                 <ul class="headerDropDownNav">
-                    <li><a href="#">Offer From Jack</a></li>
+                    <li><a href="#">Offer From <span class="notifyUser">Jack</span></a></li>
                     <li><a href="#">Offer Accepted By Paul</a></li>
                     <li><a href="#">Your Listing Expired</a></li>
                     <li><a href="#">Saved Listing Ended</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="{{messenger}}" target="_blank"><i class="fa fa-envelope"></i></a></li>
             <li class="headerDropDown">
                 <a href="#"><i class="fa fa-caret-square-o-down"></i></a>
                 <ul class="headerDropDownNav">
@@ -55,8 +55,4 @@
             </li>
         </ul>
     </nav>
-    <div class="searchfield searchfield2">
-        <input type="text" class="search search2" placeholder="Brand, Name, Neighborhood, Size, Price...">
-        <a href="#" class="homesearchbtn">Search</a>
-    </div>    
 </template>
