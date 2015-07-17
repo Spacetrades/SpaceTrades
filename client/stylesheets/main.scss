@@ -796,7 +796,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .itemdd {
-    padding-top: 55%;
+    padding-top: 200px;
 }
 
 .imagebox {
@@ -813,7 +813,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .description {
-    text-align: center;
+    text-align: left;
 }
 
 .money {
@@ -2383,4 +2383,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     float: right !important;
     margin-right: 4.5rem;
     margin-top: 10px;
+}
+
+.flex-direction-nav {
+    display: none !important;
 }
