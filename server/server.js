@@ -9,6 +9,10 @@ if (Meteor.isServer) {
 // });
 
 
+// console.log("1" + Meteor.users.find({ _id: 'A8K9spjn6dmEKGePs' }).fetch()[0].profile.name);
+// console.log("2" + Meteor.users.find({ _id: 'K5JsyhN7dP8ZaCwXv' }).fetch()[0].profile.name);
+
+
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
 
@@ -219,23 +223,35 @@ userStatus: function () {
 }
 });
 
+  // DB Shows
+
   Meteor.publish('listingShow', function () {
     return Listing.find({}, { limit: 100 });
   });
 
+  Meteor.publish('offerShow', function () {
+    return Offer.find({}, { limit: 100 });
+  });
+
+  Meteor.publish('offerNum', function (id) {
+    return Offer.find({ listingId: id }).count();
+  });
+
+  Meteor.publish('userShow', function () {
+    return Meteor.users.find({}, { limit: 100 });
+  });
+
   Meteor.publish('listingUser', function () {
     return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
-  })
-  // Meteor.user().profile.name
+  });
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
   });
 
-  Meteor.publish('userId', function (id) {
-    // return users.find( { _id: id })
+  Meteor.publish('userIdprof', function (id) {
+    return Meteor.users.find( { _id: id } );
   });
-
 
 
   // Meteor.publish('listingLatLng', function () {

@@ -20,12 +20,20 @@
     {{#if currentUser}}
     {{> homeheaderpost}}
     {{listingShow}}
+    {{offerShow}}
     {{> yield}}
     {{else}}
     {{> homeheaderpre}}
     {{listingShow}}
+    {{offerShow}}
     {{> yield}} 
 {{/if}}
+</template>
+
+<template name="LayoutSearch">
+{{> sAlert}}
+{{> headersearch}}
+{{> yield}}
 </template>
 
 <template name="loadingTemplate">
@@ -49,7 +57,7 @@
 {{> sAlert}}
  {{#if currentUser}}
     {{> headerpost}}
-    {{ProfileCenterNav}}
+    {{> ProfileCenterNav}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
@@ -61,9 +69,11 @@
 {{> sAlert}}
  {{#if currentUser}}
     {{> headerpost}}
+    {{userShow}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
+    {{userShow}}
     {{> yield}}
 {{/if}}
 </template>
