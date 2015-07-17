@@ -2159,29 +2159,42 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .headerDropDown {
     position: relative;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        display: none;
+        position: absolute;
+        background-color: #404040;
+        // transition: all 0.1s linear;
+        font-size: 0.8rem;
+        z-index: 1000;
+
+        li {
+            margin: 0;
+            color: #fff;
+            text-align: left !important;
+            width: 200px;
+            padding: 15px 10px 15px 0px;
+            border-bottom: 1px solid #555;
+
+            a {
+                color: #fff !important;
+                margin: 0 !important;
+                padding: 0;
+                padding: 15px 15px !important;
+            }      
+        }
+        }
+    a {
+        color: #404040;
+    }
 }
 
-.headerDropDown ul {
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-    display: none;
-    position: absolute;
-    background-color: #404040;
-    // transition: all 0.1s linear;
-    font-size: 0.8rem;
-    z-index: 1000;
-}
 
-.headerDropDown ul li {
-    margin: 0;
-    color: #fff;
-    text-align: left !important;
-    width: 200px;
-    padding: 15px 10px 15px 0px;
-    border-bottom: 1px solid #555;
-    
-}
+
+.headerDropDown ul 
 
 .headerDropDown ul li a {
     color: #fff !important;
