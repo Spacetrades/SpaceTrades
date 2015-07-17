@@ -801,7 +801,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .itemdd {
-    padding-top: 55%;
+    padding-top: 200px;
 }
 
 .imagebox {
@@ -818,7 +818,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .description {
-    text-align: center;
+    text-align: left;
 }
 
 .money {
@@ -2164,7 +2164,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .headerDropDown ul {
     margin: 0;
     padding: 0;
-    margin-top: 15px;
+    margin-top: 10px;
     display: none;
     position: absolute;
     background-color: #404040;
@@ -2275,8 +2275,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     color: #fff;
     border: #404040;
     margin-bottom: 0;
-    padding-bottom: 15px !important;
-    margin-bottom: 15px;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px;
 }
 
 .headerNameOptions li {
@@ -2316,6 +2316,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 5px;
     margin-left: 5px;
     vertical-align: middle;
+}
+
+.headerPostOptions li a:hover {
+    padding-bottom: 20px !important;
 }
 
 .addListDiv div {
@@ -2387,4 +2391,26 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     float: right !important;
     margin-right: 4.5rem;
     margin-top: 10px;
+}
+
+.flex-direction-nav {
+    display: none !important;
+}
+
+.imagebox {
+    width: 70%;
+}
+
+#slider {
+    margin-bottom: 0;
+    border: 0;
+}
+
+#carousel {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.slides li {
+    margin: 5px
 }
