@@ -79,3 +79,5 @@ Extensive undertandability is less crucial in the beginning stage of development
 ## Tasks
 	Home Page card images aren't being cached and are rendering on every refresh
 	FIX annoying Nav Dropdowns
+	Make profile user links /profile/facebookusername and NOT /profile/usermongorandomid
+	Image Optimization like Kixify to mandate on width height for images and decrease image size for HD images
