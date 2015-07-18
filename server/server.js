@@ -169,6 +169,7 @@ Meteor.methods({
   Listing.insert({
     createdAt: new Date(),
     creator_id: options.creator_id,
+    facebook_id: options.facebook_id,
     listing_title: options.listing_title,
     category: options.category,
     type: options.type,
@@ -252,6 +253,8 @@ userStatus: function () {
   Meteor.publish('userIdprof', function (id) {
     return Meteor.users.find( { _id: id } );
   });
+
+  // Meteor.publish('')
 
 
   // Meteor.publish('listingLatLng', function () {
