@@ -2271,6 +2271,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-bottom: 20px;
 }
 
+.headerBigCat li ul li a:hover {
+    padding-bottom: 10px !important;
+}
+
 .headerNameOptions li {
     margin: 0 2px;
 }
@@ -2312,6 +2316,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .headerPostOptions li a:hover {
     padding-bottom: 20px !important;
+}
+
+.headerPostOptions li ul li a:hover {
+    padding-bottom: 10px !important;
 }
 
 .addListDiv div {
@@ -2405,4 +2413,4 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .slides li {
     margin: 5px
-}
+} 
