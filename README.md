@@ -81,3 +81,5 @@ Extensive undertandability is less crucial in the beginning stage of development
 	FIX annoying Nav Dropdowns
 	Make profile user links /profile/facebookusername and NOT /profile/usermongorandomid
 	Image Optimization like Kixify to mandate on width height for images and decrease image size for HD images
+	Implement Chat (Meteor chat or Hipchat) and include hubot for on site deploys.
+	Abandon Notifications for the future builds and begin advertising.

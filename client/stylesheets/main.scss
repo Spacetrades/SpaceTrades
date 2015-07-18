@@ -125,13 +125,6 @@ code {
     font-family: $font_stack-norm !important;
 }
 
-
-// .mrinfoleft {
-//     border: 1px solid;
-//     border-image: -webkit-linear-gradient(45deg,yellow,#f8504b) 20 stretch;
-// }
-
-
 .pika-button:hover {
     background-color: $color-spacered !important;
 }
@@ -333,7 +326,7 @@ input[type="radio"] + label span {
 }
 
 input[type="radio"] + label span {
-   background-color: #404040;
+   background-color: $color-spacegrey;
 }
 
 input[type="radio"]:checked + label span{
@@ -373,7 +366,7 @@ textarea {
 
 .add {
     margin-left: 40%;
-    background-color: #f8504b;
+    background-color: $color-spacered;
 }
 
 .searchopts {
@@ -436,7 +429,7 @@ div[data-momentum] div {
 html, body {
     min-height: 100%;
     font-family: $font_stack-norm;
-    color: #404040;
+    color: $color-spacegrey;
     margin: 0;
 }
 
@@ -445,12 +438,12 @@ footer {
 }
 
 a {
-    color: #404040;
+    color: $color-spacegrey;
     text-decoration: none;
 }
 
 a:link {
-    color: #404040;
+    color: $color-spacegrey;
     text-decoration: none;
 }
 
@@ -460,12 +453,12 @@ a:link {
 // }
 
 a:hover {
-    color: #404040;
+    color: $color-spacegrey;
     text-decoration: none;
 }
 
 a:active {
-    color: #404040;
+    color: $color-spacegrey;
     text-decoration: none;
 }
 
@@ -516,7 +509,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .email {
-    color: #f8504b;
+    color: $color-spacered;
 }
 
 /****** GLOBAL CLASSES END ******/
@@ -526,8 +519,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 /** Home Header Pre **/
 .mainnav {
-    color: #404040;
-    background-color: #f8504b;
+    color: $color-spacegrey;
+    background-color: $color-spacered;
     width: 100%;
     text-align: right;
     height: 50px;
@@ -546,7 +539,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .mainnav ul li a {
-    color: #404040;
+    color: $color-spacegrey;
     padding: 8px 12px 8px 12px;
     margin: 0 3px 0 3px !important;
     font-weight: 400;
@@ -554,7 +547,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .mainnav ul li a:hover {
     color: #fff;
-    background-color: #404040;
+    background-color: $color-spacegrey;
 }
 
 .meetupitems {
@@ -569,7 +562,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .navbox a:hover {
     background-color: #fff !important;
-    color: #404040 !important;
+    color: $color-spacegrey !important;
 }
 
 .navverify {
@@ -588,7 +581,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .navcat li a {
-    border: 1px solid #404040;
+    border: 1px solid $color-spacegrey;
 }
 
 .navprofile {
@@ -602,7 +595,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .navprofile li a {
-    border: 1px solid #f8504b;
+    border: 1px solid $color-spacered;
 }
 
 .proname {
@@ -610,9 +603,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .navprofile li a:hover {
-    background-color: #f8504b;
-    color: #404040;
-    border: 1px solid #404040;
+    background-color: $color-spacered;
+    color: $color-spacegrey;
+    border: 1px solid $color-spacegrey;
 }
 
 .navfa {
@@ -620,19 +613,19 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .navfa:hover {
-    background-color: #f8504b!important;
+    background-color: $color-spacered !important;
     color: #171717 !important;
 }
 
 .navdown {
-    border: 1px solid #404040 !important;
+    border: 1px solid $color-spacegrey !important;
     color: #fff !important;
-    background-color: #404040 !important;
+    background-color: $color-spacegrey !important;
     padding: 4px 6px !important;
 }
 
 .navdown:hover {
-    background-color: #404040 !important;
+    background-color: $color-spacegrey !important;
     color: #fff !important;
 }
 
@@ -654,15 +647,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .navlogo:hover {
-    color: #404040 !important;
-    background-color: #f8504b!important;
+    color: $color-spacegrey !important;
+    background-color: $color-spacered !important;
 }
 
 .navsicon {
     width: 28px;
     height: 28px !important;
     padding: 6px 7px;
-    border: 1px solid #404040;
+    border: 1px solid $color-spacegrey;
     margin-right: 2.5px;
 }
 
@@ -684,7 +677,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .navsearchbtn:hover {
-    background-color: #f8504b !important;
+    background-color: $color-spacered !important;
 }
 
 /** Header Pre **/
@@ -703,7 +696,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .logo {
     text-align: center;
     font-size: 4rem;
-    color: #404040;
+    color: $color-spacegrey;
 }
 
 .searchfield {
@@ -731,7 +724,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .search:focus {
-    border-color: #f8504b !important;
+    border-color: $color-spacered !important;
 }
 
 .message {
@@ -741,7 +734,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .homesearchbtn {
     padding: 11px 16px;
-    background-color: #f8504b;
+    background-color: $color-spacered;
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
@@ -771,7 +764,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     padding: 0 !important;
     text-align: center !important;
     background-color: #fff;
-    color: #404040;
+    color: $color-spacegrey;
     margin-bottom: 2rem !important;
 }
 
@@ -854,7 +847,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .helpnav ul li a:hover {
-    background-color: #f8504b;
+    background-color: $color-spacered;
     color: #fff;
 }
 
@@ -864,7 +857,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .helplogo {
-    color: #f8504b;
+    color: $color-spacered;
 }
 
 /****** HELP NAV END ******/
@@ -988,15 +981,15 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .contactsubmit input {
     padding: 8px 15px;
     font-size: 1rem;
-    color: #404040;
+    color: $color-spacegrey;
     background-color: #fff;
     border: none;
-    border: 1px solid #f8504b;
+    border: 1px solid $color-spacered;
 }
 
 .contactsubmit input:hover {
     color: #fff;
-    background-color: #f8504b;
+    background-color: $color-spacered;
 }
 
 .sent { 
@@ -1146,18 +1139,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     text-align: center;
 }
 
-// .errorh a {
-//     padding: 8px 12px;
-//     color: #f8504b;
-//     background-color: #fff;
-//     border: 1px solid #f8504b;
-// }
-
-// .errorh a:hover {
-//     color: #fff;
-//     background-color: #f8504b;
-// }
-
 /*************************** PH FROM 3rd party ***************************/
 .ph-button {
 
@@ -1287,7 +1268,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     body {
-        color: #404040;
+        color: $color-spacegrey;
         font-family: $font_stack-header;
         margin: 0;
         width: 100%;
@@ -1295,37 +1276,37 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     footer {
         text-align: center;
-        color: #404040;
+        color: $color-spacegrey;
     }
 
     footer a:visited {
-        color: #f8504b !important;
+        color: $color-spacered !important;
     }
 
     .foota {
-        color: #404040 !important;
+        color: $color-spacegrey !important;
     }
 
     /* Links */
     a {
-        color: #404040;
+        color: $color-spacegrey;
         text-decoration: none;
         transition: all 0.2s linear;
 
     }
 
     a:link {
-        color: #f8504b;
+        color: $color-spacered;
         text-decoration: none;
     }
 
     a:hover {
-        color: #404040;
+        color: $color-spacegrey;
         text-decoration: none;
     }
 
     a:active {
-        color: #404040;
+        color: $color-spacegrey;
         text-decoration: none;
     }
 
@@ -1366,7 +1347,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     input:focus, 
     textarea:focus {
-        outline-color: #f8504b;
+        outline-color: $color-spacered;
         outline-width: 1px;
         outline-offset: -3px;
     }
@@ -1446,7 +1427,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .feedBackOptions ul li button {
-    background-color: #f8504b;
+    background-color: $color-spacered;
     color: #fff;
     font-size: 1.1rem;
     height: 80px;
@@ -1457,7 +1438,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .feedBackDocs {
-    border-left: 1px solid #404040;
+    border-left: 1px solid $color-spacegrey;
     padding-left: 6%;
     vertical-align: middle;
     width: 60%;
@@ -1527,7 +1508,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .feedBackDocs2 {
-    border-left: 1px solid #404040;
+    border-left: 1px solid $color-spacegrey;
     padding: 1% 4%;
     vertical-align: middle;
     width: 50%;
@@ -1565,14 +1546,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .feedBackText input:focus {
-    outline-color: #f8504b;
+    outline-color: $color-spacered;
 }
 
 .feedBackText button {
     outline: none;
     margin: 20px 0 0 0;
     text-align: right !important;
-    background-color: #f8504b;
+    background-color: $color-spacered;
     padding: 10px 16px;
     color: #fff;
     margin-left: 7rem;
@@ -1590,8 +1571,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
  **********/
 
  .mainnav {
-    color: #404040;
-    background-color: #f8504b;
+    color: $color-spacegrey;
+    background-color: $color-spacered;
     width: 100%;
     text-align: right;
     height: 50px;
@@ -1611,7 +1592,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .mainnav ul li a {
-    color: #404040;
+    color: $color-spacegrey;
     padding: 8px 12px 8px 12px;
     margin: 0 3px 0 3px !important;
     font-weight: 400;
@@ -1619,7 +1600,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .mainnav ul li a:hover {
     color: #fff;
-    background-color: #404040;
+    background-color: $color-spacegrey;
 }
 
 .meetupitems {
@@ -1634,7 +1615,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .navbox a:hover {
     background-color: #fff !important;
-    color: #404040 !important;
+    color: $color-spacegrey !important;
 }
 
 .navverify {
@@ -1650,7 +1631,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .logo {
     text-align: center;
     font-size: 4rem;
-    color: #404040;
+    color: $color-spacegrey;
 }
 
 .searchfield {
@@ -1676,12 +1657,12 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .search:focus {
-    border-color: #f8504b !important;
+    border-color: $color-spacered !important;
 }
 
 .homesearchbtn {
     padding: 11px 16px;
-    background-color: #f8504b;
+    background-color: $color-spacered;
     color: #fff !important;
     margin-left: 8px;
 }
@@ -1696,7 +1677,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .navcat li a {
-    border: 1px solid #404040;
+    border: 1px solid $color-spacegrey;
 }
 
 .navprofile {
@@ -1710,13 +1691,13 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .navprofile li a {
-    border: 1px solid #f8504b;
+    border: 1px solid $color-spacered;
 }
 
 .navprofile li a:hover {
-    background-color: #f8504b;
-    color: #404040;
-    border: 1px solid #404040;
+    background-color: $color-spacered;
+    color: $color-spacegrey;
+    border: 1px solid $color-spacegrey;
 }
 
 // .navprofile li i {
@@ -1732,19 +1713,19 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .navfa:hover {
-    background-color: #f8504b!important;
+    background-color: $color-spacered !important;
     color: #171717 !important;
 }
 
 .navdown {
-    border: 1px solid #404040 !important;
+    border: 1px solid $color-spacegrey !important;
     color: #fff !important;
-    background-color: #404040 !important;
+    background-color: $color-spacegrey !important;
     padding: 4px 6px !important;
 }
 
 .navdown:hover {
-    background-color: #404040 !important;
+    background-color: $color-spacegrey !important;
     color: #fff !important;
 }
 
@@ -1774,15 +1755,15 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .navlogo:hover {
-    color: #404040 !important;
-    background-color: #f8504b!important;
+    color: $color-spacegrey !important;
+    background-color: $color-spacered !important;
 }
 
 .navsicon {
     width: 28px;
     height: 28px !important;
     padding: 6px 7px;
-    border: 1px solid #404040;
+    border: 1px solid $color-spacegrey;
     margin-right: 2.5px;
 }
 
@@ -1804,7 +1785,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .navsearchbtn:hover {
-    background-color: #f8504b !important;
+    background-color: $color-spacered !important;
 }
 
 /**********
@@ -1896,14 +1877,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     outline: none;
     margin: 0;
     text-align: right !important;
-    background-color: #f8504b;
+    background-color: $color-spacered;
     padding: 10px 16px;
     color: #fff;
     margin-left: 17rem;
 }
 .contactsubmit input:hover {
     color: #fff;
-    background-color: #f8504b;
+    background-color: $color-spacered;
 }
 
 .sent { 
@@ -1990,7 +1971,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     width: 50%;
     vertical-align: middle;
     padding-left: 4rem;
-    border-left: 1px solid #404040;
+    border-left: 1px solid $color-spacegrey;
 }
 
 .registerMain {
@@ -2053,7 +2034,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .reportBtn button {
-    background-color: #f8504b;
+    background-color: $color-spacered;
     color: #fff;
     font-size: 1.1rem;
     width: 100px;
@@ -2072,7 +2053,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     width: 40%;
     height: 6rem;
     font-size: 1rem;
-    color: #404040;
+    color: $color-spacegrey;
 }
 
 .reportUserImg img {
@@ -2088,8 +2069,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 /** NEW NAV **/
 
 .headerNav {
-    color: #404040;
-    background-color: #f8504b;
+    color: $color-spacegrey;
+    background-color: $color-spacered;
     margin: 0;
     padding: 0;
     text-align: right;
@@ -2142,19 +2123,23 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 5px;
 }
 
+.headerNotDrop {
+    color: $color-spacegrey !important;
+}
+
 .headerNotDrop a:hover {
     padding-bottom: 10px !important;
 }
 
 .headerCat li a:hover {
-    background-color: #404040;
+    background-color: $color-spacegrey;
     color: #fff;
     padding-bottom: 15px;
 }
 
 .headerAuth li a:hover {
     background-color: #fff;
-    color: #404040 !important;
+    color: $color-spacegrey !important;
 }
 
 .headerDropDown {
@@ -2166,7 +2151,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         margin-top: 10px;
         display: none;
         position: absolute;
-        background-color: #404040;
+        background-color: $color-spacegrey;
         // transition: all 0.1s linear;
         font-size: 0.8rem;
         z-index: 1000;
@@ -2188,7 +2173,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         }
         }
     a {
-        color: #404040;
+        color: $color-spacegrey;
     }
 }
 
@@ -2251,7 +2236,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 10px;
     font-size: 1.4rem !important;
     font-weight: 700;
-    color: #404040 !important;
+    color: $color-spacegrey !important;
 }
 
 
@@ -2284,9 +2269,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .headerBigCat li a:hover  {
-    background-color: #404040;
+    background-color: $color-spacegrey;
     color: #fff;
-    border: #404040;
+    border: $color-spacegrey;
     margin-bottom: 0;
     padding-bottom: 20px !important;
     margin-bottom: 20px;
@@ -2299,7 +2284,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .headerLine {
     margin-left: 20px !important;
     padding-right: 7em !important;
-    border-left: 1px solid #404040;
+    border-left: 1px solid $color-spacegrey;
 }
 
 .notifyUser {
@@ -2312,7 +2297,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .headerNameOptions li a:hover, .headerHomeButton li a:hover {
     color: #fff;
-    background-color: #404040 !important;
+    background-color: $color-spacegrey !important;
 } 
 
 .headerPostOptions {
