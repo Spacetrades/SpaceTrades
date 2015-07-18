@@ -79,6 +79,14 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 /****** GLOBAL ******/
 
 
+.tab-pane, .fade {
+    display: none;
+}
+
+.active, .in {
+    display: block !important;
+}
+
 i {
     color: $color-spacegrey;
 }

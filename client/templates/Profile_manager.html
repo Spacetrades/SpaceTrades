@@ -1,12 +1,48 @@
 <template name="Manager">
-<div class="oneDiv">
+
+<div class="container">
+  <h2>Manager</h2>
+  <ul class="nav nav-tabs">
+    <li><a href="#menu1">Buying</a></li>
+    <li><a href="#menu2">Selling</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="menu1" class="tab-pane fade">
+      <h3>Buying</h3>
+      <p>All your offers are located here</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Selling</h3>
+      <p>All your listings are located here</p>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
 {{#markdown}}
 ## Manager
 Here you can monitor your current offers and the status of your listings
 {{/markdown}}
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+</div> -->
 <!-- Task -->
 <!-- Edit and Delete -->
-	<div class="listingIASDiv div">
+	<!-- <div class="listingIASDiv div">
 		<div class="listingIASTitle">
 			<h3>Active</h3>
 		</div>
@@ -18,6 +54,14 @@ Here you can monitor your current offers and the status of your listings
 			</ul>
 		</div>
 	</div>
-	</div>
+	</div> -->
 	<!-- Notification  -->
+<!-- 	</div> -->
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+</script>
 </template>
