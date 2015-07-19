@@ -83,3 +83,5 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Image Optimization like Kixify to mandate on width height for images and decrease image size for HD images
 	Implement Chat (Meteor chat or Hipchat) and include hubot for on site deploys.
 	Abandon Notifications for the future builds and begin advertising.
+	Make dropdowns open on click not hover
+	Use data() or addClass() to change class for dropdowns
