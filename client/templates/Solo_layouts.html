@@ -32,8 +32,13 @@
 
 <template name="LayoutSearch">
 {{> sAlert}}
-{{> headersearch}}
-{{> yield}}
+    {{#if currentUser}}
+    {{> headersearchpost}}
+    {{> yield}}
+    {{else}}
+    {{> headersearchpre}}
+    {{> yield}}
+{{/if}}
 </template>
 
 <template name="loadingTemplate">
