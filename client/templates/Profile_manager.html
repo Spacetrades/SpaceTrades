@@ -15,6 +15,13 @@
     <div id="menu2" class="tab-pane fade">
       <h3>Selling</h3>
       <p>All your listings are located here</p>
+      <div class="carddiv div">
+				<ul class="cardul">
+					{{#each listing}}
+					{{> card}}
+					{{/each}}
+				</ul>
+			</div>
     </div>
   </div>
 </div>

@@ -2,17 +2,22 @@
 <!-- TASK - Allow user to add only one image -->
 <!-- TASK - Lat, Lng should be hidden asap  -->
 <!-- TASK - Allow users to specify their own location -->
+<!-- TASK - Maybe include privacy in signup and never again -->
     <div class="addListDiv oneDiv">
         <h2 class="addListLogo">Create Listing</h2>
         <div class="addListSecOne">
             <ul class="addListInfo">
                 <li>Category
                     <select class="listcategory">
-                        <option value="Select">Select</option>
+                        <option value="" disabled selected >Select Category</option>
                         <option value="Apparel">Apparel</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Shoes">Shoes</option>
                         <option value="Other">Other</option>
+                    </select>
+                </li>
+                <li>Type
+                    <select class="listtype">
                     </select>
                 </li>
                 <li>
@@ -56,7 +61,7 @@
                                 <option value="New Hampshire">New Hampshire </option>           
                                 <option value="New Jersey">New Jersey </option>           
                                 <option value="New Mexico">New Mexico </option>  -->
-                                <option value="New York">Select </option>           
+                                <option value="" disabled selected >Select State </option>           
                                 <option value="New York">New York </option>           
                                 <!-- <option value="North Carolina">North Carolina </option>           
                                 <option value="North Dakota">North Dakota </option>           
@@ -85,16 +90,12 @@
                     </ul>
                 </li>
                 <li>Allow Trade Offers? 
-                    <i class="fa fa-info-circle" title="You Are Willing To Trade Your Item For Another Item"></i>
+                    <i class="fa fa-info-circle" data-toggle="tooltip" title="You Are Willing To Trade Your Item For Another Item"></i>
                     <input type="radio" id="radio01" name="radio" value="True">Yes
                     <input type="radio" id="radio02" name="radio" value="false">No
                 </li>
             </ul>
             <ul class="addListDetails">
-                <li>Type
-                    <select class="listtype">
-                    </select>
-                </li>
                 <li>Brand
                     <input type="text" class="listbrand">
                 </li>
@@ -120,8 +121,10 @@
                 		<option value="10">10+</option>option>
                 	</select>
                 </li>
-                <li>Size
+                <li class="listsizeli">Size
                     <select class="listsize">
+                        <option value="" disabled selected>Select Size</option>option>
+                        <option value="1">1</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -134,13 +137,23 @@
                         <option value="10">10</option>
                     </select>
                 </li>
+                <li>Capacity
+                    <select class="listspace">
+                        <option value="" disabled selected>Select Size</option>option>
+                        <option value="1">4 GB</option>
+                        <option value="2">8 GB</option>
+                        <option value="3">16 GB</option>
+                        <option value="4">32 GB</option>
+                        <option value="5">64 GB</option>
+                        <option value="6">128 GB</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> 
+                </li>
                 <li>Color
                     <input type="text" id="colorpicker"> 
-                </li>
-                <li>Storage Space
-                    <select class="listspace">
-                      <option value="">Value</option>
-                    </select> 
                 </li>
             </ul>
         </div>
