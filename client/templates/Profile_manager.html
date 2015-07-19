@@ -1,29 +1,31 @@
 <template name="Manager">
 
-<div class="container">
-  <h2>Manager</h2>
-  <ul class="nav nav-tabs">
-    <li><a href="#menu1">Buying</a></li>
-    <li><a href="#menu2">Selling</a></li>
-  </ul>
+<div class="container oneDiv">
+    <ul class="nav nav-tabs managerNavTabs">
+        <li><a href="#menu1">Offers</a></li>
+        <li><a href="#menu2">Listings</a></li>
+    </ul>
 
-  <div class="tab-content">
-    <div id="menu1" class="tab-pane fade">
-      <h3>Buying</h3>
-      <p>All your offers are located here</p>
+    <div class="tab-content">
+        <div id="menu1" class="tab-pane fade">
+            <div class="profileManagerOffer">
+                <ul class="profileManagerUl">
+                    {{#each listing}}
+                    {{> ManagerCardOffer}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <div class="carddiv div">
+  				      <ul class="cardul">
+                    {{#each listing}}
+      					    {{> card}}
+      					    {{/each}}
+  				      </ul>
+  			   </div>
+        </div>
     </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Selling</h3>
-      <p>All your listings are located here</p>
-      <div class="carddiv div">
-				<ul class="cardul">
-					{{#each listing}}
-					{{> card}}
-					{{/each}}
-				</ul>
-			</div>
-    </div>
-  </div>
 </div>
 <!-- <div class="container">
 {{#markdown}}
