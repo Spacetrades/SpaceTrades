@@ -79,6 +79,10 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 /****** GLOBAL ******/
 
 
+.fa.fa-home {
+    color: white;
+}
+
 .tab-pane, .fade {
     display: none;
 }
@@ -375,6 +379,7 @@ textarea {
 .add {
     margin-left: 40%;
     background-color: $color-spacered;
+    border-color: black;
 }
 
 .searchopts {
@@ -742,14 +747,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .homesearchbtn {
     padding: 11px 16px;
-    background-color: $color-spacered;
+    background-color: $color-blue;
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
 }
 
 .homesearchbtn:hover {
-    background-color: red;
+    background-color: #075FB5;
 }
 
 /** Search Field End **/
@@ -1139,6 +1144,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 10%;
     margin-left: 10%;
     font-family: 'Baskerville', arial;
+}
+
+.headerror {
+    font-size: 3em;
 }
 
 .errorh {
@@ -1666,13 +1675,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .search:focus {
     border-color: $color-spacered !important;
-}
-
-.homesearchbtn {
-    padding: 11px 16px;
-    background-color: $color-spacered;
-    color: #fff !important;
-    margin-left: 8px;
 }
 
 /**********
