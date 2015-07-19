@@ -2451,8 +2451,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .managerNavTabs li a:hover {
-    color: #f8504b !important;
-    background-color: #fff;
+    color: #fff !important;
+    background-color: #f73c37;
 }
 
 .container {
@@ -2462,8 +2462,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .profileManagerOffer {
     margin: 0;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 0%;
+    margin-left: 0%;
 }
 
 .profileManagerUl > li {
@@ -2491,13 +2491,13 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .managerOfferImage {
-    width: 50% !important;
+    width: 49% !important;
     margin-right: 2%;
 }
 
 .managerOfferImage li a img {
     width: 100% !important;
-    height: 100% !important;
+    height: 150px !important;
 }
 
 .managerOfferDetails {
@@ -2521,14 +2521,16 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .managerOfferView a {
-    padding: 12px 14px;
+    font-size:0.95rem;
+    padding: 12px 10px;
     border: 1px solid #f8504b;
-    color: #f8504b !important;
+    color: #fff !important;
+    background-color: #f8504b;
 }
 
 .managerOfferView a:hover {
     color: #fff !important;
-    background-color: #f8504b;
+    background-color: #f73c37;
 }
 
 .money {
