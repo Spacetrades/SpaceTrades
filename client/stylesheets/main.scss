@@ -870,6 +870,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     text-align: right;
 }
 
+.helpiteml li a {
+    color: #404040 !important;
+}
+
+.helpiteml li a:hover {
+    color: #fff !important;
+}
+
 .helplogo {
     color: $color-spacered;
 }
@@ -2107,7 +2115,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .headerNav a {
-    // transition: all 0.1s linear;
+    transition: none !important; 
 }
 
 .headerCat li, .headerAuth {
@@ -2431,3 +2439,103 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .slides li {
     margin: 5px
 } 
+
+.managerNavTabs li {
+    display: inline-block !important;
+    margin: auto 15px auto auto;
+}
+
+.managerNavTabs li a {
+    font-size: 1.1rem;
+    padding: 14px 16px;
+    border: 1px solid #f8504b;
+    color: #fff !important;
+    background-color: #f8504b;
+}
+
+.managerNavTabs li a:hover {
+    color: #fff !important;
+    background-color: #f73c37;
+}
+
+.container {
+    padding: 0;
+}
+
+
+.profileManagerOffer {
+    margin: 0;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+.profileManagerUl > li {
+    display: inline-block;
+}
+
+.managerOfferLi {
+    border: 3px solid #00bfff;
+    border-radius: 5px;
+    margin: 20px 10px;
+    padding: 5px 10px 10px 10px;
+    width: 28.86%;
+}
+
+.managerOfferLi p {
+    text-align: right;
+    margin: 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: middle !important;
+}
+
+.managerOfferLi ul {
+    display: inline-block !important;
+}
+
+.managerOfferImage {
+    width: 49% !important;
+    margin-right: 2%;
+}
+
+.managerOfferImage li a img {
+    width: 100% !important;
+    height: 150px !important;
+}
+
+.managerOfferDetails {
+    width: 45% !important;
+    margin-left: 2%;
+    vertical-align: top;
+}
+
+.managerOfferDetails li {
+    margin-bottom: 5px;
+}
+
+.managerOfferDetails li a h4 {
+    margin: 0;
+    color: #00bfff;
+}
+
+.managerOfferView {
+    margin-top: 30px !important;
+    text-align: right;
+}
+
+.managerOfferView a {
+    font-size:0.95rem;
+    padding: 12px 10px;
+    border: 1px solid #f8504b;
+    color: #fff !important;
+    background-color: #f8504b;
+}
+
+.managerOfferView a:hover {
+    color: #fff !important;
+    background-color: #f73c37;
+}
+
+.money {
+    color: #396;
+}
