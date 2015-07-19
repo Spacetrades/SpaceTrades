@@ -1,0 +1,20 @@
+<template name="cardOffer">
+    <li>
+        <div>
+            <div class="carditp">
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>                      
+                <p><a href="/listing/{{_id}}" class="listingtitle">{{listing_title}}</a></p>
+            </div>
+            <div class="cardpsa">
+                <p class="cardprice">${{price}}</p>
+                <p class="cardsl"><span class="cardsize">
+                '{{size}}</span>
+                </p>
+            </div>
+            <div class="cardna">
+                <!-- {{offerNum}} -->
+                <a class="cardname" href="/profile/{{creator_id}}">{{username}}</a>
+            </div>
+        </div>
+    </li>
+</template>
