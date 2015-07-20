@@ -747,7 +747,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .homesearchbtn {
     padding: 11px 16px;
-    background-color: $color-blue;
+    background-color: #00bfff;
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
@@ -2476,16 +2476,20 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border: 3px solid #00bfff;
     border-radius: 5px;
     margin: 20px 10px;
-    padding: 5px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
     width: 28.86%;
+}
+
+.managerOfferLi:hover {
+    border-color: #f8504b;
 }
 
 .managerOfferLi p {
     text-align: right;
-    margin: 0;
+    margin: 0 0 5px 0;
     font-size: 0.6rem;
     height: 15px;
-    vertical-align: middle !important;
+    vertical-align: top !important;
 }
 
 .managerOfferLi ul {
@@ -2517,24 +2521,46 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     color: #00bfff;
 }
 
+.managerOfferDetails li a h4:hover {
+    text-decoration: underline !important;
+}
+
 .managerOfferView {
     margin-top: 30px !important;
     text-align: right;
 }
 
 .managerOfferView a {
-    font-size:0.95rem;
+    font-size: 0.95rem;
     padding: 12px 10px;
-    border: 1px solid #f8504b;
     color: #fff !important;
     background-color: #f8504b;
 }
 
-.managerOfferView a:hover {
-    color: #fff !important;
+.managerOfferView a:hover {;
     background-color: #f73c37;
 }
 
 .money {
     color: #396;
 }
+
+.managerOfferButton {
+    margin-top: 30px;
+}
+
+.managerOfferButton ul li {
+    display: inline-block !important;
+}
+
+.managerOfferButton ul li a {
+    font-size: 0.95rem;
+    padding: 12px 10px;
+    color: #fff !important;
+    background-color: #f8504b;
+}
+
+.managerOfferButton ul li a:hover {
+    background-color: #f73c37;
+}
+
