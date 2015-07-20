@@ -2,8 +2,8 @@
 
 <div class="container oneDiv">
     <ul class="nav nav-tabs managerNavTabs">
-        <li><a href="#menu1">Offers</a></li>
-        <li><a href="#menu2">Listings</a></li>
+        <li><a href="#menu1">Your Offers</a></li>
+        <li><a href="#menu2">Your Listings</a></li>
     </ul>
 
     <div class="tab-content">
@@ -17,13 +17,13 @@
             </div>
         </div>
         <div id="menu2" class="tab-pane fade">
-            <div class="carddiv div">
-  				      <ul class="cardul">
+            <div class="profileManagerOffer">
+                <ul class="profileManagerUl">
                     {{#each listing}}
-      					    {{> card}}
-      					    {{/each}}
-  				      </ul>
-  			   </div>
+                    {{> ManagerCardListing}}
+                    {{/each}}
+                </ul>
+            </div>
         </div>
     </div>
 </div>
