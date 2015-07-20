@@ -40,7 +40,7 @@ https://trello.com/b/IETMH34k/meteor-development
 ## Beginning Principles
 1. If it works, don't fix it
 2. Remain consistent (Keep order in chaos)
-3. 
+3. Nothing more, Nothing less
 
 ## Commit Messages Language ( CML )
 ```
