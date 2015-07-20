@@ -31,7 +31,7 @@
 
 /**
 TASK - Split up css into different files and use imports (for categorization sake)
-
+TASK - Remove all the Magic Numbers -- CSS Tricks
 TASK - Make font nests and alphabetize
 
 CSS class rules
@@ -318,11 +318,11 @@ input[type="radio"] {
 }
 
 .s-alert-error {
-    font-family: 'Baskerville';
+    font-family: $font_stack-alfred !important;
 }
 
 .s-alert-sucess{
-    font-family: 'Baskerville';
+    font-family: $font_stack-alfred !important ;
 }
 
 input[type="radio"] + label {
@@ -374,6 +374,7 @@ textarea {
     text-align: center;
     color: $color-money;
     font-weight: bold;
+    width: 15%;
 }
 
 .add {
@@ -1054,6 +1055,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
         a img {
         width: 100%;
+        height: 10em;
         }
 
         p a {
@@ -2219,9 +2221,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     
 }
 
-.headerDropDown:hover > .headerDropDownNav {
-    display: block;
-}
+// .headerDropDown:hover > .headerDropDownNav {
+//     display: block;
+// }
 
 .headerSearch {
     margin-top: 12px !important;
@@ -2366,7 +2368,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .addListInfo li, .addListDetails li {
-    padding: 2px;
+    padding: 5px;
     margin: 5px 0;
 }
 
