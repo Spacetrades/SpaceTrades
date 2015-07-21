@@ -1,24 +1,23 @@
 <template name="card">
-<!-- TASK - Add ellipsis on text-overflow -->
-    <li>
-        <div>
-            <div class="carditp">
-                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>                      
-                <p><a href="/listing/{{_id}}" class="listingtitle">{{listing_title}}</a></p>
-                <!-- Underline Listing title onhover -->
-            </div>
-            <div class="cardpsa">
-                <p class="cardprice">${{price}}</p>
-                <p class="cardsl"><span class="cardsize">
-                '{{size}}</span>
-                </p>
-            </div>
-            <div class="cardna">
-                <!-- {{offerNum}} -->
-                <a class="cardname" href="/profile/{{creator_id}}">{{username}}</a>
-
-                <!-- Different categories will have different size values. ex. Shoes '11, Apparel Medium, Electronics 16GB, etc -->
-            </div>
-        </div>
+    <li class="homeCardLi">
+        <p class="homeCardOfferRecieved">3 Offers Received</p>
+        <ul class="homeCardItem">
+            <li><a href="/listing/{{_id}}"><img src="{{img1}}" class="homeCardImg"></a></li>
+            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+        </ul>
+        <ul class="homeCardDetails">
+            <li class="homeCardLeft">
+                <ul>
+                    <li class="money">${{price}}</li>
+                    <li>Size: '{{size}}</li>
+                </ul>
+            </li>
+            <li class="homeCardRight">
+                <ul>
+                    <li>{{city}}, <b>NY</b></li>
+                    <li class="homeCardUser"><a href="/profile/{{creator_id}}">{{username}}</a></li>
+                </ul>
+            </li>
+        </ul>
     </li>
 </template>
