@@ -747,14 +747,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .homesearchbtn {
     padding: 11px 16px;
-    background-color: #00bfff;
+    background-color: #f8504b;
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
 }
 
 .homesearchbtn:hover {
-    background-color: #075FB5;
+    background-color: #f73c37;
 }
 
 /** Search Field End **/
@@ -2248,6 +2248,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     padding: 8px 10px 7px 10px !important;
 }
 
+.headerNavSearchButton:hover {
+    background-color: #f73c37;
+}
+
 .headerNavLogo {
     margin: 0;
     margin-left: 20px;
@@ -2464,8 +2468,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .profileManagerOffer {
     margin: 0;
-    margin-right: 0%;
-    margin-left: 0%;
 }
 
 .profileManagerUl > li {
