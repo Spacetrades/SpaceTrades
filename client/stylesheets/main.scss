@@ -2463,11 +2463,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #f73c37;
 }
 
-.container {
-    padding: 0;
-}
-
-
 .profileManagerOffer {
     margin: 0;
 }
@@ -2479,9 +2474,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .managerOfferLi {
     border: 3px solid #00bfff;
     border-radius: 5px;
-    margin: 20px 10px;
+    margin: 20px 5px;
     padding: 0px 10px 10px 10px;
-    width: 28.86%;
+    width: 28.9%;
 }
 
 .managerOfferLi:hover {
@@ -2523,6 +2518,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .managerOfferDetails li a h4 {
     margin: 0;
     color: #00bfff;
+    overflow: hidden;
 }
 
 .managerOfferDetails li a h4:hover {
@@ -2558,8 +2554,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .managerOfferButton ul li a {
-    font-size: 0.95rem;
-    padding: 12px 10px;
+    font-size: 0.9rem;
+    padding: 10px 8px;
     color: #fff !important;
     background-color: #f8504b;
 }
@@ -2568,3 +2564,70 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     background-color: #f73c37;
 }
 
+.homeCardUl > li {
+    display: inline-block;
+}
+
+.homeCardLi {
+    border: 3px solid #00bfff;
+    border-radius: 5px;
+    margin: 20px 10px;
+    padding: 0px 10px 10px 10px;
+    width: 20%;
+}
+
+.homeCardImg {
+    width: 100%;
+    height: 200px;
+}
+
+.homeCardItem li a h4 {
+    color: #00bfff;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.homeCardItem li a h4:hover {
+    text-decoration: underline;
+}
+
+.homeCardDetails {
+    margin-top: 5px;
+}
+
+.homeCardDetails > li {
+    display: inline-block;
+}
+
+.homeCardDetails li ul li {
+    font-size: 0.9rem;
+    margin: 2px auto; 
+}
+
+.homeCardLeft {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.homeCardRight {
+    float: Right !important;
+    margin-right: 10px;
+}
+
+.homeCardUser {
+    text-decoration: underline;
+    margin-left: 5px !important;
+}
+
+.homeCardUser a:hover {
+    color: #f8504b;
+}
+
+.homeCardOfferRecieved {
+    text-align: right;
+    margin: 0 0 5px 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: top !important;
+}
