@@ -1,7 +1,8 @@
 <template name="card">
 <!-- TASK - Add ellipsis on text-overflow -->
+<!-- {{offerShow}} -->
     <li class="homeCardLi">
-        <p class="homeCardOfferRecieved">3 Offers Received</p>
+        <p class="homeCardOfferRecieved">{{offers}} Offers Received</p>
         <ul class="homeCardItem">
             <li><a href="/listing/{{_id}}"><img src="{{img1}}" class="homeCardImg"></a></li>
             <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
@@ -10,7 +11,7 @@
             <li class="homeCardLeft">
                 <ul>
                     <li class="money">${{price}}</li>
-                    <li>Size: '{{size}}</li>
+                    <li>Size: {{size}}</li>
                 </ul>
             </li>
             <li class="homeCardRight">

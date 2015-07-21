@@ -274,8 +274,6 @@ input[type=checkbox] {
     font-weight: 300;
 }
 
-
-
 .redskin {
     background-color: $color-spacered;
 }
@@ -286,6 +284,8 @@ input[type=checkbox] {
 
 .price {
     font-size: 1.5em;
+    width: 40%;
+    display: inline-block;
 }
 
 .mrbutton {
@@ -2548,6 +2548,14 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     color: #396;
 }
 
+.offer {
+  color: #523f8c;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 40%;
+}
+
 .managerOfferButton {
     margin-top: 30px;
 }
@@ -2589,6 +2597,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin: 0;
     overflow: hidden;
     text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .homeCardItem li a h4:hover {
