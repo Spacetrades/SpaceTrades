@@ -2576,6 +2576,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     width: 20%;
 }
 
+.homeCardLi:hover {
+    border: 3px solid #f8504b;
+}
+
 .homeCardImg {
     width: 100%;
     height: 200px;
