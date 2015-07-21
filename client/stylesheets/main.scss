@@ -14,6 +14,7 @@
  $color-blue:        #0266C8;
  $color-visited:     #0c65a5;
  $color-lightgrey:   #999;
+ $color-purple:      #6c54b3;
 
 /****** FONT STACKS ******/
  $font_stack-header:        'Droid Sans', sans-serif;
@@ -1171,7 +1172,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 /*************************** PH FROM 3rd party ***************************/
 .ph-button {
-
+    outline: none;
     border-style: solid;
     border-width: 0px 0px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
@@ -1375,7 +1376,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
 
-    input:focus, 
+    input[type="text"]:focus, 
     textarea:focus {
         outline-color: $color-spacered;
         outline-width: 1px;
@@ -2655,4 +2656,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-size: 0.6rem;
     height: 15px;
     vertical-align: top !important;
+    color: #6c54b3;
 }
+

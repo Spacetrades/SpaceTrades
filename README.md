@@ -76,6 +76,10 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Implement Hubot in some way
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
+	jQuery - $( ".cardul" ).hide() NOT $(".cardul")
+	SCSS - ALLOW double letter bonding Ex: .prohibiteddiv and NOT .prohibitediv
+## Stylesheets
+[:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
 ## Tasks
 	Home Page card images aren't being cached and are rendering on every refresh
 	FIX annoying Nav Dropdowns
@@ -85,3 +89,6 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Abandon Notifications for the future builds and begin advertising.
 	Make dropdowns open on click not hover
 	Use data() or addClass() to change class for dropdowns
+	ADD social listing media links to ST pages maybe near footer maybe
+	ADD Sharing item on social media on addlisting and on item page
+	ADD load more images button on home page
