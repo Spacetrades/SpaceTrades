@@ -2576,6 +2576,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     width: 20%;
 }
 
+.homeCardLi:hover {
+    border: 3px solid #f8504b;
+}
+
 .homeCardImg {
     width: 100%;
     height: 200px;
@@ -2606,22 +2610,30 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .homeCardLeft {
-    text-align: left;
+    float: left !important;
     margin-left: 10px;
 }
 
 .homeCardRight {
-    float: Right !important;
+    float: right !important;
     margin-right: 10px;
 }
 
 .homeCardUser {
     text-decoration: underline;
-    margin-left: 5px !important;
+    margin-left: 0px !important;
+}
+
+.homeCardUser a {
+    font-size: 0.85rem !important;
 }
 
 .homeCardUser a:hover {
     color: #f8504b;
+}
+
+.homeCardSize {
+    font-size: 0.85rem !important;
 }
 
 .homeCardOfferRecieved {
