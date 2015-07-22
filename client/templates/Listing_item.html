@@ -1,130 +1,88 @@
 <template name="item">
-    <!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
-    <!-- TASK - Move description box up next to descriptors -->
-    <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied -->
-    <!-- TASK - Dropdowns being open on page load, change this -->
-    <div class="itemdiv div">
-        <div>
-            <h2 class="itemtitle"><div>{{listing_title}}</div></h2>
-            {{#if currentUser}}
-            <div class="btn-group options-dropdown">
-            <a class="btn btn-primary orange">Options</a>
-              <a class="btn btn-primary dropdown-toggle orange" data-toggle="dropdown" href="#">
-                <span class="fa fa-caret-down"></span></a>
-                <ul class="dropdown-menu">
-                    <li class="listingOptionsReport"><a href="/report/listing"><i class="fa fa fa-gavel fa-fw"></i> Report</a></li>
-                    {{#if KnightedUser}}
-                    <li class="listingOptionsEdit"><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-                    <li class="listingOptionsDelete"><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
-                    {{/if}}
-
+<!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
+<!-- TASK - Move description box up next to descriptors -->
+<!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied -->
+<!-- TASK - Dropdowns being open on page load, change this -->
+    <div class="listingItemDiv oneDiv">
+        <h1 class="lisitngItemTitle">{{listing_title}}</h1>
+        <p class="listingItemOffersRecieved">{{offers}} Offers Recieved</p>
+        <div class="listingItemLeft">
+            <div class="listingItemPriceButtons">
+                <ul class="listingItemPrice">
+                    <li class="money itemMoney">${{price}}</li>
+                </ul>
+                <ul class="listingItemButtons">
+                    <li><a href="{{current}}/request">Offer</a></li>
+                    <li><a href="{{facebook_id}}">Contact</a></li>
                 </ul>
             </div>
-            {{/if}}
-        </div>
-                <div class="itempmcql">
-                    <div>
-                        <div class="money">
-                            <p class="price">${{price}}</p>
-                            <p class="offer">{{offers}} Offers Received</p>
-                        </div>
-                        <div class="functionality">
-                            <ul>
-                                <li>
-                                    <div class="ph-float">
-                                        <a href='{{current}}/request' class='ph-button ph-btn-red'>Offer</a>
-                                    </div>
-                                </li>
-                                <li>  
-                                    <div class="ph-float">
-                                        <a href='{{facebook_id}}' target="_blank" class='ph-button ph-btn-red'>Contact</a>
-                                    </div>
-                                </li>
-                                <li>  
-                                    <div class="ph-float">
-                                    <!-- TASK - Increase font size -->
-                                        <li>Trade: {{trade}}</li>
-                                        <li>Quantity: {{quantity}}</li>
-                                        <li>{{city}}, <b>{{state}}</b></li>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="imagebox">
-                    <div id="slider" class="flexslider">
-                       <ul class="slides">
-                        <li>
-                            <img src="{{img1}}">
-                        </li>
-                        <li>
-                            <img src="{{img2}}">
-                        </li>        
-                        <li>
-                            <img src="{{img3}}">
-                        </li>                     
-                    </ul>
-                </div>
-                <div id="carousel" class="flexslider">
-                    <ul class="slides">
-                        <li>
-                            <img src="{{img1}}">
-                        </li>
-                        <li>
-                            <img src="{{img2}}">
-                        </li>        
-                        <li>
-                            <img src="{{img3}}">
-                        </li>                       
-                    </ul>
-                </div>
-            </div>
+            <div class="listingItemSlider">
+                <div class="slider">
+                    <input type="radio" name="slide_switch" id="id1" checked="checked"/>
+                    <label for="id1" class="sliderSmallOne">
+                        <img src="{{img1}}" />
+                    </label>
+                    <img src="{{img1}}"/>
 
-            <div class="itemimgmap">
-                <div class="gimg">
-                    {{> googleMap name="listingImage" options=exampleMapOptions}}
+                    <!--Lets show the second image by default on page load-->
+                    <input type="radio" name="slide_switch" id="id2" />
+                    <label for="id2">
+                        <img src="{{img2}}" />
+                    </label>
+                    <img src="{{img2}}"/>
+
+                    <input type="radio" name="slide_switch" id="id3"/>
+                    <label for="id3" class="sliderSmallThree">
+                        <img src="{{img3}}" />
+                    </label>
+                    <img src="{{img3}}"/>
                 </div>
             </div>
-            <div class="functionality">
-                <div>
-                    <div>
-                    </div>
-                    <div>
-                        <ul>
-                        <!-- TASK - Add font awesom user image -->
-                            <li><u><a href="/profile/{{creator_id}}"><p>{{username}}</p></a></u></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="listingItemDetails">
+                <h4>Details</h4>
+                <ul class="listingItemDetailItems">
+                    <li><b>Brand:</b> {{brand}}</li>
+                    <li><b>Color:</b> <div class="colorsquare" style="background-color:{{color}};"></div></li>
+                    <li><b>Condition:</b> {{condition}}</li>
+                    <li><b>Size:</b> {{size}}</li>
+                </ul>
             </div>
-            <div class="itemdd">
-                <div>
-                    <h2>Details</h2>
-                    <ul class="descriptorbox">
-                        <li>
-                            <b>Color: </b> <div class="colorsquare" style="background-color: {{color}}">
-                            </div>
-                        </li>
-                        <li>
-                            <p class="descriptor-item"> <b>Brand: </b> <code class="listingitem">{{brand}}</code></p>
-                        </li>
-                        <li>
-                            <p class="descriptor-item"> <b>Condition: </b> <code class="listingitem"> {{condition}}</code> </p>
-                        </li>
-                        <li>
-                            <p class="descriptor-item"> <b>Size: </b> <code class="listingitem"> {{size}} </code> </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <h3>Description</h3>
-                    <p>{{description}}</p>
-                </div>
+            <div class="listingItemDesc">
+                <h4>Description</h4>
+                <p>{{description}}</p>
             </div>
         </div>
-        <div class="hidden">
-        {{creator_id}}
+        <div class="listingItemRight">
+            <div class="listingItemOptions">
+                <ul class="listingItemOptionsLeft">
+                    <li class="listingItemQuantity"><b>Quantity:</b> {{quantity}}</li>
+                    <li class="listingItemTrades"><b>{{trade}}</b></li>
+                </ul>
+                <ul class="listingItemOptionsDropDown">
+                    <li><a>Options<i class="fa fa-caret-down"></i></a></li>
+                </ul>
+            </div>
+            <div class="listingItemMaps">
+                <ul class="listingItemMapsAPI">
+                    <li>
+                        <div id="map-canvas">
+                            {{> googleMap name="listingImage" options=exampleMapOptions}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="listingItemUserInfo">
+                <ul class="listingItemUserInfoUl">
+                    <li class="rating">
+                        <!-- These Stars Are For Display, They Do Not Work-->
+                        ☆☆☆☆☆
+                    </li>
+                    <li class="listingItemUser"><a href="/profile/{{profile}}"><img src="{{picturesmall}}"><span>{{username}}</span></a></li>
+                </ul>
+            </div>
         </div>
-    </template>
+    </div>
+    <div class="hidden">
+    {{creator_id}}
+    </div>
+</template>

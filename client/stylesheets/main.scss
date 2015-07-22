@@ -2694,6 +2694,247 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-size: 0.6rem;
     height: 15px;
     vertical-align: top !important;
-    color: $color-purple;
+    color: $color-purple !important;
 }
 
+/* Slider */
+
+.slider {
+    width: 100%;
+    position: relative;
+    padding-top: 400px;
+    margin: 20px auto;
+}
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0; 
+    top: 0;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+    border: 3px solid #00bfff;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.sliderSmallOne {
+    margin-left: 10% !important;
+}
+
+.sliderSmallThree {
+    margin-right: 0% !important;
+}
+
+.slider label img{
+    display: block;
+    width: 150px;
+    height: 94px;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: #00bfff;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1);
+    width: 640px !important;
+    height: 400px;
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider > img {
+
+}
+
+#map-canvas {
+    height: 520px;
+}
+
+.listingItemLeft {
+    width: 60%;
+    float: left;
+}
+
+.listingItemRight {
+    width: 35%;
+    float: right;
+} 
+
+.listingItemDiv > div {
+    display: inline-block;
+}
+
+.listingItemDiv > h1, .listingItemDiv p {
+    margin: 0;
+}
+
+.listingItemDiv > p {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #6c54b3;
+}
+
+.listingItemPriceButtons {
+    width: 100%;
+}
+
+.listingItemPriceButtons ul {
+    margin: 0;
+    margin: 25px auto 5px auto;
+    display: inline-block;
+}
+
+.listingItemPriceButtons ul li {
+    font-size: 1.2rem;
+}
+
+.listingItemPrice li {
+    color: #396;
+}
+
+.listingItemButtons {
+    float: right;
+}
+
+.listingItemButtons li {
+    display: inline-block;
+    margin: auto 10px;
+}
+
+.listingItemButtons li a {
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;   
+}
+
+.listingItemButtons li a:hover {
+    background-color: #f73c37;
+}
+
+.itemMoney {
+    font-size: 1.5rem !important;
+}
+
+.listingItemDetails {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.listingItemDetails h4, .listingItemDesc h4 {
+    font-size: 1.6rem;
+    margin: 0;
+    border-bottom: 1px solid #00bfff;
+    padding-bottom: 5px;
+    color: #00bfff;
+}
+
+.listingItemDetailItems {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.listingItemDetailItems li {
+    margin: 8px 0;
+    font-size: 1.1rem; 
+}
+
+.listingItemDesc {
+    margin: 50px 0;
+    width: 75%;
+}
+
+
+.listingItemOptions {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.listingItemOptions ul {
+    text-align: right !important;
+}
+
+.listingItemOptions ul li {
+    display: inline-block;
+}
+
+.listingItemOptionsLeft {
+    float: left !important;
+    margin: 0;
+    vertical-align: middle;
+    display: block;
+}
+
+.listingItemTrades {
+    margin-left: 15px;
+}
+
+.listingItemOptions ul li a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+.listingItemOptions ul li a i {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.listingItemUserInfo {
+    margin-top: 20px;
+}
+
+.listingItemUserInfo ul li {
+    display: inline-block;
+}
+
+.rating {
+    font-size: 1.4rem;
+    vertical-align: middle;
+    color: gold;
+}
+
+.listingItemUser {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.listingItemUser a img {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.listingItemUser a span {
+    vertical-align: middle;
+    margin-left: 4px;
+}
