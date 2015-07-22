@@ -867,13 +867,18 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     color: #fff;
 }
 
+.helpNavSelected {
+    background-color: $color-spacered;
+    color: #fff !important;
+}
+
 .helpiteml {
     margin-top: -2.8rem;
     text-align: right;
 }
 
 .helpiteml li a {
-    color: #404040 !important;
+    color: #404040;
 }
 
 .helpiteml li a:hover {
@@ -1175,7 +1180,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     outline: none;
     border-style: solid;
     border-width: 0px 0px 3px;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     color: #FFFFFF;    
     border-radius: 6px;
     cursor: pointer;
@@ -1192,6 +1196,13 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-size: 18px;
     
 }
+
+.ph-button:active {
+    border-color: $color-spacered;
+    border-radius: none;
+    color: $color-gold;
+}
+
 /*Green
 ==========================*/
 .ph-btn-green {
@@ -2147,7 +2158,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 5px;
 }
 
-.headerNotDrop {
+.headerNotDrop a {
     color: $color-spacegrey !important;
 }
 
