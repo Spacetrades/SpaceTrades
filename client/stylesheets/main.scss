@@ -4,6 +4,8 @@
  $color-shoes:       #34dddd;
  $color-money:       #339966;
  $color-spacered:    #f8504b;
+ $color-cardinal:    #C41E3A;
+ $color-burgundy:    #900020;
  $color-spacegrey:   #404040;
  $color-banana:      #ffff00;
  $color-gold:        #ffd700;
@@ -13,6 +15,8 @@
  $color-royal:       #523f8c;
  $color-blue:        #0266C8;
  $color-visited:     #0c65a5;
+ $color-lightgrey:   #999;
+ $color-purple:      #6c54b3;
 
 /****** FONT STACKS ******/
  $font_stack-header:        'Droid Sans', sans-serif;
@@ -273,8 +277,6 @@ input[type=checkbox] {
     font-weight: 300;
 }
 
-
-
 .redskin {
     background-color: $color-spacered;
 }
@@ -285,6 +287,8 @@ input[type=checkbox] {
 
 .price {
     font-size: 1.5em;
+    width: 40%;
+    display: inline-block;
 }
 
 .mrbutton {
@@ -425,9 +429,9 @@ div[data-momentum] div {
 }
 
 .colorsquare {
-    width: 100%;
-    height: 3px;
-    background-color: transparent;
+    width: 2.5em;
+    height: 2.5em;
+    display: inline-block;
 }
 
 .imagepreview {
@@ -865,13 +869,18 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     color: #fff;
 }
 
+.helpNavSelected {
+    background-color: $color-spacered;
+    color: #fff !important;
+}
+
 .helpiteml {
     margin-top: -2.8rem;
     text-align: right;
 }
 
 .helpiteml li a {
-    color: #404040 !important;
+    color: #404040;
 }
 
 .helpiteml li a:hover {
@@ -1041,6 +1050,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         padding-bottom: 5px;
         margin: 0.8rem .6rem;
         outline: black dotted thin;
+        // Consider: box-shadow: 1px 1px 5px 1px #CCCCCC;
         }
 
         ul li:hover {
@@ -1079,6 +1089,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
         margin: 0;
         padding: 0;
         display: inline-block;
+        padding-top: 0.4em;
     }
 
     // .carditp p a {
@@ -1168,10 +1179,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 /*************************** PH FROM 3rd party ***************************/
 .ph-button {
-
+    outline: none;
     border-style: solid;
     border-width: 0px 0px 3px;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     color: #FFFFFF;    
     border-radius: 6px;
     cursor: pointer;
@@ -1188,6 +1198,13 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-size: 18px;
     
 }
+
+.ph-button:active {
+    border-color: $color-spacered;
+    border-radius: 0;
+    color: $color-gold;
+}
+
 /*Green
 ==========================*/
 .ph-btn-green {
@@ -1241,6 +1258,21 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
     background: none repeat scroll 0 0 #EB4848 !important;
     border-color: #E83131 !important; 
+    color: white !important;   
+}
+
+.ph-btn-cardinal {
+    background-color: $color-cardinal !important;
+    border-color: #FF274B !important;
+    color: white !important;
+    font-family: inherit !important;
+}
+
+.ph-btn-cardinal:hover, 
+.ph-btn-cardinal:focus, 
+.ph-btn-cardinal:active {
+    background: none repeat scroll 0 0 #B51933 !important;
+    border-color: #B51933 !important; 
     color: white !important;   
 }
 
@@ -1318,7 +1350,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     a {
         color: $color-spacegrey;
         text-decoration: none;
-        transition: all 0.2s linear;
+        // transition: all 0.2s linear;
 
     }
 
@@ -1372,7 +1404,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
 
-    input:focus, 
+    input[type="text"]:focus, 
     textarea:focus {
         outline-color: $color-spacered;
         outline-width: 1px;
@@ -2143,12 +2175,13 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin-right: 5px;
 }
 
-.headerNotDrop {
+.headerNotDrop a {
     color: $color-spacegrey !important;
 }
 
 .headerNotDrop a:hover {
     padding-bottom: 10px !important;
+    color: white !important;
 }
 
 .headerCat li a:hover {
@@ -2180,7 +2213,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
             margin: 0;
             color: #fff;
             text-align: left !important;
-            width: 200px;
+            width: 150px;
             padding: 15px 10px 15px 0px;
             border-bottom: 1px solid #555;
 
@@ -2199,7 +2232,11 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 
 
-.headerDropDown ul 
+// .headerDropDown ul 
+
+.hoverDropDown:hover > .headerDropDownNav {
+    display: block;
+}
 
 .headerDropDown ul li a {
     color: #fff !important;
@@ -2495,6 +2532,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     display: inline-block !important;
 }
 
+.managerOfferStatus {
+    color: $color-purple !important;
+}
+
 .managerOfferImage {
     width: 49% !important;
     margin-right: 2%;
@@ -2534,15 +2575,24 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-size: 0.95rem;
     padding: 12px 10px;
     color: #fff !important;
-    background-color: #f8504b;
+    background-color: $color-cardinal;
 }
 
 .managerOfferView a:hover {;
-    background-color: #f73c37;
+    background-color: #B51933;
 }
 
 .money {
     color: #396;
+}
+
+.offer {
+  color: #523f8c;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 40%;
+  // Consider text-shadow: 1px 1px rgb(194, 174, 255);
 }
 
 .managerOfferButton {
@@ -2590,6 +2640,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin: 0;
     overflow: hidden;
     text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .homeCardItem li a h4:hover {
@@ -2633,7 +2685,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .homeCardSize {
-    font-size: 0.85rem !important;
+    font-size: 0.7rem !important;
 }
 
 .homeCardOfferRecieved {
@@ -2642,5 +2694,247 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-size: 0.6rem;
     height: 15px;
     vertical-align: top !important;
-    color: #6c54b3 !important;
+    color: $color-purple !important;
+}
+
+/* Slider */
+
+.slider {
+    width: 100%;
+    position: relative;
+    padding-top: 400px;
+    margin: 20px auto;
+}
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0; 
+    top: 0;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+    border: 3px solid #00bfff;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.sliderSmallOne {
+    margin-left: 10% !important;
+}
+
+.sliderSmallThree {
+    margin-right: 0% !important;
+}
+
+.slider label img{
+    display: block;
+    width: 150px;
+    height: 94px;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: #00bfff;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1);
+    width: 640px !important;
+    height: 400px;
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider > img {
+
+}
+
+#map-canvas {
+    height: 520px;
+}
+
+.listingItemLeft {
+    width: 60%;
+    float: left;
+}
+
+.listingItemRight {
+    width: 35%;
+    float: right;
+} 
+
+.listingItemDiv > div {
+    display: inline-block;
+}
+
+.listingItemDiv > h1, .listingItemDiv p {
+    margin: 0;
+}
+
+.listingItemDiv > p {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #6c54b3;
+}
+
+.listingItemPriceButtons {
+    width: 100%;
+}
+
+.listingItemPriceButtons ul {
+    margin: 0;
+    margin: 25px auto 5px auto;
+    display: inline-block;
+}
+
+.listingItemPriceButtons ul li {
+    font-size: 1.2rem;
+}
+
+.listingItemPrice li {
+    color: #396;
+}
+
+.listingItemButtons {
+    float: right;
+}
+
+.listingItemButtons li {
+    display: inline-block;
+    margin: auto 10px;
+}
+
+.listingItemButtons li a {
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;   
+}
+
+.listingItemButtons li a:hover {
+    background-color: #f73c37;
+}
+
+.itemMoney {
+    font-size: 1.5rem !important;
+}
+
+.listingItemDetails {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.listingItemDetails h4, .listingItemDesc h4 {
+    font-size: 1.6rem;
+    margin: 0;
+    border-bottom: 1px solid #00bfff;
+    padding-bottom: 5px;
+    color: #00bfff;
+}
+
+.listingItemDetailItems {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.listingItemDetailItems li {
+    margin: 8px 0;
+    font-size: 1.1rem; 
+}
+
+.listingItemDesc {
+    margin: 50px 0;
+    width: 75%;
+}
+
+
+.listingItemOptions {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.listingItemOptions ul {
+    text-align: right !important;
+}
+
+.listingItemOptions ul li {
+    display: inline-block;
+}
+
+.listingItemOptionsLeft {
+    float: left !important;
+    margin: 0;
+    vertical-align: middle;
+    display: block;
+}
+
+.listingItemTrades {
+    margin-left: 15px;
+}
+
+.listingItemOptions ul li a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+.listingItemOptions ul li a i {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.listingItemUserInfo {
+    margin-top: 20px;
+}
+
+.listingItemUserInfo ul li {
+    display: inline-block;
+}
+
+.rating {
+    font-size: 1.4rem;
+    vertical-align: middle;
+    color: gold;
+}
+
+.listingItemUser {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.listingItemUser a img {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.listingItemUser a span {
+    vertical-align: middle;
+    margin-left: 4px;
 }
