@@ -194,10 +194,13 @@ Meteor.methods({
 
 addOffer: function (options) {
   Offer.insert({
+    listing_title: options.listing_title,
     offerprice: options.offerprice,
     date: options.date,
     location: options.location,
-    listingId: options.listingId
+    listingId: options.listingId,
+    creator_id: options.creator_id,
+    status: options.status
   });
 },
 
