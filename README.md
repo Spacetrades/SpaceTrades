@@ -80,6 +80,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	SCSS - ALLOW double letter bonding Ex: .prohibiteddiv and NOT .prohibitediv
 ## Stylesheets
 [:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
+Include other language style guides JS, SCSS for reference
 ## Tasks
 	Home Page card images aren't being cached and are rendering on every refresh
 	FIX annoying Nav Dropdowns
