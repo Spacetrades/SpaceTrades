@@ -82,14 +82,12 @@ Extensive undertandability is less crucial in the beginning stage of development
 [:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
 Include other language style guides JS, SCSS for reference
 ## Tasks
-	Home Page card images aren't being cached and are rendering on every refresh
-	FIX annoying Nav Dropdowns
-	Make profile user links /profile/facebookusername and NOT /profile/usermongorandomid
-	Image Optimization like Kixify to mandate on width height for images and decrease image size for HD images
-	Implement Chat (Meteor chat or Hipchat) and include hubot for on site deploys.
-	Abandon Notifications for the future builds and begin advertising.
-	Make dropdowns open on click not hover
-	Use data() or addClass() to change class for dropdowns
-	ADD social listing media links to ST pages maybe near footer maybe
-	ADD Sharing item on social media on addlisting and on item page
-	ADD load more images button on home page
+- [] Home Page card images aren't being cached and are rendering on every refresh
+- [x] FIX annoying Nav Dropdowns that need double clicking
+- [] Make profile user links /profile/facebookusername and NOT /profile/usermongorandomid
+- [] Image Optimization like Kixify to mandate on width height for images and decrease image size for HD images
+- [] Implement Chat (Meteor chat or Hipchat) and include hubot for on site deploys.
+- [] Abandon Notifications for the future builds and begin advertising.
+- [] ADD social listing media links to ST pages maybe near footer maybe
+- [] ADD Sharing item on social media on addlisting and on item page
+- [] ADD load more images button on home page
