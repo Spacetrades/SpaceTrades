@@ -4,12 +4,14 @@
  $color-shoes:       #34dddd;
  $color-money:       #339966;
  $color-spacered:    #f8504b;
+ $color-spaceblue:   #00bfff;
  $color-cardinal:    #C41E3A;
  $color-burgundy:    #900020;
  $color-spacegrey:   #404040;
  $color-banana:      #ffff00;
  $color-gold:        #ffd700;
  $color-facebook:    #46629E;
+ $color-instagram:   #125688;
  $color-link:        #0c65a5;
  $color-linkhover:   #0c65a5;
  $color-royal:       #523f8c;
@@ -127,6 +129,10 @@ code {
 }
 
 .fa-facebook {
+    color: white;
+}
+
+.fa-instagram {
     color: white;
 }
 
@@ -306,6 +312,10 @@ input[type=checkbox] {
 
 .facebook {
     background-color: $color-facebook;
+}
+
+.instagram {
+    background-color: $color-instagram;
 }
 
 .listingtitle:hover {
