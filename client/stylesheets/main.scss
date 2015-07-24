@@ -19,6 +19,7 @@
  $color-banana:      #ffff00;
  $color-royal:       #523f8c;
  $color-blue:        #0266C8;
+ $color-blue2:       #0295ff;
  $color-lightgrey:   #999;
  $color-purple:      #6c54b3;
 
@@ -54,6 +55,25 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
 
+.fa-plus-circle {
+    color: $color-spacered !important;
+}
+
+.fa-plus-circle:hover {
+    color: $color-spacered !important;
+}
+
+.addListing {
+    color: $color-spacered !important;
+}
+
+.usernameChat {
+    color: $color-blue2;
+}
+
+.managerListingStatus {
+    color: $color-purple;
+}
 
 .fa.fa-home {
     color: white;
@@ -1187,6 +1207,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border-color: $color-spacered;
     border-radius: 0;
     color: $color-gold;
+    border: 1px solid $color-gold;
 }
 
 /*Green
@@ -2206,7 +2227,7 @@ i:hover {
             border-bottom: 1px solid #555;
 
             a {
-                color: #fff !important;
+                color: #fff;
                 margin: 0 !important;
                 padding: 0;
                 padding: 15px 15px !important;
@@ -2227,7 +2248,7 @@ i:hover {
 }
 
 .headerDropDown ul li a {
-    color: #fff !important;
+    color: #fff;
     margin: 0 !important;
     padding: 0;
     padding: 15px 15px !important;
@@ -2470,6 +2491,11 @@ i:hover {
     margin: 5px
 } 
 
+.nav-tabs {
+  border-bottom: 1px solid $color-spacered;
+  padding-bottom: 14px;
+}
+
 .managerNavTabs li {
     display: inline-block !important;
     margin: auto 15px auto auto;
@@ -2478,7 +2504,7 @@ i:hover {
 .managerNavTabs li a {
     font-size: 1.1rem;
     padding: 14px 16px;
-    border: 1px solid $color-spacered;
+    // border: 1px solid $color-spacered;
     color: $color-spacered;
     background-color: white;
 }
@@ -2489,8 +2515,10 @@ i:hover {
 }
 
 .navTabSelected {
-    color: #fff !important;
-    background-color: $color-spacered !important;
+    // background-color: $color-spacered !important;
+    border-top: 1px solid $color-spacered;
+    border-right: 1px solid $color-spacered;
+    border-left: 1px solid $color-spacered;
 }
 
 .profileManagerOffer {

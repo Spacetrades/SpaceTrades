@@ -35,6 +35,7 @@
 <template name="LayoutMessages">
 {{> sAlert}}
     {{#if currentUser}}
+    {{messageShow}}
     {{> headerpost}}
     {{> yield}}
 {{/if}}

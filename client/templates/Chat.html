@@ -1,16 +1,21 @@
 <template name="ChatInput">
 <div class="chatInput">
-<strong>YOUR MESSAGE HERE</strong>
 <textarea rows="3" class="newMessage"></textarea>
-<input type="text" placeholder="Enter Your Message">
-<a class="chatSend"></a>
+<a class="chatSend ph-button ph-btn-cardinal">Send</a>
 </div>
+People
+<select class="People">
+    <option value="New">Nathan</option>
+    <option value="Like New">Yusuf</option>
+    <option value="Used">George</option>
+    <option value="Broken">Peter</option>
+</select>
 </template>
 
 <template name="ChatMessages">
 <div class="chatMessages">
 {{#each messages}}
-	{{> message}}
+	{{> messageCard}}
 {{/each}}
 </div>
 </template>
@@ -18,4 +23,9 @@
 <template name="Messages">
 {{> ChatInput}}
 {{> ChatMessages}}
+</template>
+
+<template name="messageCard">
+<b class="usernameChat">{{username}}</b> - {{message}}
+<br />
 </template>
