@@ -41,6 +41,7 @@ https://trello.com/b/IETMH34k/meteor-development
 1. If it works, don't fix it
 2. Remain consistent (Keep order in chaos)
 3. Nothing more, Nothing less
+4. Better to undersalt then oversalt on design
 
 ## Commit Messages Language ( CML )
 ```
