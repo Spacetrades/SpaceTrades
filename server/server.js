@@ -16,6 +16,7 @@ if (Meteor.isServer) {
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
 
+
 SearchSource.defineSource('listing', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20}; 
 
@@ -82,7 +83,17 @@ SearchSource.defineSource('listing', function (searchText, options) {
   return user;
 });
 
-  // Removes the config b/c dupliation error and re-defines it 
+  // Removes the config b/c dupliation error and re-defines it
+
+    ServiceConfiguration.configurations.remove({
+      service: "instagram"
+    });
+    ServiceConfiguration.configurations.insert({
+      service: "instagram",
+      clientId: "644acc16830a4783957a6ad207ab6c00",
+      scope:'basic',
+      secret: "011a28fce8994008ae2eb1cfa131e3d4"
+    }); 
 
     ServiceConfiguration.configurations.remove({
       service: "facebook"

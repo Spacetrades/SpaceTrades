@@ -1,0 +1,16 @@
+<template name="ChatInput">
+<div class="chatInput">
+<strong>YOUR MESSAGE HERE</strong>
+<textarea rows="3" class="newMessage"></textarea>
+<input type="text" placeholder="Enter Your Message">
+<a class="chatSend"></a>
+</div>
+</template>
+
+<template name="ChatMessages">
+<div class="chatMessages">
+{{#each messages}}
+	{{> message}}
+{{/each}}
+</div>
+</template>
