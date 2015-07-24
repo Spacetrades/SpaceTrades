@@ -93,3 +93,4 @@ Include other language style guides JS, SCSS for reference
 - [ ] ADD Sharing item on social media on addlisting and on item page
 - [ ] ADD load more images button on home page
 - [ ] SETUP email, with mailchimp or mailgun http://docs.meteor.com/#/full/email
+- [ ] Add Go Premium
