@@ -2,7 +2,7 @@
 	<li class="managerOfferLi">
         <p class="managerOfferStatus">{{status}} <!-- Pending, Confirmed, and Declined--></p>
         <ul class="managerOfferImage">
-            <li><a href="#"><img src="{{img1}}" class="managerOfferImg"></a></li>
+            <li><a href="#"><img src="{{img}}" class="managerOfferImg"></a></li>
         </ul>
         <ul class="managerOfferDetails">
             <li><a href="#"><h4>{{listing_title}}</h4></a></li>
@@ -19,13 +19,13 @@
 	<li class="managerOfferLi">
         <p> 42 Days, 6 Hours, 12 Min Left </p>
         <ul class="managerOfferImage">
-            <li><a href="#"><img src="http://5.kixify.com/sites/default/files/imagecache/product_list/1406223967_46183.jpg" class="managerOfferImg"></a></li>
+            <li><a href="#"><img src="{{img1}}" class="managerOfferImg"></a></li>
         </ul>
         <ul class="managerOfferDetails">
-            <li><a href="#"><h4>Nike Air Max Retro</h4></a></li>
-            <li><span class="money">$275</span></li>
-            <li>Condition: Like New</li>
-            <li>Size: '12</li>
+            <li><a href="#"><h4>{{listing_title}}</h4></a></li>
+            <li><span class="money">{{price}}</span></li>
+            <li>Condition: {{condition}}</li>
+            <li>Size: {{size}}</li>
             <li class="managerOfferButton">
                 <ul>
                     <li class="managerOfferOptions"><a href="#">Options</a></li>

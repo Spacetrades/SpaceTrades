@@ -206,6 +206,7 @@ Meteor.methods({
 addOffer: function (options) {
   Offer.insert({
     listing_title: options.listing_title,
+    img: options.img,
     offerprice: options.offerprice,
     date: options.date,
     location: options.location,

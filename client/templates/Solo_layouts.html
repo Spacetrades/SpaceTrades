@@ -31,6 +31,15 @@
 {{/if}}
 </template>
 
+<!-- TASK - Make template for Messages -->
+<template name="LayoutMessages">
+{{> sAlert}}
+    {{#if currentUser}}
+    {{> headerpost}}
+    {{> yield}}
+{{/if}}
+</template>
+
 <template name="LayoutSearch">
 {{> sAlert}}
     {{#if currentUser}}
