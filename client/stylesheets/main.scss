@@ -1,24 +1,36 @@
 /***** COLORS ******/
+// Categories
  $color-clothing:    #ff5700;
  $color-electronics: #006eff;
  $color-shoes:       #34dddd;
+
+// Reward
  $color-money:       #339966;
+ $color-gold:        #ffd700;
+
+// Theme
  $color-spacered:    #f8504b;
  $color-spaceblue:   #00bfff;
+ $color-spacegrey:   #404040;
+
+// Colors
  $color-cardinal:    #C41E3A;
  $color-burgundy:    #900020;
- $color-spacegrey:   #404040;
  $color-banana:      #ffff00;
- $color-gold:        #ffd700;
- $color-facebook:    #46629E;
- $color-instagram:   #125688;
- $color-link:        #0c65a5;
- $color-linkhover:   #0c65a5;
  $color-royal:       #523f8c;
  $color-blue:        #0266C8;
- $color-visited:     #0c65a5;
  $color-lightgrey:   #999;
  $color-purple:      #6c54b3;
+
+// External
+ $color-facebook:    #46629E;
+ $color-instagram:   #125688;
+
+// Links
+ $color-link:        #0c65a5;
+ $color-linkhover:   #0c65a5;
+ $color-visited:     #0c65a5;
+
 
 /****** FONT STACKS ******/
  $font_stack-header:        'Droid Sans', sans-serif;
@@ -26,54 +38,12 @@
  $font_stack-alfred:       'Baskerville', sans-serif;
  $font_stack-text:                'Abel', sans-serif;
  $font_stack-norm:      'Helvetica Neue', sans-serif;
- // Open Sans
 
 /****** FONT SIZES ******/
 
 
 
 /****** ST Grid (our own bootstrap) ******/
-
-
-/**
-TASK - Split up css into different files and use imports (for categorization sake)
-TASK - Remove all the Magic Numbers -- CSS Tricks
-TASK - Make font nests and alphabetize
-
-CSS class rules
-Use underscores (_) in beteween words 
-AND
-Use tacks (-) in between descriptor
-
-All classes should be in this form
-[Broad category] - [Specific Item]
-If the class is one word it should be [Specific Item]
-
-FIND and INCLUDE:
-CSS/SASS style guide
-https://github.com/styleguide/css
-http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
-https://github.com/necolas/idiomatic-css
-http://csswizardry.com/2012/04/my-html-css-coding-style/
-http://coding.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/  
-http://make.wordpress.org/core/handbook/coding-standards/css/
-http://smacss.com/
-
-Be consistant with indentation
-Be consistant about where spaces before/after colons/braces go
-One selector per line, One rule per line
-List related properties together
-Have a plan for class name naming
-Don't use ID's #hotdrama
-etc
-
-Organize css properties Alphabetically and -moz like properties go at the beginning
-
-
-
-CSS Principles
-
-**/
 
 
 /*****************************************************************
@@ -186,6 +156,10 @@ code {
     color: white !important;
 }
 
+.black {
+    color: black;
+}
+
 
 .link {
     color: $color-link !important;
@@ -227,14 +201,13 @@ input[type=checkbox] {
     width: 10em;
 }
 
-.itemtitle, 
-.listingtitle {
-    font-family: 'Roboto', sans-serif !important;
-}
-
-
 #mroffer {
     height: 2em;
+}
+
+.mrImg {
+    display: inline-block;
+    float: left;
 }
 
 #target {
@@ -299,6 +272,7 @@ input[type=checkbox] {
 
 .mrbutton {
     text-align: center;
+    padding-top: 2em;
 }
 
 .mrapi {
@@ -1770,6 +1744,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     cursor: pointer;
 }
 
+i:hover {
+    color: black !important;
+}
+
 .navfa {
     padding: 4px 6px !important;
 }
@@ -2380,7 +2358,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .headerPostOptions li ul li {
-    font-family: 'Lato', sans-serif;
+    font-family: $font_stack-header;
 }
 
 .headerPostOptions li a i {
@@ -2500,14 +2478,19 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .managerNavTabs li a {
     font-size: 1.1rem;
     padding: 14px 16px;
-    border: 1px solid #f8504b;
-    color: #fff !important;
-    background-color: #f8504b;
+    border: 1px solid $color-spacered;
+    color: $color-spacered;
+    background-color: white;
 }
 
 .managerNavTabs li a:hover {
     color: #fff !important;
     background-color: #f73c37;
+}
+
+.navTabSelected {
+    color: #fff !important;
+    background-color: $color-spacered !important;
 }
 
 .profileManagerOffer {
@@ -2904,7 +2887,6 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemTitle {
     font-size: 2.5em;
-    font-family: 'Droid Sans';
 }
 
 .listingItemOptions ul li a {
