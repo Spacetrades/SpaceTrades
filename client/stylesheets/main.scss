@@ -11,6 +11,7 @@
 // Theme
  $color-spacered:    #f8504b;
  $color-spaceblue:   #00bfff;
+ $color-spacegreen:  #75D855;
  $color-spacegrey:   #404040;
 
 // Colors
@@ -35,9 +36,17 @@
 
 /****** FONT STACKS ******/
  $font_stack-header:        'Droid Sans', sans-serif;
+
+// Primary button font
  $font_stack-secondary:         'Roboto', sans-serif;
+
+// Alfred, Stumble handling
  $font_stack-alfred:       'Baskerville', sans-serif;
+
+// Money 
  $font_stack-text:                'Abel', sans-serif;
+
+// Text
  $font_stack-norm:      'Helvetica Neue', sans-serif;
 
 /****** FONT SIZES ******/
@@ -1277,6 +1286,22 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .ph-btn-cardinal:focus, 
 .ph-btn-cardinal:active {
     background: none repeat scroll 0 0 #B51933 !important;
+    border-color: #B51933 !important; 
+    color: white !important;   
+}
+
+
+.ph-btn-blue {
+    background-color: $color-spaceblue !important;
+    border-color: #00bfff !important;
+    color: white !important;
+    font-family: inherit !important;
+}
+
+.ph-btn-blue:hover, 
+.ph-btn-blue:focus, 
+.ph-btn-blue:active {
+    background: none repeat scroll 0 0 #FF274B  !important;
     border-color: #B51933 !important; 
     color: white !important;   
 }
@@ -2529,8 +2554,33 @@ i:hover {
     display: inline-block;
 }
 
+.managerListingLi {
+    border: 3px solid $color-spaceblue;
+    border-radius: 5px;
+    margin: 20px 5px;
+    padding: 0px 10px 10px 10px;
+    width: 28.9%;
+}
+
+.managerListingLi:hover {
+    border-color: #f8504b;
+}
+
+.managerListingLi p {
+    text-align: right;
+    margin: 0 0 5px 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: top !important;
+}
+
+.managerListingLi ul {
+    display: inline-block !important;
+}
+
+
 .managerOfferLi {
-    border: 3px solid #00bfff;
+    border: 3px solid $color-spacegreen;
     border-radius: 5px;
     margin: 20px 5px;
     padding: 0px 10px 10px 10px;
@@ -2579,7 +2629,7 @@ i:hover {
 
 .managerOfferDetails li a h4 {
     margin: 0;
-    color: #00bfff;
+    color: $color-spaceblue;
     overflow: hidden;
 }
 
@@ -2640,7 +2690,7 @@ i:hover {
 }
 
 .homeCardLi {
-    border: 3px solid #00bfff;
+    border: 3px solid $color-spaceblue;
     border-radius: 5px;
     margin: 20px 10px;
     padding: 0px 10px 10px 10px;
@@ -2657,7 +2707,7 @@ i:hover {
 }
 
 .homeCardItem li a h4 {
-    color: #00bfff;
+    color: $color-spaceblue;
     margin: 0;
     overflow: hidden;
     text-align: center;
@@ -2741,7 +2791,7 @@ i:hover {
 .slider label {
     /*Lets add some spacing for the thumbnails*/
     margin: 18px 0 0 18px;
-    border: 3px solid #00bfff;
+    border: 3px solid $color-spaceblue;
     border-radius: 5px;
     float: left;
     cursor: pointer;
@@ -2763,7 +2813,7 @@ i:hover {
 
 /*Time to add the click effects*/
 .slider input[name='slide_switch']:checked+label {
-    border-color: #00bfff;
+    border-color: $color-spaceblue;
     opacity: 1;
 }
 /*Clicking any thumbnail now should change its opacity(style)*/
@@ -2834,6 +2884,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemButtons {
     float: right;
+    font-family: 'Roboto';
 }
 
 .listingItemButtons li {
@@ -2868,9 +2919,9 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemDetails h4, .listingItemDesc h4 {
     font-size: 1.6rem;
     margin: 0;
-    border-bottom: 1px solid #00bfff;
+    border-bottom: 1px solid $color-spaceblue;
     padding-bottom: 5px;
-    color: #00bfff;
+    color: $color-spaceblue;
 }
 
 .listingItemDetailItems {
@@ -2931,6 +2982,10 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemOptions ul li a i {
     margin-left: 5px;
     color: #fff;
+}
+
+.listingItemOptionsDropDown {
+    font-family: $font_stack-secondary;
 }
 
 .listingItemUserInfo {
