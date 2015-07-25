@@ -9,8 +9,11 @@ if (Meteor.isServer) {
 // });
 
 
-// console.log("1" + Meteor.users.find({ _id: 'A8K9spjn6dmEKGePs' }).fetch()[0].profile.name);
-// console.log("2" + Meteor.users.find({ _id: 'K5JsyhN7dP8ZaCwXv' }).fetch()[0].profile.name);
+Meta = {                                                                          
+  options: {                                                                      
+    title: "SpaceTrades"                                                                                                        // 4
+  }
+};
 
 
 // New users receive a verification email
@@ -254,6 +257,7 @@ userStatus: function () {
     return Offer.find({}, { limit: 100 });
   });
 
+
   // Meteor.publish('offerNum', function () {
   //   return Offer.find({ listingId: id }).count();
   // });
@@ -262,16 +266,20 @@ userStatus: function () {
     return Meteor.users.find({}, { limit: 100 });
   });
 
-  Meteor.publish('listingUser', function () {
-    return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
-  });
+  // Meteor.publish('listingUser', function () {
+  //   return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
+  // });
 
   Meteor.publish('messageShow', function () {
     return Message.find({}, { sort: { timestamp: -1 }, limit: 20 });
-  })
+  });
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });
+  });
+
+    Meteor.publish('offerId', function (id) {
+    return Offer.find({ _id: id});
   });
 
   Meteor.publish('userIdprof', function (id) {

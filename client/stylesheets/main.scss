@@ -142,10 +142,6 @@ code {
     padding-right: 25%;
 }
 
-.oneDiv {
-    font-family: $font_stack-norm !important;
-}
-
 .pika-button:hover {
     background-color: $color-spacered !important;
 }
@@ -1490,7 +1486,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     *******************/
 
     .oneDiv {
-        margin: 3rem 10% 2rem 10% !important;
+        margin: 3rem 5% 2rem 5% !important;
+        font-family: $font_stack-norm !important;
     }
 
     /****** END *******/
@@ -3190,16 +3187,16 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 15px !important;
     font-size: 1.2rem;
     padding: 15px 22px;
-    color: #fff !important;
-    background-color: #f8504b;
-    border: 1px solid #f8504b;
+    color: $color-spacered;
+    border: 1px solid $color-spacered;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
     border-radius: 6px;
     overflow: hidden;
 }
 
 .profileUserMore li a:hover {
-    background-color: #f73c37;
+    color: $color-spaceblue;
+    border-color: $color-spaceblue;
 }
 
 .headerSearchLogo {

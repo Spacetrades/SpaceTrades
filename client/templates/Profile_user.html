@@ -2,7 +2,7 @@
         <div class="profileUser oneDiv">
             <div class="profileUserLeft">
                 <div class="profileUserImage">
-                    <img src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11046819_726055314180186_3792506880073062985_n.jpg?oh=4c9c7f43e36089d76c634b8eca1b02ef&oe=5655F90D" class="profileUserImg">
+                    <img src="{{profimg}}" class="profileUserImg">
                 </div>
                 <div class="profileUserGraph">
                     <canvas></canvas>
@@ -15,7 +15,7 @@
                 <div class="profileUserRating">
                     <ul class="profileUserRatingUl">
                         <li>☆☆☆☆☆<span>(28 Reviews)</span></li>
-                        <li><i class="fa fa-info-circle"></i></li>
+                        <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Account created at"></i></li>
                     </ul>
                 </div>
                 <div class="profileUserInfo">
@@ -47,48 +47,19 @@
             </div>
         </div>
         <div class="profileUserCards oneDiv">
-            <h2>{{name}}'s Items For Sale</h2>
+            <h2>Items For Sale</h2>
             <ul class="profileUserCardsUl">
+            {{#each listing}}
             <!-- 8 CARDS ONLY -->
                 <li>
                     <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
                 </li>
-               <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
+            {{/each}}
             </ul>
             <ul class="profileUserMore">
                 <li>
-                    <a href="#">Find More</a>
+                    <a href="#">Load More</a>
                 </li>
             </ul>
         </div>
-
-
-
-
-
-
-
-
-
-
 	</template>

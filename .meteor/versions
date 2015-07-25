@@ -27,6 +27,7 @@ deps@1.0.7
 edgee:slingshot@0.7.1
 ejson@1.0.6
 email@1.0.6
+ericksond:clndr@0.0.1
 facebook@1.2.0
 fastclick@1.0.3
 fortawesome:fontawesome@4.3.0
