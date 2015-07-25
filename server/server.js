@@ -219,14 +219,6 @@ sendMessage: function (options) {
     message: options.message,
     username: options.username,
     timestamp: Date.now()
-  }, function (err, id) {
-    if (err) {
-      console.log("Something Went Wrong");
-    }
-     if (id) {
-        $('#newMessage').val('');
-        $('#username').val('');
-      }
   });
 },
 userStatus: function () {
