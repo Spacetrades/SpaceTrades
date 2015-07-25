@@ -2,8 +2,8 @@
 <!-- TASK - underline list title should be yielded on hover like listing card -->
 <div class="oneDiv">
     <ul class="nav nav-tabs managerNavTabs">
-        <li><a href="#menu1">Your Offers</a></li>
-        <li><a href="#menu2">Your Listings</a></li>
+        <li><a href="#menu1" class="navTab">Your Offers</a></li>
+        <li><a href="#menu2" class="navTab">Your Listings</a></li>
     </ul>
 
     <div class="tab-content profileManagerDivs">
@@ -20,7 +20,7 @@
             <div class="profileManagerOffer">
                 <ul class="profileManagerUl">
                     {{#each listing}}
-                    {{> card}}
+                    {{> ManagerCardListing}}
                     {{/each}}
                 </ul>
             </div>

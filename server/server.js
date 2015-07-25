@@ -202,10 +202,10 @@ Meteor.methods({
     img3: options.img3
   });
 },
-
 addOffer: function (options) {
   Offer.insert({
     listing_title: options.listing_title,
+    img: options.img,
     offerprice: options.offerprice,
     date: options.date,
     location: options.location,
@@ -214,7 +214,13 @@ addOffer: function (options) {
     status: options.status
   });
 },
-
+sendMessage: function (options) {
+  Message.insert({
+    message: options.message,
+    username: options.username,
+    timestamp: Date.now()
+  });
+},
 userStatus: function () {
   return Meteor.user().status;
 },
@@ -259,6 +265,10 @@ userStatus: function () {
   Meteor.publish('listingUser', function () {
     return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
   });
+
+  Meteor.publish('messageShow', function () {
+    return Message.find({}, { sort: { timestamp: -1 }, limit: 20 });
+  })
 
   Meteor.publish('listingId', function (id) { 
     return Listing.find({ _id: id });

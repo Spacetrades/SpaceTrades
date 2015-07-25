@@ -41,6 +41,7 @@ https://trello.com/b/IETMH34k/meteor-development
 1. If it works, don't fix it
 2. Remain consistent (Keep order in chaos)
 3. Nothing more, Nothing less
+4. Better to undersalt then oversalt on design
 
 ## Commit Messages Language ( CML )
 ```
@@ -77,8 +78,18 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Implement Hubot in some way
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
-	jQuery - $( ".cardul" ).hide() NOT $(".cardul")
+	jQuery - $( ".cardul" ).hide() NOT $(".cardul") AKA Parenthesis Padding *PP*
 	SCSS - ALLOW double letter bonding Ex: .prohibiteddiv and NOT .prohibitediv
+	JS - Conditional blocks receive 1ln padding on top and bottom
+	JS - Comments receive 1ln padding on top
+	JS - If else blocks evade previous rule
+	JS - Line breaks must always be purposeful
+	JS - LR 1char spacing for mathematical characters
+	JS - Single Line, Block, Inline Comments
+	JS - Block uses Dividers with Open: * x 4 : //C// and //-C//
+	JS - Objects get there own TB 1ln padding
+	JS - Significantly different code sections receive BL 1ln padding
+	JS - Console.log's get grouped if possible into sections using //L// and //-L//
 ## Stylesheets
 [:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
 Include other language style guides JS, SCSS for reference
