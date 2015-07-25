@@ -9,8 +9,11 @@ if (Meteor.isServer) {
 // });
 
 
-// console.log("1" + Meteor.users.find({ _id: 'A8K9spjn6dmEKGePs' }).fetch()[0].profile.name);
-// console.log("2" + Meteor.users.find({ _id: 'K5JsyhN7dP8ZaCwXv' }).fetch()[0].profile.name);
+Meta = {                                                                          
+  options: {                                                                      
+    title: "SpaceTrades"                                                                                                        // 4
+  }
+};
 
 
 // New users receive a verification email
