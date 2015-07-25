@@ -1,56 +1,94 @@
 <template name="UserProfile">
-	<div class="profilediv div">
-		<div class="profilecontent">
-			<div class="profileleft">
-				<div class="propic">
-					<img class="profilepic" src="{{profimg}}">
-				</div>
-				<div class="profreq">
-					<!-- Frequency Graph Goes Here -->
-				</div>
-			</div>
-			<div class="btn-group options-dropdown">
-				<a class="btn btn-primary orange">Options</a>
-				<a class="btn btn-primary dropdown-toggle orange" data-toggle="dropdown" href="#">
-					<span class="fa fa-caret-down"></span></a>
-					<ul class="dropdown-menu">
-						{{#if KnightedUser}}
-						<li class="listingOptionsEdit"><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
-						{{else}}
-						<li class="listingOptionsReport"><a href="/report/profile"><i class="fa fa fa-gavel fa-fw"></i> Report</a></li>
-						{{/if}}
-					</ul>
-				</div>
-				<div class="profileright">
-					<div class="proname">
-						<h1>{{name}}</h1>
-						<ul>
-							<div class="rating">
-								<div class="star-custom"></div>
-							</div>
-						</ul>
-						<div class="procontact">
-							<a href='{{messenger}}' target="_blank" class='ph-button ph-btn-red'>Contact</a>
-						</div>	
-					</div>
-					<div class="profileloc">
-						<h2>Location</h2>
-						<ul>
-							<li>Brooklyn, NY</li>
-						</ul>
-					</div>
-					<div class="promssg">
-						<h2> Description </h2>
-						<p>I like z coding and z Chess </p>
-					</div>
-				</div>
-			</div>
-			<div class="carddiv div">
-				<ul class="cardul">
-					{{#each listing}}
-					{{> card}}
-					{{/each}}
-				</ul>
-			</div>
-		</div>
+        <div class="profileUser oneDiv">
+            <div class="profileUserLeft">
+                <div class="profileUserImage">
+                    <img src="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11046819_726055314180186_3792506880073062985_n.jpg?oh=4c9c7f43e36089d76c634b8eca1b02ef&oe=5655F90D" class="profileUserImg">
+                </div>
+                <div class="profileUserGraph">
+                    <canvas></canvas>
+                </div>
+            </div>
+            <div class="profileUserRight">
+                <div class="profileUserName">
+                    <h1>{{name}}</h1>
+                </div>
+                <div class="profileUserRating">
+                    <ul class="profileUserRatingUl">
+                        <li>☆☆☆☆☆<span>(28 Reviews)</span></li>
+                        <li><i class="fa fa-info-circle"></i></li>
+                    </ul>
+                </div>
+                <div class="profileUserInfo">
+                    <ul class="profileUserArea">
+                        <li>Brooklyn, <b>NY</b></li>
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                    </ul>
+                    <ul class="profileUserAge">
+                        <li>19</li>
+                    </ul>
+                </div>
+                <div class="profileUserDesc">
+                    <h4>Description</h4>
+                    <p>Hey check out my items if you want the newest shoes for the lowest prices.</p>
+                </div>
+                <div class="profileUserFeedback">
+                    <ul class="profileUserFeedbackUl">
+                        <h4>Feedback</h4>
+                        <li><p>"Great Buyer" - Yusuf</p></li>
+                        <li><p>"Legit Guy" - Steve</p></li>
+                    </ul>
+                </div>
+                <div class="profileUserButtons">
+                    <ul class="profileUserButtonUl">
+                        <li><a href="{{messenger}}">Contact</a></li>
+                        <li class="profileUserOptions"><a href="#">Options<i class="fa fa-caret-down"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="profileUserCards oneDiv">
+            <h2>{{name}}'s Items For Sale</h2>
+            <ul class="profileUserCardsUl">
+            <!-- 8 CARDS ONLY -->
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+               <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+                <li>
+                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+                </li>
+            </ul>
+            <ul class="profileUserMore">
+                <li>
+                    <a href="#">Find More</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
 	</template>

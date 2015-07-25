@@ -3018,3 +3018,188 @@ On click the images will be displayed at normal size to complete the effect
     vertical-align: middle;
     margin-left: 4px;
 }
+
+.sp-picker-container {
+    display: none;
+}
+
+
+.profileUser {
+    border-bottom: 1px solid #00bfff;
+    padding-bottom: 2rem;
+}
+
+.profileUser > div {
+    display: inline-block;
+}
+
+.profileUserLeft {
+    width: 35%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.profileUserRight {
+    width: 55%;
+    vertical-align: top;
+    margin-top: 1.2rem;
+    font-size: 1.1rem !important;
+}
+
+.profileUserImage img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+/* Graph */
+
+.profileUserGraph {
+    margin-top: 2rem;
+}
+
+.profileUserGraph canvas {
+    width: 80%;
+    height: 170px;
+    background-color: #e8e8e8;
+}
+
+/* Graph end */
+
+.profileUserName h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.profileUserRating ul {
+    margin: 5px 0 0 0;
+}
+
+.profileUserRating ul li {
+    display: inline-block;
+}
+
+.profileUserRating ul li span {
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.profileUserRating ul li i {
+    margin-left: 15px;
+    font-size: 0.9rem;
+}
+
+.profileUserInfo ul {
+    margin: 10px 0 0 0 ;
+    vertical-align: middle;
+}
+
+.profileUserInfo > ul li {
+    display: inline-block;
+}
+
+.profileUserInfo ul li a {
+    padding: 2px 5px;
+    margin-left: 30px;
+    font-size: 1.6rem;
+}
+
+.profileUserInfo ul li a i {
+    color: #3b5998 !important;
+}
+
+.profileUserDesc p {
+    width: 75%;
+}
+
+.profileUserFeedback h4, .profileUserDesc h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.profileUserDesc h4 {
+    margin-top: 10px;
+}
+
+
+.profileUserFeedback ul li p, .profileUserDesc p {
+    margin: 0;
+}
+
+.profileUserButtons ul li {
+    display: inline-block;
+    margin: 40px 0;
+}
+
+.profileUserButtons ul li a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.profileUserButtons ul li a:hover {
+    background-color: #f73c37;
+}
+
+.profileUserOptions a {
+    margin: auto 10px;
+    background-color: orange !important;
+    border: 1px solid orange !important;
+}
+
+.profileUserOptions a i {
+    margin: 0px 0 0 10px;
+    vertical-align: middle;
+    color: #fff !important;
+}
+
+.profileUserCards {
+    text-align: center;
+}
+
+.profileUserCards h2 {
+    text-decoration: underline;
+}
+
+.profileUserCardsUl li {
+    width: 20%;
+    height: 220px;
+    display: inline-block;
+    margin: 0.6%;
+    border: 3px solid #00bfff;
+}
+
+.profileUserCardsUl li a {
+    padding: 0;
+}
+
+.profileUserCardsUl li img {
+    width: 100%;
+    height: 100%;
+}
+
+.profileUserMore {
+    margin: 2rem 0 4rem 0;
+}
+
+.profileUserMore li a {
+    margin-top: 15px !important;
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.profileUserMore li a:hover {
+    background-color: #f73c37;
+}
+
+
