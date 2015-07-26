@@ -1,3 +1,4 @@
+[!(Build Status)][https://travis-ci.org/Spacetrades/SpaceTrades.svg]
 # SpaceTrades
 ## Buying and Selling Locally Through Meetups
 
