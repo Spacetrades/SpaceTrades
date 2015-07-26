@@ -1,9 +1,9 @@
 language: node_js
 node_js:
   - "0.12"
-  - "0.11"
-  - "0.10"
-  - "0.8"
-  - "0.6"
-  - "iojs"
-  - "iojs-v1.0.4"
+before_install:
+  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-laika/master/configure.sh | /bin/sh"
+services:
+  - mongodb
+env:
+  - LAIKA_OPTIONS="-t 5000"
