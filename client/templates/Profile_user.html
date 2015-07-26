@@ -5,12 +5,18 @@
                     <img src="{{profimg}}" class="profileUserImg">
                 </div>
                 <div class="profileUserGraph">
+                <label for="myChart"> <b>Meetup Graph</b>
+                <br />
+                <span class="profileMonth"> {{month}} </span>
+                <br />
                     <canvas id="myChart"></canvas>
+                 </label>
                 </div>
             </div>
             <div class="profileUserRight">
                 <div class="profileUserName">
                     <h1>{{name}}</h1>
+                    {{online.text}}<div class="circle" style="background-color: {{online.color}}"></div>
                 </div>
                 <div class="profileUserRating">
                     <ul class="profileUserRatingUl">
@@ -23,19 +29,16 @@
                         <li>Brooklyn, <b>NY</b></li>
                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                     </ul>
-                    <ul class="profileUserAge">
-                        <li>19</li>
-                    </ul>
                 </div>
-                <div class="profileUserDesc">
-                    <h4>Description</h4>
+                <div class="desc-box">
+                    <h4 class="box-title">Description</h4>
                     <p>Hey check out my items if you want the newest shoes for the lowest prices.</p>
                 </div>
-                <div class="profileUserFeedback">
+                <div class="profileUserFeedback desc-box">
                     <ul class="profileUserFeedbackUl">
-                        <h4>Feedback</h4>
-                        <li><p>"Great Buyer" - Yusuf</p></li>
-                        <li><p>"Legit Guy" - Steve</p></li>
+                        <h4 class="box-title">Feedback</h4>
+                        <li>"Great Buyer" - Yusuf</li>
+                        <li>"Legit Guy" - Steve</li>
                     </ul>
                 </div>
                 <div class="profileUserButtons">
