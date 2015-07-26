@@ -15,6 +15,9 @@ Meta = {
   }
 };
 
+console.log( "1" + Meteor.users.find( { _id: 'Fz2NCBFGhhGPsXiXt' } ).fetch()[0].status.online);
+console.log("2" + Meteor.users.find( { _id: 'Fz2NCBFGhhGPsXiXt' } ).fetch());
+
 
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
