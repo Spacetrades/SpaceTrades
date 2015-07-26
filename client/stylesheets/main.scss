@@ -68,26 +68,28 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     background-color: #F8504B;
     font-family: inherit;
     color: #FFFFFF;
-    border-left: 5px solid #00bfff;
+    border-left: 5px solid $color-spacered;
     border-top-left-radius: 4px;
     padding-left: 4px;
     margin: 0 !important;
     font-size: 1.3rem;
 }
 
-.profileUserDesc:before {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    content: "";
-    width: 2px;
-    background-color: aqua;
-}
-
 .circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    position: relative;
+}
+
+.inner-circle {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 32%;
+    left: 35%;
+    border-radius: 50%;
+    display: block;
 }
 
 .fa-plus-circle {

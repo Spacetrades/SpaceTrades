@@ -5,7 +5,7 @@
                     <img src="{{profimg}}" class="profileUserImg">
                 </div>
                 <div class="profileUserGraph">
-                <label for="myChart"> <b>Meetup Graph</b>
+                <label for="myChart"><b>Meetup Graph</b>
                 <br />
                 <span class="profileMonth"> {{month}} </span>
                 <br />
@@ -16,7 +16,10 @@
             <div class="profileUserRight">
                 <div class="profileUserName">
                     <h1>{{name}}</h1>
-                    {{online.text}}<div class="circle" style="background-color: {{online.color}}"></div>
+                    {{online.text}}
+                    <div class="circle" style="background-color: {{online.color}}">
+                    <div class="inner-circle" style="background-color: {{online.innercolor}}"></div>    
+                    </div>
                 </div>
                 <div class="profileUserRating">
                     <ul class="profileUserRatingUl">
