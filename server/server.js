@@ -9,13 +9,6 @@ if (Meteor.isServer) {
 // });
 
 
-Meta = {                                                                          
-  options: {                                                                      
-    title: "SpaceTrades"                                                                                                        // 4
-  }
-};
-
-
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
 
