@@ -1,8 +1,10 @@
 <template name="itemOffer">
 {{#each listingOffers}}
-<h2>{{status}}</h2>
+<h2 class="offerItemStatus">{{status}}</h2>
 <p>{{date}}</p>
-<div id='clndr'></div>
+<!-- <div class="calendar"></div> -->
+<!-- {{> fullcalendar options}} -->
+{{> googleMap name="itemoffermap" options=ItemOfferOptions}}
 <p>{{location}}</p>
 <p>{{price}}</p>
 {{/each}}

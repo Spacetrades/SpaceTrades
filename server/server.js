@@ -206,6 +206,8 @@ addOffer: function (options) {
     date: options.date,
     location: options.location,
     listingId: options.listingId,
+    lat: options.lat,
+    lng: options.lng,
     creator_id: options.creator_id,
     status: options.status
   });

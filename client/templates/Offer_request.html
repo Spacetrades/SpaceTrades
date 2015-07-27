@@ -1,19 +1,19 @@
 <template name="meetuprequest">
     <div class="offerRequestDiv oneDiv">
-        <h2 class="offerRequestLogo">Send Offer</h2>
+        <h2 class="featurePageTitle">Send Offer</h2>
         <div class="offerRequestLeft">
             <div class="offerRequestImage">
-                <img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/haZXaoHQJazpWhFTR/p_4338506_15971221_825366.jpg" class="offerRequestImg">
+                <img src="{{img1}}" class="offerRequestImg">
             </div>
         </div>
         <div class="offerRequestRight">
             <div class="offerRequestName">
-                <h1>Nike Air Max Retro</h1>
-                <p>Sold By: <a href="#">Nathan Chackerian</a></p>
+                <h1 class="offerRequestListing">{{listing_title}}</h1>
+                <p>Sold By: <a href="#" class="profile-link">{{username}}</a></p>
             </div>
             <div class="offerRequestPrice">
                 <ul class="offerRequestPriceUl">
-                    <li class="offerRequestOriginalPrice">Price: <span class="money">$350</span></li>
+                    <li class="offerRequestOriginalPrice">Price: <span class="money">$<span class="offerRequestPriceOriginal">{{price}}</span></span></li>
                     <li class="offerRequestOfferPrice">Offer:<input type="text" class="listprice" id="mroffer" placeholder="$000"></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
                 <ul>
                     <li>
                         <h4>Location</h4>
-                        <input id="pac-input" class="controls" type="text" placeholder="Where do you want to meet Nathan Chackerian">
+                        <input id="pac-input" class="controls" type="text" placeholder="Where do you want to meet?">
                     </li>
                     <li class="offerRequestButton">
                         <input type="button" value="Send" class="offerRequestBtn">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="offerRequestMaps oneDiv"> <!-- Seperate Div Than offerRequestDiv -->
+    <div class="offerRequestMaps oneDiv"> 
         <div class="offerRequestMapsApi">
 			{{> googleMap name="offerImage" options=offerMapOptions }}
 		</div>
@@ -44,11 +44,3 @@
 	<div class="hidden">{{_id}}</div>
 	<div class="sucess"></div>
 </template>
-
-<!-- review is when the buyer reviews the MR before sending it -->
-<!-- offer is when the seller gets the meetup request -->
-<!-- overview is the overview of the MR after it has been accepted by Seller, sort of like a receipt -->
-
-<!-- This is Review -->
-<!-- offer has the buttons accept and decline and the name of the person who sent it and the title is meetup request offer-->
-<!-- Overview has no buttons and says Meetup Overview -->
