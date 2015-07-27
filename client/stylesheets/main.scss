@@ -3283,3 +3283,123 @@ On click the images will be displayed at normal size to complete the effect
     vertical-align: middle !important;
     margin-top: 16px !important;
 }
+
+
+.offerRequestDiv {
+    margin-bottom: 10px !important;
+}
+
+.offerRequestDiv > div {
+    display: inline-block;
+}
+
+.offerRequestRight {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.offerRequestLeft {
+    width: 40%;
+    vertical-align: top;
+}
+
+.offerRequestImg {
+    width: 100%;
+}
+
+.offerRequestName h1 {
+    margin: 0;
+}
+
+.offerRequestName p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #6c54b3;
+}
+
+.offerRequestName p a {
+    color: #6c54b3 !important;
+}
+
+.offerRequestName p a:hover {
+    text-decoration: underline !important;
+}
+
+.offerRequestPrice ul {
+    margin: 10px 0;
+}
+
+.offerRequestPrice ul li {
+    display: inline-block;
+}
+
+.offerRequestOriginalPrice {
+    margin: 0;
+    padding: 5px 20px 5px 0;
+    border-right: 1px solid #404040;
+}
+
+.offerRequestPrice ul li input {
+    width: 35px;
+    margin-left: 5px;
+}
+
+.offerRequestOfferPrice {
+    margin-left: 5%;
+}
+
+.offerRequestDate ul {
+    margin: 10px 0 0 0;
+}
+
+.offerRequestDate ul li h4 {
+    margin: 0 0 5px 0;
+}
+
+.offerRequestLocation ul {
+    margin: 10px 0 0 0;
+}
+
+.offerRequestLocation h4 {
+    margin: 0;
+}
+
+.offerRequestLocation ul li {
+    display: inline-block !important;
+}
+
+.offerRequestLocation input {
+    margin: 10px 0 0 0 !important;
+}
+
+.offerRequestButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerRequestButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerRequestButton input:hover {
+    background-color: #f73c37;
+}
+
+.offerRequestMaps {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.offerRequestMapsApi {
+    width: 100%;
+    height: 250px !important;
+}
