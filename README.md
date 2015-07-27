@@ -109,3 +109,5 @@ Include other language style guides JS, SCSS for reference
 - [ ] Setup Jquery Autcomplete to 
 - [ ] Switch out sAlert for sweet alerts
 - [ ] Fix redirection on Addlisting submit and offer submit. Offer - Offer page. Addlisting - listing page
+- [ ] http://fullcalendar.io/
+- [ ] Utilize mobile url ASAP in FB
