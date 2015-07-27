@@ -76,13 +76,15 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    position: relative;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: 4px;
 }
 
-.inner-circle {
+/* .inner-circle {
     width: 6px;
     height: 6px;
     position: absolute;
@@ -90,7 +92,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     left: 35%;
     border-radius: 50%;
     display: block;
-}
+} */
 
 .fa-plus-circle {
     color: $color-spacered !important;
@@ -409,13 +411,6 @@ textarea {
     resize: none;
     width: 37%;
     height: 5em;
-}
-
-.listprice {
-    text-align: center;
-    color: $color-money;
-    font-weight: bold;
-    width: 15%;
 }
 
 .add {
@@ -1514,7 +1509,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     *******************/
 
     .oneDiv {
-        margin: 3rem 5% 2rem 5% !important;
+        margin: 3rem 10% 2rem 10% !important;
         font-family: $font_stack-norm !important;
     }
 
@@ -3098,6 +3093,15 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0;
 }
 
+.profileUserName ul {
+    margin: 0;
+}
+
+.profileUserName ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .profileUserRating ul {
     margin: 5px 0 0 0;
 }
@@ -3136,31 +3140,41 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box {
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid #F8504B;
     width: 75%; 
     border-bottom-left-radius: 4px;
     margin-top: 1em; 
 }
 
+.box-title {
+    padding: 5px 0;
+    font-size: 1.1rem;
+}
+
 .desc-box p {
     width: 75%;
-    padding-left: 3px;
-    border-left: 5px solid #698F9C;
-    border-bottom-left-radius: 3px;
+    padding: 10px;
     margin: 0;
 }
 
 .desc-box ul li {
     width: 75%;
-    padding-left: 3px;
-    border-left: 5px solid #698F9C;
-   font-size: 1.2rem;
+    padding: 10px;
+    font-size: 1rem !important
+}
+
+.desc-box ul li:first-child {
+    padding-bottom: 1px !important;
 }
 
 .desc-box ul li:last-child {
-    border-bottom-left-radius: 3px;
+    padding-top: 1px !important;
 }
+
+/* .desc-box ul li:last-child {
+    border-bottom-left-radius: 3px;
+} */
 
 
 // .profileUserDesc {
@@ -3265,4 +3279,127 @@ On click the images will be displayed at normal size to complete the effect
     border-color: $color-spaceblue;
 }
 
+.headerSearchLogo {
+    vertical-align: middle !important;
+    margin-top: 16px !important;
+}
 
+
+.offerRequestDiv {
+    margin-bottom: 10px !important;
+}
+
+.offerRequestDiv > div {
+    display: inline-block;
+}
+
+.offerRequestRight {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.offerRequestLeft {
+    width: 40%;
+    vertical-align: top;
+}
+
+.offerRequestImg {
+    width: 100%;
+}
+
+.offerRequestName h1 {
+    margin: 0;
+}
+
+.offerRequestName p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #6c54b3;
+}
+
+.offerRequestName p a {
+    color: #6c54b3 !important;
+}
+
+.offerRequestName p a:hover {
+    text-decoration: underline !important;
+}
+
+.offerRequestPrice ul {
+    margin: 10px 0;
+}
+
+.offerRequestPrice ul li {
+    display: inline-block;
+}
+
+.offerRequestOriginalPrice {
+    margin: 0;
+    padding: 5px 20px 5px 0;
+    border-right: 1px solid #404040;
+}
+
+.offerRequestPrice ul li input {
+    width: 50px;
+    margin-left: 5px;
+}
+
+.offerRequestOfferPrice {
+    margin-left: 5%;
+}
+
+.offerRequestDate ul {
+    margin: 10px 0 0 0;
+}
+
+.offerRequestDate ul li h4 {
+    margin: 0 0 5px 0;
+}
+
+.offerRequestLocation ul {
+    margin: 10px 0 0 0;
+}
+
+.offerRequestLocation h4 {
+    margin: 0;
+}
+
+.offerRequestLocation ul li {
+    display: inline-block !important;
+}
+
+.offerRequestLocation input {
+    margin: 10px 0 0 0 !important;
+}
+
+.offerRequestButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerRequestButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerRequestButton input:hover {
+    background-color: #f73c37;
+}
+
+.offerRequestMaps {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.offerRequestMapsApi {
+    width: 100%;
+    height: 250px !important;
+}
