@@ -1,52 +1,48 @@
 <template name="meetuprequest">
-<div class="mrdiv div">
-	<h2>Offer</h2>
-
-        <div class="offerRequestDiv oneDiv">
-            <h2 class="offerRequestLogo">Send Offer</h2>
-            <div class="offerRequestLeft">
-                <div class="offerRequestImage">
-                    <img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/haZXaoHQJazpWhFTR/p_4338506_15971221_825366.jpg" class="offerRequestImg">
-                </div>
-            </div>
-            <div class="offerRequestRight">
-                <div class="offerRequestName">
-                    <h1>Nike Air Max Retro</h1>
-                    <p>Sold By: <a href="#">Nathan Chackerian</a></p>
-                </div>
-                <div class="offerRequestPrice">
-                    <ul class="offerRequestPriceUl">
-                        <li class="offerRequestOriginalPrice">Price: <span class="money">$350</span></li>
-                        <li class="offerRequestOfferPrice">Offer:<input type="text" class="listprice" id="mroffer" placeholder="$000"></li>
-                    </ul>
-                </div>
-                <div class="offerRequestDate">
-                    <ul>
-                        <li><h4>Date Of Meetup</h4></li>
-                        <li><input type="text" id="datepicker"></li>
-                    </ul>
-                </div>
-                <div class="offerRequestLocation">
-                    <ul>
-                        <li>
-                            <h4>Location</h4>
-                            <input id="pac-input" class="controls" type="text" placeholder="Where do you want to meet Nathan Chackerian">
-                        </li>
-                        <li class="offerRequestButton">
-                            <input type="button" value="Send" class="offerRequestBtn">
-                        </li>
-                    </ul>
-                </div>
+    <div class="offerRequestDiv oneDiv">
+        <h2 class="offerRequestLogo">Send Offer</h2>
+        <div class="offerRequestLeft">
+            <div class="offerRequestImage">
+                <img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/haZXaoHQJazpWhFTR/p_4338506_15971221_825366.jpg" class="offerRequestImg">
             </div>
         </div>
-        <div class="offerRequestMaps oneDiv"> <!-- Seperate Div Than offerRequestDiv -->
-            <div class="offerRequestMapsApi">
-				{{> googleMap name="offerImage" options=offerMapOptions }}
-			</div>
+        <div class="offerRequestRight">
+            <div class="offerRequestName">
+                <h1>Nike Air Max Retro</h1>
+                <p>Sold By: <a href="#">Nathan Chackerian</a></p>
+            </div>
+            <div class="offerRequestPrice">
+                <ul class="offerRequestPriceUl">
+                    <li class="offerRequestOriginalPrice">Price: <span class="money">$350</span></li>
+                    <li class="offerRequestOfferPrice">Offer:<input type="text" class="listprice" id="mroffer" placeholder="$000"></li>
+                </ul>
+            </div>
+            <div class="offerRequestDate">
+                <ul>
+                    <li><h4>Date Of Meetup</h4></li>
+                    <li><input type="text" id="datepicker"></li>
+                </ul>
+            </div>
+            <div class="offerRequestLocation">
+                <ul>
+                    <li>
+                        <h4>Location</h4>
+                        <input id="pac-input" class="controls" type="text" placeholder="Where do you want to meet Nathan Chackerian">
+                    </li>
+                    <li class="offerRequestButton">
+                        <input type="button" value="Send" class="offerRequestBtn">
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <div class="offerRequestMaps oneDiv"> <!-- Seperate Div Than offerRequestDiv -->
+        <div class="offerRequestMapsApi">
+			{{> googleMap name="offerImage" options=offerMapOptions }}
+		</div>
+    </div>
 	<div class="hidden">{{_id}}</div>
-</div>
-<div class="sucess"></div>
+	<div class="sucess"></div>
 </template>
 
 <!-- review is when the buyer reviews the MR before sending it -->
