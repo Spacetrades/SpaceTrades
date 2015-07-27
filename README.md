@@ -106,3 +106,6 @@ Include other language style guides JS, SCSS for reference
 - [ ] ADD load more images button on home page
 - [ ] SETUP email, with mailchimp or mailgun http://docs.meteor.com/#/full/email
 - [ ] Add Go Premium
+- [ ] Setup Jquery Autcomplete to 
+- [ ] Switch out sAlert for sweet alerts
+- [ ] Fix redirection on Addlisting submit and offer submit. Offer - Offer page. Addlisting - listing page
