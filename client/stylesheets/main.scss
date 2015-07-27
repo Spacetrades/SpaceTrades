@@ -76,13 +76,15 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    position: relative;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: 4px;
 }
 
-.inner-circle {
+/* .inner-circle {
     width: 6px;
     height: 6px;
     position: absolute;
@@ -90,7 +92,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     left: 35%;
     border-radius: 50%;
     display: block;
-}
+} */
 
 .fa-plus-circle {
     color: $color-spacered !important;
@@ -409,13 +411,6 @@ textarea {
     resize: none;
     width: 37%;
     height: 5em;
-}
-
-.listprice {
-    text-align: center;
-    color: $color-money;
-    font-weight: bold;
-    width: 15%;
 }
 
 .add {
@@ -3098,6 +3093,15 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0;
 }
 
+.profileUserName ul {
+    margin: 0;
+}
+
+.profileUserName ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .profileUserRating ul {
     margin: 5px 0 0 0;
 }
@@ -3136,31 +3140,41 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box {
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid #F8504B;
     width: 75%; 
     border-bottom-left-radius: 4px;
     margin-top: 1em; 
 }
 
+.box-title {
+    padding: 5px 0;
+    font-size: 1.1rem;
+}
+
 .desc-box p {
     width: 75%;
-    padding-left: 3px;
-    border-left: 5px solid #698F9C;
-    border-bottom-left-radius: 3px;
+    padding: 10px;
     margin: 0;
 }
 
 .desc-box ul li {
     width: 75%;
-    padding-left: 3px;
-    border-left: 5px solid #698F9C;
-   font-size: 1.2rem;
+    padding: 10px;
+    font-size: 1rem !important
+}
+
+.desc-box ul li:first-child {
+    padding-bottom: 1px !important;
 }
 
 .desc-box ul li:last-child {
-    border-bottom-left-radius: 3px;
+    padding-top: 1px !important;
 }
+
+/* .desc-box ul li:last-child {
+    border-bottom-left-radius: 3px;
+} */
 
 
 // .profileUserDesc {
