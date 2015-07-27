@@ -752,8 +752,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .searchfield {
     text-align: center;
     margin: -20px 0 10px 0;
-    border-bottom: 1px solid red;
-    padding-bottom: 3em;
 }
 
 .icon {
@@ -2707,6 +2705,11 @@ i:hover {
 
 .managerOfferButton ul li a:hover {
     background-color: #f73c37;
+}
+
+.homeCardUl {
+    padding-top: 1rem;
+    border-top: 1px solid #00bfff;
 }
 
 .homeCardUl > li {
