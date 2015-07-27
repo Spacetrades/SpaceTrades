@@ -2,40 +2,48 @@
 <div class="mrdiv div">
 	<h2>Offer</h2>
 
-	<div class="mrImg">
-	<img src="{{img1}}">
-	</div>
-	<div class="mrinfo">
-	<h2 class="itemtitle"><a href="/listing/{{_id}}">{{listing_title}}</a></h2>
-		<div class="mrinfoleft">
-			<div class="mrinfofield">
-				<ul class="formspace">
-					<li>
-						<ul>
-							<li class="money price">${{price}}</li>
-							<li>Offer Price (USD): <input type="text" class="listprice" id="mroffer" placeholder="Offer Price"></li>
-						</ul>
-					</li>
-					<li>
-						<ul>
-							<li class="formpad">Date of the Meetup:<input type="text" id="datepicker"></li>
-							<!-- Values for date are taken from calender -->
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="location"><h2>Location</h2></div>
-		<input id="pac-input" class="controls" type="text" placeholder="Search for a location">
-			<div class="mrapi">
+        <div class="offerRequestDiv oneDiv">
+            <h2 class="offerRequestLogo">Send Offer</h2>
+            <div class="offerRequestLeft">
+                <div class="offerRequestImage">
+                    <img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/haZXaoHQJazpWhFTR/p_4338506_15971221_825366.jpg" class="offerRequestImg">
+                </div>
+            </div>
+            <div class="offerRequestRight">
+                <div class="offerRequestName">
+                    <h1>Nike Air Max Retro</h1>
+                    <p>Sold By: <a href="#">Nathan Chackerian</a></p>
+                </div>
+                <div class="offerRequestPrice">
+                    <ul class="offerRequestPriceUl">
+                        <li class="offerRequestOriginalPrice">Price: <span class="money">$350</span></li>
+                        <li class="offerRequestOfferPrice">Offer:<input type="text" class="listprice" id="mroffer" placeholder="$000"></li>
+                    </ul>
+                </div>
+                <div class="offerRequestDate">
+                    <ul>
+                        <li><h4>Date Of Meetup</h4></li>
+                        <li><input type="text" id="datepicker"></li>
+                    </ul>
+                </div>
+                <div class="offerRequestLocation">
+                    <ul>
+                        <li>
+                            <h4>Location</h4>
+                            <input id="pac-input" class="controls" type="text" placeholder="Where do you want to meet Nathan Chackerian">
+                        </li>
+                        <li class="offerRequestButton">
+                            <input type="button" value="Send" class="offerRequestBtn">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="offerRequestMaps oneDiv"> <!-- Seperate Div Than offerRequestDiv -->
+            <div class="offerRequestMapsApi">
 				{{> googleMap name="offerImage" options=offerMapOptions }}
 			</div>
-	</div>
-	<div class="mrbutton">
-		<input type="submit" value="Send Offer" class="ph-button add">
-	</div>
-
+        </div>
 	<div class="hidden">{{_id}}</div>
 </div>
 <div class="sucess"></div>
