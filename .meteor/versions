@@ -5,6 +5,7 @@ accounts-password@1.1.1
 accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
 afruth:chapp@0.1.6
+ajduke:bootstrap-tagsinput@0.7.0
 alanning:roles@1.2.13
 aldeed:autoform@5.3.2
 aldeed:simple-schema@1.1.0
@@ -139,6 +140,7 @@ tmeasday:publish-counts@0.4.0
 tomi:upload-jquery@2.1.6
 tomi:upload-server@1.2.5
 tracker@1.0.7
+twbs:bootstrap@3.3.5
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
