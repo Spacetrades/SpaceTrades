@@ -3489,6 +3489,10 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileCardLi p a:hover {
+    color: $color-blue2;
+}
+
+.profileCardLi p a:hover {
     text-decoration: underline !important;
 }
 
@@ -3532,7 +3536,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileCardName:hover {
-    color: #00bfff;
+    color: $color-blue2 !important;
 }
 
 .profileCardView {
@@ -3554,3 +3558,68 @@ On click the images will be displayed at normal size to complete the effect
 .profileCardItem {
     margin-bottom: 5px !important;
 }
+
+.footer {
+    margin: none !important;
+    padding: 10px 10px;
+    background-color: #f8504b;
+    text-align: center;
+}
+
+.footerLeft {
+    margin: 0 15% 0 15%;
+}
+
+.footerItems {
+    margin-bottom: 30px;
+}
+
+.footerItems li {
+    display: inline-block;
+}
+
+.footerItems li h3 {
+    margin: 0 20px 0 0 !important;
+}
+
+.footerItems li h3 a {
+    color: #fff !important;
+}
+
+.footerItems li h4 {
+    margin: 0 5px !important;
+}
+
+.footerItems li h4 a:hover {
+    color: #000 !important;
+}
+
+.footerSocial li {
+    display: inline-block;
+    
+}
+
+.footerbottom > li {
+    display: inline-block;
+}
+
+.footerSocial {
+    margin-left: 18%;
+} 
+
+.footerSocial ul li {
+    margin: 0 10px;
+}
+
+.footerSocial ul li i {
+    font-size: 1.2rem;
+    color: #404040 !important;
+}
+
+.footerSocial ul li i:hover {
+    color: #000 !important;
+}
+
+
+
+
