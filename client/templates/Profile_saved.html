@@ -1,0 +1,10 @@
+<template name="Save">
+	 <div class="profileCard oneDiv">
+            <h2 class="featurePageTitle">Saved Items</h2>
+            <ul class="profileCardUl">
+               {{#each }}
+					{{> profileSavedCard}}
+				{/each}           
+			</ul>       
+        </div>
+</template>
