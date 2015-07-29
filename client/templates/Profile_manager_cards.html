@@ -2,10 +2,10 @@
 	<li class="managerOfferLi">
         <p class="managerOfferStatus">{{status}} <!-- Pending, Confirmed, and Declined--></p>
         <ul class="managerOfferImage">
-            <li><a href="#"><img src="{{img}}" class="managerOfferImg"></a></li>
+            <li><a href="/listing/{{_id}}"><img src="{{img}}" class="managerOfferImg"></a></li>
         </ul>
         <ul class="managerOfferDetails">
-            <li><a href="#"><h4>{{listing_title}}</h4></a></li>
+            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
             <li><span class="money">${{offerprice}}</span></li>
             <!-- Make Ny Bold -->
             <li>{{date}}</li>
@@ -20,10 +20,10 @@
 	<li class="managerListingLi">
         <p class="managerListingStatus"> 42 Days, 6 Hours, 12 Min Left </p>
         <ul class="managerOfferImage">
-            <li><a href="#"><img src="{{img1}}" class="managerOfferImg"></a></li>
+            <li><a href="/listing/{{_id}}"><img src="{{img1}}" class="managerOfferImg"></a></li>
         </ul>
         <ul class="managerOfferDetails">
-            <li><a href="#"><h4>{{listing_title}}</h4></a></li>
+            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
             <li><span class="money">${{price}}</span></li>
             <li>Condition: {{condition}}</li>
             <li>Size: {{size}}</li>

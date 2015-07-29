@@ -2,14 +2,14 @@
     <li class="profileCardLi">
         <p>Available</p> <!-- Available, Not Available -->
         <ul class="profileCardImage">
-            <a href=""><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/haZXaoHQJazpWhFTR/p_4338506_15971221_825366.jpg" class="profileCardImg"></a>
+            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
         </ul>
         <ul class="profileCardInfo">
-            <li><a href="#"><h4>Nike Air Max Retro</h4></a></li>
-            <li class="money">$520</li>
-            <li>Size: 12</li>
-            <li>Condition: New</li>
-            <li><a href="#" class="profileCardName">Yusuf Bagha</a></li>
+            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+            <li class="money">${{price}}</li>
+            <li>Condition: {{condition}}</li>
+            <li>Size: {{size}}</li>
+            <li><a href="/profile/{{creator_id}}" class="profileCardName">{{username}}</a></li>
         </ul>
     </li>
 </template>

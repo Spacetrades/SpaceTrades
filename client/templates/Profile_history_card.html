@@ -1,14 +1,14 @@
 <template name="profileHistoryCard">
 	<li class="profileCardLi">
-	    <p>You Bought From <a href="#" class="profileCardBoughtSold">Nathan Chackerian</a></p> <!-- you bought from, you sold to -->
+	    <p>You Bought From <a href="/profile/{{creator_id}}" class="profileCardBoughtSold">{{username}}</a></p> <!-- you bought from, you sold to -->
 	    <ul class="profileCardImage">
-	        <a href=""><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/haZXaoHQJazpWhFTR/p_4338506_15971221_825366.jpg" class="profileCardImg"></a>
+	        <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
 	    </ul>
 	    <ul class="profileCardInfo">
-	        <li><a href="#"><h4>Nike Air Max Retro</h4></a></li>
-	        <li class="money profileCardItem">$520</li>
-	        <li class="profileCardItem">Condition: New</li>
-	        <li class="profileCardItem">Size: 12</li>
+	        <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+	        <li class="money profileCardItem">${{price}}</li>
+	        <li class="profileCardItem">Condition: {{condition}}</li>
+	        <li class="profileCardItem">Size: {{size}}</li>
 	        <li class="profileCardView"><a href="#">View</a></li>
 	    </ul>
 	</li>
