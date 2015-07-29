@@ -1542,7 +1542,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
     .oneDiv {
         // Don't Change Yusuf !!! It messes up the homecards with less than 5% on each side
-        margin: 3rem 5% 2rem 5% !important;
+        margin: 3rem 10% 2rem 10% !important;
         font-family: $font_stack-norm !important;
     }
 
@@ -2883,7 +2883,7 @@ i:hover {
 .slider input[name='slide_switch'] ~ img {
     opacity: 0;
     transform: scale(1);
-    width: 640px !important;
+    width: 100% !important;
     height: 400px;
 }
 /*That hides all main images at a 110% size
