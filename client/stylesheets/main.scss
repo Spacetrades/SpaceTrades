@@ -8,6 +8,9 @@
  $color-money:       #339966;
  $color-gold:        #ffd700;
 
+// Rejection
+ $color-rejected:    #FF0000;
+
 // Theme
  $color-spacered:    #f8504b;
  $color-spaceblue:   #00bfff;
@@ -53,7 +56,6 @@
 /****** FONT SIZES ******/
 
 
-
 /****** ST Grid (our own bootstrap) ******/
 
 
@@ -66,7 +68,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 /****** GLOBAL ******/
 
 .box-title {
-    background-color: #F8504B;
+    background: none !important;
     font-family: inherit;
     color: #FFFFFF;
     border-left: 5px solid $color-spacered;
@@ -75,6 +77,32 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     margin: 0 !important;
     font-size: 1.3rem;
 }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+    font-weight: normal;
+    color: #404040;
+    font-family: 'Helvetica Neue' !important;
+    background: none !important;
+}
+
+.ui-widget-header {
+    background: white !important;
+}
+
+.ui-state-active {
+    color: red !important;
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    background: none !important;
+    margin: 0 0 .4em;
+    font-family: 'Helvetica Neue';
+}
+
 
 .circle {
     width: 12px;
@@ -103,14 +131,27 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 .offerItemStatus {
     text-align: center;
-    border: 2px solid $color-platinum;
     width: 13%;
     float: none;
-    color: $color-platinum;
     margin: 0 auto;
     margin-top: 2em;
     border-radius: 7px;
     padding: 1em;
+}
+
+.status-pending {
+    border: 2px solid $color-platinum;
+    color: $color-platinum;
+}
+
+.status-accepted {
+    border: 2px solid $color-spacegreen;
+    color: $color-spacegreen;
+}
+
+.status-rejected {
+    border: 2px solid $color-rejected;
+    color: $color-rejected;
 }
 
 /* .inner-circle {
@@ -3444,6 +3485,58 @@ On click the images will be displayed at normal size to complete the effect
 .offerRequestButton input:hover {
     background-color: #f73c37;
 }
+
+
+//////////////////////////////////////////////
+
+
+.offerAcceptButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerAcceptButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: $color-spacegreen;
+    border: 1px solid $color-spacegreen;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerAcceptButton input:hover {
+    background-color: #6DAB59;
+}
+
+
+/////////////////////////////////////////////
+
+.offerRejectButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerRejectButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerRejectButton input:hover {
+    background-color: #f73c37;
+}
+
+///////////////////////////////////////////////
+
 
 .offerRequestMaps {
     margin-top: 10px !important;

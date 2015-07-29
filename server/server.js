@@ -76,6 +76,8 @@ SearchSource.defineSource('listing', function (searchText, options) {
       options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
     // options.profile.city = 
   }
+
+  sweetAlert("WElcome to the club");
   return user;
 });
 

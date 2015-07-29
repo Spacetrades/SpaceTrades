@@ -18,7 +18,7 @@
 
 <template name="ManagerCardListing">
 	<li class="managerListingLi">
-        <p class="managerListingStatus"> 42 Days, 6 Hours, 12 Min Left </p>
+        <p class="managerListingStatus"> {{days_until}} </p>
         <ul class="managerOfferImage">
             <li><a href="/listing/{{_id}}"><img src="{{img1}}" class="managerOfferImg"></a></li>
         </ul>
@@ -31,7 +31,7 @@
                 <ul>
                     <li class="managerOfferOptions"><a href="#">Options</a></li>
                     <!-- OnClick DropDown With Edit and Delete -->
-                    <li class="managerOfferViewer"><a href="#">4 Offers</a></li>
+                    <li class="managerOfferViewer"><a href="#">{{offers}}</a></li>
                     <!-- 4 is the number of offers--> 
                 </ul>
             </li>
