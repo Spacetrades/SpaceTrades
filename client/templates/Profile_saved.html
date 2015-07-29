@@ -1,0 +1,10 @@
+<template name="savedItems">
+ 	<div class="profileCard oneDiv">
+        <ul class="profileCardUl">
+        <!-- Saved should be highlighted in nav-->
+            {{#each saved}}
+				{{> profileSavedCard}}
+			{{/each}}           
+		</ul>       
+    </div>
+</template>

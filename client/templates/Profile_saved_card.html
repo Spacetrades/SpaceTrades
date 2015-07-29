@@ -1,0 +1,15 @@
+<template name="profileSavedCard">
+    <li class="profileCardLi">
+        <p>Available</p> <!-- Available, Not Available -->
+        <ul class="profileCardImage">
+            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
+        </ul>
+        <ul class="profileCardInfo">
+            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+            <li class="money">${{price}}</li>
+            <li>Condition: {{condition}}</li>
+            <li>Size: {{size}}</li>
+            <li><a href="/profile/{{creator_id}}" class="profileCardName">{{username}}</a></li>
+        </ul>
+    </li>
+</template>
