@@ -2476,19 +2476,21 @@ i:hover {
     padding-bottom: 10px !important;
 }
 
-.addListDiv div {
-    display: inline-block !important;
-}
+// .addListDiv div {
+//     display: inline-block !important;
+// }
 
 .addListSecOne {
     width: 40%;
     vertical-align: top;
     margin-top: 5px;
+    display: inline-block !important; 
 }
 
 .addListSecTwo {
     width: 50%;
     vertical-align: top;
+    display: inline-block !important; 
 }
 
 .addListInfo, .addListImg {

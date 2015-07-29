@@ -1,9 +1,9 @@
 <template name="addlisting">
-<!-- TASK - Allow user to add only one image -->
-<!-- TASK - Lat, Lng should be hidden asap  -->
-<!-- TASK - Allow users to specify their own location -->
-<!-- TASK - Maybe include privacy in signup and never again -->
-<!-- {{userShow}} -->
+    <!-- TASK - Allow user to add only one image -->
+    <!-- TASK - Lat, Lng should be hidden asap  -->
+    <!-- TASK - Allow users to specify their own location -->
+    <!-- TASK - Maybe include privacy in signup and never again -->
+    <!-- {{userShow}} -->
     <div class="addListDiv oneDiv">
         <h2 class="featurePageTitle">Create Listing</h2>
         <div class="addListSecOne">
@@ -160,7 +160,7 @@
         <div class="addListSecTwo">
             <ul class="addListImg">
                 <p>Add Images
-                <canvas id="resizeCanvas" width="100" height="100"></canvas>
+                    <canvas id="resizeCanvas" width="100" height="100"></canvas>
                     <i class="fa fa-info-circle" data-toggle="tooltip" title="Select multiple images, minimum of three"></i>
                     <input type="file" class="imageupload" multiple/>
                 </p>
@@ -168,6 +168,13 @@
                 <li><img class="uploadimg" id="img2" src="#" /></li>
                 <li><img class="uploadimg" id="img3" src="#" /></li>
             </ul>
+            <!-- <div class="offerRequestMaps oneDiv">  -->
+                <h4>Location</h4>
+                <input id="pac-input" class="controls" type="text" placeholder="Choose a favored meetup location">
+                <div class="offerRequestMapsApi">
+                    {{> googleMap name="addListingImage" options=addListingMapOptions }}
+                </div>
+      <!--       </div> -->
             <ul class="addListDesc">
                 <li>
                     <p>Description</p> 
@@ -184,9 +191,9 @@
     </div>
     <!-- {{> shareit}} -->
 
-<div class="success">
-</div>
+    <div class="success">
+    </div>
 
-<p class='lat'>{{lat}}</p>
-<p class='lng'>{{lng}}</p>
+    <p class='lat'>{{lat}}</p>
+    <p class='lng'>{{lng}}</p>
 </template>
