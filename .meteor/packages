@@ -12,7 +12,6 @@ mdg:camera
 iron:router
 matthew:foundation5-sass
 accounts-password
-afruth:chapp
 ccorcos:clientside-image-manipulation
 fourseven:scss
 accounts-ui
@@ -27,21 +26,15 @@ jeremy:snapsvg
 meteorhacks:kadira
 edgee:slingshot
 markdown
-richsilv:owl-carousel
 mizzao:jquery-ui
 sacha:spin
-johannesma:meteor-flexslider
-mizzao:bootboxjs
 practicalmeteor:chai
 ryanswapp:spectrum-colorpicker
 aldeed:autoform
 raix:handlebar-helpers
 multiply:iron-router-progress
-lookback:dropdowns
 percolatestudio:segment.io
 richsilv:pikaday
-perak:omlet
-leonzhang1109:accounts-wechat
 meteorhacks:search-source
 alanning:roles
 tmeasday:publish-counts
@@ -56,7 +49,6 @@ http
 fortawesome:fontawesome
 natestrauser:animate-css
 awatson1978:mousetrap
-joshowens:shareit
 jamgold:cropuploader
 bozhao:accounts-instagram
 lookback:seo
