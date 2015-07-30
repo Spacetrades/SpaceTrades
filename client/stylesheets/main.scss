@@ -72,10 +72,22 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     font-family: inherit;
     color: #FFFFFF;
     // border-left: 5px solid $color-spacered;
-    // border-top-left-radius: 4px;
     padding-left: 4px;
     margin: 0 !important;
     font-size: 1.3rem;
+}
+
+
+.box-title-listing {
+    background: $color-spacered !important;
+    font-family: inherit;
+    color: #FFFFFF;
+    // border-left: 5px solid $color-spacered;
+    padding-left: 4px;
+    margin: 0 !important;
+    font-size: 1.1rem;
+    padding: 5px 8px;
+
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -3032,6 +3044,8 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemDetailItems {
     margin: 0;
     margin-top: 5px;
+    padding-left: 0.5em;
+    font-size: 1em;
 }
 
 .listingItemDetailItems li {
@@ -3228,8 +3242,16 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 1em; 
 }
 
+.desc-box-listing {
+    border-radius: 4px;
+    border: 1px solid #F8504B;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
 .box-title {
-    padding: 5px 0;
+    padding: 5px 8px;
     font-size: 1.1rem;
 }
 
