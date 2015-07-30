@@ -1312,7 +1312,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     text-align: center;
     text-decoration: none;
     text-overflow: ellipsis;
-    transition: all 200ms ease-in-out 0s;
+    transition: all 100ms ease-in-out 0s;
     white-space: nowrap;    
     font-weight: 700;   
     padding: 19px 39px 18px;
@@ -2699,6 +2699,12 @@ i:hover {
     display: inline-block !important;
 }
 
+.managerOfferCount {
+    padding: 5px 12px !important;
+    background-color: #00bfff !important;
+    font-family: 'Abel';
+    margin-left: 1em;
+}
 
 .managerOfferLi {
     border: 2px solid $color-spacegreen;
@@ -3036,6 +3042,10 @@ On click the images will be displayed at normal size to complete the effect
     font-size: 1.5rem !important;
 }
 
+.nomar {
+    margin-top: 0 !important;
+}
+
 .listingItemDetails {
     margin-top: 150px;
     margin-bottom: 20px;
@@ -3094,6 +3104,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemTitle {
     font-size: 2.5em;
+    color: $color-spaceblue;
 }
 
 .listingItemOptions ul li a {
@@ -3257,6 +3268,14 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 150px;
     margin-bottom: 20px;
     width: 75%;
+}
+
+.desc-box-listing p {
+    padding-left: 0.5em;
+}
+
+.desc-width {
+    width: 100%;
 }
 
 .box-title {
