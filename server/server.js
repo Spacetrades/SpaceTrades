@@ -241,8 +241,17 @@ userStatus: function () {
   return Meteor.user().status;
 },
 userLocate: function (city, state) {
-  Meteor.users.update(this.userId, {
-    $set: {'profile.city': city, 'profile.state': state }}); 
+  Meteor.users.update(this.userId, { $set: {'profile.city': city, 'profile.state': state }}); 
+},
+ipLocate: function() {
+
+  HTTP.get("http://ipinfo.io", function (error, result) {
+      var place = JSON.parse(result.content);
+      console.log(place);
+      var city = place.city;
+      var state = place.region;
+      console.log(city, state);
+    });
 },
 
 /**
@@ -313,5 +322,6 @@ userLocate: function (city, state) {
  Meteor.publish('addOffer');
  Meteor.publish('userStatus');
  Meteor.publish('locateUser');
+ Meteor.publish('ipLocate');
 
 }
