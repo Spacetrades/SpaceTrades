@@ -176,6 +176,10 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     display: block;
 } */
 
+.fa.fa-facebook.large:hover {
+    color: inherit !important;
+}
+
 .fa-plus-circle {
     color: $color-spacered !important;
 }
@@ -2260,6 +2264,10 @@ i:hover {
 
 /** NEW NAV **/
 
+// .headerUsername {
+//     color: $color-spacegrey;
+// }
+
 .headerNav {
     color: $color-spacegrey;
     background-color: $color-spacered;
@@ -2376,6 +2384,8 @@ i:hover {
 
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
+    position: absolute;
+    z-index: 100;
 }
 
 .headerDropDown ul li a {
@@ -2388,7 +2398,6 @@ i:hover {
 .headerDropDown ul li:hover {
     color: #fff;
     background-color: #555;
-    // transition: all 0.1s linear;
     
 }
 
@@ -2454,7 +2463,7 @@ i:hover {
 }
 
 .headerBigCat li {
-    margin: 0 2px;
+    // margin: 0 2px;
     margin-right: 0 !important;
 }
 
