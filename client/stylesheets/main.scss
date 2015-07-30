@@ -72,10 +72,22 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     font-family: inherit;
     color: #FFFFFF;
     // border-left: 5px solid $color-spacered;
-    // border-top-left-radius: 4px;
     padding-left: 4px;
     margin: 0 !important;
     font-size: 1.3rem;
+}
+
+
+.box-title-listing {
+    background: $color-spacered !important;
+    font-family: inherit;
+    color: #FFFFFF;
+    // border-left: 5px solid $color-spacered;
+    padding-left: 4px;
+    margin: 0 !important;
+    font-size: 1.1rem;
+    padding: 5px 8px;
+
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -163,6 +175,10 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     border-radius: 50%;
     display: block;
 } */
+
+.fa.fa-facebook.large:hover {
+    color: inherit !important;
+}
 
 .fa-plus-circle {
     color: $color-spacered !important;
@@ -1296,7 +1312,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     text-align: center;
     text-decoration: none;
     text-overflow: ellipsis;
-    transition: all 200ms ease-in-out 0s;
+    transition: all 100ms ease-in-out 0s;
     white-space: nowrap;    
     font-weight: 700;   
     padding: 19px 39px 18px;
@@ -2248,6 +2264,10 @@ i:hover {
 
 /** NEW NAV **/
 
+// .headerUsername {
+//     color: $color-spacegrey;
+// }
+
 .headerNav {
     color: $color-spacegrey;
     background-color: $color-spacered;
@@ -2364,6 +2384,8 @@ i:hover {
 
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
+    position: absolute;
+    z-index: 100;
 }
 
 .headerDropDown ul li a {
@@ -2376,7 +2398,6 @@ i:hover {
 .headerDropDown ul li:hover {
     color: #fff;
     background-color: #555;
-    // transition: all 0.1s linear;
     
 }
 
@@ -2442,7 +2463,7 @@ i:hover {
 }
 
 .headerBigCat li {
-    margin: 0 2px;
+    // margin: 0 2px;
     margin-right: 0 !important;
 }
 
@@ -2678,6 +2699,12 @@ i:hover {
     display: inline-block !important;
 }
 
+.managerOfferCount {
+    padding: 5px 12px !important;
+    background-color: #00bfff !important;
+    font-family: 'Abel';
+    margin-left: 1em;
+}
 
 .managerOfferLi {
     border: 2px solid $color-spacegreen;
@@ -2845,6 +2872,7 @@ i:hover {
 .homeCardRight {
     float: right !important;
     margin-right: 10px;
+    text-align: right;
 }
 
 .homeCardUser {
@@ -3015,6 +3043,10 @@ On click the images will be displayed at normal size to complete the effect
     font-size: 1.5rem !important;
 }
 
+.nomar {
+    margin-top: 0 !important;
+}
+
 .listingItemDetails {
     margin-top: 150px;
     margin-bottom: 20px;
@@ -3032,6 +3064,8 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemDetailItems {
     margin: 0;
     margin-top: 5px;
+    padding-left: 0.5em;
+    font-size: 1em;
 }
 
 .listingItemDetailItems li {
@@ -3071,6 +3105,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemTitle {
     font-size: 2.5em;
+    color: $color-spaceblue;
 }
 
 .listingItemOptions ul li a {
@@ -3228,8 +3263,24 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 1em; 
 }
 
+.desc-box-listing {
+    border-radius: 4px;
+    border: 1px solid #F8504B;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.desc-box-listing p {
+    padding-left: 0.5em;
+}
+
+.desc-width {
+    width: 100%;
+}
+
 .box-title {
-    padding: 5px 0;
+    padding: 5px 8px;
     font-size: 1.1rem;
 }
 
