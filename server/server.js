@@ -271,6 +271,10 @@ ipLocate: function() {
     return Listing.find({}, { limit: 16 });
   });
 
+  Meteor.publish('listingShowMore', function () {
+    return Listing.find({}, {limit: 32  });
+  });
+
   Meteor.publish('offerShow', function () {
     return Offer.find({}, { limit: 100 });
   });
