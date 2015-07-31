@@ -75,6 +75,9 @@ Extensive undertandability is less crucial in the beginning stage of development
 	/opt/spacetrades - Location of ST files
 	server - ~/.bash_profile command for ssh server login
 	Run -  npm update mup -g if Error OR Try again and it might actually work the second time *facepalm*
+
+	Meteor.users.update( Meteor.userId(), {$push: { "profile.files": downloadUrl } } );
+
 ## Tasks:
 	Implement Hubot in some way
 ## Formatting:
