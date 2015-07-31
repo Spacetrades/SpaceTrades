@@ -268,7 +268,7 @@ ipLocate: function() {
   // DB Shows
 
   Meteor.publish('listingShow', function () {
-    return Listing.find({}, { limit: 100 });
+    return Listing.find({}, { limit: 16 });
   });
 
   Meteor.publish('offerShow', function () {
