@@ -8,6 +8,9 @@
  $color-money:       #339966;
  $color-gold:        #ffd700;
 
+// Rejection
+ $color-rejected:    #FF0000;
+
 // Theme
  $color-spacered:    #f8504b;
  $color-spaceblue:   #00bfff;
@@ -53,7 +56,6 @@
 /****** FONT SIZES ******/
 
 
-
 /****** ST Grid (our own bootstrap) ******/
 
 
@@ -66,15 +68,61 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 /****** GLOBAL ******/
 
 .box-title {
-    background-color: #F8504B;
+    background: $color-spacered !important;
     font-family: inherit;
     color: #FFFFFF;
-    border-left: 5px solid $color-spacered;
-    border-top-left-radius: 4px;
+    // border-left: 5px solid $color-spacered;
     padding-left: 4px;
     margin: 0 !important;
     font-size: 1.3rem;
 }
+
+.homeLoadMore {
+    margin-left: 45% !important;
+}
+
+.homeLoadMore:hover {
+    box-shadow: 0px 1px 3px 0px #00bfff;
+}
+
+
+.box-title-listing {
+    background: $color-spacered !important;
+    font-family: inherit;
+    color: #FFFFFF;
+    // border-left: 5px solid $color-spacered;
+    padding-left: 4px;
+    margin: 0 !important;
+    font-size: 1.1rem;
+    padding: 5px 8px;
+
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+    font-weight: normal;
+    color: #404040;
+    font-family: 'Helvetica Neue' !important;
+    background: none !important;
+}
+
+.ui-widget-header {
+    background: white !important;
+}
+
+.ui-state-active {
+    color: red !important;
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    background: none !important;
+    margin: 0 0 .4em;
+    font-family: 'Helvetica Neue';
+}
+
 
 .circle {
     width: 12px;
@@ -103,14 +151,27 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 .offerItemStatus {
     text-align: center;
-    border: 2px solid $color-platinum;
     width: 13%;
     float: none;
-    color: $color-platinum;
     margin: 0 auto;
     margin-top: 2em;
     border-radius: 7px;
     padding: 1em;
+}
+
+.status-pending {
+    border: 2px solid $color-platinum;
+    color: $color-platinum;
+}
+
+.status-accepted {
+    border: 2px solid $color-spacegreen;
+    color: $color-spacegreen;
+}
+
+.status-rejected {
+    border: 2px solid $color-rejected;
+    color: $color-rejected;
 }
 
 /* .inner-circle {
@@ -122,6 +183,10 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     border-radius: 50%;
     display: block;
 } */
+
+.fa.fa-facebook.large:hover {
+    color: inherit !important;
+}
 
 .fa-plus-circle {
     color: $color-spacered !important;
@@ -1255,7 +1320,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     text-align: center;
     text-decoration: none;
     text-overflow: ellipsis;
-    transition: all 200ms ease-in-out 0s;
+    transition: all 100ms ease-in-out 0s;
     white-space: nowrap;    
     font-weight: 700;   
     padding: 19px 39px 18px;
@@ -2207,6 +2272,10 @@ i:hover {
 
 /** NEW NAV **/
 
+// .headerUsername {
+//     color: $color-spacegrey;
+// }
+
 .headerNav {
     color: $color-spacegrey;
     background-color: $color-spacered;
@@ -2323,6 +2392,8 @@ i:hover {
 
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
+    position: absolute;
+    z-index: 100;
 }
 
 .headerDropDown ul li a {
@@ -2335,7 +2406,6 @@ i:hover {
 .headerDropDown ul li:hover {
     color: #fff;
     background-color: #555;
-    // transition: all 0.1s linear;
     
 }
 
@@ -2401,7 +2471,7 @@ i:hover {
 }
 
 .headerBigCat li {
-    margin: 0 2px;
+    // margin: 0 2px;
     margin-right: 0 !important;
 }
 
@@ -2637,6 +2707,12 @@ i:hover {
     display: inline-block !important;
 }
 
+.managerOfferCount {
+    padding: 5px 12px !important;
+    background-color: #00bfff !important;
+    font-family: 'Abel';
+    margin-left: 1em;
+}
 
 .managerOfferLi {
     border: 2px solid $color-spacegreen;
@@ -2804,6 +2880,7 @@ i:hover {
 .homeCardRight {
     float: right !important;
     margin-right: 10px;
+    text-align: right;
 }
 
 .homeCardUser {
@@ -2974,6 +3051,10 @@ On click the images will be displayed at normal size to complete the effect
     font-size: 1.5rem !important;
 }
 
+.nomar {
+    margin-top: 0 !important;
+}
+
 .listingItemDetails {
     margin-top: 150px;
     margin-bottom: 20px;
@@ -2991,6 +3072,8 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemDetailItems {
     margin: 0;
     margin-top: 5px;
+    padding-left: 0.5em;
+    font-size: 1em;
 }
 
 .listingItemDetailItems li {
@@ -3030,6 +3113,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemTitle {
     font-size: 2.5em;
+    color: $color-spaceblue;
 }
 
 .listingItemOptions ul li a {
@@ -3187,8 +3271,24 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 1em; 
 }
 
+.desc-box-listing {
+    border-radius: 4px;
+    border: 1px solid #F8504B;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.desc-box-listing p {
+    padding-left: 0.5em;
+}
+
+.desc-width {
+    width: 100%;
+}
+
 .box-title {
-    padding: 5px 0;
+    padding: 5px 8px;
     font-size: 1.1rem;
 }
 
@@ -3444,6 +3544,58 @@ On click the images will be displayed at normal size to complete the effect
 .offerRequestButton input:hover {
     background-color: #f73c37;
 }
+
+
+//////////////////////////////////////////////
+
+
+.offerAcceptButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerAcceptButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: $color-spacegreen;
+    border: 1px solid $color-spacegreen;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerAcceptButton input:hover {
+    background-color: #6DAB59;
+}
+
+
+/////////////////////////////////////////////
+
+.offerRejectButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerRejectButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerRejectButton input:hover {
+    background-color: #f73c37;
+}
+
+///////////////////////////////////////////////
+
 
 .offerRequestMaps {
     margin-top: 10px !important;

@@ -1,11 +1,21 @@
 <template name="itemOffer">
-{{#each listingOffers}}
-<h2 class="offerItemStatus">{{status}}</h2>
-<p>{{date}}</p>
-<!-- <div class="calendar"></div> -->
-<!-- {{> fullcalendar options}} -->
-{{> googleMap name="itemoffermap" options=ItemOfferOptions}}
-<p>{{location}}</p>
-<p>{{price}}</p>
-{{/each}}
+	{{#each listingOffers}}
+	<li class="offerAcceptButton">
+	<input type="button" value="Accept" class="offerRequestBtn">
+	</li>
+	<h2 class="offerItemStatus status-pending">{{status}}</h2>
+	<li class="offerRejectButton">
+		<input type="button" value="Reject" class="offerRequestBtn">
+	</li>
+	<p>{{date}}</p>
+	<div class="calendar"></div>
+	<!-- {{> fullcalendar options}} -->
+	<div class="offerRequestMaps oneDiv"> 
+        <div class="offerRequestMapsApi">
+	{{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+	</div>
+	</div>
+	<p>{{location}}</p>
+	<p>{{price}}</p>
+	{{/each}}
 </template>

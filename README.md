@@ -75,6 +75,9 @@ Extensive undertandability is less crucial in the beginning stage of development
 	/opt/spacetrades - Location of ST files
 	server - ~/.bash_profile command for ssh server login
 	Run -  npm update mup -g if Error OR Try again and it might actually work the second time *facepalm*
+
+	Meteor.users.update( Meteor.userId(), {$push: { "profile.files": downloadUrl } } );
+
 ## Tasks:
 	Implement Hubot in some way
 ## Formatting:
@@ -94,20 +97,3 @@ Extensive undertandability is less crucial in the beginning stage of development
 ## Stylesheets
 [:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
 Include other language style guides JS, SCSS for reference
-## Tasks
-- [ ] Home Page card images aren't being cached and are rendering on every refresh
-- [x] FIX annoying Nav Dropdowns that need double clicking
-- [ ] Make profile user links /profile/facebookusername and NOT /profile/usermongorandomid
-- [ ] Image Optimization like Kixify to mandate on width height for images and decrease image size for HD images
-- [ ] Implement Chat (Meteor chat or Hipchat) and include hubot for on site deploys.
-- [ ] Abandon Notifications for the future builds and begin advertising.
-- [ ] ADD social listing media links to ST pages maybe near footer maybe
-- [ ] ADD Sharing item on social media on addlisting and on item page
-- [ ] ADD load more images button on home page
-- [ ] SETUP email, with mailchimp or mailgun http://docs.meteor.com/#/full/email
-- [ ] Add Go Premium
-- [ ] Setup Jquery Autcomplete to 
-- [ ] Switch out sAlert for sweet alerts
-- [ ] Fix redirection on Addlisting submit and offer submit. Offer - Offer page. Addlisting - listing page
-- [ ] http://fullcalendar.io/
-- [ ] Utilize mobile url ASAP in FB

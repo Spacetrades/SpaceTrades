@@ -4,9 +4,6 @@ if (Meteor.isServer) {
 
 
 // Get the region
-// var info = HTTP.get("http://ipinfo.io", function (error, result) {
-//   console.log(result.content);
-// });
 
 
 // New users receive a verification email
@@ -37,8 +34,7 @@ SearchSource.defineSource('listing', function (searchText, options) {
     var selector2 = {
       brand:  regExp
     }
-    console.log(selector1);
-    console.log(selector2);
+
     var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
     console.log(query);
     return query;
@@ -68,16 +64,38 @@ SearchSource.defineSource('listing', function (searchText, options) {
 //   //Show new vital information
 // })
 
-  Accounts.onCreateUser( function (options, user) {
+
+  // Accounts.createUser(options, function(err) {
+  //   if (!err) {
+  //     HTTP.get("http://ipinfo.io", function(err, result) {
+  //       var place = JSON.parse(result.content);
+  //       var state = place.state;
+  //       var city = place.city;
+  //       Meteor.call('userLocate', city, state);
+  //     });
+  //   }
+  // });
+
+
+  Accounts.onCreateUser( function (options, user, err) {
+
     if (options.profile) {
       options.profile.picturelrg = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=large";
       user.profile = options.profile;
       options.profile.picturesm = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=small";
       options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
-    // options.profile.city = 
-  }
-  return user;
-});
+    }
+
+    HTTP.get("http://ipinfo.io", function (error, result) {
+      var place = JSON.parse(result.content);
+      var city = place.city;
+      var state = place.region;
+      console.log(city, state);
+      Meteor.call('userLocate', city, state);
+    });
+
+    return user;
+  });
 
   // Removes the config b/c dupliation error and re-defines it
 
@@ -222,14 +240,19 @@ sendMessage: function (options) {
 userStatus: function () {
   return Meteor.user().status;
 },
+userLocate: function (city, state) {
+  Meteor.users.update(this.userId, { $set: {'profile.city': city, 'profile.state': state }}); 
+},
+ipLocate: function() {
 
-// addHistory : function (options) {
-//   console.log(Meteor.user());
-//   Meteor.user().history.insert({
-//     search: options.search
-//   });
-// },
-
+  HTTP.get("http://ipinfo.io", function (error, result) {
+      var place = JSON.parse(result.content);
+      console.log(place);
+      var city = place.city;
+      var state = place.region;
+      console.log(city, state);
+    });
+},
 
 /**
  * @summary Returns listing count
@@ -245,7 +268,11 @@ userStatus: function () {
   // DB Shows
 
   Meteor.publish('listingShow', function () {
-    return Listing.find({}, { limit: 100 });
+    return Listing.find({}, { limit: 16 });
+  });
+
+  Meteor.publish('homeShowMore', function () {
+    return Listing.find({}, {limit: 32  });
   });
 
   Meteor.publish('offerShow', function () {
@@ -298,5 +325,7 @@ userStatus: function () {
  Meteor.publish('sendEmail');
  Meteor.publish('addOffer');
  Meteor.publish('userStatus');
+ Meteor.publish('locateUser');
+ Meteor.publish('ipLocate');
 
 }
