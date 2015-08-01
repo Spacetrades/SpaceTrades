@@ -269,11 +269,11 @@ ipLocate: function() {
   // DB Shows
 
   Meteor.publish('listingShow', function (listingShow) {
-    console.log(listingShow);
+    // console.log(listingShow);
 
-    if (listingShow) {
+    // if (listingShow) {
     return Listing.find({}, { limit: 16 });
-  }
+  // }
   // else {
   //   return this.stop();
   // }
