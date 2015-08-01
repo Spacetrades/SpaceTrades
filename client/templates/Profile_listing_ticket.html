@@ -1,0 +1,24 @@
+<template name="profileListingTicket">
+        <!-- Ticket After Meetup Accepted -->
+        <div class="profileReceivedOffers oneDiv">
+            <ul class="profileReceivedUl">
+                <li class="profileReceivedLi profileViewMeetupLi">
+                    <ul class="profileReceivedCardLeft">
+                        <li class="profileReceivedImage">
+                            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileReceivedImg"></a>
+                        </li>
+                    </ul>
+                    <ul class="profileReceivedCardRight profileViewMeetupRight">
+                        <li><a href="/listing/{{_id}}"><h3>{{listing_title}}</h3></a></li>
+                        <li class="profileReceivedName">Nathan Chackerian Bought This From Yusuf Bagha</li>
+                        <li class="profileReceivedPrice">Final Price: <span class="money">${{price}}</span></li>
+                        <li class="profileReceivedDate">Date of Meetup: {{date}}</li>
+                        <li class="profileReceivedLocation">Location: {{location}}</li>
+                    </ul>
+                    <div id="profileReceivedOffersMaps">
+                        {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+</template>
