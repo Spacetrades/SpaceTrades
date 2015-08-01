@@ -5,7 +5,7 @@ if (Meteor.isServer) {
 
 // Get the region
 
-Roles.addUsersToRoles('KrNfLAaXw7Tm3NXzg', ['admin']);
+// Roles.addUsersToRoles('KrNfLAaXw7Tm3NXzg', ['admin']);
 
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
@@ -274,9 +274,9 @@ ipLocate: function() {
     if (listingShow) {
     return Listing.find({}, { limit: 16 });
   }
-  else {
-    return this.stop();
-  }
+  // else {
+  //   return this.stop();
+  // }
   });
 
   Meteor.publish('homeShowMore', function () {
