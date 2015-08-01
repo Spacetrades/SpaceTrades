@@ -64,6 +64,8 @@ Extensive undertandability is less crucial in the beginning stage of development
 	LOTS - Lots of changes have been made and I'm to lazy to create commit messages for all the changes
 	MINOR - A few changes have been made
 	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
+	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
+	-// - Comments have been removed
 
 ## Inline Comments:
 	TASK - A task to complete in a certain file
@@ -77,6 +79,9 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Run -  npm update mup -g if Error OR Try again and it might actually work the second time *facepalm*
 
 	Meteor.users.update( Meteor.userId(), {$push: { "profile.files": downloadUrl } } );
+
+	https://www.resrc.it/
+	Use Lookback SEO
 
 ## Tasks:
 	Implement Hubot in some way
