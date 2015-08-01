@@ -1,24 +1,27 @@
 <template name="profileViewSentOffer">
+{{#each listingOffers}}
 	<!-- View Your Offer -->
     <div class="profileReceivedOffers oneDiv">
         <ul class="profileReceivedUl">
             <li class="profileReceivedLi profileViewMeetupLi">
                 <ul class="profileReceivedCardLeft">
                     <li class="profileReceivedImage">
-                        <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileReceivedImg"></a>
+                        <a href="/listing/{{_id}}"><img src="{{img}}" class="profileReceivedImg"></a>
                     </li>
                 </ul>
                 <ul class="profileReceivedCardRight profileViewMeetupRight">
                     <li><a href="/listing/{{_id}}"><h3>{{listing_title}}</h3></a></li>
-                    <li class="profileReceivedName">You Offered To {{username}}</li>
-                    <li class="profileReceivedPrice">Final Price: <span class="money">${{price}}</span></li>
-                    <li class="profileReceivedDate">Date of Meetup: {{date}}</li>
-                    <li class="profileReceivedLocation">Location: {{location}}</li>
+                    <li class="profileReceivedName">You send Offer To {{creator}}</li>
+                    <li class="profileReceivedPrice"><b>Final Price:</b> <span class="money">${{offerprice}}</span></li>
+                    <li class="profileReceivedDate"><b>Date of Meetup:</b> {{date}}</li>
+                    <li class="profileReceivedLocation"><b>Location:</b> {{location}}</li>
                 </ul>
                 <div id="profileReceivedOffersMaps">
                     {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
                 </div>
+                <h2 class="offerItemStatus status-pending">{{status}}</h2>
             </li>
         </ul>
     </div>
+{{/each}}
 </template>
