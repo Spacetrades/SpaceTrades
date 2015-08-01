@@ -3778,5 +3778,125 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 
+.featurePageTitle {
+    text-decoration: underline;
+}
+
+.profileReceivedOffers h2 {
+    margin: 0;
+}
+
+.profileReceivedOffers > ul {
+    margin-left: 0%;
+}
+
+.profileReceivedOriginal {
+    margin: 3px 0 0 0;
+    font-size: 0.9rem;
+}
+
+.profileReceivedUl {
+    width: 55%;
+    margin-left: 21% !important;
+    margin-right: 21% !important;
+}
+
+.profileReceivedLi {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #00bfff;
+}
+
+.profileReceivedLi > ul {
+    display: inline-block !important;
+}
+
+.profileReceivedCardLeft {
+    width: 45% !important;
+}
+
+.profileReceivedCardRight {
+    width: 40% !important;
+}
+
+.profileReceivedImage {
+    width: 100% !important;
+    height: 200px;
+}
+
+.profileReceivedImg {
+    width: 100% !important;
+    height: 100%;
+}
+
+.profileReceivedCardRight {
+    margin-left: 5%;
+    vertical-align: top;
+}
+
+.profileReceivedCardRight li a h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.profileReceivedCardRight li a {
+    margin: 0;
+    color: #00bfff !important;
+    
+}
+
+.profileReceivedCardRight li a:hover {
+    color: #00bfff !important;
+    text-decoration: underline;
+}
+
+.profileReceivedName {
+    font-size: 0.8rem;
+    color: #6c54b3;
+    font-style: italic;
+}
+
+.profileReceivedPrice {
+    margin: 12px 0 4px 0;  
+}
+
+.profileReceivedDate, .profileReceivedLocation {
+    margin: 0 0 5px 0;
+}
+
+.profileReceivedButtons {
+    margin-top: 15px;
+}
+
+.profileReceivedButtonsUl > li {
+    display: inline-block;
+}
+
+.profileReceivedButtons li a {
+    padding: 14px 12px;
+    font-size: 1rem;
+    color: #fff !important;
+    background-color: #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.profileReceivedAccept a {
+    background-color: #49E20E !important;
+}
+
+.profileReceivedDecline {
+    margin-left: 10px;
+}
+
+
+#profileReceivedOffersMaps {
+    margin-top: 20px;
+    width: 100%;
+    height: 180px;
+}
 
 

@@ -1,0 +1,33 @@
+<template name="profileReceivedOffers">
+	  <div class="profileReceivedOffers oneDiv">
+            <h2 class="featurePageTitle">Recieved Offers</h2>
+            <p class="profileReceivedOriginal">Original Price: {{price}}</p>
+            <ul class="profileReceivedUl">
+            	{{#each listingOffers}}
+                <li class="profileReceivedLi">
+                    <ul class="profileReceivedCardLeft">
+                        <li class="profileReceivedImage">
+                            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileReceivedImg"></a>
+                        </li>
+                    </ul>
+                    <ul class="profileReceivedCardRight">
+                        <li><a href="/listing/{{_id}}"><h3>{{listing_title}}</h3></a></li>
+                        <li class="profileReceivedName">Offer By {{username}}</li>
+                        <li class="profileReceivedPrice">Offered Price: <span class="money">{{price}}</span></li>
+                        <li class="profileReceivedDate">Date of Meetup: {{date}}</li>
+                        <li class="profileReceivedLocation">Location: {{location}}</li>
+                        <li class="profileReceivedButtons">
+                            <ul class="profileReceivedButtonsUl">
+                                <li class="profileReceivedAccept"><a href="#">Accept</a></li>
+                                <li class="profileReceivedDecline"><a href="#">Decline</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="profileReceivedOffersMaps">
+                    	{{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+</template>
