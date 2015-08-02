@@ -1,117 +1,162 @@
 <template name="searchpage">
-<div class="searchdiv div">
 
-<div class="searchfield job">
-     <input type="text" id="search" class=" search search2" placeholder="Name, Brand, Size&hellip;" value="{{search}}" >
-    <a href="/search" class="homesearchbtn">Search</a>
-</div>
-<h1 class="searchopts">{{getListings.length}} <span class="searchtext"> {{search}}</span></h1>
-{{#each getListings}}
-{{> searchcard}}
-{{/each}}
-
-<!--     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <div>
-        <p>Refine Search</p>
-        <div> -->
-          <!--   <ul>
-                <p>Categories</p>
-                <li><a href="">Apparel</a></li>
-                <li><a href="">Electronics</a></li>
-                <li><a href="">Shoes</a></li>
-                <li><a href="">Other</a></li>
-            </ul>
-            <ul>
-                <p>Brand</p>
-                <li><input type="checkbox" value="Nike">Addidas</li>
-                <li><input type="checkbox" value="Jordan">Asics</li>
-                <li><input type="checkbox" value="Addidas">Jordan</li>
-                <li><input type="checkbox" value="Addidas">Nike</li>
-            </ul>
-            <ul>
-                <p>Condition</p>
-                <li><input type="checkbox" value="New">New</li>
-                <li><input type="checkbox" value="LikeNew">Like New</li>
-                <li><input type="checkbox" value="Used">Used</li>
-                <li><input type="checkbox" value="Broken">Broken</li>
-            </ul>
-            <ul>
-                <p>Size</p>
-                <li><input type="checkbox" value="4">4</li>
-                <li><input type="checkbox" value="5">5</li>
-                <li><input type="checkbox" value="6">6</li>
-                <li><input type="checkbox" value="7">7</li>
-                <li><input type="checkbox" value="8">8</li>
-                <li><input type="checkbox" value="9">9</li>
-                <li><input type="checkbox" value="10">10</li>
-                <li><input type="checkbox" value="11">11</li>
-                <li><input type="checkbox" value="12">12</li>
-                <li><input type="checkbox" value="13">13</li>
-            </ul>
-            <ul>
-                <p>Style</p>
-                <li><input type="checkbox" value="Basketball">Basketball</li>
-                <li><input type="checkbox" value="Running">Running</li>
-                <li><input type="checkbox" value="Athletic">Athletic</li>
-            </ul>
-            <ul>
-                <p>Color</p>
-                <li><input type="checkbox" value="Black">Black</li>
-                <li><input type="checkbox" value="Green">White</li>
-                <li><input type="checkbox" value="Blue">Blue</li>
-                <li><input type="checkbox" value="Red">Red</li>
-                <li><input type="checkbox" value="Yellow">Yellow</li>
-                <li><input type="checkbox" value="Purple">Purple</li>
-            </ul> 
-            <ul>
-                <p>Price</p>
-                <li>$<input type="text" class="searchpricefirst"/></li>
-                <li>-</li>
-                <li>$<input type="text" class="searchpricefinal"/></li>
-            </ul>
-            <ul>
-                <p>Location</p>
-                <li><input type="checkbox" value="Manhattan">Manhattan</li>
-                <li><input type="checkbox" value="Queens">Queens</li>
-                <li><input type="checkbox" value="Brooklyn">Brooklyn</li>
-                <li><input type="checkbox" value="Bronx">Bronx</li>
-                <li><input type="checkbox" value="SI">Staten Island</li>
-            </ul>
-            <ul>
-                <p>Accepts Trades</p>
-                <li><input type="radio" name="Yes" value="Yes">Yes</li>
-                <li><input type="radio" name="No" value="No">No</li>
-            </ul> -->
-   <!--  <div>
-        <div>
-            <ul>
-                <li>
-                    <div>
-                        <div>
-                            <p>Jordan 6</p>
-                            <p><img src="#" href="#">Steve</p>
-                        </div>
-                        <div>
-                            <p>$320</p>
-                        </div>
-                        <div>
-                            <p>'12</p>
-                            <p>Lower East Side, Manhattan, NY</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+<div class="searchfield job largeSearch oneDiv">
+            <input type="text" id="search" class=" search search2" placeholder="Brand, Name, Neighborhood, Size, Price..."  >
+            <a href="/search" class="homesearchbtn">Search</a>
         </div>
-    </div> -->
-</div>
+
+        
+        <div class="searchResultsDiv oneDiv">
+            <ul class="searchResultsOptions">
+                <li class="searchResultsCount">{{getListings.length}} results for "{{search}}"</li>
+                <li class="searchResultsSort">Sort: <a href="">Best Match<i class="fa fa-caret-down"></i></a></li>
+            </ul>
+            <div class="searchResultsRefine">
+                <p class="searchRefineTitle">Refine Search</p>
+                <ul class="searchRefineCategories">
+                    <p class="searchRefineHeadings">Categories</p>
+                    <li><input type="checkbox" value="Nike">Apparel</li>
+                    <li><input type="checkbox" value="Jordan">Electronics</li>
+                    <li><input type="checkbox" value="Addidas">Shoes</li>
+                    <li><input type="checkbox" value="Addidas">Other</li>
+                </ul>
+                <ul class="searchRefineBrand">
+                    <p class="searchRefineHeadings">Brand</p>
+                    <li><input type="checkbox" value="Nike">Addidas</li>
+                    <li><input type="checkbox" value="Jordan">Asics</li>
+                    <li><input type="checkbox" value="Addidas">Jordan</li>
+                    <li><input type="checkbox" value="Addidas">Nike</li>
+                </ul>
+                <ul class="searchRefineCondition">
+                    <p class="searchRefineHeadings">Condition</p>
+                    <li><input type="checkbox" value="New">New</li>
+                    <li><input type="checkbox" value="LikeNew">Like New</li>
+                    <li><input type="checkbox" value="Used">Used</li>
+                    <li><input type="checkbox" value="Broken">Broken</li>
+                </ul>
+                <ul class="searchRefineSize">
+                    <p class="searchRefineHeadings">Size</p>
+                    <li class="searchRefineSizeStart">
+                        <select>
+                            <option value="5">Select</option>
+                            <option value="5">5</option>
+                            <option value="5">5.5</option>
+                            <option value="6">6</option>
+                            <option value="5">6.5</option>
+                            <option value="7">7</option>
+                            <option value="5">7.5</option>
+                            <option value="8">8</option>
+                            <option value="5">8.5</option>
+                            <option value="9">9</option>
+                            <option value="5">9.5</option>
+                            <option value="10">10</option>
+                            <option value="5">10.5</option>
+                            <option value="5">11</option>
+                            <option value="5">11.5</option>
+                            <option value="5">12</option>
+                            <option value="5">12.5</option>
+                            <option value="5">13</option>
+                            <option value="5">13.5</option>
+                            <option value="5">14</option>
+                        </select>
+                    </li>
+                    <li class="searchRefineDash">to</li>
+                    <li class="searchRefineSizeEnd">
+                        <select>
+                            <option value="5">Select</option>
+                            <option value="5">5</option>
+                            <option value="5">5.5</option>
+                            <option value="6">6</option>
+                            <option value="5">6.5</option>
+                            <option value="7">7</option>
+                            <option value="5">7.5</option>
+                            <option value="8">8</option>
+                            <option value="5">8.5</option>
+                            <option value="9">9</option>
+                            <option value="5">9.5</option>
+                            <option value="10">10</option>
+                            <option value="5">10.5</option>
+                            <option value="5">11</option>
+                            <option value="5">11.5</option>
+                            <option value="5">12</option>
+                            <option value="5">12.5</option>
+                            <option value="5">13</option>
+                            <option value="5">13.5</option>
+                            <option value="5">14</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul class="searchRefineStyle">
+                    <p class="searchRefineHeadings">Style</p>
+                    <li><input type="checkbox" value="Basketball">Basketball</li>
+                    <li><input type="checkbox" value="Running">Running</li>
+                    <li><input type="checkbox" value="Athletic">Athletic</li>
+                </ul>
+                <ul class="searchRefineColor">
+                    <p class="searchRefineHeadings">Color</p>
+                    <li>
+                        <input type="text" id="colorpicker" style="display: none;">
+                        <div class="sp-replacer sp-light full-spectrum">
+                            <div class="sp-preview">
+                                <div class="sp-preview-inner" style="background-color: rgb(0, 0, 0);"></div>
+                            </div>
+                            <div class="sp-dd">▼</div>
+                        </div> 
+                    </li>
+                </ul> 
+                <ul class="searchRefinePrice">
+                    <p class="searchRefineHeadings">Price</p>
+                    <li>$<input type="text" class="searchpricefirst"/></li>
+                    <li class="searchRefineDash">to</li>
+                    <li>$<input type="text" class="searchpricefinal"/></li>
+                </ul>
+                <ul class="searchRefineLocation">
+                    <p class="searchRefineHeadings">Location</p>
+                    <li><input type="checkbox" value="Manhattan">Manhattan</li>
+                    <li><input type="checkbox" value="Queens">Queens</li>
+                    <li><input type="checkbox" value="Brooklyn">Brooklyn</li>
+                    <li><input type="checkbox" value="Bronx">Bronx</li>
+                    <li><input type="checkbox" value="SI">Staten Island</li>
+                </ul>
+                <ul class="searchRefineTrades">
+                    <p class="searchRefineHeadings">Accepts Trades</p>
+                    <li><input type="radio" name="Yes" value="Yes">Yes</li>
+                    <li><input type="radio" name="No" value="No">No</li>
+                </ul> 
+                <ul class="searchRefineRating">
+                    <p class="searchRefineHeadings">Seller Rating</p>
+                    <li>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" />
+                            <label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" />
+                            <label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" />
+                            <label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" />
+                            <label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" />
+                            <label class="half" for="starhalf"></label>
+                        </fieldset>
+                    </li>
+                </ul>
+            </div>
+            <div class="searchResultsCards">
+                <ul class="searchResultsCardUl">
+                    {{#each getListings}}
+                    {{> searchcard}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
 </template>

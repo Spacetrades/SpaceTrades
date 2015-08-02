@@ -1,22 +1,19 @@
 <template name="searchcard">
-	<li>
-        <div>
-            <div class="searchcarditp">
-                <a href="#"><img src="{{img1}}"></a>                      
-                <!-- Underline Listing title onhover -->
-            </div>
-            <div class="listinglink">
-            <a href="/listing/{{_id}}" class="listingtitle">{{listing_title}}</a>
-            </div>
-            <div class="cardpsa">
-                <p class="cardprice">${{price}}</p>
-                <p class="cardsl"><span class="cardsize">
-                '{{size}}</span>
-                </p>
-            </div>
-            <div class="cardna">
-                <a class="cardname" href="/profile/{{creator_id}}">{{username}}</a>
-            </div>
-        </div>
+    <li class="searchResultsCardLi">
+        <ul class="searchResultsCardLeft">
+            <li class="searchResultsCardImage">
+                <a href="/listing/{{_id}}">
+                    <img src="{{img1}}" class="searchResultsCardImg">
+                </a>
+            </li>
+        </ul>
+        <ul class="searchResultsCardRight">
+            <li class="searchResultsCardTitle"><a href="/listing/{{_id}}"><h2>{{listing_title}}</h2></a></li>
+            <li class="searchResultsCardName"><p>Sold By <a href="/profile/{{creator_id}}">{{username}}</a></p></li>
+            <li class="searchResultsCardPrice"><span class="money">${{price}}</span></li>
+            <li class="searchResultsCardSize"><b>Size:</b> {{size}}</li>
+            <li class="searchResultsCardCondition"><b>Condition:</b> {{condition}}</li>
+            <li class="searchResultsCardLocation"><b>Area:</b> {{city}}, New York</li>
+        </ul>
     </li>
 </template>
