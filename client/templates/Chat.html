@@ -1,4 +1,4 @@
-<template name="ChatInput">
+<!-- <template name="ChatInput"> 
 <div class="chatInput">
 <textarea rows="3" class="newMessage"></textarea>
 <textarea rows="1" cols="100" name="message" class="newMessage form-message-input" autofocus="true" style="overflow: hidden; word-wrap: break-word; resize: none; height: 37px;"></textarea>
@@ -29,10 +29,177 @@ People
 <template name="messageCard">
 <b class="usernameChat">{{username}}</b> - {{message}}
 <br />
-</template>
+</template> -->
 <!-- 
 	var date = new Date(timestamp);
 	var hours = date.getHours();
 	var minutes = "0" + date.getMinutes();
 	var seconds = "0" + date.getSeconds();
 	return hours + ':' + minutes.substr(minutes.length-2) + ':' + seconds.substr(seconds.length-2); -->
+	<template name="Messages">
+		<div class="chatDiv oneDiv">
+			<ul class="chatLeft">
+				<li class="chatInbox">
+					<ul>
+						<li class="chatInboxTop">
+							<ul>
+								<li class="chatInboxTitle"><h3>Inbox</h3></li>
+								<li class="chatInboxSearch"><i class="fa fa-search"></i><input type=text class="chatInboxSeachInput"></li>
+							</ul>
+						</li>
+					</ul> 
+				</li>
+				<li class="chatPeople">
+					<ul>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Nathan</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Peter</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">George</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Yusuf</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Steve</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Ruben</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Ana</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Jon</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Michael</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+						<li class="chatPerson">
+							<ul>
+								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+								<li><a href="#">Jake</a></li>
+								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="chatRight">
+				<li class="chatTopSection">
+					<ul>
+						<li><h3><a href="">Yusuf Bagha</a></h3></li>
+						<li>
+							<div class="circle" style="background-color:#24ec3d;"></div>
+						</li>
+					</ul>
+				</li>
+				<li class="chatMessages">
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+					<ul class="chatUserSent">
+						<li>I was interested in buying your shoes</li>  
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+					</ul>
+					<ul class="chatUserReceived">
+						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+						<li>I was interested in buying your shoes</li>            
+					</ul>
+				</li>
+				<li class="chatBottomSection">
+					<ul class="chatInputText">
+						<li><input type="text" class="chatText"></li>
+					</ul>
+					<ul class="chatSend">
+						<li><i class=" fa fa-paperclip"></i></li>
+						<li class="chatSendButton"><a href="#">Send</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</template>
