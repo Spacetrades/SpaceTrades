@@ -6,12 +6,12 @@
             <li class="profileReceivedLi profileViewMeetupLi">
                 <ul class="profileReceivedCardLeft">
                     <li class="profileReceivedImage">
-                        <a href="/listing/{{_id}}"><img src="{{img}}" class="profileReceivedImg"></a>
+                        <a href="/listing/{{listingid}}"><img src="{{img}}" class="profileReceivedImg"></a>
                     </li>
                 </ul>
                 <ul class="profileReceivedCardRight profileViewMeetupRight">
-                    <li><a href="/listing/{{_id}}"><h3>{{listing_title}}</h3></a></li>
-                    <li class="profileReceivedName">You send Offer To {{creator}}</li>
+                    <li><a href="/listing/{{listingid}}"><h3>{{listing_title}}</h3></a></li>
+                    <li class="profileReceivedName">You sent an Offer To <a href="/profile/{{creator_id}}">{{creator}}</a></li>
                     <li class="profileReceivedPrice"><b>Final Price:</b> <span class="money">${{offerprice}}</span></li>
                     <li class="profileReceivedDate"><b>Date of Meetup:</b> {{date}}</li>
                     <li class="profileReceivedLocation"><b>Location:</b> {{location}}</li>

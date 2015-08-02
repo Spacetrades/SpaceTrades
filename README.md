@@ -95,6 +95,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 
 ## Tasks:
 	Implement Hubot in some way
+	https://www.resrc.it/pricing/us
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
 	jQuery - $( ".cardul" ).hide() NOT $(".cardul") AKA Parenthesis Padding *PP*
