@@ -3908,5 +3908,193 @@ On click the images will be displayed at normal size to complete the effect
     margin-bottom: 50px;
 }
 
+.largeSearch {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #00bfff;
+}
+
+
+
+.spaceBlue {
+    color: #00bfff !important;
+}
+
+.searchResultsDiv > div {
+    display: inline-block;
+}
+
+.searchResultsRefine {
+    width: 15%;
+}
+
+.searchResultsCards {
+    width: 80%;
+}
+
+.searchResultsRefine input[type=checkbox] {
+    zoom: 1;
+    vertical-align: middle !important;
+    margin: auto 5px 1px auto;
+}
+
+.searchResultsDiv {
+    margin-top: 0 !important;
+}
+
+.searchResultsOptions {
+    margin-top: 10px;
+}
+
+.searchResultsOptions li {
+    display: inline-block;
+}
+
+.searchResultsCount {
+    font-size: 0.8rem;
+}
+
+.searchResultsSort {
+    float: right !important;
+    margin-right: 30px;
+    font-size: 0.8rem;
+}
+
+.searchResultsSort a {
+    margin-left: 3px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    color: #fff !important;
+    background-color: #00bfff;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+}
+
+.searchResultsSort a i {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.searchRefineHeadings {
+    color: #00bfff;
+}
+
+.searchResultsRefine ul li{
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.searchResultsRefine ul > p {
+    margin-bottom: 0px;
+}
+
+.searchRefineTitle {
+    font-size: 1.1rem;
+    text-decoration: underline;
+    margin-bottom: 5px !important;
+}
+
+.searchRefineSize li, .searchRefinePrice li {
+    display: inline-block;
+}
+
+.searchRefineDash {
+    margin: 0 5px
+}
+
+.searchRefinePrice li input {
+    width: 30px;
+    margin-left: 2px;
+    height: 20px !important:
+}
+
+.searchRefineTrades li input {
+    vertical-align: middle !important;
+    margin-bottom: 5px;
+}
+
+.searchResultsCards {
+    vertical-align: top;
+    margin-top: 0px;
+}
+
+.searchResultsCardUl > li {
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #00bfff;
+    border-radius: 6px;
+    margin: 10px 0 10px 10%;
+}
+
+.searchResultsCardUl > li:hover {
+    border: 2px solid #f8504b !important;
+}
+
+.searchResultsCardLi > ul {
+    display: inline-block;
+}
+
+.searchResultsCardLeft {
+    width: 30% !important;  
+    height: 200px;
+}
+
+.searchResultsCardRight {
+    width: 40%;
+    vertical-align: top !important;
+    margin-left: 3%;
+}
+
+.searchResultsCardRight li b {
+    margin-right: 3px;
+}
+
+.searchResultsCardImage,.searchResultsCardImg {
+    width: 100% !important;
+    height: 100%;
+}
+
+.searchResultsCardTitle a h2 {
+    margin: 0 !important;
+    color: #00bfff;
+}
+
+.searchResultsCardTitle a h2:hover {
+    text-decoration: underline;
+}
+
+.searchResultsCardName p {
+    margin: 0 0 5px 0 !important;
+    font-size: 0.9rem;
+    color: #3c37c3;
+    font-style: italic;
+}
+
+.searchResultsCardName p a {
+    color: #3c37c3;
+}
+
+.searchResultsCardName p a:hover {
+    color: #3c37c3;
+    text-decoration: underline;
+}
+
+.searchResultsCardPrice, .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
+    font-size: 1.05rem;
+    margin: 10px 0;
+}
+
+.searchResultsCardPrice {
+    margin: 0 0 15px 0;
+}
+
+.seachResultsCardArea  {
+    margin-bottom: 0;
+}
+
+
+
 
 
