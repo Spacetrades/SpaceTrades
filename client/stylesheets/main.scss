@@ -156,12 +156,13 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 .offerItemStatus {
     text-align: center;
-    width: 13%;
+    width: 90%;
     float: none;
     margin: 0 auto;
     margin-top: 2em;
     border-radius: 7px;
     padding: 1em;
+    margin-top: 1em !important;
 }
 
 .status-pending {
@@ -3285,7 +3286,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box-listing p {
-    padding-left: 0.5em;
+    padding: 1em;
 }
 
 .desc-width {
@@ -3805,7 +3806,7 @@ On click the images will be displayed at normal size to complete the effect
     width: 100%;
     margin-bottom: 20px;
     padding: 10px;
-    border: 2px solid #00bfff;
+    border: 2px solid #75D855;
 }
 
 .profileReceivedLi > ul {
