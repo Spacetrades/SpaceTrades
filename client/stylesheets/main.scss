@@ -162,6 +162,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     margin-top: 2em;
     border-radius: 7px;
     padding: 1em;
+    margin-top: 1em !important;
 }
 
 .status-pending {
@@ -3285,7 +3286,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box-listing p {
-    padding-left: 0.5em;
+    padding: 1em;
 }
 
 .desc-width {
