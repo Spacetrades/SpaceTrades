@@ -3974,6 +3974,7 @@ On click the images will be displayed at normal size to complete the effect
 .searchResultsSort a i {
     margin-left: 5px;
     vertical-align: middle;
+    color: #fff !important;
 }
 
 .searchRefineHeadings {
@@ -4000,18 +4001,19 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .searchRefineDash {
-    margin: 0 5px
+    margin: 0 5px;
 }
 
 .searchRefinePrice li input {
     width: 30px;
     margin-left: 2px;
-    height: 20px !important:
+    height: 20px !important;
 }
 
 .searchRefineTrades li input {
     vertical-align: middle !important;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    margin-right: 3px;
 }
 
 .searchResultsCards {
