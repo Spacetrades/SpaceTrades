@@ -37,7 +37,6 @@ SearchSource.defineSource('listing', function (searchText, options) {
     }
 
     var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
-    console.log(query);
     return query;
     // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
     // Listing.find({ $or:[ { listing_title: /(?=.*Runn).+/i},{ brand: /(?=.*Runn).+/i } ] }).fetch();
