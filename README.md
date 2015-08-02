@@ -76,6 +76,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
 	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
 	-// - Comments have been removed
+	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 
 ## Inline Comments:
 	TASK - A task to complete in a certain file
