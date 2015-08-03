@@ -4,7 +4,8 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+  	// process.env.MAIL_URL = 'smtp://postmaster%40meteorize.mailgun.org:YOURPASSWORD@smtp.mailgun.org:587'
+	// TASK - Include mail url for mailgun
     Meteor.publish("listing", function () {
       return Listing.find({});
     });

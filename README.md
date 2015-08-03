@@ -97,7 +97,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Use Lookback SEO
 
 ## Tasks:
-	Implement Hubot in some way
+	ChatOps
 	https://www.resrc.it/pricing/us
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
@@ -113,6 +113,11 @@ Extensive undertandability is less crucial in the beginning stage of development
 	JS - Objects get there own TB 1ln padding
 	JS - Significantly different code sections receive BL 1ln padding
 	JS - Console.log's get grouped if possible into sections using //L// and //-L//
+
+## Rand
+	npm install -g eslint
+	npm install -g babel-eslint
+	npm install -g eslint-plugin-react
 
 ## Dependencies
 	accounts-facebook               1.0.4  Login service for Facebook accounts
