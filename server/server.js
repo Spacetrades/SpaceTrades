@@ -10,7 +10,7 @@ if (Meteor.isServer) {
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
 
-Houston.add_collection('houston_admins');
+// Houston.add_collection('houston_admins');
 
 SearchSource.defineSource('listing', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20}; 

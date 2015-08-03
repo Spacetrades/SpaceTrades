@@ -892,7 +892,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 }
 
 .homesearchbtn {
-    padding: 11px 16px;
+    padding: 12px 16px;
     background-color: #f8504b;
     color: #fff !important;
     margin-left: 8px;
@@ -1612,7 +1612,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     *******************/
 
     .oneDiv {
-        // Don't Change Yusuf !!! It messes up the homecards with less than 5% on each side
         margin: 3rem 10% 2rem 10% !important;
         font-family: $font_stack-norm !important;
     }
@@ -2426,7 +2425,7 @@ i:hover {
 // }
 
 .headerSearch {
-    margin-top: 12px !important;
+    margin-top: 7px !important;
     margin-bottom: 8px !important;
     vertical-align: middle;
     float: left !important;
@@ -2435,7 +2434,7 @@ i:hover {
 .headerNavSearch {
     vertical-align: middle;
     width: 18rem;
-    height: 34px; /* 34px is the max height*/
+    height: 32px; /* 34px is the max height*/
     border: 1px solid #fff;
     outline: none;
     padding-left: 10px;
@@ -2447,7 +2446,7 @@ i:hover {
     color: #fff !important;
     border: 1px solid #fff;
     margin: 0;
-    padding: 8px 10px 7px 10px !important;
+    padding: 9px 10px !important;
 }
 
 .headerNavSearchButton:hover {
@@ -2458,14 +2457,14 @@ i:hover {
     margin: 0;
     margin-left: 20px;
     margin-right: 10px;
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
     font-weight: 700;
     color: $color-spacegrey !important;
 }
 
 
 .headerNameOptions {
-    margin: 13px 2px 7px 2px !important;
+    margin: 11px 2px 7px 2px !important;
 }
 
 .headerNameOptions li img {
@@ -2474,6 +2473,10 @@ i:hover {
     border-radius: 50%;
     vertical-align: middle;
     margin-right: 3px;
+}
+
+.headerBigCat {
+    margin-top: 14px !important;
 }
 
 .headerBigCat li {
@@ -2519,6 +2522,10 @@ i:hover {
     color: $color-spacered;
 }
 
+.headerHomeButton {
+    margin: 11px 0 !important;
+}
+
 .headerNameOptions li a, .headerHomeButton li a {
     padding: 12px !important;
 }
@@ -2529,7 +2536,7 @@ i:hover {
 } 
 
 .headerPostOptions {
-    margin: 16px 25px 10px 5px !important;
+    margin: 12px 25px 9px 5px !important;
 }
 
 .headerPostOptions li ul li {
@@ -3410,19 +3417,20 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserMore li a {
-    margin-top: 15px !important;
     font-size: 1.2rem;
-    padding: 15px 22px;
-    color: $color-spacered;
-    border: 1px solid $color-spacered;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    padding: 16px 22px;
+    color: #fff;
+    background-color: $color-spacegrey;
+    border: 1px solid $color-spacegrey;    
     border-radius: 6px;
     overflow: hidden;
 }
 
 .profileUserMore li a:hover {
-    color: $color-spaceblue;
-    border-color: $color-spaceblue;
+    color: #fff;
+    background-color: $color-spacered !important;
+    border: 1px solid $color-spacered !important;
+    box-shadow: none !important; 
 }
 
 .headerSearchLogo {
@@ -3746,6 +3754,10 @@ On click the images will be displayed at normal size to complete the effect
 
 .footerItems li h4 {
     margin: 0 5px !important;
+}
+
+.footerItems li h4 a, .footerItems li h4 a:visited, .footerItems li h4 a:link {
+    color: #404040 !important;
 }
 
 .footerItems li h4 a:hover {
@@ -4230,7 +4242,10 @@ On click the images will be displayed at normal size to complete the effect
     color: #fff;
 }
 
-
+.headerHelp {
+    padding: 0 0 0px 10px;
+    border-left: 1px solid #404040;
+}
 
 
 
