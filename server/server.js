@@ -30,26 +30,38 @@ SearchSource.defineSource('listing', function (searchText, options) {
     //   // type: regExp, 
     //   // city: regExp
     // };
-    var selector1 = {
+    var selectorTitle = {
       listing_title:  regExp
     }
-    var selector2 = {
+
+    var selectorBrand = {
       brand:  regExp
     }
 
-    var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
-    return query;
+    var selectorPrice = {
+      price: regExp
+    }
 
-    // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
-    // Listing.find({ $or:[ { listing_title: /(?=.*Runn).+/i},{ brand: /(?=.*Runn).+/i } ] }).fetch();
+    var selectorCategory = {
+      category: regExp
+    }
+
+    var selectorCity = {
+      city: regExp
+    }
+
+    var selectorState = {
+      state: regExp
+    }
+
+
+
+    var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorCity, selectorState ] }).fetch();
+    return query;
   }
 
-  // else {
-  //   console.log("2:" + Listing.find({}, options).fetch());
-  //   return Listing.find({}, options).fetch();
-  // }
-
 // TASK - Learn the right way to make a RegExp
+// TASK - Incorporate Autocomplete
 
   function buildRegExp (searchText) {
     var words = searchText.trim().split(/[ \-\:]+/);

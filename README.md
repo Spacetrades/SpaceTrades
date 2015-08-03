@@ -79,6 +79,12 @@ Extensive undertandability is less crucial in the beginning stage of development
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
 
+## Sublime Stuff
+	[
+	{ "keys": ["ctrl+shift+r"], "command": "reindent" },
+	{ "keys": ["ctrl+alt+shift+w"], "command": "close_all" }
+	]
+
 ## Inline Comments:
 	TASK - A task to complete in a certain file
 	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
