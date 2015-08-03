@@ -17,7 +17,6 @@ https://trello.com/b/IETMH34k/meteor-development
 - [:computer: Coffeescript](http://coffeescript.org/)
 - [:computer: Google Maps](https://developers.google.com/maps/documentation/javascript/reference?hl=en)
 
-
 ## Stylesheets
 - [:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
 
@@ -78,13 +77,22 @@ Extensive undertandability is less crucial in the beginning stage of development
 	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
 	-// - Comments have been removed
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
+	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
+
+## Sublime Stuff
+	[
+	{ "keys": ["ctrl+shift+r"], "command": "reindent" },
+	{ "keys": ["ctrl+alt+shift+w"], "command": "close_all" }
+
+	Make one for refreshing folders
+	]
 
 ## Inline Comments:
 	TASK - A task to complete in a certain file
 	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
-	IDEAL - A suggestion to do something differently 
+	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
 
 ## Server:
 	/opt/spacetrades - Location of ST files
@@ -97,12 +105,14 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Use Lookback SEO
 
 ## Tasks:
-	Implement Hubot in some way
+	ChatOps
 	https://www.resrc.it/pricing/us
+	Implement Flow Router and Flow layoutss
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
 	jQuery - $( ".cardul" ).hide() NOT $(".cardul") AKA Parenthesis Padding *PP*
 	SCSS - ALLOW double letter bonding Ex: .prohibiteddiv and NOT .prohibitediv
+	LR - Left Right
 	JS - Conditional blocks receive 1ln padding on top and bottom
 	JS - Comments receive 1ln padding on top
 	JS - If else blocks evade previous rule
@@ -113,6 +123,14 @@ Extensive undertandability is less crucial in the beginning stage of development
 	JS - Objects get there own TB 1ln padding
 	JS - Significantly different code sections receive BL 1ln padding
 	JS - Console.log's get grouped if possible into sections using //L// and //-L//
+	URL Names - Do not group words that end and begin with the same letter for readability sake. Ex: selllisting - Bad, listingsell - Good
+	Files - Everything of its own significant gravity should be its own file
+	JS Callback functions - Keep on same line as caller function Ex:$(".searchRefineCategories li input").each( function () {
+
+## Rand
+	npm install -g eslint
+	npm install -g babel-eslint
+	npm install -g eslint-plugin-react
 
 ## Dependencies
 	accounts-facebook               1.0.4  Login service for Facebook accounts

@@ -10,7 +10,7 @@ if (Meteor.isServer) {
 // New users receive a verification email
 Accounts.config({'sendVerificationEmail': true});
 
-Houston.add_collection('houston_admins');
+// Houston.add_collection('houston_admins');
 
 SearchSource.defineSource('listing', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20}; 
@@ -21,35 +21,43 @@ SearchSource.defineSource('listing', function (searchText, options) {
   if (searchText) {
     var regExp = buildRegExp(searchText);
 
-// Comment Reason - Additional field for the search which can be enabled later
-    // var selector = {
-    //   listing_title: regExp,
-    //   brand: regExp
-    //   // username: regExp,
-    //   // category: regExp, 
-    //   // type: regExp, 
-    //   // city: regExp
-    // };
-    var selector1 = {
+    var selectorTitle = {
       listing_title:  regExp
     }
-    var selector2 = {
+
+    var selectorBrand = {
       brand:  regExp
     }
 
-    var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
-    return query;
+    var selectorPrice = {
+      price: regExp
+    }
 
-    // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
-    // Listing.find({ $or:[ { listing_title: /(?=.*Runn).+/i},{ brand: /(?=.*Runn).+/i } ] }).fetch();
+    var selectorCategory = {
+      category: regExp
+    }
+
+    var selectorUserName = {
+      username: regExp
+    }
+
+    var selectorCity = {
+      city: regExp
+    }
+
+    var selectorState = {
+      state: regExp
+    }
+
+
+
+    var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState ] }).fetch();
+    console.log(query);
+    return query;
   }
 
-  // else {
-  //   console.log("2:" + Listing.find({}, options).fetch());
-  //   return Listing.find({}, options).fetch();
-  // }
-
 // TASK - Learn the right way to make a RegExp
+// TASK - Incorporate Autocomplete
 
   function buildRegExp (searchText) {
     var words = searchText.trim().split(/[ \-\:]+/);
@@ -267,74 +275,5 @@ ipLocate: function() {
 }
 });
 
-  // DB Shows
-
-  Meteor.publish('listingShow', function (listingShow) {
-    // console.log(listingShow);
-
-    // if (listingShow) {
-    return Listing.find({}, { limit: 16 });
-  // }
-  // else {
-  //   return this.stop();
-  // }
-  });
-
-  Meteor.publish('homeShowMore', function () {
-    return Listing.find({}, {limit: 32  });
-  });
-
-  Meteor.publish('offerShow', function () {
-    return Offer.find({}, { limit: 100 });
-  });
-
-
-  // Meteor.publish('offerNum', function () {
-  //   return Offer.find({ listingId: id }).count();
-  // });
-
-  Meteor.publish('userShow', function () {
-    return Meteor.users.find({}, { limit: 100 });
-  });
-
-  // Meteor.publish('listingUser', function () {
-  //   return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
-  // });
-
-  Meteor.publish('messageShow', function () {
-    return Message.find({}, { sort: { timestamp: -1 }, limit: 20 });
-  });
-
-  Meteor.publish('listingId', function (id) { 
-    return Listing.find({ _id: id });
-  });
-
-    Meteor.publish('offerId', function (id) {
-    return Offer.find({ _id: id});
-  });
-
-  Meteor.publish('userIdprof', function (id) {
-    return Meteor.users.find( { _id: id } );
-  });
-
-  // Meteor.publish('')
-
-
-  // Meteor.publish('listingLatLng', function () {
-  //   return {
-  //     Listing.find( {_})
-  //   }
-  // })
-
-//  Meteor.publish('imagesShow', function () {
-//   return Images.find({}, { limit: 100 });
-// });
-
- Meteor.publish('addListing');
- Meteor.publish('sendEmail');
- Meteor.publish('addOffer');
- Meteor.publish('userStatus');
- Meteor.publish('locateUser');
- Meteor.publish('ipLocate');
 
 }
