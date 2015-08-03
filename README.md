@@ -115,63 +115,55 @@ Extensive undertandability is less crucial in the beginning stage of development
 	JS - Console.log's get grouped if possible into sections using //L// and //-L//
 
 ## Dependencies
-	accounts-facebook                      1.0.4  Login service for Facebook accounts
-	accounts-password                      1.1.1  Password support for accounts
-	accounts-ui                            1.1.5  Simple templates to add login widgets to an app
-	alanning:roles                         1.2.13  Role-based authorization
-	aldeed:autoform                        5.3.2  Easily create forms with automatic insert and update, and automatic reactive validation.
-	aldeed:collection2                     2.3.2* Automatic validation of insert and update operations on the client and server.
-	awatson1978:mousetrap                  1.5.2  Mousetrap packaged for Meteor
-	bozhao:accounts-instagram              0.2.0  Instagram account login for meteor
-	ccorcos:clientside-image-manipulation  1.0.4  A clientside javascript library for manipulating images before uploading.
-	chart:chart                            1.0.1-beta.4  Chart.js (official) - Responsive, simple, clean and interactive charts using HTML5 <canvas>
-	coffeescript                           1.0.6  Javascript dialect with fewer braces and semicolons
-	dburles:google-maps                    1.1.1  Google Maps Javascript API v3
-	edgee:slingshot                        0.7.1  Directly post files to cloud storage services, such as AWS-S3.
-	email                                  1.0.6  Send email messages
-	ericksond:clndr                        0.0.1  Wrapper for clndr.js
-	fortawesome:fontawesome                4.3.0  Font Awesome (official): 500+ scalable vector icons, customizable via CSS, Retina friendly
-	fourseven:scss                         1.2.3* Style with attitude and autoprefixer.
-	francocatena:compass                   0.5.1  Stylesheet Authoring Environment that makes your website design simpler
-	gadicohen:headers                      0.0.27  Access HTTP headers on both server and client
-	http                                   1.1.0  Make HTTP calls to remote servers
-	iron:router                            1.0.9  Routing specifically designed for Meteor
-	jamgold:cropuploader                   0.0.3_3  Use slingshot to upload images to S3 and create thumbnails
-	jeremy:snapsvg                         0.4.1_2  The JavaScript library for modern SVG graphics. http://snapsvg.io
-	jquery                                 1.11.3_2  Manipulate the DOM using CSS selectors
-	juliancwirko:s-alert                   2.4.1  Simple and fancy notifications / alerts / errors for Meteor
-	kevohagan:sweetalert                   1.0.0  a beautiful replacement for javascript's alert()
-	less                                   1.0.14  The dynamic stylesheet language
-	lookback:seo                           1.1.0  Automatically add meta, OpenGraph and Twitter tags from your Iron Router routes.
-	markdown                               1.0.4  Markdown-to-HTML processor
-	matthew:foundation5-sass               1.0.0  Foundation 5 with Sass support
-	mdg:camera                             1.1.4  Photos with one function call on desktop and mobile.
-	mdg:geolocation                        1.0.3  Provides reactive geolocation on desktop and mobile.
-	meteor-platform                        1.2.2  Include a standard set of Meteor packages in your app
-	meteorhacks:kadira                     2.22.0* Performance Monitoring for Meteor
-	meteorhacks:npm                        1.4.0  Use npm modules with your Meteor App
-	meteorhacks:search-source              1.3.1* Reactive Data Source for Search
-	mike:mocha                             0.6.0* Run mocha tests in the browser
-	mizzao:jquery-ui                       1.11.2* Simple lightweight pull-in for jQuery UI in Meteor
-	mizzao:user-status                     0.6.5  User connection and idle state tracking for Meteor
-	multiply:iron-router-progress          1.0.1  Progressbar for iron:router
-	natestrauser:animate-css               3.2.6  Animate.css packaged for meteor
-	nemo64:bootstrap                       3.3.5_1* Highly configurable bootstrap integration.
-	npm-container                          1.1.0+ Contains all your npm dependencies
-	peerlibrary:blaze-components           0.13.0  Reusable components for Blaze
-	percolatestudio:segment.io             3.0.0  Segment.io integration for Meteor (works on both client and server) at version 1.0.3
-	practicalmeteor:chai                   2.1.0_1  The Chai Assertion Library, v2.1.0
-	raix:handlebar-helpers                 0.2.4  Handlebar helpers
-	reactjs:react                          0.2.4  React rendering for Meteor apps
-	richsilv:pikaday                       1.0.1  Pikaday JavaScript Datepicker for Meteor — lightweight, no dependencies, modular CSS
-	ryanswapp:spectrum-colorpicker         0.0.1  A meteor wrapper for the spectrum colorpicker
-	rzymek:fullcalendar                    2.3.1  Full-sized drag & drop event calendar (jQuery plugin)
-	sacha:spin                             2.3.1  Simple spinner package for Meteor
-	service-configuration                  1.0.4  Manage the configuration for third-party services
-	tmeasday:publish-counts                0.4.0* Publish the count of a cursor, in real time
-	todda00:friendly-slugs                 0.3.3  Generate URL friendly slugs from a field with auto-incrementation to ensure unique URLs.
-	tomi:upload-jquery                     2.1.6* Client template for uploads using "jquery-file-upload" from blueimp
-	tomi:upload-server                     1.2.5* Upload server for Meteor. Allows to save and serve files from arbitrary directory
-	u2622:persistent-session               0.3.5* Persistently store Session data on the client
-	underscore                             1.0.3  Collection of small helpers: _.map, _.each, ...
-	yogiben:admin                          1.1.1* A complete admin dashboard solution
+	accounts-facebook               1.0.4  Login service for Facebook accounts
+	accounts-password               1.1.1  Password support for accounts
+	accounts-ui                     1.1.5  Simple templates to add login widgets to an app
+	alanning:roles                  1.2.13  Role-based authorization
+	aldeed:autoform                 5.3.2  Easily create forms with automatic insert and update, and automatic reactive validation.
+	aldeed:collection2              2.3.3  Automatic validation of insert and update operations on the client and server.
+	bozhao:accounts-instagram       0.2.0  Instagram account login for meteor
+	chart:chart                     1.0.1-beta.4  Chart.js (official) - Responsive, simple, clean and interactive charts using HTML5 <canvas>
+	coffeescript                    1.0.6  Javascript dialect with fewer braces and semicolons
+	dburles:google-maps             1.1.1  Google Maps Javascript API v3
+	edgee:slingshot                 0.7.1  Directly post files to cloud storage services, such as AWS-S3.
+	email                           1.0.6  Send email messages
+	fortawesome:fontawesome         4.3.0  Font Awesome (official): 500+ scalable vector icons, customizable via CSS, Retina friendly
+	fourseven:scss                  1.2.3* Style with attitude and autoprefixer.
+	francocatena:compass            0.5.1  Stylesheet Authoring Environment that makes your website design simpler
+	gadicohen:headers               0.0.27  Access HTTP headers on both server and client
+	houston:admin                   2.0.3  A zero-config Meteor Admin
+	http                            1.1.0  Make HTTP calls to remote servers
+	iron:router                     1.0.9  Routing specifically designed for Meteor
+	jeremy:snapsvg                  0.4.1_2  The JavaScript library for modern SVG graphics. http://snapsvg.io
+	jquery                          1.11.3_2  Manipulate the DOM using CSS selectors
+	juliancwirko:s-alert            2.4.1  Simple and fancy notifications / alerts / errors for Meteor
+	kevohagan:sweetalert            1.0.0  a beautiful replacement for javascript's alert()
+	less                            1.0.14  The dynamic stylesheet language
+	lookback:seo                    1.1.0  Automatically add meta, OpenGraph and Twitter tags from your Iron Router routes.
+	markdown                        1.0.4  Markdown-to-HTML processor
+	matthew:foundation5-sass        1.0.0  Foundation 5 with Sass support
+	mdg:camera                      1.1.4  Photos with one function call on desktop and mobile.
+	mdg:geolocation                 1.0.3  Provides reactive geolocation on desktop and mobile.
+	meteor-platform                 1.2.2  Include a standard set of Meteor packages in your app
+	meteorhacks:fast-render         2.7.1  Render your app before the DDP connection even comes alive - magic?
+	meteorhacks:kadira              2.22.1  Performance Monitoring for Meteor
+	meteorhacks:npm                 1.4.0  Use npm modules with your Meteor App
+	meteorhacks:search-source       1.4.0  Reactive Data Source for Search
+	mike:mocha                      0.6.2  Run mocha tests in the browser
+	mizzao:jquery-ui                1.11.4  Simple lightweight pull-in for jQuery UI in Meteor
+	mizzao:user-status              0.6.5  User connection and idle state tracking for Meteor
+	multiply:iron-router-progress   1.0.1  Progressbar for iron:router
+	nemo64:bootstrap                3.3.5_2  Highly configurable bootstrap integration.
+	npm-container                   1.1.0+ Contains all your npm dependencies
+	peerlibrary:blaze-components    0.13.0  Reusable components for Blaze
+	percolatestudio:segment.io      3.0.0  Segment.io integration for Meteor (works on both client and server) at version 1.0.3
+	practicalmeteor:chai            2.1.0_1  The Chai Assertion Library, v2.1.0
+	raix:handlebar-helpers          0.2.4  Handlebar helpers
+	richsilv:pikaday                1.0.1  Pikaday JavaScript Datepicker for Meteor — lightweight, no dependencies, modular CSS
+	ryanswapp:spectrum-colorpicker  0.0.1  A meteor wrapper for the spectrum colorpicker
+	sacha:spin                      2.3.1  Simple spinner package for Meteor
+	service-configuration           1.0.4  Manage the configuration for third-party services
+	tmeasday:publish-counts         0.5.1  Publish the count of a cursor, in real time
+	todda00:friendly-slugs          0.3.3  Generate URL friendly slugs from a field with auto-incrementation to ensure unique URLs.
+	u2622:persistent-session        0.4.0* Persistently store Session data on the client
+	underscore                      1.0.3  Collection of small helpers: _.map, _.each, ...
