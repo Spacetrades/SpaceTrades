@@ -1,0 +1,4183 @@
+/***** COLORS ******/
+
+/****** FONT SIZES ******/
+
+
+/****** ST Grid (our own bootstrap) ******/
+
+
+/*****************************************************************
+                            CRUCIAL
+******************************************************************/
+/**                 INCLUDES THE FOLLOWING
+GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
+
+/****** GLOBAL ******/
+
+.box-title {
+    background: $color-spacered !important;
+    font-family: inherit;
+    color: #FFFFFF;
+    // border-left: 5px solid $color-spacered;
+    padding-left: 4px;
+    margin: 0 !important;
+    font-size: 1.3rem;
+}
+
+.navbar-inverse {
+    background-color: #F8504B !important;
+    border-color: rgb(248, 80, 75) !important;
+}
+
+.homeLoadMore {
+    margin-left: 45% !important;
+}
+
+.homeLoadMore:hover {
+    box-shadow: 0px 1px 3px 0px #00bfff;
+}
+
+
+.box-title-listing {
+    background: $color-spacered !important;
+    font-family: inherit;
+    color: #FFFFFF;
+    // border-left: 5px solid $color-spacered;
+    padding-left: 4px;
+    margin: 0 !important;
+    font-size: 1.1rem;
+    padding: 5px 8px;
+
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+    font-weight: normal;
+    color: #404040;
+    font-family: 'Helvetica Neue' !important;
+    background: none !important;
+}
+
+.ui-widget-header {
+    background: white !important;
+}
+
+.ui-state-active {
+    color: red !important;
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    background: none !important;
+    margin: 0 0 .4em;
+    font-family: 'Helvetica Neue';
+}
+
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.featurePageTitle {
+   /* background-color: #FFFFFF;
+    width: 12%; */
+    color: #F8504B;
+    text-decoration: underline;
+    /*text-align: center;
+    border: 4px solid; */
+}
+
+.listprice {
+    text-align: center;
+    color: $color-money;
+    font-weight: bold;
+    width: 15%;
+}
+
+.offerItemStatus {
+    text-align: center;
+    width: 90%;
+    float: none;
+    margin: 0 auto;
+    margin-top: 2em;
+    border-radius: 7px;
+    padding: 1em;
+    margin-top: 1em !important;
+}
+
+.status-pending {
+    border: 2px solid $color-platinum;
+    color: $color-platinum;
+}
+
+.status-accepted {
+    border: 2px solid $color-spacegreen;
+    color: $color-spacegreen;
+}
+
+.status-rejected {
+    border: 2px solid $color-rejected;
+    color: $color-rejected;
+}
+
+/* .inner-circle {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 32%;
+    left: 35%;
+    border-radius: 50%;
+    display: block;
+} */
+
+.fa.fa-facebook.large:hover {
+    color: inherit !important;
+}
+
+.fa-plus-circle {
+    color: $color-spacered !important;
+}
+
+.fa-plus-circle:hover {
+    color: $color-spacered !important;
+}
+
+.addListing {
+    color: $color-spacered !important;
+}
+
+.usernameChat {
+    color: $color-blue2;
+}
+
+.managerListingStatus {
+    color: $color-purple;
+}
+
+.fa.fa-home {
+    color: white;
+}
+
+.tab-pane, .fade {
+    display: none;
+}
+
+.active, .in {
+    display: block !important;
+}
+
+i {
+    color: $color-spacegrey;
+}
+
+.hidden {
+    display: none;
+}
+
+.helpcenternav {
+    font-family: $font_stack-header !important;
+}
+
+.descriptorbox {
+    font-family: $font_stack-norm;
+}
+
+.description {
+    font-family: $font_stack-norm;
+}
+
+code {
+  background: $color-royal;
+  color: white;
+  border-radius: 5px;
+  padding: 1px 3px;
+
+  .listingtitle {
+    font-family: $font_stack-norm;
+  }
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.safetydiv,
+.termsDiv,
+.reportdiv,
+.faqdiv {
+    padding-right: 25%;
+}
+
+.pika-button:hover {
+    background-color: $color-spacered !important;
+}
+
+.is-selected .pika-button {
+    background-color: $color-spacered !important;
+    box-shadow: none;
+}
+
+.is-today .pika-button {
+    color: crimson !important;
+}
+
+// .cardul {
+//     border-top: 1px solid $color-spacegrey;
+// }
+
+.options-dropdown {
+    background-color: orange;
+    border-radius: 5px;
+    margin-left: 80%;
+    padding: 9px 44px 12px;
+    font-family: 'Abel';
+    padding: 9px 40px 12px;
+
+}
+
+.freeze {
+    color: $color-spacered !important;
+}
+
+.freeze:hover {
+    color: $color-spacered !important;
+}
+
+.btn {
+    color: white !important;
+}
+
+.black {
+    color: black;
+}
+
+
+.link {
+    color: $color-link !important;
+    font-family: 'arial';
+}
+
+.link:hover {
+    color: #0890F2 !important;
+    text-decoration: underline;
+}
+
+.profile-link {
+    font-style: italic;
+    color: $color-spacegrey !important;
+    text-underline: underline;
+}
+
+.profile-link:hover {
+    color: #0890F2 !important;
+    text-decoration: underline;
+}
+
+.searchtext {
+    font-family: $font_stack-text;
+}
+
+.formspace li {
+    padding-bottom: 1em;
+    margin-left: 15%;
+}
+
+input[type=checkbox] {
+    zoom: 2;
+}
+
+.right {
+    float: right;
+}
+
+.searchcarditp {
+  display: inline-block;
+  float: left;
+}
+
+.descriptorbox li {
+    margin-left: 3em;
+}
+
+.searchcarditp a img {
+    width: 10em;
+}
+
+#mroffer {
+    height: 2em;
+}
+
+.mrImg {
+    display: inline-block;
+    float: left;
+}
+
+#target {
+    width: 345px;
+}
+
+.controls {
+    -moz-box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    height: 32px;
+    margin-top: 16px;
+    outline: none;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: 'Roboto';
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.redskin {
+    background-color: $color-spacered;
+}
+
+// .addlistlogo {
+//     font-family: 'Roboto';
+// }
+
+.price {
+    font-size: 1.5em;
+    width: 40%;
+    display: inline-block;
+}
+
+.mrbutton {
+    text-align: center;
+    padding-top: 2em;
+}
+
+.mrapi {
+    height: 13em;
+    width: 100%;
+}
+
+.shiftright {
+    margin-left: 48% !important;
+}
+
+.facebook {
+    background-color: $color-facebook;
+}
+
+.instagram {
+    background-color: $color-instagram;
+}
+
+.listingtitle:hover {
+    text-decoration: underline;
+}
+
+/*
+input[type="radio"] {
+    display:none;
+} */
+
+.large {
+    font-size: 4em;
+}
+
+.s-alert-error {
+    font-family: $font_stack-alfred !important;
+}
+
+.s-alert-sucess{
+    font-family: $font_stack-alfred !important ;
+}
+
+input[type="radio"] + label {
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type="radio"] + label span {
+   background-color: $color-spacegrey;
+}
+
+input[type="radio"]:checked + label span{
+   background-color:$color-spacered;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+// STOP
+
+.searchdiv {
+    list-style: none;
+}
+
+textarea {
+    font-family: 'Abel', sans-serif;
+    padding-left: 0.4em;
+}
+
+.listdescription {
+    resize: none;
+    width: 37%;
+    height: 5em;
+}
+
+.add {
+    margin-left: 40%;
+    background-color: $color-spacered;
+    border-color: black;
+}
+
+.searchopts {
+    color: red;
+}
+
+.searchtext {
+    margin-left: 50%;
+}
+
+#iron-router-progress {
+    background-color: white;
+}
+
+.listtitle {
+    width: 36%;
+}
+
+.logout {
+    color: red;
+}
+
+.profilepic {
+    border-radius: 25%;
+}
+
+div[data-momentum] div {
+    left: 77% !important;
+    top: 15% !important;
+    text-align: left !important;
+}
+
+.imagesquare {
+    height: 13em;
+    width: 22em;
+    display: inline-block;
+}
+
+.propic {
+    background-color: transparent;
+    margin-left: 40%;
+}
+
+.colorsquare {
+    width: 2.5em;
+    height: 2.5em;
+    display: inline-block;
+}
+
+.imagepreview {
+    float: right;
+    width: 32%;
+}
+
+.uploadimg { 
+    height: 13em;
+    width: 22em;
+}
+
+html, body {
+    min-height: 100%;
+    font-family: $font_stack-norm;
+    color: $color-spacegrey;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    color: $color-spacegrey;
+    text-decoration: none;
+}
+
+a:link {
+    color: $color-spacegrey;
+    text-decoration: none;
+}
+
+// a:visited {
+//     color: $color-visited;
+//     text-decoration: none;
+// }
+
+a:hover {
+    color: $color-spacegrey;
+    text-decoration: none;
+}
+
+a:active {
+    color: $color-spacegrey;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/****** GLOBAL END ******/
+
+
+/****** GLOBAL CLASSES END ******/
+
+.div {
+    margin: 3rem 10% 2rem 10% !important;
+}
+
+.email {
+    color: $color-spacered;
+}
+
+/****** GLOBAL CLASSES END ******/
+
+
+/****** HEADER ******/
+
+/** Home Header Pre **/
+.mainnav {
+    color: $color-spacegrey;
+    background-color: $color-spacered;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.mainnav ul {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+}
+
+.mainnav ul li a {
+    color: $color-spacegrey;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px !important;
+    font-weight: 400;
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: $color-spacegrey;
+}
+
+.meetupitems {
+    color: $color-spacered;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: $color-spacegrey !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
+}
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+/** Home Header Post **/
+
+.navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid $color-spacegrey;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 5.5rem;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+.navprofile li a {
+    border: 1px solid $color-spacered;
+}
+
+.proname {
+    text-align: center;
+}
+
+.navprofile li a:hover {
+    background-color: $color-spacered;
+    color: $color-spacegrey;
+    border: 1px solid $color-spacegrey;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: $color-spacered !important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid $color-spacegrey !important;
+    color: #fff !important;
+    background-color: $color-spacegrey !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: $color-spacegrey !important;
+    color: #fff !important;
+}
+
+/** Header Post **/
+
+.navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding: 3px 12px 3px 15px;
+}
+
+.navlogo:hover {
+    color: $color-spacegrey !important;
+    background-color: $color-spacered !important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 6px 7px;
+    border: 1px solid $color-spacegrey;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+.navsearchbtn {
+    color: #fff !important;
+    border: 1px solid #fff;
+    padding: 6px 10px !important;  
+}
+
+.navsearchbtn:hover {
+    background-color: $color-spacered !important;
+}
+
+/** Header Pre **/
+
+.searchfield2 {
+    margin-top: 20px !important;
+}
+
+.search2 {
+    width: 60% !important;
+}
+
+
+/** Field Area **/
+
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: $color-spacegrey;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+}
+
+.search {
+    height: 48px;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: $color-spacered !important;
+}
+
+.message {
+    width: 32em;
+    height: 7em; 
+}
+
+.homesearchbtn {
+    padding: 11px 16px;
+    background-color: #f8504b;
+    color: #fff !important;
+    margin-left: 8px;
+    border-radius: 0.3em;
+}
+
+.homesearchbtn:hover {
+    background-color: #f73c37;
+}
+
+/** Search Field End **/
+
+/****** HEADER END ******/
+
+.footitems {
+    padding: 0;
+    margin: 0;
+}
+
+.exampleImage {
+    img {
+            outline: 1px solid darkgrey;
+            width: 100%;
+        }
+    }
+
+.foot {
+    padding: 0 !important;
+    text-align: center !important;
+    background-color: #fff;
+    color: $color-spacegrey;
+    margin-bottom: 2rem !important;
+}
+
+.foot ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 2px 0 2px;
+    margin: 0 5px 0 5px;
+}
+
+.foot ul p {
+    padding: 0 2px 0 2px;
+    margin: 0 0 5px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.functionality {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.itemdd {
+    padding-top: 200px;
+}
+
+.imagebox {
+    float: left;
+    width: 65%;
+    display: inline-block;
+}
+
+.imageboxcenter {
+    float: left;
+    width: 65%;
+    display: inline-block;
+    margin-left: 15%;
+}
+
+.description {
+    text-align: left;
+}
+
+.money {
+    color: $color-money;
+    font-family: 'Abel', sans-serif;
+}
+
+/****** FOOTER END ******/
+
+
+/*****************************************************************
+    CRUCIAL END
+    ******************************************************************/
+
+
+/*****************************************************************
+    HELP CENTER
+    ******************************************************************/
+/**                 INCLUDES THE FOLLOWING PAGES
+HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
+
+
+/****** HELP NAV ******/
+
+.helpnav ul li {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.helpnav ul li a {
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+.helpnav ul li a:hover {
+    background-color: $color-spacered;
+    color: #fff;
+}
+
+.helpNavSelected {
+    background-color: $color-spacered;
+    color: #fff !important;
+}
+
+.helpiteml {
+    margin-top: -2.8rem;
+    text-align: right;
+}
+
+.helpiteml li a {
+    color: #404040;
+}
+
+.helpiteml li a:hover {
+    color: #fff !important;
+}
+
+.helplogo {
+    color: $color-spacered;
+}
+
+/****** HELP NAV END ******/
+
+
+/****** HELP ******/
+
+.helpdiv {
+    text-align: center;
+}
+
+.helpwel {
+    font-weight: bold;
+}
+
+.helpimg {
+    width: 70%;
+}
+
+/****** HELP END ******/
+
+
+/****** ABOUT ******/
+
+
+
+/****** ABOUT END ******/
+
+
+/****** FAQ ******/
+
+.faq ul {
+    padding: 0;
+}
+
+.faq ul li ul li p {
+    width: 70%;
+}
+
+.faqsec {
+    margin-left: 1rem;
+}
+
+.faqheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqpar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+.faqinfo {
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+/****** FAQ END ******/
+
+/****** SAFETY ******/
+
+.safetyheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.safetypar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+/****** SAFETY END ******/
+
+
+/****** PRIVACY & TERMS ******/
+
+.termssec {
+    margin-left: 1rem;
+}
+
+.termsheading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.termspar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+/****** PRIVACY & TERMS END ******/
+
+
+/****** CONTACT ******/
+
+.contactname input, .contactemail input {
+ width: 30%;
+ height: 20px;
+ padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit input {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: $color-spacegrey;
+    background-color: #fff;
+    border: none;
+    border: 1px solid $color-spacered;
+}
+
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: $color-spacered;
+}
+
+.sent { 
+    display: none;
+}
+
+
+/****** CONTACT END ******/
+
+
+/****************************************************
+    HELP CENTER END
+    ****************************************************/
+
+
+    /****** HOMEPAGE ******/
+
+
+    /** Listing Card **/
+    .carddiv {
+        text-align: center;
+
+        ul li {
+        border: none;
+        width: 20%;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin: 0.8rem .6rem;
+        outline: black dotted thin;
+        // Consider: box-shadow: 1px 1px 5px 1px #CCCCCC;
+        }
+
+        ul li:hover {
+        outline-style: solid;
+        outline-width: thin;
+        outline-color: rgb(248, 80, 75);
+        // Add a radial gradient to the border outline
+        }
+    }
+
+    .carditp {
+
+        a img {
+        width: 100%;
+        height: 10em;
+        }
+
+        p a {
+        margin: 5px 5px 2px 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+        }
+
+        p a:hover {
+        margin: 5px 5px 2px 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+        }   
+
+    } 
+
+    .carditp p, 
+    .cardpsa p {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        padding-top: 0.4em;
+    }
+
+    // .carditp p a {
+    //     margin: 5px 5px 2px 5px;
+    //     font-size: 1rem;
+    //     font-weight: 700;
+    //     overflow: hidden;
+    // }
+
+    // .carditp p a:hover {
+    //     margin: 5px 5px 2px 5px;
+    //     font-size: 1rem;
+    //     font-weight: 700;
+    //     overflow: hidden;
+    // }
+
+
+    .cardprice {
+        font-family: 'Abel';
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #396;
+        margin: 2px 1.6rem 2px 10px !important;
+        float: left;
+    }
+
+    .cardsize {
+        font-size: 0.9rem !important;
+        margin-right: 5px !important;
+    }
+
+    .cardny {
+        font-weight: 700;
+    }
+
+    .cardsl {
+        margin: 2px 10px 2px 1.6rem !important;
+        font-size: 0.9rem;
+    }
+
+    .cardname {
+        float: right;
+        margin: 2px 10px 5px 2px !important;
+        font-size: 0.8rem;
+        text-decoration: underline !important;
+        font-weight: 400;
+        font-family: $font_stack-norm;
+    }
+
+    .gimg {
+      width: 300px;
+      height: 500px;
+      max-width: 100%;
+      margin-left: 80%;
+  }
+
+  .lat, 
+  .lng {
+    display: none;
+}
+
+
+/****** HOMEPAGE END ******/
+
+
+/****** ERROR 404 ******/
+
+.errordiv {
+    text-align: center;
+}
+
+.errorm {
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: 'Baskerville', arial;
+}
+
+.headerror {
+    font-size: 3em;
+}
+
+.errorh {
+    margin: 2rem 0 2rem 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+/*************************** PH FROM 3rd party ***************************/
+.ph-button {
+    outline: none;
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    color: #FFFFFF;    
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 100ms ease-in-out 0s;
+    white-space: nowrap;    
+    font-weight: 700;   
+    padding: 19px 39px 18px;
+    font-size: 18px;
+    
+}
+
+.ph-button:active {
+    border-color: $color-spacered;
+    border-radius: 0;
+    color: $color-gold;
+    border: 1px solid $color-gold;
+}
+
+/*Green
+==========================*/
+.ph-btn-green {
+
+    border-color: #3AC162;
+    background-color: #5FCF80;
+
+}
+.ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
+    background-color: #4BC970;
+    border-color: #3AC162;    
+}
+
+/*Blue
+==========================*/
+.ph-btn-mr {
+
+    border-color: #38A172;
+    background-color: #2DBB7B;
+    color: white !important;
+}
+
+.ph-btn-mr:hover, .ph-btn-mr:focus, .ph-btn-mr:active {
+    background-color: #38A172;
+    border-color: #338661;   
+    color: white !important;
+}
+
+/*Grey
+==========================*/
+.ph-btn-grey {
+
+   background-color: #C6CCD2;
+   border-color: #AAB3BB;
+}
+.ph-btn-grey:hover, .ph-btn-grey:focus, .ph-btn-grey:active {
+    background-color: #B8BFC7;
+    border-color: #AAB3BB; 
+}
+
+/*Red
+==========================*/
+.ph-btn-red {
+
+    background-color: #ED5A5A !important;
+    border-color: #EA4343 !important;
+    color: white !important;
+    font-family: inherit !important;
+
+}
+.ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
+    background: none repeat scroll 0 0 #EB4848 !important;
+    border-color: #E83131 !important; 
+    color: white !important;   
+}
+
+.ph-btn-cardinal {
+    background-color: $color-cardinal !important;
+    border-color: #FF274B !important;
+    color: white !important;
+    font-family: inherit !important;
+}
+
+.ph-btn-cardinal:hover, 
+.ph-btn-cardinal:focus, 
+.ph-btn-cardinal:active {
+    background: none repeat scroll 0 0 #B51933 !important;
+    border-color: #B51933 !important; 
+    color: white !important;   
+}
+
+
+.ph-btn-blue {
+    background-color: $color-spaceblue !important;
+    border-color: #00bfff !important;
+    color: white !important;
+    font-family: inherit !important;
+}
+
+.ph-btn-blue:hover, 
+.ph-btn-blue:focus, 
+.ph-btn-blue:active {
+    background: none repeat scroll 0 0 #FF274B  !important;
+    border-color: #B51933 !important; 
+    color: white !important;   
+}
+
+
+/*DEMO ONLY FOR CENTER POSITION*/
+.ph-container {
+  margin: 0 auto;
+  display: inline;
+}
+
+.ph-float {
+
+  float: left;
+  width: 22%;
+  padding: 10px;  
+  padding-top: 50px;  
+  text-align: center;
+  // margin-left: 80%;
+
+  li {
+    padding: 4px;
+  }
+}
+
+
+
+.ph-clear {
+
+  clear: both;
+
+}
+
+/****** ERROR 404 END ******/
+
+
+
+
+/******************************
+
+    Official Style Sheet
+    Website - https://spacetrades.com
+    Copyright SpaceTrades
+
+    ******************************/
+
+/*******************
+    Global
+    *******************/
+
+    html {
+        min-height: 100%;
+    }
+
+    body {
+        color: $color-spacegrey;
+        font-family: $font_stack-header;
+        margin: 0;
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        color: $color-spacegrey;
+    }
+
+    footer a:visited {
+        color: $color-spacered !important;
+    }
+
+    .foota {
+        color: $color-spacegrey !important;
+    }
+
+    /* Links */
+    a {
+        color: $color-spacegrey;
+        text-decoration: none;
+        // transition: all 0.2s linear;
+
+    }
+
+    a:link {
+        color: $color-spacered;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $color-spacegrey;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: $color-spacegrey;
+        text-decoration: none;
+    }
+
+    /* Lists*/
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Text */
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    h1 { 
+        font-size: 1.7rem; 
+    }
+
+    h2 { 
+        font-size: 1.7rem; 
+    }
+
+    h3 { 
+        font-size: 1.2rem; 
+    }
+
+    h4 { 
+        font-size: 1rem; 
+    }
+
+    /* Input */
+    input {
+        font-family: 'Abel', sans-serif;
+        padding-left: 0.4em;
+    }
+
+
+    input[type="text"]:focus, 
+    textarea:focus {
+        outline-color: $color-spacered;
+        outline-width: 1px;
+        outline-offset: -3px;
+    }
+
+    input[type=text]::-ms-clear {
+        display: none;
+        height: 0; 
+        width : 0; 
+    }
+    input[type=text]::-ms-reveal {  
+        display: none;
+        height: 0;
+        width : 0;  
+    }
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { 
+        display: none; 
+    }
+
+    input[type=text]::-ms-clear {  
+        display: none;
+        height: 0;
+        width : 0; 
+    }
+
+    input[type=text]::-ms-reveal {  
+        display: none;
+        height: 0;
+        width : 0;  
+    }
+
+    input[type="search"]::-webkit-search-decoration, 
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { 
+        display: none; 
+    }
+
+    button {
+        background-color: #fff;
+        border: none;
+    }
+
+    /****** END *******/
+
+/*******************
+    Global Classes
+    *******************/
+
+    .oneDiv {
+        // Don't Change Yusuf !!! It messes up the homecards with less than 5% on each side
+        margin: 3rem 10% 2rem 10% !important;
+        font-family: $font_stack-norm !important;
+    }
+
+    /****** END *******/
+
+
+/*******************
+    Feedback
+    *******************/
+
+/**********
+ Feedback Initial
+ **********/
+
+ .feedBackMeat div {
+    display: inline-block;
+}
+
+.feedBackOptions {
+    height: 330px;
+    margin-left: 10%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.feedBackOptions ul li button {
+    background-color: $color-spacered;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 80px;
+    margin: 10px;
+    outline: 0;
+    padding: 15px 20px;
+    width: 70%;
+}
+
+.feedBackDocs {
+    border-left: 1px solid $color-spacegrey;
+    padding-left: 6%;
+    vertical-align: middle;
+    width: 60%;
+}
+
+.feedBackDocs ul li p {
+    font-size: 0.95rem;
+}
+
+/**********
+ Feedback Meetup
+ **********/
+
+ /** Stars **/
+ fieldset, label { margin: 0; padding: 0; }
+
+
+ /* Style Star Rating Widget */
+
+ .rating { 
+  border: none;
+  float: left;
+}
+
+.star-custom {
+    content: "\f005";
+    color: #ddd; 
+    float: right; 
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+.feedBackMeetupDiv div {
+    display: inline-block;
+}
+
+.feedBackForm {
+    margin-left: 10%;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.feedBackDocs2 {
+    border-left: 1px solid $color-spacegrey;
+    padding: 1% 4%;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.feedBackExp ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+    margin: 2px 4px 2px 0;
+}
+
+.feedBackExp ul li input {
+    margin-right: 3px;
+}
+
+.feedBackExp ul li:nth-child(0) {
+    margin-left: -25px !important;
+}
+
+.feedBackExp h4, .feedBackExp ul, .feedBackStars h4, .feedBackText h4 {
+    margin: 0;
+    margin: 5px 0;
+    padding: 1px;
+}
+
+.feedBackExp ul, .rating, .feedBackText h4 {
+    margin-bottom: 10px;
+}
+
+.feedBackText input {
+    width: 85%;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.feedBackText input:focus {
+    outline-color: $color-spacered;
+}
+
+.feedBackText button {
+    outline: none;
+    margin: 20px 0 0 0;
+    text-align: right !important;
+    background-color: $color-spacered;
+    padding: 10px 16px;
+    color: #fff;
+    margin-left: 7rem;
+    font-size: 1rem !important;
+}
+
+/****** END *******/
+
+
+/*******************
+    Headers
+    *******************/
+/**********
+ Header Home Pre
+ **********/
+
+ .mainnav {
+    color: $color-spacegrey;
+    background-color: $color-spacered;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+.mainnav ul {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mainnav ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+    vertical-align: middle;
+}
+
+.mainnav ul li a {
+    color: $color-spacegrey;
+    padding: 8px 12px 8px 12px;
+    margin: 0 3px 0 3px !important;
+    font-weight: 400;
+}
+
+.mainnav ul li a:hover {
+    color: #fff;
+    background-color: $color-spacegrey;
+}
+
+.meetupitems {
+    color: $color-spacered;
+}
+
+.navbox a {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.navbox a:hover {
+    background-color: #fff !important;
+    color: $color-spacegrey !important;
+}
+
+.navverify {
+    margin-right: 0.5rem;
+}
+
+.navdropdown, .navverify {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+/* Search Area*/
+.logo {
+    text-align: center;
+    font-size: 4rem;
+    color: $color-spacegrey;
+}
+
+.searchfield {
+    text-align: center;
+    margin: -20px 0 10px 0;
+}
+
+.icon {
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 6px 8px 8px 8px;
+}
+
+.search {
+    height: 48px;
+    width: 40%;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    font-size: 0.8rem;
+    color: #262626;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search:focus {
+    border-color: $color-spacered !important;
+}
+
+/**********
+ Header Home Post
+ **********/
+
+ .navcat {
+    margin-top: 15.5px !important;
+    margin-bottom: 15.5px !important;
+}
+
+.navcat li a {
+    border: 1px solid $color-spacegrey;
+}
+
+.navprofile {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    margin-right: 5.5rem;
+}
+
+.navprofile:first-child {
+    vertical-align: middle;
+}
+
+.navprofile li a {
+    border: 1px solid $color-spacered;
+}
+
+.navprofile li a:hover {
+    background-color: $color-spacered;
+    color: $color-spacegrey;
+    border: 1px solid $color-spacegrey;
+}
+
+// .navprofile li i {
+//     font-size: 1.3em;
+// }
+
+.navprofile li i:hover {
+    cursor: pointer;
+}
+
+i:hover {
+    color: black !important;
+}
+
+.navfa {
+    padding: 4px 6px !important;
+}
+
+.navfa:hover {
+    background-color: $color-spacered !important;
+    color: #171717 !important;
+}
+
+.navdown {
+    border: 1px solid $color-spacegrey !important;
+    color: #fff !important;
+    background-color: $color-spacegrey !important;
+    padding: 4px 6px !important;
+}
+
+.navdown:hover {
+    background-color: $color-spacegrey !important;
+    color: #fff !important;
+}
+
+/**********
+ Header Pre
+ **********/
+
+ /* NOT YET */
+
+/**********
+ Header Post
+ **********/
+
+ .navsearch {
+    float: left !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+    vertical-align: middle !important;
+}
+
+.navlogo {
+    font-size: 1.15rem;
+    font-weight: 700 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding: 3px 12px 3px 15px;
+}
+
+.navlogo:hover {
+    color: $color-spacegrey !important;
+    background-color: $color-spacered !important;
+}
+
+.navsicon {
+    width: 28px;
+    height: 28px !important;
+    padding: 6px 7px;
+    border: 1px solid $color-spacegrey;
+    margin-right: 2.5px;
+}
+
+.navsearchf {
+    width: 17.5rem;
+    height: 26px;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 0.75rem;
+    background-color: #fff;
+}
+
+.navsearchbtn {
+    color: #fff !important;
+    border: 1px solid #fff;
+    padding: 6px 10px !important;  
+}
+
+.navsearchbtn:hover {
+    background-color: $color-spacered !important;
+}
+
+/**********
+ Header Search Pre
+ **********/
+
+ .searchfield2 {
+    margin-top: 20px !important;
+}
+
+.search2 {
+    width: 60% !important;
+}
+
+/**********
+ Header Search Post
+ **********/
+
+ /* None Yet */
+
+ /****** END *******/
+
+
+/*******************
+    Help Center
+    *******************/
+
+/**********
+ About
+ **********/
+
+ .aboutDiv {
+    text-align: center;
+}
+
+.helpPagesPar {
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.helpAboutUl li ul li, .helpDiv ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.helpAboutUl li ul li img {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+/**********
+ Help
+ **********/
+
+ .helpDiv {
+    text-align: center;
+}
+
+.helpIntro {
+    font-weight: 700;
+}
+
+.helpDiv ul li img {
+    width: 100%;
+    margin: 3rem 0 1rem 0;
+}
+
+/**********
+ Contact
+ **********/
+
+//  .contactdiv {
+//     text-align: center;
+// }
+
+.contactname input, .contactemail input {
+ width: 30%;
+ height: 20px;
+ padding-left: 5px; 
+}
+
+.contacttext textarea {
+    width: 30%;
+    padding-left: 5px;
+    height: 80px;
+}
+
+.contactsubmit button {
+    outline: none;
+    margin: 0;
+    text-align: right !important;
+    background-color: $color-spacered;
+    padding: 10px 16px;
+    color: #fff;
+    margin-left: 17rem;
+}
+.contactsubmit input:hover {
+    color: #fff;
+    background-color: $color-spacered;
+}
+
+.sent { 
+    display: none;
+}
+
+/**********
+ FAQs
+ **********/
+
+ .faqDiv ul {
+    padding: 0;
+}
+
+.faqDiv ul li ul li p {
+    width: 70%;
+}
+
+.faqSec {
+    margin-left: 1rem;
+}
+
+.faqHeading {
+    margin: 0;
+    margin-bottom: 2px;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.faqPar {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 2px;
+    margin-left: 3rem;
+}
+
+.faqInfo {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+.faqInfo h3, .faqInfo p {
+    margin: 0;
+    margin: 5px 0;
+}
+
+/**********
+ Help Nav
+ **********/
+
+/**********
+ Privacy & Terms
+ **********/
+
+/**********
+ Safety
+ **********/
+
+ /****** END *******/
+
+
+/*******************
+    Home Pages
+    *******************/
+
+/**********
+ Card
+ **********/
+
+/**********
+ Home Main
+ **********/
+
+/**********
+ Register
+ **********/
+
+ .registerDiv div {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.registerDocs {
+    width: 50%;
+    vertical-align: middle;
+    padding-left: 4rem;
+    border-left: 1px solid $color-spacegrey;
+}
+
+.registerMain {
+    width: 40%;
+    vertical-align: top;   
+} 
+
+.fb-login-button {
+    margin-top: 1rem !important;
+}
+
+/****** END ******/
+
+
+.reportMain, .reportMain div, .reportText {
+    margin-left: 1rem;
+}
+
+.reportName {
+    margin-left: 20px;
+}
+
+.reportName ul li, .reportCheck ul {
+    display: inline-block;
+}
+
+
+.reportListingImg img {
+    height: 6rem;
+    width: 9rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
+
+.reportName ul li a p {
+    font-size: 1.4rem;
+    padding: 2px;
+    margin: 0 10px;
+    
+}
+
+.reportCheck p {
+    margin: 35px 0 2px 20px;
+}
+
+.reportCheck ul li {
+    margin: 2px 20px 25px 20px;
+    text-align: center;
+}
+
+.reportCheck ul li input {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.reportBtn {
+    text-align: right;
+    margin-right: 3rem;
+}
+
+.reportBtn button {
+    background-color: $color-spacered;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 100px;
+    height: 50px;
+    margin: 0px;
+    outline: 0;
+    padding: 15px 20px;
+}
+
+.reportText p {
+    margin-left: 20px;
+}
+
+.reportText textarea {
+    margin: 2px 5px 20px 20px;
+    width: 40%;
+    height: 6rem;
+    font-size: 1rem;
+    color: $color-spacegrey;
+}
+
+.reportUserImg img {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    padding: 2px;
+    margin: 5px 10px 0 20px;
+    vertical-align: middle;
+}
+
+
+/** NEW NAV **/
+
+// .headerUsername {
+//     color: $color-spacegrey;
+// }
+
+.headerNav {
+    color: $color-spacegrey;
+    background-color: $color-spacered;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+}
+
+.headerNav ul {
+    display: inline-block;
+    vertical-align: middle !important;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.headerNav ul li {
+    display: inline-block;
+    vertical-align: middle !important;
+}
+
+.headerNav ul li a {
+    font-size: 0.9rem;
+}
+
+.headerNav a {
+    transition: none !important; 
+}
+
+.headerCat li, .headerAuth {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.headerCat li a {
+    padding: 12px 14px;
+    vertical-align: middle;
+}
+
+.headerAuth li a {
+     color: #fff !important;
+     border: 1px solid #fff !important;
+     padding: 10px 14px;
+}
+
+.headerAuth {
+    margin-right: 20px !important;
+}
+
+.headerAuth li {
+    margin-right: 5px;
+}
+
+.headerNotDrop a {
+    color: $color-spacegrey !important;
+}
+
+.headerNotDrop a:hover {
+    padding-bottom: 10px !important;
+    color: white !important;
+}
+
+.headerCat li a:hover {
+    background-color: $color-spacegrey;
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.headerAuth li a:hover {
+    background-color: #fff;
+    color: $color-spacegrey !important;
+}
+
+.headerDropDown {
+    position: relative;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        display: none;
+        position: absolute;
+        background-color: $color-spacegrey;
+        // transition: all 0.1s linear;
+        font-size: 0.8rem;
+        z-index: 1000;
+
+        li {
+            margin: 0;
+            color: #fff;
+            text-align: left !important;
+            width: 150px;
+            padding: 15px 10px 15px 0px;
+            border-bottom: 1px solid #555;
+
+            a {
+                color: #fff;
+                margin: 0 !important;
+                padding: 0;
+                padding: 15px 15px !important;
+            }      
+        }
+        }
+    a {
+        color: $color-spacegrey;
+    }
+}
+
+
+
+// .headerDropDown ul 
+
+.hoverDropDown:hover > .headerDropDownNav {
+    display: block;
+    position: absolute;
+    z-index: 100;
+}
+
+.headerDropDown ul li a {
+    color: #fff;
+    margin: 0 !important;
+    padding: 0;
+    padding: 15px 15px !important;
+}
+
+.headerDropDown ul li:hover {
+    color: #fff;
+    background-color: #555;
+    
+}
+
+.headerDropDown ul li a:hover {
+    background-color: #555;
+    transition: none !important;
+    
+}
+
+// .headerDropDown:hover > .headerDropDownNav {
+//     display: block;
+// }
+
+.headerSearch {
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+    vertical-align: middle;
+    float: left !important;
+}
+
+.headerNavSearch {
+    vertical-align: middle;
+    width: 18rem;
+    height: 34px; /* 34px is the max height*/
+    border: 1px solid #fff;
+    outline: none;
+    padding-left: 10px;
+    font-size: 0.8rem;
+    background-color: #fff;
+}
+
+.headerNavSearchButton {
+    color: #fff !important;
+    border: 1px solid #fff;
+    margin: 0;
+    padding: 8px 10px 7px 10px !important;
+}
+
+.headerNavSearchButton:hover {
+    background-color: #f73c37;
+}
+
+.headerNavLogo {
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 1.4rem !important;
+    font-weight: 700;
+    color: $color-spacegrey !important;
+}
+
+
+.headerNameOptions {
+    margin: 13px 2px 7px 2px !important;
+}
+
+.headerNameOptions li img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.headerBigCat li {
+    // margin: 0 2px;
+    margin-right: 0 !important;
+}
+
+.headerBigCat li a {
+    padding: 12px 14px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.headerBigCat li ul li a {
+    border: none;
+    border-bottom: 1px solid #555;
+}
+
+.headerBigCat li a:hover  {
+    background-color: $color-spacegrey;
+    color: #fff;
+    border: $color-spacegrey;
+    margin-bottom: 0;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px;
+}
+
+.headerBigCat li ul li a:hover {
+    padding-bottom: 10px !important;
+}
+
+.headerNameOptions li {
+    margin: 0 2px;
+}
+
+.headerLine {
+    margin-left: 20px !important;
+    padding-right: 7em !important;
+    border-left: 1px solid $color-spacegrey;
+}
+
+.notifyUser {
+    color: $color-spacered;
+}
+
+.headerNameOptions li a, .headerHomeButton li a {
+    padding: 12px !important;
+}
+
+.headerNameOptions li a:hover, .headerHomeButton li a:hover {
+    color: #fff;
+    background-color: $color-spacegrey !important;
+} 
+
+.headerPostOptions {
+    margin: 16px 25px 10px 5px !important;
+}
+
+.headerPostOptions li ul li {
+    font-family: $font_stack-header;
+}
+
+.headerPostOptions li a i {
+    font-size: 1rem;
+    padding: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.headerPostOptions li a:hover {
+    padding-bottom: 20px !important;
+}
+
+.headerPostOptions li ul li a:hover {
+    padding-bottom: 10px !important;
+}
+
+// .addListDiv div {
+//     display: inline-block !important;
+// }
+
+.addListSecOne {
+    width: 40%;
+    vertical-align: top;
+    margin-top: 5px;
+    display: inline-block !important; 
+}
+
+.addListSecTwo {
+    width: 50%;
+    vertical-align: top;
+    display: inline-block !important; 
+}
+
+.addListInfo, .addListImg {
+    margin-top: 0;
+}
+
+.addListInfo li, .addListDetails li {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.addListInfo li ul li, .addListDetails li ul li {
+    display: inline-block;
+    padding: 0 2px 0 0;
+    margin: 0 5px 0 0;
+}
+
+.addListInfo li input, .addListDetails li select {
+    margin-left: 3px;
+}
+
+.addListImg li {
+    display: inline-block;
+    margin: 0 2px;  
+}
+
+.addListImg li img {
+    width: 150px;
+    height: 150px;
+}
+
+.addListImg i {
+    vertical-align: middle;
+}
+
+.addListDesc li textarea {
+    height: 130px;
+    width: 85%;
+}
+
+.addListImg p, .addListDesc li p {
+    margin-bottom: 6px;
+}
+
+.addListImg p {
+    margin-top: 0;
+}
+
+.addListTerms {
+    font-size: 0.8rem;
+}
+
+.addListSubmit input {
+    float: right !important;
+    margin-right: 4.5rem;
+    margin-top: 10px;
+}
+
+.flex-direction-nav {
+    display: none !important;
+}
+
+.imagebox {
+    width: 70%;
+}
+
+#slider {
+    margin-bottom: 0;
+    border: 0;
+}
+
+#carousel {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.slides li {
+    margin: 5px
+} 
+
+.nav-tabs {
+  border-bottom: 1px solid $color-spacered;
+  padding-bottom: 14px;
+}
+
+.managerNavTabs li {
+    display: inline-block !important;
+    margin: auto 15px auto auto;
+}
+
+.managerNavTabs li a {
+    font-size: 1.1rem;
+    padding: 14px 16px;
+    // border: 1px solid $color-spacered;
+    color: $color-spacered;
+    background-color: white;
+}
+
+.managerNavTabs li a:hover {
+    color: #fff !important;
+    background-color: #f73c37;
+}
+
+.navTabSelected {
+    // background-color: $color-spacered !important;
+    border-top: 1px solid $color-spacered;
+    border-right: 1px solid $color-spacered;
+    border-left: 1px solid $color-spacered;
+}
+
+.profileManagerOffer {
+    margin: 0;
+}
+
+.profileMonth {
+    font-family: $font_stack-text;
+}
+
+.profileManagerUl > li {
+    display: inline-block;
+}
+
+.managerListingLi {
+    border: 2px solid $color-spaceblue;
+    border-radius: 5px;
+    margin: 20px 5px;
+    padding: 0px 10px 10px 10px;
+    width: 28.9%;
+}
+
+.managerListingLi:hover {
+    border-color: #f8504b;
+}
+
+.managerListingLi p {
+    text-align: right;
+    margin: 0 0 5px 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: top !important;
+}
+
+.managerListingLi ul {
+    display: inline-block !important;
+}
+
+.managerOfferCount {
+    padding: 5px 12px !important;
+    background-color: #00bfff !important;
+    font-family: 'Abel';
+    margin-left: 1em;
+}
+
+.managerOfferLi {
+    border: 2px solid $color-spacegreen;
+    border-radius: 5px;
+    margin: 20px 5px;
+    padding: 0px 10px 10px 10px;
+    width: 28.9%;
+}
+
+.managerOfferLi:hover {
+    border-color: #f8504b;
+}
+
+.managerOfferLi p {
+    text-align: right;
+    margin: 0 0 5px 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: top !important;
+}
+
+.managerOfferLi ul {
+    display: inline-block !important;
+}
+
+.managerOfferStatus {
+    color: $color-purple !important;
+}
+
+.managerOfferImage {
+    width: 49% !important;
+    margin-right: 2%;
+}
+
+.managerOfferImage li a img {
+    width: 100% !important;
+    height: 150px !important;
+}
+
+.managerOfferDetails {
+    width: 45% !important;
+    margin-left: 2%;
+    vertical-align: top;
+}
+
+.managerOfferDetails li {
+    margin-bottom: 5px;
+}
+
+.managerOfferDetails li a h4 {
+    margin: 0;
+    color: $color-spaceblue;
+    overflow: hidden;
+}
+
+.managerOfferDetails li a h4:hover {
+    text-decoration: underline !important;
+}
+
+.managerOfferView {
+    margin-top: 30px !important;
+    text-align: right;
+}
+
+.managerOfferView a {
+    font-size: 0.95rem;
+    padding: 12px 10px;
+    color: #fff !important;
+    background-color: $color-cardinal;
+}
+
+.managerOfferView a:hover {;
+    background-color: #B51933;
+}
+
+.money {
+    color: #396;
+}
+
+.offer {
+  color: #523f8c;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 40%;
+  // Consider text-shadow: 1px 1px rgb(194, 174, 255);
+}
+
+.managerOfferButton {
+    margin-top: 30px;
+}
+
+.managerOfferButton ul li {
+    display: inline-block !important;
+}
+
+.managerOfferButton ul li a {
+    font-size: 0.9rem;
+    padding: 10px 8px;
+    color: #fff !important;
+    background-color: #f8504b;
+}
+
+.managerOfferButton ul li a:hover {
+    background-color: #f73c37;
+}
+
+.homeCardUl {
+    padding-top: 1rem;
+    border-top: 1px solid #00bfff;
+}
+
+.homeCardUl > li {
+    display: inline-block;
+}
+
+.homeCardLi {
+    border: 2px solid $color-spaceblue;
+    border-radius: 5px;
+    margin: 20px 10px;
+    padding: 0px 10px 10px 10px;
+    width: 20%;
+}
+
+.homeCardLi:hover {
+    border: 2px solid #f8504b;
+}
+
+.homeCardImg {
+    width: 100%;
+    height: 200px;
+}
+
+.homeCardItem li a h4 {
+    color: $color-spaceblue;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.homeCardItem li a h4:hover {
+    text-decoration: underline;
+}
+
+.homeCardDetails {
+    margin-top: 5px;
+}
+
+.homeCardDetails > li {
+    display: inline-block;
+}
+
+.homeCardDetails li ul li {
+    font-size: 0.9rem;
+    margin: 2px auto; 
+}
+
+.homeCardLeft {
+    float: left !important;
+    margin-left: 10px;
+}
+
+.homeCardRight {
+    float: right !important;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.homeCardUser {
+    text-decoration: underline;
+    margin-left: 0px !important;
+}
+
+.homeCardUser a {
+    font-size: 0.85rem !important;
+}
+
+.homeCardUser a:hover {
+    color: #f8504b;
+}
+
+.homeCardSize {
+    font-size: 0.7rem !important;
+}
+
+.homeCardOfferRecieved {
+    text-align: right;
+    margin: 0 0 5px 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: top !important;
+    color: $color-purple !important;
+}
+
+/* Slider */
+
+.slider {
+    width: 100%;
+    position: relative;
+    padding-top: 400px;
+    margin: 20px auto;
+}
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0; 
+    top: 0;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+    border: 2px solid $color-spaceblue;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.sliderSmallOne {
+    margin-left: 10% !important;
+}
+
+.sliderSmallThree {
+    margin-right: 0% !important;
+}
+
+.slider label img{
+    display: block;
+    width: 150px;
+    height: 94px;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: $color-spaceblue;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1);
+    width: 100% !important;
+    height: 400px;
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider > img {
+
+}
+
+#map-canvas {
+    height: 520px;
+}
+
+.listingItemLeft {
+    width: 60%;
+    float: left;
+}
+
+.listingItemRight {
+    width: 35%;
+    float: right;
+} 
+
+.listingItemDiv > div {
+    display: inline-block;
+}
+
+.listingItemDiv > h1, .listingItemDiv p {
+    margin: 0;
+}
+
+.listingItemDiv > p {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #6c54b3;
+}
+
+.listingItemPriceButtons {
+    width: 100%;
+}
+
+.listingItemPriceButtons ul {
+    margin: 0;
+    margin: 25px auto 5px auto;
+    display: inline-block;
+}
+
+.listingItemPriceButtons ul li {
+    font-size: 1.2rem;
+}
+
+.listingItemPrice li {
+    color: #396;
+}
+
+.listingItemButtons {
+    float: right;
+    font-family: 'Roboto';
+}
+
+.listingItemButtons li {
+    display: inline-block;
+    margin: auto 10px;
+}
+
+.listingItemButtons li a {
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;   
+}
+
+.listingItemButtons li a:hover {
+    background-color: #f73c37;
+}
+
+.itemMoney {
+    font-size: 1.5rem !important;
+}
+
+.nomar {
+    margin-top: 0 !important;
+}
+
+.listingItemDetails {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.listingItemDetails h4, .listingItemDesc h4 {
+    font-size: 1.6rem;
+    margin: 0;
+    border-bottom: 1px solid $color-spaceblue;
+    padding-bottom: 5px;
+    color: $color-spaceblue;
+}
+
+.listingItemDetailItems {
+    margin: 0;
+    margin-top: 5px;
+    padding-left: 0.5em;
+    font-size: 1em;
+}
+
+.listingItemDetailItems li {
+    margin: 8px 0;
+    font-size: 1.1rem; 
+}
+
+.listingItemDesc {
+    margin: 50px 0;
+    width: 75%;
+}
+
+
+.listingItemOptions {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.listingItemOptions ul {
+    text-align: right !important;
+}
+
+.listingItemOptions ul li {
+    display: inline-block;
+}
+
+.listingItemOptionsLeft {
+    float: left !important;
+    margin: 0;
+    vertical-align: middle;
+    display: block;
+}
+
+.listingItemTrades {
+    margin-left: 15px;
+}
+
+.listingItemTitle {
+    font-size: 2.5em;
+    color: $color-spaceblue;
+}
+
+.listingItemOptions ul li a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+.listingItemOptions ul li a i {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.listingItemOptionsDropDown {
+    font-family: $font_stack-secondary;
+}
+
+.listingItemUserInfo {
+    margin-top: 20px;
+}
+
+.listingItemUserInfo ul li {
+    display: inline-block;
+}
+
+.rating {
+    font-size: 1.4rem;
+    vertical-align: middle;
+    color: gold;
+}
+
+.listingItemUser {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.listingItemUser a img {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.listingItemUser a span {
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.sp-picker-container {
+    display: none;
+}
+
+
+.profileUser {
+    border-bottom: 1px solid #00bfff;
+    padding-bottom: 2rem;
+}
+
+.profileUser > div {
+    display: inline-block;
+}
+
+.profileUserLeft {
+    width: 35%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.profileUserRight {
+    width: 55%;
+    vertical-align: top;
+    margin-top: 1.2rem;
+    font-size: 1.1rem !important;
+}
+
+.profileUserImage img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+/* Graph */
+
+.profileUserGraph {
+    margin-top: 2rem;
+}
+
+.profileUserGraph canvas {
+    width: 80%;
+    height: 170px;
+}
+
+/* Graph end */
+
+.profileUserName h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.profileUserName ul {
+    margin: 0;
+}
+
+.profileUserName ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profileUserRating ul {
+    margin: 5px 0 0 0;
+}
+
+.profileUserRating ul li {
+    display: inline-block;
+}
+
+.profileUserRating ul li span {
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.profileUserRating ul li i {
+    margin-left: 15px;
+    font-size: 0.9rem;
+}
+
+.profileUserInfo ul {
+    margin: 10px 0 0 0 ;
+    vertical-align: middle;
+}
+
+.profileUserInfo > ul li {
+    display: inline-block;
+}
+
+.profileUserInfo ul li a {
+    padding: 2px 5px;
+    margin-left: 30px;
+    font-size: 1.6rem;
+}
+
+.profileUserInfo ul li a i {
+    color: #3b5998 !important;
+}
+
+.desc-box {
+    border-radius: 4px;
+    border: 1px solid #F8504B;
+    width: 75%; 
+    border-bottom-left-radius: 4px;
+    margin-top: 1em; 
+}
+
+.desc-box-listing {
+    border-radius: 4px;
+    border: 1px solid #F8504B;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.desc-box-listing p {
+    padding: 1em;
+}
+
+.desc-width {
+    width: 100%;
+}
+
+.box-title {
+    padding: 5px 8px;
+    font-size: 1.1rem;
+}
+
+.desc-box p {
+    width: 75%;
+    padding: 10px;
+    margin: 0;
+}
+
+.desc-box ul li {
+    width: 75%;
+    padding: 10px;
+    font-size: 1rem !important
+}
+
+.desc-box ul li:first-child {
+    padding-bottom: 1px !important;
+}
+
+.desc-box ul li:last-child {
+    padding-top: 1px !important;
+}
+
+/* .desc-box ul li:last-child {
+    border-bottom-left-radius: 3px;
+} */
+
+
+// .profileUserDesc {
+//     border-radius: 5px;
+//     border: 1px solid #F8504B;
+//     width: 75%;
+// }
+
+// .profileUserDesc p {
+//     width: 75%;
+//     padding-left: 3px;
+// }
+
+// .profileUserFeedback h4, .profileUserDesc h4 {
+//     margin: 0;
+//     font-size: 1.2rem;
+// }
+
+
+// .profileUserFeedback ul li p, .profileUserDesc p {
+//     margin: 0;
+// }
+
+.profileUserButtons ul li {
+    display: inline-block;
+    margin: 40px 0;
+}
+
+.profileUserFeedbackUl {
+    margin: 0;
+}
+
+.profileUserButtons ul li a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.profileUserButtons ul li a:hover {
+    background-color: #f73c37;
+}
+
+.profileUserOptions a {
+    margin: auto 10px;
+    background-color: orange !important;
+    border: 1px solid orange !important;
+}
+
+.profileUserOptions a i {
+    margin: 0px 0 0 10px;
+    vertical-align: middle;
+    color: #fff !important;
+}
+
+.profileUserCards {
+    text-align: center;
+}
+
+.profileUserCards h2 {
+    text-decoration: underline;
+}
+
+.profileUserCardsUl li {
+    width: 20%;
+    height: 220px;
+    display: inline-block;
+    margin: 0.6%;
+    border: 2px solid #00bfff;
+}
+
+.profileUserCardsUl li a {
+    padding: 0;
+}
+
+.profileUserCardsUl li img {
+    width: 100%;
+    height: 100%;
+}
+
+.profileUserMore {
+    margin: 2rem 0 4rem 0;
+}
+
+.profileUserMore li a {
+    margin-top: 15px !important;
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: $color-spacered;
+    border: 1px solid $color-spacered;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.profileUserMore li a:hover {
+    color: $color-spaceblue;
+    border-color: $color-spaceblue;
+}
+
+.headerSearchLogo {
+    vertical-align: middle !important;
+    margin-top: 16px !important;
+}
+
+
+.offerRequestDiv {
+    margin-bottom: 10px !important;
+}
+
+.offerRequestDiv > div {
+    display: inline-block;
+}
+
+.offerRequestRight {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.offerRequestLeft {
+    width: 40%;
+    vertical-align: top;
+}
+
+.offerRequestImg {
+    width: 100%;
+}
+
+.offerRequestName h1 {
+    margin: 0;
+    color: #00bfff !important;
+}
+
+.offerRequestName p {
+    margin: 0 !important;
+    font-size: 0.8rem !important;
+    color: #6c54b3 !important;
+    font-style: italic !important;
+}
+
+// .offerRequestName p a {
+//     color: #6c54b3 !important;
+// }
+
+.offerRequestName p a {
+    font-size: 0.8rem !important;
+    color: #6c54b3 !important;
+    font-style: italic !important 
+}
+
+.offerRequestName p a:hover {
+    text-decoration: underline !important;
+    font-size: 0.8rem !important;
+    color: #6c54b3 !important;
+    font-style: italic !important 
+}
+
+.offerRequestPrice ul {
+    margin: 10px 0;
+}
+
+.offerRequestPrice ul li {
+    display: inline-block;
+}
+
+.offerRequestOriginalPrice {
+    margin: 0;
+    padding: 5px 20px 5px 0;
+    border-right: 1px solid #404040;
+}
+
+.offerRequestPrice ul li input {
+    width: 40px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.offerRequestOfferPrice {
+    margin-left: 5%;
+}
+
+.offerRequestDate ul {
+    margin: 10px 0 0 0;
+}
+
+.offerRequestDate ul li h4 {
+    margin: 0 0 5px 0;
+}
+
+.offerRequestLocation ul {
+    margin: 10px 0 0 0;
+}
+
+.offerRequestLocation h4 {
+    margin: 0;
+}
+
+.offerRequestLocation ul li {
+    display: inline-block !important;
+}
+
+.offerRequestLocation input {
+    margin: 10px 0 0 0 !important;
+}
+
+.offerRequestButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerRequestButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerRequestButton input:hover {
+    background-color: #f73c37;
+}
+
+
+//////////////////////////////////////////////
+
+
+.offerAcceptButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerAcceptButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: $color-spacegreen;
+    border: 1px solid $color-spacegreen;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerAcceptButton input:hover {
+    background-color: #6DAB59;
+}
+
+
+/////////////////////////////////////////////
+
+.offerRejectButton {
+    width: 75%;
+    margin: 0 !important;
+}
+
+.offerRejectButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.offerRejectButton input:hover {
+    background-color: #f73c37;
+}
+
+///////////////////////////////////////////////
+
+
+.offerRequestMaps {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.offerRequestMapsApi {
+    width: 100%;
+    height: 250px !important;
+}
+
+
+.profileCard > h2 {
+    margin-left: 5px;
+}
+
+.profileCardUl > li {
+    display: inline-block;
+    border: 2px solid #00bfff;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 0px 10px 10px 10px;
+    width: 28.9%;;
+}
+
+.profileCardUl > li:hover {
+    border: 2px solid #f8504b;
+}
+
+.profileCardLi p {
+    text-align: right;
+    margin: 0 0 5px 0;
+    font-size: 0.6rem;
+    height: 15px;
+    vertical-align: top !important;
+    color: #6c54b3;
+        font-style: italic;
+}
+
+.profileCardLi p a {
+    font-style: italic;
+    color: #6c54b3;
+}
+
+.profileCardLi p a:hover {
+    color: $color-blue2;
+}
+
+.profileCardLi p a:hover {
+    text-decoration: underline !important;
+}
+
+.profileCardLi ul {
+    display: inline-block;
+}
+
+.profileCardImage {
+    width: 49%;
+    margin-right: 2%;
+}
+
+.profileCardInfo {
+    width: 45%;
+    margin-left: 2%;
+    vertical-align: top;
+}
+
+.profileCardImage img {
+    width: 100%; 
+    height: 150px;
+}
+
+.profileCardInfo li {
+    margin-bottom: 12px;
+}
+
+.profileCardInfo li a h4 {
+    margin: 0;
+    color: #00bfff;
+    overflow: hidden;
+}
+
+.profileCardInfo li a h4:hover {
+    text-decoration: underline;
+}
+
+.profileCardName {
+    text-decoration: underline !important;
+    font-style: italic;
+}
+
+.profileCardName:hover {
+    color: $color-blue2 !important;
+}
+
+.profileCardView {
+    margin: 25px 0 0 0;
+    text-align: right;   
+}
+
+.profileCardView a {
+    padding: 10px 18px !important;
+    font-size: 0.9rem;
+    background-color: #f8504b;
+    color: #fff;
+}
+
+.profileCardView a:hover {
+    background-color: #f73c37; 
+}
+
+.profileCardItem {
+    margin-bottom: 5px !important;
+}
+
+.footer {
+    margin: none !important;
+    padding: 10px 10px;
+    background-color: #f8504b;
+    text-align: center;
+}
+
+.footerLeft {
+    margin: 0 15% 0 15%;
+}
+
+.footerItems {
+    margin-bottom: 30px;
+}
+
+.footerItems li {
+    display: inline-block;
+}
+
+.footerItems li h3 {
+    margin: 0 20px 0 0 !important;
+}
+
+.footerItems li h3 a {
+    color: #fff !important;
+}
+
+.footerItems li h4 {
+    margin: 0 5px !important;
+}
+
+.footerItems li h4 a:hover {
+    color: #000 !important;
+}
+
+.footerSocial li {
+    display: inline-block;
+    
+}
+
+.footerbottom > li {
+    display: inline-block;
+}
+
+.footerSocial {
+    margin-left: 18%;
+} 
+
+.footerSocial ul li {
+    margin: 0 10px;
+}
+
+.footerSocial ul li i {
+    font-size: 1.2rem;
+    color: #404040 !important;
+}
+
+.footerSocial ul li i:hover {
+    color: #000 !important;
+}
+
+
+.featurePageTitle {
+    text-decoration: underline;
+}
+
+.profileReceivedOffers h2 {
+    margin: 0;
+}
+
+.profileReceivedOffers > ul {
+    margin-left: 0%;
+}
+
+.profileReceivedOriginal {
+    margin: 3px 0 0 0;
+    font-size: 0.9rem;
+}
+
+.profileReceivedUl {
+    width: 55%;
+    margin-left: 21% !important;
+    margin-right: 21% !important;
+}
+
+.profileReceivedLi {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #75D855;
+}
+
+.profileReceivedLi > ul {
+    display: inline-block !important;
+}
+
+.profileReceivedCardLeft {
+    width: 45% !important;
+}
+
+.profileReceivedCardRight {
+    width: 40% !important;
+}
+
+.profileReceivedImage {
+    width: 100% !important;
+    height: 200px;
+}
+
+.profileReceivedImg {
+    width: 100% !important;
+    height: 100%;
+}
+
+.profileReceivedCardRight {
+    margin-left: 5%;
+    vertical-align: top;
+}
+
+.profileReceivedCardRight li a h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.profileReceivedCardRight li a {
+    margin: 0;
+    color: #00bfff !important;
+    
+}
+
+.profileReceivedCardRight li a:hover {
+    color: #00bfff !important;
+    text-decoration: underline;
+}
+
+.profileReceivedName {
+    font-size: 0.8rem;
+    color: #6c54b3;
+    font-style: italic;
+}
+
+.profileReceivedPrice {
+    margin: 12px 0 4px 0;  
+}
+
+.profileReceivedDate, .profileReceivedLocation {
+    margin: 0 0 5px 0;
+}
+
+.profileReceivedButtons {
+    margin-top: 15px;
+}
+
+.profileReceivedButtonsUl > li {
+    display: inline-block;
+}
+
+.profileReceivedButtons li a {
+    padding: 14px 12px;
+    font-size: 1rem;
+    color: #fff !important;
+    background-color: #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.profileReceivedAccept a {
+    background-color: #49E20E !important;
+}
+
+.profileReceivedDecline {
+    margin-left: 10px; 
+}
+
+
+#profileReceivedOffersMaps {
+    margin-top: 20px;
+    width: 100%;
+    height: 180px;
+}
+
+
+.profileViewMeetupRight li {
+    margin: 10px 0 !important;
+}
+
+.profileViewMeetupLi {
+    margin-bottom: 50px;
+}
+
+.largeSearch {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #00bfff;
+}
+
+
+
+.spaceBlue {
+    color: #00bfff !important;
+}
+
+.searchResultsDiv > div {
+    display: inline-block;
+}
+
+.searchResultsRefine {
+    width: 15%;
+}
+
+.searchResultsCards {
+    width: 80%;
+}
+
+.searchResultsRefine input[type=checkbox] {
+    zoom: 1;
+    vertical-align: middle !important;
+    margin: auto 5px 1px auto;
+}
+
+.searchResultsDiv {
+    margin-top: 0 !important;
+}
+
+.searchResultsOptions {
+    margin-top: 10px;
+}
+
+.searchResultsOptions li {
+    display: inline-block;
+}
+
+.searchResultsCount {
+    font-size: 0.8rem;
+}
+
+.searchResultsSort {
+    float: right !important;
+    margin-right: 30px;
+    font-size: 0.8rem;
+}
+
+.searchResultsSort a {
+    margin-left: 3px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    color: #fff !important;
+    background-color: #00bfff;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+}
+
+.searchResultsSort a i {
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #fff !important;
+}
+
+.searchRefineHeadings {
+    color: #00bfff;
+}
+
+.searchResultsRefine ul li{
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.searchResultsRefine ul > p {
+    margin-bottom: 0px;
+}
+
+.searchRefineTitle {
+    font-size: 1.1rem;
+    text-decoration: underline;
+    margin-bottom: 5px !important;
+}
+
+.searchRefineSize li, .searchRefinePrice li {
+    display: inline-block;
+}
+
+.searchRefineDash {
+    margin: 0 5px;
+}
+
+.searchRefinePrice li input {
+    width: 30px;
+    margin-left: 2px;
+    height: 20px !important;
+}
+
+.searchRefineTrades li input {
+    vertical-align: middle !important;
+    margin-bottom: 2px;
+    margin-right: 3px;
+}
+
+.searchResultsCards {
+    vertical-align: top;
+    margin-top: 0px;
+}
+
+.searchResultsCardUl > li {
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #00bfff;
+    border-radius: 6px;
+    margin: 10px 0 10px 10%;
+}
+
+.searchResultsCardUl > li:hover {
+    border: 2px solid #f8504b !important;
+}
+
+.searchResultsCardLi > ul {
+    display: inline-block;
+}
+
+.searchResultsCardLeft {
+    width: 30% !important;  
+    height: 200px;
+}
+
+.searchResultsCardRight {
+    width: 40%;
+    vertical-align: top !important;
+    margin-left: 3%;
+}
+
+.searchResultsCardRight li b {
+    margin-right: 3px;
+}
+
+.searchResultsCardImage,.searchResultsCardImg {
+    width: 100% !important;
+    height: 100%;
+}
+
+.searchResultsCardTitle a h2 {
+    margin: 0 !important;
+    color: #00bfff;
+}
+
+.searchResultsCardTitle a h2:hover {
+    text-decoration: underline;
+}
+
+.searchResultsCardName p {
+    margin: 0 0 5px 0 !important;
+    font-size: 0.9rem;
+    color: #3c37c3;
+    font-style: italic;
+}
+
+.searchResultsCardName p a {
+    color: #3c37c3;
+}
+
+.searchResultsCardName p a:hover {
+    color: #3c37c3;
+    text-decoration: underline;
+}
+
+.searchResultsCardPrice, .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
+    font-size: 1.05rem;
+    margin: 10px 0;
+}
+
+.searchResultsCardPrice {
+    margin: 0 0 15px 0;
+}
+
+.seachResultsCardArea  {
+    margin-bottom: 0;
+}
+
+.chatDiv {
+    padding: 15px !important;
+    border: 2px solid #00bfff !important;
+    height: 520px;
+    margin: 2rem 15% 3rem 15% !important;
+}
+
+.chatDiv > ul {
+    display: inline-block;
+}
+
+.chatRight {
+    width: 65%;
+    vertical-align: top;
+    margin: 0;
+    float: right;
+}
+
+.chatLeft {
+    width: 30%;
+    vertical-align: top;
+    margin: 0;
+}
+
+.chatMessages {
+    height: 350px;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+.chatPeople {
+    height: 430px;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+}
+
+.chatUserSent {
+    text-align: right !important;
+    margin-right: 20px !important;
+}
+
+.chatUserReceived {
+    text-align: left !important;
+}
+
+.chatUserSent li, .chatUserReceived li {
+    display: inline-block;
+}
+
+.chatUserSent li img, .chatUserReceived li img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chatMessages ul {
+    margin: 10px 0;
+}
+
+.chatInboxTitle h3 {
+    margin: 0 0 5px 0;
+}
+
+.chatInboxSearch input {
+    margin-left: 10px;
+}
+
+.chatInbox {
+    margin-bottom: 15px;
+}
+
+.chatPerson ul {
+    width: 75%;
+    margin: 5px;
+    padding: 15px 10px;
+    background-color: #f8504b;
+}
+
+.chatPerson ul li {
+    display: inline-block;
+}
+
+.chatPerson ul li img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 5px 3px 0;
+}
+
+.chatPerson ul li a {
+    color: #fff !important;
+}
+
+.chatPerson ul li:last-child {
+    float: right !important;
+    margin-right: 60px;
+}
+
+.chatTopSection ul li {
+    display: inline-block;
+}
+
+.chatTopSection ul li h3 {
+    margin: 10px 0 20px 0;
+}
+
+.chatText {
+    width: 90%;
+    height: 50px;
+}
+
+.chatSend {
+    width: 91%;
+    margin: 14px 0 20px 0;
+}
+
+.chatSend li {
+    display: inline-block;
+}
+
+.chatSendButton {
+    float: right !important;
+}
+
+.chatSendButton a {
+    padding: 10px 16px;
+    background-color: #f8504b;
+    color: #fff;
+}
+
+
+
+
+
