@@ -83,6 +83,8 @@ Extensive undertandability is less crucial in the beginning stage of development
 	[
 	{ "keys": ["ctrl+shift+r"], "command": "reindent" },
 	{ "keys": ["ctrl+alt+shift+w"], "command": "close_all" }
+
+	Make one for refreshing folders
 	]
 
 ## Inline Comments:

@@ -57,6 +57,7 @@ SearchSource.defineSource('listing', function (searchText, options) {
 
 
     var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorCity, selectorState ] }).fetch();
+    console.log(query);
     return query;
   }
 
