@@ -12,16 +12,16 @@ Accounts.config({'sendVerificationEmail': true});
 
 Houston.add_collection('houston_admins');
 
-
 SearchSource.defineSource('listing', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20}; 
-
 
 // TASK - Get the selector to use || instead of AND 
 // When searching Nike returns listing where either brand is nike or all listing_title is Nike
 
   if (searchText) {
     var regExp = buildRegExp(searchText);
+
+// Comment Reason - Additional field for the search which can be enabled later
     // var selector = {
     //   listing_title: regExp,
     //   brand: regExp
@@ -30,7 +30,6 @@ SearchSource.defineSource('listing', function (searchText, options) {
     //   // type: regExp, 
     //   // city: regExp
     // };
-
     var selector1 = {
       listing_title:  regExp
     }
@@ -40,6 +39,7 @@ SearchSource.defineSource('listing', function (searchText, options) {
 
     var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
     return query;
+
     // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
     // Listing.find({ $or:[ { listing_title: /(?=.*Runn).+/i},{ brand: /(?=.*Runn).+/i } ] }).fetch();
   }

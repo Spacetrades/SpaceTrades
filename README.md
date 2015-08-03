@@ -15,13 +15,14 @@ https://trello.com/b/IETMH34k/meteor-development
 - [:computer: Chart JS Docs](http://www.chartjs.org/docs/)
 - [:computer: Autoform Docs](https://github.com/aldeed/meteor-autoform)
 - [:computer: Coffeescript](http://coffeescript.org/)
+- [:computer: Google Maps](https://developers.google.com/maps/documentation/javascript/reference?hl=en)
 
 
 ## Stylesheets
 - [:computer: jQuery Style Guide](http://contribute.jquery.org/style-guide/js/)
 
-
 - [:computer: Unofficial Meteor Faq](https://github.com/oortcloud/unofficial-meteor-faq)
+- [:computer: Meteor Manual](https://manual.meteor.com/)
 - [:computer: Todo Example Site](https://github.com/meteor/simple-todos)
 - [:book: Meteor Tips](http://meteortips.com/book/forms/)
 - [:computer: Discover Meteor](https://www.discovermeteor.com/)
@@ -80,6 +81,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 
 ## Inline Comments:
 	TASK - A task to complete in a certain file
+	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
 	IDEAL - A suggestion to do something differently 
