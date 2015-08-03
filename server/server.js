@@ -21,15 +21,6 @@ SearchSource.defineSource('listing', function (searchText, options) {
   if (searchText) {
     var regExp = buildRegExp(searchText);
 
-// Comment Reason - Additional field for the search which can be enabled later
-    // var selector = {
-    //   listing_title: regExp,
-    //   brand: regExp
-    //   // username: regExp,
-    //   // category: regExp, 
-    //   // type: regExp, 
-    //   // city: regExp
-    // };
     var selectorTitle = {
       listing_title:  regExp
     }
@@ -46,6 +37,10 @@ SearchSource.defineSource('listing', function (searchText, options) {
       category: regExp
     }
 
+    var selectorUserName = {
+      username: regExp
+    }
+
     var selectorCity = {
       city: regExp
     }
@@ -56,7 +51,7 @@ SearchSource.defineSource('listing', function (searchText, options) {
 
 
 
-    var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorCity, selectorState ] }).fetch();
+    var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState ] }).fetch();
     console.log(query);
     return query;
   }

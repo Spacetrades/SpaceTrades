@@ -125,6 +125,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	JS - Console.log's get grouped if possible into sections using //L// and //-L//
 	URL Names - Do not group words that end and begin with the same letter for readability sake. Ex: selllisting - Bad, listingsell - Good
 	Files - Everything of its own significant gravity should be its own file
+	JS Callback functions - Keep on same line as caller function Ex:$(".searchRefineCategories li input").each( function () {
 
 ## Rand
 	npm install -g eslint

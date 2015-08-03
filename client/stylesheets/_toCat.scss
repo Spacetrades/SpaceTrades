@@ -293,9 +293,9 @@ code {
     margin-left: 15%;
 }
 
-input[type=checkbox] {
-    zoom: 2;
-}
+// input[type=checkbox] {
+//     zoom: 2;
+// }
 
 .right {
     float: right;
@@ -425,6 +425,9 @@ input[type="radio"] {
 .s-alert-sucess{
     font-family: $font_stack-alfred !important ;
 }
+
+
+/************************** Star ratings *************************/
 
 input[type="radio"] + label {
     font-size:14px;

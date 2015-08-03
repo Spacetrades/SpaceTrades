@@ -1,5 +1,5 @@
 <template name="searchpage">
-
+<!-- TASK - Populate locations with top ten cities near you -->
 <div class="searchfield job largeSearch oneDiv">
             <input type="text" id="search" class=" search search2" value="{{search}}" placeholder="Brand, Name, Neighborhood, Size, Price..."  >
             <a href="/search" class="homesearchbtn">Search</a>
@@ -18,100 +18,97 @@
                 <p class="searchRefineTitle">Refine Search</p>
                 <ul class="searchRefineCategories">
                     <p class="searchRefineHeadings">Categories</p>
-                    <li><input type="checkbox" value="Nike">Apparel</li>
-                    <li><input type="checkbox" value="Jordan">Electronics</li>
-                    <li><input type="checkbox" value="Addidas">Shoes</li>
-                    <li><input type="checkbox" value="Addidas">Other</li>
+                    <li><input type="checkbox" value="Apparel">Apparel</li>
+                    <li><input type="checkbox" value="Electronics">Electronics</li>
+                    <li><input type="checkbox" value="Shoes">Shoes</li>
+                    <li><input type="checkbox" value="Other">Other</li>
                 </ul>
+          <!--  Comment Reason - Too few brands. All or None
+
                 <ul class="searchRefineBrand">
                     <p class="searchRefineHeadings">Brand</p>
                     <li><input type="checkbox" value="Nike">Addidas</li>
                     <li><input type="checkbox" value="Jordan">Asics</li>
                     <li><input type="checkbox" value="Addidas">Jordan</li>
                     <li><input type="checkbox" value="Addidas">Nike</li>
-                </ul>
+                </ul> -->
                 <ul class="searchRefineCondition">
                     <p class="searchRefineHeadings">Condition</p>
                     <li><input type="checkbox" value="New">New</li>
                     <li><input type="checkbox" value="LikeNew">Like New</li>
                     <li><input type="checkbox" value="Used">Used</li>
-                    <li><input type="checkbox" value="Broken">Broken</li>
+                    <li><input type="checkbox" value="Needs Repair">Needs Repair</li>
                 </ul>
                 <ul class="searchRefineSize">
-                    <p class="searchRefineHeadings">Size</p>
+                    <p class="searchRefineHeadings">Size Range</p>
                     <li class="searchRefineSizeStart">
-                        <select>
-                            <option value="5">Select</option>
+                    <!-- TASK - Load from array -->
+                        <select class="listize1">
+                            <option value="" disabled selected>Select Size</option>
                             <option value="5">5</option>
-                            <option value="5">5.5</option>
-                            <option value="6">6</option>
-                            <option value="5">6.5</option>
+                            <option value="5.5">5.5</option>
+                            <option value="6.5">6</option>
+                            <option value="6">6.5</option>
                             <option value="7">7</option>
-                            <option value="5">7.5</option>
+                            <option value="7.5">7.5</option>
                             <option value="8">8</option>
-                            <option value="5">8.5</option>
+                            <option value="8.5">8.5</option>
                             <option value="9">9</option>
-                            <option value="5">9.5</option>
+                            <option value="9.5">9.5</option>
                             <option value="10">10</option>
-                            <option value="5">10.5</option>
-                            <option value="5">11</option>
-                            <option value="5">11.5</option>
-                            <option value="5">12</option>
-                            <option value="5">12.5</option>
-                            <option value="5">13</option>
-                            <option value="5">13.5</option>
-                            <option value="5">14</option>
+                            <option value="10.5">10.5</option>
+                            <option value="11">11</option>
+                            <option value="11.5">11.5</option>
+                            <option value="12">12</option>
+                            <option value="12.5">12.5</option>
+                            <option value="13">13</option>
+                            <option value="13.5">13.5</option>
+                            <option value="14">14</option>
                         </select>
                     </li>
                     <li class="searchRefineDash">to</li>
                     <li class="searchRefineSizeEnd">
-                        <select>
-                            <option value="5">Select</option>
+                        <select class="listsize2">
+                            <option value="" disabled selected>Select Size</option>
                             <option value="5">5</option>
-                            <option value="5">5.5</option>
-                            <option value="6">6</option>
-                            <option value="5">6.5</option>
+                            <option value="5.5">5.5</option>
+                            <option value="6.5">6</option>
+                            <option value="6">6.5</option>
                             <option value="7">7</option>
-                            <option value="5">7.5</option>
+                            <option value="7.5">7.5</option>
                             <option value="8">8</option>
-                            <option value="5">8.5</option>
+                            <option value="8.5">8.5</option>
                             <option value="9">9</option>
-                            <option value="5">9.5</option>
+                            <option value="9.5">9.5</option>
                             <option value="10">10</option>
-                            <option value="5">10.5</option>
-                            <option value="5">11</option>
-                            <option value="5">11.5</option>
-                            <option value="5">12</option>
-                            <option value="5">12.5</option>
-                            <option value="5">13</option>
-                            <option value="5">13.5</option>
-                            <option value="5">14</option>
+                            <option value="10.5">10.5</option>
+                            <option value="11">11</option>
+                            <option value="11.5">11.5</option>
+                            <option value="12">12</option>
+                            <option value="12.5">12.5</option>
+                            <option value="13">13</option>
+                            <option value="13.5">13.5</option>
+                            <option value="14">14</option>
                         </select>
                     </li>
                 </ul>
-                <ul class="searchRefineStyle">
+               <!--  <ul class="searchRefineStyle">
                     <p class="searchRefineHeadings">Style</p>
                     <li><input type="checkbox" value="Basketball">Basketball</li>
                     <li><input type="checkbox" value="Running">Running</li>
                     <li><input type="checkbox" value="Athletic">Athletic</li>
-                </ul>
+                </ul> -->
                 <ul class="searchRefineColor">
                     <p class="searchRefineHeadings">Color</p>
                     <li>
                         <input type="text" id="colorpicker" style="display: none;">
-                        <div class="sp-replacer sp-light full-spectrum">
-                            <div class="sp-preview">
-                                <div class="sp-preview-inner" style="background-color: rgb(0, 0, 0);"></div>
-                            </div>
-                            <div class="sp-dd">▼</div>
-                        </div> 
                     </li>
                 </ul> 
                 <ul class="searchRefinePrice">
-                    <p class="searchRefineHeadings">Price</p>
-                    <li>$<input type="text" class="searchpricefirst"/></li>
+                    <p class="searchRefineHeadings">Price Range</p>
+                    <li><input type="text" class="listprice" placeholder="$"/></li>
                     <li class="searchRefineDash">to</li>
-                    <li>$<input type="text" class="searchpricefinal"/></li>
+                    <li><input type="text" class="listprice" placeholder="$"/></li>
                 </ul>
                 <ul class="searchRefineLocation">
                     <p class="searchRefineHeadings">Location</p>
@@ -123,12 +120,15 @@
                 </ul>
                 <ul class="searchRefineTrades">
                     <p class="searchRefineHeadings">Accepts Trades</p>
+                    <!-- TASK - Radio button is broken. Accepts two inputs -->
                     <li><input type="radio" name="Yes" value="Yes">Yes</li>
                     <li><input type="radio" name="No" value="No">No</li>
                 </ul> 
                 <ul class="searchRefineRating">
                     <p class="searchRefineHeadings">Seller Rating</p>
                     <li>
+                    <!-- TASK - Make seperate template for star ratings -->
+
                         <fieldset class="rating">
                             <input type="radio" id="star5" name="rating" value="5" />
                             <label class = "full" for="star5"></label>
