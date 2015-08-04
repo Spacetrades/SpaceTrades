@@ -82,10 +82,6 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     border-color: rgb(248, 80, 75) !important;
 }
 
-.homeLoadMore {
-    margin-left: 45% !important;
-}
-
 .homeLoadMore:hover {
     box-shadow: 0px 1px 3px 0px #00bfff;
 }
@@ -2866,7 +2862,7 @@ i:hover {
     text-align: center;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    max-width: 90%;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2933,6 +2929,7 @@ i:hover {
     position: relative;
     padding-top: 400px;
     margin: 20px auto;
+    border: 1px solid #d3d3d3;
 }
 
 /*Last thing remaining is to add transitions*/
@@ -2995,7 +2992,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 #map-canvas {
-    height: 520px;
+    height: 400px;
 }
 
 .listingItemLeft {
@@ -3182,6 +3179,15 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemUser a span {
     vertical-align: middle;
     margin-left: 4px;
+}
+
+.listingItemDescription {
+    width: 75% !important;
+}
+
+.listingItemColor {
+    height: 15px;
+    vertical-align: middle;
 }
 
 .sp-picker-container {
@@ -3418,6 +3424,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserMore {
     margin: 2rem 0 4rem 0;
+    text-align: center;
 }
 
 .profileUserMore li a {
@@ -4022,6 +4029,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .searchRefinePrice li input {
+    text-align: left !important;
     width: 30px;
     margin-left: 2px;
     height: 20px !important;
@@ -4252,4 +4260,9 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 
-
+.globalOveflow {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
