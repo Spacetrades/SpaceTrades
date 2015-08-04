@@ -6,6 +6,8 @@
 /****** ST Grid (our own bootstrap) ******/
 
 
+// use mixins for lots ex: text-align: center
+
 /*****************************************************************
                             CRUCIAL
 ******************************************************************/
@@ -13,6 +15,10 @@
 GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
+
+::selection {
+    background-color: yellow;
+}
 
 .box-title {
     background: $color-spacered !important;
@@ -962,6 +968,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .helpiteml {
     margin-top: -2.8rem;
     text-align: right;
+    font-family: $font_stack-norm;
 }
 
 .helpiteml li a {
@@ -974,6 +981,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .helplogo {
     color: $color-spacered;
+}
+
+.helplogo {
+    font-family: $font_stack-norm;
 }
 
 /****** HELP NAV END ******/
