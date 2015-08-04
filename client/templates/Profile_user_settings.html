@@ -3,31 +3,21 @@
 <!-- TASK - ADD Blocking-->
 <!-- TASK - ADD Followers -->
 	<div class="profilediv div">
+	<h1> User Settings </h1>
 		<div class="profilecontent">
 			<div class="profileleft">
-				<div class="proimg">
-					<a><img class="profilepic" src="{{picture}}"></a>
-				</div>
-				<div class="profreq">
-					<!-- Frequency Graph Goes Here -->
-				</div>
 			</div>
 			<div class="profileright">
-				<div class="proname">
-					<h2>{{name}}</h2>
-				</div>
 				<div class="profileEditQuestions">
 					<ul>
-						<li><input type="text" class="proSetLocation" placeholder="Brooklyn, NY"><!-- LocationFromFacebook --></li>
-						<li><input type="checkbox" name="show" value="showfb" class="proSetFB"> Show General Location</li>
+						<li>Location: <input type="text" class="proSetLocation" value="New York"></li>
 					</ul>
 				</div>
 				<div class="profileEditDescripton">
-					<input type="text" class="proSetLocation" placeholder="Description Here">
-					<!-- Previous Description or for new users "Add a Description" -->
+					<textarea class="listdescription" placeholder="Edit your profile description"></textarea>
 				</div>
 				<div class="profileEditSaveBtn">
-					<button type="button">Save Changes</button>
+					<input type="submit" class="add ph-button" value="Save Changes">
 				</div>	
 			</div>
 		</div>
