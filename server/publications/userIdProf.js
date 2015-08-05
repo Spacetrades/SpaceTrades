@@ -1,3 +1,6 @@
 Meteor.publish('userIdprof', function (id) {
-	return Meteor.users.find( { _id: id } );
+	if (this.userId) {
+		return Meteor.users.find( { _id: id } );
+	}
+	this.ready();
 });

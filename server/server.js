@@ -50,7 +50,6 @@ if (searchText) {
   }
 
   var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState ] }).fetch();
-  console.log(selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState);
   console.log(query);
   return query;
 }
@@ -226,24 +225,25 @@ Meteor.methods({
   });
 },
 searchFilter: function (option) {
-  SearchSource.defineSource('listingo', function (searchText, option) {
-    var option = { sort: {isoScore:  -1}, limit: 20}; 
-    console.log(options.Categories);
+    // console.log(options.Categories); 
 
-    if (searchText) {
+    //   var selectorCat = {
+    //   category: options.Categories
+    // }
 
-      var selectorCategory = {
-      category: options.Categories
-    }
+    var selectorCity = {
+      city: 'Queens'
+    };
+
+    var selectorCategory = {
+      category: 'Apparel'
+    };
 
     console.log(selectorCategory);
 
-
-      var query = Listing.find({ $and:[  ] }).fetch();
+      var query = Listing.find({ $and:[ selectorCategory, selectorCity ] }).fetch();
+      console.log(query);
       return query;
-    }
-
-  });
 },
 addOffer: function (options) {
   Offer.insert({
