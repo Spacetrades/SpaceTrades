@@ -18,55 +18,53 @@ SearchSource.defineSource('listing', function (searchText, options) {
 // TASK - Get the selector to use || instead of AND 
 // When searching Nike returns listing where either brand is nike or all listing_title is Nike
 
-  if (searchText) {
-    var regExp = buildRegExp(searchText);
+if (searchText) {
+  var regExp = buildRegExp(searchText);
 
-    var selectorTitle = {
-      listing_title:  regExp
-    }
-
-    var selectorBrand = {
-      brand:  regExp
-    }
-
-    var selectorPrice = {
-      price: regExp
-    }
-
-    var selectorCategory = {
-      category: regExp
-    }
-
-    var selectorUserName = {
-      username: regExp
-    }
-
-    var selectorCity = {
-      city: regExp
-    }
-
-    var selectorState = {
-      state: regExp
-    }
-
-
-
-    var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState ] }).fetch();
-    console.log(query);
-    return query;
+  var selectorTitle = {
+    listing_title:  regExp
   }
+
+  var selectorBrand = {
+    brand:  regExp
+  }
+
+  var selectorPrice = {
+    price: regExp
+  }
+
+  var selectorCategory = {
+    category: regExp
+  }
+
+  var selectorUserName = {
+    username: regExp
+  }
+
+  var selectorCity = {
+    city: regExp
+  }
+
+  var selectorState = {
+    state: regExp
+  }
+
+  var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState ] }).fetch();
+  console.log(query);
+  return query;
+}
 
 // TASK - Learn the right way to make a RegExp
 // TASK - Incorporate Autocomplete
 
-  function buildRegExp (searchText) {
-    var words = searchText.trim().split(/[ \-\:]+/);
-    var exps = _.map(words, function (word) {
-      return "(?=.*" + word +  ")";
-    });
-    var fullExp = exps.join('') + '.+';
-    return new RegExp(fullExp, "i");
-  }
+function buildRegExp (searchText) {
+  var words = searchText.trim().split(/[ \-\:]+/);
+  var exps = _.map(words, function (word) {
+    return "(?=.*" + word +  ")";
+  });
+  var fullExp = exps.join('') + '.+';
+  return new RegExp(fullExp, "i");
+}
 
 });
 
@@ -109,25 +107,25 @@ SearchSource.defineSource('listing', function (searchText, options) {
 
   // Removes the config b/c dupliation error and re-defines it
 
-    ServiceConfiguration.configurations.remove({
-      service: "instagram"
-    });
-    ServiceConfiguration.configurations.insert({
-      service: "instagram",
-      clientId: "644acc16830a4783957a6ad207ab6c00",
-      scope:'basic',
-      secret: "011a28fce8994008ae2eb1cfa131e3d4"
-    }); 
+  ServiceConfiguration.configurations.remove({
+    service: "instagram"
+  });
+  ServiceConfiguration.configurations.insert({
+    service: "instagram",
+    clientId: "644acc16830a4783957a6ad207ab6c00",
+    scope:'basic',
+    secret: "011a28fce8994008ae2eb1cfa131e3d4"
+  }); 
 
-    ServiceConfiguration.configurations.remove({
-      service: "facebook"
-    });
+  ServiceConfiguration.configurations.remove({
+    service: "facebook"
+  });
 
-    ServiceConfiguration.configurations.insert({
-      service: 'facebook',
-      appId: '403772073107923',
-      secret: '4663665d518fef59dbf6643280281a85'
-    });
+  ServiceConfiguration.configurations.insert({
+    service: 'facebook',
+    appId: '403772073107923',
+    secret: '4663665d518fef59dbf6643280281a85'
+  });
     // if (!ServiceConfiguration.configurations.find()) { 
     //     ServiceConfiguration.configurations.insert({
     //     service: 'facebook',
@@ -226,6 +224,27 @@ Meteor.methods({
     img3: options.img3
   });
 },
+searchFilter: function (option) {
+    // console.log(options.Categories); 
+
+    //   var selectorCat = {
+    //   category: options.Categories
+    // }
+
+    var selectorCity = {
+      city: 'Queens'
+    };
+
+    var selectorCategory = {
+      category: 'Apparel'
+    };
+
+    console.log(selectorCategory);
+
+      var query = Listing.find({ $and:[ selectorCategory, selectorCity ] }).fetch();
+      console.log(query);
+      return query;
+},
 addOffer: function (options) {
   Offer.insert({
     listing_title: options.listing_title,
@@ -256,12 +275,12 @@ userLocate: function (city, state) {
 ipLocate: function() {
 
   HTTP.get("http://ipinfo.io", function (error, result) {
-      var place = JSON.parse(result.content);
-      console.log(place);
-      var city = place.city;
-      var state = place.region;
-      console.log(city, state);
-    });
+    var place = JSON.parse(result.content);
+    console.log(place);
+    var city = place.city;
+    var state = place.region;
+    console.log(city, state);
+  });
 },
 
 /**

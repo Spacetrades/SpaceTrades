@@ -1,3 +1,6 @@
 Meteor.publish('offerId', function (id) {
-    return Offer.find({ _id: id});
+	if (this.userId) {
+    	return Offer.find({ _id: id});
+	}
+	this.ready();
 });

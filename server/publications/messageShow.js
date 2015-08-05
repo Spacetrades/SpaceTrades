@@ -1,3 +1,6 @@
 Meteor.publish('messageShow', function () {
-    return Message.find({}, { sort: { timestamp: -1 }, limit: 20 });
-  });
+	if (this.userId) {
+		return Message.find({}, { sort: { timestamp: -1 }, limit: 20 });
+	}
+	this.ready();
+});
