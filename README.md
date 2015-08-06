@@ -48,11 +48,15 @@ https://trello.com/b/IETMH34k/meteor-development
 - [:computer: Deploy to personal linux server (1)](http://lukaszkups.net/blog/0006_deploying_meteorjs_app_to_own_server_via_ssh/)
 - [:computer: Deploy to personal linux server (2)](https://gentlenode.com/journal/meteor-19-deploying-your-applications-in-a-snap-with-meteor-up-mup/41)
 
-## Beginning Principles
+## Design Principles
 1. If it works, don't fix it
 2. Remain consistent (Keep order in chaos)
 3. Nothing more, Nothing less
 4. Better to undersalt then oversalt on design
+5. ST is holistic and every part no matter how small reflects the whole
+6. Consider automation at every instance of feasibility
+7. *DRY*
+8. Go the step further. Always go a little bit beyond the standard design practice so that users understand the site is willing to go the extra mile for them.
 
 ## Commit Messages Language ( CML )
 ```

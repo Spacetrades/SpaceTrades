@@ -1877,6 +1877,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 i:hover {
     color: black !important;
+    transition: 1s;
 }
 
 .navfa {
@@ -2236,12 +2237,16 @@ i:hover {
     vertical-align: middle;
 }
 
+@mixin headerUsername {
+    font-family: $font_stack-text;
+    font-size: 1.2em;
+}
 
 /** NEW NAV **/
 
-// .headerUsername {
-//     color: $color-spacegrey;
-// }
+.headerUsername {
+    @include headerUsername;
+}
 
 .headerNav {
     color: $color-spacegrey;
