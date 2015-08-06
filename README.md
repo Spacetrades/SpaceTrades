@@ -57,6 +57,7 @@ https://trello.com/b/IETMH34k/meteor-development
 6. Consider automation at every instance of feasibility
 7. *DRY*
 8. Go the step further. Always go a little bit beyond the standard design practice so that users understand the site is willing to go the extra mile for them.
+9. You are not designing for yourself
 
 ## Commit Messages Language ( CML )
 ```
@@ -111,7 +112,8 @@ Extensive undertandability is less crucial in the beginning stage of development
 ## Tasks:
 	ChatOps
 	https://www.resrc.it/pricing/us
-	Implement Flow Router and Flow layoutss
+	Implement Flow Router and Flow layouts
+	Make 
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
 	jQuery - $( ".cardul" ).hide() NOT $(".cardul") AKA Parenthesis Padding *PP*

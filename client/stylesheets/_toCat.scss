@@ -51,7 +51,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     // border-left: 5px solid $color-spacered;
     padding-left: 4px;
     margin: 0 !important;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 5px 8px;
 
 }
@@ -200,14 +200,16 @@ i {
 }
 
 code {
-  background: $color-royal;
-  color: white;
-  border-radius: 5px;
-  padding: 1px 3px;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: $color-reincarnate;
+    border: 1px solid turquoise;
 
-  .listingtitle {
-    font-family: $font_stack-norm;
-  }
+    &:hover {
+        font-weight: bold;
+        cursor: help;
+    }
+
 }
 
 .fa-facebook {
@@ -2811,6 +2813,7 @@ i:hover {
 
 .homeCardLi:hover {
     border: 2px solid #f8504b;
+    box-shadow: 0px 1px 3px 0px $color-spacered;
 }
 
 .homeCardImg {
@@ -3271,9 +3274,10 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box ul li {
-    width: 75%;
+    // width: 75%;
     padding: 10px;
-    font-size: 1rem !important
+    font-size: 1rem !important;
+    border-bottom: 1px solid $color-divider;
 }
 
 .desc-box ul li:first-child {
@@ -3281,7 +3285,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box ul li:last-child {
-    padding-top: 1px !important;
+    padding-top: 6px !important;
 }
 
 /* .desc-box ul li:last-child {
