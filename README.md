@@ -115,6 +115,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Implement Flow Router and Flow layouts
 	Make system for cutting out TASKS and sending with @
 	Make subtle animation on offer count change
+	Make Social media profiles for those included in footer
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
 	jQuery - $( ".cardul" ).hide() NOT $(".cardul") AKA Parenthesis Padding *PP*
