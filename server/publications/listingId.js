@@ -1,6 +1,6 @@
   Meteor.publish('listingId', function (id) {
-  	if (this.userId) { 
+  	// if (this.userId) { 
   		return Listing.find({ _id: id });
-  	}
+  	// }
   	this.ready();
   });
