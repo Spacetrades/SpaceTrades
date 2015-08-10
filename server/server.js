@@ -8,7 +8,7 @@ if (Meteor.isServer) {
 // Roles.addUsersToRoles('KrNfLAaXw7Tm3NXzg', ['admin']);
 
 // New users receive a verification email
-Accounts.config({'sendVerificationEmail': true});
+// Accounts.config({'sendVerificationEmail': true});
 
 // Houston.add_collection('houston_admins');
 
