@@ -1,15 +1,15 @@
 <template name="ManagerCardOffer">
-	<li class="managerOfferLi">
+	<li class="profileCardLi">
         <p class="managerOfferStatus">{{status}} <!-- Pending, Confirmed, and Declined--></p>
-        <ul class="managerOfferImage">
-            <li><a href="/listing/{{_id}}"><img src="{{img}}" class="managerOfferImg"></a></li>
+        <ul class="profileCardImage">
+            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
         </ul>
-        <ul class="managerOfferDetails">
+        <ul class="profileCardInfo">
             <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
-            <li><span class="money">${{offerprice}}</span></li>
+            <li class="money profileCardItem">${{offerprice}}</li>
+            <li class="profileCardItem">{{date}}</li>
             <!-- Make Ny Bold -->
-            <li>{{date}}</li>
-            <li>{{location}}</li>
+            <li class="profileCardItem">{{location}}</li>
             <li class="managerOfferView"><a href="/buyoffer/{{_id}}" class="ph-button ph-btn-blue">View Offer</a></li>
             <!-- TASK - Create this View offer Page and offers will be sent here /listing/id/request/id of offer -->
         </ul>
@@ -17,16 +17,16 @@
 </template>
 
 <template name="ManagerCardListing">
-	<li class="managerListingLi">
+	<li class="profileCardLi">
         <p class="managerListingStatus"> {{days_until}} </p>
-        <ul class="managerOfferImage">
-            <li><a href="/listing/{{_id}}"><img src="{{img1}}" class="managerOfferImg"></a></li>
+        <ul class="profileCardImage">
+            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
         </ul>
-        <ul class="managerOfferDetails">
+        <ul class="profileCardInfo">
             <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
-            <li><span class="money">${{price}}</span></li>
-            <li><b>Condition:</b> {{condition}}</li>
-            <li><b>Size:</b> {{size}}</li>
+            <li class="money profileCardItem">${{price}}</li>
+            <li class="profileCardItem">Condition: {{condition}}</li>
+            <li class="profileCardItem">Size: {{size}}</li>
             <li class="managerOfferButton">
                 <ul>
                     <li class="managerOfferOptions"><a href="#">Options</a></li>
