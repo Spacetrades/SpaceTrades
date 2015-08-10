@@ -18,47 +18,53 @@ SearchSource.defineSource('listing', function (searchText, options) {
 // TASK - Get the selector to use || instead of AND 
 // When searching Nike returns listing where either brand is nike or all listing_title is Nike
 
-  if (searchText) {
-    var regExp = buildRegExp(searchText);
+if (searchText) {
+  var regExp = buildRegExp(searchText);
 
-// Comment Reason - Additional field for the search which can be enabled later
-    // var selector = {
-    //   listing_title: regExp,
-    //   brand: regExp
-    //   // username: regExp,
-    //   // category: regExp, 
-    //   // type: regExp, 
-    //   // city: regExp
-    // };
-    var selector1 = {
-      listing_title:  regExp
-    }
-    var selector2 = {
-      brand:  regExp
-    }
-
-    var query = Listing.find({ $or:[ selector1, selector2 ] }).fetch();
-    return query;
-
-    // Listing.find({ $or:[ {listing_title: 'Running Shoes'}, {brand: 'Running Shoes'} ] }).fetch()
-    // Listing.find({ $or:[ { listing_title: /(?=.*Runn).+/i},{ brand: /(?=.*Runn).+/i } ] }).fetch();
+  var selectorTitle = {
+    listing_title:  regExp
   }
 
-  // else {
-  //   console.log("2:" + Listing.find({}, options).fetch());
-  //   return Listing.find({}, options).fetch();
-  // }
+  var selectorBrand = {
+    brand:  regExp
+  }
+
+  var selectorPrice = {
+    price: regExp
+  }
+
+  var selectorCategory = {
+    category: regExp
+  }
+
+  var selectorUserName = {
+    username: regExp
+  }
+
+  var selectorCity = {
+    city: regExp
+  }
+
+  var selectorState = {
+    state: regExp
+  }
+
+  var query = Listing.find({ $or:[ selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState ] }).fetch();
+  console.log(query);
+  return query;
+}
 
 // TASK - Learn the right way to make a RegExp
+// TASK - Incorporate Autocomplete
 
-  function buildRegExp (searchText) {
-    var words = searchText.trim().split(/[ \-\:]+/);
-    var exps = _.map(words, function (word) {
-      return "(?=.*" + word +  ")";
-    });
-    var fullExp = exps.join('') + '.+';
-    return new RegExp(fullExp, "i");
-  }
+function buildRegExp (searchText) {
+  var words = searchText.trim().split(/[ \-\:]+/);
+  var exps = _.map(words, function (word) {
+    return "(?=.*" + word +  ")";
+  });
+  var fullExp = exps.join('') + '.+';
+  return new RegExp(fullExp, "i");
+}
 
 });
 
@@ -100,35 +106,52 @@ SearchSource.defineSource('listing', function (searchText, options) {
   });
 
   // Removes the config b/c dupliation error and re-defines it
+  // Facebook API config
 
-    ServiceConfiguration.configurations.remove({
-      service: "instagram"
-    });
-    ServiceConfiguration.configurations.insert({
-      service: "instagram",
-      clientId: "644acc16830a4783957a6ad207ab6c00",
-      scope:'basic',
-      secret: "011a28fce8994008ae2eb1cfa131e3d4"
-    }); 
+  // ServiceConfiguration.configurations.remove({
+  //   service: "instagram"
+  // });
 
-    ServiceConfiguration.configurations.remove({
-      service: "facebook"
-    });
+  // ServiceConfiguration.configurations.insert({
+  //   service: "instagram",
+  //   clientId: "644acc16830a4783957a6ad207ab6c00",
+  //   scope:'basic',
+  //   secret: "011a28fce8994008ae2eb1cfa131e3d4"
+  // }); 
 
-    ServiceConfiguration.configurations.insert({
-      service: 'facebook',
-      appId: '403772073107923',
-      secret: '4663665d518fef59dbf6643280281a85'
-    });
-    // if (!ServiceConfiguration.configurations.find()) { 
-    //     ServiceConfiguration.configurations.insert({
-    //     service: 'facebook',
-    //     appId: '403772073107923',
-    //     secret: '4663665d518fef59dbf6643280281a85'
-    // });
+  // Since Facebook Test app has been created, wrap this in conditional that only executes if on Amazon server and not localhost
 
-    // }
+// if ( !Meteor.absoluteUrl() == "http://localhost:3000/" ) {
 
+//   ServiceConfiguration.configurations.remove({
+//     service: "facebook"
+//   });
+
+//   ServiceConfiguration.configurations.insert({
+//     service: 'facebook',
+//     appId: Meteor.settings.FacebookId,
+//     secret: Meteor.settings.FacebookSecret
+//   });
+
+// }
+
+// else {
+
+   ServiceConfiguration.configurations.remove({
+    service: "facebook"
+  });
+
+  ServiceConfiguration.configurations.insert({
+    service: 'facebook',
+    appId: '520229551462174',
+    secret: 'b9affb9d81291fbe9bebc123d577100a'
+  });
+
+
+// }
+
+
+// console.log(process.env.MONGO_URL);
 
 //           //
 // Amazon S3 //
@@ -218,6 +241,27 @@ Meteor.methods({
     img3: options.img3
   });
 },
+searchFilter: function (option) {
+    // console.log(options.Categories); 
+
+    //   var selectorCat = {
+    //   category: options.Categories
+    // }
+
+    var selectorCity = {
+      city: 'Queens'
+    };
+
+    var selectorCategory = {
+      category: 'Apparel'
+    };
+
+    console.log(selectorCategory);
+
+      var query = Listing.find({ $and:[ selectorCategory, selectorCity ] }).fetch();
+      console.log(query);
+      return query;
+},
 addOffer: function (options) {
   Offer.insert({
     listing_title: options.listing_title,
@@ -248,12 +292,12 @@ userLocate: function (city, state) {
 ipLocate: function() {
 
   HTTP.get("http://ipinfo.io", function (error, result) {
-      var place = JSON.parse(result.content);
-      console.log(place);
-      var city = place.city;
-      var state = place.region;
-      console.log(city, state);
-    });
+    var place = JSON.parse(result.content);
+    console.log(place);
+    var city = place.city;
+    var state = place.region;
+    console.log(city, state);
+  });
 },
 
 /**
@@ -267,74 +311,5 @@ ipLocate: function() {
 }
 });
 
-  // DB Shows
-
-  Meteor.publish('listingShow', function (listingShow) {
-    // console.log(listingShow);
-
-    // if (listingShow) {
-    return Listing.find({}, { limit: 16 });
-  // }
-  // else {
-  //   return this.stop();
-  // }
-  });
-
-  Meteor.publish('homeShowMore', function () {
-    return Listing.find({}, {limit: 32  });
-  });
-
-  Meteor.publish('offerShow', function () {
-    return Offer.find({}, { limit: 100 });
-  });
-
-
-  // Meteor.publish('offerNum', function () {
-  //   return Offer.find({ listingId: id }).count();
-  // });
-
-  Meteor.publish('userShow', function () {
-    return Meteor.users.find({}, { limit: 100 });
-  });
-
-  // Meteor.publish('listingUser', function () {
-  //   return Listing.find({ username: "Nathan Chackerian" }, { limit: 100 });
-  // });
-
-  Meteor.publish('messageShow', function () {
-    return Message.find({}, { sort: { timestamp: -1 }, limit: 20 });
-  });
-
-  Meteor.publish('listingId', function (id) { 
-    return Listing.find({ _id: id });
-  });
-
-    Meteor.publish('offerId', function (id) {
-    return Offer.find({ _id: id});
-  });
-
-  Meteor.publish('userIdprof', function (id) {
-    return Meteor.users.find( { _id: id } );
-  });
-
-  // Meteor.publish('')
-
-
-  // Meteor.publish('listingLatLng', function () {
-  //   return {
-  //     Listing.find( {_})
-  //   }
-  // })
-
-//  Meteor.publish('imagesShow', function () {
-//   return Images.find({}, { limit: 100 });
-// });
-
- Meteor.publish('addListing');
- Meteor.publish('sendEmail');
- Meteor.publish('addOffer');
- Meteor.publish('userStatus');
- Meteor.publish('locateUser');
- Meteor.publish('ipLocate');
 
 }
