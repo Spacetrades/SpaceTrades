@@ -2238,16 +2238,16 @@ i:hover {
     vertical-align: middle;
 }
 
-@mixin headerUsername {
+/* @mixin headerUsername {
     font-family: $font_stack-text;
     font-size: 1.2em;
-}
+} */
 
 /** NEW NAV **/
-
+/*
 .headerUsername {
     @include headerUsername;
-}
+} */
 
 .headerNav {
     color: $color-spacegrey;
