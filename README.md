@@ -58,6 +58,7 @@ https://trello.com/b/IETMH34k/meteor-development
 7. *DRY*
 8. Go the step further. Always go a little bit beyond the standard design practice so that users understand the site is willing to go the extra mile for them.
 9. You are not designing for yourself
+10. Provide content with the least amount of information as possible for readability sake.
 
 ## Commit Messages Language ( CML )
 ```
