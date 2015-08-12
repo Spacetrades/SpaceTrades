@@ -83,6 +83,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	-// - Comments have been removed
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
+	INFECT - Merge is receiving errors
 
 ## Sublime Stuff
 	[
@@ -116,6 +117,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Make system for cutting out TASKS and sending with @
 	Make subtle animation on offer count change
 	Make Social media profiles for those included in footer
+
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
 	jQuery - $( ".cardul" ).hide() NOT $(".cardul") AKA Parenthesis Padding *PP*
@@ -134,6 +136,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	URL Names - Do not group words that end and begin with the same letter for readability sake. Ex: selllisting - Bad, listingsell - Good
 	Files - Everything of its own significant gravity should be its own file
 	JS Callback functions - Keep on same line as caller function Ex:$(".searchRefineCategories li input").each( function () {
+	JS - New functionality requires a brief comment before it. This may be removed eventually
 
 ## Rand
 	npm install -g eslint
