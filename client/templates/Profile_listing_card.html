@@ -1,21 +1,3 @@
-<template name="ManagerCardOffer">
-	<li class="profileCardLi">
-        <p class="managerOfferStatus">{{status}} <!-- Pending, Confirmed, and Declined--></p>
-        <ul class="profileCardImage">
-            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
-        </ul>
-        <ul class="profileCardInfo">
-            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
-            <li class="money profileCardItem">${{offerprice}}</li>
-            <li class="profileCardItem">{{date}}</li>
-            <!-- Make Ny Bold -->
-            <li class="profileCardItem">{{location}}</li>
-            <li class="managerOfferView"><a href="/buyoffer/{{_id}}" class="ph-button ph-btn-blue">View Offer</a></li>
-            <!-- TASK - Create this View offer Page and offers will be sent here /listing/id/request/id of offer -->
-        </ul>
-    </li>
-</template>
-
 <template name="ManagerCardListing">
 	<li class="profileCardLi">
         <p class="managerListingStatus"> {{days_until}} </p>
