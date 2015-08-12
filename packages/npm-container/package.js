@@ -7,6 +7,10 @@ Package.describe({
   name: 'npm-container'
 });
 
+Package.onTest(function(api) {
+  api.use('sanjo:jasmine@0.16.4');
+});
+
 var packagesJsonFile = path.resolve('./packages.json');
 try {
   var fileContent = fs.readFileSync(packagesJsonFile);
