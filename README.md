@@ -55,10 +55,11 @@ https://trello.com/b/IETMH34k/meteor-development
 4. Better to undersalt then oversalt on design
 5. ST is holistic and every part no matter how small reflects the whole
 6. Consider automation at every instance of feasibility
-7. *DRY*
+7. **DRY**
 8. Go the step further. Always go a little bit beyond the standard design practice so that users understand the site is willing to go the extra mile for them.
 9. You are not designing for yourself
 10. Provide content with the least amount of information as possible for readability sake.
+11. Just because functionality can exist doesn't mean it should
 
 ## Commit Messages Language ( CML )
 ```
