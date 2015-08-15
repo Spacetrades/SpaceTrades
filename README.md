@@ -51,7 +51,7 @@ https://trello.com/b/IETMH34k/meteor-development
 ## Design Principles
 1. If it works, don't fix it
 2. Remain consistent (Keep order in chaos)
-3. Nothing more, Nothing less
+3. Less is more
 4. Better to undersalt then oversalt on design
 5. ST is holistic and every part no matter how small reflects the whole
 6. Consider automation at every instance of feasibility
@@ -101,6 +101,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
 	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
+	FMT - Data is good but display isn't. Data should be displayed in a different way as specified.
 
 ## Server:
 	/opt/spacetrades - Location of ST files
