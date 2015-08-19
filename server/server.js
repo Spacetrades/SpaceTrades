@@ -121,34 +121,31 @@ function buildRegExp (searchText) {
 
   // Since Facebook Test app has been created, wrap this in conditional that only executes if on Amazon server and not localhost
 
-// if ( !Meteor.absoluteUrl() == "http://localhost:3000/" ) {
 
-  // ServiceConfiguration.configurations.remove({
-  //   service: "facebook"
-  // });
-
-  // ServiceConfiguration.configurations.insert({
-  //   service: 'facebook',
-  //   appId: Meteor.settings.FacebookId,
-  //   secret: Meteor.settings.FacebookSecret
-  // });
-
-// }
-
-// else {
-
-   ServiceConfiguration.configurations.remove({
+  // Production
+  ServiceConfiguration.configurations.remove({
     service: "facebook"
   });
 
   ServiceConfiguration.configurations.insert({
     service: 'facebook',
-    appId: '520229551462174',
-    secret: 'b9affb9d81291fbe9bebc123d577100a'
+    appId: Meteor.settings.FacebookId,
+    secret: Meteor.settings.FacebookSecret
   });
 
 
-// }
+  // Dev
+  //  ServiceConfiguration.configurations.remove({
+  //   service: "facebook"
+  // });
+
+  // ServiceConfiguration.configurations.insert({
+  //   service: 'facebook',
+  //   appId: '520229551462174',
+  //   secret: 'b9affb9d81291fbe9bebc123d577100a'
+  // });
+
+
 
 
 // console.log(process.env.MONGO_URL);
