@@ -12,7 +12,6 @@ mdg:camera
 iron:router
 matthew:foundation5-sass
 accounts-password
-fourseven:scss
 accounts-ui
 email
 underscore
