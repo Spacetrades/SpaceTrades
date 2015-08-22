@@ -216,11 +216,16 @@ code {
 }
 
 .safetydiv,
-.termsDiv,
 .reportdiv,
 .faqdiv {
     padding-right: 25%;
 }
+
+.termsdiv {
+    padding-right: 0 !important;
+}
+
+
 
 .pika-button:hover {
     background-color: $color-spacered !important;
@@ -952,8 +957,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .helpnav ul li a {
-    padding: 10px 15px;
+    padding: 12px 15px;
     margin: 5px;
+    border-radius: 3px;
 }
 
 .helpnav ul li a:hover {
@@ -981,7 +987,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .helplogo {
-    color: $color-spacered;
+    color: $color-spacegrey;
 }
 
 .helplogo {
@@ -1094,7 +1100,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 /****** CONTACT ******/
 
-.contactname input, .contactemail input {
+.contactname input, .contactsubject input, .contactemail input {
  width: 30%;
  height: 20px;
  padding-left: 5px; 
@@ -2029,14 +2035,14 @@ i:hover {
  Contact
  **********/
 
-//  .contactdiv {
-//     text-align: center;
-// }
+.contactdiv {
+    text-align: center;
+}
 
-.contactname input, .contactemail input {
- width: 30%;
- height: 20px;
- padding-left: 5px; 
+.contactname input, .contactsubject input .contactemail input {
+     width: 30%;
+     height: 20px;
+     padding-left: 5px; 
 }
 
 .contacttext textarea {
@@ -2045,15 +2051,28 @@ i:hover {
     height: 80px;
 }
 
-.contactsubmit button {
-    outline: none;
-    margin: 0;
-    text-align: right !important;
-    background-color: $color-spacered;
-    padding: 10px 16px;
-    color: #fff;
-    margin-left: 17rem;
+.contactSend {
+    font-family: 'Roboto' !important;
+    margin: 0 35% 100px 35%!important;
+    text-align: center !important;
 }
+
+.contactButton {
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;  
+    font-size: 1.2rem !important; 
+    float: right !important;
+}
+
+.contactButton:hover {
+    background-color: #f73c37;
+}
+
 .contactsubmit input:hover {
     color: #fff;
     background-color: $color-spacered;
@@ -2255,6 +2274,7 @@ i:hover {
     padding: 0;
     text-align: right;
     width: 100%;
+    padding-top: 3px;
     border-bottom: 3px solid #ee4641;
 }
 
