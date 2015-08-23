@@ -31,7 +31,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .homeLoadMore {
-    margin-left: 45% !important;
+  //  margin-left: 45% !important;
 }
 
 .homeLoadMore:hover {
@@ -216,11 +216,16 @@ code {
 }
 
 .safetydiv,
-.termsDiv,
 .reportdiv,
 .faqdiv {
     padding-right: 25%;
 }
+
+.termsdiv {
+    padding-right: 0 !important;
+}
+
+
 
 .pika-button:hover {
     background-color: $color-spacered !important;
@@ -952,8 +957,9 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .helpnav ul li a {
-    padding: 10px 15px;
+    padding: 12px 15px;
     margin: 5px;
+    border-radius: 3px;
 }
 
 .helpnav ul li a:hover {
@@ -981,7 +987,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 }
 
 .helplogo {
-    color: $color-spacered;
+    color: $color-spacegrey;
 }
 
 .helplogo {
@@ -1094,7 +1100,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 /****** CONTACT ******/
 
-.contactname input, .contactemail input {
+.contactname input, .contactsubject input, .contactemail input {
  width: 30%;
  height: 20px;
  padding-left: 5px; 
@@ -1255,13 +1261,22 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 /****** ERROR 404 ******/
 
 .errordiv {
-    text-align: center;
+    margin-top: 50px !important;
+    margin-left: 28% !important;
+    font-weight: 400 !important;
+    vertical-align: center;
 }
 
 .errorm {
-    margin-right: 10%;
-    margin-left: 10%;
-    font-family: 'Baskerville', arial;
+    margin: 10px 0;
+    width: 80%;
+  //  font-family: 'Baskerville', arial;
+    font-weight: 400 !important;
+}
+
+.errorSad {
+    font-size: 5rem;
+    font-weight: 400 !important;
 }
 
 .headerror {
@@ -1272,6 +1287,11 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     margin: 2rem 0 2rem 0;
     padding: 2rem;
     text-align: center;
+}
+
+.errorButton {
+    margin-top: 20px;
+    margin-left: 30% !important;
 }
 
 /*************************** PH FROM 3rd party ***************************/
@@ -2025,18 +2045,35 @@ i:hover {
     margin: 3rem 0 1rem 0;
 }
 
+.helpCenterThree {
+    border-top: 1px solid #404040;
+    text-align: left !important;
+}
+
+.helpThree > li {
+    width: 28%;
+    display: inline-block;
+}
+
+.helpThree li ul li h3 {
+    margin: 5px 0 4px 0;
+}
+
+.helpThree li ul li p {
+    margin: 0 0 2px 0;
+}
 /**********
  Contact
  **********/
 
-//  .contactdiv {
-//     text-align: center;
-// }
+.contactdiv {
+    text-align: center;
+}
 
-.contactname input, .contactemail input {
- width: 30%;
- height: 20px;
- padding-left: 5px; 
+.contactname input, .contactsubject input .contactemail input {
+     width: 30%;
+     height: 20px;
+     padding-left: 5px; 
 }
 
 .contacttext textarea {
@@ -2045,15 +2082,28 @@ i:hover {
     height: 80px;
 }
 
-.contactsubmit button {
-    outline: none;
-    margin: 0;
-    text-align: right !important;
-    background-color: $color-spacered;
-    padding: 10px 16px;
-    color: #fff;
-    margin-left: 17rem;
+.contactSend {
+    font-family: 'Roboto' !important;
+    margin: 0 35% 100px 35%!important;
+    text-align: center !important;
 }
+
+.contactButton {
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;  
+    font-size: 1.2rem !important; 
+    float: right !important;
+}
+
+.contactButton:hover {
+    background-color: #f73c37;
+}
+
 .contactsubmit input:hover {
     color: #fff;
     background-color: $color-spacered;
@@ -2192,7 +2242,7 @@ i:hover {
 
 .reportCheck ul li {
     margin: 2px 20px 25px 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .reportCheck ul li input {
@@ -2202,18 +2252,23 @@ i:hover {
 
 .reportBtn {
     text-align: right;
-    margin-right: 3rem;
+    margin: 5px 0 100px 0;
 }
 
 .reportBtn button {
-    background-color: $color-spacered;
-    color: #fff;
-    font-size: 1.1rem;
-    width: 100px;
-    height: 50px;
-    margin: 0px;
-    outline: 0;
-    padding: 15px 20px;
+    padding: 15px 22px;
+    color: #fff ;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;  
+    font-size: 1.2rem !important; 
+    float: right !important;
+}
+
+.reportBtn button:hover {
+    background-color: #f73c37;
 }
 
 .reportText p {
@@ -2255,6 +2310,7 @@ i:hover {
     padding: 0;
     text-align: right;
     width: 100%;
+    padding-top: 3px;
     border-bottom: 3px solid #ee4641;
 }
 
@@ -3288,7 +3344,7 @@ On click the images will be displayed at normal size to complete the effect
     // width: 75%;
     padding: 10px;
     font-size: 1rem !important;
-    border-bottom: 1px solid $color-divider;
+    // border-bottom: 1px solid $color-divider;
 }
 
 .desc-box ul li:first-child {
@@ -3388,6 +3444,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserMore {
     margin: 2rem 0 4rem 0;
+    text-align: center !important;
 }
 
 .profileUserMore li a {
