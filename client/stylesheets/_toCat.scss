@@ -4330,4 +4330,65 @@ On click the images will be displayed at normal size to complete the effect
 
 
 
+/* Notif */
 
+.notifMainWrap {
+    width: 70%;
+    text-align: left;
+}
+
+.notifLi {
+    width: 100%;
+}
+
+.notifLi ul > li {
+    display: inline-block;
+}
+
+.notifLi {
+    margin: 2px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d7;
+}
+
+.notifImage img, .notifInfo {
+    vertical-align: middle !important;
+}
+
+.notifImage img, {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.notifInfo ul > li {
+    display: block;
+}
+
+.notifMessage p, .notifDate p {
+    margin: 0 5px;
+}
+
+.notifMessage p span {
+    font-weight: 700 !important;
+}
+
+.notifMessage p a {
+    font-weight: 700 !important;
+    color: #404040 !important;
+}
+
+.notifMessage p a:hover {
+    color: #404040 !important;
+}
+
+.notifMessage p {
+    font-size: 0.9rem;
+    margin-bottom: -5px;
+}
+
+.notifDate p {
+    font-size: 0.7rem;
+    color: #7b7b7b;
+    margin-top: -5px;
+}
