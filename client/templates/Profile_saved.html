@@ -4,7 +4,20 @@
         <!-- Saved should be highlighted in nav-->
             {{#each saved}}
 				{{> profileSavedCard}}
-			{{/each}}           
+			{{/each}}
+			<li class="profileCardLi">
+		        <p>Available</p> <!-- Available, Not Available -->
+		        <ul class="profileCardImage">
+		            <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
+		        </ul>
+		        <ul class="profileCardInfo">
+		            <li><a href="/listing/{{_id}}"><h4>Nike Air Max Retro</h4></a></li>
+			        <li class="money profileCardItem">$350</li>
+			        <li class="profileCardItem">Condition: Like New</li>
+			        <li class="profileCardItem">Size: 13</li>
+		            <li class="managerOfferView"><a href="#" class="ph-button ph-btn-blue">Remove</a></li>
+		        </ul>
+		    </li>           
 		</ul>       
     </div>
 </template>
