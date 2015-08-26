@@ -4392,3 +4392,91 @@ On click the images will be displayed at normal size to complete the effect
     color: #7b7b7b;
     margin-top: -5px;
 }
+
+
+/* Settings */
+
+.profileSettingsUl > li {
+    display: block;
+}
+
+.profileSettingsLi ul > li {
+    display: inline-block;
+} 
+
+.profileSettingsLi {
+    border-bottom: 1px solid #d3d3d7;
+    padding: 30px 0;
+    margin: 10px 0;
+    width: 70%;
+}
+
+.profileSettingsLi ul li input, .profileSettingsLi ul li h4, .profileSettingsLi ul li img {
+    vertical-align: middle;
+}
+
+.profileSettingsLi ul li input {
+    padding: 10px 12px;
+    width: 600px;
+    border-radius: 4px;
+    border: 1px solid #d3d3d3;
+}
+
+.profileSettingsLi ul li h4 {
+    margin-right: 40px;
+}
+
+.profileSettingsEmail li input {
+    margin-left: 38px;
+}
+
+.profileSettingsLocation li input {
+    margin-left: 14px;
+}
+
+.profileSettingsUsername li input {
+    margin-left: -5px;
+}
+
+.profileSettingsImage {
+    margin-left: 35px;
+}
+
+.profileSettingsPhoto li h4 {
+    vertical-align: top !important;
+}
+
+.profileSettingsPhoto li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profileSettingsPhoto li input {
+    padding: 0 !important;
+    width: 200px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    margin-left: 20px;
+}
+
+.profileSettingsButton {
+    width: 70%;
+    margin: 10px 0 100px 0 !important;
+}
+
+.profileSettingsButton input {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
+    float: right;
+}
+
+.profileSettingsButton input:hover {
+    background-color: #f73c37 !important;
+}
