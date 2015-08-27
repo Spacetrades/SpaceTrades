@@ -1,22 +1,23 @@
 <template name="contact">
-<div class="contactdiv oneDiv">
-{{#markdown}}
-## Contact Us
-Interested in getting in touch with us. <br />
-Have any comments or questions not answered in the Help Center.<br />
-Don't hesitate to send us a message.
-
-{{/markdown}}
-
+    <div class="contactdiv oneDiv">
+        <h2>Contact Us</h2>
+        <p>
+        Interested in getting in touch with us. <br>
+        Have any comments or questions not answered in the Help Center.<br>
+        </p>
         <form class="contactform">
             <p class="contactname">
                 <input type="text" name="contactname" id="contactname" placeholder="Name" />
             </p>
+            <p class="contactsubject">
+                <input type="text" name="contactsubject" id="contactSubject" placeholder="Subject" />
+            </p>
             <p class="contacttext">
                 <textarea name="message" placeholder="Message" class="message"></textarea>
             </p>
-                <input type="submit" class="add ph-button" value="Send">
-
+            <p class="contactSend">
+                <input type="submit" class="contactButton" value="Send">
+            </p>
         </form>
         <div class="sent">
             <h2>Message Sent</h2>
