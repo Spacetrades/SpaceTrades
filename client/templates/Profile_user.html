@@ -1,78 +1,80 @@
 <template name="UserProfile">
 <!-- Move Contact button -->
-        <div class="profileUser oneDiv">
-            <div class="profileUserLeft">
-                <div class="profileUserImage">
-                    <div class="spin"> {{> spinner}} </div>
-                    <img src="{{profimg}}" class="profileUserImg">
-                </div>
-                <div class="profileUserGraph">
-                <label for="myChart"><b>Meetup Graph</b>
-                <br />
-                <span class="profileMonth"> {{month}} </span>
-                <br />
-                    <canvas id="myChart"></canvas>
-                 </label>
-                </div>
+    <div class="profileUser oneDiv">
+        <div class="profileUserLeft">
+            <div class="profileUserImage">
+                <div class="spin"> {{> spinner}} </div>
+                <img src="{{profimg}}" class="profileUserImg">
             </div>
-            <div class="profileUserRight">
-                <div class="profileUserName">
-                	<ul>
-                    	<li><h1>{{name}}</h1></li>
-                    	<!-- {{online.text}} -->
-                        <li>
-                        	<div class="circle" style="background-color: {{online.color}}">
-                    	<!-- <div class="inner-circle" style="background-color: {{online.innercolor}}"></div> -->    
-                        	</div>
-                        </li>
-                	</ul>
-                </div>
-                <div class="profileUserRating">
-                    <ul class="profileUserRatingUl">
-                        <li>☆☆☆☆☆<span>(28 Reviews)</span></li>
-                        <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
-                    </ul>
-                </div>
-                <div class="profileUserInfo">
-                    <ul class="profileUserArea">
-                        <li>Brooklyn, <b>NY</b></li>
-                        <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                    </ul>
-                </div>
-                <div class="desc-box">
-                    <h4 class="box-title">Description</h4>
-                    <p>Hey check out my items if you want the newest shoes for the lowest prices.</p>
-                </div>
-                <div class="profileUserFeedback desc-box">
-                    <ul class="profileUserFeedbackUl">
-                        <h4 class="box-title">Feedback</h4>
-                        <li>"Great Buyer" - Yusuf</li>
-                        <li>"Legit Guy" - Steve</li>
-                    </ul>
-                </div>
-                <div class="profileUserButtons">
-                    <ul class="profileUserButtonUl">
-                        <li><a href="{{messenger}}">Contact</a></li>
-                        <li class="profileUserOptions"><a href="#">Options<i class="fa fa-caret-down"></i></a></li>
-                    </ul>
-                </div>
+            <div class="profileUserGraph">
+            <label for="myChart"><b>Meetup Graph</b>
+            <br />
+            <span class="profileMonth"> {{month}} </span>
+            <br />
+                <canvas id="myChart"></canvas>
+             </label>
             </div>
         </div>
-        <div class="profileUserCards oneDiv">
-            <h2>Items For Sale</h2>
-            <ul class="profileUserCardsUl">
-            {{#each listing}}
-            <!-- 8 CARDS ONLY -->
-                <li>
-                    <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-                </li>
-            {{/each}}
-            </ul>
-            <ul class="profileUserMore">
-                <li>
-                <!-- TASK - Not home load more, it should be new css class and new subscription -->
-                    <a href="#" class="homeLoadMore">Load More</a>
-                </li>
-            </ul>
+        <div class="profileUserRight">
+            <div class="profileUserName">
+            	<ul>
+                	<li><h1>{{name}}</h1></li>
+                	<!-- {{online.text}} -->
+                    <li>
+                    	<div class="circle" style="background-color: {{online.color}}">
+                	<!-- <div class="inner-circle" style="background-color: {{online.innercolor}}"></div> -->    
+                    	</div>
+                    </li>
+            	</ul>
+            </div>
+            <div class="profileUserRating">
+                <ul class="profileUserRatingUl">
+                    <li>☆☆☆☆☆<span><a href="/userrating">(28 Reviews)</a></span></li>
+                    <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Account created at"></i></li>
+                    <li>☆☆☆☆☆<span>(28 Reviews)</span></li>
+                    <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
+                </ul>
+            </div>
+            <div class="profileUserInfo">
+                <ul class="profileUserArea">
+                    <li>Brooklyn, <b>NY</b></li>
+                    <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="desc-box">
+                <h4 class="box-title">Description</h4>
+                <p>Hey check out my items if you want the newest shoes for the lowest prices.</p>
+            </div>
+            <div class="profileUserFeedback desc-box">
+                <ul class="profileUserFeedbackUl">
+                    <h4 class="box-title">Feedback</h4>
+                    <li>"Great Buyer" - Yusuf</li>
+                    <li>"Legit Guy" - Steve</li>
+                </ul>
+            </div>
+            <div class="profileUserButtons">
+                <ul class="profileUserButtonUl">
+                    <li><a href="{{messenger}}">Contact</a></li>
+                    <li class="profileUserOptions"><a href="#">Options<i class="fa fa-caret-down"></i></a></li>
+                </ul>
+            </div>
         </div>
-	</template>
+    </div>
+    <div class="profileUserCards oneDiv">
+        <h2>Items For Sale</h2>
+        <ul class="profileUserCardsUl">
+        {{#each listing}}
+        <!-- 8 CARDS ONLY -->
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+        {{/each}}
+        </ul>
+        <ul class="profileUserMore">
+            <li>
+            <!-- TASK - Not home load more, it should be new css class and new subscription -->
+                <a href="#" class="homeLoadMore">Load More</a>
+            </li>
+        </ul>
+    </div>
+</template>

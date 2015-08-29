@@ -2973,15 +2973,11 @@ i:hover {
 
 .slider label {
     /*Lets add some spacing for the thumbnails*/
-    margin: 18px 0 0 18px;
+    margin: 9px;
     border: 2px solid $color-spaceblue;
     border-radius: 5px;
     float: left;
     cursor: pointer;
-}
-
-.sliderSmallOne {
-    margin-left: 10% !important;
 }
 
 .sliderSmallThree {
@@ -3283,6 +3279,10 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserRating ul li span {
     margin-left: 5px;
     font-size: 0.9rem;
+}
+
+.profileUserRating ul li span a {
+    color: #404040 !important;
 }
 
 .profileUserRating ul li i {
