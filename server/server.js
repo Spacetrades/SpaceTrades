@@ -296,9 +296,10 @@ ipLocate: function() {
     console.log(city, state);
   });
 },
-colorLocator: function () {
-  var colorApi = Meteor.npmRequire('color');
-  console.log(colorApi);
+color: function () {
+  var Color = Meteor.npmRequire('color');
+  var color = Color().hexString("ff0000");
+  console.log(colora);
 },
 
 /**
