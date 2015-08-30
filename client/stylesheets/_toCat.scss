@@ -15,10 +15,16 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     background-color: yellow;
 }
 
+.tooltip > .tooltip-inner {
+    background-color: $color-hashtag !important;
+    height: 30% !important;
+    padding: 2em !important;
+}
+
 .box-title {
     background: $color-spacered !important;
     font-family: inherit;
-    color: #FFFFFF;
+    color: white;
     // border-left: 5px solid $color-spacered;
     padding-left: 4px;
     margin: 0 !important;
@@ -197,7 +203,7 @@ i {
 code {
     border-radius: 5px;
     padding: 3px 5px;
-    color: $color-reincarnate;
+    color: $color-hashtag;
     border: 1px solid turquoise;
 
     &:hover {

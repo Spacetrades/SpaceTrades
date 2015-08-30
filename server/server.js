@@ -296,6 +296,11 @@ ipLocate: function() {
     console.log(city, state);
   });
 },
+color: function () {
+  var Color = Meteor.npmRequire('color');
+  var color = Color().hexString("ff0000");
+  console.log(colora);
+},
 
 /**
  * @summary Returns listing count
