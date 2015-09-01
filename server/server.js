@@ -296,10 +296,11 @@ ipLocate: function() {
     console.log(city, state);
   });
 },
-color: function () {
-  var Color = Meteor.npmRequire('color');
-  var color = Color().hexString("ff0000");
-  console.log(colora);
+colorName: function (options) {
+  var Namer = Meteor.npmRequire('color-namer');
+  var name = Namer(options.color);
+  var color = name.basic[0].name;
+  return color;
 },
 
 /**
