@@ -296,6 +296,14 @@ ipLocate: function() {
     console.log(city, state);
   });
 },
+colorName: function (color) {
+  var Namer = Meteor.npmRequire('color-namer');
+  console.log(color);
+  var name = Namer(color);
+  var color = name.basic[0].name;
+  console.log(color);
+  return color;
+},
 
 /**
  * @summary Returns listing count

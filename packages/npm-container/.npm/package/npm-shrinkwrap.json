@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "color-namer": {
+      "version": "1.0.0",
+      "dependencies": {
+        "chroma-js": {
+          "version": "0.5.9"
+        },
+        "euclidean-distance": {
+          "version": "0.1.0"
+        }
+      }
+    }
+  }
+}
