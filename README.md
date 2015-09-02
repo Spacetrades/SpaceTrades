@@ -60,6 +60,7 @@ https://trello.com/b/IETMH34k/meteor-development
 9. You are not designing for yourself
 10. Provide content with the least amount of information as possible for readability sake.
 11. Just because functionality can exist doesn't mean it should
+12. Find simplicity in confusing complexity. Don't let users get lost.
 
 ## Commit Messages Language ( CML )
 ```
@@ -86,6 +87,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
 	INFECT - Merge is receiving errors
+	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
 
 ## Sublime Stuff
 	[

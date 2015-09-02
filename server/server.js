@@ -273,6 +273,7 @@ addOffer: function (options) {
     status: options.status
   });
 },
+// TASK - Assign a conversation id that is unique to A-B B-A correspondence
 sendMessage: function (options) {
   Message.insert({
     message: options.message,
