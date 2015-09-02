@@ -1,6 +1,6 @@
 <template name="ProfileHistory">
 	<div class="profileCard oneDiv">
-        <ul class="profileCardUl">
+        <ul class="profileCardUl profileHistoryCardUl">
         <!-- History should be highlighted in nav  -->
             {{#each history}}
 				{{> profileHistoryCard}}
@@ -19,6 +19,9 @@
 			        <li class="profileCardItem">Size: 13</li>
 			        <li class="managerOfferView"><a href="#" class="ph-button ph-btn-blue">View Ticket</a></li>
 			    </ul>
+			</li>
+			<li class="profileHistoryTimestamp">
+			<h1>August 7th, 2015</h1>
 			</li>
         </ul>    
     </div>

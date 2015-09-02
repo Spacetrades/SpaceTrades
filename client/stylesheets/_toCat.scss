@@ -3678,6 +3678,22 @@ On click the images will be displayed at normal size to complete the effect
     border: 2px solid #f8504b;
 }
 
+.profileHistoryCardUl {
+    background-color: gainsboro;
+}
+
+.profileHistoryTimestamp {
+    border: none !important;
+}
+
+.profileHistoryTimestamp::hover {
+      border: none !important;
+}
+
+.profileCardLi {
+     background-color: white;
+}
+
 .profileCardLi p {
     text-align: right;
     margin: 0 0 5px 0;

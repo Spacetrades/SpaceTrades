@@ -278,6 +278,7 @@ sendMessage: function (options) {
   Message.insert({
     message: options.message,
     username: options.username,
+    conversation: options.conversation,
     timestamp: Date.now()
   });
 },
