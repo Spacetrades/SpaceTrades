@@ -90,6 +90,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
 	TASK - A task to complete in a certain file
 	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
+	BEWARE - Specify something that should not be done and explain what should be done.
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
 	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
