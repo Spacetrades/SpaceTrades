@@ -30,62 +30,6 @@
 								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
 							</ul>
 						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">George</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Yusuf</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Steve</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Ruben</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Ana</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Jon</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Michael</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
-						<li class="chatPerson">
-							<ul>
-								<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
-								<li><a href="#">Jake</a></li>
-								<li><div class="circle" style="background-color:#24ec3d;"></div></li>
-							</ul>
-						</li>
 					</ul>
 				</li>
 			</ul>
@@ -100,6 +44,18 @@
 					</ul>
 				</li>
 				<li class="chatMessages">
+
+				<!-- TASK - Each for your own messages match your and for alternate user messages -->
+
+				{{#each messages}}
+				<ul class="chatUserSent">
+				<li>{{message}}</li>
+				<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
+				</ul>
+				{{/each}}
+
+				<!-- TASK - Create speech bubble, http://www.sitepoint.com/pure-css3-speech-bubbles/ -->
+
 					<ul class="chatUserSent">
 						<li>I was interested in buying your shoes</li>  
 						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
@@ -115,6 +71,9 @@
 					<ul class="chatUserReceived">
 						<li><a href=""><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></a></li>
 						<li>Two SHRUBBERIES!!!</li>            
+					</ul>
+					<ul class="chatSubText">
+					<li> <h1> Offer has been accepted </h1> </li>
 					</ul>
 				</li>
 				<li class="chatBottomSection">

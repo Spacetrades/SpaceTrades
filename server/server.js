@@ -273,6 +273,15 @@ addOffer: function (options) {
     status: options.status
   });
 },
+addProfileInfo: function (options) {
+  Meteor.users.update( this.id, { $set: {
+    'profile.photo': options.photo ,
+    'profile.about': options.about ,
+    'profile.email': options.email,
+    'profile.location': options.location,
+    'profile.link': options.link 
+  }});
+},
 // TASK - Assign a conversation id that is unique to A-B B-A correspondence
 sendMessage: function (options) {
   Message.insert({

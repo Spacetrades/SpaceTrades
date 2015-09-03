@@ -4211,6 +4211,10 @@ On click the images will be displayed at normal size to complete the effect
     margin-bottom: 0;
 }
 
+.chatSubText li {
+ text-align: center;
+}
+
 .chatDiv {
     padding: 15px !important;
     border: 2px solid #00bfff !important;
@@ -4288,7 +4292,9 @@ On click the images will be displayed at normal size to complete the effect
     width: 75%;
     margin: 5px;
     padding: 15px 10px;
-    background-color: #f8504b;
+    color: $color-spacered;
+    outline: 2px solid red;
+    // background-color: #f8504b;
 }
 
 .chatPerson ul li {
@@ -4304,7 +4310,6 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .chatPerson ul li a {
-    color: #fff !important;
 }
 
 .chatPerson ul li:last-child {
