@@ -88,6 +88,13 @@ Extensive undertandability is less crucial in the beginning stage of development
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
 	INFECT - Merge is receiving errors
 	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
+	TASK - A task to complete in a certain file
+	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
+	BREAK - Something is breaking 
+	BREAK CRUCIAL - Something is breaking which is crucial for the site
+	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
+	FMT - Data is good but display isn't. Data should be displayed in a different way as specified.
+	TODO: Specify tasks to complete
 
 ## Sublime Stuff
 	[
@@ -96,14 +103,6 @@ Extensive undertandability is less crucial in the beginning stage of development
 
 	Make one for refreshing folders
 	]
-
-## Inline Comments:
-	TASK - A task to complete in a certain file
-	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
-	BREAK - Something is breaking 
-	BREAK CRUCIAL - Something is breaking which is crucial for the site
-	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
-	FMT - Data is good but display isn't. Data should be displayed in a different way as specified.
 
 ## Server:
 	/opt/spacetrades - Location of ST files
