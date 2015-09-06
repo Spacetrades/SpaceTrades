@@ -71,6 +71,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	UPDATE - Changes due to involuntary updating of versions
 	EDIT - Edit existing file, ADD - Add code, RM - Remove code
 	ADD - Add new file
+	EX - Specifying an example of the task at hand
 	RM - Remove File
 	RN - Rename existing file or files
 	// - Comment
