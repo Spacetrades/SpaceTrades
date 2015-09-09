@@ -3678,7 +3678,7 @@ On click the images will be displayed at normal size to complete the effect
     border: 2px solid #f8504b;
 }
 
-.profileHistoryCardUl {
+/*.profileHistoryCardUl {
     background-color: gainsboro;
 }
 
@@ -3688,7 +3688,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileHistoryTimestamp::hover {
       border: none !important;
-}
+} */
 
 .profileCardLi {
      background-color: white;
@@ -3696,9 +3696,9 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileCardLi p {
     text-align: right;
-    margin: 0 0 5px 0;
+    margin: -3px 0 5px 0;
+    height: 17px;
     font-size: 0.6rem;
-    height: 15px;
     vertical-align: top !important;
     color: #6c54b3;
     font-style: italic;
@@ -3721,6 +3721,10 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileCardLi p a:hover {
     text-decoration: underline !important;
+}
+
+.profileCardLi p b {
+    float: left !important;
 }
 
 .profileCardLi ul {
