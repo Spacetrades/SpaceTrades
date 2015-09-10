@@ -4511,3 +4511,140 @@ On click the images will be displayed at normal size to complete the effect
 .profileSettingsButton input:hover {
     background-color: #f73c37 !important;
 }
+
+/* View Feedback */
+
+.profileUserFeedbackView {
+    margin: 0 !important;
+    margin: auto !important;
+    width: 60%;
+    max-width: 1100px;
+}
+
+.profileUserFeedbackViewSymbols {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #989898;
+    margin: 40px auto;
+}
+
+.profileUserFeedbackViewSymbols li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 40px;
+}
+
+.profileUserFeedbackViewSymbols li i {
+    vertical-align: middle;
+    margin-right: 15px;
+    color: #989898;
+}
+
+.profileUserFeedbackViewPositive {
+    margin-left: 0 !important;
+}
+
+.profileUserFeedbackViewNegative {
+    margin-right: 0 !important;
+}
+
+.profileUserFeedbackViewPositive, .profileUserFeedbackViewPositive i, .profileUserFeedbackViewPositive i:hover {
+    color: #396 !important;
+}
+
+.profileUserFeedbackViewNegative, .profileUserFeedbackViewNegative i, .profileUserFeedbackViewNegative i:hover {
+    color: tomato !important;
+}
+
+.profileUserFeedbackViewCriteria li ul > li {
+    display: inline-block;
+}
+
+.profileUserFeedbackViewCriteria li > ul {
+    font-size: 1.2rem;
+}
+
+.profileUserFeedbackViewCriteria > li {
+     margin: 25px 0;
+     display: inline-block;
+}
+
+.profileUserFeedbackViewQuestion {
+    font-weight: 700;
+}
+
+/************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
+
+.profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.profileUserFeedbackViewCriteriaTwo li[class="profileUserFeedbackViewStars"] {
+    margin-left: 10px;
+}
+
+.profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+    margin-right: 200px;
+    margin-left: 35px;
+}
+
+.profileUserFeedbackViewCriteriaFour li[class="profileUserFeedbackViewStars"] {
+    margin-left: 20px;
+}
+
+/************ END END END END END */
+
+.profileUserFeedbackViewResponse {
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.profileUserFeedbackViewResponse li {
+    padding: 20px 0;
+    border-bottom: 1px solid #d3d3d7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileUserFeedbackViewResponse li span {
+    float: right;
+    margin-right: 2%;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: $color-purple;
+    vertical-align: middle;
+    padding: 3px;
+    margin: 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileUserFeedbackViewResponse li a {
+    color: #00bfff;
+    float: right;
+    margin-right: 2%;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 15%;
+} 
+
+.profileUserFeedbackViewResponse li b {
+    font-weight: 400 !important;
+    font-weight: normal !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
