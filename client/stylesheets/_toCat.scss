@@ -1,7 +1,7 @@
 /****** ST Grid (our own bootstrap) ******/
 
 
-// use mixins for lots ex: text-align: center
+// use mixins for lots ex: text-align: center <!-- To use a mixin for something that small wouldn't make sense -->
 
 /*****************************************************************
                             CRUCIAL
@@ -3802,12 +3802,13 @@ On click the images will be displayed at normal size to complete the effect
     padding: 10px 10px;
     background-color: #f8504b;
     text-align: center;
+    border-top: 3px solid #ee4641;
 }
 
 .footerDivide {
-    border-top: 1px solid black;
+    border-top: 1px solid #404040;
     padding-top: 1em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #404040;
     padding-bottom: 1em;
 }
 
@@ -4635,7 +4636,6 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserFeedbackViewResponse li b {
     font-weight: 400 !important;
-    font-weight: normal !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
