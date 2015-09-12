@@ -1,5 +1,6 @@
 if (Meteor.isServer) {
 
+process.env.MAIL_URL = "smtp://postmaster@sandboxde84ff01a1c04de28f27e03ecec45a00.mailgun.org:49c4081bc210fdb4d41e2f37a69efcaa@smtp.mailgun.org:587";
   // console.log(meteor_runtime_settings);
 
 
@@ -187,6 +188,8 @@ Meteor.methods({
     // Let other method calls from the same client start running,
     // without waiting for the email sending to complete.
     this.unblock();
+
+    console.log(to, from, subject, text);
 
     Email.send({
       to: to,
