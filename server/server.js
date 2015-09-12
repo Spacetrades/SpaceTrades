@@ -277,7 +277,8 @@ addOffer: function (options) {
   });
 },
 addProfileInfo: function (options) {
-  Meteor.users.update( this.id, { $set: {
+  console.log(options);
+  Meteor.users.update( this.userId, { $set: {
     'profile.photo': options.photo ,
     'profile.about': options.about ,
     'profile.email': options.email,
