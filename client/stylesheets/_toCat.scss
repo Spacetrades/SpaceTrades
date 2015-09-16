@@ -4767,8 +4767,31 @@ On click the images will be displayed at normal size to complete the effect
 
 
 
+/* Options on Item Page */
 
+.listingItemOptionsDrop {
+    width: 100%;
+    margin-top: 23px;
+}
 
+.listingItemOptionsDrop ul li{
+    width: 100%;
+    padding: 20px 0;
+    background-color: orange;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.listingItemOptionsDrop ul li a {
+    padding: 20px;
+    background-color: orange;
+    color: #fff !important;
+}
+
+.listingItemOptionsDrop ul li a i {
+    color: #fff !important;
+    margin-left: 10px;
+}
 
 
 
