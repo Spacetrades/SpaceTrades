@@ -25,9 +25,8 @@
                     </label>
                     <img src="{{img1}}"/>
 
-                    <!--Lets show the second image by default on page load-->
                     <input type="radio" name="slide_switch" id="id2" />
-                    <label for="id2">
+                    <label for="id2" class="sliderSmallTwo">
                         <img src="{{img2}}" />
                     </label>
                     <img src="{{img2}}"/>
@@ -39,19 +38,29 @@
                     <img src="{{img3}}"/>
 
                     <input type="radio" name="slide_switch" id="id4"/>
-                    <label for="id4">
+                    <label for="id4" class="sliderSmallFour">
                         <img src="{{img4}}" />
                     </label>
                     <img src="{{img3}}"/>
                 </div>
             </div>
             <div class="desc-box-listing desc-width">
-                <h4 class="box-title-listing">Details</h4>
+                <h4 class="box-title-listing">Product Details</h4>
                 <ul class="listingItemDetailItems">
-                    <li><b>Brand:</b> <a href="/search">{{brand}}</a></li>
-                    <li><b>Color:</b> <span style="color: {{color}}">{{color}}</span></li>
-                    <li><b>Condition:</b> <a href="/search">{{condition}}</a></li>
-                    <li><b>Size:</b> <a href="/search">{{size}}</a></li>
+                    <li class="listingItemDetailLeft">
+                        <ul>
+                            <li class="listingItemBrand">Brand:<a href="/search">{{brand}}</a></li>
+                            <li class="listingItemColor">Color:<a href="#"><span style="color: {{color}}">{{color}}</span></a></li>
+                            <li class="listingItemSize">Size:<a href="/search">{{size}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="listingItemDetailRight">
+                        <ul>
+                           <li class="listingItemCondition">Condition:<a href="/search">{{condition}}</a></li>
+                           <li class="listingItemQuantity">Quantity:<a href="#">{{quantity}}</a></li>
+                           <li class="listingItemTrade">Trade Offers:<a href="#" style="color: {{tradeStatus}};">{{trade}}</a></li> 
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="desc-box-listing nomar desc-width listingItemDescription">
@@ -61,14 +70,22 @@
             </div>
         </div>
         <div class="listingItemRight">
-            <div class="listingItemOptions">
-                <ul class="listingItemOptionsLeft">
-                    <li class="listingItemQuantity"><b>Quantity:</b> {{quantity}}</li>
-                    <li class="listingItemTrades"><b style="color: {{tradeStatus}};">{{trade}}</b></li>
-                </ul>
-                <ul class="listingItemOptionsDropDown">
-                    <li><a>Options<i class="fa fa-caret-down"></i></a></li>
-                </ul>
+            <div class="listingItemShare">
+                <!-- Twitter -->
+                <a href="http://twitter.com/share?url=<URL>&text=<TEXT>&via=<VIA>" target="_blank" class="share-btn twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <!-- Google Plus -->
+                <a href="https://plus.google.com/share?url=<BTN>" target="_blank" class="share-btn google-plus">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer/sharer.php?u=<URL>" target="_blank" class="share-btn facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
+                    <i class="fa fa-reddit"></i>
+                </a>
             </div>
             <div class="listingItemMaps">
                 <ul class="listingItemMapsAPI">
@@ -79,13 +96,18 @@
                     </li>
                 </ul>
             </div>
-            <div class="listingItemUserInfo">
-                <ul class="listingItemUserInfoUl">
-                    <li class="rating">
-                        <!-- These Stars Are For Display, They Do Not Work-->
-                        ☆☆☆☆☆
-                    </li>
-                    <li class="listingItemUser"><a href="/profile/{{profile}}"><img src="{{creatorpic}}"><span>{{username}}</span></a></li>
+            <div class="listingItemUser">
+                <ul class="listingItemUserImg">
+                    <li><a href="/profile/{{profile}}"><img src="{{creatorpic}}"></a></li>
+                </ul>
+                <ul class="listingItemUserInfo">
+                    <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
+                    <li class="rating"><!-- These Stars Are For Display, They Do Not Work-->☆☆☆☆☆</li>
+                </ul>
+            </div>
+            <div class="listingItemOptionsDrop">
+                <ul>
+                    <li><a href="#">Options<i class="fa fa-caret-down"></i></a></li>
                 </ul>
             </div>
         </div>

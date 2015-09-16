@@ -2963,7 +2963,7 @@ i:hover {
 .slider {
     width: 100%;
     position: relative;
-    padding-top: 400px;
+    padding-top: 396px;
     margin: 20px auto;
 }
 
@@ -2972,6 +2972,8 @@ i:hover {
     position: absolute;
     left: 0; 
     top: 0;
+    border: 6px solid #f8504b;
+    border-bottom: 3px solid #f8504b !important;
 }
 
 .slider input[name='slide_switch'] {
@@ -2980,11 +2982,15 @@ i:hover {
 
 .slider label {
     /*Lets add some spacing for the thumbnails*/
-    margin: 9px;
-    border: 2px solid $color-spaceblue;
-    border-radius: 5px;
+    margin: 0;
+    border: 6px solid #f8504b;
+    border-top: 3px solid #f8504b;
     float: left;
     cursor: pointer;
+}
+
+.sliderSmallTwo, .sliderSmallThree, .sliderSmallFour {
+    border-left: 0 !important;
 }
 
 .sliderSmallThree {
@@ -2993,13 +2999,13 @@ i:hover {
 
 .slider label img{
     display: block;
-    width: 150px;
+    width: 151px;
     height: 94px;
 }
 
 /*Time to add the click effects*/
 .slider input[name='slide_switch']:checked+label {
-    border-color: $color-spaceblue;
+    border-color: #f8504b;
     opacity: 1;
 }
 /*Clicking any thumbnail now should change its opacity(style)*/
@@ -3007,8 +3013,8 @@ i:hover {
 .slider input[name='slide_switch'] ~ img {
     opacity: 0;
     transform: scale(1);
-    width: 100% !important;
-    height: 400px;
+    width: 98% !important;
+    height: 387px;
 }
 /*That hides all main images at a 110% size
 On click the images will be displayed at normal size to complete the effect
@@ -3023,11 +3029,11 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 #map-canvas {
-    height: 520px;
+    height: 500px;
 }
 
 .listingItemLeft {
-    width: 60%;
+    width: 62%;
     float: left;
 }
 
@@ -3078,6 +3084,10 @@ On click the images will be displayed at normal size to complete the effect
     margin: auto 10px;
 }
 
+.listingItemButtons li:last-child {
+    margin-right: 0 !important;
+}
+
 .listingItemButtons li a {
     padding: 15px 22px;
     color: #fff ;
@@ -3116,18 +3126,47 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemDetailItems {
     margin: 0;
-    margin-top: 5px;
-    padding-left: 0.5em;
-    font-size: 1em;
+    padding: 1rem;
+    font-size: 1rem;
 }
 
-.listingItemDetailItems li {
-    margin: 8px 0;
-    font-size: 1.1rem; 
+.listingItemDetailItems > li {
+    margin: 0;
+    display: inline-block;
 }
 
-.listingItemDetailItems li a:hover {
-    color: #5d5d5d;
+.listingItemDetailItems li ul li a {
+    margin-left: 1rem;
+    color: #404040 !important;
+}
+
+.listingItemDetailItems li ul li a:hover {
+    color: #dd4b39 !important;
+}
+
+.listingItemDetailRight {
+    width: 45%;
+}
+
+.listingItemDetailLeft {
+    width: 45%;
+}
+
+.listingItemDetailLeft ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(2) {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.listingItemSize a {
+    margin-left: 1.7rem !important;
+}
+
+.listingItemCondition a {
+    margin-left: 2.4rem !important;
+}
+
+.listingItemQuantity a {
+    margin-left: 2.9rem !important;
 }
 
 .listingItemDesc {
@@ -3185,12 +3224,39 @@ On click the images will be displayed at normal size to complete the effect
     font-family: $font_stack-secondary;
 }
 
-.listingItemUserInfo {
-    margin-top: 20px;
+/****************************/
+
+.listingItemUser {
+    margin-top: 47px;
+    background-color: #f8504b;
+    padding: 20px;
+    height: 116px;
+    border-radius: 4px;
+    text-align: center;
 }
 
-.listingItemUserInfo ul li {
+.listingItemUser > ul {
     display: inline-block;
+    margin: 0;
+    margin-top: 10px !important;
+}
+
+.listingItemUserInfo {
+    margin-left: 15px !important;
+    vertical-align: middle;
+}
+
+.listingItemUserName {
+    margin-bottom: 5px;
+}
+
+.listingItemUserName a {
+    color: #fff;
+}
+
+.listingItemUserInfo {
+    font-size: 1.7rem;
+    font-weight: 700;
 }
 
 .rating {
@@ -3199,15 +3265,10 @@ On click the images will be displayed at normal size to complete the effect
     color: gold;
 }
 
-.listingItemUser {
-    margin-top: 3px;
-    margin-left: 10px;
-}
-
 .listingItemUser a img {
     vertical-align: middle;
-    width: 25px;
-    height: 25px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
@@ -3215,6 +3276,8 @@ On click the images will be displayed at normal size to complete the effect
     vertical-align: middle;
     margin-left: 4px;
 }
+
+/*****************/
 
 .sp-picker-container {
     display: none;
@@ -3231,6 +3294,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserLeft {
+    margin-left: 9%;
     width: 35%;
     text-align: center;
     vertical-align: top;
@@ -4642,10 +4706,93 @@ On click the images will be displayed at normal size to complete the effect
     text-overflow: ellipsis;
 }
 
+/** Social Button CSS **/
+
+.share-btn {
+    display: inline-block !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 15px 10px !important;
+    width: 4em !important;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2) !important;
+    outline: none !important;
+    text-align: center !important;
+}
+
+.share-btn:hover {
+  color: #eeeeee !important;
+}
+
+.share-btn:active {
+  position: relative !important;
+  top: 2px !important;
+  box-shadow: none !important;
+  color: #e2e2e2 !important;
+  outline: none !important;
+}
+
+.share-btn.twitter     { background: #55acee !important; }
+.share-btn.google-plus { background: #dd4b39 !important; }
+.share-btn.facebook    { background: #3B5998 !important; }
+.share-btn.linkedin    { background: #4875B4 !important; }
+.share-btn.email       { background: #444444 !important; }
+.share-btn.reddit      { background: #ff5700 !important; }
+
+.share-btn i {
+    color: #fff !important;
+}
+
+.listingItemShare {
+    margin: 10px 0 22px 0;
+}
+
+/* Clearfix */
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+ }
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 
 
 
 
+/* Options on Item Page */
 
+.listingItemOptionsDrop {
+    width: 100%;
+    margin-top: 23px;
+}
 
+.listingItemOptionsDrop ul li{
+    width: 100%;
+    padding: 20px 0;
+    background-color: orange;
+    text-align: center;
+    border-radius: 4px;
+}
 
+.listingItemOptionsDrop ul li a {
+    padding: 20px;
+    background-color: orange;
+    color: #fff !important;
+}
+
+.listingItemOptionsDrop ul li a i {
+    color: #fff !important;
+    margin-left: 10px;
+}
+
+.sp-palette-row-2 {
+    display: none !important;
+}
