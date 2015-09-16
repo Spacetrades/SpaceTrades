@@ -3133,21 +3133,40 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemDetailItems > li {
     margin: 0;
     display: inline-block;
-
 }
 
-.listingItemDetailItems li a:hover {
-    color: #dd4b39;
+.listingItemDetailItems li ul li a {
+    margin-left: 1rem;
+    color: #404040 !important;
+}
+
+.listingItemDetailItems li ul li a:hover {
+    color: #dd4b39 !important;
 }
 
 .listingItemDetailRight {
     width: 45%;
-    float: right;
 }
 
 .listingItemDetailLeft {
     width: 45%;
-    float: left;
+}
+
+.listingItemDetailLeft ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(2) {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.listingItemSize a {
+    margin-left: 1.7rem !important;
+}
+
+.listingItemCondition a {
+    margin-left: 2.4rem !important;
+}
+
+.listingItemQuantity a {
+    margin-left: 2.9rem !important;
 }
 
 .listingItemDesc {
@@ -3211,19 +3230,20 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 47px;
     background-color: #f8504b;
     padding: 20px;
-    padding-bottom: 96px;
+    height: 116px;
     border-radius: 4px;
+    text-align: center;
 }
 
 .listingItemUser > ul {
     display: inline-block;
     margin: 0;
+    margin-top: 10px !important;
 }
 
 .listingItemUserInfo {
-    vertical-align: top;
     margin-left: 15px !important;
-    margin-top: 10px !important;
+    vertical-align: middle;
 }
 
 .listingItemUserName {
