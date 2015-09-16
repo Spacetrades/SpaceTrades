@@ -2963,7 +2963,7 @@ i:hover {
 .slider {
     width: 100%;
     position: relative;
-    padding-top: 393px;
+    padding-top: 396px;
     margin: 20px auto;
 }
 
@@ -2973,7 +2973,7 @@ i:hover {
     left: 0; 
     top: 0;
     border: 6px solid #f8504b;
-    border-bottom: 0 !important;
+    border-bottom: 3px solid #f8504b !important;
 }
 
 .slider input[name='slide_switch'] {
@@ -2984,6 +2984,7 @@ i:hover {
     /*Lets add some spacing for the thumbnails*/
     margin: 0;
     border: 6px solid #f8504b;
+    border-top: 3px solid #f8504b;
     float: left;
     cursor: pointer;
 }
@@ -3125,18 +3126,28 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemDetailItems {
     margin: 0;
-    margin-top: 5px;
-    padding-left: 0.5em;
-    font-size: 1em;
+    padding: 1rem;
+    font-size: 1rem;
 }
 
-.listingItemDetailItems li {
-    margin: 8px 0;
-    font-size: 1.1rem; 
+.listingItemDetailItems > li {
+    margin: 0;
+    display: inline-block;
+
 }
 
 .listingItemDetailItems li a:hover {
-    color: #5d5d5d;
+    color: #dd4b39;
+}
+
+.listingItemDetailRight {
+    width: 45%;
+    float: right;
+}
+
+.listingItemDetailLeft {
+    width: 45%;
+    float: left;
 }
 
 .listingItemDesc {
@@ -3197,11 +3208,35 @@ On click the images will be displayed at normal size to complete the effect
 /****************************/
 
 .listingItemUser {
-    margin-top: 45px;
+    margin-top: 47px;
+    background-color: #f8504b;
+    padding: 20px;
+    padding-bottom: 96px;
+    border-radius: 4px;
 }
 
-.listingItemUserInfo ul li {
+.listingItemUser > ul {
     display: inline-block;
+    margin: 0;
+}
+
+.listingItemUserInfo {
+    vertical-align: top;
+    margin-left: 15px !important;
+    margin-top: 10px !important;
+}
+
+.listingItemUserName {
+    margin-bottom: 5px;
+}
+
+.listingItemUserName a {
+    color: #fff;
+}
+
+.listingItemUserInfo {
+    font-size: 1.7rem;
+    font-weight: 700;
 }
 
 .rating {
@@ -3210,15 +3245,10 @@ On click the images will be displayed at normal size to complete the effect
     color: gold;
 }
 
-.listingItemUser {
-    margin-top: 3px;
-    margin-left: 10px;
-}
-
 .listingItemUser a img {
     vertical-align: middle;
-    width: 25px;
-    height: 25px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 

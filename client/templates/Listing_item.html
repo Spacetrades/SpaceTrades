@@ -47,12 +47,20 @@
             <div class="desc-box-listing desc-width">
                 <h4 class="box-title-listing">Details</h4>
                 <ul class="listingItemDetailItems">
-                    <li><b>Brand:</b> <a href="/search">{{brand}}</a></li>
-                    <li><b>Color:</b> <span style="color: {{color}}">{{color}}</span></li>
-                    <li><b>Condition:</b> <a href="/search">{{condition}}</a></li>
-                    <li><b>Quantity:</b> <a href="#">{{quantity}}</a></li>
-                    <li><b>Size:</b> <a href="/search">{{size}}</a></li>
-                    <li><b>Trade Offers:</b><a href="#" style="color: {{tradeStatus}};">{{trade}}</a></li>
+                    <li class="listingItemDetailRight">
+                        <ul>
+                           <li>Condition:<a href="/search">{{condition}}</a></li>
+                           <li>Size:<a href="/search">{{size}}</a></li> 
+                           <li>Quantity:<a href="#">{{quantity}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="listingItemDetailLeft">
+                        <ul>
+                            <li>Brand:<a href="/search">{{brand}}</a></li>
+                            <li>Color:<span style="color: {{color}}"><!-- Example Color Until This Works {{color}} --> Blue</span></li>
+                            <li>Trade Offers:<a href="#" style="color: {{tradeStatus}};">{{trade}}</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="desc-box-listing nomar desc-width listingItemDescription">
