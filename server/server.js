@@ -13,6 +13,9 @@ process.env.MAIL_URL = "smtp://postmaster@sandboxde84ff01a1c04de28f27e03ecec45a0
 
 // Houston.add_collection('houston_admins');
 
+// only on Production
+Kadira.connect('KQCYhmjGnmND3Qy9n', '4877312f-4aee-4cfc-84ab-a022ddb3c2ef');
+
 SearchSource.defineSource('listing', function (searchText, options) {
   var options = { sort: {isoScore:  -1}, limit: 20}; 
 
