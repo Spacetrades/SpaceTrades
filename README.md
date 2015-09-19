@@ -83,6 +83,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	MINOR - A few changes have been made
 	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
 	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
+	STRICTLY - Only applies to certain circumstances. ( production vs dev code)
 	-// - Comments have been removed
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
