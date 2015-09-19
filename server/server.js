@@ -126,7 +126,7 @@ function buildRegExp (searchText) {
   // Since Facebook Test app has been created, wrap this in conditional that only executes if on Amazon server and not localhost
 
 
-  // Production
+  // STRICTLY - Production
   ServiceConfiguration.configurations.remove({
     service: "facebook"
   });
@@ -138,7 +138,7 @@ function buildRegExp (searchText) {
   });
 
 
-  // Dev
+  // STRICTLY - Dev
   //  ServiceConfiguration.configurations.remove({
   //   service: "facebook"
   // });
