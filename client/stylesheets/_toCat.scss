@@ -1601,7 +1601,8 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     *******************/
 
     .oneDiv {
-        margin: 3rem 10% 2rem 10% !important;
+        width: 80%;
+        margin: 3rem auto 2rem auto !important;
         font-family: $font_stack-norm !important;
     }
 
@@ -3899,6 +3900,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .footerItems li h4 {
     margin: 0 5px !important;
+    font-weight: 400;
 }
 
 .footerItems li h4 a, .footerItems li h4 a:visited, .footerItems li h4 a:link {
@@ -4795,4 +4797,11 @@ On click the images will be displayed at normal size to complete the effect
 
 .sp-palette-row-2 {
     display: none !important;
+}
+
+
+@media (min-width: 1200px) {
+    .oneDiv, .onediv {
+        max-width: 1100px !important;
+    }
 }
