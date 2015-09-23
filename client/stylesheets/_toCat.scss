@@ -4365,7 +4365,11 @@ On click the images will be displayed at normal size to complete the effect
     margin: 5px;
     padding: 15px 10px;
     color: $color-spacered;
-    outline: 2px solid red;
+
+    // Nice outline
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
     // background-color: #f8504b;
 }
 
