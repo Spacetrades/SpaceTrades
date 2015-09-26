@@ -2760,11 +2760,17 @@ i:hover {
     display: inline-block !important;
 }
 
+.managerReceivedOffers {
+	display: inline-block;
+}
+
 .managerOfferCount {
     padding: 10px 18px !important;
     background-color: #00bfff !important;
+    color: #fff !important;
     font-family: 'Abel';
-    margin-left: 8px;
+    margin-left: 2px;
+    border-radius: 4px;
 }
 
 .managerOfferLi {
@@ -2857,9 +2863,7 @@ i:hover {
   // Consider text-shadow: 1px 1px rgb(194, 174, 255);
 }
 
-.managerOfferButton {
-    margin-top: 30px;
-}
+/*
 
 .managerOfferButton ul li {
     display: inline-block !important;
@@ -2875,7 +2879,90 @@ i:hover {
 
 .managerOfferButton ul li a:hover {
     background-color: #f73c37;
+} */
+
+.managerOfferButton {
+    margin-top: 20px !important;
 }
+
+.optionsCardItems li a:hover {
+	background-color: #d3d3d3 !important;
+}
+
+.optionsCardItems li a i {
+	margin-right: 5px !important;
+}
+
+.optionsListCardClick {
+	margin: 0 !important;
+	font-size: 0.9rem !important;
+}
+
+.optionsListCardClick ul {
+	position:relative !important;
+	font-weight:400 !important;
+}
+
+.optionsListCardClick ul li {
+	position:relative !important;
+	list-style:none !important;
+	cursor:pointer !important;
+}
+
+.optionsListCardClick ul li ul {
+	position:absolute !important;
+	left:0 !important;
+	right:0 !important;
+	border: 2px solid #f39d00 !important;
+	margin-top: -2px !important;
+}
+
+.optionsListCardClick ul .clicker {
+	position:relative !important;
+	background:orange !important;
+	color:#FFF !important;
+	text-align: center !important;
+	padding: 12px 8px !important;
+	border-radius: 4px !important;
+}
+
+.optionsListCardClick ul .clicker i {
+	color: #fff !important;
+	margin: 0 0 -3px 4px !important;
+}
+
+.optionsListCardClick ul .clicker:hover,.click-nav ul .active {
+	background:#F39D00 !important;
+}
+
+.optionsListCardClick img {
+	position:absolute !important;
+	top:9px !important;
+	left:12px !important;
+}
+
+.optionsListCardClick ul li a {
+	display:block !important;
+	padding: 5px !important; 
+	background:#fff !important;
+	color:#333 !important;
+	text-decoration:none !important;
+}
+
+.optionsListCardClick ul li a:hover {
+	background:#F2F2F2 !important;
+}
+
+/* Fallbacks */
+.optionsListCardClick .no-js ul {
+	display:none !important;
+}
+
+.optionsListCardClick .no-js:hover ul {
+	display:block !important;
+}
+
+/* End */
 
 .homeCardUl {
     padding-top: 1rem;
@@ -3465,7 +3552,7 @@ On click the images will be displayed at normal size to complete the effect
 //     margin: 0;
 // }
 
-.profileUserButtons ul li {
+.optionsProClick, .profileChatBtn {
     display: inline-block;
     margin: 40px 0;
 }
@@ -3474,7 +3561,7 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0;
 }
 
-.profileUserButtons ul li a {
+/* .profileUserButtons ul li a {
     font-size: 1.2rem;
     padding: 15px 22px;
     color: #fff !important;
@@ -3499,7 +3586,94 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0px 0 0 10px;
     vertical-align: middle;
     color: #fff !important;
+} */
+
+.profileChatBtn a {
+    font-size: 1.2rem;
+    padding: 15px 22px;
+    color: #fff !important;
+    background-color: #f8504b;
+    border: 1px solid #f8504b;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
+    border-radius: 6px;
+    overflow: hidden;
 }
+
+.profileChatBtn a:hover {
+    background-color: #f73c37;
+}
+
+
+.optionsProClick {
+	margin-left: 10px;
+}
+
+.optionsProClick ul {
+	position:relative;
+	font-weight:400;
+}
+
+.optionsProClick ul li {
+	position:relative;
+	list-style:none;
+	cursor:pointer;
+}
+
+.optionsProClick ul li ul {
+	position:absolute;
+	left:0;
+	right:0;
+	border: 2px solid #f39d00;
+	margin-top: -2px;
+}
+
+.optionsProClick ul .clicker {
+	position:relative;
+	background:orange;
+	color:#FFF;
+	text-align: center;
+	padding: 17px 40px 14px 40px;
+	border-radius: 4px;
+}
+
+.optionsProClick ul .clicker i {
+	color: #fff !important;
+	margin: 0 0 -3px 8px;
+}
+
+.optionsProClick ul .clicker:hover,.click-nav ul .active {
+	background:#F39D00;
+}
+
+.optionsProClick img {
+	position:absolute;
+	top:9px;
+	left:12px;
+}
+
+.optionsProClick ul li a {
+	display:block;
+	padding: 15px;
+	background:#fff;
+	color:#333;
+	text-decoration:none;
+}
+
+.optionsProClick ul li a:hover {
+	background:#F2F2F2;
+}
+
+/* Fallbacks */
+.optionsProClick .no-js ul {
+	display:none;
+}
+
+.optionsProClick .no-js:hover ul {
+	display:block;
+}
+
+/* End */
+
 
 .profileUserCards {
     text-align: center;
@@ -3821,7 +3995,7 @@ On click the images will be displayed at normal size to complete the effect
     height: 150px;
 }
 
-.profileCardInfo li {
+.profileCardInfo > li {
     margin-bottom: 12px;
 }
 
@@ -3873,7 +4047,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .footer {
     margin: none !important;
-    padding: 10px 10px;
+    padding: 20px;
     background-color: #f8504b;
     text-align: center;
     border-top: 3px solid #ee4641;
@@ -4813,24 +4987,24 @@ On click the images will be displayed at normal size to complete the effect
 
 /*Options DropDown*/
 
-.optionsClick {
+.optionsListClick {
     width: 100%;
     margin-top: 23px;
     margin-bottom: 200px;
 }
 
-.optionsClickv ul {
+.optionsListClick ul {
 	position:relative;
 	font-weight:400;
 }
 
-.optionsClick ul li {
+.optionsListClick ul li {
 	position:relative;
 	list-style:none;
 	cursor:pointer;
 }
 
-.optionsClick ul li ul {
+.optionsListClick ul li ul {
 	position:absolute;
 	left:0;
 	right:0;
@@ -4838,7 +5012,7 @@ On click the images will be displayed at normal size to complete the effect
 	margin-top: -2px;
 }
 
-.optionsClick ul .clicker {
+.optionsListClick ul .clicker {
 	position:relative;
 	background:orange;
 	color:#FFF;
@@ -4847,16 +5021,16 @@ On click the images will be displayed at normal size to complete the effect
 	border-radius: 4px;
 }
 
-.optionsClick ul .clicker i {
+.optionsListClick ul .clicker i {
 	color: #fff !important;
 	margin: 0 0 -3px 8px;
 }
 
-.optionsClick ul .clicker:hover,.click-nav ul .active {
+.optionsListClick ul .clicker:hover,.click-nav ul .active {
 	background:#F39D00;
 }
 
-.optionsClick img {
+.optionsListClick img {
 	position:absolute;
 	top:9px;
 	left:12px;
@@ -4866,15 +5040,11 @@ On click the images will be displayed at normal size to complete the effect
 	background-color: #d3d3d3 !important;
 }
 
-.optionsItems li a i:hover {
-	color: #fff !important;
-}
-
 .optionsItems li a i {
 	margin-right: 12px;
 }
 
-.optionsClick ul li a {
+.optionsListClick ul li a {
 	display:block;
 	padding: 15px;
 	background:#fff;
@@ -4882,16 +5052,16 @@ On click the images will be displayed at normal size to complete the effect
 	text-decoration:none;
 }
 
-.optionsClick ul li a:hover {
+.optionsListClick ul li a:hover {
 	background:#F2F2F2;
 }
 
 /* Fallbacks */
-.optionsClick .no-js ul {
+.optionsListClick .no-js ul {
 	display:none;
 }
 
-.optionsClick .no-js:hover ul {
+.optionsListClick .no-js:hover ul {
 	display:block;
 }
 
