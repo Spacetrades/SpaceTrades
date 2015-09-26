@@ -96,6 +96,10 @@ function buildRegExp (searchText) {
       user.profile = options.profile;
       options.profile.picturesm = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=small";
       options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
+      // Up Neutral and Negative votes start as 0 and change from feedback
+      options.profile.upvotes = 0;
+      options.profile.neutralvotes = 0;
+      options.profile.downvotes = 0;
     }
 
     HTTP.get("http://ipinfo.io", function (error, result) {
@@ -293,7 +297,8 @@ addProfileInfo: function (options) {
 sendMessage: function (options) {
   Message.insert({
     message: options.message,
-    username: options.username,
+    sender: options.sender,
+    receiver: options.receiver,
     conversation: options.conversation,
     timestamp: Date.now()
   });

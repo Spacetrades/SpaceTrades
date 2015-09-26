@@ -20,20 +20,19 @@
             	<ul>
                 	<li><h1>{{name}}</h1></li>
                     <li>
-                    	<div class="circle" style="background-color: {{online.color}}">
-                    	</div>
+                    	<div class="circle" style="background-color: {{online.color}}"></div>
                     </li>
             	</ul>
             </div>
             <div class="profileUserRating">
                 <ul class="profileUserRatingUl">
-                    <li>☆☆☆☆☆<span>(28 Reviews)</span></li>
+                    <li class="profileStars">☆☆☆☆☆<span>(28 Reviews)</span></li>
                     <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
                 </ul>
             </div>
             <div class="profileUserInfo">
                 <ul class="profileUserArea">
-                    <li>Brooklyn, <b>NY</b></li>
+                    <li>{{location}}</li>
                     <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                 </ul>
             </div>
@@ -50,7 +49,7 @@
             </div>
             <div class="profileUserButtons">
                 <ul class="profileUserButtonUl">
-                    <li><a href="{{messenger}}">Contact</a></li>
+                    <li><a href="/chat/{{userId}}">Contact</a></li>
                     <li class="profileUserOptions"><a href="#">Options<i class="fa fa-caret-down"></i></a></li>
                 </ul>
             </div>
@@ -59,9 +58,9 @@
     <div class="profileUserFeedbackView oneDiv">
         <h2>Feedback</h2>
         <ul class="profileUserFeedbackViewSymbols">
-            <li class="profileUserFeedbackViewPositive"><i class="fa fa-plus"></i>125</li>
-            <li class="profileUserFeedbackViewNeutral"><i class="fa fa-dot-circle-o"></i>56</li>
-            <li class="profileUserFeedbackViewNegative"><i class="fa fa-minus"></i>72</li>
+            <li class="profileUserFeedbackViewPositive"><i class="fa fa-plus"></i>{{upvotes}}</li>
+            <li class="profileUserFeedbackViewNeutral"><i class="fa fa-dot-circle-o"></i>{{neutralvotes}}</li>
+            <li class="profileUserFeedbackViewNegative"><i class="fa fa-minus"></i>{{downvotes}}</li>
         </ul>
         <!-- WHEN YOU CHANGE THE TEXT THE CSS WILL MESS UP. ASK FRONT-END DEV TO FIX IT -->
         <ul class="profileUserFeedbackViewCriteria">
