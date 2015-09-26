@@ -832,7 +832,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .searchfield {
     text-align: center;
-    margin: -20px 0 10px 0;
+    margin: -20px auto 10px auto !important;
 }
 
 .icon {
@@ -1839,7 +1839,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .searchfield {
     text-align: center;
-    margin: -20px 0 10px 0;
+    margin: -20px auto 10px auto !important;
 }
 
 .icon {
@@ -1850,7 +1850,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .search {
     height: 48px;
-    width: 40%;
+    width: 70%;
     background: #fff;
     border: 1px solid #d3d3d3;
     font-size: 0.8rem;
@@ -3888,7 +3888,7 @@ On click the images will be displayed at normal size to complete the effect
 .footerLeft {
     margin: 0 auto;
     width: 80%;
-    max-width: 1100px;
+    max-width: 1920px;
 }
 
 .footerItems {
@@ -4815,6 +4815,6 @@ On click the images will be displayed at normal size to complete the effect
 
 @media (min-width: 1200px) {
     .oneDiv, .onediv {
-        max-width: 1100px !important;
+        max-width: 1024px !important;
     }
 }
