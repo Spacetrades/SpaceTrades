@@ -11,6 +11,11 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 ::selection {
     background-color: yellow;
 }
@@ -2514,10 +2519,6 @@ i:hover {
     margin-right: 3px;
 }
 
-.headerBigCat {
-    margin-top: 13px !important;
-}
-
 .headerBigCat li {
     // margin: 0 2px;
     margin-right: 0 !important;
@@ -4813,13 +4814,14 @@ On click the images will be displayed at normal size to complete the effect
 /*Options DropDown*/
 
 .optionsClick {
-	margin:100px auto;
-	width:200px;
+    width: 100%;
+    margin-top: 23px;
+    margin-bottom: 200px;
 }
 
 .optionsClickv ul {
 	position:relative;
-	font-weight:900;
+	font-weight:400;
 }
 
 .optionsClick ul li {
@@ -4832,16 +4834,26 @@ On click the images will be displayed at normal size to complete the effect
 	position:absolute;
 	left:0;
 	right:0;
+	border: 2px solid #f39d00;
+	margin-top: -2px;
 }
 
 .optionsClick ul .clicker {
 	position:relative;
-	background:#2284B5;
+	background:orange;
 	color:#FFF;
+	text-align: center;
+	padding: 20px 0;
+	border-radius: 4px;
+}
+
+.optionsClick ul .clicker i {
+	color: #fff !important;
+	margin: 0 0 -3px 8px;
 }
 
 .optionsClick ul .clicker:hover,.click-nav ul .active {
-	background:#196F9A;
+	background:#F39D00;
 }
 
 .optionsClick img {
@@ -4850,13 +4862,23 @@ On click the images will be displayed at normal size to complete the effect
 	left:12px;
 }
 
+.optionsItems li a:hover {
+	background-color: #d3d3d3 !important;
+}
+
+.optionsItems li a i:hover {
+	color: #fff !important;
+}
+
+.optionsItems li a i {
+	margin-right: 12px;
+}
+
 .optionsClick ul li a {
-	transition:background-color 0.2s ease-in-out;
-	-webkit-transition:background-color 0.2s ease-in-out;
-	-moz-transition: background-color 0.2s ease-in-out;
 	display:block;
-	padding:8px 10px 8px 40px;
-	background:#FFF;color:#333;
+	padding: 15px;
+	background:#fff;
+	color:#333;
 	text-decoration:none;
 }
 
@@ -4874,6 +4896,12 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 /* End */
+
+
+
+
+
+
 
 @media (min-width: 1200px) {
     .oneDiv, .onediv {
