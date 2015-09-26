@@ -5114,6 +5114,38 @@ On click the images will be displayed at normal size to complete the effect
 
 /* End */
 
+/* Header Location Radius */
+
+.headerLocationRadius {
+	float: left;
+	margin-left: 16px !important;
+	margin-top: 6px !important;
+	vertical-align: middle !important;
+	font-size: 0.9rem;
+}
+
+.headerRadius {
+	margin-left: 10px;
+}
+
+.headerRadius select {
+	max-width: 60px;
+	background-color: #f73c37;
+	color: #fff;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #f8504b;
+}
+
+.headerRadius select:focus {
+	outline: none;
+}
+
+/* End */
 
 
 
