@@ -4283,6 +4283,7 @@ On click the images will be displayed at normal size to complete the effect
     text-align: center;
     padding-bottom: 2rem;
     margin-bottom: 0 !important;
+    margin-top: 40px !important;
     border-bottom: 1px solid #00bfff;
 }
 
@@ -4298,6 +4299,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsRefine {
     width: 15%;
+    margin-top: 2.5rem;
 }
 
 .searchResultsCards {
@@ -4326,6 +4328,7 @@ On click the images will be displayed at normal size to complete the effect
     font-size: 0.8rem;
 }
 
+/*
 .searchResultsSort {
     float: right !important;
     margin-right: 30px;
@@ -4346,10 +4349,53 @@ On click the images will be displayed at normal size to complete the effect
     margin-left: 5px;
     vertical-align: middle;
     color: #fff !important;
+} */
+
+.sortClicker i {
+	margin-left: 8px;
+	margin-bottom: -2px;
+	color: #fff !important;
 }
+
+.sortClick {
+	float: right !important;
+    margin-right: 30px;
+    font-size: 0.8rem;
+}
+
+.sortItems {
+	margin-top: -2px;
+}
+
+.sortItems li {
+	width: 100%;
+}
+
+.sortClick ul {position:relative;font-weight:400;}
+.sortClick ul li {position:relative;list-style:none;cursor:pointer;}
+.sortClick ul li ul {position:absolute;left:0;right:0;border: 2px solid #04b2ec;}
+.sortClick ul .sortClicker {position:relative;background:#00bfff;color:#FFF;}
+.sortClick ul .sortClicker:hover,.click-nav ul .active {background:#04B2EC !important;}
+.sortClick img {position:absolute;top:9px;left:12px;}
+.sortClick ul li a {
+	display:block;padding:10px 10px;background:#FFF;color:#333;text-decoration:none;
+}
+.sortClick ul li a:hover {background:#F2F2F2;}
+
+/* Fallbacks */
+.sortClick .no-js ul {display:none;}
+.sortClick .no-js:hover ul {display:block;}
 
 .searchRefineHeadings {
     color: #00bfff;
+}
+
+.searchRefineCategories {
+	margin: 16px auto;
+}
+
+.searchResultsRefine ul {
+	margin: 16px 0;
 }
 
 .searchResultsRefine ul li{
@@ -4388,17 +4434,18 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .searchResultsCards {
-    vertical-align: top;
-    margin-top: 0px;
+    vertical-align: top !important;
+    margin-top: -1000px !important;
+    float: right;
 }
 
 .searchResultsCardUl > li {
     display: inline-block;
-    width: 80%;
+    width: 85%;
     padding: 10px;
     border: 2px solid #00bfff;
     border-radius: 6px;
-    margin: 10px 0 10px 10%;
+    margin: 10px 0 10px 5%;
 }
 
 .searchResultsCardUl > li:hover {
@@ -5067,6 +5114,84 @@ On click the images will be displayed at normal size to complete the effect
 
 /* End */
 
+/* Header Location Radius */
+
+.headerLocationRadius {
+	float: left;
+	margin-left: 16px !important;
+	margin-top: 8px !important;
+	vertical-align: middle !important;
+	font-size: 0.9rem;
+}
+
+.headerRadius {
+	width: 70px;
+	margin-left: 10px;
+	padding: 8px 2px;
+	color: #fff !important;
+	background-color: #f73c37;
+	text-align: center;	
+}
+
+.headerRadius input {
+	width: 16px;
+	display: inline-block;
+	-webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    text-align: center;
+    outline: none !important;
+    background-color: #f73c37;
+	color: #fff;
+	border: 1px solid #f73c37;
+	margin-left: -4px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.headerRadius span {
+	display: inline-block;
+	margin-left: 0;
+	padding-right: 4px;
+}
+
+/*
+.headerRadius {
+	margin-left: 10px;
+	max-width: 30px;
+	background-color: #f73c37;
+	color: #fff;
+	border: 1px solid #f8504b;
+	padding: 5px;
+}
+
+.headerRadius input {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    padding: 0;
+    outline: none;
+    background-color: #f73c37;
+	color: #fff;
+} */
+
+.headerRadius input:focus {
+	outline: none !important;
+	-webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.headerSearchRadiusLogo {
+    margin-right: 30px;
+    font-weight: 700;
+}
+
+.headerSearchRadiusLogo a {
+	font-size: 1.3rem !important;
+}
+
+/* End */
 
 
 
