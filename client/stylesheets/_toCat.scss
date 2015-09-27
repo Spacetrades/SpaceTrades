@@ -833,6 +833,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     text-align: center;
     font-size: 4rem;
     color: $color-spacegrey;
+    font-weight: 400 !important;
 }
 
 .searchfield {
@@ -2469,16 +2470,15 @@ i:hover {
 // }
 
 .headerSearch {
-    margin-top: 7px !important;
-    margin-bottom: 8px !important;
+    margin-top: 10px !important;
     vertical-align: middle;
     float: left !important;
 }
 
-.headerNavSearch {
+/* .headerNavSearch {
     vertical-align: middle;
     width: 18rem;
-    height: 32px; /* 34px is the max height*/
+    height: 32px; 
     border: 1px solid #fff;
     outline: none;
     padding-left: 10px;
@@ -2495,7 +2495,7 @@ i:hover {
 
 .headerNavSearchButton:hover {
     background-color: #f73c37;
-}
+} */
 
 .headerNavLogo {
     margin: 0;
@@ -5184,16 +5184,66 @@ On click the images will be displayed at normal size to complete the effect
 
 .headerSearchRadiusLogo {
     margin-right: 30px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .headerSearchRadiusLogo a {
 	font-size: 1.3rem !important;
 }
 
+.headerSearchNavLogo {
+	margin-left: 16px;
+	margin-top: 3px;
+}
+
 /* End */
 
+/* Nav Search */
 
+.headerSearchNavField {
+	color: #404040;
+    font-weight: 400;
+    font-size: 0.9rem !important;
+}
+
+.headerSearchNavField i {
+	color: #404040 !important;
+	border-bottom: 2px solid #404040;
+    padding: 0 5px 6px 0;
+    margin-right: -5px;
+}
+
+.headerSearchNav {
+	outline: none !important;
+	-webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+	background-color: #f8504b;
+    border: none;
+    border-bottom: 2px solid #404040 !important;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    font-family: 'Droid Sans', sans-serif !important;
+    margin-top: 5px;
+}
+
+.headerSearchNav::-webkit-input-placeholder {
+	color: #333 !important;
+}
+
+.headerSearchNav::-moz-placeholder {
+	color: #333 !important;
+}
+
+.headerSearchNav:-mozplaceholder {
+	color: #333 !important;
+}
+
+.headerSearchNav:-ms-input-placeholder {
+	color: #333 !important;
+}
+
+/* End */
 
 
 
