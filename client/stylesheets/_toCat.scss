@@ -160,6 +160,16 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     color: $color-spacered !important;
 }
 
+.addListing i {
+	color: $color-spacered !important;
+	padding: 0 !important;
+	margin: 0 10px 0 0 !important;
+}
+
+.addListing i:hover {
+	color: $color-spacered !important;
+}
+
 .usernameChat {
     color: $color-blue2;
 }
@@ -2374,19 +2384,26 @@ i:hover {
 
 .headerAuth {
     margin-right: 20px !important;
+    margin-top: 13px !important;
 }
 
 .headerAuth li {
     margin-right: 5px;
 }
 
+.headerNotDrop {
+	margin: 5px !important;
+}
+
 .headerNotDrop a {
     color: $color-spacegrey !important;
+    padding: 12px !important;
 }
 
 .headerNotDrop a:hover {
     padding-bottom: 10px !important;
     color: white !important;
+    background-color: #404040 !important;
 }
 
 /* .headerCat li a:hover {
@@ -2413,7 +2430,7 @@ i:hover {
         background-color: #404040 !important;
         // transition: all 0.1s linear;
         font-size: 0.8rem;
-        z-index: 1000;
+        z-index: 3;
         border: 6px solid #404040;
 
         li {
@@ -2486,7 +2503,7 @@ i:hover {
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
     position: absolute;
-    z-index: 100;
+    z-index: 2;
 }
 
 .headerDropDown ul li:hover {
@@ -2506,6 +2523,7 @@ i:hover {
 
 .headerBigCat ul {
 	margin-left: -13px !important;
+	z-index: 5 !important;
 }
 
 // .headerDropDown:hover > .headerDropDownNav {
@@ -5234,6 +5252,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .headerSearchRadiusLogo a {
 	font-size: 1.3rem !important;
+	color: #404040 !important;
 }
 
 .headerSearchNavLogo {
