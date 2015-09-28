@@ -3633,7 +3633,6 @@ On click the images will be displayed at normal size to complete the effect
 	color:#FFF;
 	text-align: center;
 	padding: 17px 40px 14px 40px;
-	border-radius: 4px;
 }
 
 .optionsProClick ul .clicker i {
@@ -4375,7 +4374,7 @@ On click the images will be displayed at normal size to complete the effect
 .sortClick ul li {position:relative;list-style:none;cursor:pointer;}
 .sortClick ul li ul {position:absolute;left:0;right:0;border: 2px solid #04b2ec;}
 .sortClick ul .sortClicker {position:relative;background:#00bfff;color:#FFF;}
-.sortClick ul .sortClicker:hover,.click-nav ul .active {background:#04B2EC !important;}
+// .sortClick ul .sortClicker:hover,.click-nav ul .active {background:#04B2EC !important;}
 .sortClick img {position:absolute;top:9px;left:12px;}
 .sortClick ul li a {
 	display:block;padding:10px 10px;background:#FFF;color:#333;text-decoration:none;
