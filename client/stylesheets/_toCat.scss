@@ -11,11 +11,6 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
 
-* {
-	margin: 0;
-	padding: 0;
-}
-
 ::selection {
     background-color: yellow;
 }
@@ -40,14 +35,14 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     background-color: #F8504B !important;
     border-color: rgb(248, 80, 75) !important;
 }
-
+/*
 .homeLoadMore {
   //  margin-left: 45% !important;
 }
 
 .homeLoadMore:hover {
     box-shadow: 0px 1px 3px 0px #00bfff;
-}
+} */
 
 
 .box-title-listing {
@@ -163,6 +158,16 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 .addListing {
     color: $color-spacered !important;
+}
+
+.addListing i {
+	color: $color-spacered !important;
+	padding: 0 !important;
+	margin: 0 10px 0 0 !important;
+}
+
+.addListing i:hover {
+	color: $color-spacered !important;
 }
 
 .usernameChat {
@@ -834,6 +839,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-size: 4rem;
     color: $color-spacegrey;
     font-weight: 400 !important;
+}
+
+.logo a {
+	color: $color-spacegrey !important;
 }
 
 .searchfield {
@@ -2357,7 +2366,7 @@ i:hover {
     transition: none !important; 
 }
 
-.headerCat li, .headerAuth {
+/* .headerCat li, .headerAuth {
     margin-right: 2px;
     margin-left: 2px;
 }
@@ -2365,7 +2374,7 @@ i:hover {
 .headerCat li a {
     padding: 12px 14px;
     vertical-align: middle;
-}
+} */
 
 .headerAuth li a {
      color: #fff !important;
@@ -2375,26 +2384,33 @@ i:hover {
 
 .headerAuth {
     margin-right: 20px !important;
+    margin-top: 13px !important;
 }
 
 .headerAuth li {
     margin-right: 5px;
 }
 
+.headerNotDrop {
+	margin: 5px !important;
+}
+
 .headerNotDrop a {
     color: $color-spacegrey !important;
+    padding: 12px !important;
 }
 
 .headerNotDrop a:hover {
     padding-bottom: 10px !important;
     color: white !important;
+    background-color: #404040 !important;
 }
 
-.headerCat li a:hover {
+/* .headerCat li a:hover {
     background-color: $color-spacegrey;
     color: #fff;
     padding-bottom: 15px;
-}
+} */
 
 .headerAuth li a:hover {
     background-color: #fff;
@@ -2407,27 +2423,29 @@ i:hover {
     ul {
         margin: 0;
         padding: 0;
-        margin-top: 10px;
+        margin-top: 12px;
+        margin-left: -12px;
         display: none;
         position: absolute;
-        background-color: $color-spacegrey;
+        background-color: #404040 !important;
         // transition: all 0.1s linear;
         font-size: 0.8rem;
-        z-index: 1000;
+        z-index: 3;
+        border: 6px solid #404040;
 
         li {
-            margin: 0;
+            margin: 0 10px;
             color: #fff;
             text-align: left !important;
             width: 150px;
-            padding: 15px 10px 15px 0px;
-            border-bottom: 1px solid #555;
+            padding: 18px 50px 18px 0px;
+            border-top: 1px solid #555;
 
             a {
                 color: #fff;
                 margin: 0 !important;
                 padding: 0;
-                padding: 15px 15px !important;
+                padding:15px 80px 15px 15px !important;
             }      
         }
         }
@@ -2436,21 +2454,56 @@ i:hover {
     }
 }
 
+.headerDropDown ul li:first-child {
+	border-top: none !important;
+	margin-top: 10px;
+}
 
+.headerDropDown ul li:last-child {
+	border-bottom: none !important;
+	margin-bottom: 10px;
+} 
+
+.clickDropper li ul {
+	margin-left: -180px;
+}
+
+.clickDropper li ul li:first-child::before {
+	color: #404040;
+   content: '▲';
+   float: right;
+   margin: -50px -43px 0 0;
+   font-size: 1.3rem;
+}
+
+.clickDropper li ul li a {
+	padding: 15px 20px 15px 15px !important;
+}
 
 // .headerDropDown ul 
+
+
+.hoverDropper {
+	padding: 12px !important;
+}
+
+.hoverDropper:hover {
+	color: #fff !important;
+	background-color: #404040;
+}
+
+.hoverDropper span {
+	font-size: 0.9rem;
+}
+
+.headerCat, .headerBigCat {
+	margin: 0 0 0 0;
+}
 
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
     position: absolute;
-    z-index: 100;
-}
-
-.headerDropDown ul li a {
-    color: #fff;
-    margin: 0 !important;
-    padding: 0;
-    padding: 15px 15px !important;
+    z-index: 2;
 }
 
 .headerDropDown ul li:hover {
@@ -2461,8 +2514,17 @@ i:hover {
 
 .headerDropDown ul li a:hover {
     background-color: #555;
-    transition: none !important;
-    
+    transition: none !important;   
+}
+
+.headerBigCat {
+	border: 1px solid #404040 !important;
+	margin: 2px 0 0 0 !important;
+}
+
+.headerBigCat ul {
+	margin-left: -13px !important;
+	z-index: 5 !important;
 }
 
 // .headerDropDown:hover > .headerDropDownNav {
@@ -2519,7 +2581,7 @@ i:hover {
     margin-right: 3px;
 }
 
-.headerBigCat li {
+/* .headerBigCat li {
     // margin: 0 2px;
     margin-right: 0 !important;
 }
@@ -2548,6 +2610,8 @@ i:hover {
     padding-bottom: 10px !important;
 }
 
+*/
+
 .headerNameOptions li {
     margin: 0 2px;
 }
@@ -2558,7 +2622,7 @@ i:hover {
 
 .headerLine {
     margin-left: 20px !important;
-    padding-right: 7em !important;
+    padding-right: 1em !important;
     border-left: 1px solid $color-spacegrey;
 }
 
@@ -2983,7 +3047,7 @@ i:hover {
 
 .homeCardLi:hover {
     border: 2px solid #f8504b;
-    box-shadow: 0px 1px 3px 0px $color-spacered;
+//    box-shadow: 0px 1px 3px 0px $color-spacered;
 }
 
 .homeCardImg {
@@ -3705,6 +3769,16 @@ On click the images will be displayed at normal size to complete the effect
     text-align: center !important;
 }
 
+.profileUserMore li a i {
+	font-size: 4rem;
+	color: #00bfff;
+}
+
+.profileUserMore li a i:hover {
+	color: #04B2EC !important;
+}
+
+/*
 .profileUserMore li a {
     font-size: 1.2rem;
     padding: 16px 22px;
@@ -3713,12 +3787,13 @@ On click the images will be displayed at normal size to complete the effect
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
     border-radius: 6px;
     overflow: hidden;
-}
+} 
 
 .profileUserMore li a:hover {
     color: $color-spaceblue;
     border-color: $color-spaceblue;
 }
+*/
 
 .headerSearchLogo {
     vertical-align: middle !important;
@@ -4080,6 +4155,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .footerItems li h3 a {
     color: #fff !important;
+    font-weight: 400;
 }
 
 .footerItems li h4 {
@@ -4299,7 +4375,6 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsRefine {
     width: 15%;
-    margin-top: 2.5rem;
 }
 
 .searchResultsCards {
@@ -4435,7 +4510,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCards {
     vertical-align: top !important;
-    margin-top: -1000px !important;
+    margin-top: -1015px !important;
     float: right;
 }
 
@@ -5189,6 +5264,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .headerSearchRadiusLogo a {
 	font-size: 1.3rem !important;
+	color: #404040 !important;
 }
 
 .headerSearchNavLogo {
@@ -5243,8 +5319,13 @@ On click the images will be displayed at normal size to complete the effect
 	color: #333 !important;
 }
 
-/* End */
+.headerCompass {
+    font-size: 1.1rem;
+    vertical-align: middle;
+    margin: 0 5px 0px 0;
+}
 
+/* End */
 
 
 
