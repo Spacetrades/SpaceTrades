@@ -35,14 +35,14 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     background-color: #F8504B !important;
     border-color: rgb(248, 80, 75) !important;
 }
-
+/*
 .homeLoadMore {
   //  margin-left: 45% !important;
 }
 
 .homeLoadMore:hover {
     box-shadow: 0px 1px 3px 0px #00bfff;
-}
+} */
 
 
 .box-title-listing {
@@ -2519,6 +2519,7 @@ i:hover {
 
 .headerBigCat {
 	border: 1px solid #404040 !important;
+	margin: 2px 0 0 0 !important;
 }
 
 .headerBigCat ul {
@@ -3768,6 +3769,16 @@ On click the images will be displayed at normal size to complete the effect
     text-align: center !important;
 }
 
+.profileUserMore li a i {
+	font-size: 4rem;
+	color: #00bfff;
+}
+
+.profileUserMore li a i:hover {
+	color: #04B2EC !important;
+}
+
+/*
 .profileUserMore li a {
     font-size: 1.2rem;
     padding: 16px 22px;
@@ -3776,12 +3787,13 @@ On click the images will be displayed at normal size to complete the effect
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
     border-radius: 6px;
     overflow: hidden;
-}
+} 
 
 .profileUserMore li a:hover {
     color: $color-spaceblue;
     border-color: $color-spaceblue;
 }
+*/
 
 .headerSearchLogo {
     vertical-align: middle !important;
@@ -5305,6 +5317,12 @@ On click the images will be displayed at normal size to complete the effect
 
 .headerSearchNav:-ms-input-placeholder {
 	color: #333 !important;
+}
+
+.headerCompass {
+    font-size: 1.1rem;
+    vertical-align: middle;
+    margin: 0 5px 0px 0;
 }
 
 /* End */
