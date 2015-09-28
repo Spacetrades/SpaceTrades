@@ -11,11 +11,6 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
 
-* {
-	margin: 0;
-	padding: 0;
-}
-
 ::selection {
     background-color: yellow;
 }
@@ -834,6 +829,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-size: 4rem;
     color: $color-spacegrey;
     font-weight: 400 !important;
+}
+
+.logo a {
+	color: $color-spacegrey !important;
 }
 
 .searchfield {
@@ -2357,7 +2356,7 @@ i:hover {
     transition: none !important; 
 }
 
-.headerCat li, .headerAuth {
+/* .headerCat li, .headerAuth {
     margin-right: 2px;
     margin-left: 2px;
 }
@@ -2365,7 +2364,7 @@ i:hover {
 .headerCat li a {
     padding: 12px 14px;
     vertical-align: middle;
-}
+} */
 
 .headerAuth li a {
      color: #fff !important;
@@ -2390,11 +2389,11 @@ i:hover {
     color: white !important;
 }
 
-.headerCat li a:hover {
+/* .headerCat li a:hover {
     background-color: $color-spacegrey;
     color: #fff;
     padding-bottom: 15px;
-}
+} */
 
 .headerAuth li a:hover {
     background-color: #fff;
@@ -2407,27 +2406,29 @@ i:hover {
     ul {
         margin: 0;
         padding: 0;
-        margin-top: 10px;
+        margin-top: 12px;
+        margin-left: -12px;
         display: none;
         position: absolute;
-        background-color: $color-spacegrey;
+        background-color: #404040 !important;
         // transition: all 0.1s linear;
         font-size: 0.8rem;
         z-index: 1000;
+        border: 6px solid #404040;
 
         li {
-            margin: 0;
+            margin: 0 10px;
             color: #fff;
             text-align: left !important;
             width: 150px;
-            padding: 15px 10px 15px 0px;
-            border-bottom: 1px solid #555;
+            padding: 18px 50px 18px 0px;
+            border-top: 1px solid #555;
 
             a {
                 color: #fff;
                 margin: 0 !important;
                 padding: 0;
-                padding: 15px 15px !important;
+                padding:15px 80px 15px 15px !important;
             }      
         }
         }
@@ -2436,21 +2437,56 @@ i:hover {
     }
 }
 
+.headerDropDown ul li:first-child {
+	border-top: none !important;
+	margin-top: 10px;
+}
 
+.headerDropDown ul li:last-child {
+	border-bottom: none !important;
+	margin-bottom: 10px;
+} 
+
+.clickDropper li ul {
+	margin-left: -180px;
+}
+
+.clickDropper li ul li:first-child::before {
+	color: #404040;
+   content: '▲';
+   float: right;
+   margin: -50px -43px 0 0;
+   font-size: 1.3rem;
+}
+
+.clickDropper li ul li a {
+	padding: 15px 20px 15px 15px !important;
+}
 
 // .headerDropDown ul 
+
+
+.hoverDropper {
+	padding: 12px !important;
+}
+
+.hoverDropper:hover {
+	color: #fff !important;
+	background-color: #404040;
+}
+
+.hoverDropper span {
+	font-size: 0.9rem;
+}
+
+.headerCat, .headerBigCat {
+	margin: 0 0 0 0;
+}
 
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
     position: absolute;
     z-index: 100;
-}
-
-.headerDropDown ul li a {
-    color: #fff;
-    margin: 0 !important;
-    padding: 0;
-    padding: 15px 15px !important;
 }
 
 .headerDropDown ul li:hover {
@@ -2461,8 +2497,15 @@ i:hover {
 
 .headerDropDown ul li a:hover {
     background-color: #555;
-    transition: none !important;
-    
+    transition: none !important;   
+}
+
+.headerBigCat {
+	border: 1px solid #404040 !important;
+}
+
+.headerBigCat ul {
+	margin-left: -13px !important;
 }
 
 // .headerDropDown:hover > .headerDropDownNav {
@@ -2519,7 +2562,7 @@ i:hover {
     margin-right: 3px;
 }
 
-.headerBigCat li {
+/* .headerBigCat li {
     // margin: 0 2px;
     margin-right: 0 !important;
 }
@@ -2548,6 +2591,8 @@ i:hover {
     padding-bottom: 10px !important;
 }
 
+*/
+
 .headerNameOptions li {
     margin: 0 2px;
 }
@@ -2558,7 +2603,7 @@ i:hover {
 
 .headerLine {
     margin-left: 20px !important;
-    padding-right: 7em !important;
+    padding-right: 1em !important;
     border-left: 1px solid $color-spacegrey;
 }
 
@@ -4080,6 +4125,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .footerItems li h3 a {
     color: #fff !important;
+    font-weight: 400;
 }
 
 .footerItems li h4 {
@@ -4299,7 +4345,6 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsRefine {
     width: 15%;
-    margin-top: 2.5rem;
 }
 
 .searchResultsCards {
@@ -4435,7 +4480,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCards {
     vertical-align: top !important;
-    margin-top: -1000px !important;
+    margin-top: -1015px !important;
     float: right;
 }
 
@@ -5245,8 +5290,12 @@ On click the images will be displayed at normal size to complete the effect
 
 /* End */
 
+/**** NEW HEADER RIGHT SIDE POST ****/
 
 
+
+
+/**** END END END ****/
 
 @media (min-width: 1200px) {
     .oneDiv, .onediv {
