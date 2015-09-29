@@ -13,7 +13,10 @@
                     <li class="money itemMoney">${{price}}</li>
                 </ul>
                 <ul class="listingItemButtons">
-                    <li><a href="{{current}}/request">Offer</a></li>
+               <!-- <li><a href="{{current}}/request">Offer</a></li> -->
+                    <li>
+                        <button class="modOfferRequestTrigger btn btn-default" data-toggle="modal" data-target="#offerRequestModal">Offer</button>
+                    </li>
                     <li><a href="/chat/{{creator_id}}">Chat</a></li>
                 </ul>
             </div>
@@ -90,7 +93,7 @@
             <div class="listingItemMaps">
                 <ul class="listingItemMapsAPI">
                     <li>
-                        <div id="map-canvas">
+                        <div class="listingMapsCanvas" id="map-canvas">
                             {{> googleMap name="listingImage" options=exampleMapOptions}}
                         </div>
                     </li>
@@ -126,4 +129,5 @@
     <div class="hidden">
     {{creator_id}}
     </div>
+    {{> ModalOfferRequest}}
 </template>

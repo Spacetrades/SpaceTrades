@@ -23,7 +23,12 @@
                         </ul>
                     </li>
                     <!-- OnClick DropDown With Edit and Delete -->
-                    <li class="managerOfferViewer managerReceivedOffers"><a class="managerOfferCount" href="/selloffer/{{_id}}">{{offers}}</a></li>
+                    <!-- <li class="managerOfferViewer managerReceivedOffers"><a class="managerOfferCount" href="/selloffer/{{_id}}">{{offers}}</a></li> -->
+                    <li class="managerOfferViewer managerReceivedOffers">
+                        <button type="button" class="modReceivedOffersTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#receivedOffersModal">
+                          {{offers}}
+                        </button>
+                    </li>
                     <!-- 4 is the number of offers--> 
                 </ul>
             </li>

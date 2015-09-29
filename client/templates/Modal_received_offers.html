@@ -1,0 +1,71 @@
+<!-- This modal can be accessed from Your Listings | Post Auth -->
+<template name="ModalReceivedOffers">
+	<!-- Modal -->
+	<div class="modSentOffer modal" id="receivedOffersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modSentOfferDialog modal-dialog" role="document">
+	    <div class="modSendOfferContent modal-content">
+	      <div class="modSentOfferBody modal-body">
+	      	<div class="profileReceivedOffers">
+		        <ul id="profileReceivedModalUl" class="profileReceivedUl">
+		        	<!-- Multiple Received Offers On This Page -->
+		        	{{#each listingOffers}}
+		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Offer Received At 4:34PM On July 27, 2015</p>
+		                <ul class="profileReceivedCardLeft">
+		                    <li class="profileReceivedImage">
+		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
+		                    </li>
+		                </ul>
+		                <ul class="profileReceivedCardRight profileViewMeetupRight">
+		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{creator_id}}">{{creator}}</a></li>
+		                    <li class="profileReceivedPrice"><b>Offered Price:</b> <span class="money">{{offerprice}}</span></li>
+		                    <li class="profileReceivedPayment"><b>Payment:</b></li>
+		                    <li class="profileReceivedDate"><b>Date of Meetup:</b>{{date}}</li>
+		                    <li class="profileReceivedLocation"><b>Location:</b>{{location}}</li>
+		                    <li id="profileReceivedButtons">
+	                            <ul id="profileReceivedButtonsUl">
+	                                <li id="profileReceivedAccept"><a href="#">Accept</a></li>
+	                                <li id="profileReceivedDecline" class="#"><a href="#">Decline</a></li>
+	                            </ul>
+	                        </li>
+		                </ul>
+		                <div id="profileReceivedOffersMaps">
+		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+		                </div>
+		            </li>
+		            {{/each}}
+		            <!-- Example Delete After Viewing -->
+		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Offer Received At 4:34PM On July 27, 2015</p>
+		                <ul class="profileReceivedCardLeft">
+		                    <li class="profileReceivedImage">
+		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
+		                    </li>
+		                </ul>
+		                <ul class="profileReceivedCardRight profileViewMeetupRight">
+		                    <li><a href="/listing/{{listingId}}"><h3>Nike Air Example Received Offer{{listing_title}}</h3></a></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{creator_id}}">{{creator}}Yusuf Bagha</a></li>
+		                    <li class="profileReceivedPrice"><b>Offered Price:</b> <span class="money"> 240{{offerprice}}</span></li>
+		                    <li class="profileReceivedPayment"><b>Payment: Paypal</b></li>
+		                    <li class="profileReceivedDate"><b>Date of Meetup:</b> Oct 15, 2015{{date}}</li>
+		                    <li class="profileReceivedLocation"><b>Location:</b> 505 5th Avenue New York, NY 10038{{location}}</li>
+		                    <li id="profileReceivedButtons">
+	                            <ul id="profileReceivedButtonsUl">
+	                                <li id="profileReceivedAccept"><a href="#">Accept</a></li>
+	                                <li id="profileReceivedDecline" class="#"><a href="#">Decline</a></li>
+	                            </ul>
+	                        </li>
+		                </ul>
+		                <div id="profileReceivedOffersMaps">
+		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+		                </div>
+		            </li>
+		            <!-- END END END -->
+		        </ul>
+		    </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</template>

@@ -2,8 +2,11 @@
     <nav class="headerNav headerHomePost">
         <nav class="headerNavMax">
             <ul class="headerLocationRadius">
-                <li class="headerLocation">Brooklyn, NY</li>
-                <li class="headerRadius"><input value="5" maxlength="2"><span>Miles From You</span></li>
+                <button type="button" class="modLocationRadiusTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#locationRadiusModal">
+                    <li class="headerCompass"><i class="fa fa-compass"></i></li>
+                    <li class="headerLocation">Brooklyn, NY</li>
+                    <li class="headerRadius"><input value="5" maxlength="2" disabled=""><span>Miles From You</span></li>
+                </button>
             </ul>
             <ul class="headerCat">
                 <li class="headerDropDown hoverDropDown hoverDropper">
