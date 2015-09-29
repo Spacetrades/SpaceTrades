@@ -9,7 +9,11 @@
 	        <li class="money profileCardItem">${{price}}</li>
 	        <li class="profileCardItem">Condition: {{condition}}</li>
 	        <li class="profileCardItem">Size: {{size}}</li>
-	        <li class="profileCardView" id="profileHistoryView"><a href="#">View</a></li>
+	        <li class="profileCardView" id="profileHistoryView">
+	        <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#historyDetailsModal">
+                  View Offer
+                </button>
+            </li>
 	    </ul>
 	</li>  
 </template>

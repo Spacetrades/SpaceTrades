@@ -6,20 +6,27 @@
 				{{> profileHistoryCard}}
 			{{/each}}
  
-			<!-- Example Delete Later -->
+ 
+			<!-- EXAMPLE Delete Later -->
 			<li class="profileCardLi">
-			    <p><b>Met On Aug. 3 2015</b>You Bought From <a href="/profile/{{creator_id}}" class="profileCardBoughtSold">Yusuf Bagha</a></p> <!-- you bought from, you sold to -->
+			    <p><b>Met On Aug. 3 2015</b>You Bought From Yusuf Bagha <a href="/profile/{{creator_id}}" class="profileCardBoughtSold">{{username}}</a></p> <!-- you bought from, you sold to -->
 			    <ul class="profileCardImage">
 			        <a href="/listing/{{_id}}"><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg" class="profileCardImg"></a>
 			    </ul>
 			    <ul class="profileCardInfo">
-			        <li><a href="/listing/{{_id}}"><h4>Nike Air Max Retro</h4></a></li>
-			        <li class="money profileCardItem">$250</li>
-			        <li class="profileCardItem">Condition: Like New</li>
-			        <li class="profileCardItem">Size: 13</li>
-			        <li class="managerOfferView"><a href="#" class="ph-button ph-btn-blue">View Details</a></li>
+			        <li><a href="/listing/{{_id}}"><h4>Nike Example Listing{{listing_title}}</h4></a></li>
+			        <li class="money profileCardItem">$490{{price}}</li>
+			        <li class="profileCardItem">Condition: New{{condition}}</li>
+			        <li class="profileCardItem">Size: 12{{size}}</li>
+			        <li class="profileCardView" id="profileHistoryView">
+			        <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#historyDetailsModal">
+		                  View Offer
+		                </button>
+		            </li>
 			    </ul>
-			</li>      
+			</li>  
+			<!-- End End End -->    
 		</ul>    
     </div>
+    {{> ModalHistoryDetails}}
 </template> 
