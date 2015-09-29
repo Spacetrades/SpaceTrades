@@ -1,14 +1,14 @@
-<!-- This modal can be accessed from Profile Offer | Post Auth -->
-<template name="ModalSentOffer">
+<!-- This modal can be accessed from History | Post Auth -->
+<template name="ModalHistoryDetails">
 	<!-- Modal -->
-	<div class="modSentOffer modal" id="sentOfferModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modSentOffer modal" id="historyDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
-		        <ul class="profileReceivedUl">
+		        <ul id="profileReceivedModalUl" class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Pending</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Met On Aug 19, 2015</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
 		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
@@ -16,12 +16,12 @@
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
-		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{creator_id}}">{{creator}}</a></li>
-		                    <li class="profileReceivedPrice"><b>Offered Price:</b> <span class="money">{{offerprice}}</span></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You bought from <a href="/profile/{{creator_id}}">{{creator}}</a></li>
+		                    <li class="profileReceivedPrice"><b>Final Price:</b> <span class="money">{{offerprice}}</span></li>
 		                    <li class="profileReceivedPayment"><b>Payment:</b> Paypal</li>
-		                    <li class="profileReceivedDate"><b>Date of Meetup:</b>{{date}}</li>
-		                    <li class="profileReceivedLocation"><b>Location:</b>{{location}}</li>
-		                    <li id="profileReceivedCancel"><a href="#">Cancel Offer</a></li>
+		                    <li class="profileReceivedDate"><b>Condition:</b> {{condition}}</li>
+		                    <li class="profileReceivedDate"><b>Size:</b> {{size}}</li>
+		                    <li id="profileHistoryFeedback"><a href="#">Give Feedback</a></li>
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
 		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
