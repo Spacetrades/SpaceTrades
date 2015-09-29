@@ -1609,7 +1609,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     }
 
     button {
-        background-color: #fff;
         border: none;
     }
 
@@ -3190,8 +3189,8 @@ On click the images will be displayed at normal size to complete the effect
 
 }
 
-#map-canvas {
-    height: 500px;
+.listingMapsCanvas {
+    height: 500px !important;
 }
 
 .listingItemLeft {
@@ -3239,6 +3238,7 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemButtons {
     float: right;
     font-family: 'Roboto';
+    margin-top: 9px !important;
 }
 
 .listingItemButtons li {
@@ -4221,16 +4221,15 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileReceivedUl {
-    width: 55%;
-    margin-left: 21% !important;
-    margin-right: 21% !important;
+    width: 97%;
+    margin: 0;
 }
 
 .profileReceivedLi {
-    width: 100%;
+    height: 475px;
     margin-bottom: 20px;
     padding: 10px;
-    border: 2px solid #75D855;
+    border: 2px solid #fff;
     border-radius: 4px;
 }
 
@@ -4239,16 +4238,16 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileReceivedCardLeft {
-    width: 45% !important;
+    width: 35% !important;
 }
 
 .profileReceivedCardRight {
-    width: 40% !important;
+    width: 50% !important;
 }
 
 .profileReceivedImage {
     width: 100% !important;
-    height: 200px;
+    height: 260px;
 }
 
 .profileReceivedImg {
@@ -4290,6 +4289,7 @@ On click the images will be displayed at normal size to complete the effect
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 2px 0 20px 0 !important;
 }
 
 .profileReceivedPrice {
@@ -4338,7 +4338,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileReceivedDecline {
-    margin-left: 10px; 
+    margin: 0 0 0 10px !important; 
 }
 
 .profileReceivedDecline a:hover {
@@ -4347,14 +4347,14 @@ On click the images will be displayed at normal size to complete the effect
 
 
 #profileReceivedOffersMaps {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     height: 180px;
 }
 
 
 .profileViewMeetupRight li {
-    margin: 10px 0 !important;
+    margin: 16px 0 !important;
 }
 
 .profileViewMeetupLi {
@@ -4750,7 +4750,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .notifMainWrap {
     width: 70%;
-    text-align: left;
+    margin:auto;
 }
 
 .notifLi {

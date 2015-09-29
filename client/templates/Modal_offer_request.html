@@ -1,0 +1,40 @@
+<!-- This modal can be accessed from Listing Item | Post Auth | If Pre Auth Prompt Login -->
+<template name="ModalOfferRequest">
+	<form class="modal multi-step" id="offerRequestModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title step-1" data-step="1">Step 1</h4>
+                <h4 class="modal-title step-2" data-step="2">Step 2</h4>
+            </div>
+            <div class="modal-body step step-1">
+            This is step 1.
+            </div>
+            <div class="modal-body step step-2">
+            This is step 2.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent()">Continue</button>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- JS Required For Multi Step Modal-->
+<script src="../../lib/multi-step-modal.js"></script>
+<script>
+sendEvent = function() {
+    $('#offerRequestModal').trigger('next.m.2');
+}
+</script>
+</template>
+
+<!-- <div class="modofferRequest modal" id="offerRequestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modofferRequestDialog modal-dialog" role="document">
+	    <div class="modofferRequestContent modal-content">
+	      <div class="modofferRequestBody modal-body">
+
+	      </div>
+	    </div>
+	  </div>
+	</div> -->

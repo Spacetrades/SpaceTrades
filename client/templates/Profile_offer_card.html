@@ -11,7 +11,11 @@
             <li class="money profileCardItem">${{offerprice}}</li>
             <li class="profileCardItem">{{date}}</li>
             <li class="profileCardItem">{{location}}</li>
-            <li class="managerOfferView"><a href="/buyoffer/{{_id}}" class="ph-button ph-btn-blue">View Offer</a></li>
+            <li class="managerOfferView">
+                <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#sentOfferModal">
+                  View Offer
+                </button>
+            </li>
         </ul>
     </li>
 </template>
