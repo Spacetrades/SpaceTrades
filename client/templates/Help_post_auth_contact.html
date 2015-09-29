@@ -1,0 +1,28 @@
+<template name="contact">
+    <div class="contactdiv oneDiv">
+        <h2>Contact Us</h2>
+        <p>
+        Interested in getting in touch with us. <br>
+        Have any comments or questions not answered in the Help Center.<br>
+        </p>
+        <form class="contactform">
+            <!-- <p class="contactname">
+                <input type="text" name="contactname" id="contactname" placeholder="Name" />
+            </p> --> 
+            <!-- We do not need name for Post Authentication -->
+            <p class="contactsubject">
+                <input type="text" name="contactsubject" id="contactSubject" placeholder="Subject" />
+            </p>
+            <p class="contacttext">
+                <textarea name="message" placeholder="Message" class="message"></textarea>
+            </p>
+            <p class="contactSend">
+                <input type="submit" class="contactButton" value="Send">
+            </p>
+        </form>
+        <div class="sent">
+            <h2>Message Sent</h2>
+            <p>We will get in touch with you as soon as we can</p>
+        </div>
+    </div>
+</template>

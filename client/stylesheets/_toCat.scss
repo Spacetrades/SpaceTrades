@@ -1123,16 +1123,19 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 /****** CONTACT ******/
 
-.contactname input, .contactsubject input, .contactemail input {
- width: 30%;
- height: 20px;
- padding-left: 5px; 
+.contactname input, .contactsubject input, .contactemail input { 
+    padding: 10px 12px !important;
+    width: 400px !important;
+    border-radius: 4px !important;
+    border: 1px solid #d3d3d3 !important;
 }
 
 .contacttext textarea {
-    width: 30%;
-    padding-left: 5px;
-    height: 80px;
+    width: 400px !important;
+    padding: 10px 12px !important;
+    height: 80px !important;
+    border-radius: 4px !important;
+    border: 1px solid #d3d3d3 !important;
 }
 
 .contactsubmit input {
@@ -2108,7 +2111,7 @@ i:hover {
 
 .contactSend {
     font-family: 'Roboto' !important;
-    margin: 0 35% 100px 35%!important;
+    margin: 0 29.1% 100px 35%!important;
     text-align: center !important;
 }
 
@@ -2987,7 +2990,6 @@ i:hover {
 	color:#FFF !important;
 	text-align: center !important;
 	padding: 12px 8px !important;
-	border-radius: 4px !important;
 }
 
 .optionsListCardClick ul .clicker i {
@@ -3398,11 +3400,15 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemUser > ul {
     display: inline-block;
     margin: 0;
-    margin-top: 10px !important;
+}
+
+.listingItemUserImg {
+	margin-top: 10px !important;
 }
 
 .listingItemUserInfo {
     margin-left: 15px !important;
+    margin-top: 10px !important;
     vertical-align: middle;
 }
 
@@ -4225,6 +4231,7 @@ On click the images will be displayed at normal size to complete the effect
     margin-bottom: 20px;
     padding: 10px;
     border: 2px solid #75D855;
+    border-radius: 4px;
 }
 
 .profileReceivedLi > ul {
@@ -4425,6 +4432,7 @@ On click the images will be displayed at normal size to complete the effect
     color: #fff !important;
 } */
 
+
 .sortClicker i {
 	margin-left: 8px;
 	margin-bottom: -2px;
@@ -4454,7 +4462,7 @@ On click the images will be displayed at normal size to complete the effect
 .sortClick ul li a {
 	display:block;padding:10px 10px;background:#FFF;color:#333;text-decoration:none;
 }
-.sortClick ul li a:hover {background:#F2F2F2;}
+.sortClick ul li a:hover {background:#04b2ec;}
 
 /* Fallbacks */
 .sortClick .no-js ul {display:none;}
@@ -5139,7 +5147,6 @@ On click the images will be displayed at normal size to complete the effect
 	color:#FFF;
 	text-align: center;
 	padding: 20px 0;
-	border-radius: 4px;
 }
 
 .optionsListClick ul .clicker i {
@@ -5199,7 +5206,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .headerRadius {
-	width: 70px;
+	width: 150px;
 	margin-left: 10px;
 	padding: 8px 2px;
 	color: #fff !important;
@@ -5325,6 +5332,29 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 /* End */
+
+.listingPayment {
+	display: block !important;
+	margin: -75px -100px 0 0;
+}
+
+.listingPayment li {
+	display: inline-block;
+	margin: 0;
+}
+
+.listingPayment li i {
+	font-size: 1.6rem;
+	color: gold !important;
+}
+
+.listingPayment li i:hover {
+	color: gold !important;
+}
+
+.listingPayCash i {
+	margin-right: 5px;
+}
 
 
 
