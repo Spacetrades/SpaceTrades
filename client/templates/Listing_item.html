@@ -4,6 +4,9 @@
 <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied -->
 <!-- TASK - Dropdowns being open on page load, change this -->
 <!-- TASK - Facebook, Twitter, Instagram Listing sharing in the options or near the username -->
+{{> ModalOfferRequest}}
+{{> ModalEditListing}}
+
     <div class="listingItemDiv oneDiv">
         <h1 class="listingItemTitle">{{listing_title}}</h1>
         <p class="listingItemOffersRecieved">{{offers}} Offers Received</p>
@@ -133,6 +136,4 @@
     <div class="hidden">
     {{creator_id}}
     </div>
-    {{> ModalOfferRequest}}
-    {{> ModalEditListing}}
 </template>
