@@ -214,12 +214,6 @@ code {
     border-radius: 5px;
     padding: 3px 5px;
     color: $color-hashtag;
-    border: 1px solid turquoise;
-
-    &:hover {
-        font-weight: bold;
-        cursor: help;
-    }
 
 }
 
@@ -2502,6 +2496,11 @@ i:hover {
 	margin: 0 0 0 0;
 }
 
+// .hoverDropDown {
+//     max-height: 400px !important;
+//     overflow-y: scroll !important;
+// }
+
 .hoverDropDown:hover > .headerDropDownNav {
     display: block;
     position: absolute;
@@ -2511,7 +2510,6 @@ i:hover {
 .headerDropDown ul li:hover {
     color: #fff;
     background-color: #555;
-    
 }
 
 .headerDropDown ul li a:hover {
