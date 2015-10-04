@@ -177,7 +177,7 @@
 	margin: 0;
 }
 
-.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingPageThree h2 {
+.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingDiv h2 {
 	color: $color-spaceblue !important;
 	font-size: 2rem !important;
 	font-weight: 400 !important;
@@ -210,7 +210,7 @@
 	display: inline-block;
 }
 
-.modOfferRequestPaymentWrap ul li:nth-child(2) {
+.modOfferRequestPaymentWrap ul li:nth-child(2), .modOfferRequestPaymentWrap ul li:nth-child(3) {
 	margin-left: 15px;
 }
 
@@ -513,7 +513,7 @@
 
 /*~~ Button End ~~*/
 
-.modAddListingPageThree {
+.modAddListingPageThree, .modAddListingPageFive, .modAddListingPageSix {
 	margin-top: 50px;
 }
 
@@ -526,7 +526,19 @@
 }
 
 .modMultiBtnAddListingThree {
-	margin-top: 79px;
+	margin-top: 76px;
+}
+
+.modMultiBtnAddListingFour {
+	margin-top: 12px;
+}
+
+.modMultiBtnAddListingFive {
+	margin-top: 83px;
+}
+
+.modMultiBtnAddListingPageSix {
+	margin-top: 33px;
 }
 
 .modAddListingTitleInput {
@@ -581,7 +593,7 @@
   background: #f8504b !important;
   border-radius: 3px;
   border: none;
-  padding: 8px 14px;
+  padding: 5px 14px;
   vertical-align: middle !important;
   outline: none;
   white-space: nowrap;
@@ -589,7 +601,7 @@
   cursor: pointer;
   text-shadow: none;
   font-weight: 400;
-  font-size: 12pt;
+  font-size: 10pt;
   color: #fff;
   margin-right: 5px !important;
 }
@@ -598,6 +610,48 @@
 }
 .imageupload:active::before {
   background: #f73c37 !important;
+}
+
+.modAddListingPageFourUl li {
+	margin: 30px 0 !important;
+}
+
+.modAddListingPageFourUl li > label {
+	font-size: 1.1rem;
+	color: #999 !important;
+}
+
+.modAddListingPageFourUl li > div, .modAddListingPageFourUl li input {
+	margin-left: 50px;
+}
+
+.modAddListingPageFourUl li:first-child > label {
+	margin-right: 9px;
+}
+
+.modAddListingPageFourUl li:nth-child(2) > label {
+	margin-right: 30px;
+}
+
+.modAddListingPageFourUl li:nth-child(4) > label {
+	margin-right: 46px;
+}
+
+.modAddListingPageFourUl li:last-child > label {
+	margin-right: 35px;
+}
+
+.modAddListingPageFourUl li > label, .modAddListingPageFourUl li > div {
+	display: inline-block !important;
+}
+
+.modAddListingPageFourUl li > div {
+	vertical-align: middle;
+}
+
+.modalSubmitAdd input {
+	margin-left: 0 !important;
+	font-size: 1rem !important; 
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
