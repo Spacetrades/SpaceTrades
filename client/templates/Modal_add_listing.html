@@ -1,59 +1,113 @@
 <!-- This modal can be accessed from Everywhere | Triggering this modal redirects you to home and opens this modal, once the listing is created you are redirected to the item page. -->
 <template name="ModalAddListing">
-  <form class="modal multi-step" id="addListingModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body step step-1">
-            	This is step 1.
-            	<button type="button" class="btn btn-primary step step-1" data-step="1" onclick="addListingJump2()">Continue</button>
-            </div>
-            <div class="modal-body step step-2">
-            	This is step 2.
-            	<button type="button" class="btn btn-primary step step-2" data-step="2" onclick="addListingJump1()">Back</button>
-            	<button type="button" class="btn btn-primary step step-2" data-step="2" onclick="addListingJump3()">Continue</button>
-            </div>
-            <div class="modal-body step step-3">
-            	This is step 3.
-            	<button type="button" class="btn btn-primary step step-3" data-step="3" onclick="addListingJump2()">Back</button>
-            	<button type="button" class="btn btn-primary step step-3" data-step="3" onclick="addListingJump4()">Continue</button>
-            </div>
-            <div class="modal-body step step-4">
-            	This is step 3.
-            	<button type="button" class="btn btn-primary step step-4" data-step="4" onclick="addListingJump3()">Back</button>
-            	<button type="button" class="btn btn-primary step step-4" data-step="4" onclick="addListingJump5()">Continue</button>
-            </div>
-            <div class="modal-body step step-5">
-            	This is step 3.
-            	<button type="button" class="btn btn-primary step step-5" data-step="5" onclick="addListingJump4()">Back</button>
-            	<button type="button" class="btn btn-primary step step-5" data-step="5" onclick="addListingJump6()">Continue</button>
-            </div>
-            <div class="modal-body step step-6">
-            	This is step 3.
-            	<button type="button" class="btn btn-primary step step-6" data-step="6" onclick="addListingJump5()">Back</button>
-            	<button type="button" class="btn btn-primary submitBtnModal" id="addListingModalSubmit">Finish</button>
-            </div>
-          </div>
-      </div>
-  </form>
+    <form class="modAddListingModal modal multi-step" id="addListingModal">
+        <div class="modAddListingDialog modal-dialog">
+            <div class="modAddListingContent modal-content">
+                <div class="modAddListingDiv modAddListingDivOne modal-body step step-1">
+                	<div class="modAddListingPageOne">
+                        <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2>What Are You Selling?</h2>
+                                <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="Listing Title..." maxlength="50">
+                            </li>
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2>What Price Are You Selling This For?</h2>
+                                <input type="text" class="listprice" placeholder="Price..." maxlength="5">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnSingle modMultiBtnAddListing modMultiBtnAddListingSingle modMultiBtnAddListingOne">
+                        <button type="button" class="btn btn-default modalExit" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="addListingJump2()">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivTwo modal-body step step-2">
+                	<div class="modAddListingPageTwo">
+                        <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2>What Category Does This Item Belong To?</h2>
+                                <select class="selectpicker show-tick listCategory">
+                                    <option value="" disabled selected >Select Category</option>
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                            </li>
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2>What Type Of Item Is This?</h2>
+                                <select class="selectpicker show-tick listtype">
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingTwo">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="addListingJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="addListingJump3()">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivThree modal-body step step-3">
+                	<div class="modAddListingPageThree">
+                        
+                    </div>.
 
-  <script type="text/javascript">
-	  addListingJump1 = function() {
-	      $('#addListingModal').trigger('next.m.1');
-	  }
-	  addListingJump2 = function() {
-	      $('#addListingModal').trigger('next.m.2');
-	  }
-	  addListingJump3 = function() {
-	      $('#addListingModal').trigger('next.m.3');
-	  }
-	  addListingJump4 = function() {
-	      $('#addListingModal').trigger('next.m.4');
-	  }
-	  addListingJump5 = function() {
-	      $('#addListingModal').trigger('next.m.5');
-	  }
-	  addListingJump6 = function() {
-	      $('#addListingModal').trigger('next.m.6');
-	  }
-  </script>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingThree">
+                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="addListingJump2()">Back</button>
+                        <button type="button" class="btn btn-primary step step-3 modalNext" data-step="3" onclick="addListingJump4()">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivFour modal-body step step-4">
+                	<div class="modAddListingPageFour">
+                        
+                    </div>
+
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFour">
+                        <button type="button" class="btn btn-primary step step-4 modalBack" data-step="4" onclick="addListingJump3()">Back</button>
+                        <button type="button" class="btn btn-primary step step-4 modalNext" data-step="4" onclick="addListingJump5()">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivFive modal-body step step-5">
+                	<div class="modAddListingPageFive">
+                        
+                    </div>
+                	
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFive">
+                        <button type="button" class="btn btn-primary step step-5 modalBack" data-step="5" onclick="addListingJump4()">Back</button>
+                        <button type="button" class="btn btn-primary step step-5 modalNext" data-step="5" onclick="addListingJump6()">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivSix modal-body step step-6">
+                	<div class="modAddListingPageSix">
+                        
+                    </div>
+                	
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingSix">
+                        <button type="button" class="btn btn-primary step step-6 modalBack" data-step="6" onclick="addListingJump5()">Back</button>
+                        <button type="button" class="btn btn-primary modalSubmitBtn" id="addListingModalSubmit">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+      addListingJump1 = function() {
+          $('#addListingModal').trigger('next.m.1');
+      }
+      addListingJump2 = function() {
+          $('#addListingModal').trigger('next.m.2');
+      }
+      addListingJump3 = function() {
+          $('#addListingModal').trigger('next.m.3');
+      }
+      addListingJump4 = function() {
+          $('#addListingModal').trigger('next.m.4');
+      }
+      addListingJump5 = function() {
+          $('#addListingModal').trigger('next.m.5');
+      }
+      addListingJump6 = function() {
+          $('#addListingModal').trigger('next.m.6');
+      }
+
+       $('.selectpicker').selectpicker();
+    </script>
 </template>

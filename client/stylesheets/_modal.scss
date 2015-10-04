@@ -163,11 +163,11 @@
 
 /*~~ Button End ~~*/
 
-.modOfferRequestDiv > div {
+.modOfferRequestDiv > div, .modAddListingDiv > div {
 	padding: 10px 40px;
 }
 
-.modOfferRequestPageOne {
+.modOfferRequestPageOne, .modAddListingPageOne {
 	width: 100%;
 	margin-top: 50px;
 	vertical-align: top;
@@ -184,7 +184,7 @@
 	margin: 20px 0 !important;
 }
 
-.modOfferRequestPageOneUl > li:first-child input, .modOfferRequestPageTwo li:first-child input{
+.modOfferRequestPageOneUl > li:first-child input, .modOfferRequestPageTwo li:first-child input, .modAddListingPageOneUl > li input {
 	width: 600px !important;
 	padding: 12px 10px 12px 20px !important;
 	border-radius: 4px !important;
@@ -195,7 +195,7 @@
 	font-weight: 400 !important;
 } 
 
-.modOfferRequestPageOneUl > li:first-child input:focus {
+.modOfferRequestPageOneUl > li:first-child input:focus, .modAddListingPageOneUl > li input:focus {
 	border-color: $color-spacered !important;
 }
 
@@ -480,6 +480,52 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Add Listing Modal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~ Button ~~~~*/
+
+.headerDropDownAddListing {
+	float: left !important;
+	padding: 0 !important;
+	width: 91% !important;
+}
+
+.headerDropDownAddListing::before {
+	margin: -32px 8px 0 !important;
+}
+
+.modAddListingTrigger {
+	background-color: rgba(255, 255, 255, 0) !important;
+	color: #f8504b !important;
+	font-size: 0.9rem !important;
+	padding: 18px 50px 18px 0px !important;
+	width: 100% !important; 
+}
+
+.modAddListingTrigger i {
+	color: #f8504b !important;
+	margin-right: 10px !important;
+	margin-left: -25px !important;
+}
+
+/*~~ Button End ~~*/
+
+.modMultiBtnAddListingOne {
+	margin-top: 77px !important;
+}
+
+.modAddListingTitleInput {
+	color: #888 !important;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	END END END END END END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
 
 
 
