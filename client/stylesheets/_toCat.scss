@@ -548,8 +548,8 @@ div[data-momentum] div {
 }
 
 .uploadimg { 
-    height: 13em;
-    width: 22em;
+    height: 161px;
+    width: 161px;
 }
 
 html, body {
@@ -2676,8 +2676,13 @@ i:hover {
     display: inline-block !important; 
 }
 
-.addListInfo, .addListImg {
+.addListInfo {
     margin-top: 0;
+}
+
+.addListImg {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .addListInfo li, .addListDetails li {

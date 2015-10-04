@@ -167,7 +167,7 @@
 	padding: 10px 40px;
 }
 
-.modOfferRequestPageOne, .modAddListingPageOne {
+.modOfferRequestPageOne, .modAddListingPageOne, .modAddListingPageTwo {
 	width: 100%;
 	margin-top: 50px;
 	vertical-align: top;
@@ -177,7 +177,7 @@
 	margin: 0;
 }
 
-.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2 {
+.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingPageThree h2 {
 	color: $color-spaceblue !important;
 	font-size: 2rem !important;
 	font-weight: 400 !important;
@@ -513,12 +513,91 @@
 
 /*~~ Button End ~~*/
 
+.modAddListingPageThree {
+	margin-top: 50px;
+}
+
 .modMultiBtnAddListingOne {
 	margin-top: 77px !important;
 }
 
+.modMultiBtnAddListingTwo {
+	margin-top: 103px;
+}
+
+.modMultiBtnAddListingThree {
+	margin-top: 79px;
+}
+
 .modAddListingTitleInput {
 	color: #888 !important;
+}
+
+.styled-select {
+	width: 267px;
+	height: 34px;
+	overflow: hidden;
+	background: url(images/new_arrow.jpg) no-repeat right #ddd;
+	border: 1px solid #ccc;
+}
+
+.styled-select select {
+	outline: none;
+	background: transparent;
+	width: 268px;
+	padding: 0 10px 0 15px;
+	font-size: 16px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none !important;
+}
+
+.styled-select select:focus {
+	outline: none !important;
+	border: 1px solid #ccc !important;
+}
+
+.styled-select select option {
+	background-color: rgb(221, 221, 221) !important;
+	color: #404040 !important;
+	outline: none !important;
+	border: 1px solid #ccc !important;
+}
+
+.imageupload {
+	margin-left: 18px;
+	outline: none !important;
+}
+
+.imageupload::-webkit-file-upload-button {
+  visibility: hidden !important;
+  vertical-align: middle;
+}
+.imageupload::before {
+  content: 'Select Images';
+  display: inline-block;
+  background: #f8504b !important;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 14px;
+  vertical-align: middle !important;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 12pt;
+  color: #fff;
+  margin-right: 5px !important;
+}
+.imageupload:hover::before {
+  background: #f73c37 !important;
+}
+.imageupload:active::before {
+  background: #f73c37 !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

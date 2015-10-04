@@ -26,17 +26,22 @@
                         <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
                             <li class="modAddListingQNA modOfferRequestOfferWrap">
                                 <h2>What Category Does This Item Belong To?</h2>
-                                <select class="selectpicker show-tick listCategory">
-                                    <option value="" disabled selected >Select Category</option>
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                </select>
+                                <div class="styled-select">
+                                    <select class="listcategory">
+                                        <option value="" disabled selected >Select Category</option>
+                                        <option>Apparel</option>
+                                        <option>Electronics</option>
+                                        <option>Sneakers</option>
+                                    </select>
+                                </div>
                             </li>
                             <li class="modAddListingQNA modOfferRequestOfferWrap">
                                 <h2>What Type Of Item Is This?</h2>
-                                <select class="selectpicker show-tick listtype">
-                                </select>
+                                <div class="styled-select">
+                                    <select class="listtype">
+                                        <option value="" disabled selected >Select Type</option>
+                                    </select>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -47,9 +52,15 @@
                 </div>
                 <div class="modAddListingDiv modAddListingDivThree modal-body step step-3">
                 	<div class="modAddListingPageThree">
-                        
-                    </div>.
-
+                        <h2>Please Add Images Of The Item You Are Selling</h2>
+                        <input type="file" class="imageupload" multiple/>
+                        <ul class="addListImg">
+                            <li><img class="uploadimg" id="img1" src="img1" /></li>
+                            <li><img class="uploadimg" id="img2" src="img2" /></li>
+                            <li><img class="uploadimg" id="img3" src="img3" /></li>
+                            <li><img class="uploadimg" id="img4" src="img4" /></li>
+                        </ul>
+                    </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingThree">
                         <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="addListingJump2()">Back</button>
                         <button type="button" class="btn btn-primary step step-3 modalNext" data-step="3" onclick="addListingJump4()">Next</button>
@@ -107,7 +118,5 @@
       addListingJump6 = function() {
           $('#addListingModal').trigger('next.m.6');
       }
-
-       $('.selectpicker').selectpicker();
     </script>
 </template>
