@@ -1,66 +1,180 @@
 <!-- This modal can be accessed from Listing Item | Post Auth | If Pre Auth Prompt Login -->
 <template name="ModalOfferRequest">
-	<form class="modal multi-step" id="offerRequestModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title step-1" data-step="1">Step 1</h4>
-                <h4 class="modal-title step-2" data-step="2">Step 2</h4>
-            </div>
-            <div class="modal-body step step-1">
-            This is step 1.
-            </div>
-            <div class="modal-body step step-2">
-            This is step 2.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent()">Continue</button>
+  	<form class="modOfferRequest modal multi-step" id="offerRequestModal">
+        <div class="modOfferRequestDialog modal-dialog">
+            <div class="modOfferRequestContent modal-content">
+                <div class="modOfferRequestDiv modOfferRequestDivOne modal-body step step-1">
+                    <div class="modOfferRequestPageOne">
+                        <ul class="modOfferRequestPageOneUl">
+                            <li class="modOfferRequestOfferWrap">
+                                <h2>How Much Would You Like To Offer?</h2>
+                                <input type="text" class="listprice" id="mroffer" placeholder="Price..." maxlength="5">
+                            </li>
+                            <li class="modOfferRequestPaymentWrap">
+                                <h2>How Would You Like To Pay?</h2>
+                                <ul>
+                                    <li class="modOfferRequestPaymentCash">
+                                        <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="offerRequestPaymentRadio" checked/>
+                                        <label for="modOfferRequestPaymentCashRadio">Cash</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentPaypal">
+                                        <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="offerPayment" value="Paypal" class="offerRequestPaymentRadio"/>
+                                        <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnSingle modMultiBtnOfferRequest modMultiBtnOfferRequestSingle modMultiBtnOfferRequestOne">
+                        <button type="button" class="btn btn-default modalExit" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="offerRequestJump2()">Next</button>
+                    </div>
+                </div>
+                <div class="modOfferRequestDiv modOfferRequestDivTwo modal-body step step-2">
+                    <div class="modOfferRequestPageTwo">
+                        <li class="modOfferRequestDateWrap">
+                            <h2>When Would You Like To Meet Up?</h2>
+                            <ul>
+                                <!-- THIS NEEDS TO BE A CALENDAR -->
+                                <li><input type="text" id="datepicker" placeholder="REPLACE THIS WITH CALENDAR..."></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestTwo">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="offerRequestJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="offerRequestJump3()">Next</button>
+                    </div>
+                </div>
+                <div class="modOfferRequestDiv modOfferRequestDivThree modal-body step step-3">
+                    <div class="modOfferRequestPageThree">
+                        <h2>Where Would You Like To Meetup?</h2>
+                        <div class="offerRequestMapsApi">
+                            <!-- PAC INPUT SHOULD BE INSIDE MAPS-->
+                            <input id="pac-input" class="controls" type="text" placeholder="Choose Location">
+                            {{> googleMap name="offerImage" options=offerMapOptions }}
+                        </div>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestThree">
+                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="offerRequestJump2()">Back</button>
+                        <button type="button" class="btn btn-primary modalSubmitBtn" id="offerRequestModalSubmit"><input type="button" value="Send" class="offerRequestBtn"></button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</form>
-
-
-<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Launch demo modal </button>
- -->
-<!-- Modal -->
-<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="js-title-step"></h4>
-      </div>
-      <div class="modal-body">
-        <div class="row hide" data-step="1" data-title="This is the first step!">
-          <div class="well">As you can see, this is the first step!</div>
-        </div>
-        <div class="row hide" data-step="2" data-title="This is the second and last step!">
-          <div class="well">As you can see, this is the second and last step!</div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default js-btn-step pull-left" data-orientation="cancel" data-dismiss="modal"></button>
-        <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
-        <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<script type="text/javascript">
-sendEvent = function() {
-    $('#offerRequestModal').trigger('next.m.2');
-}
-</script>
+    </form>
+    <!-- Each Multi Step Modal Has It's Own Triggers -->
+    <script type="text/javascript">
+      offerRequestJump1 = function() {
+          $('#offerRequestModal').trigger('next.m.1');
+      }
+      offerRequestJump2 = function() {
+          $('#offerRequestModal').trigger('next.m.2');
+      }
+      offerRequestJump3 = function() {
+          $('#offerRequestModal').trigger('next.m.3');
+      }
+    </script>
 </template>
 
-<!-- <div class="modofferRequest modal" id="offerRequestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modofferRequestDialog modal-dialog" role="document">
-	    <div class="modofferRequestContent modal-content">
-	      <div class="modofferRequestBody modal-body">
+<!-- <template name="ModalOfferRequest">
+  <form class="modal multi-step" id="addListingModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body step step-1">
+              This is step 1.
+              <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="addListingJump2()">Continue</button>
+            </div>
+            <div class="modal-body step step-2">
+              This is step 2.
+              <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="addListingJump1()">Back</button>
+              <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="addListingJump3()">Continue</button>
+            </div>
+            <div class="modal-body step step-3">
+              This is step 3.
+              <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="addListingJump2()">Back</button>
+              <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="addListingJump4()">Continue</button>
+            </div>
+            <div class="modal-body step step-4">
+              This is step 3.
+              <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="addListingJump3()">Back</button>
+              <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="addListingJump5()">Continue</button>
+            </div>
+            <div class="modal-body step step-5">
+              This is step 3.
+              <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="addListingJump4()">Back</button>
+              <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="addListingJump6()">Continue</button>
+            </div>
+            <div class="modal-body step step-6">
+              This is step 3.
+              <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="addListingJump5()">Back</button>
+              <button type="button" class="btn btn-primary submitModal">Finish</button>
+            </div>
+          </div>
+      </div>
+  </form>
 
-	      </div>
-	    </div>
-	  </div>
-	</div> -->
+  <script type="text/javascript">
+    addListingJump1 = function() {
+        $('#addListingModal').trigger('next.m.1');
+    }
+    addListingJump2 = function() {
+        $('#addListingModal').trigger('next.m.2');
+    }
+    addListingJump3 = function() {
+        $('#addListingModal').trigger('next.m.3');
+    }
+    addListingJump4 = function() {
+        $('#addListingModal').trigger('next.m.4');
+    }
+    addListingJump5 = function() {
+        $('#addListingModal').trigger('next.m.5');
+    }
+    addListingJump6 = function() {
+        $('#addListingModal').trigger('next.m.6');
+    }
+  </script>
+</template> 
+
+<div class="modOfferRequestPageOne">
+                        <div class="modOfferRequestPageOneLeft">
+                            <ul class="modOfferRequestPageOneLeftUl">
+                                <li><a href="/listing/{{_id}}"><h1 class="offerRequestListingName">{{listing_title}}</h1></a></li>
+                                <li>Sold By: <a href="/profile/{{creator_id}}">{{username}}</a></li>
+                                <li>Original Price: <span class="money">$<span class="offerRequestPriceOriginal">{{price}}</span></span></li>
+                                <li>Offer <input type="text" class="listprice" id="mroffer" placeholder="$"></li>
+                                <li class="modOfferRequestPaymentWrap">
+                                    <ul>
+                                        <li class="modOfferRequestPaymentCash"><input type="radio" id="modOfferRequestPaymentCashRadio" name="Cash" value="Cash">Cash</li>
+                                        <li class="modOfferRequestPaymentPaypal"><input type="radio" id="modOfferRequestPaymentPaypalRadio" name="Paypal" value="Paypal">Paypal</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modOfferRequestPageOneRight">
+                            <div class="offerRequestDate">
+                                <ul class="modOfferRequestPageOneRightUl">
+                                    <li><h4>Date Of Meetup</h4></li>
+                                    <li><input type="text" id="datepicker"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnSingle modMultiBtnOfferRequest modMultiBtnOfferRequestSingle">
+                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="offerRequestJump2()">Next</button>
+                    </div>
+                </div>
+                <div class="modOfferRequestDiv modOfferRequestDivTwo modal-body step step-2">
+                    <div class="modOfferRequestPageTwo">
+                        <h2>Where Would You Like To Meetup?</h2>
+                        <div class="offerRequestMapsApi">
+                            <input id="pac-input" class="controls" type="text" placeholder="Choose Location">
+                            {{> googleMap name="offerImage" options=offerMapOptions }}
+                        </div>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="offerRequestJump1()">Back</button>
+                        <button type="button" class="btn btn-primary modalSubmitBtn" id="offerRequestModalSubmit"><input type="button" value="Send" class="offerRequestBtn"></button>
+                    </div>
+                </div>
+
+-->

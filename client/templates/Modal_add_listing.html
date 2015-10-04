@@ -1,1 +1,59 @@
 <!-- This modal can be accessed from Everywhere | Triggering this modal redirects you to home and opens this modal, once the listing is created you are redirected to the item page. -->
+<template name="ModalAddListing">
+  <form class="modal multi-step" id="addListingModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body step step-1">
+            	This is step 1.
+            	<button type="button" class="btn btn-primary step step-1" data-step="1" onclick="addListingJump2()">Continue</button>
+            </div>
+            <div class="modal-body step step-2">
+            	This is step 2.
+            	<button type="button" class="btn btn-primary step step-2" data-step="2" onclick="addListingJump1()">Back</button>
+            	<button type="button" class="btn btn-primary step step-2" data-step="2" onclick="addListingJump3()">Continue</button>
+            </div>
+            <div class="modal-body step step-3">
+            	This is step 3.
+            	<button type="button" class="btn btn-primary step step-3" data-step="3" onclick="addListingJump2()">Back</button>
+            	<button type="button" class="btn btn-primary step step-3" data-step="3" onclick="addListingJump4()">Continue</button>
+            </div>
+            <div class="modal-body step step-4">
+            	This is step 3.
+            	<button type="button" class="btn btn-primary step step-4" data-step="4" onclick="addListingJump3()">Back</button>
+            	<button type="button" class="btn btn-primary step step-4" data-step="4" onclick="addListingJump5()">Continue</button>
+            </div>
+            <div class="modal-body step step-5">
+            	This is step 3.
+            	<button type="button" class="btn btn-primary step step-5" data-step="5" onclick="addListingJump4()">Back</button>
+            	<button type="button" class="btn btn-primary step step-5" data-step="5" onclick="addListingJump6()">Continue</button>
+            </div>
+            <div class="modal-body step step-6">
+            	This is step 3.
+            	<button type="button" class="btn btn-primary step step-6" data-step="6" onclick="addListingJump5()">Back</button>
+            	<button type="button" class="btn btn-primary submitBtnModal" id="addListingModalSubmit">Finish</button>
+            </div>
+          </div>
+      </div>
+  </form>
+
+  <script type="text/javascript">
+	  addListingJump1 = function() {
+	      $('#addListingModal').trigger('next.m.1');
+	  }
+	  addListingJump2 = function() {
+	      $('#addListingModal').trigger('next.m.2');
+	  }
+	  addListingJump3 = function() {
+	      $('#addListingModal').trigger('next.m.3');
+	  }
+	  addListingJump4 = function() {
+	      $('#addListingModal').trigger('next.m.4');
+	  }
+	  addListingJump5 = function() {
+	      $('#addListingModal').trigger('next.m.5');
+	  }
+	  addListingJump6 = function() {
+	      $('#addListingModal').trigger('next.m.6');
+	  }
+  </script>
+</template>

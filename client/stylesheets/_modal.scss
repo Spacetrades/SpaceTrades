@@ -14,7 +14,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .modal {
-	margin-top: 8%;
+	margin-top: 4%;
 }
 
 .modal-dialog {
@@ -23,6 +23,73 @@
 
 .modal-body {
 	min-height: 500px;
+}
+
+.modMultiBtn {
+	vertical-align: bottom !important;
+	float: right !important;
+}
+
+.modal-content {
+	border: 8px solid #f8504b !important;
+	border-radius: 15px !important;
+	background-color: #f8504b !important;
+}
+
+.modal-content > div {
+	background-color: #fff !important;
+	border-radius: 11px;
+}
+
+.modMultiBtnSingle {
+
+}
+
+.modMultiBtnDouble {
+
+}
+
+.modMultiBtn {
+	padding: 10px !important;
+}
+
+.modMultiBtn button {
+	padding: 12px 50px;
+	border-radius: 4px;
+}
+
+.modalNext {
+	background-color: #04b2ec !important; 
+}
+
+.modalNext:hover {
+	background-color: #06C1FF !important;
+} 
+
+.modalBack, .modalExit  {
+	background-color: #999 !important;
+	margin-right: 10px;
+}
+
+.modalBack:hover, .modalExit:hover  {
+	background-color: #ababab !important; 
+}
+
+.modalSubmitBtn {
+	padding: 0 !important;
+	border-radius: 0 !important;
+}
+
+.modalSubmitBtn input {
+	padding: 11px 50px !important;
+	color: #fff !important;
+	background-color: #04b2ec;
+	border: none;
+	border-radius: 4px !important;
+}
+
+.modalSubmitBtn input:hover {
+	background-color: #06c1ff;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,6 +162,136 @@
 }
 
 /*~~ Button End ~~*/
+
+.modOfferRequestDiv > div {
+	padding: 10px 40px;
+}
+
+.modOfferRequestPageOne {
+	width: 100%;
+	margin-top: 50px;
+	vertical-align: top;
+}
+
+.modOfferRequestPageOneUl {
+	margin: 0;
+}
+
+.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2 {
+	color: $color-spaceblue !important;
+	font-size: 2rem !important;
+	font-weight: 400 !important;
+	margin: 20px 0 !important;
+}
+
+.modOfferRequestPageOneUl > li:first-child input, .modOfferRequestPageTwo li:first-child input{
+	width: 600px !important;
+	padding: 12px 10px 12px 20px !important;
+	border-radius: 4px !important;
+	text-align: left !important;
+	outline: none !important;
+	border: 2px solid #d3d3d3 !important;
+	color: $color-money !important;
+	font-weight: 400 !important;
+} 
+
+.modOfferRequestPageOneUl > li:first-child input:focus {
+	border-color: $color-spacered !important;
+}
+
+.modOfferRequestPageOneUl > li:nth-child(2) {
+	margin-top: 60px;
+}
+
+/* Radio Buttons */
+.modOfferRequestPaymentWrap ul li {
+	clear: both;
+	color: #999 !important;
+	display: inline-block;
+}
+
+.modOfferRequestPaymentWrap ul li:nth-child(2) {
+	margin-left: 15px;
+}
+
+.modOfferRequestPaymentWrap ul li label {
+	width: 200px;
+  	border-radius: 3px;
+  	border: 1px solid #D1D3D4;
+  	font-size: 1.1rem !important;
+}
+
+/* hide input */
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:empty {
+	margin-left: -2000px;
+}
+
+/* style label */
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #D1D3D4;
+	border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #C2C2C2;
+}
+
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #9CE2AE;
+	background-color: #4DCB6D;
+}
+
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:checked ~ label {
+	color: #777;
+}
+
+/* radio focus */
+.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+
+/* Footer Button */
+.modMultiBtnOfferRequestOne {
+	margin-top: 80px;
+}
+
+.modOfferRequestDateWrap {
+	list-style: none !important;
+}
+
+.modOfferRequestPageTwo li:first-child input {
+	color: #d3d3d3 !important;
+}
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
@@ -214,7 +411,7 @@
 #profileReceivedButtons li a {
 	color: #fff !important;
 	text-decoration: none;
-	padding: 15px 60px;
+	padding: 15px 52px;
 }
 
 #profileReceivedAccept {
@@ -264,8 +461,9 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	Page Name Modal
+	Edit Listing Modal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /*~~~~ Button ~~~~*/
@@ -282,10 +480,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
-
-
 
 
 
