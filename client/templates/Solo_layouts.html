@@ -25,6 +25,7 @@
     {{> homeheaderpost}}
 <!--     {{offerShow}} -->
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
     {{else}}
     {{> homeheaderpre}}
@@ -40,6 +41,7 @@
     {{messageShow}}
     {{> headerpost}}
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
 {{/if}}
 </template>
@@ -49,6 +51,7 @@
     {{#if currentUser}}
     {{> headersearchpost}}
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
     {{else}}
     {{> headersearchpre}}
@@ -62,6 +65,7 @@
     {{> headerpost}}
     {{> HelpCenterNav}}
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
     {{> footer}}
     {{else}}
@@ -78,6 +82,7 @@
     {{> headerpost}}
     {{> ProfileCenterNav}}
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
@@ -93,6 +98,7 @@
 <!--     {{offerShow}} -->
     {{userShow}}
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
@@ -107,5 +113,6 @@
     {{> loginButtons}}
     {{listingShow}}
     {{> ModalNotifications}}
+    {{> ModalAddListing}}
     {{> yield}}
 </template>

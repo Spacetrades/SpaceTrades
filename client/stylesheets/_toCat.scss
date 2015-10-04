@@ -333,10 +333,6 @@ code {
     width: 10em;
 }
 
-#mroffer {
-    height: 2em;
-}
-
 .mrImg {
     display: inline-block;
     float: left;
@@ -489,8 +485,8 @@ textarea {
 
 .listdescription {
     resize: none;
-    width: 37%;
-    height: 5em;
+    width: 100%;
+    height: 250px;
 }
 
 .add {
@@ -552,8 +548,8 @@ div[data-momentum] div {
 }
 
 .uploadimg { 
-    height: 13em;
-    width: 22em;
+    height: 161px;
+    width: 161px;
 }
 
 html, body {
@@ -2680,8 +2676,13 @@ i:hover {
     display: inline-block !important; 
 }
 
-.addListInfo, .addListImg {
+.addListInfo {
     margin-top: 0;
+}
+
+.addListImg {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .addListInfo li, .addListDetails li {
