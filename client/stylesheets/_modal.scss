@@ -530,15 +530,15 @@
 }
 
 .modMultiBtnAddListingFour {
-	margin-top: 12px;
+	margin-top: 7px;
 }
 
 .modMultiBtnAddListingFive {
 	margin-top: 83px;
 }
 
-.modMultiBtnAddListingPageSix {
-	margin-top: 33px;
+.modMultiBtnAddListingSix {
+	margin-top: 16px !important;
 }
 
 .modAddListingTitleInput {
@@ -652,6 +652,54 @@
 .modalSubmitAdd input {
 	margin-left: 0 !important;
 	font-size: 1rem !important; 
+}
+
+/* Hide Colors */
+.sp-palette-row-0 span:nth-child(2), .sp-palette-row-0 span:nth-child(4), .sp-palette-row-0 span:nth-child(5), .sp-palette-row-1 > span:first-child, .sp-palette-row-1 span:nth-child(7) {
+	display: none !important;
+}
+
+.froala-view {
+	height:180px !important;
+}
+
+.sp-palette, .sp-thumb-dark, .sp-thumb-dark.sp-thumb-active, .sp-thumb-inner, .sp-thumb-active {
+	background-image: none !important;
+}
+
+.sp-palette > div {
+	display: inline-block;
+}
+
+.sp-thumb-el {
+	width: 22px !important;
+	height:22px !important
+}
+
+.sp-container {
+	border: 1px solid #404040 !important;
+	top: 521.797px !important;
+}
+
+.sp-replacer {
+	border: 1px solid #404040 !important;
+}
+
+div[class="sp-replacer sp-light full-spectrum sp-active"] {
+	border-bottom: none !important;
+}
+
+.sp-dd {
+	display: none;
+}
+
+.sp-preview {
+	margin-right: 0 !important;
+	border: 1px solid #999 !important;
+}
+
+.sp-thumb-el.sp-thumb-active {
+	border-color: #999 !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
