@@ -2,12 +2,148 @@
 <template name="ModalEditListing">
 	<!-- Modal -->
 	<div class="modEditListing modal" id="editListingModal">
-	  <div class="modEditListingDialog modal-dialog" role="document">
-	    <div class="modEditListingContent modal-content">
-	      <div class="modEditListingBody modal-body">
-	      	  
-	      </div>
-	    </div>
-	  </div>
+		<div class="modEditListingDialog modal-dialog" role="document">
+			<div class="modEditListingContent modal-content">
+				<div class="modEditListingBody modal-body">
+					<div class="modEditListingDiv">
+						<h2>Edit Listing</h2>
+						<ul>
+							<li>Title <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="{{listingtitle}}" maxlength="50"></li>
+							<li>Price <input type="text" class="listprice" placeholder="{{price}}" maxlength="5"></li>
+							<li>Category
+								<div class="styled-select">
+                                    <select class="listcategory">
+                                        <option value="" disabled selected >Select Category</option>
+                                        <option value="Apparel">Apparel</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Shoes">Shoes</option>
+                                    </select>
+                                </div>
+							</li>
+							<li>Type
+								<div class="styled-select">
+                                    <select class="listtype">
+                                        <option value="" disabled selected >Select Type</option>
+                                    </select>
+                                </div>
+							</li>
+							<li>Images
+								<input type="file" class="imageupload" multiple/>
+		                        <ul class="addListImg">
+		                            <li><img class="uploadimg" id="img1" src="img1" /></li>
+		                            <li><img class="uploadimg" id="img2" src="img2" /></li>
+		                            <li><img class="uploadimg" id="img3" src="img3" /></li>
+		                            <li><img class="uploadimg" id="img4" src="img4" /></li>
+		                        </ul>
+							</li>
+							<li><label>Quantity</label>
+                                <div class="styled-select">
+                                    <select class="listquantity">
+                                        <option value="1">1</option>option>
+                                        <option value="2">2</option>option>
+                                        <option value="3">3</option>option>
+                                        <option value="4">4</option>option>
+                                        <option value="5">5</option>option>
+                                        <option value="6">6</option>option>
+                                        <option value="7">7</option>option>
+                                        <option value="8">8</option>option>
+                                        <option value="9">9</option>option>
+                                        <option value="10">10 +</option>option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li><label>Brand</label>
+                                <div class="styled-select">
+                                    <select class="condition">
+                                        <option value="New">New</option>
+                                        <option value="Like New">Like New</option>
+                                        <option value="Used">Used</option>
+                                        <option value="Needs Repair">Needs Repair</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li><label>Condition</label>
+                                <div class="styled-select">
+                                    <select class="condition">
+                                        <option value="New">New</option>
+                                        <option value="Like New">Like New</option>
+                                        <option value="Used">Used</option>
+                                        <option value="Needs Repair">Needs Repair</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="listsizeli"><label>Size</label>
+                                <div class="styled-select">
+                                    <select class="listsize">
+                                        <option value="" disabled selected>Select Size</option>option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="hidden listcapacity"><label>Capacity</label>
+                                <div class="styled-select">
+                                    <select class="listspace">
+                                        <option value="" disabled selected>Select Size</option>option>
+                                        <option value="4 GB">4 GB</option>
+                                        <option value="8 GB">8 GB</option>
+                                        <option value="16 GB">16 GB</option>
+                                        <option value="32 GB">32 GB</option>
+                                        <option value="64 GB">64 GB</option>
+                                        <option value="128 GB">128 GB</option>
+                                        <option value="250 GB">250 GB</option>
+                                        <option value="500 GB">500 GB</option>
+                                        <option value="1 TB">1 TB</option>
+                                        <option value="1 TB +">1 TB +</option>
+                                    </select> 
+                                </div>
+                            </li>
+                            <li><label>Color</label>
+                                <input type="text" id="colorpicker"> 
+                            </li>
+                            <li>Trade Offers
+                            	<ul>
+                                    <li class="modOfferRequestPaymentPaypal">
+                                        <input type="radio" id="modAddListingTradeOffersNo" name="addListingTradeOffers" value="False" class="offerRequestPaymentRadio" checked/>
+                                        <label for="modAddListingTradeOffersNo">No</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentCash">
+                                        <input type="radio" id="modAddListingTradeOffersYes" name="addListingTradeOffers" value="True" class="offerRequestPaymentRadio"/>
+                                        <label for="modAddListingTradeOffersYes">Yes</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Payment Method
+                            	<ul>
+                                    <li class="modOfferRequestPaymentCash">
+                                        <input type="radio" id="modAddListingCashRadio" name="addListingPayment" value="Cash" class="offerRequestPaymentRadio" checked/>
+                                        <label for="modAddListingCashRadio">Cash</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentPaypal">
+                                        <input type="radio" id="modAddListingPaypalRadio" name="addListingPayment" value="Paypal" class="offerRequestPaymentRadio"/>
+                                        <label for="modAddListingPaypalRadio">Paypal</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentPaypal">
+                                        <input type="radio" id="modAddListingBothRadio" name="addListingPayment" value="Either" class="offerRequestPaymentRadio"/>
+                                        <label for="modAddListingBothRadio">Either</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Description
+                        		<textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
