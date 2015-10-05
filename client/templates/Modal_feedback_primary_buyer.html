@@ -1,0 +1,47 @@
+<template name="ModalFeedbackPrimaryBuyer">
+    <form class="modFeedback modal multi-step" id="feedbackBuyerPrimaryModal">
+        <div class="modFeedbackDialog modal-dialog">
+            <div class="modFeedbackContent modal-content">
+                <div class="modFeedbackDiv modFeedbackDivOne modal-body step step-1">
+                    <div class="modFeedbackPageOne">
+                        
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackOne">
+                        <button type="button" class="btn btn-default modalExit" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="feedbackBuyerJump2()">Next</button>
+                    </div>
+                </div>
+                <div class="modFeedbackDiv modFeedbackDivTwo modal-body step step-2">
+                    <div class="modFeedbackPageTwo">
+                        
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackTwo">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="feedbackBuyerJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="feedbackBuyerJump3()">Next</button>
+                    </div>
+                </div>
+                <div class="modFeedbackDiv modFeedbackDivThree modal-body step step-3">
+                    <div class="modFeedbackPageThree">
+                        
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackThree">
+                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="feedbackBuyerJump2()">Back</button>
+                        <button type="button" class="btn btn-primary modalSubmitBtn">Send</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </form>
+    <!-- Each Multi Step Modal Has It's Own Triggers -->
+    <script type="text/javascript">
+      feedbackBuyerJump1 = function() {
+          $('#feedbackBuyerModal').trigger('next.m.1');
+      }
+      feedbackBuyerJump2 = function() {
+          $('#feedbackBuyerModal').trigger('next.m.2');
+      }
+      feedbackBuyerJump3 = function() {
+          $('#feedbackBuyerModal').trigger('next.m.3');
+      }
+    </script>  
+</template> 

@@ -163,7 +163,7 @@
 
 /*~~ Button End ~~*/
 
-.modOfferRequestDiv > div, .modAddListingDiv > div {
+.modOfferRequestDiv > div, .modAddListingDiv > div, .modFeedbackInitialDiv > div {
 	padding: 10px 40px;
 }
 
@@ -177,7 +177,7 @@
 	margin: 0;
 }
 
-.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingDiv h2 {
+.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingDiv h2, .modFeedbackInitialDiv h2 {
 	color: $color-spaceblue !important;
 	font-size: 2rem !important;
 	font-weight: 400 !important;
@@ -438,7 +438,7 @@
 
 /*~~ Button End ~~*/
 
-#profileHistoryFeedback {
+#profileHistoryFeedback button {
 	width: 100% !important;
     background-color: #f8504b !important;
     padding: 15px 0 !important;
@@ -448,14 +448,8 @@
 	text-decoration: none !important;
 }
 
-#profileHistoryFeedback:hover {
+#profileHistoryFeedback button:hover {
 	background-color: #f73c37 !important;
-}
-
-#profileHistoryFeedback a {
-	color: #fff !important;
-	text-decoration: none !important;
-	padding: 15px 140px !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -705,6 +699,127 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Feedback Modal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~ Button ~~~~*/
+
+.modFeedbackTrigger {
+
+}
+
+/*~~ Button End ~~*/
+
+/* Initial */
+
+.modFeedbackInitialPageOne, .modFeedbackInitialPageThree {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.modFeedbackInitialPageOne h2, .modFeedbackInitialPageThree h2 {
+	font-size: 2.4rem !important;
+}
+
+.modFeedbackInitialPageOneUl li, .modFeedbackInitialPageThreeUl li {
+	display: inline-block;
+}
+
+.modFeedbackInitialPageOneUl li button, .modFeedbackInitialPageThreeUl li button {
+	background-color: #f8504b !important;
+	color: #fff !important;
+	padding:20px 40px !important;
+	margin: 20px 10px 0px 10px;
+	font-size: 1.1rem;
+	border-radius: 4px;
+}
+
+.modFeedbackInitialPageOneUl li button:hover, .modFeedbackInitialPageThreeUl li button:hover {
+	background-color: #f73c37 !important;
+}
+
+.modFeedbackInitialPageOneItem {
+	margin-top: 80px;
+}
+
+.modFeedbackInitialPageOneItem > li {
+	display:inline-block;
+}
+
+.modFeedbackInitialPageOneItemLeft {
+	width: 40% !important;
+	text-align: right !important;
+	margin-right: 10px !important;
+}
+
+.modFeedbackInitialPageOneItemLeft ul li img {
+	width: 180px !important;
+	height: 180px !important;
+}
+
+.modFeedbackInitialPageOneItemRight {
+	width: 55% !important;
+	text-align: left !important;
+	vertical-align: top !important;
+}
+
+.modFeedbackInitialPageOneItemRight ul li {
+	margin: 0px 0px 10px 0px;
+}
+
+.modFeedbackInitialPageOneItemRight ul li:first-child {
+	color: #00bfff;
+	font-size: 1.4rem;
+	margin-bottom:2px!important;
+}
+
+.modFeedbackInitialPageOneItemRight ul li:nth-child(2) {
+	color: #6c54b3 !important;
+	font-size: 0.8rem;
+}
+
+.modFeedbackInitialPageOneItemRight ul li:nth-child(2) a {
+	color: #6c54b3 !important;
+}
+
+.modFeedbackInitialPageOneItemRight ul li:nth-child(2) a:hover {
+	text-decoration: underline !important;
+	color: #5c54b3 !important;
+}
+
+.modFeedbackInitialPageSix ul li, .modFeedbackInitialPageTwo ul li {
+	list-style-type:  decimal;
+	margin-bottom: 10px;
+}
+
+
+/* Initial END */
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	END END END END END END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*~~ Structure This Document With The Following~~*/

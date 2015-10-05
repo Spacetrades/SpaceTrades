@@ -1,0 +1,130 @@
+<template name="ModalFeedbackInitialBuyer">
+    <form class="modFeedbackInitial modal multi-step" id="feedbackBuyerInitialModal">
+        <div class="modFeedbackInitialDialog modal-dialog">
+            <div class="modFeedbackInitialContent modal-content">
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialOne modal-body step step-1">
+                    <div class="modFeedbackInitialPageOne">
+                        <h2>Did This Meetup Happen?</h2>
+                        <ul class="modFeedbackInitialPageOneUl">
+                            <li><button type="button" class="btn btn-primary step step-1" data-step="1" onclick="feedbackInitialJump3()">Yes</button></li>
+                            <li><button type="button" class="btn btn-primary step step-1" data-step="1" onclick="feedbackInitialJump2()">No</button></li>
+                        </ul>
+                        <ul class="modFeedbackInitialPageOneItem">
+                            <li class="modFeedbackInitialPageOneItemLeft">
+                                <ul>
+                                    <li><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg"></li>
+                                </ul>
+                            </li>
+                            <li class="modFeedbackInitialPageOneItemRight">
+                                <ul>
+                                    <li><b>Nike Air Max Retro</b></li>
+                                    <li>You Bought From <a href="#">Yusuf Bagha</a></li>
+                                    <li><b>Final Price:</b>    <span>$250</span></li>
+                                    <li><b>Payment:</b>        <span>Cash</span></li>
+                                    <li><b>Date Of Meetup:</b> <span>September 14, 2015</span></li>
+                                    <li><b>Location:</b>       <span>555 5th Avenue New York, NY 10038</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialTwo modal-body step step-2">
+                    <div class="modFeedbackInitialPageTwo">
+                        <h2>Are You Sure You Want To Continue?</h2>
+                        <ul>
+                            <li>Only go through with this if the meetup did not happen</li>
+                            <li>Ex. The person flaked, You couldn't find each other, etc.</li>
+                            <li>There was no meetup</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup did not happen</li>
+                            <li>Ex. The person flaked, You couldn't find each other, etc.</li>
+                            <li>There was no meetup</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup did not happen</li>
+                            <li>Ex. The person flaked, You couldn't find each other, etc.</li>
+                            <li>There was no meetup</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnFeedbackInitialSix">
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="feedbackInitialJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="feedbackInitialJump7()">Continue</button>
+                    </div>
+                </div>
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialThree modal-body step step-3">
+                    <div class="modFeedbackInitialPageThree">
+                        <h2>How Was It?</h2>
+                        <ul class="modFeedbackInitialPageThreeUl">
+                            <li><button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerPrimaryModal">Successful</button></li>
+                            <li><button type="button" class="btn btn-primary step step-3" data-step="3" onclick="feedbackInitialJump6()">Unsuccessful</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- STEP 4 IS MISSING BECAUSE IT REFUSES TO WORK | KEEP AS IS -->
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialFive modal-body step step-5">
+                    <div class="modFeedbackInitialPageFive">
+                        <h2>We're Sorry To Hear That</h2>
+                        <ul class="modFeedbackInitialPageFiveUl">
+                            <li><button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerUnsuccessfulModal">Feedback</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialSix modal-body step step-6">
+                    <div class="modFeedbackInitialPageSix">
+                        <h2>Are You Sure You Want To Continue?</h2>
+                        <ul>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnFeedbackInitialSix">
+                        <button type="button" class="btn btn-primary step step-6 modalBack" data-step="6" onclick="feedbackInitialJump3()">Back</button>
+                        <button type="button" class="btn btn-primary step step-6 modalNext" data-step="6" onclick="feedbackInitialJump5()">Continue</button>
+                    </div>
+                </div>
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialSeven modal-body step step-7">
+                    <div class="modFeedbackInitialPageSeven">
+                        <h2>Better Luck Next Time</h2>
+                        <ul class="modFeedbackInitialPageSevenUl">
+                            <li><button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerNeverModal">Continue</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Each Multi Step Modal Has It's Own Triggers -->
+    <script type="text/javascript">
+      feedbackInitialJump1 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.1');
+      }
+      feedbackInitialJump2 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.2');
+      }
+      feedbackInitialJump3 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.3');
+      }
+      feedbackInitialJump4 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.4');
+      }
+      feedbackInitialJump5 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.5'); 
+      }
+      feedbackInitialJump6 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.6');
+      }
+      feedbackInitialJump7 = function() {
+          $('#feedbackBuyerInitialModal').trigger('next.m.7');
+      }
+    </script>  
+</template>
