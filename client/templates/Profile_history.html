@@ -20,7 +20,7 @@
 			        <li class="profileCardItem">Size: 12{{size}}</li>
 			        <li class="profileCardView" id="profileHistoryView">
 			        <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#historyDetailsModal">
-		                  View Offer
+		                  View Meetup
 		                </button>
 		            </li>
 			    </ul>
@@ -29,4 +29,13 @@
 		</ul>    
     </div>
     {{> ModalHistoryDetails}}
+
+    {{> ModalFeedbackPrimaryBuyer}}
+    {{> ModalFeedbackPrimarySeller}}
+    {{> ModalFeedbackInitialBuyer}}
+    {{> ModalFeedbackInitialSeller}}
+    {{> ModalFeedbackNeverBuyer}}
+    {{> ModalFeedbackNeverSeller}}
+    {{> ModalFeedbackUnsuccessfulBuyer}}
+    {{> ModalFeedbackUnsuccessfulSeller}}
 </template> 
