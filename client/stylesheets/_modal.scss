@@ -312,6 +312,7 @@
     border: none !important;
     border-radius: 4px !important;
     margin-bottom: 4px;
+    width: 100% !important;
 }
 
 /*~~ Button End ~~*/
@@ -438,7 +439,7 @@
 
 /*~~ Button End ~~*/
 
-#profileHistoryFeedback button {
+#profileHistoryInitialFeedback button {
 	width: 100% !important;
     background-color: #f8504b !important;
     padding: 15px 0 !important;
@@ -448,8 +449,13 @@
 	text-decoration: none !important;
 }
 
-#profileHistoryFeedback button:hover {
+#profileHistoryInitialFeedback button:hover {
 	background-color: #f73c37 !important;
+}
+
+#profileHistoryView {
+	margin-bottom: 8px;
+	margin-top: 23px !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -794,8 +800,22 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	margin-bottom: 10px;
 }
 
-
 /* Initial END */
+
+/* PRIMARY */
+
+.managerOfferUnsave {
+	margin-right: 15px !important;
+	margin-top: 23px !important;
+	margin-bottom: 8px !important;
+}
+
+.managerOfferUnsave a {
+	width: 100% !important;
+}
+
+
+/* PRIMARY END */
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
