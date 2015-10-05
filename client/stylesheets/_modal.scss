@@ -814,6 +814,35 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	width: 100% !important;
 }
 
+.modFeedbackPageOne h4 {
+	font-size: 2rem !important;
+    color: #00bfff !important;
+    font-weight: 400 !important;
+    margin-bottom: 10px !important;
+}
+
+.modFeedbackPageOne {
+	margin-top: 50px !important;
+	padding: 10px 40px !important;
+}
+
+
+.modFeedbackPageOne ul > li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.modFeedbackPageOne ul > li:last-child {
+	margin-left: 50px; 
+}
+
+.modFeedbackPageOne input[type="radio"] + label, .modFeedbackPageTwo input[type="radio"] + label {
+	font-size: 20px !important;
+}
+
+.modMultiBtnFeedbackOne {
+	margin-top: 75px !important;
+}
 
 /* PRIMARY END */
 
