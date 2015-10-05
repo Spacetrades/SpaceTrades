@@ -18,15 +18,15 @@
 
 
   // STRICTLY - Production
-  // ServiceConfiguration.configurations.remove({
-  //   service: "facebook"
-  // });
+  ServiceConfiguration.configurations.remove({
+    service: "facebook"
+  });
 
-  // ServiceConfiguration.configurations.insert({
-  //   service: 'facebook',
-  //   appId: Meteor.settings.FacebookId,
-  //   secret: Meteor.settings.FacebookSecret
-  // });
+  ServiceConfiguration.configurations.insert({
+    service: 'facebook',
+    appId: Meteor.settings.FacebookId,
+    secret: Meteor.settings.FacebookSecret
+  });
 
 
   // STRICTLY - Dev
