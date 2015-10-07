@@ -1,17 +1,20 @@
 <!-- This modal can be accessed from Listing Item | Post Auth | If Pre Auth Prompt Login -->
 <template name="ModalOfferRequest">
-  	<form class="modOfferRequest modal multi-step" id="offerRequestModal">
-        <div class="modOfferRequestDialog modal-dialog">
-            <div class="modOfferRequestContent modal-content">
-                <div class="modOfferRequestDiv modOfferRequestDivOne modal-body step step-1">
-                    <div class="modOfferRequestPageOne">
-                        <ul class="modOfferRequestPageOneUl">
-                            <!-- INFORMATION ABOUT ITEM NOT NEEDED SINCE OFFER IS TRIGGERED FROM ITEM PAGE -->
-                            <li class="modOfferRequestOfferWrap">
-                                <h2>How Much Would You Like To Offer?</h2>
-                                <input type="text" class="listprice" id="mroffer" placeholder="Price..." maxlength="5">
-                            </li>
-                            <li class="modOfferRequestPaymentWrap">
+ <form class="modOfferRequest modal multi-step" id="offerRequestModal">
+    <div class="modOfferRequestDialog modal-dialog">
+        <div class="modOfferRequestContent modal-content">
+            <div class="modOfferRequestDiv modOfferRequestDivOne modal-body step step-1">
+                <div class="modOfferRequestPageOne">
+                    <ul class="modOfferRequestPageOneUl">
+                        <!-- INFORMATION ABOUT ITEM NOT NEEDED SINCE OFFER IS TRIGGERED FROM ITEM PAGE -->
+                        <li class="modOfferRequestOfferWrap">
+                            <h2>How Much Would You Like To Offer?</h2>
+                            <input type="text" class="listprice" id="mroffer" placeholder="Price..." maxlength="5">
+                        </li>
+
+                     <!--        
+                    Reason: If cash then only first field needs completion, if paypal, no completion on first field required. We need to discuss how we are going to use paypal before this comment is removed
+                     <li class="modOfferRequestPaymentWrap">
                                 <h2>How Would You Like To Pay?</h2>
                                 <ul>
                                     <li class="modOfferRequestPaymentCash">
@@ -23,7 +26,7 @@
                                         <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnSingle modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestOne">
@@ -36,8 +39,7 @@
                         <li class="modOfferRequestDateWrap">
                             <h2>When Would You Like To Meet Up?</h2>
                             <ul>
-                                <!-- THIS NEEDS TO BE A CALENDAR -->
-                                <li><input type="text" id="datepicker" placeholder="REPLACE THIS WITH CALENDAR..."></li>
+                                <li><input type="text" id="datepicker"></li>
                             </ul>
                         </li>
                     </div>
@@ -74,6 +76,6 @@
       offerRequestJump3 = function() {
           $('#offerRequestModal').trigger('next.m.3');
       }
-    </script>
+  </script>
 </template>
 

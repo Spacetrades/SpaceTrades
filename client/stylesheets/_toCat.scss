@@ -298,6 +298,14 @@ code {
     text-underline: underline;
 }
 
+.profileBtn {
+    background-color: $color-venetian-red !important;
+    border-color: $color-venetian-red !important;
+    &:hover {
+
+    }
+}
+
 .profile-link:hover {
     color: #0890F2 !important;
     text-decoration: underline;
@@ -5275,6 +5283,10 @@ On click the images will be displayed at normal size to complete the effect
 	-webkit-appearance: none !important;
     -moz-appearance: none !important;
     appearance: none !important;
+}
+
+.headerRadius:hover {
+    background-color: $color-spacegrey;
 }
 
 .headerSearchRadiusLogo {
