@@ -874,6 +874,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     border-radius: 0.3em;
 }
 
+.chatButton {
+
+
+}
+
+.btn,
+.btn-default {
+    font-family: $font_stack-text !important;
+}
+
 .homesearchbtn:hover {
     background-color: #f73c37;
 }
@@ -3235,6 +3245,15 @@ On click the images will be displayed at normal size to complete the effect
     color: #396;
 }
 
+.listingItemBrand,
+.listingItemColor,
+.listingItemSize,
+.listingItemCondition,
+.listingItemQuantity,
+.listingItemTrade {
+    font-family: $font_stack-header !important;
+}
+
 .listingItemButtons {
     float: right;
     font-family: 'Roboto';
@@ -3621,11 +3640,6 @@ On click the images will be displayed at normal size to complete the effect
 // .profileUserFeedback ul li p, .profileUserDesc p {
 //     margin: 0;
 // }
-
-.optionsProClick, .profileChatBtn {
-    display: inline-block;
-    margin: 40px 0;
-}
 
 .profileUserFeedbackUl {
     margin: 0;
