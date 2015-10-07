@@ -4,27 +4,6 @@
             {{#each offer}}
             	{{> ManagerCardOffer}}
             {{/each}}
-
-
-            <!-- EXAMPLE Delete Later-->
-            <li class="profileCardLi">
-		        <p class="managerOfferStatus">Pending{{status}} <!-- Pending, Confirmed and Declined--></p>
-		        <ul class="profileCardImage">
-		            <a href="/listing/{{_id}}"><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg" class="profileCardImg"></a>
-		        </ul>
-		        <ul class="profileCardInfo">
-		            <li><a href="/listing/{{_id}}"><h4>Nike Example Max Retro{{listing_title}}</h4></a></li>
-		            <li class="money profileCardItem">$540{{offerprice}}</li>
-		            <li class="profileCardItem">Oct 15, 2015{{date}}</li>
-		            <li class="profileCardItem">505 5th Avenue New York, NY 10038{{location}}</li>
-		            <li class="managerOfferView">
-		                <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#sentOfferModal">
-		                  View Offer
-		                </button>
-		            </li>
-		        </ul>
-		    </li>
-		    <!-- End End End -->
         </ul>
     </div>
     {{> ModalSentOffer}}

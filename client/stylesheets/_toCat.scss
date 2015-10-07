@@ -46,13 +46,13 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 
 .box-title-listing {
-    background: $color-spacered !important;
-    font-family: inherit;
-    color: #FFFFFF;
     // border-left: 5px solid $color-spacered;
-    padding-left: 4px;
-    margin: 0 !important;
+    background: $color-spacered !important;
+    color: #FFFFFF;
+    font-family: inherit;
     font-size: 1.3rem;
+    margin: 0 !important;
+    padding-left: 4px;
     padding: 5px 8px;
 
 }
