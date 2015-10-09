@@ -1,6 +1,7 @@
 <!-- This modal can be accessed from Profile Offer | Post Auth -->
 <template name="ModalSentOffer"> 
 	<!-- Modal -->
+	{{#each listingOffers}}
 	<div class="modSentOffer modal" id="sentOfferModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
@@ -17,7 +18,7 @@
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
 		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{creator_id}}">{{creator}}</a></li>
-		                    <li class="profileReceivedPrice"><b>Offered Price:</b> <span class="money">{{offerprice}}</span></li>
+		                    <li class="profileReceivedPrice"><b>Offered Price:</b> <span class="money">${{offerprice}}</span></li>
 		                    <li class="profileReceivedPayment"><b>Payment:</b> Paypal</li>
 		                    <li class="profileReceivedDate"><b>Date of Meetup:</b>{{date}}</li>
 		                    <li class="profileReceivedLocation"><b>Location:</b>{{location}}</li>
@@ -33,4 +34,5 @@
 	    </div>
 	  </div>
 	</div>
+	{{/each}}
 </template>

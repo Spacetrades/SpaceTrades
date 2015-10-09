@@ -69,7 +69,8 @@
                 <ul class="searchRefineSize">
                     <p class="searchRefineHeadings">Size Range</p>
                     <li class="searchRefineSizeStart">
-                    <!-- TASK - Load from array -->
+                    <!-- TASK - Load from array  -->
+                    <!-- Max should always be > then min -->
                         <select class="listize1">
                             <option value="" disabled selected>Min</option>
                             <option value="5">5</option>
@@ -124,7 +125,8 @@
                     </li>
                 </ul>
                 <ul class="searchRefineStyle">
-                    <p class="searchRefineHeadings">Style</p>
+                    <p class="searchRefineHeadings">Type</p>
+                    <!-- TASK - Depends on checks for categories. If one cat checked, show all dependent Types -->
                     <li><input type="checkbox" value="Basketball">Basketball</li>
                     <li><input type="checkbox" value="Athletic">Baseball</li>
                     <li><input type="checkbox" value="Running">Running</li>
@@ -135,12 +137,12 @@
                     <li><input type="checkbox" value="Athletic">Soccer</li>
                     <li><input type="checkbox" value="Athletic">Walking</li>
                 </ul>
-                <ul class="searchRefineColor">
+              <!--   <ul class="searchRefineColor">
                     <p class="searchRefineHeadings">Color</p>
                     <li>
                         <input type="text" id="colorpicker" style="display: none;">
                     </li>
-                </ul> 
+                </ul>  -->
                 <ul class="searchRefinePrice">
                     <p class="searchRefineHeadings">Price Range</p>
                     <li>$<input type="text" class="listprice" placeholder=""/></li>
