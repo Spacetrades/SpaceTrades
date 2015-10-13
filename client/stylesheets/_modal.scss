@@ -843,6 +843,65 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	margin-top: 75px !important;
 }
 
+.modFeedbackPageTwo {
+	margin-top: 50px !important;
+	padding: 10px 40px !important;
+}
+
+.modFeedbackPageTwo h2 {
+	color: $color-spaceblue !important;
+	font-size: 2rem !important;
+	font-weight: 400 !important;
+	margin: 20px 0 !important;
+}
+
+.modFeedbackPageTwo1 {
+	margin-top: 40px;
+}
+
+.modFeedbackPageTwo1 ul {
+	text-align: center;
+}
+
+.modFeedbackPageTwo1 ul li {
+	display: inline-block;
+	margin-left: 20px;
+	padding: 12px 18px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.modFeedbackPageTwo1 ul li label {
+	margin-left: 10px;
+	font-size: 16px !important;
+}
+
+.modFeedbackPageTwo1 ul li:first-child {
+	background-color: #396 !important;
+	margin-left: 0 !important;
+} 
+
+.modFeedbackPageTwo1 ul li:nth-child(2) {
+	background-color: #989898 !important;
+}
+
+.modFeedbackPageTwo1 ul li:last-child {
+	background-color: tomato !important;
+} 
+
+.modFeedbackPageTwo2 {
+	margin-top:43px;
+}
+
+.modFeedbackPageTwo2 ul {
+	text-align: center;
+}
+
+.modFeedbackPageTwo2 ul li textarea {
+	width: 66%;
+	height: 100px;
+}
+
 /* PRIMARY END */
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
