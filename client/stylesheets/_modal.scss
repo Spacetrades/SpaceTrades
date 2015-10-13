@@ -902,6 +902,19 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	height: 100px;
 }
 
+.modFeedbackInitial button [target="#feedbackBuyerUnsuccessfulModal"], .modFeedbackInitial button [target="#feedbackBuyerNeverModal"] {
+	padding: 11px 50px !important;
+	color: #fff !important;
+	background-color: #f8504b;
+	border: none;
+	border-radius: 4px !important;
+}
+
+.modFeedbackInitial button [data-target="#feedbackBuyerUnsuccessfulModal"]:hover, .modFeedbackInitial button [data-target="#feedbackBuyerNeverModal"]:hover {
+	background-color: #f73c37 !important;
+}
+
+
 /* PRIMARY END */
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
