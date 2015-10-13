@@ -1,5 +1,5 @@
-<template name="ModalFeedbackPrimaryBuyer">
-    <form class="modFeedback modal multi-step" id="feedbackBuyerPrimaryModal">
+<template name="ModalFeedbackUnsuccessfulBuyer">
+    <form class="modFeedback modal multi-step" id="feedbackBuyerUnsuccessfulModal">
         <div class="modFeedbackDialog modal-dialog">
             <div class="modFeedbackContent modal-content">
                 <div class="modFeedbackDiv modFeedbackDivOne modal-body step step-1">
@@ -69,7 +69,7 @@
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackOne">
                         <button type="button" class="btn btn-primary step step-1 modalExit" data-step="1" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="feedbackBuyerPrimaryJump2()">Next</button>
+                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="feedbackBuyerUnsuccessfulJump2()">Next</button>
                     </div>
                 </div>
                 <div class="modFeedbackDiv modFeedbackDivTwo modal-body step step-2">
@@ -99,7 +99,7 @@
                         </div>  
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackTwo">
-                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="feedbackBuyerPrimaryJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="feedbackBuyerUnsuccessfulJump1()">Back</button>
                         <button type="button" class="btn btn-primary step step-2 modalSubmitBtn" data-step="2"><input type="submit" class="" value="Send"></button>
                     </div>
                 </div>
@@ -108,11 +108,11 @@
     </form>
     <!-- Each Multi Step Modal Has It's Own Triggers -->
     <script type="text/javascript">
-      feedbackBuyerPrimaryJump1 = function() {
-          $('#feedbackBuyerPrimaryModal').trigger('next.m.1');
+      feedbackBuyerUnsuccessfulJump1 = function() {
+          $('#feedbackBuyerUnsuccessfulModal').trigger('next.m.1');
       }
-      feedbackBuyerPrimaryJump2 = function() {
-          $('#feedbackBuyerPrimaryModal').trigger('next.m.2');
+      feedbackBuyerUnsuccessfulJump2 = function() {
+          $('#feedbackBuyerUnsuccessfulModal').trigger('next.m.2');
       }
     </script>  
 </template> 

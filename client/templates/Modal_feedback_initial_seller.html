@@ -1,5 +1,5 @@
-<template name="ModalFeedbackInitialBuyer">
-    <form class="modFeedbackInitial modal multi-step" id="feedbackBuyerInitialModal">
+<template name="ModalFeedbackInitialSeller">
+    <form class="modFeedbackInitial modal multi-step" id="feedbackSellerInitialModal">
         <div class="modFeedbackInitialDialog modal-dialog">
             <div class="modFeedbackInitialContent modal-content">
                 <div class="modFeedbackInitialDiv modFeedbackDivInitialOne modal-body step step-1">
@@ -55,7 +55,7 @@
                     <div class="modFeedbackInitialPageThree">
                         <h2>How Was It?</h2>
                         <ul class="modFeedbackInitialPageThreeUl">
-                            <li><button class="btn btn-primary step step-3" data-step="3" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerPrimaryModal">Successful</button></li>
+                            <li><button class="btn btn-primary step step-3" data-step="3" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerPrimaryModal">Successful</button></li>
                             <li><button type="button" class="btn btn-primary step step-3" data-step="3" onclick="feedbackInitialJump6()">Unsuccessful</button></li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
                         <p>You Also Have The Option To Report Yusuf Bagha</p>
                         <p>Please Refer To Our <a>FAQs</a> About Tips On Having A Successful Meetup</p>
                         <ul class="modFeedbackInitialPageFiveUl">
-                            <li><button class="btn btn-primary step step-5" data-step="5" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerUnsuccessfulModal">Give Feedback</button></li>
+                            <li><button class="btn btn-primary step step-5" data-step="5" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerUnsuccessfulModal">Give Feedback</button></li>
                         </ul>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                         <p>You Can Give Feedback</p>
                         <p>Bad Behavior Is Not Tolerated</p>
                         <ul class="modFeedbackInitialPageSevenUl">
-                            <li><button class="btn btn-primary step step-7" data-step="7" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerNeverModal">Give Feedback</button></li>
+                            <li><button class="btn btn-primary step step-7" data-step="7" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerNeverModal">Give Feedback</button></li>
                         </ul>
                     </div>
                 </div>
@@ -114,25 +114,25 @@
     <!-- Each Multi Step Modal Has It's Own Triggers -->
     <script type="text/javascript">
       feedbackInitialJump1 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.1');
+          $('#feedbackSellerInitialModal').trigger('next.m.1');
       }
       feedbackInitialJump2 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.2');
+          $('#feedbackSellerInitialModal').trigger('next.m.2');
       }
       feedbackInitialJump3 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.3');
+          $('#feedbackSellerInitialModal').trigger('next.m.3');
       }
       feedbackInitialJump4 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.4');
+          $('#feedbackSellerInitialModal').trigger('next.m.4');
       }
       feedbackInitialJump5 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.5'); 
+          $('#feedbackSellerInitialModal').trigger('next.m.5'); 
       }
       feedbackInitialJump6 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.6');
+          $('#feedbackSellerInitialModal').trigger('next.m.6');
       }
       feedbackInitialJump7 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.7');
+          $('#feedbackSellerInitialModal').trigger('next.m.7');
       }
     </script>  
 </template>
