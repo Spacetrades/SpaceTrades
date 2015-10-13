@@ -1,6 +1,6 @@
 /****** ST Grid (our own bootstrap) ******/
 
-
+  
 // use mixins for lots ex: text-align: center <!-- To use a mixin for something that small wouldn't make sense -->
 
 /*****************************************************************
@@ -3050,6 +3050,7 @@ i:hover {
 .homeCardUl {
     padding-top: 1rem;
     border-top: 1px solid #00bfff;
+    text-align: center !important;
 }
 
 .homeCardUl > li {
@@ -3057,21 +3058,22 @@ i:hover {
 }
 
 .homeCardLi {
-    border: 2px solid $color-spaceblue;
+    border: 1px solid $color-spaceblue;
     border-radius: 5px;
-    margin: 20px 10px;
+    margin: 10px;
     padding: 0px 10px 10px 10px;
     width: 20.2%;
 }
 
 .homeCardLi:hover {
-    border: 2px solid #f8504b;
+    border: 1px solid #f8504b;
 //    box-shadow: 0px 1px 3px 0px $color-spacered;
 }
 
 .homeCardImg {
     width: 100%;
     height: 200px;
+    border-radius: 4px;
 }
 
 .homeCardItem li a h4 {
@@ -3081,6 +3083,7 @@ i:hover {
     text-align: center;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    font-weight: 400;
 }
 
 .homeCardItem li a h4:hover {
@@ -3135,6 +3138,10 @@ i:hover {
     height: 15px;
     vertical-align: top !important;
     color: $color-purple !important;
+}
+
+.homePrice {
+    text-align: left !important;
 }
 
 /* Slider */
@@ -3715,7 +3722,7 @@ On click the images will be displayed at normal size to complete the effect
 	position:absolute;
 	left:0;
 	right:0;
-	border: 2px solid #f39d00;
+	border: 1px solid #f39d00;
 	margin-top: -2px;
 }
 
@@ -4140,11 +4147,11 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileCardItem {
-    margin-bottom: 5px !important;
     font-size: 0.9rem;
-    white-space: nowrap;
+    margin-bottom: 5px !important;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .footer {

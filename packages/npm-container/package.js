@@ -24,7 +24,7 @@ try {
 // Meteor to watch it and reload this package when it changes
 Package.onUse(function(api) {
   api.add_files('index.js', 'server');
-  api.add_files('../../packages.json', 'server', {
+  api.addAssets('../../packages.json', 'server', {
     isAsset: true
   });
 });

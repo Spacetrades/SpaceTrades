@@ -2,80 +2,137 @@
     <form class="modFeedbackInitial modal multi-step" id="feedbackSellerInitialModal">
         <div class="modFeedbackInitialDialog modal-dialog">
             <div class="modFeedbackInitialContent modal-content">
-                <!-- PROMPT 1 START START START -->
                 <div class="modFeedbackInitialDiv modFeedbackDivInitialOne modal-body step step-1">
                     <div class="modFeedbackInitialPageOne">
-                        <h2>Did The Meetup Occur?</h2>
-                        <ul class="modFeedbackInitialPagOneUl">
-                            <li><button type="button" class="btn btn-primary step step-1" data-step="1" onclick="feedbackInitialJump2()">Yes</button></li>
-                            <li><button type="button" class="btn btn-primary step step-1" data-step="1" onclick="feedbackInitialJump3()">No</button></li>
+                        <h2>Did This Meetup Happen?</h2>
+                        <ul class="modFeedbackInitialPageOneUl">
+                            <li><button type="button" class="btn btn-primary step step-1" data-step="1" onclick="feedbackInitialSellerJump3()">Yes</button></li>
+                            <li><button type="button" class="btn btn-primary step step-1" data-step="1" onclick="feedbackInitialSellerJump2()">No</button></li>
+                        </ul>
+                        <ul class="modFeedbackInitialPageOneItem">
+                            <li class="modFeedbackInitialPageOneItemLeft">
+                                <ul>
+                                    <li><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg"></li>
+                                </ul>
+                            </li>
+                            <li class="modFeedbackInitialPageOneItemRight">
+                                <ul>
+                                    <li><b>Nike Air Max Retro</b></li>
+                                    <li>You sold to <a href="#">Yusuf Bagha</a></li>
+                                    <li><b>Final Price:</b>    <span>$250</span></li>
+                                    <li><b>Payment:</b>        <span>Cash</span></li>
+                                    <li><b>Date Of Meetup:</b> <span>September 14, 2015</span></li>
+                                    <li><b>Location:</b>       <span>555 5th Avenue New York, NY 10038</span></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <!-- PROMPT 1 END END END -->
-
-                <!-- PROMPT 2 START START START -->
                 <div class="modFeedbackInitialDiv modFeedbackDivInitialTwo modal-body step step-2">
                     <div class="modFeedbackInitialPageTwo">
-                        <h2>How Was It?</h2>
-                        <ul class="modFeedbackInitialPagTwoUl">
-                            <li><button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerPrimaryModal">Successful</button></li>
-                            <li><button type="button" class="btn btn-primary step step-2" data-step="2" onclick="feedbackInitialJump5()">Unsuccessful</button></li>
+                        <h2>Are You Sure You Want To Continue?</h2>
+                        <ul>
+                            <li>Only go through with this if the meetup did not happen</li>
+                            <li>Ex. The person flaked, You couldn't find each other, etc.</li>
+                            <li>There was no meetup</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
                         </ul>
                     </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnFeedbackInitialSix">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="feedbackInitialSellerJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="feedbackInitialSellerJump7()">Continue</button>
+                    </div>
                 </div>
-                <!-- PROMPT 2 END END END -->
-
-                <!-- NO MEETUP WARNING START START START -->
                 <div class="modFeedbackInitialDiv modFeedbackDivInitialThree modal-body step step-3">
                     <div class="modFeedbackInitialPageThree">
-                        <h2>Are You sure you want to continue??</h2>
-                        <ul class="modFeedbackInitialPagThreeUl">
-                            <li><button type="button" class="btn btn-primary step step-2" data-step="2" onclick="feedbackInitialJump1()">Back</button></li>
-                            <li><button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerNeverModal">Continue</button></li>
+                        <h2>How Was It?</h2>
+                        <ul class="modFeedbackInitialPageThreeUl">
+                            <li><button class="btn btn-primary step step-3" data-step="3" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerPrimaryModal">Successful</button></li>
+                            <li><button type="button" class="btn btn-primary step step-3" data-step="3" onclick="feedbackInitialSellerJump6()">Unsuccessful</button></li>
                         </ul>
                     </div>
                 </div>
-                <!-- NO MEETUP WARNING WARNING END END END -->
-
-                <!-- UNSUCCESSFUL MEETUP OPTIONS START START START -->
-                <div class="modFeedbackInitialDiv modFeedbackDivInitialFour modal-body step step-4">
-                    <div class="modFeedbackInitialPageFour">
-                        <h2>We're Sorry To Hear That</h2>
-                        <ul class="modFeedbackInitialPagFourUl">
-                            <li><button class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerUnsuccessfulModal">Feedback</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- UNSUCCESSFUL MEETUP OPTIONS END END END -->
-
-                <!-- UNSUCCESSFUL MEETUP WARNING START START START -->
+                <!-- STEP 4 IS MISSING BECAUSE IT REFUSES TO WORK | KEEP AS IS -->
                 <div class="modFeedbackInitialDiv modFeedbackDivInitialFive modal-body step step-5">
                     <div class="modFeedbackInitialPageFive">
-                        <h2>Are You Sure You want to continue</h2>
-                        <ul class="modFeedbackInitialPagFiveUl">
-                            <li><button type="button" class="btn btn-primary step step-5" data-step="5" onclick="feedbackInitialJump2()">Back</button></li>
-                            <li><button type="button" class="btn btn-primary step step-5" data-step="5" onclick="feedbackInitialJump4()">Go</button></li>
+                        <h2>We're Sorry To Hear That</h2>
+                        <p>Don't Worry You Can Still Give Feedback</p>
+                        <p>You Also Have The Option To Report Yusuf Bagha</p>
+                        <p>Please Refer To Our <a>FAQs</a> About Tips On Having A Successful Meetup</p>
+                        <ul class="modFeedbackInitialPageFiveUl">
+                            <li><button class="btn btn-primary step step-5" data-step="5" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerUnsuccessfulModal">Give Feedback</button></li>
                         </ul>
                     </div>
                 </div>
-                <!-- UNSUCCESSFUL MEETUP WARNING END END END -->
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialSix modal-body step step-6">
+                    <div class="modFeedbackInitialPageSix">
+                        <h2>Are You Sure You Want To Continue?</h2>
+                        <ul>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                            <li>Only go through with this if the meetup was unsuccessful</li>
+                            <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                            <li>Things didn't go the way they were supposed to</li>
+                            <li>WARNING: Lying on feedback can lead to a ban</li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnFeedbackInitialSix">
+                        <button type="button" class="btn btn-primary step step-6 modalBack" data-step="6" onclick="feedbackInitialSellerJump3()">Back</button>
+                        <button type="button" class="btn btn-primary step step-6 modalNext" data-step="6" onclick="feedbackInitialSellerJump5()">Continue</button>
+                    </div>
+                </div>
+                <div class="modFeedbackInitialDiv modFeedbackDivInitialSeven modal-body step step-7">
+                    <div class="modFeedbackInitialPageSeven">
+                        <h2>Aren't Flakers The Worst!</h2>
+                        <p>We've All Been There :(</p>
+                        <p>Luckily There Are Many Things You Can Do On SpaceTrades</p>
+                        <p>You Can Report Yusuf Bagha</p>
+                        <p>You Can Give Feedback</p>
+                        <p>Bad Behavior Is Not Tolerated</p>
+                        <ul class="modFeedbackInitialPageSevenUl">
+                            <li><button class="btn btn-primary step step-7" data-step="7" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerNeverModal">Give Feedback</button></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
     <!-- Each Multi Step Modal Has It's Own Triggers -->
     <script type="text/javascript">
-      feedbackInitialJump1 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.1');
+      feedbackInitialSellerJump1 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.1');
       }
-      feedbackInitialJump2 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.2');
+      feedbackInitialSellerJump2 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.2');
       }
-      feedbackInitialJump3 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.3');
+      feedbackInitialSellerJump3 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.3');
       }
-      feedbackInitialJump4 = function() {
-          $('#feedbackBuyerInitialModal').trigger('next.m.3');
+      feedbackInitialSellerJump4 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.4');
+      }
+      feedbackInitialSellerJump5 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.5'); 
+      }
+      feedbackInitialSellerJump6 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.6');
+      }
+      feedbackInitialSellerJump7 = function() {
+          $('#feedbackSellerInitialModal').trigger('next.m.7');
       }
     </script>  
 </template>
