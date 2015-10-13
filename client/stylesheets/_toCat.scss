@@ -46,13 +46,13 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 
 .box-title-listing {
-    background: $color-spacered !important;
-    font-family: inherit;
-    color: #FFFFFF;
     // border-left: 5px solid $color-spacered;
-    padding-left: 4px;
-    margin: 0 !important;
+    background: $color-spacered !important;
+    color: #FFFFFF;
+    font-family: inherit;
     font-size: 1.3rem;
+    margin: 0 !important;
+    padding-left: 4px;
     padding: 5px 8px;
 
 }
@@ -296,6 +296,14 @@ code {
     font-style: italic;
     color: $color-spacegrey !important;
     text-underline: underline;
+}
+
+.profileBtn {
+    background-color: $color-venetian-red !important;
+    border-color: $color-venetian-red !important;
+    &:hover {
+
+    }
 }
 
 .profile-link:hover {
@@ -872,6 +880,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: #fff !important;
     margin-left: 8px;
     border-radius: 0.3em;
+}
+
+.chatButton {
+
+
+}
+
+.btn,
+.btn-default {
+    font-family: $font_stack-text !important;
 }
 
 .homesearchbtn:hover {
@@ -3242,6 +3260,15 @@ On click the images will be displayed at normal size to complete the effect
     color: #396;
 }
 
+.listingItemBrand,
+.listingItemColor,
+.listingItemSize,
+.listingItemCondition,
+.listingItemQuantity,
+.listingItemTrade {
+    font-family: $font_stack-header !important;
+}
+
 .listingItemButtons {
     float: right;
     font-family: 'Roboto';
@@ -3628,11 +3655,6 @@ On click the images will be displayed at normal size to complete the effect
 // .profileUserFeedback ul li p, .profileUserDesc p {
 //     margin: 0;
 // }
-
-.optionsProClick, .profileChatBtn {
-    display: inline-block;
-    margin: 40px 0;
-}
 
 .profileUserFeedbackUl {
     margin: 0;
@@ -5268,6 +5290,10 @@ On click the images will be displayed at normal size to complete the effect
 	-webkit-appearance: none !important;
     -moz-appearance: none !important;
     appearance: none !important;
+}
+
+.headerRadius:hover {
+    background-color: $color-spacegrey;
 }
 
 .headerSearchRadiusLogo {
