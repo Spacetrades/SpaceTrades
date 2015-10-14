@@ -1626,7 +1626,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     *******************/
 
     .oneDiv {
-        width: 80%;
         margin: 3rem auto 2rem auto !important;
         font-family: $font_stack-norm !important;
     }
@@ -2536,7 +2535,7 @@ i:hover {
 }
 
 .headerBigCat ul {
-	margin-left: -13px !important;
+	margin-left: -151px !important;
 	z-index: 5 !important;
 }
 
@@ -5386,12 +5385,4 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingPayCash i {
 	margin-right: 5px;
-}
-
-
-
-@media (min-width: 1200px) {
-    .oneDiv, .onediv {
-        max-width: 1024px !important;
-    }
 }
