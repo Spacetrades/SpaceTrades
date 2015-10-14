@@ -1,0 +1,105 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Sass Document For Adding Responsitivity 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media (min-width: 1200px) {
+    .oneDiv, .onediv {
+        max-width: 1024px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .oneDiv, .onediv {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 1065px) {
+    .homeCardLi {
+    	width: 19.5%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .homeCardLi {
+    	width: 23%;
+    }
+}
+
+@media (max-width: 950px) {
+    .homeCardLi {
+    	width: 25%;
+    }
+}
+
+@media (max-width: 850px) {
+    .homeCardLi {
+    	width: 26%;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeCardLi {
+    	width: 32%;
+    }
+}
+
+@media (max-width: 700px) {
+    .homeCardLi {
+    	width: 35%;
+    }
+}
+
+@media (max-width: 650px) {
+    .homeCardLi {
+    	width: 38%;
+    }
+}
+
+@media (max-width: 600px) {
+    .homeCardLi {
+    	width: 40%;
+    }
+}
+
+@media (max-width: 520px) {
+    .homeCardLi {
+    	width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .homeCardLi {
+    	width: 55%;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+    	font-size: 3.5rem;
+    }
+    .search {
+    	width: 60%;
+    }
+    .homesearchbtn {
+    	font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .homeCardLi {
+    	width: 60%;
+    }
+}
+
+@media (max-width: 380px) {
+    .homeCardLi {
+    	width: 65%;
+    }
+}
+
+@media (max-width: 360px) {
+    .homeCardLi {
+    	width: 70%;
+    }
+}
