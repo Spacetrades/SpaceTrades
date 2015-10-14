@@ -1,0 +1,74 @@
+<!-- This modal can be accessed from Item | Post Auth Only -->
+<template name="ModalReportListing">
+    <form class="modReport modal multi-step" id="reportListingModal">
+        <div class="modReportDialog modal-dialog">
+            <div class="modReportContent modal-content">
+                <div class="modReportDiv modReportDivOne modal-body step step-1">
+                    <div class="modReportPageOne">
+                        <h2>Are You Sure You Want To Report This Listing?</h2>
+                        <ul class="modFeedbackInitialPageOneItem modReportWarning">
+                            <li class="modFeedbackInitialPageOneItemLeft">
+                                <ul>
+                                    <li><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg"></li>
+                                </ul>
+                            </li>
+                            <li class="modFeedbackInitialPageOneItemRight">
+                                <ul>
+                                    <li><b>Nike Air Max Retro</b></li>
+                                    <li>Sold By <a href="#">Yusuf Bagha</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnReportOne">
+                        <button type="button" class="btn btn-primary step step-1 modalExit" data-step="1" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="reportListingJump2()">Next</button>
+                    </div>
+                </div>
+                <div class="modReportDiv modReportDivTwo modal-body step step-2">
+                    <div class="modReportPageTwo">
+                        <h2>Select All That Apply</h2>
+                        <ul>
+                        	<li><input type="checkbox" value="">Item Is Prohibited</li>
+                        	<li><input type="checkbox" value="">Doesn't Comply With Community Standards</li>
+                        	<li><input type="checkbox" value="">Contains Nudity</li>
+                        	<li><input type="checkbox" value="">Contains Strong Language</li>
+                        	<li><input type="checkbox" value="">Racist/Offensive</li>
+                        	<li><input type="checkbox" value="">Contains Violence</li>
+                        	<li><input type="checkbox" value="">Irrelevant Or Spam</li>
+                        	<li><input type="checkbox" value="">Fake Listing</li>
+                        </ul>   
+                    </div>
+                    <div class="modMultiBtn modMultiBtnReportTwo">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="reportListingJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="reportListingJump3()">Next</button>
+                    </div>
+                </div>
+                <div class="modReportDiv modReportDivThree modal-body step step-3">
+                    <div class="modReportPageThree">
+                          <h2>Please Tell Us More</h2>
+                          <textarea placeholder="Explain the situation furthur..."></textarea>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnReportThree">
+                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="reportListingJump2()">Back</button>
+                        <button type="button" class="btn btn-primary step step-3 modalSubmitBtn" data-step="3">
+                        	<input type="submit" value="Send">
+                        </button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </form>
+    <!-- Each Multi Step Modal Has It's Own Triggers -->
+    <script type="text/javascript">
+      reportListingJump1 = function() {
+          $('#reportListingModal').trigger('next.m.1');
+      }
+      reportListingJump2 = function() {
+          $('#reportListingModal').trigger('next.m.2');
+      }
+      reportListingJump3 = function() {
+          $('#reportListingModal').trigger('next.m.3');
+      }
+    </script>  
+</template> 
