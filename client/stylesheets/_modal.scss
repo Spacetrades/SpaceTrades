@@ -467,7 +467,7 @@
 
 /*~~~~ Button ~~~~*/
 
-.modEditListingTrigger {
+.modEditListingTrigger, .modReportTrigger {
 	background-color: #fff !important;
     width: 100% !important;
     text-align: left !important;
@@ -921,7 +921,36 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Report Modal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+/*~~~~ Button ~~~~*/
+
+.modReportTrigger {
+	background-color: #fff !important;
+	color: #404040 !important;
+}
+
+.modReportTrigger:hover {
+	background-color: #d3d3d3 !important;
+}
+
+/*~~ Button End ~~*/
+
+
+/*~~~~ Listing ~~~~*/
+
+/*~~~~ Listing End ~~~~*/
+
+
+/*~~~~ User ~~~~*/
+
+/*~~~~ User End ~~~~*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	END END END END END END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
 

@@ -299,10 +299,9 @@ code {
 }
 
 .profileBtn {
-    background-color: $color-venetian-red !important;
-    border-color: $color-venetian-red !important;
+    background-color: #f8504b !important;
     &:hover {
-
+        background-color: #f73c37;
     }
 }
 
