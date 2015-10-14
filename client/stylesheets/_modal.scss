@@ -177,7 +177,7 @@
 	margin: 0;
 }
 
-.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingDiv h2, .modFeedbackInitialDiv h2 {
+.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingDiv h2, .modFeedbackInitialDiv h2, .modReportDiv h2 {
 	color: $color-spaceblue !important;
 	font-size: 2rem !important;
 	font-weight: 400 !important;
@@ -843,8 +843,12 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	margin-top: 75px !important;
 }
 
-.modFeedbackPageTwo {
+.modFeedbackPageTwo, .modReportPageOne, .modReportPageThree {
 	margin-top: 50px !important;
+	padding: 10px 40px !important;
+}
+
+.modReportPageTwo {
 	padding: 10px 40px !important;
 }
 
@@ -938,8 +942,59 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 
 /*~~ Button End ~~*/
 
-
 /*~~~~ Listing ~~~~*/
+
+.modReportWarning {
+	margin-top: 60px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+	width: 80%;
+}
+
+.modReportWarning img {
+	border-radius: 50%;
+}
+
+.modReportWarning li:first-child, .modReportWarning li:last-child {
+	vertical-align: middle !important;
+}
+
+.modReportWarning li:last-child {
+	margin-left: 5px !important;
+}
+
+.modReportPageTwo ul li {
+	font-size: 1.2rem;
+	margin: 10px 0;
+	padding: 5px 0;
+}
+
+.modReportPageTwo ul li:last-child {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.modReportPageTwo ul li input {
+	margin-right: 10px;
+	outline: none !important;
+}
+
+.modReportPageThree textarea {
+	width: 100%;
+	height: 250px;
+}
+
+.modMultiBtnReportOne {
+	margin-top: 53px;
+}
+
+.modMultiBtnReportTwo {
+	padding: 8px 10px 10px 10px !important;
+}
+
+.modMultiBtnReportThree {
+	margin-top: 33px;
+}
 
 /*~~~~ Listing End ~~~~*/
 
