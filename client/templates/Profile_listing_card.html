@@ -11,25 +11,11 @@
             <li class="profileCardItem">Size: {{size}}</li>
             <li class="managerOfferButton">
                 <ul>
-                    <li class="optionsListCardClick optionsProClick click-nav">
-                        <ul class="no-js">
-                            <li>
-                                <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
-                                <ul class="optionsItems optionsCardItems">
-                                    <li><a href=""><i class="fa fa-pencil"></i>Edit</a></li>
-                                    <li><a href=""><i class="fa fa-times"></i>Remove</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- OnClick DropDown With Edit and Delete -->
-                    <!-- <li class="managerOfferViewer managerReceivedOffers"><a class="managerOfferCount" href="/selloffer/{{_id}}">{{offers}}</a></li> -->
-                    <li class="managerOfferViewer managerReceivedOffers">
-                        <button type="button" class="modReceivedOffersTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#receivedOffersModal">
-                          {{offers}}
+                    <li class="managerOfferView">
+                        <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#listingManagerModal">
+                          Manage
                         </button>
                     </li>
-                    <!-- 4 is the number of offers--> 
                 </ul>
             </li>
         </ul>
