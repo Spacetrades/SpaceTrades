@@ -120,6 +120,12 @@
     .helpImgUl > li:last-child {
     	display: none !important;
     }
+    .contactname input, .contactsubject input, .contactemail input, .contacttext textarea {
+    	width: 80% !important;
+    }
+    .contactSend {
+    	width: 93% !important;
+    }
 }
 
 @media (max-width: 480px) {

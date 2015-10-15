@@ -1130,15 +1130,20 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 /****** CONTACT ******/
 
+.contactform {
+    max-width: 400px !important;
+    margin: 0 auto;
+}
+
 .contactname input, .contactsubject input, .contactemail input { 
     padding: 10px 12px !important;
-    width: 400px !important;
+    width: 100% !important;
     border-radius: 4px !important;
     border: 1px solid #d3d3d3 !important;
 }
 
 .contacttext textarea {
-    width: 400px !important;
+    width: 100% !important;
     padding: 10px 12px !important;
     height: 80px !important;
     border-radius: 4px !important;
@@ -2134,8 +2139,9 @@ i:hover {
 
 .contactSend {
     font-family: 'Roboto' !important;
-    margin: 0 29.1% 100px 35%!important;
-    text-align: center !important;
+    margin: 0 0 100px 0!important;
+    text-align: right !important;
+    width: 106%
 }
 
 .contactButton {
