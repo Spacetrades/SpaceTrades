@@ -22,14 +22,12 @@
 
 @media (max-width: 1000px) {
     .homeCardLi {
-    	width: 23%;
+    	width: 25%;
     }
 }
 
 @media (max-width: 950px) {
-    .homeCardLi {
-    	width: 25%;
-    }
+    
 }
 
 @media (max-width: 900px) {
@@ -45,16 +43,10 @@
 }
 
 @media (max-width: 850px) {
-    .homeCardLi {
-    	width: 26%;
-    }
+
 }
 
 @media (max-width: 800px) {
-    .homeCardLi {
-    	width: 26%;
-    }
-
     .helpImgUl > li > img {
     	margin: 1rem 0 !important;
     }
@@ -68,14 +60,11 @@
 
 @media (max-width: 768px) {
     .homeCardLi {
-    	width: 32%;
+    	width: 35%;
     }
 }
 
 @media (max-width: 700px) {
-    .homeCardLi {
-    	width: 35%;
-    }
 
     p {
     	font-size: 0.9rem;
@@ -90,7 +79,7 @@
 	}
 
 	h4 {
-	    font-size: 0.9rem;
+	    font-size: 1rem;
 	}
 
 }
