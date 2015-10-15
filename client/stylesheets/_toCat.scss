@@ -2052,12 +2052,22 @@ i:hover {
 
 .helpAboutUl li ul li, .helpDiv ul li {
     display: inline-block;
-    margin: 0 25px;
+    margin: 0 2%;
 }
 
 .helpAboutUl li ul li img {
     width: 100%;
     margin: 3rem 0;
+}
+
+.helpImgUl li {
+    width: 25%;
+}
+
+.aboutImg {
+    width: 100% !important;
+    height: auto;
+    max-height: 200px;
 }
 
 /**********
@@ -2085,6 +2095,7 @@ i:hover {
 .helpThree > li {
     width: 28%;
     display: inline-block;
+    vertical-align: top !important;
 }
 
 .helpThree li ul li h3 {
@@ -2094,6 +2105,13 @@ i:hover {
 .helpThree li ul li p {
     margin: 0 0 2px 0;
 }
+
+.helpThree li ul li:last-child {
+    margin-top: 5px;
+    list-style-type: circle;
+    line-height: 1.5;
+}
+
 /**********
  Contact
  **********/

@@ -32,11 +32,39 @@
     }
 }
 
+@media (max-width: 900px) {
+	.helpThree {
+		width: 80%;
+		margin: 0 auto 40px auto;
+	}
+
+    .helpThree > li {
+    	width: 100%;
+    	margin-top: 40px !important;
+    }
+}
+
 @media (max-width: 850px) {
     .homeCardLi {
     	width: 26%;
     }
 }
+
+@media (max-width: 800px) {
+    .homeCardLi {
+    	width: 26%;
+    }
+
+    .helpImgUl > li > img {
+    	margin: 1rem 0 !important;
+    }
+
+    .helpPagesPar {
+    	margin-right: 0 !important;
+    	margin-left: 0 !important;
+    }
+}
+
 
 @media (max-width: 768px) {
     .homeCardLi {
@@ -48,6 +76,23 @@
     .homeCardLi {
     	width: 35%;
     }
+
+    p {
+    	font-size: 0.9rem;
+	}
+
+	h2 {
+	    font-size: 1.5rem;
+	}
+
+	h3 {
+	    font-size: 1.1rem;
+	}
+
+	h4 {
+	    font-size: 0.9rem;
+	}
+
 }
 
 @media (max-width: 650px) {
@@ -65,6 +110,15 @@
 @media (max-width: 520px) {
     .homeCardLi {
     	width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .helpImgUl > li {
+    	width: 40%;
+    }
+    .helpImgUl > li:last-child {
+    	display: none !important;
     }
 }
 
@@ -92,6 +146,16 @@
     }
 }
 
+@media (max-width: 400px) {
+	.helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
+		width: 90%;
+		margin: auto;
+	}
+    .helpAboutUl li:first-child > p {
+    	text-align: left !important;
+    }
+}
+
 @media (max-width: 380px) {
     .homeCardLi {
     	width: 65%;
@@ -101,5 +165,14 @@
 @media (max-width: 360px) {
     .homeCardLi {
     	width: 70%;
+    }
+}
+
+@media (max-width: 300px) {
+	.helpImgUl > li:first-child {
+		width: 84%;
+	}
+    .helpImgUl > li:nth-child(2) {
+    	display: none !important;
     }
 }
