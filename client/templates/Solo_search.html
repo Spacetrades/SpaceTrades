@@ -193,6 +193,12 @@
                     </li>
                 </ul>
             </div>
+            <script type="text/javascript">
+                var ck = $('.searchResultsCardImg').width();
+                $('.searchResultsCardImg').css({
+                    'height': ck
+                });
+            </script>
             <div class="searchResultsCards">
                 <ul class="searchResultsCardUl">
                     {{#each getListings}}

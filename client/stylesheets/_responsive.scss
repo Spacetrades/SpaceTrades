@@ -22,13 +22,13 @@
 
 @media (max-width: 1000px) {
     .homeCardLi {
-    	width: 23%;
+    	width: 25%;
     }
 }
 
 @media (max-width: 950px) {
-    .homeCardLi {
-    	width: 25%;
+    .profileCardLi {
+    	width: 35% !important;
     }
 }
 
@@ -42,19 +42,19 @@
     	width: 100%;
     	margin-top: 40px !important;
     }
+
+    .searchResultsCardLi {
+    	width: 90%;
+    }
 }
 
 @media (max-width: 850px) {
-    .homeCardLi {
-    	width: 26%;
+	.profileCardLi {
+    	width: 40% !important;
     }
 }
 
 @media (max-width: 800px) {
-    .homeCardLi {
-    	width: 26%;
-    }
-
     .helpImgUl > li > img {
     	margin: 1rem 0 !important;
     }
@@ -63,19 +63,46 @@
     	margin-right: 0 !important;
     	margin-left: 0 !important;
     }
+
+    .searchResultsRefine {
+    	display: none !important;
+    }
+
+    .searchResultsCardLi {
+    	width: 95% !important;
+    	margin: 10px 0 10px 0 !important;
+    }
+
+    .searchResultsCards {
+    	float: none !important;
+    	margin-top: 0 !important;
+    	width: 90%;
+    }
+
+    // .searchResultsCardImg {
+    // 	height: 165px !important;
+    // }
+    .searchResultsCardPrice {
+    	margin: 8px 0 0 0 !important;
+    	font-size: 0.95rem !important;
+    }
+    .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
+    	margin: 5px 0 !important;
+    	font-size: 0.95rem !important;
+    } 
+    .searchResultsCardName {
+    	font-size: 0.9rem !important;
+    }
 }
 
 
 @media (max-width: 768px) {
     .homeCardLi {
-    	width: 32%;
+    	width: 35%;
     }
 }
 
 @media (max-width: 700px) {
-    .homeCardLi {
-    	width: 35%;
-    }
 
     p {
     	font-size: 0.9rem;
@@ -90,7 +117,7 @@
 	}
 
 	h4 {
-	    font-size: 0.9rem;
+	    font-size: 1rem;
 	}
 
 }
@@ -98,6 +125,9 @@
 @media (max-width: 650px) {
     .homeCardLi {
     	width: 38%;
+    }
+    .profileCardLi {
+    	width: 43% !important;
     }
 }
 
@@ -107,9 +137,19 @@
     }
 }
 
+@media (max-width: 580px) {
+    .profileCardLi {
+    	width: 60% !important;
+    }
+}
+
+
 @media (max-width: 520px) {
     .homeCardLi {
     	width: 50%;
+    }
+    .profileCardLi {
+    	width: 60% !important;
     }
 }
 
@@ -126,6 +166,29 @@
     .contactSend {
     	width: 93% !important;
     }
+    .searchResultsCards {
+    	width: 100% !important;
+    	margin: 10px auto !important;
+    }
+    .searchResultsCardLi {
+    	width: 40% !important;
+    	margin: 10px 5px !important;
+    }
+    .searchResultsCardLi > ul {
+    	display: block;
+	}
+	.searchResultsCardRight {
+		width: 100% !important;
+	}
+	.searchResultsCardLeft {
+		width: 100% !important;
+	}
+	// .searchResultsCardImg {
+	// 	height: 200px;
+	// }
+	.rSearchArea {
+    	display: none;
+    } 
 }
 
 @media (max-width: 480px) {
@@ -144,12 +207,21 @@
     .homesearchbtn {
     	font-size: 0.9rem;
     }
+    .profileCardLi {
+    	width: 80% !important;
+    }
 }
 
 @media (max-width: 430px) {
     .homeCardLi {
     	width: 60%;
     }
+    .searchResultsCardLi {
+    	width: 60% !important;
+    }
+	// .searchResultsCardImg {
+	// 	height: 200px!important;
+	// }
 }
 
 @media (max-width: 400px) {
@@ -166,11 +238,17 @@
     .homeCardLi {
     	width: 65%;
     }
+    .searchResultsCardLi {
+    	width: 70% !important;
+    }
 }
 
 @media (max-width: 360px) {
     .homeCardLi {
     	width: 70%;
+    }
+    .searchResultsCardLi {
+    	width: 80% !important;
     }
 }
 
@@ -180,5 +258,11 @@
 	}
     .helpImgUl > li:nth-child(2) {
     	display: none !important;
+    }
+    .profileCardLi {
+    	width: 90% !important;
+    }
+    .searchResultsCardLi {
+    	width: 90% !important;
     }
 }

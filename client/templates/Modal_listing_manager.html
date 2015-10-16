@@ -1,0 +1,57 @@
+<template name="ModalListingManager"> 
+	<!-- Modal -->
+	<!-- THIS IS THE MANAGER FOR YOUR LISTINGS | IGNORE THE CLASSES-->
+	<div class="modSentOffer modal" id="listingManagerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modSentOfferDialog modal-dialog" role="document">
+	    <div class="modSendOfferContent modal-content">
+	      <div class="modSentOfferBody modal-body">
+	      	<div class="profileReceivedOffers">
+		        <ul class="profileReceivedUl">
+		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Created On July 25, 2015</p>
+		                <ul class="profileReceivedCardLeft">
+		                    <li class="profileReceivedImage">
+		                        <a href="/listing/{{listingId}}"><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg" class="profileReceivedImg"></a>
+		                    </li>
+		                </ul>
+		                <ul class="profileReceivedCardRight profileViewMeetupRight">
+		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">{{offers}} Offers Received</li>
+		                    <li class="profileReceivedPrice"><b>Price:</b> <span class="money"> {{price}}</span></li>
+		                    <li class="profileReceivedPayment"><b>Condition:</b> {{condition}}</li>
+		                    <li class="profileReceivedDate"><b>Color:</b> {{color}}</li>
+		                    <li class="profileReceivedLocation"><b>Size:</b> {{size}}</li>
+		                    <li class="modListingManagerButtons">
+	                            <ul id="profileListingManagerButtonsUl">
+	                                <li class="optionsProClick click-nav">
+				                        <ul class="no-js">
+				                            <li>
+				                                <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+				                                <ul class="optionsItems">
+				                                    <li>
+						                                <button type="button" class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
+						                                    <a href=""><i class="fa fa-pencil"></i>Edit</a>
+						                                </button>
+						                            </li>
+				                                    <li><a href=""><i class="fa fa-trash"></i>Delete</a></li>
+				                                </ul>
+				                            </li>
+				                        </ul>
+				                    </li>
+				                    <li class="managerOfferViewer managerReceivedOffers">
+				                        <button type="button" class="modReceivedOffersTrigger btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModal"> {{offers}} Offers</button>
+				                    </li>
+	                            </ul>
+	                        </li>
+		                </ul>
+		                <div id="profileReceivedOffersMaps">
+		                    {{> googleMap name="listingImage" options=exampleMapOptions}}
+		                </div>
+		            </li>
+		        </ul>
+		    </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</template>

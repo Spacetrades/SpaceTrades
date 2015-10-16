@@ -457,6 +457,32 @@
 	margin-top: 23px !important;
 }
 
+#profileListingManagerButtonsUl a:hover {
+	text-decoration: none !important;
+}
+
+#profileListingManagerButtonsUl > li {
+	display: inline-block;
+	margin: 0 !important;
+}
+
+#profileListingManagerButtonsUl > li:last-child {
+	vertical-align: top !important;	
+}
+
+#profileListingManagerButtonsUl > li:last-child button {
+	padding: 17px 40px 14px 40px !important;
+}
+
+#profileListingManagerButtonsUl > li > ul > li > a {
+	color: #fff !important;
+	padding: 17px 40px 14px 40px !important;
+}
+
+#profileListingManagerButtonsUl > li > ul > li > ul > li a {
+	color: #404040 !important;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
