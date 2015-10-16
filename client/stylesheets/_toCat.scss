@@ -4051,6 +4051,10 @@ On click the images will be displayed at normal size to complete the effect
     margin-left: 5px;
 }
 
+.profileCard > ul {
+    // text-align: center;
+}
+
 .profileCardUl > li {
     display: inline-block;
     border: 2px solid #00bfff;
@@ -4062,6 +4066,10 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileCardUl > li:hover {
     border: 2px solid #f8504b;
+}
+
+.profileCardInfo {
+    text-align: left !important;
 }
 
 /*.profileHistoryCardUl {

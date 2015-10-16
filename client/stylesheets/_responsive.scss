@@ -27,7 +27,9 @@
 }
 
 @media (max-width: 950px) {
-    
+    .profileCardLi {
+    	width: 35% !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -43,7 +45,9 @@
 }
 
 @media (max-width: 850px) {
-
+	.profileCardLi {
+    	width: 40% !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -88,6 +92,9 @@
     .homeCardLi {
     	width: 38%;
     }
+    .profileCardLi {
+    	width: 43% !important;
+    }
 }
 
 @media (max-width: 600px) {
@@ -96,9 +103,19 @@
     }
 }
 
+@media (max-width: 580px) {
+    .profileCardLi {
+    	width: 60% !important;
+    }
+}
+
+
 @media (max-width: 520px) {
     .homeCardLi {
     	width: 50%;
+    }
+    .profileCardLi {
+    	width: 60% !important;
     }
 }
 
@@ -132,6 +149,9 @@
     }
     .homesearchbtn {
     	font-size: 0.9rem;
+    }
+    .profileCardLi {
+    	width: 80% !important;
     }
 }
 
@@ -169,5 +189,8 @@
 	}
     .helpImgUl > li:nth-child(2) {
     	display: none !important;
+    }
+    .profileCardLi {
+    	width: 90% !important;
     }
 }
