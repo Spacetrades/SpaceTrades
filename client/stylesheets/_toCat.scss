@@ -4583,7 +4583,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCards {
     vertical-align: top !important;
-    margin-top: -1015px !important;
+    margin-top: -965px !important;
     float: right;
 }
 
@@ -4605,12 +4605,11 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .searchResultsCardLeft {
-    width: 30% !important;  
-    height: 200px;
+    width: 30% !important;
 }
 
 .searchResultsCardRight {
-    width: 40%;
+    width: 60%;
     vertical-align: top !important;
     margin-left: 3%;
 }
@@ -4619,9 +4618,9 @@ On click the images will be displayed at normal size to complete the effect
     margin-right: 3px;
 }
 
-.searchResultsCardImage,.searchResultsCardImg {
+.searchResultsCardImg {
     width: 100% !important;
-    height: 100%;
+    height: 200px;
 }
 
 .searchResultsCardTitle a h2 {
