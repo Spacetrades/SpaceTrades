@@ -27,7 +27,9 @@
 }
 
 @media (max-width: 950px) {
-    
+    .profileCardLi {
+    	width: 35% !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -40,10 +42,16 @@
     	width: 100%;
     	margin-top: 40px !important;
     }
+
+    .searchResultsCardLi {
+    	width: 90%;
+    }
 }
 
 @media (max-width: 850px) {
-
+	.profileCardLi {
+    	width: 40% !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -54,6 +62,36 @@
     .helpPagesPar {
     	margin-right: 0 !important;
     	margin-left: 0 !important;
+    }
+
+    .searchResultsRefine {
+    	display: none !important;
+    }
+
+    .searchResultsCardLi {
+    	width: 95% !important;
+    	margin: 10px 0 10px 0 !important;
+    }
+
+    .searchResultsCards {
+    	float: none !important;
+    	margin-top: 0 !important;
+    	width: 90%;
+    }
+
+    // .searchResultsCardImg {
+    // 	height: 165px !important;
+    // }
+    .searchResultsCardPrice {
+    	margin: 8px 0 0 0 !important;
+    	font-size: 0.95rem !important;
+    }
+    .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
+    	margin: 5px 0 !important;
+    	font-size: 0.95rem !important;
+    } 
+    .searchResultsCardName {
+    	font-size: 0.9rem !important;
     }
 }
 
@@ -88,6 +126,9 @@
     .homeCardLi {
     	width: 38%;
     }
+    .profileCardLi {
+    	width: 43% !important;
+    }
 }
 
 @media (max-width: 600px) {
@@ -96,9 +137,19 @@
     }
 }
 
+@media (max-width: 580px) {
+    .profileCardLi {
+    	width: 60% !important;
+    }
+}
+
+
 @media (max-width: 520px) {
     .homeCardLi {
     	width: 50%;
+    }
+    .profileCardLi {
+    	width: 60% !important;
     }
 }
 
@@ -115,6 +166,29 @@
     .contactSend {
     	width: 93% !important;
     }
+    .searchResultsCards {
+    	width: 100% !important;
+    	margin: 10px auto !important;
+    }
+    .searchResultsCardLi {
+    	width: 40% !important;
+    	margin: 10px 5px !important;
+    }
+    .searchResultsCardLi > ul {
+    	display: block;
+	}
+	.searchResultsCardRight {
+		width: 100% !important;
+	}
+	.searchResultsCardLeft {
+		width: 100% !important;
+	}
+	// .searchResultsCardImg {
+	// 	height: 200px;
+	// }
+	.rSearchArea {
+    	display: none;
+    } 
 }
 
 @media (max-width: 480px) {
@@ -133,12 +207,21 @@
     .homesearchbtn {
     	font-size: 0.9rem;
     }
+    .profileCardLi {
+    	width: 80% !important;
+    }
 }
 
 @media (max-width: 430px) {
     .homeCardLi {
     	width: 60%;
     }
+    .searchResultsCardLi {
+    	width: 60% !important;
+    }
+	// .searchResultsCardImg {
+	// 	height: 200px!important;
+	// }
 }
 
 @media (max-width: 400px) {
@@ -155,11 +238,17 @@
     .homeCardLi {
     	width: 65%;
     }
+    .searchResultsCardLi {
+    	width: 70% !important;
+    }
 }
 
 @media (max-width: 360px) {
     .homeCardLi {
     	width: 70%;
+    }
+    .searchResultsCardLi {
+    	width: 80% !important;
     }
 }
 
@@ -169,5 +258,11 @@
 	}
     .helpImgUl > li:nth-child(2) {
     	display: none !important;
+    }
+    .profileCardLi {
+    	width: 90% !important;
+    }
+    .searchResultsCardLi {
+    	width: 90% !important;
     }
 }
