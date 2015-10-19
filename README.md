@@ -87,6 +87,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	-// - Comments have been removed
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
+	CLEAN - Remove comments, or complete task in cleaning a file
 	INFECT - Merge is receiving errors
 	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
 	TASK - A task to complete in a certain file

@@ -14,3 +14,5 @@
 //   'iphone_2x': 'resources/splash/Default@2x~iphone.png',
 //   'iphone5': 'resources/splash/Default-568h@2x~iphone.png'
 // });
+
+App.accessRule("http://*");
