@@ -88,7 +88,7 @@ meteorhacks:fast-render@2.10.0
 meteorhacks:flow-layout@1.4.2
 meteorhacks:inject-data@1.4.1
 meteorhacks:inject-initial@1.0.3
-meteorhacks:kadira@2.25.0
+meteorhacks:kadira@2.26.3
 meteorhacks:meteorx@1.4.1
 meteorhacks:npm@1.5.0
 meteorhacks:picker@1.0.3
@@ -123,7 +123,7 @@ package-version-parser@3.0.4
 peerlibrary:assert@0.2.5
 peerlibrary:base-component@0.14.0
 peerlibrary:blaze-components@0.15.1
-peerlibrary:computed-field@0.3.0
+peerlibrary:computed-field@0.3.1
 peerlibrary:reactive-field@0.1.0
 percolatestudio:segment.io@3.0.0
 practicalmeteor:chai@2.1.0_1
@@ -156,14 +156,14 @@ templating@1.1.5
 templating-tools@1.0.0
 tmeasday:paginated-subscription@0.2.4
 tmeasday:publish-counts@0.7.2
-todda00:friendly-slugs@0.3.4
+todda00:friendly-slugs@0.3.6
 tracker@1.0.9
 u2622:persistent-session@0.4.4
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5
 velocity:chokidar@1.2.0_1
-velocity:core@0.10.7
+velocity:core@0.10.8
 velocity:html-reporter@0.9.1
 velocity:meteor-internals@1.1.0_7
 velocity:meteor-stubs@1.1.1
