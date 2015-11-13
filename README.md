@@ -76,6 +76,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	// - Comment
 	Rm - Readme
 	md - Markdown
+	ORG - Change in file orgization likely resulting in falsely displayed code additions
 	STYLE - Commits mostly for styling purposes
 	FIX - Something broken has been fixed, not just a change for preference but a solution to a noticeable defect
 	USE - Something new piece of functionality is finally being used

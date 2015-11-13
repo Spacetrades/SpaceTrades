@@ -1,6 +1,8 @@
 <!-- This modal can be accessed from Profile Offer | Post Auth -->
+<!-- Get data from the id of clicked card -->
 <template name="ModalSentOffer"> 
 	<!-- Modal -->
+	{{#each listingOffers}}
 	<div class="modSentOffer modal" id="sentOfferModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
@@ -33,4 +35,5 @@
 	    </div>
 	  </div>
 	</div>
+	{{/each}}
 </template>
