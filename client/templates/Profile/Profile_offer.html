@@ -1,0 +1,10 @@
+<template name="profileManagerOffers">
+	<div class="profileCard oneDiv">
+        <ul class="profileCardUl">
+            {{#each offer}}
+            	{{> ManagerCardOffer}}
+            {{/each}}
+        </ul>
+    </div>
+    {{> ModalSentOffer}}
+</template>
