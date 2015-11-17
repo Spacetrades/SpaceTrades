@@ -1,12 +1,17 @@
 <template name="item">
-<!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown -->
+<!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown  Rotting-->
 <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied Check and Cross -->
 <!-- TASK - Dropdowns being open on page load, change this -->
 <!-- TASK - Facebook, Twitter, Instagram Listing sharing in the options or near the username -->
 <!-- TASK - show created at timestamp -->
 {{> ModalOfferRequest}}
-{{> ModalEditListing}}
 {{> ModalReportListing}}
+{{> ModalEditListing}}
+
+<button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
+                                    <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
+                                </button>
+
 
     <div class="listingItemDiv oneDiv">
         <h1 class="listingItemTitle">{{listing_title}}</h1>
@@ -123,14 +128,14 @@
                         <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
                         <ul class="optionsItems">
                             <li>
-                                <button type="button" class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
+                                <button class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
                                     <a href=""><i class="fa fa-pencil"></i>Edit</a>
                                 </button>
                             </li>
-                            <li><a href=""><i class="fa fa-star"></i>Save</a></li>
+                            <li><a href="#"><i class="fa fa-star"></i>Save</a></li>
                             <li>
-                                <button type="button" class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
-                                    <a href=""><i class="fa fa-gavel"></i>Report</a>
+                                <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
+                                    <!-- <a href="#reportListingModal"> --><i class="fa fa-gavel"></i>Report Listing<!-- </a> -->
                                 </button>
                             </li>
                         </ul>
