@@ -1,6 +1,7 @@
 <template name="ModalListingManager"> 
 	<!-- Modal -->
 	<!-- THIS IS THE MANAGER FOR YOUR LISTINGS | IGNORE THE CLASSES-->
+	{{# with listingSelected}}
 	<div class="modSentOffer modal" id="listingManagerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
@@ -11,7 +12,7 @@
 		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Created On July 25, 2015</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
-		                        <a href="/listing/{{listingId}}"><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg" class="profileReceivedImg"></a>
+		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
 		                    </li>
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
@@ -54,4 +55,6 @@
 	    </div>
 	  </div>
 	</div>
+
+	{{/with}}
 </template>
