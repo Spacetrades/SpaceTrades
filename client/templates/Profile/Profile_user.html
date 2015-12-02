@@ -1,5 +1,6 @@
 <template name="UserProfile">
 <!-- Move Contact button -->
+{{#each profile}}
     <div class="profileUser oneDiv">
         <div class="profileUserLeft">
             <div class="profileUserImage">
@@ -38,7 +39,7 @@
             </div>
             <div class="desc-box">
                 <h4 class="box-title">Description</h4>
-                <p>{{description}}</p>
+                <p>{{about}}</p>
             </div>
             <div class="profileUserFeedback desc-box">
                 <ul class="profileUserFeedbackUl">
@@ -150,4 +151,5 @@
             </li>
         </ul>
     </div> -->
+    {{/each}}
 </template>
