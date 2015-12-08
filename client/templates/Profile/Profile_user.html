@@ -5,7 +5,7 @@
         <div class="profileUserLeft">
             <div class="profileUserImage">
                 <div class="spin"> {{> spinner}} </div>
-                <img src="{{profimg}}" class="profileUserImg">
+                <img src="{{profile.picturelrg}}" class="profileUserImg">
             </div>
             <div class="profileUserGraph">
                 <label for="myChart"><b>Meetup Graph</b>
@@ -19,7 +19,7 @@
         <div class="profileUserRight">
             <div class="profileUserName">
                 <ul>
-                    <li><h1>{{name}}</h1></li>
+                    <li><h1>{{profile.name}}</h1></li>
                     <li>
                         <div class="circle" style="background-color: {{online.color}}"></div>
                     </li>
@@ -33,13 +33,13 @@
             </div>
             <div class="profileUserInfo">
                 <ul class="profileUserArea">
-                    <li>{{location}}</li>
+                    <li>{{profile.location}}</li>
                     <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                 </ul>
             </div>
             <div class="desc-box">
                 <h4 class="box-title">Description</h4>
-                <p>{{about}}</p>
+                <p>{{profile.about}}</p>
             </div>
             <div class="profileUserFeedback desc-box">
                 <ul class="profileUserFeedbackUl">
