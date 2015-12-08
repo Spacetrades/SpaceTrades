@@ -84,6 +84,7 @@ mdg:geolocation@1.1.0
 meteor@1.1.10
 meteor-base@1.0.1
 meteorhacks:async@1.0.0
+meteorhacks:cluster@1.6.9
 meteorhacks:fast-render@2.10.0
 meteorhacks:flow-layout@1.4.2
 meteorhacks:inject-data@1.4.1
