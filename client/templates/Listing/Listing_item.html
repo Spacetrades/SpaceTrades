@@ -1,16 +1,16 @@
 <template name="item">
-<!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown  Rotting-->
-<!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied Check and Cross -->
-<!-- TASK - Dropdowns being open on page load, change this -->
-<!-- TASK - Facebook, Twitter, Instagram Listing sharing in the options or near the username -->
-<!-- TASK - show created at timestamp -->
-{{> ModalOfferRequest}}
-{{> ModalReportListing}}
-{{> ModalEditListing}}
+    <!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown  Rotting-->
+    <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied Check and Cross -->
+    <!-- TASK - Dropdowns being open on page load, change this -->
+    <!-- TASK - Facebook, Twitter, Instagram Listing sharing in the options or near the username -->
+    <!-- TASK - show created at timestamp -->
+    {{> ModalOfferRequest}}
+    {{> ModalReportListing}}
+    {{> ModalEditListing}}
 
-<button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
-                                    <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
-                                </button>
+    <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
+        <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
+    </button>
 
 
     <div class="listingItemDiv oneDiv">
@@ -26,7 +26,7 @@
                         <button class="modOfferRequestTrigger btn btn-default" data-toggle="modal" data-target="#offerRequestModal">Offer</button>
                     </li>
                     <li>
-                    <a class="btn btn-default profileBtn" href="/chat/{{creator_id}}">Chat</a>
+                        <a class="btn btn-default profileBtn" href="/chat/{{creator_id}}">Chat</a>
                     </li>
                 </ul>
             </div>
@@ -69,96 +69,96 @@
                     </li>
                     <li class="listingItemDetailRight">
                         <ul>
-                           <li class="listingItemCondition">Condition:<a href="/search">{{condition}}</a></li>
-                           <li class="listingItemQuantity">Quantity:<a href="#">{{quantity}}</a></li>
-                           <li class="listingItemTrade">Trade Offers:<a href="#" style="color: {{tradeStatus}};">{{trade}}</a></li> 
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="desc-box-listing nomar desc-width listingItemDescription">
-                <h4 class="box-title-listing">Description</h4>
-                <p>{{{description}}}</p>
-               <!--  {{creator_id}} -->
-            </div>
+                         <li class="listingItemCondition">Condition:<a href="/search">{{condition}}</a></li>
+                         <li class="listingItemQuantity">Quantity:<a href="#">{{quantity}}</a></li>
+                         <li class="listingItemTrade">Trade Offers:<a href="#" style="color: {{tradeStatus}};">{{trade}}</a></li> 
+                     </ul>
+                 </li>
+             </ul>
+         </div>
+         <div class="desc-box-listing nomar desc-width listingItemDescription">
+            <h4 class="box-title-listing">Description</h4>
+            <p>{{{description}}}</p>
+            <!--  {{creator_id}} -->
         </div>
-        <div class="listingItemRight">
-            <div class="listingItemShare">
-                <!-- Twitter -->
-                <a href="http://twitter.com/share?url=<URL>&text=<TEXT>&via=<VIA>" target="_blank" class="share-btn twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <!-- Google Plus -->
-                <a href="https://plus.google.com/share?url=<BTN>" target="_blank" class="share-btn google-plus">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-                <!-- Facebook -->
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<URL>" target="_blank" class="share-btn facebook">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
-                    <i class="fa fa-reddit"></i>
-                </a>
-            </div>
-            <div class="listingItemMaps">
-                <ul class="listingItemMapsAPI">
-                    <li>
-                        <div class="listingMapsCanvas" id="map-canvas">
-                            {{> googleMap name="listingImage" options=exampleMapOptions}}
-                        </div>
-                    </li>
+    </div>
+    <div class="listingItemRight">
+        <div class="listingItemShare">
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url=<URL>&text=<TEXT>&via=<VIA>" target="_blank" class="share-btn twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <!-- Google Plus -->
+            <a href="https://plus.google.com/share?url=<BTN>" target="_blank" class="share-btn google-plus">
+                <i class="fa fa-google-plus"></i>
+            </a>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer/sharer.php?u=<URL>" target="_blank" class="share-btn facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
+                <i class="fa fa-reddit"></i>
+            </a>
+        </div>
+        <div class="listingItemMaps">
+            <ul class="listingItemMapsAPI">
+                <li>
+                    <div class="listingMapsCanvas" id="map-canvas">
+                        {{> googleMap name="listingImage" options=exampleMapOptions}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="listingItemUser">
+            <ul class="listingItemUserImg">
+                <li><a href="/profile/{{profile}}"><img src="{{creatorpic}}"></a></li>
+            </ul>
+            <ul class="listingItemUserInfo">
+                <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
+                <li class="rating"><!-- These Stars Are For Display, They Do Not Work-->☆☆☆☆☆</li>
+                <ul class="listingPayment">
+                    <li class="listingPayCash"><i class="fa fa-usd"></i></li>
+                    <li class="listingPayPal"><i class="fa fa-cc-paypal"></i></li>
                 </ul>
-            </div>
-            <div class="listingItemUser">
-                <ul class="listingItemUserImg">
-                    <li><a href="/profile/{{profile}}"><img src="{{creatorpic}}"></a></li>
-                </ul>
-                <ul class="listingItemUserInfo">
-                    <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
-                    <li class="rating"><!-- These Stars Are For Display, They Do Not Work-->☆☆☆☆☆</li>
-                    <ul class="listingPayment">
-                        <li class="listingPayCash"><i class="fa fa-usd"></i></li>
-                        <li class="listingPayPal"><i class="fa fa-cc-paypal"></i></li>
+            </ul>
+        </div>
+        <div class="optionsListClick click-nav">
+            <ul class="no-js">
+                <li>
+                    <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+                    <ul class="optionsItems">
+                        <li>
+                            <button class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
+                                <a href=""><i class="fa fa-pencil"></i>Edit</a>
+                            </button>
+                        </li>
+                        <li><a href="#"><i class="fa fa-star"></i>Save</a></li>
+                        <li>
+                            <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
+                                <!-- <a href="#reportListingModal"> --><i class="fa fa-gavel"></i>Report Listing<!-- </a> -->
+                            </button>
+                        </li>
                     </ul>
-                </ul>
-            </div>
-            <div class="optionsListClick click-nav">
-                <ul class="no-js">
-                    <li>
-                        <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
-                        <ul class="optionsItems">
-                            <li>
-                                <button class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
-                                    <a href=""><i class="fa fa-pencil"></i>Edit</a>
-                                </button>
-                            </li>
-                            <li><a href="#"><i class="fa fa-star"></i>Save</a></li>
-                            <li>
-                                <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
-                                    <!-- <a href="#reportListingModal"> --><i class="fa fa-gavel"></i>Report Listing<!-- </a> -->
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="hidden">
+</div>
+<div class="hidden">
     {{creator_id}}
-    </div>
-        <script type="text/javascript">
+</div>
+<script type="text/javascript">
 
-        $(function () {
-          $('.click-nav > ul').toggleClass('no-js js');
-          $('.click-nav .js ul').hide();
-          $(document).click(function() {
-            if ($('.click-nav .js ul').is(':visible')) {
-              $('.click-nav .js ul', this).slideUp();
-              $('.clicker').removeClass('active');
-            }
-          });
-        });
-        
-    </script>
+    $(function () {
+      $('.click-nav > ul').toggleClass('no-js js');
+      $('.click-nav .js ul').hide();
+      $(document).click(function() {
+        if ($('.click-nav .js ul').is(':visible')) {
+          $('.click-nav .js ul', this).slideUp();
+          $('.clicker').removeClass('active');
+      }
+  });
+  });
+    
+</script>
 </template>

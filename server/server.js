@@ -1,6 +1,6 @@
 if (Meteor.isServer) {
 
-process.env.MAIL_URL = "smtp://postmaster@sandboxde84ff01a1c04de28f27e03ecec45a00.mailgun.org:49c4081bc210fdb4d41e2f37a69efcaa@smtp.mailgun.org:587";
+  process.env.MAIL_URL = "smtp://postmaster@sandboxde84ff01a1c04de28f27e03ecec45a00.mailgun.org:49c4081bc210fdb4d41e2f37a69efcaa@smtp.mailgun.org:587";
   // console.log(meteor_runtime_settings);
 
 
@@ -222,33 +222,43 @@ searchFilter: function (option) {
 
     console.log(selectorCategory);
 
-      var query = Listing.find({ $and:[ selectorCategory, selectorCity ] }).fetch();
-      console.log(query);
-      return query;
-},
-addOffer: function (options) {
-  Offer.insert({
-    listing_title: options.listing_title,
-    img: options.img,
-    offerprice: options.offerprice,
-    date: options.date,
-    location: options.location,
-    listingId: options.listingId,
-    lat: options.lat,
-    lng: options.lng,
-    creator_id: options.creator_id,
-    status: options.status
+    var query = Listing.find({ $and:[ selectorCategory, selectorCity ] }).fetch();
+    console.log(query);
+    return query;
+  },
+  addOffer: function (options) {
+    Offer.insert({
+      listing_title: options.listing_title,
+      img: options.img,
+      offerprice: options.offerprice,
+      date: options.date,
+      location: options.location,
+      listingId: options.listingId,
+      lat: options.lat,
+      lng: options.lng,
+      creator_id: options.creator_id,
+      status: options.status
+    });
+  },
+  addProfileInfo: function (options) {
+    Meteor.users.update( this.userId, { $set: {
+      'profile.photo': options.photo,
+      'profile.about': options.about,
+      'profile.email': options.email,
+      'profile.location': options.location,
+      'profile.link': options.link 
+    }});
+  },
+// IDEAL: instead of manually typing in keys, use iteration
+addReport: function (options){
+  Report.insert({
+    prohibited_box: options.prohibited_box,
+    offensive_box: options.offensive_box,
+    irrelevant_box: options.irrelevant_box,
+    false_box: options.false_box,
+    compliance_box: options.compliance_box,
+    description: options.description
   });
-},
-addProfileInfo: function (options) {
-  console.log(options);
-  Meteor.users.update( this.userId, { $set: {
-    'profile.photo': options.photo ,
-    'profile.about': options.about ,
-    'profile.email': options.email,
-    'profile.location': options.location,
-    'profile.link': options.link 
-  }});
 },
 // TASK - Assign a conversation id that is unique to A-B B-A correspondence
 sendMessage: function (options) {
