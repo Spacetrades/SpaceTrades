@@ -1,5 +1,7 @@
 <template name="UserProfile">
 <!-- Move Contact button -->
+{{> ModalReportUser}}
+
 {{#each profile}}
     <div class="profileUser oneDiv">
         <div class="profileUserLeft">
@@ -59,7 +61,7 @@
                                     <li><a href=""><i class="fa fa-pencil"></i>Edit</a></li>
                                     <li>
                                         <button type="button" class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportUserModal">
-                                            <a href="report-user"><i class="fa fa-gavel"></i>Report User</a>
+                                            <a href="#reportUserModal"><i class="fa fa-gavel"></i>Report User</a>
                                         </button>
                                     </li>
                                 </ul>
