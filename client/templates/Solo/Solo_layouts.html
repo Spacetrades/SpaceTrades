@@ -22,9 +22,6 @@
        |_|                                                 
             * * * * Buy and Sell Locally * * * *  
 -->
-    <script type="text/javascript">
-        document.title = "My new title";
-    </script>
 </head> 
 <body>
 </body>
@@ -34,13 +31,12 @@
 {{> sAlert}}
     {{#if currentUser}}
     {{> homeheaderpost}}
-<!--     {{offerShow}} -->
     {{> ModalNotifications}}
     {{> ModalAddListing}}
     {{> yield}}
     {{else}}
     {{> homeheaderpre}}
-<!--     {{offerShow}} -->
+    {{> ModalJoin}}
     {{> yield}} 
 {{/if}}
 </template>
@@ -66,6 +62,7 @@
     {{> yield}}
     {{else}}
     {{> headersearchpre}}
+    {{> ModalJoin}}
     {{> yield}}
 {{/if}}
 </template>
@@ -81,6 +78,7 @@
     {{> footer}}
     {{else}}
     {{> headerpre}}
+    {{> ModalJoin}}
     {{> HelpCenterNav}}
     {{> yield}}
     {{> footer}}
@@ -97,6 +95,7 @@
     {{> yield}}
     {{else}}
     {{> headerpre}}
+    {{> ModalJoin}}
     {{> yield}}
 {{/if}}
 </template>
@@ -105,14 +104,13 @@
 {{> sAlert}}
  {{#if currentUser}}
     {{> headerpost}}
-<!--     {{offerShow}} -->
     {{userShow}}
     {{> ModalNotifications}}
     {{> ModalAddListing}}
     {{> yield}}
     {{else}}
     {{> headerpre}}
-<!--     {{offerShow}} -->
+    {{> ModalJoin}}
     {{userShow}}
     {{> yield}}
 {{/if}}
