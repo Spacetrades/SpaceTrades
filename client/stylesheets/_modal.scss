@@ -386,6 +386,71 @@
 
 /*~~ Button End ~~*/
 
+/*~~~~ Received Offers Main ~~~~*/
+
+.profileReceivedOffersLi:hover {
+	background-color: #d3d3d3 !important;
+}
+
+.profileReceivedOffersH2 {
+	width: 76%;
+	margin: 40px auto 30px auto !important;
+}
+.profileReceivedOffersH2 a {
+	color:#00bfff !important;
+}
+
+.profileReceivedOffersLi {
+	border-bottom: 1px solid #d3d3d3;
+	padding: 20px 0;
+	width: 75%;
+	margin: 0 auto !important;
+	font-size: 0.9rem;
+}
+
+.profileReceivedOffersLi > a {
+	font-family: 'Droid Sans', sans-serif !important;
+}
+
+.profileReceivedOffersLi a ul li {
+	display: inline-block;
+}
+
+.profileReceivedOffersInfoImg {
+	margin-left: 10px;
+}
+
+.profileReceivedOffersInfoImg img {
+	height: 30px !important;
+	width: 30px !important;
+	border-radius: 50% !important;
+	vertical-align: middle !important;
+	margin-right: 10px;
+}
+
+.profileReceivedOffersInfoPrice {
+	color: #404040 !important;
+}
+
+.profileReceivedOffersInfoTime {
+	font-size: 0.85rem !important;
+	font-style: italic !important;
+	color: #6c54b3 !important;
+	float: right !important;
+    margin-top: 3px !important;
+    margin-right: 10px;
+}
+
+.profileReceivedOffersInfoLocation {
+	color: #404040 !important;
+	margin: 0 10px !important;
+	float: right !important;
+	margin-top: 3px !important;
+}
+
+/*~~ Button End ~~*/
+
+
 #profileReceivedDecline {
 	margin: 0 0 0 10px !important;
 }
