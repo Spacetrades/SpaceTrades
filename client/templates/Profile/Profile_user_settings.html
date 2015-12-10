@@ -36,8 +36,7 @@
 			<li class="profileSettingsLi">
 				<ul class="profileSettingsAbout">
 					<li><h4>About You</h4></li>
-					<!-- "Edit Your Profile Description" or Set Description Is Default Value -->
-					<li><input type="text" maxlength="100" rows="3" class="profileSettingsAboutInput" placeholder="Edit Your Profile Description (100 Characters Max)" value="{{about}}"></li>
+					<li class="abouttext"><textarea maxlength="20" rows="3" class="message" placeholder="Edit" value="{{about}}"> </textarea></li>
 				</ul>
 			</li>
 			<li class="profileSettingsLi">
@@ -54,13 +53,6 @@
 					<li><input type="text" class="profileSettingsLocationInput" placeholder="city, state" value="{{location}}"></li>
 				</ul>
 			</li>
-
-			<!-- <li class="profileSettingsLi">
-				<ul class="profileSettingsUsername">
-					<li><h4>Profile Link</h4></li>
-					<li><input type="text" class="profileSettingsUsernameInput" placeholder="Spacetrades.com/CustomLink"></li>
-				</ul>
-			</li> -->
 		</ul>
 		<div class="profileSettingsButton">
 			<input type="submit" class="profileSettingsSubmit" value="Save Changes">

@@ -1,7 +1,7 @@
 <template name="UserProfile">
 {{> ModalReportUser}}
 
-{{#each profile}}
+{{#with profile}}
     <div class="profileUser oneDiv">
         <div class="profileUserLeft">
             <div class="profileUserImage">
@@ -20,7 +20,7 @@
         <div class="profileUserRight">
             <div class="profileUserName">
                 <ul>
-                    <li><h1>{{profile.name}}</h1></li>
+                    <li><h1>{{name}}</h1></li>
                     <li>
                         <div class="circle" style="background-color: {{online.color}}"></div>
                     </li>
@@ -28,19 +28,19 @@
             </div>
             <div class="profileUserRating">
                 <ul class="profileUserRatingUl">
-                    <li class="profileStars">☆☆☆☆☆<span>(28 Reviews)</span></li>
+                    <li class="profileStars">★★★☆☆<span>({{reviews}} Reviews)</span></li>
                     <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
                 </ul>
             </div>
             <div class="profileUserInfo">
                 <ul class="profileUserArea">
-                    <li>{{profile.location}}</li>
+                    <li>{{location}}</li>
                     <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                 </ul>
             </div>
             <div class="desc-box">
                 <h4 class="box-title">Description</h4>
-                <p>{{profile.about}}</p>
+                <p>{{about}}</p>
             </div>
             <div class="profileUserFeedback desc-box">
                 <ul class="profileUserFeedbackUl">
@@ -152,5 +152,5 @@
             </li>
         </ul>
     </div> -->
-    {{/each}}
+    {{/with}}
 </template>

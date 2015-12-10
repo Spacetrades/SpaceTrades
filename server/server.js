@@ -236,8 +236,10 @@ if (Meteor.isServer) {
     },
     addOffer: function(options) {
       Offer.insert({
+        createdAt: new Date(),
         listing_title: options.listing_title,
         img: options.img,
+        price: options.price,
         offerprice: options.offerprice,
         date: options.date,
         location: options.location,
@@ -245,6 +247,7 @@ if (Meteor.isServer) {
         lat: options.lat,
         lng: options.lng,
         creator_id: options.creator_id,
+        payment: options.payment,
         status: options.status
       });
     },

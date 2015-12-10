@@ -1150,6 +1150,15 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     border: 1px solid #d3d3d3 !important;
 }
 
+.abouttext textarea {
+    width: 300% !important;
+    padding: 10px 12px !important;
+    height: 80px !important;
+    border-radius: 4px !important;
+    border: 1px solid #d3d3d3 !important;
+}
+
+
 .contactsubmit input {
     padding: 8px 15px;
     font-size: 1rem;
@@ -2130,10 +2139,6 @@ i:hover {
      height: 20px;
      padding-left: 5px; 
 }
-
-// .contacttext textarea {
-
-// }
 
 .contactSend {
     font-family: 'Roboto' !important;
@@ -5310,6 +5315,11 @@ On click the images will be displayed at normal size to complete the effect
 	display: inline-block;
 	margin-left: 0;
 	padding-right: 4px;
+}
+
+.profileStars{
+    color: $color-purple;
+    font-size: 1.5em;
 }
 
 /*

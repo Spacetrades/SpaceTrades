@@ -1,0 +1,39 @@
+	<template name="receivedOfferFullCard">
+		<div class="modSentOffer modal" id="receivedOffersModalFull" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modSentOfferDialog modal-dialog" role="document">
+				<div class="modSendOfferContent modal-content">
+					<div class="modSentOfferBody modal-body">
+						<div class="profileReceivedOffers">
+							<ul id="profileReceivedModalUl" class="profileReceivedUl">
+								<li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+									<p class="homeCardOfferRecieved profileSentOfferStatus">{{dateCreated}}</p>
+									<ul class="profileReceivedCardLeft">
+										<li class="profileReceivedImage">
+											<a href="/listing/{{listingId}}"><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg" class="profileReceivedImg"></a>
+										</li>
+									</ul>
+									<ul class="profileReceivedCardRight profileViewMeetupRight">
+										<li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
+										<li id="profileReceivedName" class="profileReceivedName">You received an offer from <a href="">{{creator_id}}</a></li>
+										<li class="profileReceivedPrice"><b>Offered Price:</b> <span class="money"> {{offerprice}}</span></li>
+										<li class="profileReceivedPayment"><b>Payment:</b>{{payment}}</li>
+										<li class="profileReceivedDate"><b>Date of Meetup:</b>{{date}}</li>
+										<li class="profileReceivedLocation"><b>Location:</b>{{location}}</li>
+										<li id="profileReceivedButtons">
+											<ul id="profileReceivedButtonsUl">
+												<li id="profileReceivedAccept"><a href="#">Accept</a></li>
+												<li id="profileReceivedDecline" class="#"><a href="#">Decline</a></li>
+											</ul>
+										</li>
+									</ul>
+									<div id="profileReceivedOffersMaps">
+										{{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
