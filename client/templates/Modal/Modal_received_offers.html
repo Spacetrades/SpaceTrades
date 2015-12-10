@@ -7,90 +7,10 @@
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
 		        <ul id="profileReceivedModalUl" class="profileReceivedUl">
-		        	<h2 class="profileReceivedOffersH2">Offers For <a href="#">Nike Air Max Retro 7s</a></h2>
-		        	{{#each listing}}
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">{{price}}</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">{{location}}</li>
-			        		</ul>
-		        		</a>
-		        	</li>
+		        	<h2 class="profileReceivedOffersH2">Offers For: <a href="/listing/{{listingId}}">{{listingSelected.listing_title}}</a></h2>
+		        	{{#each offers}}
+		    			{{> receivedOfferCard}}
 		        	{{/each}}
-		        	<!-- Examples -->
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
-		        	<li class="profileReceivedOffersLi">
-		        		<a class="profileReceivedOffersHover btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal" data-target="#receivedOffersModalFull">
-			        		<ul class="profileReceivedOffersInfo">
-			        			<li class="profileReceivedOffersInfoImg"><img src="http://graph.facebook.com/663275057124879/picture/?type=small"></li>
-			        			<li class="profileReceivedOffersInfoPrice">Price: <span class="money">$340</span></li>
-			        			<li class="profileReceivedOffersInfoTime">3 hours ago</li>
-			        			<li class="profileReceivedOffersInfoLocation">505 5th Avenue New York, NY 10038</li>
-			        		</ul>
-		        		</a>
-		        	</li>
 		        </ul>
 		    </div>
 	      </div>
