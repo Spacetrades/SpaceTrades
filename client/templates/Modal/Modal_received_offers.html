@@ -7,7 +7,7 @@
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
 		        <ul id="profileReceivedModalUl" class="profileReceivedUl">
-		        	<h2 class="profileReceivedOffersH2">Offers For: <a href="/listing/{{listingId}}">{{listingSelected.listing_title}}</a></h2>
+		        	<h2 class="profileReceivedOffersH2">Offers For: <a href="/listing/{{listingSelected._id}}">{{listingSelected.listing_title}}</a></h2>
 		        	{{#each offers}}
 		    			{{> receivedOfferCard}}
 		        	{{/each}}
