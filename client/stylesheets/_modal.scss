@@ -23,6 +23,8 @@
 
 .modal-body {
 	min-height: 500px;
+	max-height: 500px;
+	overflow-y: scroll;
 }
 
 .modMultiBtn {
@@ -566,6 +568,19 @@
 }
 
 /*~~ Button End ~~*/
+
+.modEditListingDiv {
+	width: 90%;
+	margin: 40px auto 10px auto;
+}
+
+.modEditListingDiv > ul > li {
+	margin: 10px 0 !important;
+}
+
+.modEditListingDiv > ul > li > div {
+	margin-top: 5px;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
