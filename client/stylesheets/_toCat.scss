@@ -5446,3 +5446,32 @@ On click the images will be displayed at normal size to complete the effect
 .listingPayCash i {
 	margin-right: 5px;
 }
+
+
+/** Amount Profile **/
+
+.profileUserAmount ul {
+    margin: 8px 0 !important;
+}
+
+.profileUserAmount ul li {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    color: #fff !important;
+    border-radius: 4px;
+    background-color: #404040 !important;
+    margin-left: 0;
+}
+
+.profileUserAmountBought span {
+    margin-left: 10px;
+}
+
+.profileUserAmountSold span {
+    margin-left: 10px;
+}
+
+
+
+
