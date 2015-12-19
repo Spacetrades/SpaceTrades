@@ -1,4 +1,4 @@
-  if ( Meteor.isServer ) {
+  if (Meteor.isServer) {
 
   // Removes the config b/c dupliation error and re-defines it
   // Facebook API config
