@@ -188,6 +188,7 @@ if (Meteor.isServer) {
 
       Listing.insert({
         createdAt: new Date(),
+        status: "Pending",
         creator_id: options.creator_id,
         facebook_id: options.facebook_id,
         listing_title: options.listing_title,
@@ -250,6 +251,14 @@ if (Meteor.isServer) {
         payment: options.payment,
         status: options.status
       });
+    },
+    acceptOffer: function(options) {
+      Offer.update({ _id: options.id }, { $set: { status: "Accepted" }});
+      Listing.update({ _id: options.listingId }, { $set: { status: "Accepted" }});
+    },
+    declineOffer: function(options) {
+      Offer.update({ _id: options.id }, { $set: { status: "Declined" }});
+      Listing.update({ _id: options.listingId }, { $set: { status: "Declined" }});
     },
     addProfileInfo: function(options) {
       Meteor.users.update(this.userId, {
