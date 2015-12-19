@@ -4,8 +4,27 @@
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
-		       
-		    </div>
+		        <ul class="profileReceivedUl">
+		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a href="#">Nathan</a> is in 2 days</p>
+		                <ul class="profileReceivedCardLeft">
+		                    <li class="profileReceivedImage">
+		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
+		                    </li>
+		                </ul>
+		                <ul class="profileReceivedCardRight profileViewMeetupRight">
+		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
+                        <li id="profileReceivedName" class="profileReceivedName">You're selling your <a href="#">Nike Air Max Retro</a> for $140</li>
+		                    <li class="profileReceivedPrice"><a href="#">Meetup Details</a></li>
+		                    <li class="profileReceivedPayment"><a href="#">Get Directions</a></li>
+		                    <li class="profileReceivedDate"><a href="#">Contact Nathan</a></li>
+		                </ul>
+		                <div id="profileReceivedOffersMaps">
+		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+		                </div>
+		            </li>
+		        </ul>
+		      </div>
 	      </div>
 	    </div>
 	  </div>
