@@ -1,15 +1,15 @@
 <template name="ProfileActiveCard">
-	<li class="profileCardLi">
-        <p>Meetup With Nathan Chackerian</p>
-        <ul class="profileCardImage">
-            <a href="/listing/{{_id}}"><img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/ykBL2h9RZkQmJLi38/download.jpg" class="profileCardImg"></a>
-        </ul>
-        <ul class="profileCardInfo">
-            <li><a href="/listing/{{_id}}"><h4>Nike Example Max Retro</h4></a></li>
-	        <li class="money profileCardItem">$350</li>
-	        <li class="profileCardItem">Dec 13, 2015</li>
-	        <li class="profileCardItem">555 5th Avenue, New York NY 10038</li>
-            <li class="managerOfferView managerOfferUnsave"><a href="#" class="ph-button ph-btn-blue">Meetup Details</a></li>
-        </ul>
-    </li>
+   <li class="profileCardLi">
+            <p>Meetup With {{name}}</p>
+            <ul class="profileCardImage">
+                <a href="/listing/{{_id}}"><img src="{{img}}" class="profileCardImg"></a>
+            </ul>
+            <ul class="profileCardInfo">
+                <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+                <li class="money profileCardItem">${{price}}</li>
+                <li class="profileCardItem">{{date}}</li>
+                <li class="profileCardItem">{{location}}</li>
+                <li class="managerOfferView managerOfferUnsave"><a href="#" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalProfileActive">Meetup Details</a></li>
+            </ul>
+        </li>   
 </template>
