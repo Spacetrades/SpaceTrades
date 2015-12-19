@@ -23,6 +23,8 @@
 
 .modal-body {
 	min-height: 500px;
+	max-height: 500px;
+	overflow-y: scroll;
 }
 
 .modMultiBtn {
@@ -566,6 +568,19 @@
 }
 
 /*~~ Button End ~~*/
+
+.modEditListingDiv {
+	width: 90%;
+	margin: 40px auto 10px auto;
+}
+
+.modEditListingDiv > ul > li {
+	margin: 10px 0 !important;
+}
+
+.modEditListingDiv > ul > li > div {
+	margin-top: 5px;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
@@ -1121,7 +1136,45 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 /*~~ Join Button End ~~*/
 
 .modJoinWrapper {
+	width: 70% !important;
+	margin: 60px auto;
+}
 
+.modJoinWrapper h1 {
+	font-size: 2.4rem;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.modJoinWrapper ul li {
+	line-height: 2;
+}
+
+.modJoinOnly {
+	margin-top: 20px;
+	font-size: 1.4rem !important;
+}
+
+.modJoinFB-Btn {
+	margin-top: 20px;
+	background-color: #3A5795 !important;
+	border-radius: 4px;
+	color: #fff !important;
+	width: 40%;
+	padding: 10px;
+	text-align: center;
+}
+
+.modJoinFB-Btn b {
+	font-weight: 400 !important;
+	font-size: 1rem !important;
+}
+
+.modJoinFB-Btn i {
+	font-size: 1.4rem;
+	color: #fff !important;
+	vertical-align: middle !important;
+	padding-right: 6px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
