@@ -1,0 +1,15 @@
+<template name="ModalProfileActiveDirections">
+	<div class="modSentOffer modal" id="receivedOffersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modSentOfferDialog modal-dialog" role="document">
+	    <div class="modSendOfferContent modal-content">
+	      <div class="modSentOfferBody modal-body">
+	      	<div class="profileReceivedOffers">
+            <div id="#">
+                {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+            </div>
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</template>
