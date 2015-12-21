@@ -574,8 +574,17 @@
 	margin: 40px auto 10px auto;
 }
 
+.modEditListingDiv h3 {
+	font-weight: 400 !important;
+}
+
 .modEditListingDiv > ul > li {
 	margin: 10px 0 !important;
+	display: inline-block !important;
+}
+
+.modEditListingDiv br {
+	margin: 15px 0;
 }
 
 .modEditListingDiv > ul > li > div {
