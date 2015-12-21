@@ -11,6 +11,7 @@
 						<ul>
 							<li>Title <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="{{listingtitle}}" maxlength="50"></li>
 							<li>Price <input type="text" class="listprice" placeholder="{{price}}" maxlength="5"></li>
+                            <br>
 							<li>Category
 								<div class="styled-select">
                                     <select class="listcategory">
@@ -28,6 +29,7 @@
                                     </select>
                                 </div>
 							</li>
+                            <br>
 							<li>Images
 								<input type="file" class="imageupload" multiple/>
 		                        <ul class="addListImg">
@@ -56,13 +58,11 @@
                             <li><label>Brand</label>
                                 <div class="styled-select">
                                     <select class="condition">
-                                        <option value="New">New</option>
-                                        <option value="Like New">Like New</option>
-                                        <option value="Used">Used</option>
-                                        <option value="Needs Repair">Needs Repair</option>
+                                         <option value="" disabled selected >Select Brand</option>
                                     </select>
                                 </div>
                             </li>
+                            <br>
                             <li><label>Condition</label>
                                 <div class="styled-select">
                                     <select class="condition">
@@ -90,7 +90,7 @@
                                     </select>
                                 </div>
                             </li>
-                            <li class="hidden listcapacity"><label>Capacity</label>
+                            <!-- <li class="hidden listcapacity"><label>Capacity</label>
                                 <div class="styled-select">
                                     <select class="listspace">
                                         <option value="" disabled selected>Select Size</option>option>
@@ -106,10 +106,12 @@
                                         <option value="1 TB +">1 TB +</option>
                                     </select> 
                                 </div>
-                            </li>
+                            </li> -->
+                            <br>
                             <li><label>Color</label>
                                 <input type="text" id="colorpicker"> 
                             </li>
+                            <br>
                             <li>Trade Offers
                             	<ul>
                                     <li class="modOfferRequestPaymentPaypal">
@@ -122,6 +124,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            <br>
                             <li>Payment Method
                             	<ul>
                                     <li class="modOfferRequestPaymentCash">
@@ -138,6 +141,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            <br>
                             <li>Description
                         		<textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
                             </li>

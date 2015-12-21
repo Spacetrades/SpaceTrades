@@ -28,7 +28,7 @@
             </div>
             <div class="profileUserRating">
                 <ul class="profileUserRatingUl">
-                    <li class="profileStars">★★★☆☆<span>({{reviews}} Reviews)</span></li>
+                    <li class="profileStars">★★★☆☆<span>({{reviews}} Reviews )</span></li>
                     <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
                 </ul>
             </div>
@@ -40,20 +40,13 @@
             </div>
             <div class="profileUserAmount">
                 <ul>
-                    <li class="profileUserAmountBought">Bought: <span>{{boughtTotal}}</span></li>
-                    <li class="profileUserAmountSold">Sold: <span>{{soldTotal}}</span></li>
+                    <li class="profileUserAmountBought">Bought<span class="money">$532{{boughtTotal}}</span></li>
+                    <li class="profileUserAmountSold">Sold<span class="money">$1280{{soldTotal}}</span></li>
                 </ul>
             </div>
             <div class="desc-box">
                 <h4 class="box-title">Description</h4>
                 <p>{{about}}</p>
-            </div>
-            <div class="profileUserFeedback desc-box">
-                <ul class="profileUserFeedbackUl">
-                    <h4 class="box-title">Feedback</h4>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
             <div class="profileUserButtons">
                 <ul class="profileUserButtonUl">
@@ -91,6 +84,47 @@
         });
         
     </script>
+    <div class="profileUserCards oneDiv">
+        <ul class="profileUserCardsUl">
+       <!-- ORIGINAL CODE 
+       {{#each listing}}
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+        {{/each}} -->
+        <!-- 8 Listings MAX -->
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+        </ul>
+        <ul class="profileUserMore">
+        <!-- This takes you to search  -->
+            <li>
+                <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
+            </li>
+        </ul>
+    </div>
     <div class="profileUserFeedbackView oneDiv">
         <h2>Feedback</h2>
         <ul class="profileUserFeedbackViewSymbols">
@@ -131,19 +165,5 @@
             <li><b>"This seller is the best seller i've ever met and I want to keep buying kick"</b><span>Sept 2015</span><a href="#">Steve Jobs</a></li>
         </ul>        
     </div>  
-  <!-- <div class="profileUserCards oneDiv">
-        <ul class="profileUserCardsUl">
-        {{#each listing}}
-            <li>
-                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-            </li>
-        {{/each}}
-        </ul>
-        <ul class="profileUserMore">
-            <li>
-                <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
-            </li>
-        </ul>
-    </div> -->
     {{/with}}
 </template>

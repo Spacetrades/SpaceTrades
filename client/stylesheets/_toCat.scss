@@ -3549,6 +3549,8 @@ On click the images will be displayed at normal size to complete the effect
     border-radius: 50%;
 }
 
+
+
 /* Graph */
 
 .profileUserGraph {
@@ -3596,6 +3598,7 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserRating ul li i {
     margin-left: 15px;
     font-size: 0.9rem;
+    color: #999 !important;
 }
 
 .profileUserInfo ul {
@@ -3605,12 +3608,13 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserInfo > ul li {
     display: inline-block;
+    vertical-align: middle !important;
 }
 
 .profileUserInfo ul li a {
     padding: 2px 5px;
-    margin-left: 30px;
     font-size: 1.6rem;
+    vertical-align: middle !important;
 }
 
 .profileUserInfo ul li a i {
@@ -3647,8 +3651,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .desc-box p {
-    width: 75%;
-    padding: 10px;
+    width: 95%;
+    padding: 10px 10px 13px 10px;
     margin: 0;
 }
 
@@ -3816,6 +3820,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserCards {
     text-align: center;
+    border-bottom: 1px solid #00bfff;
 }
 
 .profileUserCards h2 {
@@ -4256,7 +4261,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .footerSocial li {
     display: inline-block;
-    
+    vertical-align: middle !important;
 }
 
 .footerbottom > li {
@@ -5318,8 +5323,18 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileStars{
-    color: $color-purple;
+    color: gold;
     font-size: 1.5em;
+    vertical-align: middle !important;
+}
+
+.profileStars span {
+    color: #777 !important;
+    vertical-align: middle !important;
+}
+
+.profileStars span:hover {
+    color: #555 !important;
 }
 
 /*
@@ -5451,7 +5466,7 @@ On click the images will be displayed at normal size to complete the effect
 /** Amount Profile **/
 
 .profileUserAmount ul {
-    margin: 8px 0 !important;
+    margin: 15px 0 8px 0 !important;
 }
 
 .profileUserAmount ul li {
@@ -5464,12 +5479,16 @@ On click the images will be displayed at normal size to complete the effect
     margin-left: 0;
 }
 
+.profileUserAmount ul li span {
+    display: inline-block !important;
+}
+
 .profileUserAmountBought span {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .profileUserAmountSold span {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 
