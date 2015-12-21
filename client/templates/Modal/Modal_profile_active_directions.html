@@ -4,10 +4,15 @@
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
-            <div id="#">
-                {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
-            </div>
-		      </div>
+	            <div id="#" class="modActiveDirWrap">
+	            	<h3>Directions To <span class="modActiveDirLocations">505 5th Avenue New York, NY 10038</span></h3>
+	            	<div class="modActiveDirMaps">
+		                <!-- {{> googleMap name="itemoffermap" options=ItemOfferOptions}} -->
+		                <img src="https://listing-images-spacetrades.s3-us-west-2.amazonaws.com/YpsXKgsQZwhHbpJEm/maps.png">
+		            </div>
+		            <li class="modProfileActiveBtn modProfileActiveBtnDir"><button href="#" data-dismiss="modal">Back</button></li>
+	            </div>
+		    </div>
 	      </div>
 	    </div>
 	  </div>

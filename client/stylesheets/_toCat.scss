@@ -10,9 +10,9 @@
 GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 
 /****** GLOBAL ******/
-
+ 
 ::selection {
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.67);
 }
 
 .tooltip > .tooltip-inner {

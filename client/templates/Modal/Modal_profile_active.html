@@ -6,7 +6,7 @@
 	      	<div class="profileReceivedOffers">
 		        <ul class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a href="#">Nathan</a> is in 2 days</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="#">Nathan</a> is in 2 days</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
 		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
@@ -14,10 +14,10 @@
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
-                        <li id="profileReceivedName" class="profileReceivedName">You're selling your <a href="#">Nike Air Max Retro</a> for $140</li>
-		                    <li class="profileReceivedCancel"><a href="#" data-toggle="modal" data-target="#ModalProfileActiveDetails">Meetup Details</a></li>
-		                    <li class="profileReceivedCancel"><a href="#" data-toggle="modal" data-target="#ModalProfileActiveDirections">Get Directions</a></li>
-		                    <li class="profileReceivedCancel"><a href="#">Contact Nathan</a></li>
+                        	<li id="profileReceivedName" class="profileReceivedName">You are selling this item for <span class="money">${{price}}</span></li>
+		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDetails">Meetup Details</button></li>
+		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDirections">Get Directions</button></li>
+		                    <li class="modProfileActiveBtn"><button href="/chat">Contact Nathan</button></li>
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
 		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
@@ -27,6 +27,6 @@
 		      </div>
 	      </div>
 	    </div>
-	  </div>
+	  </div> 
 	</div>
 </template>

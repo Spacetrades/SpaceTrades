@@ -4,8 +4,31 @@
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
-		        
-		      </div>
+		        <ul class="profileReceivedUl">
+		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus"></p>
+		                <ul class="profileReceivedCardLeft">
+		                    <li class="profileReceivedImage">
+		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
+		                    </li>
+		                </ul>
+		                <ul class="profileReceivedCardRight profileViewMeetupRight">
+		                    <li><a href="/listing/{{listingId}}"><h3>Nike Air Max Retro{{listing_title}}</h3></a></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You are buying from Nathan</li>
+		                    <li class="profileReceivedPrice"><b>Final Amount:</b> <span class="money">$120</span>
+Original Price: {{price}}
+		                    </li>
+		                    <li class="profileReceivedPayment"><b>Payment:</b> Paypal</li>
+		                    <li class="profileReceivedDate"><b>Date of Meetup:</b>{{date}}</li>
+		                    <li class="profileReceivedLocation"><b>Location:</b>{{location}}</li>
+		                    <li class="modProfileActiveBtn"><button href="#" data-dismiss="modal">Back</button></li>
+		                </ul>
+		                <div id="profileReceivedOffersMaps">
+		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+		                </div>
+		            </li>
+		        </ul>
+		    </div>
 	      </div>
 	    </div>
 	  </div>
