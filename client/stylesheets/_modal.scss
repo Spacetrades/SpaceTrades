@@ -1181,10 +1181,62 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	END END END END END END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Profile Active Modal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+.modProfileActiveBtn {
+	margin: 20px 0 !important;
+	color: #fff !important;
+}
 
+.modProfileActiveBtn button {
+	padding: 15px !important;
+	width: 75% !important;
+	color: #fff !important;
+	background-color: #f8504b !important;
+	border-radius: 4px;
+}
 
+.modProfileActiveBtn button:hover {
+	background-color: #f73c37 !important;
+}
 
+.modProfileActiveBtn:first-child {
+	margin-top: 40px !important;
+}
+
+.modActiveCreator {
+	color: #00bfff !important;
+}
+
+.modActiveDirWrap {
+	text-align: center;
+}
+
+.modActiveDirWrap h3 {
+	color: #00bfff;
+	font-weight: 400;
+}
+
+.modActiveDirMaps img {
+	width: 80% !important;
+    height: 320px !important;
+}
+
+.modProfileActiveBtnDir {
+	float: right !important;
+	width: 40% !important;
+	margin-top: 0 !important;
+}
+
+.modProfileActiveBtnDir button {
+	margin-right: 200px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	END END END END END END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
 
