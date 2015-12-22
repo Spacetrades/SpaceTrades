@@ -260,6 +260,9 @@ if (Meteor.isServer) {
     declineOffer: function(options) {
       Offer.update({ _id: options.id }, { $set: { status: "Declined" }});
     },
+    cancelOffer: function(options) {
+      Offer.update({ _id: options.id }, { $set: { status: "Cancelled" }});
+    },
     addProfileInfo: function(options) {
       Meteor.users.update(this.userId, {
         $set: {
