@@ -23,7 +23,11 @@ Original Price: <span class="money">{{price}}</span>
 		                    <li class="profileReceivedPayment"><b>Payment: </b> Paypal</li>
 		                    <li class="profileReceivedDate"><b>Date of Meetup: </b>{{date}}</li>
 		                    <li class="profileReceivedLocation"><b>Location: </b>{{location}}</li>
+		                    {{#if offerStatus.pending }}
 		                    <li id="profileReceivedCancel"><a href="#">Cancel Offer</a></li>
+		                    {{else}}
+		                    <li id="profileReceivedCancel"><a href="#">Go to Meetup</a></li>
+		                    {{/if}}
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
 		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
