@@ -55,10 +55,9 @@
                 <li class="headerDropDown navNotifications clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
                     <ul class="headerDropDownNav">
-                        <li><a href="#">Offer From Jack</a></li>
-                        <li><a href="#">Offer Accepted By Paul</a></li>
-                        <li><a href="#">Your Listing Expired</a></li>
-                        <li><a href="#">Saved Listing Ended</a></li>
+                        {{#each Notifications}}
+                        <li>{{> Notification}}</li>
+                        {{/each}}
                     </ul>
                 </li> 
                 <li class="headerDropDown navMessages clickDropper">

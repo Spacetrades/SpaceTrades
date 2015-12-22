@@ -253,6 +253,18 @@ if (Meteor.isServer) {
         status: options.status
       });
     },
+    // For: Report, Add offer, Accept Offer, Badge, new Follower, TB system
+    // Destination is set in options previously
+    pulseNotify: function(options) {
+      Notification.insert({
+        listing_title: options.listing_title,
+        offerprice: options.offerprice,
+        creator_id: options.creator_id,
+        listingId: options.listingId,
+        destination: options.destination,
+        action: options.action
+      });
+    },
     acceptOffer: function(options) {
       Offer.update({ _id: options.id }, { $set: { status: "Accepted" }});
       Listing.update({ _id: options.listingId }, { $set: { status: "Accepted", offerAccepted: options.id }});

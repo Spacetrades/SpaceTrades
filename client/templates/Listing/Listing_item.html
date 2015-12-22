@@ -1,8 +1,5 @@
 <template name="item">
-    <!-- TASK - Make a different background depending on the Condition state. Ex: new is super green and old is brown  Rotting-->
     <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied Check and Cross -->
-    <!-- TASK - Dropdowns being open on page load, change this -->
-    <!-- TASK - Facebook, Twitter, Instagram Listing sharing in the options or near the username -->
     <!-- TASK - show created at timestamp -->
     {{> ModalOfferRequest}}
     {{> ModalReportListing}}
@@ -17,6 +14,7 @@
 
     <div class="listingItemDiv oneDiv">
         <h1 class="listingItemTitle">{{listing_title}}</h1>
+        <span>Created: {{dateFormatted}}</span>
         <p class="listingItemOffersRecieved">{{offers}} Offers Received</p>
         <div class="listingItemLeft">
             <div class="listingItemPriceButtons">
