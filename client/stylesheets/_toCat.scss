@@ -1160,6 +1160,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     height: 80px !important;
     border-radius: 4px !important;
     border: 1px solid #d3d3d3 !important;
+    vertical-align: middle !important;
 }
 
 
@@ -2152,7 +2153,7 @@ i:hover {
 }
 
 .contactButton {
-    padding: 15px 22px;
+    padding: 13px 18px;
     color: #fff ;
     background-color: #f8504b;
     border: 1px solid #f8504b;
@@ -2161,6 +2162,7 @@ i:hover {
     overflow: hidden;  
     font-size: 1.2rem !important; 
     float: right !important;
+    font-size: 1rem !important;
 }
 
 .contactButton:hover {
@@ -2480,6 +2482,7 @@ i:hover {
             width: 150px;
             padding: 18px 50px 18px 0px;
             border-top: 1px solid #555;
+            font-size: 0.8rem !important;
 
             a {
                 color: #fff;
@@ -2517,7 +2520,8 @@ i:hover {
 }
 
 .clickDropper li ul li a {
-	padding: 15px 20px 15px 15px !important;
+	padding: 15px 0px 15px 15px !important;
+    font-size: 0.8rem !important;
 }
 
 // .headerDropDown ul 
@@ -2549,6 +2553,14 @@ i:hover {
     display: block;
     position: absolute;
     z-index: 2;
+}
+
+.headerPreDrop {
+    margin-left: -172px !important;
+}
+
+.Shoes {
+    margin-left: -192px !important;
 }
 
 .headerDropDown ul li:hover {
@@ -3389,7 +3401,7 @@ On click the images will be displayed at normal size to complete the effect
     width: 45%;
 }
 
-.listingItemDetailLeft ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(2) {
+.listingItemDetailLeft ul li:nth-child(2), .listingItemDetailLeft ul li:nth-child(3), .listingItemDetailRight ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(3) {
     margin-top: 18px;
     margin-bottom: 18px;
 }
@@ -4968,8 +4980,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileSettingsButton input {
-    font-size: 1.2rem;
-    padding: 15px 22px;
+    font-size: 1rem;
+    padding: 13px 18px;
     color: #fff !important;
     background-color: #f8504b;
     border: 1px solid #f8504b;
