@@ -258,10 +258,10 @@ if (Meteor.isServer) {
     pulseNotify: function(options) {
       Notification.insert({
         listing_title: options.listing_title,
-        offerprice: options.offerprice,
+        offer_price: options.offerprice,
         creator_id: options.creator_id,
         listingId: options.listingId,
-        destination: options.destination,
+        destination: send.destination,
         action: options.action
       });
     },
