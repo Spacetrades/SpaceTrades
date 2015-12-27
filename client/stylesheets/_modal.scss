@@ -495,16 +495,46 @@
 	padding: 15px 52px;
 }
 
-#profileReceivedAccept {
+#profileReceivedAccept, #profileReceivedAcceptBtn {
 	background-color: #49e20e !important;
+	margin-right: 10px;
 }
 
-#profileReceivedAccept:hover {
+#profileReceivedAccept:hover, #profileReceivedAcceptBtn:hover {
 	background-color: #3BCE02 !important;
 }
 
 .profileReceivedModalUl {
 
+}
+
+.receivedGoBack {
+	background-color: #00bfff !important;
+	margin-right: 10px !important;
+}
+
+.receivedGoBack:hover {
+	background-color: #04b2ec !important; 
+}
+
+#receivedContinue {
+	font-size: 1.7rem;
+	margin-top: 35% !important;
+    margin-left: 30% !important;
+    width: 150% !important;
+}
+
+#receivedContinueBtn {
+	margin-left: 48% !important;
+    width: 100%;
+}
+
+#receivedContinueBtn ul li a {
+	color: #fff !important;
+}
+
+#receivedContinueBtn ul li a:hover {
+	text-decoration: none !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
