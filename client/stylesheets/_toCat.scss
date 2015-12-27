@@ -3272,6 +3272,19 @@ On click the images will be displayed at normal size to complete the effect
     height: 500px !important;
 }
 
+.itemAfterBanner {
+    background-color: $color-purple;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.itemAfterBanner b {
+    color: #fff;
+    font-weight: 700;
+}
+
 .listingItemLeft {
     width: 62%;
     float: left;

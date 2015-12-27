@@ -1,1 +1,130 @@
-<!-- Space Reserved For Item After it's been accepted -->
+<template name="itemAfter">
+    <!-- TASK - Make an icon for trades. Maybe draw this and have Trades Allowed or Trades Denied Check and Cross -->
+    <!-- TASK - show created at timestamp -->
+    <div class="listingItemDiv oneDiv">
+    	<div class="itemAfterBanner"><b>Item was purchased or removed and is no longer available.</b></div>
+        <h1 class="listingItemTitle">{{listing_title}}</h1>
+        <span>Created: {{dateFormatted}}</span>
+        <p class="listingItemOffersRecieved">{{offers}} Offers Received</p>
+        <div class="listingItemLeft">
+            <div class="listingItemPriceButtons">
+                <ul class="listingItemPrice">
+                    <li class="money itemMoney">${{price}}</li>
+                </ul>
+                <ul class="listingItemButtons">
+                    <li>
+                        <button class="modOfferRequestTrigger btn btn-default">Offer</button>
+                    </li>
+                    <li>
+                        <a class="btn btn-default profileBtn">Chat</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="listingItemSlider">
+                <div class="slider">
+                    <input type="radio" name="slide_switch" id="id1" checked="checked"/>
+                    <label for="id1" class="sliderSmallOne">
+                        <img src="{{img1}}" />
+                    </label>
+                    <img src="{{img1}}"/>
+
+                    <input type="radio" name="slide_switch" id="id2" />
+                    <label for="id2" class="sliderSmallTwo">
+                        <img src="{{img2}}" />
+                    </label>
+                    <img src="{{img2}}"/>
+
+                    <input type="radio" name="slide_switch" id="id3"/>
+                    <label for="id3" class="sliderSmallThree">
+                        <img src="{{img3}}" />
+                    </label>
+                    <img src="{{img3}}"/>
+
+                    <input type="radio" name="slide_switch" id="id4"/>
+                    <label for="id4" class="sliderSmallFour">
+                        <img src="{{img4}}" />
+                    </label>
+                    <img src="{{img3}}"/>
+                </div>
+            </div>
+            <div class="desc-box-listing desc-width">
+                <h4 class="box-title-listing">Product Details</h4>
+                <ul class="listingItemDetailItems">
+                    <li class="listingItemDetailLeft">
+                        <ul>
+                            <li class="listingItemBrand">Brand:<a href="/search">{{brand}}</a></li>
+                            <li class="listingItemBrand">Category:{{category}}</li>
+                            <li class="listingItemColor">Color:<span style="color: {{color}}">{{color}}</span></li>
+                            <li class="listingItemSize">Size:{{size}}</li>
+                        </ul>
+                    </li>
+                    <li class="listingItemDetailRight">
+                        <ul>
+                         <li class="listingItemCondition">Condition: {{condition}}</li>
+                         <li class="listingItemBrand">Type:<a href="/search">{{type}}</a></li>
+                         <li class="listingItemQuantity">Quantity:{{quantity}}</li>
+                         <li class="listingItemTrade">Trade Offers:<span style="color: {{tradeStatus}};">{{trade}}</span></li> 
+                     </ul>
+                 </li>
+             </ul>
+         </div>
+         <div class="desc-box-listing nomar desc-width listingItemDescription">
+            <h4 class="box-title-listing">Description</h4>
+            <p>{{{description}}}</p>
+            <!--  {{creator_id}} -->
+        </div>
+    </div>
+    <div class="listingItemRight">
+        <div class="listingItemShare">
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url=<URL>&text=<TEXT>&via=<VIA>" target="_blank" class="share-btn twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <!-- Google Plus -->
+            <a href="https://plus.google.com/share?url=<BTN>" target="_blank" class="share-btn google-plus">
+                <i class="fa fa-google-plus"></i>
+            </a>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer/sharer.php?u=<URL>" target="_blank" class="share-btn facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
+                <i class="fa fa-reddit"></i>
+            </a>
+        </div>
+        <div class="listingItemMaps">
+            <ul class="listingItemMapsAPI">
+                <li>
+                    <div class="listingMapsCanvas" id="map-canvas">
+                        {{> googleMap name="listingImage" options=exampleMapOptions}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="listingItemUser">
+            <ul class="listingItemUserImg">
+                <li><a href="/profile/{{profile}}"><img src="{{creatorpic}}"></a></li>
+            </ul>
+            <ul class="listingItemUserInfo">
+                <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
+                <li class="rating"><!-- These Stars Are For Display, They Do Not Work-->☆☆☆☆☆</li>
+                <ul class="listingPayment">
+                    <li class="listingPayCash"><i class="fa fa-usd"></i></li>
+                    <li class="listingPayPal"><i class="fa fa-cc-paypal"></i></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="optionsListClick click-nav">
+            <ul class="no-js">
+                <li>
+                    <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hidden">
+    {{creator_id}}
+</div>
+</template>
