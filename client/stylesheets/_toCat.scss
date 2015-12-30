@@ -236,7 +236,14 @@ code {
     padding-right: 0 !important;
 }
 
+.termsDiv p:nth-child(2) {
+    text-align: justify !important;
+    margin-bottom: 50px;
+}
 
+.termsDiv p {
+    font-size: 0.9rem;
+}
 
 .pika-button:hover {
     background-color: $color-spacered !important;
@@ -3415,7 +3422,8 @@ On click the images will be displayed at normal size to complete the effect
     width: 45%;
 }
 
-.listingItemDetailLeft ul li:nth-child(2), .listingItemDetailLeft ul li:nth-child(3), .listingItemDetailRight ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(3) {
+.listingItemDetailLeft ul li:nth-child(2), .listingItemDetailLeft ul li:nth-child(3), 
+.listingItemDetailRight ul li:nth-child(2), .listingItemDetailRight ul li:nth-child(3) {
     margin-top: 18px;
     margin-bottom: 18px;
 }
@@ -3493,7 +3501,7 @@ On click the images will be displayed at normal size to complete the effect
     margin-top: 47px;
     background-color: #f8504b;
     padding: 20px;
-    height: 116px;
+    height: 156px;
     border-radius: 4px;
     text-align: center;
 }
@@ -3501,6 +3509,7 @@ On click the images will be displayed at normal size to complete the effect
 .listingItemUser > ul {
     display: inline-block;
     margin: 0;
+    margin-top: 25px !important;
 }
 
 .listingItemUserImg {
@@ -3511,14 +3520,21 @@ On click the images will be displayed at normal size to complete the effect
     margin-left: 15px !important;
     margin-top: 10px !important;
     vertical-align: middle;
+    width: 60% !important;
 }
 
 .listingItemUserName {
     margin-bottom: 5px;
+    width: 105% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    color: #fff !important;
 }
 
 .listingItemUserName a {
     color: #fff;
+    white-space: nowrap !important;
+    float: left !important;
 }
 
 .listingItemUserInfo {
@@ -3543,6 +3559,44 @@ On click the images will be displayed at normal size to complete the effect
     vertical-align: middle;
     margin-left: 4px;
 }
+
+.listingItemBrand, .listingItemColor, .listingItemSize, .listingItemCondition, .listingItemQuantity, .listingItemTrades {
+    // width: 50% !important;
+}
+
+.listingItemBrand a, .listingItemBrand span, .listingItemColor span, .listingItemSize span, 
+.listingItemCondition span, .listingItemQuantity span, .listingItemTrades span {
+    // margin-left: 10% !important;
+}
+
+.listingItemBrand a, .listingItemColor span {
+    margin-left: 27px !important;
+}
+
+.listingItemSize span {
+    margin-left: 38px !important;
+}
+
+.listingItemType a {
+    margin-left: 34px !important;
+}
+
+.listingItemTrade span {
+    margin-left: 10px !important;
+}
+
+.listingItemQuantity span {
+    margin-left: 36px !important;
+}
+
+.listingItemCondition span {
+    margin-left: 28px !important;
+}
+
+.listingItemCat span {
+    margin-left: 31px !important;
+}
+
 
 /*****************/
 
@@ -5154,11 +5208,13 @@ On click the images will be displayed at normal size to complete the effect
     display: inline-block !important;
     color: #ffffff !important;
     border: none !important;
-    padding: 15px 10px !important;
+    padding: 18px 10px !important;
     width: 4em !important;
-    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2) !important;
+    box-shadow: none !important;
     outline: none !important;
     text-align: center !important;
+    border-radius: 4px;
+    margin: 0 1px !important;
 }
 
 .share-btn:hover {
@@ -5180,12 +5236,19 @@ On click the images will be displayed at normal size to complete the effect
 .share-btn.email       { background: #444444 !important; }
 .share-btn.reddit      { background: #ff5700 !important; }
 
+.share-btn.twitter:hover     { background: #0091FF !important; }
+.share-btn.google-plus:hover { background: #FF1C00 !important; }
+.share-btn.facebook:hover    { background: #0B3388 !important; }
+.share-btn.linkedin:hover    { background: #4875B4 !important; }
+.share-btn.email:hover       { background: #444444 !important; }
+.share-btn.reddit:hover      { background: #FF2F00 !important; }
+
 .share-btn i {
     color: #fff !important;
 }
 
 .listingItemShare {
-    margin: 10px 0 22px 0;
+    margin: 10px 0 17px 0;
 }
 
 /* Clearfix */
@@ -5243,7 +5306,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .optionsListClick {
     width: 100%;
-    margin-top: 23px;
+    margin-top: 5px;
     margin-bottom: 200px;
     display: inline-block !important;
 }
