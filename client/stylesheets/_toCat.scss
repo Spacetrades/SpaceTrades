@@ -50,11 +50,11 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     background: $color-spacered !important;
     color: #FFFFFF;
     font-family: inherit;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0 !important;
     padding-left: 4px;
     padding: 5px 8px;
-
+    font-weight: 400 !important;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -3351,7 +3351,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemButtons li {
     display: inline-block;
-    margin: auto 10px;
+    margin: auto 3px;
 }
 
 .listingItemButtons li:last-child {
@@ -3359,7 +3359,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .listingItemButtons li a {
-    padding: 15px 22px;
+    padding: 15px 32px;
     color: #fff ;
     background-color: #f8504b;
     border: 1px solid #f8504b;
@@ -3535,6 +3535,7 @@ On click the images will be displayed at normal size to complete the effect
     color: #fff;
     white-space: nowrap !important;
     float: left !important;
+    font-weight: 400 !important;
 }
 
 .listingItemUserInfo {
