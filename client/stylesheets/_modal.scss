@@ -24,7 +24,8 @@
 .modal-body {
 	min-height: 500px;
 	max-height: 500px;
-	overflow-y: scroll;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 .modMultiBtn {
@@ -154,7 +155,7 @@
 /*~~~~ Button ~~~~*/
 
 .modOfferRequestTrigger {
-	padding: 15px 22px;
+	padding: 15px 28px;
     color: #fff;
     background-color: #f8504b;
     border: 1px solid #f8504b;
@@ -289,6 +290,10 @@
 	margin-top: 80px;
 }
 
+.modMultiBtnOfferRequestThree {
+	margin-top: 90px;
+}
+
 .modOfferRequestDateWrap {
 	list-style: none !important;
 }
@@ -297,6 +302,11 @@
 	color: #d3d3d3 !important;
 }
 
+.offerRequestMapsApi > div {
+	margin-top: 15px !important;
+	margin-left: 12px !important;
+	height: 280px !important;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	END END END END END END
