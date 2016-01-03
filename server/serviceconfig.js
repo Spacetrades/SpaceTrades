@@ -18,26 +18,26 @@
 
 
   // STRICTLY - Production
-//   ServiceConfiguration.configurations.remove({
-//     service: "facebook"
-//   });
-
-//   ServiceConfiguration.configurations.insert({
-//     service: 'facebook',
-//     appId: Meteor.settings.FacebookId,
-//     secret: Meteor.settings.FacebookSecret
-//   });
-
-
-  // STRICTLY - Dev
-   ServiceConfiguration.configurations.remove({
+  ServiceConfiguration.configurations.remove({
     service: "facebook"
   });
 
   ServiceConfiguration.configurations.insert({
     service: 'facebook',
-    appId: '520229551462174',
-    secret: 'b9affb9d81291fbe9bebc123d577100a'
+    appId: Meteor.settings.FacebookId,
+    secret: Meteor.settings.FacebookSecret
   });
+
+
+  // STRICTLY - Dev
+  //  ServiceConfiguration.configurations.remove({
+  //   service: "facebook"
+  // });
+
+  // ServiceConfiguration.configurations.insert({
+  //   service: 'facebook',
+  //   appId: '520229551462174',
+  //   secret: 'b9affb9d81291fbe9bebc123d577100a'
+  // });
 
 }
