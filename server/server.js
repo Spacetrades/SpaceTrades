@@ -291,7 +291,6 @@ if (Meteor.isServer) {
           'profile.photo': options.photo,
           'profile.about': options.about,
           'profile.email': options.email,
-          'profile.location': options.location,
           'profile.link': options.link
         }
 });  },
