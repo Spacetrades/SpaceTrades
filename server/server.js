@@ -265,6 +265,16 @@ if (Meteor.isServer) {
         action: options.action
       });
     },
+    setLocation: function(options){
+      Meteor.users.update(this.userId, {
+        $set: {
+        'profile.lat': options.lat,
+        'profile.lng': options.lng,
+        'profile.city': options.city,
+        'profile.state': options.state
+      }
+    });
+    },
     acceptOffer: function(options) {
       Offer.update({ _id: options.id }, { $set: { status: "Accepted" }});
       Listing.update({ _id: options.listingId }, { $set: { status: "Accepted", offerAccepted: options.id }});
@@ -281,7 +291,6 @@ if (Meteor.isServer) {
           'profile.photo': options.photo,
           'profile.about': options.about,
           'profile.email': options.email,
-          'profile.location': options.location,
           'profile.link': options.link
         }
 });  },
