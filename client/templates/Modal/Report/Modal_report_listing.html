@@ -35,6 +35,8 @@
              <li><input type="checkbox" class="offenseChoice">Contains Offensive Content</li>
              <li><input type="checkbox" class="irrelevantChoice">Contains Irrelevant Content</li>
              <li><input type="checkbox" class="falseChoice">Contains False Content</li>
+             <li><input type="checkbox" class="falseChoice">Contains Nudity</li>
+             <li><input type="checkbox" class="falseChoice">Doesn't Belong On SpaceTrades</li>
              <li><input type="checkbox" class="complianceChoice">Or Doesn't Comply With a Community Standard</li>
            </ul>   
          </div>
@@ -46,7 +48,7 @@
       <div class="modReportDiv modReportDivThree modal-body step step-3">
         <div class="modReportPageThree">
           <h2>Briefly describe why you are reporting</h2>
-          <textarea placeholder="Explain concisely..." class="message"></textarea>
+          {{> SoloFroala}}
         </div>
         <div class="modMultiBtn modMultiBtnReportThree">
           <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="reportListingJump2()">Back</button>
