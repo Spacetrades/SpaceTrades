@@ -1222,13 +1222,22 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 }
 
 .modJoinWrapper h1 {
-	font-size: 2.4rem;
+	font-size: 2rem;
 	font-weight: 400;
 	margin-bottom: 0;
 }
 
 .modJoinWrapper ul li {
 	line-height: 2;
+}
+
+.modJoinWrapper h1 i {
+    margin-right: 20px;
+    vertical-align: middle !important;
+    padding: 10px !important;
+    background-color: #f8504b !important;
+    color: #fff !important;
+
 }
 
 .modJoinOnly {
