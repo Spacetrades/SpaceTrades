@@ -5610,6 +5610,16 @@ textarea {
 .defaultProfileDiv h2 {
     font-weight: 400 !important;
     color: #555 !important;
+    vertical-align: middle !important;
+}
+
+.defaultProfileDiv h2 i {
+    margin-right: 15px;
+    vertical-align: middle !important;
+    padding: 10px !important;
+    background-color: #f8504b !important;
+    color: #fff !important;
+
 }
 
 .defaultProfileDiv p {
