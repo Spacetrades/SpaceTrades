@@ -4159,7 +4159,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileCardUl > li {
     display: inline-block;
-    border: 2px solid #00bfff;
+    border: 1px solid #00bfff;
     border-radius: 5px;
     margin: 10px 5px;
     padding: 0px 10px 0px 10px;
@@ -4167,7 +4167,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileCardUl > li:hover {
-    border: 2px solid #f8504b;
+    border: 1px solid #f8504b;
 }
 
 .profileCardInfo {
@@ -4253,6 +4253,7 @@ On click the images will be displayed at normal size to complete the effect
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 400 !important;
 }
 
 .profileCardInfo li a h4:hover {
@@ -5598,5 +5599,47 @@ textarea {
     border: 1px solid #d3d3d3 !important;
     border-radius: 4px !important;
 }
+
+/*~~~~~~~~~ Default Profile Message ~~~~~~~~~*/
+
+.defaultProfileDiv {
+    text-align: center;
+    margin-top: 120px !important;
+}
+
+.defaultProfileDiv h2 {
+    font-weight: 400 !important;
+    color: #555 !important;
+}
+
+.defaultProfileDiv p {
+    color: #666 !important;
+}
+
+.defaultProfileButton {
+    margin-top: 30px;
+    list-style: none !important;
+}
+
+.defaultProfileButton a {
+    padding: 12px 12px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #f8504b;
+    border-radius: 4px;
+}
+
+.defaultProfileButton a:hover {
+    background-color: #f73c37 !important;
+    color: #fff !important;
+}
+
+
+
+
+
+
+
+
 
 
