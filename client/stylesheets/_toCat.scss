@@ -5644,6 +5644,78 @@ textarea {
     color: #fff !important;
 }
 
+/*~~~~ Home No Listings ~~~~*/
+
+.homeNoListings {
+    text-align: center;
+    padding-top: 10px;
+} 
+
+.homeNoListings h2 {
+    font-weight: 400 !important;
+    color: #555 !important;
+    font-size: 1.6rem !important;
+}
+
+.homeNoListings p {
+    width: 70%;
+    margin: 10px auto !important;
+    color: #666 !important;
+}
+
+.homeNoListingsButton {
+    margin-top: 40px !important;
+    list-style: none !important;
+}
+
+.homeNoListingsButton a {
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #fff !important;
+    background-color: #f8504b;
+    border-radius: 4px;
+}
+
+.homeNoListingsButton a:hover {
+    background-color: #f73c37 !important;
+    color: #fff !important;
+}
+
+/*~~~~ Default Search ~~~~*/
+
+.defaultSearch {
+    margin-left: 10%;
+}
+
+.defaultSearch h2 {
+    font-weight: 400 !important;
+    color: #555 !important;
+    margin-left: -20px;
+}
+
+.defaultSearch ul li {
+    list-style: initial;
+    margin: 8px 0;
+    color: #666 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
