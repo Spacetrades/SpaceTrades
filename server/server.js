@@ -270,8 +270,11 @@ if (Meteor.isServer) {
         $set: {
         'profile.lat': options.lat,
         'profile.lng': options.lng,
+        'profile.neighborhood': options.neighborhood,
         'profile.city': options.city,
-        'profile.state': options.state
+        'profile.state': options.state,
+        'profile.country': options.country,
+        'profile.locationString': options.locationString
       }
     });
     },
