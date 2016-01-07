@@ -271,7 +271,8 @@ if (Meteor.isServer) {
         'profile.lat': options.lat,
         'profile.lng': options.lng,
         'profile.city': options.city,
-        'profile.state': options.state
+        'profile.state': options.state,
+        'profile.location': options.location
       }
     });
     },
