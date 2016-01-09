@@ -109,13 +109,13 @@ if (Meteor.isServer) {
       options.profile.downvotes = 0;
     }
 
-    HTTP.get("http://ipinfo.io", function(error, result) {
-      var place = JSON.parse(result.content);
-      var city = place.city;
-      var state = place.region;
-      console.log(city, state);
-      Meteor.call('userLocate', city, state);
-    });
+    // HTTP.get("http://ipinfo.io", function(error, result) {
+    //   var place = JSON.parse(result.content);
+    //   var city = place.city;
+    //   var state = place.region;
+    //   console.log(city, state);
+    //   Meteor.call('userLocate', city, state);
+    // });
 
     return user;
   });
@@ -188,26 +188,34 @@ if (Meteor.isServer) {
 
       Listing.insert({
         createdAt: new Date(),
+        // Status
         status: "Pending",
         offerAccepted: "",
+        // Id
         creator_id: options.creator_id,
         facebook_id: options.facebook_id,
+        // Title
         listing_title: options.listing_title,
+        // Category
         category: options.category,
         type: options.type,
         brand: options.brand,
+        // Information
         username: Meteor.user().profile.name,
         quantity: options.quantity,
         price: options.price,
-        // city: options.city,
-        // state: options.state,
         trade: options.trade,
         size: options.size,
         condition: options.condition,
         color: options.color,
         description: options.description,
+        // Location
         lat: options.lat,
         lng: options.lng,
+        city: options.city,
+        state: options.state,
+        locationString: options.locationString,
+        // Images
         img1: options.img1,
         img2: options.img2,
         img3: options.img3
