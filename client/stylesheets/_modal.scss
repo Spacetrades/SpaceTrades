@@ -184,8 +184,9 @@
 	margin: 0;
 }
 
-.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, .modAddListingDiv h2, .modFeedbackInitialDiv h2, .modReportDiv h2 {
-	color: $color-spaceblue !important;
+.modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, 
+.modAddListingDiv h2, .modFeedbackInitialDiv h2, .modReportDiv h2 {
+	color: #404040 !important;
 	font-size: 2rem !important;
 	font-weight: 400 !important;
 	margin: 20px 0 !important;
@@ -681,8 +682,12 @@
 
 /*~~ Button End ~~*/
 
-.modAddListingPageThree, .modAddListingPageFive, .modAddListingPageSix {
+.modAddListingPageThree, .modAddListingPageFive {
 	margin-top: 50px;
+}
+
+.modAddListingPageSix {
+	margin-top: 20px !important;
 }
 
 .modMultiBtnAddListingOne {
@@ -706,7 +711,7 @@
 }
 
 .modMultiBtnAddListingSix {
-	margin-top: 16px !important;
+	margin-top: 46px !important;
 }
 
 .modAddListingTitleInput {
@@ -823,7 +828,8 @@
 }
 
 /* Hide Colors */
-.sp-palette-row-0 span:nth-child(2), .sp-palette-row-0 span:nth-child(4), .sp-palette-row-0 span:nth-child(5), .sp-palette-row-1 > span:first-child, .sp-palette-row-1 span:nth-child(7) {
+.sp-palette-row-0 span:nth-child(2), .sp-palette-row-0 span:nth-child(4), .sp-palette-row-0 span:nth-child(5), 
+.sp-palette-row-1 > span:first-child, .sp-palette-row-1 span:nth-child(7) {
 	display: none !important;
 }
 
@@ -857,9 +863,9 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	border-bottom: none !important;
 }
 
-.sp-dd {
-	display: none;
-}
+// .sp-dd {
+// 	display: none;
+// }
 
 .sp-preview {
 	margin-right: 0 !important;
@@ -964,7 +970,7 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 }
 
 .modFeedbackInitialPageSix ul li, .modFeedbackInitialPageTwo ul li {
-	list-style-type:  decimal;
+	list-style-type:  initial;
 	margin-bottom: 10px;
 }
 
@@ -1012,13 +1018,19 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	margin-top: 75px !important;
 }
 
+
+.modMultiBtnFeedbackTwo {
+	margin-top: 7px !important;
+}
+
 .modFeedbackPageTwo, .modReportPageOne, .modReportPageThree {
-	margin-top: 50px !important;
+	margin-top: 25px !important;
 	padding: 10px 40px !important;
 }
 
 .modReportPageTwo {
 	padding: 10px 40px !important;
+	margin-top: 15px;
 }
 
 .modFeedbackPageTwo h2 {
@@ -1071,11 +1083,15 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 }
 
 .modFeedbackPageTwo2 ul li textarea {
-	width: 66%;
+	width: 80%;
 	height: 100px;
+	border-radius: 4px;
+	padding: 10px 12px;
+	border: 1px solid #d3d3d3;
 }
 
-.modFeedbackInitial button[data-target="#feedbackBuyerUnsuccessfulModal"], .modFeedbackInitial button[data-target="#feedbackBuyerNeverModal"] {
+.modFeedbackInitial button[data-target="#feedbackBuyerUnsuccessfulModal"], 
+.modFeedbackInitial button[data-target="#feedbackBuyerNeverModal"] {
 	padding: 11px 50px !important;
 	color: #fff !important;
 	background-color: #f8504b;
@@ -1083,7 +1099,8 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	border-radius: 4px !important;
 }
 
-.modFeedbackInitial button[data-target="#feedbackBuyerUnsuccessfulModal"]:hover, .modFeedbackInitial button[data-target="#feedbackBuyerNeverModal"]:hover {
+.modFeedbackInitial button[data-target="#feedbackBuyerUnsuccessfulModal"]:hover, 
+.modFeedbackInitial button[data-target="#feedbackBuyerNeverModal"]:hover {
 	background-color: #f73c37 !important;
 }
 
@@ -1150,7 +1167,7 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 
 .modReportPageThree textarea {
 	width: 100%;
-	height: 250px;
+	height: 280px;
 }
 
 .modMultiBtnReportOne {
@@ -1159,10 +1176,11 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 
 .modMultiBtnReportTwo {
 	padding: 8px 10px 10px 10px !important;
+	margin-top: 3px;
 }
 
 .modMultiBtnReportThree {
-	margin-top: 33px;
+	margin-top: 16px;
 }
 
 /*~~~~ Listing End ~~~~*/
@@ -1204,13 +1222,22 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 }
 
 .modJoinWrapper h1 {
-	font-size: 2.4rem;
+	font-size: 2rem;
 	font-weight: 400;
 	margin-bottom: 0;
 }
 
 .modJoinWrapper ul li {
 	line-height: 2;
+}
+
+.modJoinWrapper h1 i {
+    margin-right: 20px;
+    vertical-align: middle !important;
+    padding: 10px !important;
+    background-color: #f8504b !important;
+    color: #fff !important;
+
 }
 
 .modJoinOnly {

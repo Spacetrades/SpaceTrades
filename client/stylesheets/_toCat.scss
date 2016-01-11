@@ -3119,7 +3119,7 @@ i:hover {
 }
 
 .homeCardLi:hover {
-    border: 1px solid #f8504b !important;
+    border: 1px solid #999 !important;
 //    border: 1px solid #0890F2 !important;
 //    box-shadow: 0px 1px 3px 0px $color-spacered;
 }
@@ -4159,7 +4159,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileCardUl > li {
     display: inline-block;
-    border: 2px solid #00bfff;
+    border: 1px solid #00bfff;
     border-radius: 5px;
     margin: 10px 5px;
     padding: 0px 10px 0px 10px;
@@ -4167,7 +4167,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileCardUl > li:hover {
-    border: 2px solid #f8504b;
+    border: 1px solid #999;
 }
 
 .profileCardInfo {
@@ -4253,6 +4253,7 @@ On click the images will be displayed at normal size to complete the effect
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 400 !important;
 }
 
 .profileCardInfo li a h4:hover {
@@ -4707,7 +4708,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .searchResultsCardUl > li:hover {
-    border: 1px solid #f8504b !important;
+    border: 1px solid #999 !important;
 }
 
 .searchResultsCardLi > ul {
@@ -5593,6 +5594,133 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserAmountSold span {
     margin-left: 5px;
 }
+
+textarea {
+    border: 1px solid #d3d3d3 !important;
+    border-radius: 4px !important;
+}
+
+/*~~~~~~~~~ Default Profile Message ~~~~~~~~~*/
+
+.defaultProfileDiv {
+    text-align: center;
+    margin-top: 120px !important;
+}
+
+.defaultProfileDiv h2 {
+    font-weight: 400 !important;
+    color: #555 !important;
+    vertical-align: middle !important;
+}
+
+.defaultProfileDiv h2 i {
+    margin-right: 15px;
+    vertical-align: middle !important;
+    padding: 10px !important;
+    background-color: #f8504b !important;
+    color: #fff !important;
+
+}
+
+.defaultProfileDiv p {
+    color: #666 !important;
+}
+
+.defaultProfileButton {
+    margin-top: 30px;
+    list-style: none !important;
+}
+
+.defaultProfileButton a {
+    padding: 12px 12px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #f8504b;
+    border-radius: 4px;
+}
+
+.defaultProfileButton a:hover {
+    background-color: #f73c37 !important;
+    color: #fff !important;
+}
+
+/*~~~~ Home No Listings ~~~~*/
+
+.homeNoListings {
+    text-align: center;
+    padding-top: 10px;
+} 
+
+.homeNoListings h2 {
+    font-weight: 400 !important;
+    color: #555 !important;
+    font-size: 1.6rem !important;
+}
+
+.homeNoListings p {
+    width: 70%;
+    margin: 10px auto !important;
+    color: #666 !important;
+}
+
+.homeNoListingsButton {
+    margin-top: 40px !important;
+    list-style: none !important;
+}
+
+.homeNoListingsButton a {
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #fff !important;
+    background-color: #f8504b;
+    border-radius: 4px;
+}
+
+.homeNoListingsButton a:hover {
+    background-color: #f73c37 !important;
+    color: #fff !important;
+}
+
+/*~~~~ Default Search ~~~~*/
+
+.defaultSearch {
+    margin-left: 10%;
+}
+
+.defaultSearch h2 {
+    font-weight: 400 !important;
+    color: #555 !important;
+    margin-left: -20px;
+}
+
+.defaultSearch ul li {
+    list-style: initial;
+    margin: 8px 0;
+    color: #666 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
