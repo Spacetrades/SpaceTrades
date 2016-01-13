@@ -30,7 +30,8 @@
 
 
   // STRICTLY - Dev
-   ServiceConfiguration.configurations.remove({
+
+    ServiceConfiguration.configurations.remove({
     service: "facebook"
   });
 
