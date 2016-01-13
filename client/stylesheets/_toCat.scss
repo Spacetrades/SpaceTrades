@@ -3662,8 +3662,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserGraph canvas {
-    width: 80%;
-    height: 170px;
+    max-width: 80% !important;
+    height: 170px !important;
 }
 
 /* Graph end */
@@ -5723,7 +5723,9 @@ textarea {
     color: #666 !important;
 }
 
+.profileUserGraph canvas {
 
+}
 
 
 
