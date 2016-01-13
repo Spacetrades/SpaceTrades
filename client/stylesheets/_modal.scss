@@ -14,7 +14,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .modal {
-	margin-top: 4%;
+	margin-top: 2%;
 }
 
 .modal-dialog {
@@ -186,7 +186,7 @@
 
 .modOfferRequestPageOneUl li h2, .modOfferRequestPageTwo li h2, .modOfferRequestPageThree h2, 
 .modAddListingDiv h2, .modFeedbackInitialDiv h2, .modReportDiv h2 {
-	color: #404040 !important;
+	color: #555 !important;
 	font-size: 2rem !important;
 	font-weight: 400 !important;
 	margin: 20px 0 !important;
@@ -825,6 +825,10 @@
 .modalSubmitAdd input {
 	margin-left: 0 !important;
 	font-size: 1rem !important; 
+}
+
+.capacity-select {
+	margin-left: 60px !important;
 }
 
 /* Hide Colors */
