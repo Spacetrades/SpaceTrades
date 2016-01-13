@@ -3,7 +3,7 @@
 ## Buying and Selling Locally Through Meetups
 
 ## Trello
-
+ 
 https://trello.com/b/IETMH34k/meteor-development
     
 ## Docs
