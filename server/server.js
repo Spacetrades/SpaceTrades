@@ -208,6 +208,7 @@ if (Meteor.isServer) {
         size: options.size,
         condition: options.condition,
         color: options.color,
+        payment: options.payment,
         description: options.description,
         // Location
         lat: options.lat,
