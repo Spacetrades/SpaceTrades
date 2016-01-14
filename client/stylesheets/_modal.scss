@@ -141,7 +141,8 @@
 /*~~ Button End ~~*/
 
 .notifMainWrap h2 {
-	margin-top: 50px !importants;
+	margin-top: 50px !important;
+  font-weight: 400 !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -941,6 +942,7 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 .modFeedbackInitialPageOneItemLeft ul li img {
 	width: 180px !important;
 	height: 180px !important;
+  border-radius: 6px;
 }
 
 .modFeedbackInitialPageOneItemRight {
