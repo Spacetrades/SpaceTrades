@@ -16,7 +16,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .tooltip > .tooltip-inner {
-    background-color: $color-spacered !important;
+    background-color: $color-spacegrey !important;
     height: 30% !important;
     padding: 2em !important;
 }
@@ -3574,7 +3574,7 @@ On click the images will be displayed at normal size to complete the effect
     vertical-align: middle;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 6px;
 }
 
 .listingItemUser a span {
@@ -4448,6 +4448,7 @@ On click the images will be displayed at normal size to complete the effect
 .profileReceivedImg {
     width: 100% !important;
     height: 100%;
+    border-radius: 6px !important;
 }
 
 .profileReceivedCardRight {
@@ -4757,7 +4758,8 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCardImg {
     width: 100% !important;
-    height: 200px;
+    max-height: 200px;
+    border-radius: 6px;
 }
 
 .searchResultsCardTitle a h2 {
@@ -5741,8 +5743,6 @@ textarea {
 .headerNav > ul > li > a, .headerNav > ul > li > a:visited, .headerNav > ul > li > a:link {
   color: #404040 !important;
 }
-
-
 
 
 
