@@ -213,7 +213,6 @@ i {
 code {
     border-radius: 5px;
     padding: 3px 5px;
-    color: $color-hashtag;
 
 }
 
@@ -3664,8 +3663,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserGraph canvas {
-    width: 80%;
-    height: 170px;
+    max-width: 80% !important;
+    height: 170px !important;
 }
 
 /* Graph end */
@@ -4170,7 +4169,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .offerRequestMapsApi {
     width: 100%;
-    height: 250px !important;
+    height: 30em !important;
 }
 
 
@@ -5740,8 +5739,13 @@ textarea {
     color: #666 !important;
 }
 
+<<<<<<< HEAD
+.profileUserGraph canvas {
+
+=======
 .headerNav > ul > li > a, .headerNav > ul > li > a:visited, .headerNav > ul > li > a:link {
   color: #404040 !important;
+>>>>>>> upstream/master
 }
 
 

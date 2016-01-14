@@ -86,18 +86,18 @@
     <div class="listingItemRight">
         <div class="listingItemShare">
             <!-- Twitter -->
-            <a href="http://twitter.com/share?url=<URL>&text=<TEXT>&via=<VIA>" target="_blank" class="share-btn twitter">
+            <a href="http://twitter.com/share?url=spacetrades.com/listing/{{_id}}&text=SpaceTrades&via=<VIA>" target="_blank" class="share-btn twitter">
                 <i class="fa fa-twitter"></i>
             </a>
             <!-- Google Plus -->
-            <a href="https://plus.google.com/share?url=<BTN>" target="_blank" class="share-btn google-plus">
+            <a href="https://plus.google.com/share?url=spacetrades.com/listing/{{_id}}" target="_blank" class="share-btn google-plus">
                 <i class="fa fa-google-plus"></i>
             </a>
             <!-- Facebook -->
-            <a href="http://www.facebook.com/sharer/sharer.php?u=<URL>" target="_blank" class="share-btn facebook">
+            <a href="http://www.facebook.com/sharer/sharer.php?u=spacetrades.com/listing/{{_id}}" target="_blank" class="share-btn facebook">
                 <i class="fa fa-facebook"></i>
             </a>
-            <a href="http://reddit.com/submit?url=<URL>&title=<TITLE>" target="_blank" class="share-btn reddit">
+            <a href="http://reddit.com/submit?url=spacetrades.com/listing/{{_id}}&title=SpaceTrades" target="_blank" class="share-btn reddit">
                 <i class="fa fa-reddit"></i>
             </a>
         </div>
@@ -116,16 +116,19 @@
             </ul>
             <ul class="listingItemUserInfo">
                 <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
-                <li class="rating"><!-- These Stars Are For Display, They Do Not Work-->☆☆☆☆☆</li>
+                <li class="rating">☆☆☆☆☆</li>
                 <ul class="listingPayment">
+                {{#if paymentCash}}
                     <li class="listingPayCash"><i class="fa fa-usd"></i></li>
+                {{/if}}
+                {{#if paymentPaypal}}
                     <li class="listingPayPal"><i class="fa fa-cc-paypal"></i></li>
+                {{/if}}
                 </ul>
             </ul>
         </div>
         <div class="listingItemLocationString">
-            <!-- {{locationString}} -->
-            <p>Elmhurst, Queens, New York</p>
+            <p>{{locationString}}</p>
         </div>
         <div class="optionsListClick click-nav">
             <ul class="no-js">
