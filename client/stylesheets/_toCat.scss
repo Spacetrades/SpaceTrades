@@ -235,7 +235,7 @@ code {
     padding-right: 0 !important;
 }
 
-.termsDiv p:nth-child(2) {
+.termsDiv p {
     text-align: justify !important;
     margin-bottom: 50px;
 }
@@ -5747,6 +5747,34 @@ textarea {
   font-size: 0.9rem !important;
 }
 
+.helpDiv h2, .helpDiv h3, .aboutDiv h2, .aboutDiv b, .faqdiv h2, .faqdiv h3, .safetydiv h2, .safetydiv h3, .reportdiv h2, 
+.reportdiv h3, .prohibiteddiv h2, .termsDiv h2, .contactdiv h2 {
+    font-weight: 400 !important;
+}
+
+.helpDiv, .aboutDiv, .faqdiv, .safetydiv, .reportdiv, .prohibiteddiv, .termsDiv, .contactdiv {
+    margin-bottom: 100px !important;
+}
+
+.helpDiv a, .aboutDiv a, .faqdiv a, .safetydiv a, .reportdiv a, .prohibiteddiv a, .termsDiv a {
+    color: $color-link !important;
+}
+
+.helpDiv a:hover, .aboutDiv a:hover, .faqdiv a:hover, .safetydiv a:hover, .reportdiv a:hover, 
+.prohibiteddiv a:hover, .termsDiv a:hover {
+    color: #0890F2 !important;
+    text-decoration: underline;
+}
+
+
+.faqdiv h3, .safetydiv h3, .reportdiv h3 {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.faqdiv ol, .safetydiv ol, .reportdiv ol {
+    margin-left: 30px;
+}
 
 
 
