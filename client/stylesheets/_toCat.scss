@@ -1332,6 +1332,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-weight: 400 !important;
 }
 
+.errorBr {
+    margin: 0 !important;
+}
+
 .errorSad {
     font-size: 5rem;
     font-weight: 400 !important;
@@ -4341,7 +4345,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .footerItems {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .footerItems li {
@@ -5792,7 +5796,7 @@ textarea {
     margin-left: 30px;
 }
 
-.helpHide {
+.helpHide, .footerHide {
     display: none !important;
 }
 
