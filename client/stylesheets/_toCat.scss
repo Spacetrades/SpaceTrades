@@ -235,7 +235,7 @@ code {
     padding-right: 0 !important;
 }
 
-.termsDiv p:nth-child(2) {
+.termsDiv p {
     text-align: justify !important;
     margin-bottom: 50px;
 }
@@ -1332,6 +1332,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-weight: 400 !important;
 }
 
+.errorBr {
+    margin: 0 !important;
+}
+
 .errorSad {
     font-size: 5rem;
     font-weight: 400 !important;
@@ -2415,7 +2419,7 @@ i:hover {
 }
 
 .headerNav ul li a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .headerNav a {
@@ -4341,7 +4345,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .footerItems {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .footerItems li {
@@ -4753,6 +4757,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCardRight li b {
     margin-right: 3px;
+    font-weight: 400 !important;
 }
 
 .searchResultsCardImg {
@@ -4793,7 +4798,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .searchResultsCardPrice {
-    margin: 0 0 15px 0;
+    margin: 10px 0 15px 0;
 }
 
 .seachResultsCardArea  {
@@ -5110,7 +5115,12 @@ On click the images will be displayed at normal size to complete the effect
 /* View Feedback */
 
 .profileUserFeedbackView {
-    width: 60%;
+    width: 90%;
+}
+
+.profileUserFeedbackView h2 {
+    font-weight: 400 !important;
+    margin-left: 120px !important;
 }
 
 .profileUserFeedbackViewSymbols {
@@ -5150,7 +5160,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserFeedbackViewCriteria {
     margin: auto;
-    width: 75%;
+    width: 73%;
 }
 
 .profileUserFeedbackViewCriteria li ul > li {
@@ -5167,7 +5177,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserFeedbackViewQuestion {
-    font-weight: 700;
+    font-weight: 400 !important;
 }
 
 /************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
@@ -5195,6 +5205,8 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserFeedbackViewResponse {
     font-size: 1rem;
     border-radius: 4px;
+    width: 80% !important;
+    margin: 25px auto;
 }
 
 .profileUserFeedbackViewResponse li {
@@ -5393,12 +5405,20 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0 !important;
 }
 
+.optionsItems li {
+    margin: 0 !important;
+}
+
 .optionsItems li a:hover {
 	background-color: #d3d3d3 !important;
 }
 
 .optionsItems li a i {
 	margin-right: 12px;
+}
+
+ul button a {
+    font-family: 'Helvetica Neue', sans-serif !important;
 }
 
 .optionsListClick ul li a {
@@ -5743,8 +5763,42 @@ textarea {
   color: #404040 !important;
 }
 
+.ui-menu-item {
+  font-size: 0.9rem !important;
+}
+
+.helpDiv h2, .helpDiv h3, .aboutDiv h2, .aboutDiv b, .faqdiv h2, .faqdiv h3, .safetydiv h2, .safetydiv h3, .reportdiv h2, 
+.reportdiv h3, .prohibiteddiv h2, .termsDiv h2, .contactdiv h2 {
+    font-weight: 400 !important;
+}
+
+.helpDiv, .aboutDiv, .faqdiv, .safetydiv, .reportdiv, .prohibiteddiv, .termsDiv, .contactdiv {
+    margin-bottom: 100px !important;
+}
+
+.helpDiv a, .aboutDiv a, .faqdiv a, .safetydiv a, .reportdiv a, .prohibiteddiv a, .termsDiv a {
+    color: $color-link !important;
+}
+
+.helpDiv a:hover, .aboutDiv a:hover, .faqdiv a:hover, .safetydiv a:hover, .reportdiv a:hover, 
+.prohibiteddiv a:hover, .termsDiv a:hover {
+    color: #0890F2 !important;
+    text-decoration: underline;
+}
 
 
+.faqdiv h3, .safetydiv h3, .reportdiv h3 {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.faqdiv ol, .safetydiv ol, .reportdiv ol {
+    margin-left: 30px;
+}
+
+.helpHide, .footerHide {
+    display: none !important;
+}
 
 
 
