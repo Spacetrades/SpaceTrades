@@ -26,6 +26,12 @@
     // }
 }
 
+@media (max-width: 975px) {
+    .footerLeft {
+        width: 90% !important;
+    }
+}
+
 @media (max-width: 950px) {
     // .profileCardLi {
     // 	width: 35% !important;
@@ -48,10 +54,22 @@
     // }
 }
 
+@media (max-width: 875px) {
+    .footerLeft {
+        width: 95% !important;
+    }
+}
+
 @media (max-width: 850px) {
 	// .profileCardLi {
  //    	width: 40% !important;
  //    }
+}
+
+@media (max-width: 825px) {
+    .footerLeft {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -95,6 +113,25 @@
     // }
 }
 
+@media (max-width: 775px) {
+    .footerLeft > ul:first-child {
+        width: 65%;
+        margin: 20px auto !important;
+    }
+
+    .footerLeft ul:first-child li:nth-child(8), .footerLeft ul:first-child li:nth-child(9)  {
+        margin-top: 20px !important;
+    }
+
+    .footerHide {
+        display: inline-block !important;
+    }
+
+    .footerShow {
+        display: none !important;
+    }
+
+}
 
 @media (max-width: 768px) {
     // .homeCardLi {
@@ -129,6 +166,31 @@
     // .profileCardLi {
     // 	width: 43% !important;
     // }
+    .footerbottom > li {
+        display: block !important;
+    }
+
+    .footerSocial {
+        margin-left: 0 !important;
+        margin-top: 20px !important;
+    }
+    .footerDivide {
+        width: 85% !important;
+        margin: 20px auto !important;
+    }
+    .footerDivide li:nth-child(5) {
+        margin-top: 20px !important;
+    }
+
+    .footerLeft > ul:first-child > li:nth-child(1) {
+        margin-bottom: 20px !important;
+        display: block !important;
+    }
+
+    .footerLeft > ul:first-child > li:nth-child(1) h3 {
+        margin-right: 0 !important;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -178,6 +240,16 @@
     .contactSend {
     	width: 93% !important;
     }
+    .footerDivide {
+        width: 90% !important;
+        margin: 20px auto !important;
+    }
+    .footerLeft > ul:first-child {
+        width: 90% !important;
+    }
+
+    
+
  //    .searchResultsCards {
  //    	width: 100% !important;
  //    	margin: 10px auto !important;
@@ -267,6 +339,14 @@
     }
 }
 
+@media (max-width: 364px) {
+    .footerDivide li:nth-child(4) {
+        margin-top: 20px !important;
+    }
+
+
+}
+
 @media (max-width: 360px) {
     // .homeCardLi {
     // 	width: 70%;
@@ -290,6 +370,21 @@
         display: none !important;
     }
     
+}
+
+
+@media (max-width: 357px) { 
+    // .footerLeft ul:first-child li:nth-child(6) {
+    //     margin-top: 20px !important;
+    // }
+}
+
+@media (max-width: 340px) {
+    .footerCopy {
+        width: 160px;
+        margin: auto;
+        line-height: 2 !important;
+    }
 }
 
 @media (max-width: 300px) {
