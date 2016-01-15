@@ -4753,6 +4753,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCardRight li b {
     margin-right: 3px;
+    font-weight: 400 !important;
 }
 
 .searchResultsCardImg {
@@ -5110,7 +5111,12 @@ On click the images will be displayed at normal size to complete the effect
 /* View Feedback */
 
 .profileUserFeedbackView {
-    width: 60%;
+    width: 90%;
+}
+
+.profileUserFeedbackView h2 {
+    font-weight: 400 !important;
+    margin-left: 120px !important;
 }
 
 .profileUserFeedbackViewSymbols {
@@ -5150,7 +5156,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .profileUserFeedbackViewCriteria {
     margin: auto;
-    width: 75%;
+    width: 73%;
 }
 
 .profileUserFeedbackViewCriteria li ul > li {
@@ -5167,7 +5173,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserFeedbackViewQuestion {
-    font-weight: 700;
+    font-weight: 400 !important;
 }
 
 /************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
@@ -5195,6 +5201,8 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserFeedbackViewResponse {
     font-size: 1rem;
     border-radius: 4px;
+    width: 80% !important;
+    margin: 25px auto;
 }
 
 .profileUserFeedbackViewResponse li {
@@ -5393,12 +5401,20 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0 !important;
 }
 
+.optionsItems li {
+    margin: 0 !important;
+}
+
 .optionsItems li a:hover {
 	background-color: #d3d3d3 !important;
 }
 
 .optionsItems li a i {
 	margin-right: 12px;
+}
+
+ul button a {
+    font-family: 'Helvetica Neue', sans-serif !important;
 }
 
 .optionsListClick ul li a {
