@@ -372,6 +372,10 @@
 	margin: 0 !important;
 }
 
+.profileReceivedCardRight li a h3, .profileReceivedCardRight b {
+	font-weight: 400 !important;
+}
+
 .profileSentOfferStatus {
 	margin: 0 !important;
 	margin-bottom: 10px !important;
@@ -407,7 +411,7 @@
     padding: 10px 18px !important;
     background-color: #00bfff !important;
     color: #fff !important;
-    font-family: 'Abel';
+    font-family: 'Helvetica Neue', sans-serif !important;
     margin-left: 2px;
     border-radius: 4px;
 }
@@ -594,7 +598,7 @@
 }
 
 #profileListingManagerButtonsUl > li:last-child button {
-	padding: 17px 40px 14px 40px !important;
+	padding: 17px 40px 16px 40px !important;
 }
 
 #profileListingManagerButtonsUl > li > ul > li > a {
