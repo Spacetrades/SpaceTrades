@@ -670,9 +670,11 @@
 .modAddListingTrigger {
 	background-color: rgba(255, 255, 255, 0) !important;
 	color: #f8504b !important;
-	font-size: 0.9rem !important;
+	font-size: 0.8rem !important;
 	padding: 18px 50px 18px 0px !important;
-	width: 100% !important; 
+	width: 100% !important;
+	margin-left: -30px !important;
+	font-family: 'Droid Sans', sans-serif !important; 
 }
 
 .modAddListingTrigger i {
