@@ -16,7 +16,7 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 }
 
 .tooltip > .tooltip-inner {
-    background-color: $color-spacered !important;
+    background-color: $color-spacegrey !important;
     height: 30% !important;
     padding: 2em !important;
 }
@@ -213,7 +213,6 @@ i {
 code {
     border-radius: 5px;
     padding: 3px 5px;
-    color: $color-hashtag;
 
 }
 
@@ -2094,6 +2093,7 @@ i:hover {
     width: 100% !important;
     height: auto;
     max-height: 200px;
+    border-radius: 6px;
 }
 
 /**********
@@ -3573,7 +3573,7 @@ On click the images will be displayed at normal size to complete the effect
     vertical-align: middle;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 6px;
 }
 
 .listingItemUser a span {
@@ -3663,8 +3663,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserGraph canvas {
-    width: 80%;
-    height: 170px;
+    max-width: 80% !important;
+    height: 170px !important;
 }
 
 /* Graph end */
@@ -4169,7 +4169,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .offerRequestMapsApi {
     width: 100%;
-    height: 250px !important;
+    height: 30em !important;
 }
 
 
@@ -4265,6 +4265,7 @@ On click the images will be displayed at normal size to complete the effect
 .profileCardImage img {
     width: 100%; 
     height: 150px;
+    border-radius: 4px !important;
 }
 
 .profileCardInfo > li {
@@ -4446,6 +4447,7 @@ On click the images will be displayed at normal size to complete the effect
 .profileReceivedImg {
     width: 100% !important;
     height: 100%;
+    border-radius: 6px !important;
 }
 
 .profileReceivedCardRight {
@@ -4755,7 +4757,8 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCardImg {
     width: 100% !important;
-    height: 200px;
+    max-height: 200px;
+    border-radius: 6px;
 }
 
 .searchResultsCardTitle a h2 {
@@ -4968,6 +4971,10 @@ On click the images will be displayed at normal size to complete the effect
     border-bottom: 1px solid #d3d3d7;
 }
 
+.notifImage {
+  margin-right: 6px;
+}
+
 .notifImage img, .notifInfo {
     vertical-align: middle !important;
 }
@@ -4975,7 +4982,8 @@ On click the images will be displayed at normal size to complete the effect
 .notifImage img, {
     height: 30px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 3px;
+    margin-top: -3px;
 }
 
 .notifInfo ul > li {
@@ -4987,7 +4995,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .notifMessage p span {
-    font-weight: 700 !important;
+    font-weight: 400 !important;
+    font-family: 'Helvetica Neue', sans-serif !important;
 }
 
 .notifMessage p a {
@@ -5066,7 +5075,7 @@ On click the images will be displayed at normal size to complete the effect
 .profileSettingsPhoto li img {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 4px;
 }
 
 .profileSettingsPhoto li input {
@@ -5730,11 +5739,14 @@ textarea {
     color: #666 !important;
 }
 
+<<<<<<< HEAD
+.profileUserGraph canvas {
+
+=======
 .headerNav > ul > li > a, .headerNav > ul > li > a:visited, .headerNav > ul > li > a:link {
   color: #404040 !important;
+>>>>>>> upstream/master
 }
-
-
 
 
 
