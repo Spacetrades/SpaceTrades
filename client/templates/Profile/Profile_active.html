@@ -2,9 +2,13 @@
 	<div class="profileCard oneDiv">
 		{{> ModalProfileActive}}
 		<ul class="profileCardUl">
+		{{#if defaultCheck}}
 			{{#each meetup}}
-			{{> ProfileActiveCard}}
+				{{> ProfileActiveCard}}
 			{{/each}}
+			{{else}}
+				{{> DefaultProfileActive}}
+			{{/if}}
 		</ul>       
 	</div>
     {{> ModalProfileActive}}
