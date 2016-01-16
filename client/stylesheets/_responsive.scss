@@ -30,6 +30,12 @@
     // }
 }
 
+@media (max-width: 1051px) {
+    .searchResultsCards {
+        margin-top: -1336px !important;
+    }
+}
+
 @media (max-width: 1050px) {
     .homeCardLi {
      width: 210px;
@@ -92,6 +98,12 @@
     // .searchResultsCardLi {
     // 	width: 90%;
     // }
+}
+
+@media (max-width: 876px) {
+    .searchResultsCards {
+        margin-top: -1368px !important;
+    }
 }
 
 @media (max-width: 875px) {
@@ -353,6 +365,10 @@
     .searchResultsCardImg {
         height: 145px !important;
     }
+
+    .sortClick ul {
+        margin-right: -5px !important;
+    }
 }
 
 
@@ -374,6 +390,28 @@
 @media (max-width: 500px) {
     .searchResultsCardImg {
         height: 120px !important;
+    }
+
+    .searchResultsCardPrice {
+        margin: 0 !important;
+    }
+
+    .searchResultsCardPrice span {
+        font-size: 0.8rem;
+    }
+
+    .searchResultsCardTitle h2 {
+        font-size: 1.1rem !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.6rem !important;
+        margin: 0 !important;
+    }
+
+    .searchResultsCardSize, 
+    .searchResultsCardCondition, .searchResultsCardLocation {
+        font-size: 0.8rem !important;
     }
 
 
@@ -473,6 +511,22 @@
         padding-top: 0.2em !important;
         padding-bottom: 0.2em !important;
     }
+
+    .searchResultsCardImg {
+        height: 125px !important;
+    }
+
+    .searchResultsCardLeft {
+        width: 35% !important;
+    }
+
+    .searchResultsCardRight {
+        width: 45% !important;
+    }
+
+    .sortClick ul {
+        margin-right: -10px !important;
+    }
     // .profileCardLi {
     // 	width: 80% !important;
     // }
@@ -519,6 +573,13 @@
     .homeCardDetails {
         margin-top: 0;
     }
+
+    .searchResultsCardLeft {
+        width: 40% !important;
+    }
+    // .searchResultsCardImg {
+    //     height:  !important;
+    // }
 }
 
 @media (max-width: 380px) {
@@ -571,9 +632,39 @@
     .helpShow {
         display: none !important;
     }
-    
+    .searchResultsCardImg {
+        height: 110px !important;
+    }
+
+    .searchResultsCardPrice {
+        margin: 0 !important;
+    }
+
+    .searchResultsCardPrice span {
+        font-size: 0.7rem;
+    }
+
+    .searchResultsCardTitle h2 {
+        font-size: 0.9rem !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.6rem !important;
+        margin: 0 !important;
+    }
+
+    .searchResultsCardSize, 
+    .searchResultsCardCondition, .searchResultsCardLocation {
+        font-size: 0.7rem !important;
+    }
+
 }
 
+@media (max-width: 342px) {
+    .sortClick ul {
+        margin-right: -15px !important;
+    }
+}
 
 @media (max-width: 342px) { 
     .homeCardLi {
@@ -583,6 +674,15 @@
 
     .homeCardImg {
         height: 120px !important;
+    }
+
+    .searchResultsCardName {
+        height: 18px !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.4rem !important;
+        margin: 0 !important;
     }
 }
 
@@ -602,6 +702,25 @@
 
     .homeCardImg {
         height: 110px !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.2rem !important;
+        margin: 0 !important;
+    }
+
+    .searchResultsCardImg {
+        height: 100px !important;
+    }
+
+    .sortClick ul {
+        margin-right: -18px !important;
+    }
+}
+
+@media (max-width: 314px) {
+    .searchResultsCardName {
+        display: none !important;
     }
 }
 
