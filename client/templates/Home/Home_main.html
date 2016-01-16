@@ -1,11 +1,13 @@
 <template name="home">
-<!-- TASK - Limit listings on every page load EX: Load more *click* => help center => Home page The user will see the extra listings from the past click -->
-<!-- TASK - Include mile radius selector select box 1 2 3 5 10 20 top left-->
     <div class="homeCard oneDiv">
         <ul class="homeCardUl">
+            {{#if defaultCheck}}
             {{#each listing}}
             {{> card}}
             {{/each}}
+            {{else}}
+            {{> DefaultHome}}
+            {{/if}}
         </ul> 
     </div>
     <ul class="profileUserMore">
@@ -13,7 +15,12 @@
             <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
         </li>
     </ul>  
-    {{> footer}}
     {{> ModalLocationRadius}}
     {{> ModalJoin}}
+
+    {{#if currentUser}}
+    {{> footer}}
+    {{else}}
+    {{> footerPre}}
+    {{/if}}
 </template>

@@ -1,9 +1,13 @@
 <template name="profileManagerListings">
 	<div class="profileCard oneDiv">
         <ul class="profileCardUl">
+        {{#if defaultCheck}}
             {{#each listing}}
             {{> ManagerCardListing}}
             {{/each}}
+            {{else}}
+            {{> DefaultProfileListings}}
+        {{/if}}
         </ul>
     </div>
     {{> ModalReceivedOffers}}
