@@ -376,6 +376,28 @@
         height: 120px !important;
     }
 
+    .searchResultsCardPrice {
+        margin: 0 !important;
+    }
+
+    .searchResultsCardPrice span {
+        font-size: 0.8rem;
+    }
+
+    .searchResultsCardTitle h2 {
+        font-size: 1.1rem !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.6rem !important;
+        margin: 0 !important;
+    }
+
+    .searchResultsCardSize, 
+    .searchResultsCardCondition, .searchResultsCardLocation {
+        font-size: 0.8rem !important;
+    }
+
 
     .helpImgUl > li {
     	width: 40%;
@@ -473,6 +495,10 @@
         padding-top: 0.2em !important;
         padding-bottom: 0.2em !important;
     }
+
+    .searchResultsCardImg {
+        height: 110px !important;
+    }
     // .profileCardLi {
     // 	width: 80% !important;
     // }
@@ -518,6 +544,9 @@
 
     .homeCardDetails {
         margin-top: 0;
+    }
+    .searchResultsCardImg {
+        height: 100px !important;
     }
 }
 
@@ -571,7 +600,32 @@
     .helpShow {
         display: none !important;
     }
-    
+    .searchResultsCardImg {
+        height: 85px !important;
+    }
+
+    .searchResultsCardPrice {
+        margin: 0 !important;
+    }
+
+    .searchResultsCardPrice span {
+        font-size: 0.7rem;
+    }
+
+    .searchResultsCardTitle h2 {
+        font-size: 0.9rem !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.6rem !important;
+        margin: 0 !important;
+    }
+
+    .searchResultsCardSize, 
+    .searchResultsCardCondition, .searchResultsCardLocation {
+        font-size: 0.7rem !important;
+    }
+
 }
 
 
