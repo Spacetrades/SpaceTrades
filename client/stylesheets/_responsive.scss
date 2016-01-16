@@ -94,6 +94,12 @@
     // }
 }
 
+@media (max-width: 876px) {
+    .searchResultsCards {
+        margin-top: -1368px !important;
+    }
+}
+
 @media (max-width: 875px) {
     .footerLeft {
         width: 95% !important;
@@ -497,7 +503,15 @@
     }
 
     .searchResultsCardImg {
-        height: 110px !important;
+        height: 125px !important;
+    }
+
+    .searchResultsCardLeft {
+        width: 35% !important;
+    }
+
+    .searchResultsCardRight {
+        width: 45% !important;
     }
     // .profileCardLi {
     // 	width: 80% !important;
@@ -545,9 +559,13 @@
     .homeCardDetails {
         margin-top: 0;
     }
-    .searchResultsCardImg {
-        height: 100px !important;
+
+    .searchResultsCardLeft {
+        width: 40% !important;
     }
+    // .searchResultsCardImg {
+    //     height:  !important;
+    // }
 }
 
 @media (max-width: 380px) {
@@ -601,7 +619,7 @@
         display: none !important;
     }
     .searchResultsCardImg {
-        height: 85px !important;
+        height: 110px !important;
     }
 
     .searchResultsCardPrice {
@@ -638,6 +656,15 @@
     .homeCardImg {
         height: 120px !important;
     }
+
+    .searchResultsCardName {
+        height: 18px !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.4rem !important;
+        margin: 0 !important;
+    }
 }
 
 @media (max-width: 340px) {
@@ -656,6 +683,21 @@
 
     .homeCardImg {
         height: 110px !important;
+    }
+
+    .searchResultsCardName p {
+        font-size: 0.2rem !important;
+        margin: 0 !important;
+    }
+
+    .searchResultsCardImg {
+        height: 100px !important;
+    }
+}
+
+@media (max-width: 314px) {
+    .searchResultsCardName {
+        display: none !important;
     }
 }
 
