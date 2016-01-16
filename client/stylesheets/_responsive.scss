@@ -12,12 +12,28 @@
     .oneDiv, .onediv {
         width: 90% !important;
     }
+
+    .homeCardLi {
+     width: 210px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .homeCardLi {
+     width: 210px;
+    }
 }
 
 @media (max-width: 1065px) {
     // .homeCardLi {
     // 	width: 19.5%;
     // }
+}
+
+@media (max-width: 1050px) {
+    .homeCardLi {
+     width: 210px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -64,6 +80,19 @@
 	// .profileCardLi {
  //    	width: 40% !important;
  //    }
+
+    .homeCard {
+        width: 95% !important;
+    }
+
+    .homeCardLi {
+        width: 190px;
+        margin: 6px;
+    }
+
+    .homeCardImg {
+        height: 190px !important;
+    }
 }
 
 @media (max-width: 825px) {
@@ -133,10 +162,20 @@
 
 }
 
-@media (max-width: 768px) {
-    // .homeCardLi {
-    // 	width: 35%;
-    // }
+@media (max-width: 720px) {
+
+    .homeCard {
+        width: 95%;
+    }
+
+    .homeCardLi {
+    	width: 170px;
+        margin: 6px 4px !important;
+    }
+
+    .homeCardImg {
+        height: 170px !important;
+    }
 }
 
 @media (max-width: 700px) {
@@ -189,6 +228,14 @@
 
     .footerLeft > ul:first-child > li:nth-child(1) h3 {
         margin-right: 0 !important;
+    }
+
+    .homeCardLi {
+        width: 200px;
+    }
+
+    .homeCardImg {
+        height: 200px !important;
     }
 
 }
@@ -248,6 +295,14 @@
         width: 90% !important;
     }
 
+    .homeCardLi {
+        width: 170px;
+    }
+
+    .homeCardImg {
+        height: 170px !important;
+    }
+
     
 
  //    .searchResultsCards {
@@ -291,6 +346,19 @@
     .homesearchbtn {
     	font-size: 0.9rem;
     }
+
+    .homeCardLi {
+        width: 155px;
+    }
+
+    .homeCardImg {
+        height: 155px !important;
+    }
+
+    .homeCardItem li a h4 {
+        padding-top: 0.2em !important;
+        padding-bottom: 0.2em !important;
+    }
     // .profileCardLi {
     // 	width: 80% !important;
     // }
@@ -325,6 +393,18 @@
     .faqdiv ol, .safetydiv ol, .reportdiv ol {
         margin-left: 10px !important;
     }
+
+    .homeCardLi {
+        width: 140px;
+    }
+
+    .homeCardImg {
+        height: 140px !important;
+    }
+
+    .homeCardDetails {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 380px) {
@@ -344,6 +424,14 @@
         margin-top: 20px !important;
     }
 
+    .homeCardLi {
+        width: 130px;
+        margin: 6px 4px !important;
+    }
+
+    .homeCardImg {
+        height: 130px !important;
+    }
 
 }
 
@@ -373,10 +461,15 @@
 }
 
 
-@media (max-width: 357px) { 
-    // .footerLeft ul:first-child li:nth-child(6) {
-    //     margin-top: 20px !important;
-    // }
+@media (max-width: 342px) { 
+    .homeCardLi {
+        width: 120px;
+        margin: 4px 2px;
+    }
+
+    .homeCardImg {
+        height: 120px !important;
+    }
 }
 
 @media (max-width: 340px) {
@@ -384,6 +477,17 @@
         width: 160px;
         margin: auto;
         line-height: 2 !important;
+    }
+}
+
+@media (max-width: 321px) {
+
+    .homeCardLi {
+        width: 110px;
+    }
+
+    .homeCardImg {
+        height: 110px !important;
     }
 }
 
