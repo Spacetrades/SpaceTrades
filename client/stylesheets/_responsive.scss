@@ -30,6 +30,12 @@
     // }
 }
 
+@media (max-width: 1051px) {
+    .searchResultsCards {
+        margin-top: -1336px !important;
+    }
+}
+
 @media (max-width: 1050px) {
     .homeCardLi {
      width: 210px;
@@ -359,6 +365,10 @@
     .searchResultsCardImg {
         height: 145px !important;
     }
+
+    .sortClick ul {
+        margin-right: -5px !important;
+    }
 }
 
 
@@ -513,6 +523,10 @@
     .searchResultsCardRight {
         width: 45% !important;
     }
+
+    .sortClick ul {
+        margin-right: -10px !important;
+    }
     // .profileCardLi {
     // 	width: 80% !important;
     // }
@@ -646,6 +660,11 @@
 
 }
 
+@media (max-width: 342px) {
+    .sortClick ul {
+        margin-right: -15px !important;
+    }
+}
 
 @media (max-width: 342px) { 
     .homeCardLi {
@@ -692,6 +711,10 @@
 
     .searchResultsCardImg {
         height: 100px !important;
+    }
+
+    .sortClick ul {
+        margin-right: -18px !important;
     }
 }
 
