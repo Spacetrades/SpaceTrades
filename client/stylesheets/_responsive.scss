@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	Sass Document For Adding Responsiveness
+    Sass Document For Adding Responsiveness
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 @media (min-width: 1200px) {
@@ -14,26 +14,24 @@
     }
 
     .homeCardLi {
-     width: 210px;
+        width: 210px;
     }
 }
 
+@media (max-width: 1100px) {
+    .profileCardImg {
+        height: 100% !important;
+    }
+}
+
+
 @media (max-width: 1050px) {
     .homeCardLi {
-     width: 210px;
+        width: 210px;
     }
 }
 
 @media (max-width: 1065px) {
-    // .homeCardLi {
-    // 	width: 19.5%;
-    // }
-}
-
-@media (max-width: 1051px) {
-    .searchResultsCards {
-        margin-top: -1336px !important;
-    }
 }
 
 @media (max-width: 1050px) {
@@ -49,10 +47,6 @@
 }
 
 @media (max-width: 1000px) {
-    // .homeCardLi {
-    // 	width: 25%;
-    // }
-
     .searchResultsCardImg {
         height: 185px !important;
     }
@@ -60,6 +54,10 @@
     .searchResultsCardSize, 
     .searchResultsCardCondition, .searchResultsCardLocation {
         font-size: 1rem;
+    }
+
+    .managerOfferView {
+        margin-top: 10px !important;
     }
 }
 
@@ -70,10 +68,6 @@
 }
 
 @media (max-width: 950px) {
-    // .profileCardLi {
-    // 	width: 35% !important;
-    // }
-
     .searchResultsCardImg {
         height: 175px !important;
     }
@@ -85,24 +79,37 @@
 }
 
 @media (max-width: 900px) {
-	.helpThree {
-		width: 80%;
-		margin: 0 auto 40px auto;
-	}
-
-    .helpThree > li {
-    	width: 100%;
-    	margin-top: 40px !important;
+    .helpThree {
+        width: 80%;
+        margin: 0 auto 40px auto;
     }
 
-    // .searchResultsCardLi {
-    // 	width: 90%;
-    // }
+    .helpThree > li {
+        width: 100%;
+        margin-top: 40px !important;
+    }
+
+    .managerOfferView {
+        margin-top: 4px !important;
+    }
+
+    .profileCardInfo > li:first-child {
+        margin-bottom: 6px !important;
+    }
 }
 
 @media (max-width: 876px) {
-    .searchResultsCards {
-        margin-top: -1368px !important;
+
+    .managerOfferView {
+        margin-top: 20px !important;
+    }
+
+    .profileCardInfo > li:first-child {
+        margin-bottom: 12px !important;
+    }
+
+    .profileCardLi {
+        width: 315px !important;
     }
 }
 
@@ -113,24 +120,12 @@
 }
 
 @media (max-width: 870px) {
-    // .profileCardLi {
- //     width: 40% !important;
- //    }
-
     .homeCardLi {
         width: 200px;
-    }
-
-    .homeCardImg {
-        height: 200px !important;
     }
 }
 
 @media (max-width: 850px) {
-	// .profileCardLi {
- //    	width: 40% !important;
- //    }
-
     .homeCard {
         width: 95% !important;
     }
@@ -138,10 +133,6 @@
     .homeCardLi {
         width: 190px;
         margin: 6px;
-    }
-
-    .homeCardImg {
-        height: 190px !important;
     }
 
     .searchResultsCardImg {
@@ -184,16 +175,16 @@
 
 @media (max-width: 800px) {
     .helpImgUl > li > img {
-    	margin: 1rem 0 !important;
+        margin: 1rem 0 !important;
     }
 
     .helpPagesPar {
-    	margin-right: 0 !important;
-    	margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
     }
 
     .searchResultsRefine {
-    	display: none !important;
+        display: none !important;
     }
 
     .searchResultsCards {
@@ -201,29 +192,35 @@
     }
 
     .searchResultsCardLi {
-    	width: 93% !important;
-    	margin: 10px auto !important;
+        width: 93% !important;
+        margin: 10px auto !important;
     }
 
     .searchResultsCards {
-    	float: none !important;
-    	margin-top: 0 !important;
-    	width: 95.5%;
+        float: none !important;
+        margin-top: 0 !important;
+        width: 95.5%;
     }
 
     .searchResultsCardImg {
-    	height: 185px !important;
+        height: 185px !important;
     }
     .searchResultsCardPrice {
-    	margin: 8px 0 10px 0 !important;
-    	font-size: 1rem !important;
+        margin: 8px 0 10px 0 !important;
+        font-size: 1rem !important;
     }
     .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
-    	margin: 12px 0 !important;
-    	font-size: 1rem !important;
+        margin: 12px 0 !important;
+        font-size: 1rem !important;
     } 
     .searchResultsCardName {
-    	font-size: 0.95rem !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .profileCardLi {
+        width: 42% !important;
     }
 }
 
@@ -247,6 +244,16 @@
 
 }
 
+@media (max-width: 750px) {
+    .managerOfferView {
+        margin-top: 15px !important;
+    }
+
+    .profileCardInfo li:first-child {
+        margin-bottom: 8px !important;
+    }
+}
+
 @media (max-width: 740px) {
     .searchResultsCardImg {
         height: 175px !important;
@@ -260,33 +267,28 @@
     }
 
     .homeCardLi {
-    	width: 170px;
+        width: 170px;
         margin: 6px 4px !important;
-    }
-
-    .homeCardImg {
-        height: 170px !important;
     }
 }
 
 @media (max-width: 700px) {
 
     p {
-    	font-size: 0.9rem;
-	}
+        font-size: 0.9rem;
+    }
 
-	h2 {
-	    font-size: 1.5rem;
-	}
+    h2 {
+        font-size: 1.5rem;
+    }
 
-	h3 {
-	    font-size: 1.1rem;
-	}
+    h3 {
+        font-size: 1.1rem;
+    }
 
-	h4 {
-	    font-size: 1rem;
-	}
-
+    h4 {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 690px) {
@@ -296,12 +298,6 @@
 }
 
 @media (max-width: 650px) {
-    // .homeCardLi {
-    // 	width: 38%;
-    // }
-    // .profileCardLi {
-    // 	width: 43% !important;
-    // }
     .searchResultsCardPrice {
         margin: 6px 0 !important;
     }
@@ -351,23 +347,11 @@
     .homeCardLi {
         width: 200px;
     }
-
-    .homeCardImg {
-        height: 200px !important;
-    }
-
 }
 
 @media (max-width: 600px) {
-    // .homeCardLi {
-    // 	width: 40%;
-    // }
     .searchResultsCardImg {
         height: 145px !important;
-    }
-
-    .sortClick ul {
-        margin-right: -5px !important;
     }
 }
 
@@ -380,10 +364,10 @@
 
 @media (max-width: 520px) {
     // .homeCardLi {
-    // 	width: 50%;
+    //  width: 50%;
     // }
     // .profileCardLi {
-    // 	width: 60% !important;
+    //  width: 60% !important;
     // }
 }
 
@@ -392,35 +376,13 @@
         height: 120px !important;
     }
 
-    .searchResultsCardPrice {
-        margin: 0 !important;
-    }
-
-    .searchResultsCardPrice span {
-        font-size: 0.8rem;
-    }
-
-    .searchResultsCardTitle h2 {
-        font-size: 1.1rem !important;
-    }
-
-    .searchResultsCardName p {
-        font-size: 0.6rem !important;
-        margin: 0 !important;
-    }
-
-    .searchResultsCardSize, 
-    .searchResultsCardCondition, .searchResultsCardLocation {
-        font-size: 0.8rem !important;
-    }
-
 
     .helpImgUl > li {
-    	width: 40%;
+        width: 40%;
     }
 
     .helpImgUl > li:last-child {
-    	display: none !important;
+        display: none !important;
     }
 
     .faqdiv h3, .safetydiv h3, .reportdiv h3 {
@@ -433,11 +395,11 @@
     }
 
     .contactname input, .contactsubject input, .contactemail input, .contacttext textarea {
-    	width: 80% !important;
+        width: 80% !important;
     }
 
     .contactSend {
-    	width: 93% !important;
+        width: 93% !important;
     }
     .footerDivide {
         width: 90% !important;
@@ -449,109 +411,47 @@
 
     .homeCardLi {
         width: 170px;
-    }
-
-    .homeCardImg {
-        height: 170px !important;
-    }
-
-    
-
- //    .searchResultsCards {
- //    	width: 100% !important;
- //    	margin: 10px auto !important;
- //    }
- //    .searchResultsCardLi {
- //    	width: 40% !important;
- //    	margin: 10px 5px !important;
- //    }
- //    .searchResultsCardLi > ul {
- //    	display: block;
-	// }
-	// .searchResultsCardRight {
-	// 	width: 100% !important;
-	// }
-	// .searchResultsCardLeft {
-	// 	width: 100% !important;
-	// }
-	// .searchResultsCardImg {
-	// 	height: 200px;
-	// }
-	// .rSearchArea {
- //    	display: none;
- //    } 
+    } 
 }
 
 @media (max-width: 480px) {
-    // .homeCardLi {
-    // 	width: 55%;
-    // }
+    
 }
 
 @media (max-width: 450px) {
     .logo {
-    	font-size: 3.5rem;
+        font-size: 3.5rem;
     }
     .search {
-    	width: 60%;
+        width: 60%;
     }
     .homesearchbtn {
-    	font-size: 0.9rem;
+        font-size: 0.9rem;
     }
 
     .homeCardLi {
         width: 155px;
     }
 
-    .homeCardImg {
-        height: 155px !important;
-    }
-
     .homeCardItem li a h4 {
         padding-top: 0.2em !important;
         padding-bottom: 0.2em !important;
     }
-
-    .searchResultsCardImg {
-        height: 125px !important;
-    }
-
-    .searchResultsCardLeft {
-        width: 35% !important;
-    }
-
-    .searchResultsCardRight {
-        width: 45% !important;
-    }
-
-    .sortClick ul {
-        margin-right: -10px !important;
-    }
-    // .profileCardLi {
-    // 	width: 80% !important;
-    // }
+    
 }
 
 @media (max-width: 430px) {
-    // .homeCardLi {
-    // 	width: 60%;
-    // }
-    // .searchResultsCardLi {
-    // 	width: 60% !important;
-    // }
-	// .searchResultsCardImg {
-	// 	height: 200px!important;
-	// }
+    
 }
 
 @media (max-width: 400px) {
-	.helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
-		width: 90%;
-		margin: auto;
-	}
+    .helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
+        width: 90%;
+        margin: auto;
+    }
 
     .helpAboutUl li:first-child > p {
-    	text-align: left !important;
+        text-align: left !important;
     }
 
     .faqdiv h3, .safetydiv h3, .reportdiv h3 {
@@ -566,29 +466,12 @@
         width: 140px;
     }
 
-    .homeCardImg {
-        height: 140px !important;
-    }
-
     .homeCardDetails {
         margin-top: 0;
     }
-
-    .searchResultsCardLeft {
-        width: 40% !important;
-    }
-    // .searchResultsCardImg {
-    //     height:  !important;
-    // }
 }
 
 @media (max-width: 380px) {
-    // .homeCardLi {
-    // 	width: 65%;
-    // }
-    // .searchResultsCardLi {
-    // 	width: 70% !important;
-    // }
     .termsDiv p {
         font-size: 0.8rem !important;
     }
@@ -611,12 +494,6 @@
 }
 
 @media (max-width: 360px) {
-    // .homeCardLi {
-    // 	width: 70%;
-    // }
-    // .searchResultsCardLi {
-    // 	width: 80% !important;
-    // }
     .faqdiv h3, .safetydiv h3, .reportdiv h3 {
         margin-left: 3px !important;
     }
@@ -632,39 +509,9 @@
     .helpShow {
         display: none !important;
     }
-    .searchResultsCardImg {
-        height: 110px !important;
-    }
-
-    .searchResultsCardPrice {
-        margin: 0 !important;
-    }
-
-    .searchResultsCardPrice span {
-        font-size: 0.7rem;
-    }
-
-    .searchResultsCardTitle h2 {
-        font-size: 0.9rem !important;
-    }
-
-    .searchResultsCardName p {
-        font-size: 0.6rem !important;
-        margin: 0 !important;
-    }
-
-    .searchResultsCardSize, 
-    .searchResultsCardCondition, .searchResultsCardLocation {
-        font-size: 0.7rem !important;
-    }
-
+    
 }
 
-@media (max-width: 342px) {
-    .sortClick ul {
-        margin-right: -15px !important;
-    }
-}
 
 @media (max-width: 342px) { 
     .homeCardLi {
@@ -672,18 +519,6 @@
         margin: 4px 2px;
     }
 
-    .homeCardImg {
-        height: 120px !important;
-    }
-
-    .searchResultsCardName {
-        height: 18px !important;
-    }
-
-    .searchResultsCardName p {
-        font-size: 0.4rem !important;
-        margin: 0 !important;
-    }
 }
 
 @media (max-width: 340px) {
@@ -695,49 +530,21 @@
 }
 
 @media (max-width: 321px) {
-
     .homeCardLi {
         width: 110px;
-    }
-
-    .homeCardImg {
-        height: 110px !important;
-    }
-
-    .searchResultsCardName p {
-        font-size: 0.2rem !important;
-        margin: 0 !important;
-    }
-
-    .searchResultsCardImg {
-        height: 100px !important;
-    }
-
-    .sortClick ul {
-        margin-right: -18px !important;
-    }
-}
-
-@media (max-width: 314px) {
-    .searchResultsCardName {
-        display: none !important;
     }
 }
 
 @media (max-width: 300px) {
-	.helpImgUl > li:first-child {
-		width: 84%;
-	}
-    .helpImgUl > li:nth-child(2) {
-    	display: none !important;
+    .helpImgUl > li:first-child {
+        width: 84%;
     }
+
+    .helpImgUl > li:nth-child(2) {
+        display: none !important;
+    }
+
     .oneDiv {
         min-width: 300px !important;
     }
-    // .profileCardLi {
-    // 	width: 90% !important;
-    // }
-    // .searchResultsCardLi {
-    // 	width: 90% !important;
-    // }
 }
