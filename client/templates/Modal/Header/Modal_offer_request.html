@@ -31,13 +31,30 @@
                 </div>
             </div>
             <div class="modOfferRequestDiv modOfferRequestDivTwo modal-body step step-2">
-                <div class="modOfferRequestPageTwo">
-                    <li class="modOfferRequestDateWrap">
-                        <h2>When Would You Like To Meet Up?</h2>
-                        <ul>
-                            <li><input type="text" id="datepicker"></li>
-                        </ul>
-                    </li>
+                <div class="modOfferRequestPageOne">
+                    <ul class="modOfferRequestPageOneUl">
+                        <li class="modOfferRequestOfferWrap">
+                            <h2>When Would You Like To Meet?</h2>
+                            <input type="text" id="datepicker">
+                        </li>     
+                        <li class="modOfferRequestPaymentWrap">
+                            <h2>What Time Would You Like To Meet?</h2>
+                            <ul>
+                                <li class="modOfferRequestPaymentCash">
+                                    <input type="radio" id="modOfferRequestTimeMorningRadio" name="OfferTime" value="Morning" class="offerRequestPaymentRadio" checked/>
+                                    <label for="modOfferRequestTimeMorningRadio">Morning</label>
+                                </li>
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestTimeAfternoonRadio" name="OfferTime" value="Afternoon" class="offerRequestPaymentRadio"/>
+                                    <label for="modOfferRequestTimeAfternoonRadio">Afternoon</label>
+                                </li>
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestTimeNightRadio" name="OfferTime" value="Night" class="offerRequestPaymentRadio"/>
+                                    <label for="modOfferRequestTimeNightRadio">Night</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestTwo">
                     <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="offerRequestJump1()">Back</button>

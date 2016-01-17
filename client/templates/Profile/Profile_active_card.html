@@ -1,15 +1,15 @@
 <template name="ProfileActiveCard">
    <li class="profileCardLi">
-            <p>Meetup With {{nameOfferer}}</p>
-            <ul class="profileCardImage">
-                <a href="/listing/{{_id}}"><img src="{{img}}" class="profileCardImg"></a>
-            </ul>
-            <ul class="profileCardInfo">
-                <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
-                <li class="money profileCardItem">${{price}}</li>
-                <li class="profileCardItem">{{date}}</li>
-                <li class="profileCardItem">{{location}}</li>
-                <li class="managerOfferView"><a href="#" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalProfileActive">Meetup Details</a></li>
-            </ul> 
-        </li>   
+        <p>Meetup With {{nameOfferer}}</p>
+        <ul class="profileCardImage">
+            <a href="/listing/{{_id}}"><img src="{{img}}" class="profileCardImg"></a>
+        </ul>
+        <ul class="profileCardInfo">
+            <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+            <li class="money profileCardItem">${{price}}</li>
+            <li class="profileCardItem">{{date}}</li>
+            <li class="profileCardItem">{{location}}</li>
+            <li class="managerOfferView"><a href="#" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalProfileActive">Meetup Details</a></li>
+        </ul> 
+    </li>   
 </template> 
