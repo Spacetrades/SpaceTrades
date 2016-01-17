@@ -47,9 +47,6 @@
 }
 
 @media (max-width: 1000px) {
-    .searchResultsCardImg {
-        height: 185px !important;
-    }
 
     .searchResultsCardSize, 
     .searchResultsCardCondition, .searchResultsCardLocation {
@@ -68,9 +65,6 @@
 }
 
 @media (max-width: 950px) {
-    .searchResultsCardImg {
-        height: 175px !important;
-    }
 
     .searchResultsCardSize, 
     .searchResultsCardCondition, .searchResultsCardLocation {
@@ -133,10 +127,6 @@
     .homeCardLi {
         width: 190px;
         margin: 6px;
-    }
-
-    .searchResultsCardImg {
-        height: 155px !important;
     }
 
     .searchResultsCardPrice {
@@ -202,9 +192,6 @@
         width: 95.5%;
     }
 
-    .searchResultsCardImg {
-        height: 185px !important;
-    }
     .searchResultsCardPrice {
         margin: 8px 0 10px 0 !important;
         font-size: 1rem !important;
@@ -289,6 +276,14 @@
     h4 {
         font-size: 1rem;
     }
+
+    .profileCardInfo li:first-child {
+        margin-bottom: 4px !important;
+    }
+
+    .managerOfferView {
+        margin-top: 4px !important;
+    }
 }
 
 @media (max-width: 690px) {
@@ -298,6 +293,20 @@
 }
 
 @media (max-width: 650px) {
+    .profileCardInfo li:first-child {
+        font-size: 1rem !important;
+    }
+
+    .profileCardItem {
+        margin-bottom: 2px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .managerOfferView button {
+        font-size: 0.8rem !important;
+        padding: 8px 6px !important;
+    }
+    
     .searchResultsCardPrice {
         margin: 6px 0 !important;
     }
@@ -350,9 +359,7 @@
 }
 
 @media (max-width: 600px) {
-    .searchResultsCardImg {
-        height: 145px !important;
-    }
+    
 }
 
 
@@ -372,11 +379,6 @@
 }
 
 @media (max-width: 500px) {
-    .searchResultsCardImg {
-        height: 120px !important;
-    }
-
-
     .helpImgUl > li {
         width: 40%;
     }
@@ -486,11 +488,6 @@
         width: 130px;
         margin: 6px 4px !important;
     }
-
-    .homeCardImg {
-        height: 130px !important;
-    }
-
 }
 
 @media (max-width: 360px) {
