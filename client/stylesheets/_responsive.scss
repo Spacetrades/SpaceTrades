@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	Sass Document For Adding Responsiveness
+    Sass Document For Adding Responsiveness
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 @media (min-width: 1200px) {
@@ -79,14 +79,14 @@
 }
 
 @media (max-width: 900px) {
-	.helpThree {
-		width: 80%;
-		margin: 0 auto 40px auto;
-	}
+    .helpThree {
+        width: 80%;
+        margin: 0 auto 40px auto;
+    }
 
     .helpThree > li {
-    	width: 100%;
-    	margin-top: 40px !important;
+        width: 100%;
+        margin-top: 40px !important;
     }
 
     .managerOfferView {
@@ -175,16 +175,16 @@
 
 @media (max-width: 800px) {
     .helpImgUl > li > img {
-    	margin: 1rem 0 !important;
+        margin: 1rem 0 !important;
     }
 
     .helpPagesPar {
-    	margin-right: 0 !important;
-    	margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
     }
 
     .searchResultsRefine {
-    	display: none !important;
+        display: none !important;
     }
 
     .searchResultsCards {
@@ -192,29 +192,29 @@
     }
 
     .searchResultsCardLi {
-    	width: 93% !important;
-    	margin: 10px auto !important;
+        width: 93% !important;
+        margin: 10px auto !important;
     }
 
     .searchResultsCards {
-    	float: none !important;
-    	margin-top: 0 !important;
-    	width: 95.5%;
+        float: none !important;
+        margin-top: 0 !important;
+        width: 95.5%;
     }
 
     .searchResultsCardImg {
-    	height: 185px !important;
+        height: 185px !important;
     }
     .searchResultsCardPrice {
-    	margin: 8px 0 10px 0 !important;
-    	font-size: 1rem !important;
+        margin: 8px 0 10px 0 !important;
+        font-size: 1rem !important;
     }
     .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
-    	margin: 12px 0 !important;
-    	font-size: 1rem !important;
+        margin: 12px 0 !important;
+        font-size: 1rem !important;
     } 
     .searchResultsCardName {
-    	font-size: 0.95rem !important;
+        font-size: 0.95rem !important;
     }
 }
 
@@ -267,7 +267,7 @@
     }
 
     .homeCardLi {
-    	width: 170px;
+        width: 170px;
         margin: 6px 4px !important;
     }
 }
@@ -275,20 +275,20 @@
 @media (max-width: 700px) {
 
     p {
-    	font-size: 0.9rem;
-	}
+        font-size: 0.9rem;
+    }
 
-	h2 {
-	    font-size: 1.5rem;
-	}
+    h2 {
+        font-size: 1.5rem;
+    }
 
-	h3 {
-	    font-size: 1.1rem;
-	}
+    h3 {
+        font-size: 1.1rem;
+    }
 
-	h4 {
-	    font-size: 1rem;
-	}
+    h4 {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 690px) {
@@ -364,10 +364,10 @@
 
 @media (max-width: 520px) {
     // .homeCardLi {
-    // 	width: 50%;
+    //  width: 50%;
     // }
     // .profileCardLi {
-    // 	width: 60% !important;
+    //  width: 60% !important;
     // }
 }
 
@@ -378,11 +378,11 @@
 
 
     .helpImgUl > li {
-    	width: 40%;
+        width: 40%;
     }
 
     .helpImgUl > li:last-child {
-    	display: none !important;
+        display: none !important;
     }
 
     .faqdiv h3, .safetydiv h3, .reportdiv h3 {
@@ -395,11 +395,11 @@
     }
 
     .contactname input, .contactsubject input, .contactemail input, .contacttext textarea {
-    	width: 80% !important;
+        width: 80% !important;
     }
 
     .contactSend {
-    	width: 93% !important;
+        width: 93% !important;
     }
     .footerDivide {
         width: 90% !important;
@@ -420,13 +420,13 @@
 
 @media (max-width: 450px) {
     .logo {
-    	font-size: 3.5rem;
+        font-size: 3.5rem;
     }
     .search {
-    	width: 60%;
+        width: 60%;
     }
     .homesearchbtn {
-    	font-size: 0.9rem;
+        font-size: 0.9rem;
     }
 
     .homeCardLi {
@@ -445,13 +445,13 @@
 }
 
 @media (max-width: 400px) {
-	.helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
-		width: 90%;
-		margin: auto;
-	}
+    .helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
+        width: 90%;
+        margin: auto;
+    }
 
     .helpAboutUl li:first-child > p {
-    	text-align: left !important;
+        text-align: left !important;
     }
 
     .faqdiv h3, .safetydiv h3, .reportdiv h3 {
@@ -536,12 +536,12 @@
 }
 
 @media (max-width: 300px) {
-	.helpImgUl > li:first-child {
-		width: 84%;
-	}
+    .helpImgUl > li:first-child {
+        width: 84%;
+    }
 
     .helpImgUl > li:nth-child(2) {
-    	display: none !important;
+        display: none !important;
     }
 
     .oneDiv {

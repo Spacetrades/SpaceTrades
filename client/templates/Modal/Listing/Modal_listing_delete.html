@@ -1,0 +1,25 @@
+<template name="ModalListingDelete">
+	<div class="modSentOffer modal" id="listingDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modSentOfferDialog modal-dialog" role="document">
+			<div class="modSendOfferContent modal-content">
+				<div class="modSentOfferBody modal-body">
+					<div class="profileReceivedOffers">
+						<ul id="profileReceivedModalUl" class="profileReceivedUl">
+							<li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+								<ul class="profileReceivedCardRight profileViewMeetupRight">
+									<li id="receivedContinue">Are You Sure You Want To Delete?</li>
+									<li id="receivedContinueBtn">
+										<ul id="profileReceivedButtonsUl">
+											<li class="receivedGoBack"><a data-dismiss="modal">Go Back</a></li>
+											<li id="profileReceivedAccept"><a data-dismiss="modal" data-toggle="modal" data-target="#receivedAccept">Yes</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
