@@ -19,9 +19,7 @@
 }
 
 @media (max-width: 1100px) {
-    .profileCardImg {
-        height: 100% !important;
-    }
+
 }
 
 
@@ -242,9 +240,7 @@
 }
 
 @media (max-width: 740px) {
-    .searchResultsCardImg {
-        height: 175px !important;
-    }
+    
 }
 
 @media (max-width: 730px) {
@@ -287,9 +283,7 @@
 }
 
 @media (max-width: 690px) {
-    .searchResultsCardImg {
-        height: 165px !important;
-    }
+    
 }
 
 @media (max-width: 650px) {
@@ -325,9 +319,7 @@
         margin: 4px 0 !important;
     }
 
-    .searchResultsCardImg {
-        height: 155px !important;
-    }
+    
     .footerbottom > li {
         display: block !important;
     }
@@ -359,14 +351,32 @@
 }
 
 @media (max-width: 600px) {
-    
+    .profileCardLi {
+        margin: 6px 5px !important;
+    }
 }
 
+@media (max-width: 583px) {
+      .profileCardLi {
+        width: 315px !important;
+      }
+
+      .profileCardInfo li:first-child {
+        margin-bottom: 12px !important;
+      }
+
+      .profileCardItem {
+        font-size: 0.9rem !important;
+        margin-bottom: 5px !important;
+      }
+
+      .managerOfferView {
+        margin-top: 22px !important;
+      }
+}
 
 @media (max-width: 580px) {
-    .searchResultsCardImg {
-        height: 135px !important;
-    }
+
 }
 
 @media (max-width: 520px) {
@@ -471,11 +481,30 @@
     .homeCardDetails {
         margin-top: 0;
     }
+
+    .profileCardLi {
+        width: 81.5% !important;
+    }
 }
 
 @media (max-width: 380px) {
     .termsDiv p {
         font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .profileCardInfo li:first-child {
+        margin-bottom: 6px !important;
+    }
+
+    .profileCardItem {
+        font-size: 0.8rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .managerOfferView {
+        margin-top: 15px !important;
     }
 }
 
@@ -509,6 +538,20 @@
     
 }
 
+@media (max-width: 350px) {
+    .profileCardInfo li:first-child {
+        margin-bottom: 4px !important;
+    }
+
+    .profileCardItem {
+        font-size: 0.8rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .managerOfferView {
+        margin-top: 5px !important;
+    }
+}
 
 @media (max-width: 342px) { 
     .homeCardLi {
