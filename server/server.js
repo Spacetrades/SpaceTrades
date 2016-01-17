@@ -96,6 +96,35 @@ if (Meteor.isServer) {
   // });
 
 
+  function ipLocate() {
+  var api = "http://ipinfo.io?callback=?";
+  $.getJSON( api, { 
+    format: "jsonp"
+  })
+  .done(function( response ) 
+  {
+     var result = ""
+    
+    // show all the props returned
+    for (var prop in response)
+    {
+        result += prop + ": " + response[prop] + "<br>";
+    } 
+
+    var selectedResponse = {
+      city: response.city,
+      region: response.region,
+      country: response.country,
+      ip: response.ip,
+      latLng: response.loc 
+    }
+         console.log(selectedResponse);
+         
+     return selectedResponse
+  });
+}
+
+
   Accounts.onCreateUser(function(options, user, err) {
 
     if (options.profile) {
@@ -103,10 +132,12 @@ if (Meteor.isServer) {
       user.profile = options.profile;
       options.profile.picturesm = "http://graph.facebook.com/" + user.services.facebook.id + "/picture/?type=small";
       options.profile.messenger = "https://www.messenger.com/t/" + user.services.facebook.id;
+
       // Up Neutral and Negative votes start as 0 and change from feedback
       options.profile.upvotes = 0;
       options.profile.neutralvotes = 0;
       options.profile.downvotes = 0;
+      options.profile.ip = ipLocate();
     }
 
     // HTTP.get("http://ipinfo.io", function(error, result) {
