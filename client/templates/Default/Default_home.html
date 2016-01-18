@@ -1,6 +1,6 @@
 <template name="DefaultHome">
 	<div class="homeNoListings">
-        <h2>We Couldn't Find Any Listings Within <b>5 Miles</b> Of <b>Palo Alto, CA</b></h2>
+        <h2>We Couldn't Find Any Listings Within <b>{{mapRadius}} Miles</b> Of <b>{{locationFull}}</b></h2>
         <p>Here's some lorum ipsum about what to do such as increase the search radius, among other things, such as contacting spacetrades on a special contact form to let us know you want us to focus on your area, and how the person can help</p>
         <li class="homeNoListingsButton"><a data-toggle="modal" data-target="#locationRadiusModal">Location Details</a></li>
     </div>
