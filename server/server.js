@@ -89,14 +89,25 @@ if (Meteor.isServer) {
             options.profile.picturelrg = picturelrg;
             options.profile.picturesm = picturesm;
 
-            // votes
+            // Votes
             options.profile.upvotes = 0;
             options.profile.neutralvotes = 0;
             options.profile.downvotes = 0;
 
-            // sold
+            // Sold
             options.profile.amountsold = 0;
             options.profile.amountbought = 0;
+
+            // Ratings
+            options.profile.sumrating = "";
+            options.profile.satisfactionrating = "";
+            options.profile.describedrating = "";
+            options.profile.efficiencyrating = "";
+            options.profile.friendlyrating = "";
+            options.profile.pointscore = "";
+            options.profile.reviewscount = "";
+
+            // IP
             // ip = response.ip;
 
 
@@ -214,8 +225,24 @@ if (Meteor.isServer) {
          * @summary Save A Listing
          * @locus Server
          */
-        listingSave: function(options) {
+        saveLocation: function(response, userId) {
+            var locationData = {
+                'city': response.city,
+                'region': response.region,
+                'country': response.country,
+                'ip': response.ip,
+                'latLng': response.loc
+            }
 
+            Meteor.users.update(userId, {
+                $set: {
+                    'city': response.city,
+                    'region': reponse.region,
+                    'country': response.country,
+                    'ip': response.ip,
+                    'latLng': response.latLng
+                }
+            })
         },
         /*
          * @summary Search Filter

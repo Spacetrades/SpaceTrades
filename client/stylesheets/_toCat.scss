@@ -1752,6 +1752,128 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
+/* Star 2*/
+
+ .rating2 { 
+  border: none;
+  float: left;
+}
+
+.rating2 > input { display: none; } 
+.rating2 > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating2 > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating2 > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating2 > input:checked ~ label, /* show gold star when clicked */
+.rating2:not(:checked) > label:hover, /* hover current star */
+.rating2:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating2 > input:checked + label:hover, /* hover current star when changing rating */
+.rating2 > input:checked ~ label:hover,
+.rating2 > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating2 > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+/* Star 3*/
+.rating3 > input { display: none; } 
+.rating3 > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating3 > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating3 > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating3 > input:checked ~ label, /* show gold star when clicked */
+.rating3:not(:checked) > label:hover, /* hover current star */
+.rating3:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating3 > input:checked + label:hover, /* hover current star when changing rating */
+.rating3 > input:checked ~ label:hover,
+.rating3 > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating3 > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+/* Star 4*/
+.rating4 > input { display: none; } 
+.rating4 > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating4 > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating4 > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating4 > input:checked ~ label, /* show gold star when clicked */
+.rating4:not(:checked) > label:hover, /* hover current star */
+.rating4:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating4 > input:checked + label:hover, /* hover current star when changing rating */
+.rating4 > input:checked ~ label:hover,
+.rating4 > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating4 > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+/* Star 5*/
+.rating5 > input { display: none; } 
+.rating5 > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating5 > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating5 > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+/* CSS Magic to Highlight Stars on Hover */
+.rating5 > input:checked ~ label, /* show gold star when clicked */
+.rating5:not(:checked) > label:hover, /* hover current star */
+.rating5:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating5 > input:checked + label:hover, /* hover current star when changing rating */
+.rating5 > input:checked ~ label:hover,
+.rating5 > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating5 > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
 .feedBackMeetupDiv div {
     display: inline-block;
 }
