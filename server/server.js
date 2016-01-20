@@ -99,17 +99,22 @@ if (Meteor.isServer) {
             options.profile.amountbought = 0;
 
             // Ratings
-            options.profile.sumrating = "";
-            options.profile.satisfactionrating = "";
-            options.profile.describedrating = "";
-            options.profile.efficiencyrating = "";
-            options.profile.friendlyrating = "";
-            options.profile.pointscore = "";
-            options.profile.reviewscount = "";
+            options.profile.sumrating = 0;
+            options.profile.satisfactionrating = 0;
+            options.profile.describedrating = 0;
+            options.profile.efficiencyrating = 0;
+            options.profile.friendlyrating = 0;
+            options.profile.pointscore = 0;
+            options.profile.reviewscount = 0;
 
             // IP
             // ip = response.ip;
 
+            // Saved
+            options.profile.saves = [];
+
+            // History
+            options.profile.history = [];
 
             return user;
         }
@@ -169,7 +174,7 @@ if (Meteor.isServer) {
             });
         },
         /**
-         * @summary Add listing 
+         * @summary Add listing
          * @locus Server
          * @instancename collection
          * @class
@@ -225,25 +230,57 @@ if (Meteor.isServer) {
          * @summary Save A Listing
          * @locus Server
          */
+        actionSave: function(options) {
+            Meteor.users.update(this.userId, {
+                $insert: {
+                    _id: options._id,
+                    createdAt: options.createdAt,
+                    // Status
+                    status: options.status,
+                    offerAccepted: options.offerAccepted,
+                    // Id
+                    creator_id: options.creator_id,
+                    // Title
+                    listing_title: options.listing_title,
+                    // Category
+                    // Information
+                    username: Meteor.user().profile.name,
+                    price: options.price,
+                    trade: options.trade,
+                    payment: options.payment,
+                    description: options.description,
+                    // Location
+                    lat: options.lat,
+                    lng: options.lng,
+                    city: options.city,
+                    state: options.state,
+                    locationString: options.locationString,
+                    // Images
+                    img1: options.img1,
+                }
+            });
+
+        },
         saveLocation: function(response, userId) {
-            var locationData = {
-                'city': response.city,
-                'region': response.region,
-                'country': response.country,
-                'ip': response.ip,
-                'latLng': response.loc
-            }
+            // var locationData = {
+            //     'city': response.city,
+            //     'region': response.region,
+            //     'country': response.country,
+            //     'ip': response.ip,
+            //     'latLng': response.loc
+            // }
 
             Meteor.users.update(userId, {
                 $set: {
-                    'city': response.city,
-                    'region': reponse.region,
-                    'country': response.country,
-                    'ip': response.ip,
-                    'latLng': response.latLng
+                    'profile.city': response.city,
+                    'profile.region': response.region,
+                    'profile.country': response.country,
+                    'profile.ip': response.ip,
+                    'profile.latLng': response.latLng
                 }
             })
         },
+
         /*
          * @summary Search Filter
          * @locus Server
