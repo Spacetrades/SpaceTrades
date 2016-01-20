@@ -99,13 +99,13 @@ if (Meteor.isServer) {
             options.profile.amountbought = 0;
 
             // Ratings
-            options.profile.sumrating = "";
-            options.profile.satisfactionrating = "";
-            options.profile.describedrating = "";
-            options.profile.efficiencyrating = "";
-            options.profile.friendlyrating = "";
-            options.profile.pointscore = "";
-            options.profile.reviewscount = "";
+            options.profile.sumrating = 0;
+            options.profile.satisfactionrating = 0;
+            options.profile.describedrating = 0;
+            options.profile.efficiencyrating = 0;
+            options.profile.friendlyrating = 0;
+            options.profile.pointscore = 0;
+            options.profile.reviewscount = 0;
 
             // IP
             // ip = response.ip;
@@ -273,7 +273,7 @@ if (Meteor.isServer) {
             Meteor.users.update(userId, {
                 $set: {
                     'profile.city': response.city,
-                    'profile.region': reponse.region,
+                    'profile.region': response.region,
                     'profile.country': response.country,
                     'profile.ip': response.ip,
                     'profile.latLng': response.latLng
