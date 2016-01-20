@@ -270,13 +270,18 @@ if (Meteor.isServer) {
             //     'latLng': response.loc
             // }
 
+           var locations = response.latLng.split(",", 2);
+           var lat = locations[0];
+           var lng = locations[1];
+
             Meteor.users.update(userId, {
                 $set: {
                     'profile.city': response.city,
-                    'profile.region': response.region,
+                    'profile.state': response.region,
                     'profile.country': response.country,
                     'profile.ip': response.ip,
-                    'profile.latLng': response.latLng
+                    'profile.lat': lat,
+                    'profile.lng': lng
                 }
             })
         },
