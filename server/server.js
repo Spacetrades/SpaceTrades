@@ -110,6 +110,11 @@ if (Meteor.isServer) {
             // IP
             // ip = response.ip;
 
+            // Saved
+            options.profile.saves = [];
+
+            // History
+            options.profile.history = [];
 
             return user;
         }
@@ -169,7 +174,7 @@ if (Meteor.isServer) {
             });
         },
         /**
-         * @summary Add listing 
+         * @summary Add listing
          * @locus Server
          * @instancename collection
          * @class
@@ -225,25 +230,57 @@ if (Meteor.isServer) {
          * @summary Save A Listing
          * @locus Server
          */
+        actionSave: function(options) {
+            Meteor.users.update(this.userId, {
+                $insert: {
+                    _id: options._id,
+                    createdAt: options.createdAt,
+                    // Status
+                    status: options.status,
+                    offerAccepted: options.offerAccepted,
+                    // Id
+                    creator_id: options.creator_id,
+                    // Title
+                    listing_title: options.listing_title,
+                    // Category
+                    // Information
+                    username: Meteor.user().profile.name,
+                    price: options.price,
+                    trade: options.trade,
+                    payment: options.payment,
+                    description: options.description,
+                    // Location
+                    lat: options.lat,
+                    lng: options.lng,
+                    city: options.city,
+                    state: options.state,
+                    locationString: options.locationString,
+                    // Images
+                    img1: options.img1,
+                }
+            });
+
+        },
         saveLocation: function(response, userId) {
-            var locationData = {
-                'city': response.city,
-                'region': response.region,
-                'country': response.country,
-                'ip': response.ip,
-                'latLng': response.loc
-            }
+            // var locationData = {
+            //     'city': response.city,
+            //     'region': response.region,
+            //     'country': response.country,
+            //     'ip': response.ip,
+            //     'latLng': response.loc
+            // }
 
             Meteor.users.update(userId, {
                 $set: {
-                    'city': response.city,
-                    'region': reponse.region,
-                    'country': response.country,
-                    'ip': response.ip,
-                    'latLng': response.latLng
+                    'profile.city': response.city,
+                    'profile.region': reponse.region,
+                    'profile.country': response.country,
+                    'profile.ip': response.ip,
+                    'profile.latLng': response.latLng
                 }
             })
         },
+
         /*
          * @summary Search Filter
          * @locus Server
