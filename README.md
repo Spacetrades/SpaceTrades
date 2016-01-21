@@ -204,3 +204,7 @@ Extensive undertandability is less crucial in the beginning stage of development
 	todda00:friendly-slugs          0.3.3  Generate URL friendly slugs from a field with auto-incrementation to ensure unique URLs.
 	u2622:persistent-session        0.4.0* Persistently store Session data on the client
 	underscore                      1.0.3  Collection of small helpers: _.map, _.each, ...
+
+
+	## Pre IP Location
+	Set Location from pre ip

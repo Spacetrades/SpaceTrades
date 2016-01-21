@@ -5,6 +5,10 @@
     {{> ModalReportListing}}
     {{> ModalEditListing}}
 
+    {{#if offerAccepted}}
+Cheat on her
+
+{{/if}}
     <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
         <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
     </button>
@@ -81,7 +85,6 @@
          <div class="desc-box-listing nomar desc-width listingItemDescription">
             <h4 class="box-title-listing">Description</h4>
             <p>{{{description}}}</p>
-            <!--  {{creator_id}} -->
         </div>
     </div>  
     <div class="listingItemRight">
@@ -113,7 +116,7 @@
         </div>
         <div class="listingItemUser">
             <ul class="listingItemUserImg">
-                <li><a href="/profile/{{profile}}"><img src="{{creatorpic}}"></a></li>
+                <li><a href="/profile/{{profile}}"><img src="{{img1}}"></a></li>
             </ul>
             <ul class="listingItemUserInfo">
                 <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
@@ -141,7 +144,7 @@
                                 <a href=""><i class="fa fa-pencil"></i>Edit</a>
                             </button>
                         </li>
-                        <li><a href="#"><i class="fa fa-star"></i>Save</a></li>
+                        <li class="itemSave"><a href="#"><i class="fa fa-star"></i>Save</a></li>
                         <li>
                             <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
                                 <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>

@@ -28,7 +28,22 @@
             </div>
             <div class="profileUserRating">
                 <ul class="profileUserRatingUl">
-                    <li class="profileStars">★★★☆☆<span>({{reviews}} Reviews )</span></li>
+                    <li class="profileStars">
+
+                     <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"></label>
+                        </fieldset>
+
+                    <span>({{reviewsCount}} Reviews )</span></li>
                     <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
                 </ul>
             </div>
@@ -40,8 +55,10 @@
             </div>
             <div class="profileUserAmount">
                 <ul>
-                    <li class="profileUserAmountBought">Bought<span class="money">$532{{boughtTotal}}</span></li>
-                    <li class="profileUserAmountSold">Sold<span class="money">$1280{{soldTotal}}</span></li>
+                    <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
+                    </li>
+                    <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
+                    </li>
                 </ul>
             </div>
             <div class="desc-box">
@@ -113,25 +130,77 @@
             <li>
                 <ul class="profileUserFeedbackViewCriteriaOne">
                     <li class="profileUserFeedbackViewQuestion">Product Satisfaction</li>
-                    <li class="profileUserFeedbackViewStars">☆☆☆☆☆</li>
+                    <li class="profileUserFeedbackViewStars">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating2" value="5" /><label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating2" value="4 and a half" /><label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating2" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating2" value="3 and a half" /><label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating2" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating2" value="2 and a half" /><label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating2" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating2" value="1 and a half" /><label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating2" value="1" /><label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating2" value="half" /><label class="half" for="starhalf"></label>
+                        </fieldset>
+                    </li>
                 </ul>
             </li>
             <li>
                 <ul class="profileUserFeedbackViewCriteriaTwo">
                     <li class="profileUserFeedbackViewQuestion">Item As Described</li>
-                    <li class="profileUserFeedbackViewStars">☆☆☆☆☆</li>
+                    <li class="profileUserFeedbackViewStars">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating3" value="5" /><label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating3" value="4 and a half" /><label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating3" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating3" value="3 and a half" /><label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating3" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating3" value="2 and a half" /><label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating3" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating3" value="1 and a half" /><label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating3" value="1" /><label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating3" value="half" /><label class="half" for="starhalf"></label>
+                        </fieldset>
+                    </li>
                 </ul>
             </li>
             <li>
                 <ul class="profileUserFeedbackViewCriteriaThree">
                     <li class="profileUserFeedbackViewQuestion">Meetup Efficiency</li>
-                    <li class="profileUserFeedbackViewStars">☆☆☆☆☆</li>
+                    <li class="profileUserFeedbackViewStars">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating4" value="5" /><label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating4" value="4 and a half" /><label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating4" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating4" value="3 and a half" /><label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating4" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating4" value="2 and a half" /><label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating4" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating4" value="1 and a half" /><label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating4" value="1" /><label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating4" value="half" /><label class="half" for="starhalf"></label>
+                        </fieldset>
+                    </li>
                 </ul>
             </li>
             <li>
                 <ul class="profileUserFeedbackViewCriteriaFour">
-                    <li class="profileUserFeedbackViewQuestion">Price Negotiation</li>
-                    <li class="profileUserFeedbackViewStars">☆☆☆☆☆</li>
+                    <li class="profileUserFeedbackViewQuestion">User friendliness</li>
+                    <li class="profileUserFeedbackViewStars">
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating5" value="5" /><label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating5" value="4 and a half" /><label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating5" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating5" value="3 and a half" /><label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating5" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating5" value="2 and a half" /><label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating5" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating5" value="1 and a half" /><label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating5" value="1" /><label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating5" value="half" /><label class="half" for="starhalf"></label>
+                        </fieldset>
+                    </li>
                 </ul>
             </li>
         </ul>
