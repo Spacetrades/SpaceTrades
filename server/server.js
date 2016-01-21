@@ -111,10 +111,10 @@ if (Meteor.isServer) {
             // ip = response.ip;
 
             // Saved
-            options.profile.saves = [];
+            options.profile.saves = {};
 
             // History
-            options.profile.history = [];
+            options.profile.history = {};
 
             return user;
         }
@@ -197,6 +197,7 @@ if (Meteor.isServer) {
                 offerAccepted: "",
                 // Id
                 creator_id: options.creator_id,
+                creator_image: options.creator_image,
                 facebook_id: options.facebook_id,
                 // Title
                 listing_title: options.listing_title,
@@ -226,49 +227,48 @@ if (Meteor.isServer) {
                 img3: options.img3
             });
         },
+        testSave: function(){
+            Meteor.users.insert({this.userId},
+            {
+                pape: 'no'
+            })
+},
         /*
          * @summary Save A Listing
          * @locus Server
          */
-        actionSave: function(options) {
-            Meteor.users.update(this.userId, {
-                $insert: {
-                    _id: options._id,
-                    createdAt: options.createdAt,
-                    // Status
-                    status: options.status,
-                    offerAccepted: options.offerAccepted,
-                    // Id
-                    creator_id: options.creator_id,
-                    // Title
-                    listing_title: options.listing_title,
-                    // Category
-                    // Information
-                    username: Meteor.user().profile.name,
-                    price: options.price,
-                    trade: options.trade,
-                    payment: options.payment,
-                    description: options.description,
-                    // Location
-                    lat: options.lat,
-                    lng: options.lng,
-                    city: options.city,
-                    state: options.state,
-                    locationString: options.locationString,
-                    // Images
-                    img1: options.img1,
-                }
-            });
+        // actionSave: function(options) {
+        //     Meteor.users.update(this.userId, { 
+        //          $set: {
+        //             profile.saves._id: options._id,
+        //             profile.saves.createdAt: options.createdAt,
+        //             // Status
+        //             status: options.status,
+        //             offerAccepted: options.offerAccepted,
+        //             // Id
+        //             creator_id: options.creator_id,
+        //             // Title
+        //             listing_title: options.listing_title,
+        //             // Category
+        //             // Information
+        //             username: Meteor.user().profile.name,
+        //             price: options.price,
+        //             trade: options.trade,
+        //             payment: options.payment,
+        //             description: options.description,
+        //             // Location
+        //             lat: options.lat,
+        //             lng: options.lng,
+        //             city: options.city,
+        //             state: options.state,
+        //             locationString: options.locationString,
+        //             // Images
+        //             img1: options.img1
+        //         }
+        //         });
 
-        },
-        saveLocation: function(response, userId) {
-            // var locationData = {
-            //     'city': response.city,
-            //     'region': response.region,
-            //     'country': response.country,
-            //     'ip': response.ip,
-            //     'latLng': response.loc
-            // }
+        // },
+        saveLocation: function(response, userId, locator) {
 
            var locations = response.latLng.split(",", 2);
            var lat = locations[0];
@@ -281,7 +281,9 @@ if (Meteor.isServer) {
                     'profile.country': response.country,
                     'profile.ip': response.ip,
                     'profile.lat': lat,
-                    'profile.lng': lng
+                    'profile.lng': lng,
+                    'profile.mapRadius': 5,
+                    'profile.locationString':  locator
                 }
             })
         },
