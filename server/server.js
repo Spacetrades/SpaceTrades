@@ -227,47 +227,47 @@ if (Meteor.isServer) {
                 img3: options.img3
             });
         },
-        testSave: function(){
-            Meteor.users.insert({this.userId},
-            {
-                pape: 'no'
-            })
-},
+//         testSave: function(){
+//             Meteor.users.insert({this.userId},
+//             {
+//                 pape: 'no'
+//             })
+// },
         /*
          * @summary Save A Listing
          * @locus Server
          */
-        // actionSave: function(options) {
-        //     Meteor.users.update(this.userId, { 
-        //          $set: {
-        //             profile.saves._id: options._id,
-        //             profile.saves.createdAt: options.createdAt,
-        //             // Status
-        //             status: options.status,
-        //             offerAccepted: options.offerAccepted,
-        //             // Id
-        //             creator_id: options.creator_id,
-        //             // Title
-        //             listing_title: options.listing_title,
-        //             // Category
-        //             // Information
-        //             username: Meteor.user().profile.name,
-        //             price: options.price,
-        //             trade: options.trade,
-        //             payment: options.payment,
-        //             description: options.description,
-        //             // Location
-        //             lat: options.lat,
-        //             lng: options.lng,
-        //             city: options.city,
-        //             state: options.state,
-        //             locationString: options.locationString,
-        //             // Images
-        //             img1: options.img1
-        //         }
-        //         });
+        actionSave: function(options) {
+            Meteor.users.update(this.userId, { 
+                 $set: {
+                    _id: options._id,
+                    createdAt: options.createdAt,
+                    // Status
+                    status: options.status,
+                    offerAccepted: options.offerAccepted,
+                    // Id
+                    creator_id: options.creator_id,
+                    // Title
+                    listing_title: options.listing_title,
+                    // Category
+                    // Information
+                    username: Meteor.user().profile.name,
+                    price: options.price,
+                    trade: options.trade,
+                    payment: options.payment,
+                    description: options.description,
+                    // Location
+                    lat: options.lat,
+                    lng: options.lng,
+                    city: options.city,
+                    state: options.state,
+                    locationString: options.locationString,
+                    // Images
+                    img1: options.img1
+                }
+                });
 
-        // },
+        },
         saveLocation: function(response, userId, locator) {
 
            var locations = response.latLng.split(",", 2);
