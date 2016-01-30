@@ -1,7 +1,6 @@
 if (Meteor.isClient) {
 
 	Meteor.startup(function() {
-    console.log(sAlert);
 		sAlert.config({
 			effect: 'slide'
 		});
