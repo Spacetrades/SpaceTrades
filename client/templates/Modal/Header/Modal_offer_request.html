@@ -10,15 +10,15 @@
                             <h2>How Much Would You Like To Offer?</h2>
                             <input type="text" class="listprice" id="mroffer" placeholder="Price..." maxlength="5">
                         </li>     
-                        <li class="modOfferRequestPaymentWrap">
+                        <li class="radioWrap paymentRadio">
                             <h2>How Would You Like To Pay?</h2>
                             <ul>
                                 <li class="modOfferRequestPaymentCash">
-                                    <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="offerRequestPaymentRadio" checked/>
+                                    <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="radioWrapElement" checked/>
                                     <label for="modOfferRequestPaymentCashRadio">Cash</label>
                                 </li>
                                 <li class="modOfferRequestPaymentPaypal">
-                                    <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="offerPayment" value="Paypal" class="offerRequestPaymentRadio"/>
+                                    <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="OfferPayment" value="Paypal" class="radioWrapElement"/>
                                     <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
                                 </li>
                             </ul>
@@ -37,19 +37,19 @@
                             <h2>When Would You Like To Meet?</h2>
                             <input type="text" id="datepicker">
                         </li>     
-                        <li class="modOfferRequestPaymentWrap">
+                        <li class="radioWrap timeRadio">
                             <h2>What Time Would You Like To Meet?</h2>
                             <ul>
                                 <li class="modOfferRequestPaymentCash">
-                                    <input type="radio" id="modOfferRequestTimeMorningRadio" name="offer" value="Morning" class="offerRequestPaymentRadio" checked/>
+                                    <input type="radio" id="modOfferRequestTimeMorningRadio" name="offerTime" value="Morning" class="radioWrapElement" checked/>
                                     <label for="modOfferRequestTimeMorningRadio">Morning</label>
                                 </li>
                                 <li class="modOfferRequestPaymentPaypal">
-                                    <input type="radio" id="modOfferRequestTimeAfternoonRadio" name="offer" value="Afternoon" class="offerRequestPaymentRadio"/>
+                                    <input type="radio" id="modOfferRequestTimeAfternoonRadio" name="offerTime" value="Afternoon" class="radioWrapElement"/>
                                     <label for="modOfferRequestTimeAfternoonRadio">Afternoon</label>
                                 </li>
                                 <li class="modOfferRequestPaymentPaypal">
-                                    <input type="radio" id="modOfferRequestTimeNightRadio" name="offer" value="Night" class="offerRequestPaymentRadio"/>
+                                    <input type="radio" id="modOfferRequestTimeNightRadio" name="offerTime" value="Night" class="radioWrapElement"/>
                                     <label for="modOfferRequestTimeNightRadio">Night</label>
                                 </li>
                             </ul>
@@ -78,17 +78,5 @@
         </div>
     </div>
 </form>
-<!-- Each Multi Step Modal Has It's Own Triggers -->
-<script type="text/javascript">
-  offerRequestJump1 = function() {
-      $('#offerRequestModal').trigger('next.m.1');
-  }
-  offerRequestJump2 = function() {
-      $('#offerRequestModal').trigger('next.m.2');
-  }
-  offerRequestJump3 = function() {
-      $('#offerRequestModal').trigger('next.m.3');
-  }
-</script>
 </template>
 
