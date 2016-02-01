@@ -212,17 +212,17 @@
 }
 
 /* Radio Buttons */
-.modOfferRequestPaymentWrap ul li {
+.radioWrap ul li {
 	clear: both;
 	color: #999 !important;
 	display: inline-block;
 }
 
-.modOfferRequestPaymentWrap ul li:nth-child(2), .modOfferRequestPaymentWrap ul li:nth-child(3) {
+.radioWrap ul li:nth-child(2), .radioWrap ul li:nth-child(3) {
 	margin-left: 15px;
 }
 
-.modOfferRequestPaymentWrap ul li label {
+.radioWrap ul li label {
 	width: 200px;
   	border-radius: 3px;
   	border: 1px solid #D1D3D4;
@@ -230,12 +230,12 @@
 }
 
 /* hide input */
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:empty {
+.radioWrap ul li input.radioWrapElement:empty {
 	margin-left: -2000px;
 }
 
 /* style label */
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:empty ~ label {
+.radioWrap ul li input.radioWrapElement:empty ~ label {
 	position: relative;
 	float: left;
 	line-height: 2.5em;
@@ -247,7 +247,7 @@
 	user-select: none;
 }
 
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:empty ~ label:before {
+.radioWrap ul li input.radioWrapElement:empty ~ label:before {
 	position: absolute;
 	display: block;
 	top: 0;
@@ -260,30 +260,30 @@
 }
 
 /* toggle hover */
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:hover:not(:checked) ~ label:before {
+.radioWrap ul li input.radioWrapElement:hover:not(:checked) ~ label:before {
 	content:'\2714';
 	text-indent: .9em;
 	color: #C2C2C2;
 }
 
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:hover:not(:checked) ~ label {
+.radioWrap ul li input.radioWrapElement:hover:not(:checked) ~ label {
 	color: #888;
 }
 
 /* toggle on */
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:checked ~ label:before {
+.radioWrap ul li input.radioWrapElement:checked ~ label:before {
 	content:'\2714';
 	text-indent: .9em;
 	color: #9CE2AE;
 	background-color: #4DCB6D;
 }
 
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:checked ~ label {
+.radioWrap ul li input.radioWrapElement:checked ~ label {
 	color: #777;
 }
 
 /* radio focus */
-.modOfferRequestPaymentWrap ul li input.offerRequestPaymentRadio:focus ~ label:before {
+.radioWrap ul li input.radioWrapElement:focus ~ label:before {
 	box-shadow: 0 0 0 3px #999;
 }
 
