@@ -405,6 +405,9 @@ if (Meteor.isServer) {
         }
       });
     },
+    deleteAccount: function(option){
+      Meteor.users.remove({ _id: option });
+    },
     /*
      * @summary Cancel Offer
      * @locus Server
