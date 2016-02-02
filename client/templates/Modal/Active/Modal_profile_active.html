@@ -1,4 +1,5 @@
 <template name="ModalProfileActive">
+{{#with scope}}
 	<div class="modSentOffer modal" id="ModalProfileActive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
@@ -6,17 +7,17 @@
 	      	<div class="profileReceivedOffers">
 		        <ul class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="#">{{nameOfferer}}</a> is in {{timeUntil}}</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="#">{{otherPerson}}</a> is in {{timeUntil}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
-		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
+		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
 		                    </li>
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
                         	<li id="profileReceivedName" class="profileReceivedName">You are exchanging this item for <span class="money">${{price}}</span></li>
-		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDetails">Meetup Details</button></li>
-		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDirections">Get Directions</button></li>
+		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDetails">Meetup Details</button></li><!-- 
+		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDirections">Get Directions</button></li> -->
 		                    <li class="modProfileActiveBtn"><button href="/chat">Chat</button></li>
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
@@ -29,4 +30,5 @@
 	    </div>
 	  </div> 
 	</div>
+	{{/with}}
 </template>
