@@ -16,7 +16,7 @@
     .homeCardLi {
         width: 210px;
     }
-}
+}  
 
 @media (max-width: 1100px) {
 
@@ -44,6 +44,13 @@
     }
 }
 
+@media (max-width: 1005px) {
+    .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
+        width: 75% !important; 
+    } 
+
+}
+
 @media (max-width: 1000px) {
 
     .searchResultsCardSize, 
@@ -66,7 +73,9 @@
 
     .searchResultsCardSize, 
     .searchResultsCardCondition, .searchResultsCardLocation {
-        margin: 8px 0 !important;
+        margin: 8px 0 !important;.profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
+        width: 75% !important; 
+    } 
     }
 }
 
@@ -87,6 +96,23 @@
 
     .profileCardInfo > li:first-child {
         margin-bottom: 6px !important;
+    }
+
+    .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
+        width: 80% !important; 
+    } 
+
+    .profileSettingsUl {
+        width: 90% !important;
+        margin: auto !important;
+    }
+
+    .profileSettingsButton {
+        width: 90% !important;
+    }
+
+    .profileSettingsLi h4 {
+        font-size: 1rem !important;
     }
 }
 
@@ -201,6 +227,12 @@
     .searchResultsCardName {
         font-size: 0.95rem !important;
     }
+}
+
+@media (max-width: 781px) {
+    .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
+        width: 75% !important; 
+    } 
 }
 
 @media (max-width: 776px) {
@@ -350,6 +382,22 @@
     }
 }
 
+
+@media (max-width: 625px) {
+    .profileSettingsUl {
+        width: 95% !important;
+        margin: auto !important;
+    }
+
+    .profileSettingsButton {
+        width: 95% !important;
+    }
+
+    .profileSettingsLi ul li h4 {
+        margin-right: 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .profileCardLi {
         margin: 6px 5px !important;
@@ -424,6 +472,41 @@
     .homeCardLi {
         width: 170px;
     } 
+
+    .profileSettingsPhoto li input {
+        font-size: 0.9rem !important;
+        width: 175px !important;
+        margin-left: 10px !important;
+    }
+
+    .profileSettingsPhoto li img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
+        width: 70% !important; 
+    } 
+
+    .profileSettingsLi h4 {
+        font-size: 0.9rem !important;
+    }
+
+    .profileSettingsLi input, .profileSettingsLi textarea {
+        font-size: 0.85rem !important;
+    }
+
+    .profileSettingsLi textarea {
+        height: 60px !important;
+    }
+
+    .profileSettingsButton input {
+        font-size: 0.9rem !important;
+    }
+
+    .abouttext {
+        margin-left: 5px
+    }
 }
 
 @media (max-width: 480px) {
@@ -456,6 +539,21 @@
     
 }
 
+@media (max-width: 425px) {
+    .profileSettingsLi ul li h4 {
+        margin-right: 10px;
+    }
+
+    .profileSettingsPhoto li input {
+        width: 92px !important;
+    }
+
+    .profileSettingsPhoto img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
 @media (max-width: 400px) {
     .helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
         width: 90%;
@@ -484,6 +582,18 @@
 
     .profileCardLi {
         width: 81.5% !important;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
+        width: 95% !important;
+        margin-left: 0 !important;
+    } 
+
+    .profileSettingsLi:nth-child(3) ul li:nth-child(2) input {
+        margin-left: 0 !important;
     }
 }
 
@@ -550,6 +660,15 @@
 
     .managerOfferView {
         margin-top: 5px !important;
+    }
+
+    .profileSettingsLi h4 {
+        font-size: 0.8rem !important;
+        margin-right: 0px !important;
+    }
+
+    .profileSettingsPhoto li input {
+        font-size: 0.9rem !important;
     }
 }
 
