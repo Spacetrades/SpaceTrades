@@ -10,3 +10,5 @@ client/templates/.DS_Store
 
 settings.json
 settings.json
+
+server/serviceconfig.js
