@@ -1,15 +1,17 @@
 <template name="savedItems">
- 	<div class="profileCard oneDiv">
-        <ul class="profileCardUl">
-        <!-- Saved should be highlighted in nav-->
-           {{#if defaultCheck}}
-            {{#each saved}}
-				{{> profileSavedCard}}
+	<div class="profileCard oneDiv">
+		<ul class="profileCardUl">
+			<!-- Saved should be highlighted in nav-->
+			{{#if defaultCheck}}
+
+			{{#each saved}}
+			{{> profileSavedCard}}
 			{{/each}}
+			
 			{{else}}
 			{{> DefaultProfileSaved}}
 			{{/if}}
-         
+
 		</ul>       
-    </div>
+	</div>
 </template>
