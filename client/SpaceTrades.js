@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 		});
 	});
 
-  SyncdCron.config({
+SyncedCron.config({
     log: true,
     logger: null,
     collectioName: 'cronHistory',
