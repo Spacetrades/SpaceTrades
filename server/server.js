@@ -108,13 +108,7 @@ if (Meteor.isServer) {
       options.profile.reviewscount = 0;
 
       // IP
-      // ip = response.ip;
-
-      // Saved
-      options.profile.saves = {};
-
-      // History
-      options.profile.history = {};
+      // ip = response.ip
 
       return user;
     }
@@ -152,108 +146,67 @@ if (Meteor.isServer) {
     }
   });
   Meteor.methods({
-    /*
-     * @summary Send Email
-     * @locus Server
-     *
-     */
-    sendEmail: function(to, from, subject, text) {
-      check([to, from, subject, text], [String]);
+      /*
+       * @summary Send Email
+       * @locus Server
+       *
+       */
+      sendEmail: function(to, from, subject, text) {
+        check([to, from, subject, text], [String]);
 
-      // Let other method calls from the same client start running,
-      // without waiting for the email sending to complete.
-      this.unblock();
+        // Let other method calls from the same client start running,
+        // without waiting for the email sending to complete.
+        this.unblock();
 
-      console.log(to, from, subject, text);
+        console.log(to, from, subject, text);
 
-      Email.send({
-        to: to,
-        from: from,
-        subject: subject,
-        text: text
-      });
-    },
-    /**
-     * @summary Add listing
-     * @locus Server
-     * @instancename collection
-     * @class
-     */
-    addListing: function(options) {
-      if (!Meteor.userId()) {
-        throw new Meteor.Error("Not Authorized")
-      }
+        Email.send({
+          to: to,
+          from: from,
+          subject: subject,
+          text: text
+        });
+      },
+      /**
+       * @summary Add listing
+       * @locus Server
+       * @instancename collection
+       * @class
+       */
+      addListing: function(options) {
+        if (!Meteor.userId()) {
+          throw new Meteor.Error("Not Authorized")
+        }
 
-      if (options.trade == "1") {
-        options.trade = "Trades Allowed";
-      } else {
-        options.trade = "Trades Denied";
-      }
+        if (options.trade == "1") {
+          options.trade = "Trades Allowed";
+        } else {
+          options.trade = "Trades Denied";
+        }
 
-      Listing.insert({
-        createdAt: new Date(),
-        // Status
-        status: "Pending",
-        offerAccepted: "",
-        // Id
-        creator_id: options.creator_id,
-        creator_image: options.creator_image,
-        facebook_id: options.facebook_id,
-        // Title
-        listing_title: options.listing_title,
-        // Category
-        category: options.category,
-        type: options.type,
-        brand: options.brand,
-        // Information
-        username: Meteor.user().profile.name,
-        quantity: options.quantity,
-        price: options.price,
-        trade: options.trade,
-        size: options.size,
-        condition: options.condition,
-        color: options.color,
-        payment: options.payment,
-        description: options.description,
-        // Location
-        lat: options.lat,
-        lng: options.lng,
-        city: options.city,
-        state: options.state,
-        locationString: options.locationString,
-        // Images
-        img1: options.img1,
-        img2: options.img2,
-        img3: options.img3
-      });
-    },
-    //         testSave: function(){
-    //             Meteor.users.insert({this.userId},
-    //             {
-    //                 pape: 'no'
-    //             })
-    // },
-    /*
-     * @summary Save A Listing
-     * @locus Server
-     */
-    actionSave: function(options) {
-      Meteor.users.update(this.userId, {
-        $set: {
-          _id: options._id,
-          createdAt: options.createdAt,
+        Listing.insert({
+          createdAt: new Date(),
           // Status
-          status: options.status,
-          offerAccepted: options.offerAccepted,
+          status: "Pending",
+          offerAccepted: "",
           // Id
           creator_id: options.creator_id,
+          creator_image: options.creator_image,
+          facebook_id: options.facebook_id,
           // Title
           listing_title: options.listing_title,
           // Category
+          category: options.category,
+          type: options.type,
+          brand: options.brand,
           // Information
           username: Meteor.user().profile.name,
+          quantity: options.quantity,
           price: options.price,
           trade: options.trade,
+          size: options.size,
+          condition: options.condition,
+          color: options.color,
           payment: options.payment,
           description: options.description,
           // Location
@@ -263,11 +216,49 @@ if (Meteor.isServer) {
           state: options.state,
           locationString: options.locationString,
           // Images
-          img1: options.img1
-        }
-      });
-
-    },
+          img1: options.img1,
+          img2: options.img2,
+          img3: options.img3
+        });
+      },
+      /*
+       * @summary Save A Listing
+       * @locus Server
+       */
+      actionSave: function(optionsA) {
+        Saves.upsert(
+          {_id: this.userId},
+         {
+          $push: {
+            listing_title: optionsA.listing_title,
+            item_id: optionsA._id,
+            price: optionsA.price,
+            status: optionsA.status,
+            city: optionsA.city,
+            state: optionsA.state,
+            username: optionsA.username
+          }
+        });
+      },
+       /*
+       * @summary Unsave A Listing
+       * @locus Server
+       */
+       actionUnsave: function(optionsA) {
+        Saves.update(
+          {_id: this.userId},
+         {
+          $pull: {
+            listing_title: optionsA.listing_title,
+            item_id: optionsA._id,
+            price: optionsA.price,
+            status: optionsA.status,
+            city: optionsA.city,
+            state: optionsA.state,
+            username: optionsA.username
+          }
+        });
+      },
     saveLocation: function(response, userId, locator) {
 
       var locations = response.latLng.split(",", 2);
@@ -405,8 +396,10 @@ if (Meteor.isServer) {
         }
       });
     },
-    deleteAccount: function(option){
-      Meteor.users.remove({ _id: option });
+    deleteAccount: function(option) {
+      Meteor.users.remove({
+        _id: option
+      });
     },
     /*
      * @summary Cancel Offer

@@ -144,7 +144,11 @@ Cheat on her
                                 <a href=""><i class="fa fa-pencil"></i>Edit</a>
                             </button>
                         </li>
+                        {{#if isSaved}}
+                        <li class="itemUnsave"><a href="#"><i class="fa fa-star"></i>Unsave</a></li>
+                        {{else}}
                         <li class="itemSave"><a href="#"><i class="fa fa-star"></i>Save</a></li>
+                        {{/if}}
                         <li>
 
                             <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
@@ -161,19 +165,4 @@ Cheat on her
 <div class="hidden">
     {{creator_id}}
 </div>
-
-<script type="text/javascript">
-
-    $(function () {
-      $('.click-nav > ul').toggleClass('no-js js');
-      $('.click-nav .js ul').hide();
-      $(document).click(function() {
-        if ($('.click-nav .js ul').is(':visible')) {
-          $('.click-nav .js ul', this).slideUp();
-          $('.clicker').removeClass('active');
-      }
-  });
-  });
-    
-</script>
 </template>
