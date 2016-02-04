@@ -5,6 +5,14 @@ if (Meteor.isClient) {
 			effect: 'slide'
 		});
 	});
+
+  SyncdCron.config({
+    log: true,
+    logger: null,
+    collectioName: 'cronHistory',
+    utc: false,
+    collectionTTL: 172800
+  })
 }
 
 if (Meteor.isServer) {
