@@ -19,7 +19,7 @@ dburles:google-maps
 mizzao:user-status
 juliancwirko:s-alert
 jeremy:snapsvg
-meteorhacks:kadira
+meteorhacks:kadira@2.22.0
 edgee:slingshot
 markdown
 mizzao:jquery-ui
@@ -79,3 +79,4 @@ meteoric:ionic-sass
 meteorhacks:cluster
 juliancwirko:s-alert-slide
 percolate:synced-cron
+meteorhacks:kadira-debug
