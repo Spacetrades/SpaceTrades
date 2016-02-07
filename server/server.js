@@ -10,7 +10,7 @@ if (Meteor.isServer) {
   // Accounts.config({'sendVerificationEmail': true});
 
   // Kadira
-  Kadira.connect('KQCYhmjGnmND3Qy9n', '4877312f-4aee-4cfc-84ab-a022ddb3c2ef');
+  Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
 
   SearchSource.defineSource('listing', function(searchText, options) {
     var options = {
@@ -319,6 +319,7 @@ if (Meteor.isServer) {
         offerprice: options.offerprice,
         date: options.date,
         location: options.location,
+        delayTime: options.delayTime,
         listingId: options.listingId,
         lat: options.lat,
         lng: options.lng,

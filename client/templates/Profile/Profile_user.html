@@ -73,7 +73,7 @@
                             <li>
                                 <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
                                 <ul class="optionsItems">
-                                    <li><a href=""><i class="fa fa-pencil"></i>Edit</a></li>
+                                    <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
                                     <li>
                                         <button type="button" class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportUserModal">
                                             <a href="#reportUserModal"><i class="fa fa-gavel"></i>Report User</a>
@@ -87,20 +87,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-
-        $(function () {
-          $('.click-nav > ul').toggleClass('no-js js');
-          $('.click-nav .js ul').hide();
-          $(document).click(function() {
-            if ($('.click-nav .js ul').is(':visible')) {
-              $('.click-nav .js ul', this).slideUp();
-              $('.clicker').removeClass('active');
-            }
-          });
-        });
-        
-    </script>
     <div class="profileUserCards oneDiv">
         <ul class="profileUserCardsUl">
 

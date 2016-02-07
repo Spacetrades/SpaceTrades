@@ -6,13 +6,13 @@ if (Meteor.isClient) {
 		});
 	});
 
-  SyncdCron.config({
-    log: true,
-    logger: null,
-    collectioName: 'cronHistory',
-    utc: false,
-    collectionTTL: 172800
-  })
+// SyncedCron.config({
+//     log: true,
+//     logger: null,
+//     collectioName: 'cronHistory',
+//     utc: false,
+//     collectionTTL: 172800
+//   })
 }
 
 if (Meteor.isServer) {

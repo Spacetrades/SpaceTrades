@@ -67,38 +67,41 @@ https://trello.com/b/IETMH34k/meteor-development
 Extensive undertandability is less crucial in the beginning stage of development and for this reason it is not necessarily helpful to use highly descriptive commit messages. Once everything works, better documentation can be added. 
 ```
 ### Keywords:
-	INIT - First Commit
-	UPDATE - Changes due to involuntary updating of versions
-	EDIT - Edit existing file, ADD - Add code, RM - Remove code
-	ADD - Add new file
-	RM - Remove File
-	RN - Rename existing file or files
-	// - Comment
-	Rm - Readme
-	md - Markdown
-	ORG - Change in file orgization likely resulting in falsely displayed code additions
-	STYLE - Commits mostly for styling purposes
-	FIX - Something broken has been fixed, not just a change for preference but a solution to a noticeable defect
-	USE - Something new piece of functionality is finally being used
-	LOTS - Lots of changes have been made and I'm to lazy to create commit messages for all the changes
-	MINOR - A few changes have been made
-	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
-	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
-	STRICTLY - Only applies to certain circumstances. ( production vs dev code)
 	-// - Comments have been removed
-	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
-	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
-	CLEAN - Remove comments, or complete task in cleaning a file
-	INFECT - Merge is receiving errors
-	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
-	TASK - A task to complete in a certain file
-	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
+	// - Comment
+	ADD - Add new file
 	BEWARE - Specify something that should not be done and explain what should be done.
 	BREAK - Something is breaking 
 	BREAK CRUCIAL - Something is breaking which is crucial for the site
-	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
+	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
+	CLEAN - Remove comments, or complete task in cleaning a file
+	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
+	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
+	EDIT - Edit existing file, ADD - Add code, RM - Remove code
+	FIX - Something broken has been fixed, not just a change for preference but a solution to a noticeable defect
+	FUNC - Important Function
+	IF - Explanation for an if conditional
 	FMT - Data is good but display isn't. Data should be displayed in a different way as specified.
+	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
+	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
+	INFECT - Merge is receiving errors
+	INIT - First Commit
+	LOTS - Lots of changes have been made and I'm to lazy to create commit messages for all the changes
+	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
+	md - Markdown
+	MINOR - A few changes have been made
+	ORG - Change in file orgization likely resulting in falsely displayed code additions
+	Rm - Readme
+	RM - Remove File
+	RN - Rename existing file or files
+	SET - Set an important variable
+	STRICTLY - Only applies to certain circumstances. ( production vs dev code)
+	STYLE - Commits mostly for styling purposes
+	TASK - A task to complete in a certain file
 	TODO: Specify tasks to complete
+	UPDATE - Changes due to involuntary updating of versions
+	USE - Something new piece of functionality is finally being used
+	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
 
 ## Sublime Stuff
 	[
