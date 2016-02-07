@@ -2774,6 +2774,10 @@ i:hover {
     margin: 11px 2px 7px 2px !important;
 }
 
+.headerNameOptions a:hover, .headerNameOptions a:active, .headerNameOptions a:visited, .headerNameOptions a:link {
+    color: #fff !important;
+}
+
 .headerNameOptions li img {
     width: 26px;
     height: 26px;
