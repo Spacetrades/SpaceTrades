@@ -236,6 +236,7 @@ if (Meteor.isServer) {
             status: optionsA.status,
             city: optionsA.city,
             state: optionsA.state,
+            img1: optionsA.img,
             username: optionsA.username
           }
         });
@@ -255,6 +256,7 @@ if (Meteor.isServer) {
             status: optionsA.status,
             city: optionsA.city,
             state: optionsA.state,
+            img1: optionsA.img,
             username: optionsA.username
           }
         });
