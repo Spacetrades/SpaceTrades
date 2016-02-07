@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 			var options = {
 				message: $(".chatText").val(),
 				sender: Meteor.userId(),
-				receiver: "tqKrESbdw5Qe6SapN",
+				receiver: this.id,
 				// Conversation key will be generated dynamically and used for all conversation messages
 				conversation: "rename"
 			};
