@@ -236,6 +236,7 @@ if (Meteor.isServer) {
             status: optionsA.status,
             city: optionsA.city,
             state: optionsA.state,
+            img1: optionsA.img,
             username: optionsA.username
           }
         });
@@ -255,6 +256,7 @@ if (Meteor.isServer) {
             status: optionsA.status,
             city: optionsA.city,
             state: optionsA.state,
+            img1: optionsA.img,
             username: optionsA.username
           }
         });
@@ -324,6 +326,7 @@ if (Meteor.isServer) {
         lat: options.lat,
         lng: options.lng,
         creator_id: options.creator_id,
+        listing_creator_id: options.listing_creator_id,
         payment: options.payment,
         status: options.status
       });
@@ -459,7 +462,7 @@ if (Meteor.isServer) {
         sender: options.sender,
         receiver: options.receiver,
         conversation: options.conversation,
-        timestamp: Date.now()
+        timestamp: new Date()
       });
     },
     /*

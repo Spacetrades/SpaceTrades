@@ -1,6 +1,12 @@
 <template name="Notification">
-{{creator_id}}
-{{listing_title}}
-{{action}}
+<div class="notificationBody">
+<b>{{action}}</b>
+of
+<span class="money"> ${{offer_price}} </span>
+for
+<a href="{{listingId}}"> {{listing_title}} </a>
+from
+{{destination}}
 
+</div>
 </template>
