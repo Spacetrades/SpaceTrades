@@ -462,7 +462,7 @@ if (Meteor.isServer) {
         sender: options.sender,
         receiver: options.receiver,
         conversation: options.conversation,
-        timestamp: new Date()
+        createdAt: options.createdAt
       });
     },
     /*
