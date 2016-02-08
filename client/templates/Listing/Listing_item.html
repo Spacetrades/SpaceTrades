@@ -7,8 +7,7 @@
 
     {{#if offerAccepted}}
 Cheat on her
-
-{{/if}}
+{{else}}
     <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
         <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
     </button>
@@ -30,7 +29,7 @@ Cheat on her
                         <button class="modOfferRequestTrigger btn btn-default" data-toggle="modal" data-target="#offerRequestModal">Offer</button>
                     </li>
                     <li>
-                        <a class="btn btn-default profileBtn" href="/chat/{{creator_id}}">Chat</a>
+                        <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
                     </li>
                 </ul>
             </div>
@@ -163,4 +162,5 @@ Cheat on her
 <div class="hidden">
     {{creator_id}}
 </div>
+{{/if}}
 </template>
