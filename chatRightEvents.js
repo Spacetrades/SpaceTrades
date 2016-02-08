@@ -6,10 +6,17 @@ if (Meteor.isClient) {
 			var options = {
 				message: $(".chatText").val(),
 				sender: Meteor.userId(),
-				receiver: this.id,
+				receiver: id,
 				// Conversation key will be generated dynamically and used for all conversation messages
-				conversation: "rename"
+				conversation: "rename",
+        createdAt: new Date()
 			};
+
+      // FORMAT time
+      var time = moment(options.createdAt);
+      time = time.format("dddd MMM, DD");
+      options.createdAt = time;
+
 
 			Meteor.call('sendMessage', options)
 
