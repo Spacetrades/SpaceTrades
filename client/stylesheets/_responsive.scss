@@ -16,20 +16,18 @@
     .homeCardLi {
         width: 210px;
     }
+
+    .profileUser {
+        width: 1024px !important;
+    }
 }  
 
 @media (max-width: 1100px) {
 
 }
 
-
-@media (max-width: 1050px) {
-    .homeCardLi {
-        width: 210px;
-    }
-}
-
 @media (max-width: 1065px) {
+
 }
 
 @media (max-width: 1050px) {
@@ -43,6 +41,13 @@
        margin-top: -1338px !important;
     }
 }
+
+@media (max-width: 1025px) {
+    .profileUser {
+       width: 90% !important;
+    }
+}
+
 
 @media (max-width: 1005px) {
     .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
@@ -115,6 +120,37 @@
     .profileSettingsLi h4 {
         font-size: 1rem !important;
     }
+
+    .profileUserName h1  {
+        font-size: 1.8rem !important;
+    }
+
+    .profileUserAmount ul li {
+        font-size: 0.8rem !important;
+    }
+
+    .box-title {
+        font-size: 1rem !important;
+    }
+
+    .profileChatBtn a  {
+        font-size: 1rem !important;
+        padding: 14px 18px !important;
+    }
+
+    .optionsProClick ul .clicker {
+        font-size: 1rem !important;
+        padding: 14px 18px !important;
+    }
+
+    .profileUserInfo > ul li:first-child {
+        font-size: 0.9rem !important;
+    }
+
+    .profileUserImage img {
+        width: 200px !important;
+    }
+
 }
 
 @media (max-width: 876px) {
@@ -221,12 +257,22 @@
         margin: 8px 0 10px 0 !important;
         font-size: 1rem !important;
     }
+
     .searchResultsCardSize, .searchResultsCardCondition, .searchResultsCardLocation {
         margin: 12px 0 !important;
         font-size: 1rem !important;
     } 
+
     .searchResultsCardName {
         font-size: 0.95rem !important;
+    }
+
+    .profileUserRating ul li span {
+        font-size: 0.8rem !important;
+    }
+
+    .profileUserImage img {
+        width: 70% !important;
     }
 }
 
@@ -313,6 +359,7 @@
     .managerOfferView {
         margin-top: 4px !important;
     }
+
 }
 
 @media (max-width: 690px) {
@@ -402,6 +449,29 @@
 @media (max-width: 600px) {
     .profileCardLi {
         margin: 6px 5px !important;
+    }
+
+    .profileChatBtn a, .optionsProClick ul .clicker {
+        font-size: 0.9rem !important;
+        padding: 12px 16px !important;
+    }
+
+    .box-title {
+        font-size: 0.9rem !important;
+    }
+
+    .optionsProClick {
+        margin-left: 5px !important;
+    }
+}
+
+@media (max-width: 589px) {
+    .profileUserGraph, .profileUserName {
+        display: none !important;
+    }
+
+    .profileUserNameHidden, .profileUserGraphHidden {
+        display: block !important;
     }
 }
 

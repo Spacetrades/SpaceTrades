@@ -1028,10 +1028,15 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 .helplogo {
     color: $color-spacegrey;
+    font-weight: 400 !important;
 }
 
 .helplogo {
     font-family: $font_stack-norm;
+}
+
+.managerLogo {
+    margin-left: 20px !important;
 }
 
 /****** HELP NAV END ******/
@@ -3770,8 +3775,8 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserLeft {
-    margin-left: 9%;
-    width: 35%;
+    margin-left: 4%;
+    width: 40%;
     text-align: center;
     vertical-align: top;
 }
@@ -3788,12 +3793,15 @@ On click the images will be displayed at normal size to complete the effect
     border-radius: 6px;
 }
 
-
+.profileUserNameHidden, .profileUserGraphHidden {
+    display: none !important;
+}
 
 /* Graph */
 
 .profileUserGraph {
     margin-top: 2rem;
+    text-align: center !important;
 }
 
 .profileUserGraph canvas {

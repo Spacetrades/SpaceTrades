@@ -8,6 +8,14 @@
                 <div class="spin"> {{> spinner}} </div>
                 <img src="{{profile.picturelrg}}" class="profileUserImg">
             </div>
+            <div class="profileUserName profileUserNameHidden">
+                <ul>
+                    <li><h1>{{name}}</h1></li>
+                    <li>
+                        <div class="circle" style="background-color: {{online.color}}"></div>
+                    </li>
+                </ul>
+            </div>
             <div class="profileUserGraph">
                 <label for="myChart"><b>Meetup Graph</b>
                 <br>
@@ -84,6 +92,14 @@
                         </ul>
                     </li>
                 </ul>
+            </div>
+            <div class="profileUserGraph profileUserGraphHidden">
+                <label for="myChart"><b>Meetup Graph</b>
+                <br>
+                <span class="profileMonth"> {{month}} </span>
+                <br>
+                    <canvas id="myChart"></canvas>
+                </label>
             </div>
         </div>
     </div>
