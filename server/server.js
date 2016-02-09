@@ -179,9 +179,9 @@ if (Meteor.isServer) {
         }
 
         if (options.trade == "1") {
-          options.trade = "Trades Allowed";
+          options.trade = "Allowed";
         } else {
-          options.trade = "Trades Denied";
+          options.trade = "Denied";
         }
 
         Listing.insert({
