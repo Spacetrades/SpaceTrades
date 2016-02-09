@@ -3,11 +3,18 @@ if (Meteor.isClient) {
   Template.chatRight.events({
     'click .chatSendButton': function() {
 
+try {
       // First Message Sets Seller and Buyer /////////////////////
       var query = Message.find({conversation: id_sell}, {sort: {createdAt: 1} }).fetch()[0];
       var seller = query.receiver;
       var buyer = query.sender;
       ////////////////////////////////////////////////////////////
+
+}
+
+catch(e){
+  console.log("error");
+}
 
       if (Meteor.userId() == seller){
 
@@ -35,6 +42,7 @@ if (Meteor.isClient) {
 
       }
 else {
+  console.log("creator");
       var options = {
         message: $(".chatText").val(),
         sender: Meteor.userId(),
