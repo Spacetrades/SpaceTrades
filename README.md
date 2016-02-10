@@ -91,9 +91,11 @@ Extensive undertandability is less crucial in the beginning stage of development
 	md - Markdown
 	MINOR - A few changes have been made
 	ORG - Change in file orgization likely resulting in falsely displayed code additions
+	PRECHECK - Precheck form input before processing
 	Rm - Readme
 	RM - Remove File
 	RN - Rename existing file or files
+	RESET - Resets a form for next use
 	SET - Set an important variable
 	STRICTLY - Only applies to certain circumstances. ( production vs dev code)
 	STYLE - Commits mostly for styling purposes
