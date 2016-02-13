@@ -326,6 +326,8 @@ if (Meteor.isServer) {
         lat: options.lat,
         lng: options.lng,
         creator_id: options.creator_id,
+        creator_name: options.creator_name,
+        creator_image: options.creator_image,
         listing_creator_id: options.listing_creator_id,
         payment: options.payment,
         status: options.status
@@ -410,12 +412,8 @@ if (Meteor.isServer) {
      * @locus Server
      */
     cancelOffer: function(options) {
-      Offer.update({
+      Offer.remove({
         _id: options.id
-      }, {
-        $set: {
-          status: "Cancelled"
-        }
       });
     },
     /*
@@ -425,7 +423,8 @@ if (Meteor.isServer) {
     addProfileInfo: function(options) {
       Meteor.users.update(this.userId, {
         $set: {
-          'profile.photo': options.photo,
+          'profile.picturelrg': options.photo,
+          'profile.picturesm': options.photo,
           'profile.about': options.about,
           'profile.email': options.email,
           'profile.link': options.link

@@ -1,10 +1,10 @@
 if (Meteor.isClient) {
 
-	Meteor.startup(function() {
-		sAlert.config({
-			effect: 'slide'
-		});
-	});
+	// Meteor.startup(function() {
+	// 	sAlert.config({
+	// 		effect: 'slide'
+	// 	});
+	// });
 
 // SyncedCron.config({
 //     log: true,

@@ -3,26 +3,6 @@
 <!-- TASK - ADD Blocking-->
 <!-- TASK - ADD Followers -->
 
-<!--<div class="profilediv div">
-		<div class="profilecontent">
-			<div class="profileleft">
-			</div>
-			<div class="profileright">
-				<div class="profileEditQuestions">
-					<ul>
-						<li>Location: <input type="text" class="proSetLocation" value="New York"></li>
-					</ul>
-				</div>
-				<div class="profileEditDescripton">
-					<textarea class="listdescription" placeholder="Edit your profile description"></textarea>
-				</div>
-				<div class="profileEditSaveBtn">
-					<input type="submit" class="add ph-button" value="Save Changes">
-				</div>	
-			</div>
-		</div>
-	</div> -->
-
 <!-- Take Caution When Adding New Classes-->
 	<div class="profileSettingsDiv oneDiv"> 
 		<ul class="profileSettingsUl">
@@ -30,7 +10,7 @@
 				<ul class="profileSettingsPhoto">
 					<li><h4>Photo</h4></li>
 					<!-- Current Image Is Default Value -->					
-					<li class="profileSettingsImage"><img src="{{picture}}"><input type="file" class="profileSettingsSelectImg"></li>
+					<li class="profileSettingsImage"><img id="profileImage" src="{{picture}}"><input type="file" class="profileSettingsSelectImg"></li>
 				</ul>
 			</li>
 			<li class="profileSettingsLi">
@@ -46,13 +26,6 @@
 					<li><input type="text" class="profileSettingsEmailInput" placeholder="m.yusuf0377@gmail.com" value="{{email}}"></li>
 				</ul>
 			</li>
-	<!-- 		<li class="profileSettingsLi">
-				<ul class="profileSettingsLocation">
-					<li><h4>Location</h4></li>
-					Current Location Is Default Value
-					<li><input type="text" class="profileSettingsLocationInput" placeholder="city, state" value="{{location}}"></li>
-				</ul>
-			</li> -->
 		</ul>
 		<div class="profileSettingsButton">
 			<input type="submit" class="profileSettingsSubmit" value="Save Changes">
