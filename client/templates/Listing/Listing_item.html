@@ -10,10 +10,11 @@
     <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
         <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
     </button>
-
+    {{#if isCreator}}
     <button class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
         <a href=""><i class="fa fa-pencil"></i>Edit</a>
     </button>
+    {{/if}}
 
     <div class="listingItemDiv oneDiv">
         <h1 class="listingItemTitle">{{listing_title}}</h1>
@@ -23,6 +24,11 @@
                 <ul class="listingItemPrice">
                     <li class="money itemMoney">${{price}}</li>
                 </ul>
+                {{#if isCreator}}
+                     <li>
+                        <a class="" href="/profile/listings">Manager</a>
+                    </li>
+                {{else}}
                 <ul class="listingItemButtons">
                     <li>
                         <button class="modOfferRequestTrigger btn btn-default" data-toggle="modal" data-target="#offerRequestModal">Offer</button>
@@ -31,6 +37,7 @@
                         <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
                     </li>
                 </ul>
+                {{/if}}
             </div>
             <div class="listingItemSlider">
                 <div class="slider">
