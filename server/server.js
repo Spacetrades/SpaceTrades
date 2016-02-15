@@ -341,12 +341,12 @@ if (Meteor.isServer) {
      */
     pulseNotify: function(options) {
       Notification.insert({
+        action: options.action,
         listing_title: options.listing_title,
         offer_price: options.offerprice,
         creator_id: options.creator_id,
         listingId: options.listingId,
-        destination: options.destination,
-        action: options.action
+        destination: options.destination
       });
     },
     /*
@@ -373,7 +373,7 @@ if (Meteor.isServer) {
      */
     acceptOffer: function(options) {
       Offer.update({
-        _id: options.id
+        _id: options.offer_id
       }, {
         $set: {
           status: "Accepted"
@@ -384,7 +384,7 @@ if (Meteor.isServer) {
       }, {
         $set: {
           status: "Accepted",
-          offerAccepted: options.id,
+          offerAccepted: options.offer_id,
           timePeriod: options.time
         }
       });
