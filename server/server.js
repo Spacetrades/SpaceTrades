@@ -326,6 +326,8 @@ if (Meteor.isServer) {
         lat: options.lat,
         lng: options.lng,
         creator_id: options.creator_id,
+        creator_name: options.creator_name,
+        creator_image: options.creator_image,
         listing_creator_id: options.listing_creator_id,
         payment: options.payment,
         status: options.status
@@ -339,12 +341,14 @@ if (Meteor.isServer) {
      */
     pulseNotify: function(options) {
       Notification.insert({
+        action: options.action,
         listing_title: options.listing_title,
         offer_price: options.offerprice,
         creator_id: options.creator_id,
         listingId: options.listingId,
         destination: options.destination,
-        action: options.action
+        seller_id: options.seller_id,
+        buyer_id:options.buyer_id
       });
     },
     /*
@@ -371,7 +375,7 @@ if (Meteor.isServer) {
      */
     acceptOffer: function(options) {
       Offer.update({
-        _id: options.id
+        _id: options.offer_id
       }, {
         $set: {
           status: "Accepted"
@@ -382,7 +386,7 @@ if (Meteor.isServer) {
       }, {
         $set: {
           status: "Accepted",
-          offerAccepted: options.id,
+          offerAccepted: options.offer_id,
           timePeriod: options.time
         }
       });
@@ -410,12 +414,8 @@ if (Meteor.isServer) {
      * @locus Server
      */
     cancelOffer: function(options) {
-      Offer.update({
+      Offer.remove({
         _id: options.id
-      }, {
-        $set: {
-          status: "Cancelled"
-        }
       });
     },
     /*
@@ -425,7 +425,8 @@ if (Meteor.isServer) {
     addProfileInfo: function(options) {
       Meteor.users.update(this.userId, {
         $set: {
-          'profile.photo': options.photo,
+          'profile.picturelrg': options.photo,
+          'profile.picturesm': options.photo,
           'profile.about': options.about,
           'profile.email': options.email,
           'profile.link': options.link
