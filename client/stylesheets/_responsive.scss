@@ -473,6 +473,23 @@
     .profileUserNameHidden, .profileUserGraphHidden {
         display: block !important;
     }
+
+    .profileUser {
+        text-align: center !important;
+    }
+
+    .profileUser > div {
+        display: block !important;
+    }
+
+    .profileUserLeft {
+        margin-left: 0 !important;
+        width: 45% !important;
+    }
+
+    .profileUserRight {
+        width: 65% !important;
+    }
 }
 
 @media (max-width: 583px) {
