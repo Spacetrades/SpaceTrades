@@ -346,7 +346,9 @@ if (Meteor.isServer) {
         offer_price: options.offerprice,
         creator_id: options.creator_id,
         listingId: options.listingId,
-        destination: options.destination
+        destination: options.destination,
+        seller_id: options.seller_id,
+        buyer_id:options.buyer_id
       });
     },
     /*
