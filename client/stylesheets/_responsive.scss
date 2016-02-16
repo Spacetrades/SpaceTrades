@@ -151,6 +151,10 @@
         width: 200px !important;
     }
 
+    .profileUserRating {
+        height: 28px !important;
+    }
+
 }
 
 @media (max-width: 876px) {
@@ -638,6 +642,13 @@
         font-size: 0.75rem !important;
     }
 
+    .full {
+        width: 20px !important;
+    }
+
+    .profileUserRating ul li span {
+        margin-left: 10px !important;
+    }
 }
 
 @media (max-width: 450px) {
@@ -658,6 +669,10 @@
     .homeCardItem li a h4 {
         padding-top: 0.2em !important;
         padding-bottom: 0.2em !important;
+    }
+
+    .profileUserInfo ul li a {
+        font-size: 1.4rem !important;
     }
     
 }
@@ -712,6 +727,29 @@
     }
 }
 
+@media (max-width: 395px) {
+    .profileUserRating ul li span {
+        margin-left: 5px !important;
+        font-size: 0.7rem !important;
+    }
+
+    .profileUserRight {
+        width: 50% !important;
+    }
+
+    .profileUserImage img {
+        width: 80% !important;
+    }
+
+    .full {
+        width: 18px !important;
+    }
+
+    .profileUserRating ul li i {
+        font-size: 0.8rem !important;
+    }
+}
+
 @media (max-width: 390px) {
 
     .profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
@@ -721,6 +759,32 @@
 
     .profileSettingsLi:nth-child(3) ul li:nth-child(2) input {
         margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 383px) {
+    .profileUserName h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .profileDesc {
+        margin-top: 10px !important;
+    }
+
+    .profileUserImage img {
+        width: 85% !important;
+    }
+
+    .profileUserButtonUl {
+        margin-top: 12px !important;
+    }
+
+    .profileUserRight {
+        width: 53% !important;
+    }
+
+    .optionsProClick {
+        margin-left: 2px !important;
     }
 }
 
@@ -799,6 +863,21 @@
     }
 }
 
+@media (max-width: 346px) { 
+    .box-title {
+        font-size: 0.85rem !important;
+    }
+
+    .profileUserAmount ul li {
+        font-size: 0.75rem !important;
+    }
+
+    .profileUserAmount ul li {
+        padding: 10px 12px !important;
+    }
+
+}
+
 @media (max-width: 342px) { 
     .homeCardLi {
         width: 120px;
@@ -815,10 +894,48 @@
     }
 }
 
+@media (max-width: 327px) {
+    .profileUserImage img {
+        width: 90% !important;
+    }
+
+    .profileUserName h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .circle {
+        margin-left: 5px;
+    }
+
+    .profileUserRatingUl {
+        width: 105% !important;
+    }
+}
+
 @media (max-width: 321px) {
     .homeCardLi {
         width: 110px;
     }
+}
+
+@media (max-width: 319px) {
+    .profileChatBtn a, .optionsProClick ul .clicker {
+        font-size: 0.85rem !important;
+        padding: 12px 14px !important;
+    }
+}
+
+@media (max-width: 311px) {
+    .profileUserAmount ul li {
+        padding: 10px 10px !important;
+    }
+}
+
+@media (max-width: 306px) {
+    .profileUserRatingUl li:nth-child(2) {
+        display: none !important;
+    }
+
 }
 
 @media (max-width: 300px) {
@@ -832,5 +949,9 @@
 
     .oneDiv {
         min-width: 300px !important;
+    }
+
+    .circle {
+        margin-left: 2px !important;
     }
 }
