@@ -1,12 +1,24 @@
 <template name="Notification">
 <div class="notificationBody">
+{{#if isSeller}}
 <b>{{action}}</b>
 of
 <span class="money"> ${{offer_price}} </span>
 for
 <a href="{{listingId}}"> {{listing_title}} </a>
-from
-{{destination}}
+From
+{{buyer_id}}
 
+{{else}}
+
+<b>{{action}}</b>
+of
+<span class="money"> ${{offer_price}} </span>
+for
+<a href="{{listingId}}"> {{listing_title}} </a>
+From
+{{seller_id}}
+
+{{/if}}
 </div>
 </template>
