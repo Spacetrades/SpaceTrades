@@ -466,30 +466,48 @@
 }
 
 @media (max-width: 589px) {
-    .profileUserGraph, .profileUserName {
-        display: none !important;
-    }
-
-    .profileUserNameHidden, .profileUserGraphHidden {
-        display: block !important;
-    }
-
     .profileUser {
-        text-align: center !important;
-    }
-
-    .profileUser > div {
-        display: block !important;
-    }
-
-    .profileUserLeft {
-        margin-left: 0 !important;
-        width: 45% !important;
+        width: 100% !important;
     }
 
     .profileUserRight {
-        width: 65% !important;
+        width: 230px !important;
     }
+
+    .profileDesc {
+        width: 100%;
+    }
+
+    .profileUserRating ul li i {
+        margin-left: 5px !important;
+    }
+
+    // .profileUserGraph, .profileUserName {
+    //     display: none !important;
+    // }
+
+    // .profileUserNameHidden, .profileUserGraphHidden {
+    //     display: block !important;
+    // }
+
+    // .profileUser {
+    //     width: 60% !important;
+    // }
+
+    // .profileUser > div {
+    //     display: block !important;
+    // }
+
+    // .profileUserLeft {
+    //     margin: auto !important;
+    //     margin-left: auto !important;
+    //     width: 80% !important;
+    // }
+
+    // .profileUserRight {
+    //     margin: auto !important;
+    //     width: 90% !important;
+    // }
 }
 
 @media (max-width: 583px) {
@@ -513,6 +531,12 @@
 
 @media (max-width: 580px) {
 
+}
+
+@media (max-width: 530px) {
+    .profileUserLeft {
+        margin-left: 2% !important;
+    }
 }
 
 @media (max-width: 520px) {
@@ -599,6 +623,21 @@
 
 @media (max-width: 480px) {
     
+}
+
+@media (max-width: 460px) {
+    .profileUserRight {
+        width: 49% !important;
+    }
+
+    .profileUserRating ul li i {
+        margin-left: 0px !important;
+    }
+
+    .profileUserRating ul li span {
+        font-size: 0.75rem !important;
+    }
+
 }
 
 @media (max-width: 450px) {
