@@ -25,9 +25,14 @@
                     <li class="money itemMoney">${{price}}</li>
                 </ul>
                 {{#if isCreator}}
-                     <li>
-                        <a class="" href="/profile/listings">Manager</a>
+                     <ul class="listingItemButtons">
+                    <li>
+                        <button class="modOfferRequestTrigger btn btn-default">Edit</button>
                     </li>
+                    <li>
+                        <a class="btn btn-default profileBtn" href="#">Delete</a>
+                    </li>
+                </ul>
                 {{else}}
                 <ul class="listingItemButtons">
                     <li>
