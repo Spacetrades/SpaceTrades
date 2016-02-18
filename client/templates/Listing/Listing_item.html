@@ -30,7 +30,7 @@
                         <button class="modOfferRequestTrigger btn btn-default">Edit</button>
                     </li>
                     <li>
-                        <a class="btn btn-default profileBtn" href="#">Delete</a>
+                        <a class="btn btn-default profileBtn deleteButton" href="#">Delete</a>
                     </li>
                 </ul>
                 {{else}}
@@ -126,10 +126,10 @@
         </div>
         <div class="listingItemUser">
             <ul class="listingItemUserImg">
-                <li><a href="/profile/{{profile}}"><img src="{{creator_image}}"></a></li>
+                <li><a href="/profile/{{creator_id}}"><img src="{{creator_image}}"></a></li>
             </ul>
             <ul class="listingItemUserInfo">
-                <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
+                <li class="listingItemUserName"><a href="/profile/{{creator_id}}">{{username}}</a></li>
                 <li class="rating">☆☆☆☆☆</li>
                 <ul class="listingPayment">
                 {{#if paymentCash}}
