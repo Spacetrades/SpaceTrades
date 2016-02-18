@@ -4,9 +4,9 @@
 			<!-- Saved should be highlighted in nav-->
 			{{#if defaultCheck}}
 
-			{{#with saved}}
+			{{#each saved}}
 			{{> profileSavedCard}}
-			{{/with}}
+			{{/each}}
 			
 			{{else}}
 			{{> DefaultProfileSaved}}
