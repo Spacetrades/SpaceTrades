@@ -67,43 +67,45 @@ https://trello.com/b/IETMH34k/meteor-development
 Extensive undertandability is less crucial in the beginning stage of development and for this reason it is not necessarily helpful to use highly descriptive commit messages. Once everything works, better documentation can be added. 
 ```
 ### Keywords:
-	-// - Comments have been removed
 	// - Comment
 	ADD - Add new file
 	BEWARE - Specify something that should not be done and explain what should be done.
 	BREAK - Something is breaking 
-	BREAK CRUCIAL - Something is breaking which is crucial for the site
 	CAT - Commits based mostly on categorization. Ex: Creating new folders for code, moving code bits around. Merging files...etc
 	CLEAN - Remove comments, or complete task in cleaning a file
 	COMMENT REASON - Specify the reason why you have left the code commented and have not simply removed it
+	CRUCIAL - Crucial for the site
 	CRUCIAL - This commit deals with (FIX, BREAK, CHANGE)'s a core part of the application
 	EDIT - Edit existing file, ADD - Add code, RM - Remove code
 	FIX - Something broken has been fixed, not just a change for preference but a solution to a noticeable defect
-	FUNC - Important Function
-	IF - Explanation for an if conditional
 	FMT - Data is good but display isn't. Data should be displayed in a different way as specified.
+	FUNC - Important Function
 	HOTFIX - FIX for either LOW, MEDIUM or CRUCIAL issue quickly
 	IDEAL - A suggestion to do something differently or a way that may or may not be possible soon but is ideal
-	INFECT - Merge is receiving errors
+	IF - Explanation for an if conditional
 	INIT - First Commit
 	LOTS - Lots of changes have been made and I'm to lazy to create commit messages for all the changes
 	MANDATE - Specify necessary tasks of a file that must be accomodated. These can be style rules or required jobs to complete.
 	md - Markdown
 	MINOR - A few changes have been made
 	ORG - Change in file orgization likely resulting in falsely displayed code additions
+	PERMIT - Specify condition allowed in conditions
 	PRECHECK - Precheck form input before processing
+	PSEUDO - Specify pseudo code for a complicated system
+	RESET - Resets a form for next use
 	Rm - Readme
 	RM - Remove File
 	RN - Rename existing file or files
-	RESET - Resets a form for next use
-	SET - Set an important variable
+	SMALL - Minimal changes, doesn't need a commit message
+	SET - Set an important variable. Only for variables that are confusing / highly important
 	STRICTLY - Only applies to certain circumstances. ( production vs dev code)
 	STYLE - Commits mostly for styling purposes
 	TASK - A task to complete in a certain file
 	TODO: Specify tasks to complete
 	UPDATE - Changes due to involuntary updating of versions
 	USE - Something new piece of functionality is finally being used
-	WARN - This commit may be hazardous but i'm commiting anyway :smirk:
+	WARN - This commit may be hazardous 
+	-// - Comments have been removed
 
 ## Sublime Stuff
 	[
@@ -129,7 +131,6 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Implement Flow Router and Flow layouts
 	Make system for cutting out TASKS and sending with @
 	Make subtle animation on offer count change
-	Make Social media profiles for those included in footer
 
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
@@ -151,65 +152,3 @@ Extensive undertandability is less crucial in the beginning stage of development
 	JS Callback functions - Keep on same line as caller function Ex:$(".searchRefineCategories li input").each( function () {
 	JS - New functionality requires a brief comment before it. This may be removed eventually
 
-## Rand
-	npm install -g eslint
-	npm install -g babel-eslint
-	npm install -g eslint-plugin-react
-
-## Dependencies
-	accounts-facebook               1.0.4  Login service for Facebook accounts
-	accounts-password               1.1.1  Password support for accounts
-	accounts-ui                     1.1.5  Simple templates to add login widgets to an app
-	alanning:roles                  1.2.13  Role-based authorization
-	aldeed:autoform                 5.3.2  Easily create forms with automatic insert and update, and automatic reactive validation.
-	aldeed:collection2              2.3.3  Automatic validation of insert and update operations on the client and server.
-	bozhao:accounts-instagram       0.2.0  Instagram account login for meteor
-	chart:chart                     1.0.1-beta.4  Chart.js (official) - Responsive, simple, clean and interactive charts using HTML5 <canvas>
-	coffeescript                    1.0.6  Javascript dialect with fewer braces and semicolons
-	dburles:google-maps             1.1.1  Google Maps Javascript API v3
-	edgee:slingshot                 0.7.1  Directly post files to cloud storage services, such as AWS-S3.
-	email                           1.0.6  Send email messages
-	fortawesome:fontawesome         4.3.0  Font Awesome (official): 500+ scalable vector icons, customizable via CSS, Retina friendly
-	fourseven:scss                  1.2.3* Style with attitude and autoprefixer.
-	francocatena:compass            0.5.1  Stylesheet Authoring Environment that makes your website design simpler
-	gadicohen:headers               0.0.27  Access HTTP headers on both server and client
-	houston:admin                   2.0.3  A zero-config Meteor Admin
-	http                            1.1.0  Make HTTP calls to remote servers
-	iron:router                     1.0.9  Routing specifically designed for Meteor
-	jeremy:snapsvg                  0.4.1_2  The JavaScript library for modern SVG graphics. http://snapsvg.io
-	jquery                          1.11.3_2  Manipulate the DOM using CSS selectors
-	juliancwirko:s-alert            2.4.1  Simple and fancy notifications / alerts / errors for Meteor
-	kevohagan:sweetalert            1.0.0  a beautiful replacement for javascript's alert()
-	less                            1.0.14  The dynamic stylesheet language
-	lookback:seo                    1.1.0  Automatically add meta, OpenGraph and Twitter tags from your Iron Router routes.
-	markdown                        1.0.4  Markdown-to-HTML processor
-	matthew:foundation5-sass        1.0.0  Foundation 5 with Sass support
-	mdg:camera                      1.1.4  Photos with one function call on desktop and mobile.
-	mdg:geolocation                 1.0.3  Provides reactive geolocation on desktop and mobile.
-	meteor-platform                 1.2.2  Include a standard set of Meteor packages in your app
-	meteorhacks:fast-render         2.7.1  Render your app before the DDP connection even comes alive - magic?
-	meteorhacks:kadira              2.22.1  Performance Monitoring for Meteor
-	meteorhacks:npm                 1.4.0  Use npm modules with your Meteor App
-	meteorhacks:search-source       1.4.0  Reactive Data Source for Search
-	mike:mocha                      0.6.2  Run mocha tests in the browser
-	mizzao:jquery-ui                1.11.4  Simple lightweight pull-in for jQuery UI in Meteor
-	mizzao:user-status              0.6.5  User connection and idle state tracking for Meteor
-	multiply:iron-router-progress   1.0.1  Progressbar for iron:router
-	nemo64:bootstrap                3.3.5_2  Highly configurable bootstrap integration.
-	npm-container                   1.1.0+ Contains all your npm dependencies
-	peerlibrary:blaze-components    0.13.0  Reusable components for Blaze
-	percolatestudio:segment.io      3.0.0  Segment.io integration for Meteor (works on both client and server) at version 1.0.3
-	practicalmeteor:chai            2.1.0_1  The Chai Assertion Library, v2.1.0
-	raix:handlebar-helpers          0.2.4  Handlebar helpers
-	richsilv:pikaday                1.0.1  Pikaday JavaScript Datepicker for Meteor — lightweight, no dependencies, modular CSS
-	ryanswapp:spectrum-colorpicker  0.0.1  A meteor wrapper for the spectrum colorpicker
-	sacha:spin                      2.3.1  Simple spinner package for Meteor
-	service-configuration           1.0.4  Manage the configuration for third-party services
-	tmeasday:publish-counts         0.5.1  Publish the count of a cursor, in real time
-	todda00:friendly-slugs          0.3.3  Generate URL friendly slugs from a field with auto-incrementation to ensure unique URLs.
-	u2622:persistent-session        0.4.0* Persistently store Session data on the client
-	underscore                      1.0.3  Collection of small helpers: _.map, _.each, ...
-
-
-	## Pre IP Location
-	Set Location from pre ip

@@ -1,24 +1,24 @@
 <template name="Notification">
-<div class="notificationBody">
-{{#if isSeller}}
-<b>{{action}}</b>
-of
-<span class="money"> ${{offer_price}} </span>
-for
-<a href="{{listingId}}"> {{listing_title}} </a>
-From
-{{buyer_id}}
+	<div class="notificationBody">
+<!-- 		{{#if isSeller}} -->
+	<!-- 	<b>{{action}}</b>
+		of
+		<span class="money"> ${{offer_price}} </span>
+		for
+		<a href="{{listingId}}"> {{listing_title}} </a>
+		From
+		{{buyer_id}} -->
 
-{{else}}
+		<!-- {{else}} -->
 
-<b>{{action}}</b>
-of
-<span class="money"> ${{offer_price}} </span>
-for
-<a href="{{listingId}}"> {{listing_title}} </a>
-From
-{{seller_id}}
+		<b>{{action}}</b>
+		of
+		<span class="money"> ${{offer_price}} </span>
+		for
+		<a href="{{listingId}}"> {{listing_title}} </a>
+		From
+		{{seller_id}}
 
-{{/if}}
-</div>
+	<!-- 	{{/if}} -->
+	</div>
 </template>

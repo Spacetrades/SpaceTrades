@@ -226,40 +226,25 @@ if (Meteor.isServer) {
        * @locus Server
        */
       actionSave: function(optionsA) {
-        Saves.upsert(
-          {_id: this.userId},
-         {
-          $push: {
+        Saves.insert(
+           {
+            user: this.userId,
             listing_title: optionsA.listing_title,
             item_id: optionsA._id,
             price: optionsA.price,
             status: optionsA.status,
             city: optionsA.city,
             state: optionsA.state,
-            img1: optionsA.img,
+            img1: optionsA.img1,
             username: optionsA.username
-          }
-        });
+          })
       },
        /*
        * @summary Unsave A Listing
        * @locus Server
        */
        actionUnsave: function(optionsA) {
-        Saves.update(
-          {_id: this.userId},
-         {
-          $pull: {
-            listing_title: optionsA.listing_title,
-            item_id: optionsA._id,
-            price: optionsA.price,
-            status: optionsA.status,
-            city: optionsA.city,
-            state: optionsA.state,
-            img1: optionsA.img,
-            username: optionsA.username
-          }
-        });
+        Saves.remove({_id: optionsA._id})
       },
     saveLocation: function(response, userId, locator) {
 
