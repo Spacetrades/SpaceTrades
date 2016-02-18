@@ -278,6 +278,10 @@
     .profileUserImage img {
         width: 70% !important;
     }
+
+    .desc-box p {
+        padding: 5px 10px 7px 10px !important;
+    }
 }
 
 @media (max-width: 781px) {
@@ -362,6 +366,10 @@
 
     .managerOfferView {
         margin-top: 4px !important;
+    }
+
+    .profileUserCardsUl li {
+        width: 22%;
     }
 
 }
@@ -467,6 +475,11 @@
     .optionsProClick {
         margin-left: 5px !important;
     }
+
+    .profileDesc p {
+        font-size: 0.85rem !important;
+    }
+
 }
 
 @media (max-width: 589px) {
@@ -623,6 +636,15 @@
     .abouttext {
         margin-left: 5px
     }
+
+    .profileDesc p {
+        font-size: 0.8rem !important;
+    }
+
+    .profileUserCardsUl li {
+        width: 150px !important;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -725,6 +747,11 @@
     .profileCardLi {
         width: 81.5% !important;
     }
+
+    .profileDesc p {
+        font-size: 0.75rem !important;
+    }
+
 }
 
 @media (max-width: 395px) {
@@ -837,6 +864,12 @@
         display: none !important;
     }
     
+}
+
+@media (max-width: 351px) {
+    .profileUserCardsUl li {
+        width: 22%;
+    }
 }
 
 @media (max-width: 350px) {
