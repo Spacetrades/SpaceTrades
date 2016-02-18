@@ -131,6 +131,9 @@ Extensive undertandability is less crucial in the beginning stage of development
 	Implement Flow Router and Flow layouts
 	Make system for cutting out TASKS and sending with @
 	Make subtle animation on offer count change
+	Only select images you have license to use
+
+	duplicate system
 
 ## Formatting:
 	Mongo - Listing.find({ _id: id}); NOT Listing.find({_id:id});
