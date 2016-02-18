@@ -146,112 +146,126 @@ if (Meteor.isServer) {
     }
   });
   Meteor.methods({
-      /*
-       * @summary Send Email
-       * @locus Server
-       *
-       */
-      sendEmail: function(to, from, subject, text) {
-        check([to, from, subject, text], [String]);
+    /*
+     * @summary Send Email
+     * @locus Server
+     *
+     */
+    sendEmail: function(to, from, subject, text) {
+      check([to, from, subject, text], [String]);
 
-        // Let other method calls from the same client start running,
-        // without waiting for the email sending to complete.
-        this.unblock();
+      // Let other method calls from the same client start running,
+      // without waiting for the email sending to complete.
+      this.unblock();
 
-        console.log(to, from, subject, text);
+      console.log(to, from, subject, text);
 
-        Email.send({
-          to: to,
-          from: from,
-          subject: subject,
-          text: text
+      Email.send({
+        to: to,
+        from: from,
+        subject: subject,
+        text: text
+      });
+    },
+    /**
+     * @summary Add listing
+     * @locus Server
+     * @instancename collection
+     * @class
+     */
+    addListing: function(options) {
+      if (!Meteor.userId()) {
+        throw new Meteor.Error("Not Authorized");
+      }
+
+      if (options.trade == "1") {
+        options.trade = "Allowed";
+      } else {
+        options.trade = "Denied";
+      }
+
+      Listing.insert({
+        createdAt: new Date(),
+        // Status
+        status: "Pending",
+        offerAccepted: "",
+        // Id
+        creator_id: options.creator_id,
+        creator_image: options.creator_image,
+        facebook_id: options.facebook_id,
+        // Title
+        listing_title: options.listing_title,
+        // Category
+        category: options.category,
+        type: options.type,
+        brand: options.brand,
+        // Information
+        username: Meteor.user().profile.name,
+        quantity: options.quantity,
+        price: options.price,
+        trade: options.trade,
+        size: options.size,
+        condition: options.condition,
+        color: options.color,
+        payment: options.payment,
+        description: options.description,
+        // Location
+        lat: options.lat,
+        lng: options.lng,
+        city: options.city,
+        state: options.state,
+        locationString: options.locationString,
+        // Images
+        img1: options.img1,
+        img2: options.img2,
+        img3: options.img3
+      });
+    },
+    /*
+     * @summary Remove a listing
+     * @locus Server
+     */
+    removeListing: function(options) {
+      if (Meteor.userId() == options.creator_id) {
+        Listing.remove({
+          _id: options._id
         });
-      },
-      /**
-       * @summary Add listing
-       * @locus Server
-       * @instancename collection
-       * @class
-       */
-      addListing: function(options) {
-        if (!Meteor.userId()) {
-          throw new Meteor.Error("Not Authorized")
-        }
+      } else {
+        throw new Meteor.Error("Not Authorized");
+      }
 
-        if (options.trade == "1") {
-          options.trade = "Allowed";
-        } else {
-          options.trade = "Denied";
-        }
-
-        Listing.insert({
-          createdAt: new Date(),
-          // Status
-          status: "Pending",
-          offerAccepted: "",
-          // Id
-          creator_id: options.creator_id,
-          creator_image: options.creator_image,
-          facebook_id: options.facebook_id,
-          // Title
-          listing_title: options.listing_title,
-          // Category
-          category: options.category,
-          type: options.type,
-          brand: options.brand,
-          // Information
-          username: Meteor.user().profile.name,
-          quantity: options.quantity,
-          price: options.price,
-          trade: options.trade,
-          size: options.size,
-          condition: options.condition,
-          color: options.color,
-          payment: options.payment,
-          description: options.description,
-          // Location
-          lat: options.lat,
-          lng: options.lng,
-          city: options.city,
-          state: options.state,
-          locationString: options.locationString,
-          // Images
-          img1: options.img1,
-          img2: options.img2,
-          img3: options.img3
-        });
-      },
-      /*
-       * @summary Save A Listing
-       * @locus Server
-       */
-      actionSave: function(optionsA) {
-        Saves.insert(
-           {
-            user: this.userId,
-            listing_title: optionsA.listing_title,
-            item_id: optionsA._id,
-            price: optionsA.price,
-            status: optionsA.status,
-            city: optionsA.city,
-            state: optionsA.state,
-            img1: optionsA.img1,
-            username: optionsA.username
-          })
-      },
-       /*
-       * @summary Unsave A Listing
-       * @locus Server
-       */
-       actionUnsave: function(optionsA) {
-        Saves.remove({_id: optionsA._id})
-      },
+    },
+    /*
+     * @summary Save A Listing
+     * @locus Server
+     */
+    actionSave: function(optionsA) {
+      Saves.insert({
+        user: this.userId,
+        listing_title: optionsA.listing_title,
+        item_id: optionsA._id,
+        price: optionsA.price,
+        status: optionsA.status,
+        city: optionsA.city,
+        state: optionsA.state,
+        img1: optionsA.img1,
+        username: optionsA.username
+      })
+    },
+    /*
+     * @summary Unsave A Listing
+     * @locus Server
+     */
+    actionUnsave: function(optionsA) {
+      Saves.remove({
+        _id: optionsA._id
+      })
+    },
     saveLocation: function(response, userId, locator) {
 
       var locations = response.latLng.split(",", 2);
       var lat = locations[0];
       var lng = locations[1];
-
       Meteor.users.update(userId, {
         $set: {
           'profile.city': response.city,
@@ -333,7 +347,7 @@ if (Meteor.isServer) {
         listingId: options.listingId,
         destination: options.destination,
         seller_id: options.seller_id,
-        buyer_id:options.buyer_id
+        buyer_id: options.buyer_id
       });
     },
     /*
