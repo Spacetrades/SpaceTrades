@@ -112,35 +112,44 @@
                                 <input type="text" id="colorpicker"> 
                             </li>
                             <br>
-                            <li>Trade Offers
-                            	<ul>
-                                    <li class="modOfferRequestPaymentPaypal">
-                                        <input type="radio" id="modAddListingTradeOffersNo" name="addListingTradeOffers" value="False" class="offerRequestPaymentRadio" checked/>
-                                        <label for="modAddListingTradeOffersNo">No</label>
-                                    </li>
-                                    <li class="modOfferRequestPaymentCash">
-                                        <input type="radio" id="modAddListingTradeOffersYes" name="addListingTradeOffers" value="True" class="offerRequestPaymentRadio"/>
-                                        <label for="modAddListingTradeOffersYes">Yes</label>
-                                    </li>
-                                </ul>
-                            </li>
-                            <br>
-                            <li>Payment Method
-                            	<ul>
-                                    <li class="modOfferRequestPaymentCash">
-                                        <input type="radio" id="modAddListingCashRadio" name="addListingPayment" value="Cash" class="offerRequestPaymentRadio" checked/>
-                                        <label for="modAddListingCashRadio">Cash</label>
-                                    </li>
-                                    <li class="modOfferRequestPaymentPaypal">
-                                        <input type="radio" id="modAddListingPaypalRadio" name="addListingPayment" value="Paypal" class="offerRequestPaymentRadio"/>
-                                        <label for="modAddListingPaypalRadio">Paypal</label>
-                                    </li>
-                                    <li class="modOfferRequestPaymentPaypal">
-                                        <input type="radio" id="modAddListingBothRadio" name="addListingPayment" value="Either" class="offerRequestPaymentRadio"/>
-                                        <label for="modAddListingBothRadio">Either</label>
+                            <div class="modOfferRequestPageOne">
+                                <ul class="modOfferRequestPageOneUl">     
+                                    <li class="radioWrap timeRadio">
+                                        <h2>Payment Method</h2>
+                                        <ul>
+                                            <li class="modOfferRequestPaymentCash">
+                                                <input type="radio" id="modEditTradeYesRadio" name="offerTime" value="Morning" class="radioWrapElement"/>
+                                                <label for="modEditTradeYesRadio">Yes</label>
+                                            </li>
+                                            <li class="modOfferRequestPaymentPaypal">
+                                                <input type="radio" id="modEditTradeNoRadio" name="offerTime" value="Afternoon" class="radioWrapElement"/>
+                                                <label for="modEditTradeNoRadio">No</label>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
-                            </li>
+                            </div>
+                            <div class="modOfferRequestPageOne">
+                                <ul class="modOfferRequestPageOneUl">     
+                                    <li class="radioWrap timeRadio">
+                                        <h2>Payment Method</h2>
+                                        <ul>
+                                            <li class="modOfferRequestPaymentCash">
+                                                <input type="radio" id="modEditCashRadio" name="offerTime" value="Morning" class="radioWrapElement"/>
+                                                <label for="modEditCashRadio">Cash</label>
+                                            </li>
+                                            <li class="modOfferRequestPaymentPaypal">
+                                                <input type="radio" id="modEditPaypalRadio" name="offerTime" value="Afternoon" class="radioWrapElement"/>
+                                                <label for="modEditPaypalRadio">Paypal</label>
+                                            </li>
+                                            <li class="modOfferRequestPaymentPaypal">
+                                                <input type="radio" id="modEditEitherRadio" name="offerTime" value="Night" class="radioWrapElement"/>
+                                                <label for="modEditEitherRadio">Either</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                             <br>
                             <li>Description
                         		<textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
