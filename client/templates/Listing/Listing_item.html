@@ -5,16 +5,8 @@
 
 <!-- TASK - Add Go to Manager button for your listing pages -->
     {{#if offerAccepted}}
-{{> itemAfter}}
-{{else}}
-    <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
-        <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
-    </button>
-    {{#if isCreator}}
-    <button class="modEditListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#editListingModal">
-        <a href=""><i class="fa fa-pencil"></i>Edit</a>
-    </button>
-    {{/if}}
+        {{> itemAfter}}
+    {{else}}
 
     <div class="listingItemDiv oneDiv">
         <h1 class="listingItemTitle">{{listing_title}}</h1>
@@ -27,10 +19,7 @@
                 {{#if isCreator}}
                      <ul class="listingItemButtons">
                     <li>
-                        <button class="modOfferRequestTrigger btn btn-default">Edit</button>
-                    </li>
-                    <li>
-                        <a class="btn btn-default profileBtn deleteButton" href="#">Delete</a>
+                        <button class="modEditListingTrigger btn btn-default" data-toggle="modal" data-target="#editListingModal">Edit</button>
                     </li>
                 </ul>
                 {{else}}
@@ -148,18 +137,37 @@
             <ul class="no-js">
                 <li>
                     <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+
                     <ul class="optionsItems">
-                        {{#if isSaved}}
-                        <li class="itemUnsave"><a href="#"><i class="fa fa-star"></i>Unsave</a></li>
-                        {{else}}
-                        <li class="itemSave"><a href="#"><i class="fa fa-star"></i>Save</a></li>
-                        {{/if}}
-                        <li>
-                            <button class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportListingModal">
-                                <a href="#reportListingModal"><i class="fa fa-gavel"></i>Report Listing</a>
+                    {{#if isCreator}}
+
+                     <li>
+                        <a class="btn btn-default profileBtn deleteButton" href="#">Delete</a>
+                    </li>
+
+                    {{else}}
+
+                       <li>
+                            <button class="modReportTrigger btn btn-primary btn-lg">
+                                <i class="fa fa-gavel"></i>Report Listing
                             </button>
                         </li>
+
+                        {{#if isSaved}}
+
+                        <li class="itemUnsave"><a href="#"><i class="fa fa-star"></i>Unsave</a></li>
+
+                        {{else}}
+
+                        <li class="itemSave"><a href="#"><i class="fa fa-star"></i>Save</a></li>
+
+                        {{/if}}
+
+                    {{/if}}
                     </ul>
+                
+
+                 
                 </li>
             </ul>
         </div>
