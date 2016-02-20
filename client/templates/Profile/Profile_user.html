@@ -83,10 +83,12 @@
                                 <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
                                 <ul class="optionsItems">
                                     <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
-                                    {{#if notCreator}}
+                                    {{#if isOwner}}
+                                    <!-- Nothing -->
+                                    {{else}}
                                     <li>
-                                        <button type="button" class="modReportTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#reportUserModal">
-                                            <a href="#reportUserModal"><i class="fa fa-gavel"></i>Report User</a>
+                                        <button type="button" class="modReportTrigger btn btn-primary btn-lg" >
+                                            <i class="fa fa-gavel"></i>Report User
                                         </button>
                                     </li>
                                     {{/if}}
