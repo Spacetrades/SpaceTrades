@@ -20,6 +20,10 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     height: 30% !important;
     padding: 2em !important;
 } 
+
+.searchProperty {
+    cursor: url(images/search_icon_2.png), auto !important;
+}
  
 .box-title {
     background: $color-spacered !important;
@@ -3658,7 +3662,6 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemUser {
     margin-top: 47px;
-    background-color: #f8504b;
     padding: 20px;
     height: 156px;
     border-radius: 4px;
@@ -3687,7 +3690,6 @@ On click the images will be displayed at normal size to complete the effect
     width: 105% !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-    color: #fff !important;
 }
 
 .listingItemUserName a {
