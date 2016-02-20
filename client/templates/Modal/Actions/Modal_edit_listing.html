@@ -6,39 +6,12 @@
 			<div class="modEditListingContent modal-content">
 				<div class="modEditListingBody modal-body">
 					<div class="modEditListingDiv">
-					<!-- NOT COMPLETE YET DO NOT JUDGE -->
 						<h2>Edit Listing</h2>
 						<ul>
-							<li>Title <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="{{listingtitle}}" maxlength="50"></li>
+							<li>Title <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="{{listing_title}}" maxlength="50"></li>
 							<li>Price <input type="text" class="listprice" placeholder="{{price}}" maxlength="5"></li>
                             <br>
-							<!-- <li>Category
-								<div class="styled-select">
-                                    <select class="listcategory">
-                                        <option value="" disabled selected >Select Category</option>
-                                        <option value="Apparel">Apparel</option>
-                                        <option value="Electronics">Electronics</option>
-                                        <option value="Shoes">Shoes</option>
-                                    </select>
-                                </div>
-							</li>
-							<li>Type
-								<div class="styled-select">
-                                    <select class="listtype">
-                                        <option value="" disabled selected >Select Type</option>
-                                    </select>
-                                </div>
-							</li>
-                            <br>
-							<li>Images
-								<input type="file" class="imageupload" multiple/>
-		                        <ul class="addListImg">
-		                            <li><img class="uploadimg" id="img1" src="img1" /></li>
-		                            <li><img class="uploadimg" id="img2" src="img2" /></li>
-		                            <li><img class="uploadimg" id="img3" src="img3" /></li>
-		                            <li><img class="uploadimg" id="img4" src="img4" /></li>
-		                        </ul>
-							</li> -->
+
 							<li><label>Quantity</label>
                                 <div class="styled-select">
                                     <select class="listquantity">
@@ -57,7 +30,7 @@
                             </li>
                             <li><label>Brand</label>
                                 <div class="styled-select">
-                                    <select class="condition">
+                                    <select class="brandSelect">
                                          <option value="" disabled selected >Select Brand</option>
                                     </select>
                                 </div>
@@ -108,9 +81,9 @@
                                 </div>
                             </li> -->
                             <br>
-                            <li><label>Color</label>
+<!--                             <li><label>Color</label>
                                 <input type="text" id="colorpicker"> 
-                            </li>
+                            </li> -->
                             <br>
                             <div class="modOfferRequestPageOne">
                                 <ul class="modOfferRequestPageOneUl">     
@@ -131,19 +104,19 @@
                             </div>
                             <div class="modOfferRequestPageOne">
                                 <ul class="modOfferRequestPageOneUl">     
-                                    <li class="radioWrap timeRadio">
+                                    <li class="radioWrap paymentRadio">
                                         <h2>Payment Method</h2>
                                         <ul>
                                             <li class="modOfferRequestPaymentCash">
-                                                <input type="radio" id="modEditCashRadio" name="offerTime" value="Morning" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditCashRadio" name="offerPayment" value="Morning" class="radioWrapElement"/>
                                                 <label for="modEditCashRadio">Cash</label>
                                             </li>
                                             <li class="modOfferRequestPaymentPaypal">
-                                                <input type="radio" id="modEditPaypalRadio" name="offerTime" value="Afternoon" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditPaypalRadio" name="offerPayment" value="Afternoon" class="radioWrapElement"/>
                                                 <label for="modEditPaypalRadio">Paypal</label>
                                             </li>
                                             <li class="modOfferRequestPaymentPaypal">
-                                                <input type="radio" id="modEditEitherRadio" name="offerTime" value="Night" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditEitherRadio" name="offerPayment" value="Night" class="radioWrapElement"/>
                                                 <label for="modEditEitherRadio">Either</label>
                                             </li>
                                         </ul>
