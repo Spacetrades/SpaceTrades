@@ -220,7 +220,6 @@
 
 @media (max-width: 880px) {
     .profileUserFeedbackViewCriteria {
-        margin: auto;
         width: 80%;
     }
 }
@@ -293,6 +292,12 @@
 @media (max-width: 825px) {
     .footerLeft {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 805px) {
+    .full {
+        width: 18px !important;
     }
 }
 
@@ -410,6 +415,12 @@
     }
 }
 
+@media (max-width: 722px) {
+    .profileUserFeedbackViewResponse , .profileUserFeedbackViewCriteria {
+        width: 90% !important;
+    }
+}
+
 @media (max-width: 700px) {
 
     p {
@@ -510,6 +521,36 @@
     }
 }
 
+@media (max-width: 644px) {
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-right: 1rem !important;
+    }
+
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-right: 1rem !important;
+    }
+
+    .profileUserFeedbackViewCriteria li ul li:first-child {
+        font-size: 0.95rem !important;
+    }
+
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-left: 0px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaTwo li[class="profileUserFeedbackViewStars"] {
+        margin-left: 0px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-left: 20px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaFour li[class="profileUserFeedbackViewStars"] {
+        margin-left: 15px !important;
+    }
+}
+
 
 @media (max-width: 625px) {
     .profileSettingsUl {
@@ -523,6 +564,24 @@
 
     .profileSettingsLi ul li h4 {
         margin-right: 20px;
+    }
+}
+
+@media (max-width: 606px) {
+    .profileUserFeedbackViewCriteria li ul li:first-child {
+        font-size: 0.9rem !important;
+    }
+
+    input[type="radio"] + label {
+        font-size: 11px;
+    }
+
+    .profileUserFeedbackViewCriteria, .profileUserFeedbackViewResponse {
+        width: 95% !important;
+    }
+
+    .profileUserFeedbackViewStars {
+        height: 24px !important;
     }
 }
 
@@ -615,6 +674,10 @@
 }
 
 @media (max-width: 580px) {
+
+}
+
+@media (max-width: 561px) {
 
 }
 
