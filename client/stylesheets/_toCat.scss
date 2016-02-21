@@ -5335,8 +5335,13 @@ On click the images will be displayed at normal size to complete the effect
 
 /************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
 
+.profileUserFeedbackViewStars {
+    height: 28px !important;
+    vertical-align: middle !important;
+}
+
 .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
-    margin-right: 200px;
+    margin-right: 7rem;
     margin-left: 10px;
 }
 
@@ -5345,12 +5350,12 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
-    margin-right: 200px;
-    margin-left: 35px;
+    margin-right: 7rem;
+    margin-left: 30px;
 }
 
 .profileUserFeedbackViewCriteriaFour li[class="profileUserFeedbackViewStars"] {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 /************ END END END END END */
@@ -5363,43 +5368,37 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserFeedbackViewResponse li {
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #d3d3d7;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
-
-.profileUserFeedbackViewResponse li span {
-    float: right;
-    margin-right: 2%;
-    font-size: 0.7rem;
-    font-style: italic;
-    color: $color-purple;
-    vertical-align: middle;
-    padding: 3px;
-    margin: 0 3px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.profileUserFeedbackViewResponse li a {
-    color: #00bfff;
-    float: right;
-    margin-right: 2%;
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 15%;
-} 
 
 .profileUserFeedbackViewResponse li b {
     font-weight: 400 !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.96rem !important;
+}
+
+.profileUserFeedbackViewResponse li p {
+    margin: 10px 0 0 0 !important;
+    font-size: 0.9rem !important;
+    overflow: initial !important;
+}
+
+.profileUserFeedbackViewResponse li i {
+    font-size: 0.8rem !important;
+    color: $color-purple !important;
+}
+
+.profileUserFeedbackViewResponse li i:hover {
+    color: $color-purple !important;
+}
+
+.profileUserFeedbackViewResponse li i a {
+    text-decoration: underline !important;
+    color: $color-purple !important;
+}
+
+.profileUserFeedbackViewResponse li i a:hover {
+    color: #00bfff !important;
 }
 
 /** Social Button CSS **/
