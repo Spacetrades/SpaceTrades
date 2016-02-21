@@ -678,7 +678,22 @@
 }
 
 @media (max-width: 561px) {
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-right: 0.5rem !important;
+    }
 
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-right: 0.5rem !important;
+    }
+}
+
+@media (max-width: 551px) {
+    input[type="radio"] + label {
+        font-size: 10px !important;
+    }
+    .full {
+        width: 16px !important;
+    }
 }
 
 @media (max-width: 530px) {
