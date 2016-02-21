@@ -26,6 +26,16 @@
 
 }
 
+@media (max-width: 1091px) {
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-right: 3rem !important;
+    }
+
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-right: 3rem !important;
+    }
+}
+
 @media (max-width: 1065px) {
 
 }
@@ -33,6 +43,24 @@
 @media (max-width: 1050px) {
     .homeCardLi {
      width: 210px;
+    }
+}
+
+@media (max-width: 1042px) {
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-right: 2rem !important;
+    }
+
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-right: 2rem !important;
+    }
+
+    input[type="radio"] + label {
+        font-size: 12px;
+    }
+
+    .profileUserFeedbackViewCriteria li ul li:first-child {
+        font-size: 1.1rem !important;
     }
 }
 
@@ -68,6 +96,8 @@
     }
 }
 
+
+
 @media (max-width: 975px) {
     .footerLeft {
         width: 90% !important;
@@ -81,6 +111,37 @@
         margin: 8px 0 !important;.profileSettingsLi:nth-child(2) ul li:nth-child(2), .profileSettingsLi:nth-child(3) ul li:nth-child(2) {
         width: 75% !important; 
     } 
+    }
+}
+
+
+@media (max-width: 945px) {
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-right: 1.5rem !important;
+    }
+
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-right: 1.5rem !important;
+    }
+
+    .profileUserFeedbackViewCriteria li ul li:first-child {
+        font-size: 1rem !important;
+    }
+
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-left: 5px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaTwo li[class="profileUserFeedbackViewStars"] {
+        margin-left: 5px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
+        margin-left: 25px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaFour li[class="profileUserFeedbackViewStars"] {
+        margin-left: 20px !important;
     }
 }
 
@@ -155,6 +216,13 @@
         height: 28px !important;
     }
 
+}
+
+@media (max-width: 880px) {
+    .profileUserFeedbackViewCriteria {
+        margin: auto;
+        width: 80%;
+    }
 }
 
 @media (max-width: 876px) {

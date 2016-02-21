@@ -5335,13 +5335,18 @@ On click the images will be displayed at normal size to complete the effect
 
 /************ IMPORTANT - CHANGE THE VALUES OF THE FOLLOWING AS THE CRITERIA TEXT CHANGES */
 
+
+.profileUserFeedbackViewCriteria {
+    text-align: center !important;
+}
+
 .profileUserFeedbackViewStars {
     height: 28px !important;
     vertical-align: middle !important;
 }
 
 .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
-    margin-right: 7rem;
+    margin-right: 5rem;
     margin-left: 10px;
 }
 
@@ -5350,7 +5355,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserFeedbackViewCriteriaThree li[class="profileUserFeedbackViewStars"] {
-    margin-right: 7rem;
+    margin-right: 5rem;
     margin-left: 30px;
 }
 
