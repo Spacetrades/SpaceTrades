@@ -1,6 +1,6 @@
 <template name="ManagerCardListing">
 	<li class="profileCardLi">
-        <p class="managerListingStatus"> {{offers}} offers</p>
+        <p class="managerListingStatus"> {{offers}} offers received</p>
         <ul class="profileCardImage">
             <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
         </ul>
@@ -10,7 +10,7 @@
             <li class="profileCardItem">Condition: {{condition}}</li>
             <li class="profileCardItem">Size: {{size}}</li>
             <li class="managerOfferView">
-                <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#listingManagerModal">Manage</button>
+                <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg {{_id}}" data-toggle="modal" data-target="#listingManagerModal">Manage</button>
             </li>
         </ul>
     </li>
