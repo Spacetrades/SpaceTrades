@@ -1,9 +1,5 @@
 <template name="item">
-    {{> ModalOfferRequest}}
-    {{> ModalReportListing}}
-    {{> ModalEditListing}}
-
-    <!-- TASK - Add Go to Manager button for your listing pages -->
+   <!-- TASK - Add Go to Manager button for your listing pages -->
     {{#if offerAccepted}}
     {{> itemAfter}}
     {{else}}
@@ -18,13 +14,13 @@
                 </ul>
                 {{#if isCreator}}
                 <ul class="listingItemButtons">
-                   {{#if isCreatorEdit}}
-                   <li>
+                 {{#if isCreatorEdit}}
+                 <li>
                     <button class="modEditListingTrigger btn btn-default" data-toggle="modal" data-target="#editListingModal">Edit</button>
                 </li>
                 {{/if}}
                 <li>
-                    <button class="modViewOffers btn btn-default">View Offers</button>
+                    <button class="modViewOffers modOfferRequestTrigger btn btn-default">View Offers</button>
                 </li>
             </ul>
             {{else}}
@@ -78,15 +74,15 @@
                 </li>
                 <li class="listingItemDetailRight">
                     <ul>
-                       <li class="listingItemCat">Category: <span>{{category}}</span></li>
-                       <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
-                       <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li>
-                       <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
-                   </ul>
-               </li>
-           </ul>
-       </div>
-       <div class="desc-box-listing nomar desc-width listingItemDescription">
+                     <li class="listingItemCat">Category: <span>{{category}}</span></li>
+                     <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
+                     <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li>
+                     <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
+                 </ul>
+             </li>
+         </ul>
+     </div>
+     <div class="desc-box-listing nomar desc-width listingItemDescription">
         <h4 class="box-title-listing">Description</h4>
         <p>{{{description}}}</p>
     </div>
