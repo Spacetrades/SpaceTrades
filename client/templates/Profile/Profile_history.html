@@ -2,6 +2,24 @@
 	<div class="profileCard oneDiv">
         <ul class="profileCardUl profileHistoryCardUl">
         <!-- History should be highlighted in nav  -->
+        <li class="profileCardLi">
+            <p><b>Met On Aug. 3 2015</b>You Bought From <a href="/profile/{{creator_id}}" class="profileCardBoughtSold">{{username}}</a></p> 
+            <!-- you bought from, you sold to -->
+            <ul class="profileCardImage">
+                <a href="/listing/{{_id}}"><img src="{{img}}" class="profileCardImg"></a>
+            </ul>
+            <ul class="profileCardInfo">
+                <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
+                <li class="money profileCardItem">${{price}}</li>
+                <li class="profileCardItem">Condition: {{condition}}</li>
+                <li class="profileCardItem">Size: {{size}}</li>
+                <li class="profileCardView" id="profileHistoryView">
+                <button type="button" class="modSentOfferTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#historyDetailsModal">
+                      View Meetup
+                    </button>
+                </li>
+            </ul>
+        </li>
         {{#if defaultCheck}}
             {{#each history}}
 				{{> profileHistoryCard}}

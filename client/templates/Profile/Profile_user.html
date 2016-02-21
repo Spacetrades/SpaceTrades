@@ -17,14 +17,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="profileUserGraph">
+            <!-- <div class="profileUserGraph">
                 <label for="myChart"><b>Meetup Graph</b>
                 <br>
                 <span class="profileMonth"> {{month}} </span>
                 <br>
                     <canvas id="myChart"></canvas>
                 </label>
-            </div>
+            </div> -->
         </div>
         <div class="profileUserRight">
             <div class="profileUserName">
@@ -126,12 +126,12 @@
         </ul>
     </div>
     <div class="profileUserFeedbackView oneDiv">
-        <h2>Feedback</h2>
+        <!-- <h2>Feedback</h2>
         <ul class="profileUserFeedbackViewSymbols">
             <li class="profileUserFeedbackViewPositive"><i class="fa fa-plus"></i>{{upvotes}}</li>
             <li class="profileUserFeedbackViewNeutral"><i class="fa fa-dot-circle-o"></i>{{neutralvotes}}</li>
             <li class="profileUserFeedbackViewNegative"><i class="fa fa-minus"></i>{{downvotes}}</li>
-        </ul>
+        </ul> -->
         <!-- WHEN YOU CHANGE THE TEXT THE CSS WILL MESS UP. ASK FRONT-END DEV TO FIX IT -->
         <ul class="profileUserFeedbackViewCriteria">
             <li>
@@ -214,7 +214,27 @@
         <ul class="profileUserFeedbackViewResponse">
         <!-- ALL OF THE "TELL US MORE" RESPONSES -->
         <!-- Responses are limited to 80 characters in feedback -->
-            <li><b>"This seller is the best seller i've ever met and I want to keep buying kick"</b><span>Sept 2015</span><a href="#">Steve Jobs</a></li>
+            <li>
+                <b>Best Seller Yet, Quick Meetups!</b>
+                <br>
+                <i>By <a href="#">Nathan C.</a> in Feb 2016</i>
+                <br>
+                <p>Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup.Lorem ipsum some stuff about the meetup.</p>
+            </li>
+            <li>
+                <b>Best Seller Yet, Quick Meetups!</b>
+                <br>
+                <i>Written by <a href="#">Nathan C.</a> in Feb 2016</i>
+                <br>
+                <p>Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup.Lorem ipsum some stuff about the meetup.</p>
+            </li>
+            <li>
+                <b>Best Seller Yet, Quick Meetups!</b>
+                <br>
+                <i>Written by <a href="#">Nathan C.</a> in Feb 2016</i>
+                <br>
+                <p>Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup. Lorem ipsum some stuff about the meetup.Lorem ipsum some stuff about the meetup.</p>
+            </li>
         </ul>        
     </div>  
     {{/with}}
