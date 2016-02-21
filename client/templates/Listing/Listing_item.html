@@ -3,9 +3,9 @@
     {{> ModalReportListing}}
     {{> ModalEditListing}}
 
-<!-- TASK - Add Go to Manager button for your listing pages -->
+    <!-- TASK - Add Go to Manager button for your listing pages -->
     {{#if offerAccepted}}
-        {{> itemAfter}}
+    {{> itemAfter}}
     {{else}}
 
     <div class="listingItemDiv oneDiv">
@@ -17,171 +17,173 @@
                     <li class="money itemMoney">${{price}}</li>
                 </ul>
                 {{#if isCreator}}
-                     <ul class="listingItemButtons">
-                    <li>
-                        <button class="modEditListingTrigger btn btn-default" data-toggle="modal" data-target="#editListingModal">Edit</button>
-                    </li>
-                    <li>
-                        <button class="modViewOffers btn btn-default">View Offers</button>
-                    </li>
-                </ul>
-                {{else}}
                 <ul class="listingItemButtons">
-                    <li>
-                        <button class="modOfferRequestTrigger btn btn-default" data-toggle="modal" data-target="#offerRequestModal">Offer</button>
-                    </li>
-                    <li>
-                        <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
-                    </li>
-                </ul>
+                   {{#if isCreatorEdit}}
+                   <li>
+                    <button class="modEditListingTrigger btn btn-default" data-toggle="modal" data-target="#editListingModal">Edit</button>
+                </li>
                 {{/if}}
-            </div>
-            <div class="listingItemSlider">
-                <div class="slider">
-                    <input type="radio" name="slide_switch" id="id1" checked="checked"/>
-                    <label for="id1" class="sliderSmallOne">
-                        <img class="imgBreak" src="{{img1}}" />
-                    </label>
-                    <img class="imgBreak" src="{{img1}}"/>
-
-                    <input type="radio" name="slide_switch" id="id2" />
-                    <label for="id2" class="sliderSmallTwo">
-                        <img class="imgBreak" src="{{img2}}" />
-                    </label>
-                    <img class="imgBreak" src="{{img2}}"/>
-
-                    <input type="radio" name="slide_switch" id="id3"/>
-                    <label for="id3" class="sliderSmallThree">
-                        <img class="imgBreak" src="{{img3}}" />
-                    </label>
-                    <img class="imgBreak" src="{{img3}}"/>
-
-                    <input type="radio" name="slide_switch" id="id4"/>
-                    <label for="id4" class="sliderSmallFour">
-                        <img class="imgBreak" src="{{img4}}" />
-                    </label>
-                    <img class="imgBreak" src="{{img3}}"/>
-                </div>
-            </div>
-            <div class="desc-box-listing desc-width">
-                <h4 class="box-title-listing">Product Details</h4>
-                <ul class="listingItemDetailItems">
-                    <li class="listingItemDetailLeft">
-                        <ul>
-                            <li class="listingItemBrand">Brand:<a href="/search" class="searchProperty">{{brand}}</a></li>
-                            <li class="listingItemType">Type:<a href="/search" class="searchProperty">{{type}}</a></li>
-                            <li class="listingItemSize">Size: <span>{{size}}</span></li>
-                            <li class="listingItemColor">Color: <span style="color: {{color}}">{{color}}</span></li>
-                        </ul>
-                    </li>
-                    <li class="listingItemDetailRight">
-                        <ul>
-                         <li class="listingItemCat">Category: <span>{{category}}</span></li>
-                         <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
-                         <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li>
-                         <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
-                     </ul>
-                 </li>
-             </ul>
-         </div>
-         <div class="desc-box-listing nomar desc-width listingItemDescription">
-            <h4 class="box-title-listing">Description</h4>
-            <p>{{{description}}}</p>
-        </div>
-    </div>  
-    <div class="listingItemRight">
-        <div class="listingItemShare">
-            <!-- Twitter -->
-            <a href="http://twitter.com/share?url=spacetrades.com/listing/{{_id}}&text=SpaceTrades&via=<VIA>" target="_blank" class="share-btn twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <!-- Google Plus -->
-            <a href="https://plus.google.com/share?url=spacetrades.com/listing/{{_id}}" target="_blank" class="share-btn google-plus">
-                <i class="fa fa-google-plus"></i>
-            </a>
-            <!-- Facebook -->
-            <a href="http://www.facebook.com/sharer/sharer.php?u=spacetrades.com/listing/{{_id}}" target="_blank" class="share-btn facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="http://reddit.com/submit?url=spacetrades.com/listing/{{_id}}&title=SpaceTrades" target="_blank" class="share-btn reddit">
-                <i class="fa fa-reddit"></i>
-            </a>
-        </div>
-        <div class="listingItemMaps">
-            <ul class="listingItemMapsAPI">
                 <li>
-                    <div class="listingMapsCanvas" id="map-canvas">
-                        {{> googleMap name="listingImage" options=exampleMapOptions}}
-                    </div>
+                    <button class="modViewOffers btn btn-default">View Offers</button>
                 </li>
             </ul>
-        </div>
-        <div class="listingItemUser">
-            <ul class="listingItemUserImg">
-                <li><a href="/profile/{{creator_id}}"><img src="{{creator_image}}"></a></li>
+            {{else}}
+            <ul class="listingItemButtons">
+                <li>
+                    <button class="modOfferRequestTrigger btn btn-default" data-toggle="modal" data-target="#offerRequestModal">Offer</button>
+                </li>
+                <li>
+                    <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
+                </li>
             </ul>
-            <ul class="listingItemUserInfo">
-                <li class="listingItemUserName"><a href="/profile/{{creator_id}}">{{username}}</a></li>
-                <li class="rating">☆☆☆☆☆</li>
-                <ul class="listingPayment">
+            {{/if}}
+        </div>
+        <div class="listingItemSlider">
+            <div class="slider">
+                <input type="radio" name="slide_switch" id="id1" checked="checked"/>
+                <label for="id1" class="sliderSmallOne">
+                    <img class="imgBreak" src="{{img1}}" />
+                </label>
+                <img class="imgBreak" src="{{img1}}"/>
+
+                <input type="radio" name="slide_switch" id="id2" />
+                <label for="id2" class="sliderSmallTwo">
+                    <img class="imgBreak" src="{{img2}}" />
+                </label>
+                <img class="imgBreak" src="{{img2}}"/>
+
+                <input type="radio" name="slide_switch" id="id3"/>
+                <label for="id3" class="sliderSmallThree">
+                    <img class="imgBreak" src="{{img3}}" />
+                </label>
+                <img class="imgBreak" src="{{img3}}"/>
+
+                <input type="radio" name="slide_switch" id="id4"/>
+                <label for="id4" class="sliderSmallFour">
+                    <img class="imgBreak" src="{{img4}}" />
+                </label>
+                <img class="imgBreak" src="{{img3}}"/>
+            </div>
+        </div>
+        <div class="desc-box-listing desc-width">
+            <h4 class="box-title-listing">Product Details</h4>
+            <ul class="listingItemDetailItems">
+                <li class="listingItemDetailLeft">
+                    <ul>
+                        <li class="listingItemBrand">Brand:<a href="/search" class="searchProperty">{{brand}}</a></li>
+                        <li class="listingItemType">Type:<a href="/search" class="searchProperty">{{type}}</a></li>
+                        <li class="listingItemSize">Size: <span>{{size}}</span></li>
+                        <li class="listingItemColor">Color: <span style="color: {{color}}">{{color}}</span></li>
+                    </ul>
+                </li>
+                <li class="listingItemDetailRight">
+                    <ul>
+                       <li class="listingItemCat">Category: <span>{{category}}</span></li>
+                       <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
+                       <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li>
+                       <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
+                   </ul>
+               </li>
+           </ul>
+       </div>
+       <div class="desc-box-listing nomar desc-width listingItemDescription">
+        <h4 class="box-title-listing">Description</h4>
+        <p>{{{description}}}</p>
+    </div>
+</div>  
+<div class="listingItemRight">
+    <div class="listingItemShare">
+        <!-- Twitter -->
+        <a href="http://twitter.com/share?url=spacetrades.com/listing/{{_id}}&text=SpaceTrades&via=<VIA>" target="_blank" class="share-btn twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <!-- Google Plus -->
+        <a href="https://plus.google.com/share?url=spacetrades.com/listing/{{_id}}" target="_blank" class="share-btn google-plus">
+            <i class="fa fa-google-plus"></i>
+        </a>
+        <!-- Facebook -->
+        <a href="http://www.facebook.com/sharer/sharer.php?u=spacetrades.com/listing/{{_id}}" target="_blank" class="share-btn facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="http://reddit.com/submit?url=spacetrades.com/listing/{{_id}}&title=SpaceTrades" target="_blank" class="share-btn reddit">
+            <i class="fa fa-reddit"></i>
+        </a>
+    </div>
+    <div class="listingItemMaps">
+        <ul class="listingItemMapsAPI">
+            <li>
+                <div class="listingMapsCanvas" id="map-canvas">
+                    {{> googleMap name="listingImage" options=exampleMapOptions}}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="listingItemUser">
+        <ul class="listingItemUserImg">
+            <li><a href="/profile/{{creator_id}}"><img src="{{creator_image}}"></a></li>
+        </ul>
+        <ul class="listingItemUserInfo">
+            <li class="listingItemUserName"><a href="/profile/{{creator_id}}">{{username}}</a></li>
+            <li class="rating">☆☆☆☆☆</li>
+            <ul class="listingPayment">
                 {{#if paymentSwitch }}
-                    <li class="listingPayCash">Cashflash<i class="fa fa-usd"></i></li>
+                <li class="listingPayCash">Cashflash<i class="fa fa-usd"></i></li>
                 {{/if}}
                 {{#if paymentSwitch.cash }}
-                    <li class="listingPayCash">Cash<i class="fa fa-usd"></i></li>
+                <li class="listingPayCash">Cash<i class="fa fa-usd"></i></li>
                 {{/if}}
                 {{#if paymentSwitch.cash }}
-                    <li class="listingPayCash">Cash<i class="fa fa-usd"></i></li>
+                <li class="listingPayCash">Cash<i class="fa fa-usd"></i></li>
                 {{/if}}
                 {{#if paymentSwitch.amazon }}
-                    <li class="listingPayPal">Amazon<i class="fa fa-cc-paypal"></i></li>
+                <li class="listingPayPal">Amazon<i class="fa fa-cc-paypal"></i></li>
                 {{/if}}
                 {{#if paymentSwitch.both }}
-                    <li class="listingPayPal">GUCKE<i class="fa fa-cc-paypal"></i></li>
+                <li class="listingPayPal">GUCKE<i class="fa fa-cc-paypal"></i></li>
                 {{/if}}
-                </ul>
             </ul>
-        </div>
-        <div class="listingItemLocationString">
-            <p>{{locationString}}</p>
-        </div>
-        <div class="optionsListClick click-nav">
-            <ul class="no-js">
-                <li>
-                    <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+        </ul>
+    </div>
+    <div class="listingItemLocationString">
+        <p>{{locationString}}</p>
+    </div>
+    <div class="optionsListClick click-nav">
+        <ul class="no-js">
+            <li>
+                <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
 
-                    <ul class="optionsItems">
+                <ul class="optionsItems">
                     {{#if isCreator}}
 
-                     <li>
+                    <li>
                         <a class="btn btn-default profileBtn deleteButton" href="#">Delete</a>
                     </li>
 
                     {{else}}
 
-                       <li>
-                            <button class="modReportTrigger btn btn-primary btn-lg">
-                                <i class="fa fa-gavel"></i>Report Listing
-                            </button>
-                        </li>
+                    <li>
+                        <button class="modReportTrigger btn btn-primary btn-lg">
+                            <i class="fa fa-gavel"></i>Report Listing
+                        </button>
+                    </li>
 
-                        {{#if isSaved}}
+                    {{#if isSaved}}
 
-                        <li class="itemUnsave"><a href="#"><i class="fa fa-star"></i>Unsave</a></li>
+                    <li class="itemUnsave"><a href="#"><i class="fa fa-star"></i>Unsave</a></li>
 
-                        {{else}}
+                    {{else}}
 
-                        <li class="itemSave"><a href="#"><i class="fa fa-star"></i>Save</a></li>
-
-                        {{/if}}
+                    <li class="itemSave"><a href="#"><i class="fa fa-star"></i>Save</a></li>
 
                     {{/if}}
-                    </ul>
-                 
-                </li>
-            </ul>
-        </div>
+
+                    {{/if}}
+                </ul>
+                
+            </li>
+        </ul>
     </div>
+</div>
 </div>
 <div class="hidden">
     {{creator_id}}
