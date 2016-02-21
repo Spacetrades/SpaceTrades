@@ -84,10 +84,18 @@
 <template name="LayoutProfile">
 {{> sAlert}}
  {{#if currentUser}}
+    <!-- MODALS -->
     {{> headerpost}}
     {{> ProfileCenterNav}}
-    {{> ModalNotifications}}
+    {{> ModalListingManager}}
     {{> ModalAddListing}}
+    {{> ModalReceivedOffers}}
+    {{> ModalReceivedOffersFull}}
+    {{> ModalEditListing}}
+    {{> ModalReceivedAccept}}
+    {{> ModalReceivedDecline}}
+    {{> ModalListingDelete}}
+
     {{> yield}}
     {{else}}
     {{> headerpre}}
