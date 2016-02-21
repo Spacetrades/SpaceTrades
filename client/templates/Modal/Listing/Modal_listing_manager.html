@@ -1,7 +1,7 @@
 <template name="ModalListingManager"> 
-	<!-- Modal -->
-	{{# with listingSelected}}
-	<div class="modSentOffer modal" id="listingManagerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<form class="modalListingSelected modal multi-step" id="listingManagerModal">
+	{{# each listingSelected}}
+	<!-- <div class="modal" id="listingManagerModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel"> -->
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
@@ -53,7 +53,7 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
-
-	{{/with}}
+<!-- 	</div> -->
+	{{/each}}
+	</form>
 </template>

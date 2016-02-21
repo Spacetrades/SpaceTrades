@@ -1,5 +1,5 @@
 <template name="searchpage">
-<!-- TASK - Populate locations with top ten cities near you -->
+<!-- TASK Dependent type checkboxes -->
 <div class="searchfield job largeSearch oneDiv">
             <input type="text" id="search" class=" search search2" value="{{search}}" placeholder="Brand, Name, Neighborhood, Size, Price..."  >
             <a href="/search" class="homesearchbtn">Search</a>
@@ -30,35 +30,11 @@
                 <!-- <p class="searchRefineTitle">Refine Search</p> -->
                 <ul class="searchRefineCategories">
                     <p class="searchRefineHeadings">Categories</p>
-                    <li><input type="checkbox" value="Apparel">Apparel</li>
-                    <li><input type="checkbox" value="Electronics">Electronics</li>
-                    <li><input type="checkbox" value="Shoes">Shoes</li>
-                    <li><input type="checkbox" value="Other">Other</li>
+                    <li><input class="apparelCheck" type="checkbox" value="Apparel">Apparel</li>
+                    <li><input class="electronicsCheck" type="checkbox" value="Electronics">Electronics</li>
+                    <li><input class="shoesCheck" type="checkbox" value="Shoes">Shoes</li>
+                    <li><input class="otherCheck" type="checkbox" value="Other">Other</li>
                 </ul>
-          <!--  Comment Reason - Too few brands. All or None
-
-                <ul class="searchRefineBrand">
-                    <p class="searchRefineHeadings">Brand</p>
-                    <li><input type="checkbox" value="Nike">Addidas</li>
-                    <li><input type="checkbox" value="Jordan">Asics</li>
-                    <li><input type="checkbox" value="Addidas">Jordan</li>
-                    <li><input type="checkbox" value="Addidas">Converse</li>
-                    <li><input type="checkbox" value="Addidas">Ewing Athletics</li>
-                    <li><input type="checkbox" value="Addidas">Fila</li>
-                    <li><input type="checkbox" value="Addidas">Li Ning</li>
-                    <li><input type="checkbox" value="Addidas">New Balance</li>
-                    <li><input type="checkbox" value="Addidas">Nike</li>
-                    <li><input type="checkbox" value="Addidas">Puma</li>
-                    <li><input type="checkbox" value="Addidas">Radii</li>
-                    <li><input type="checkbox" value="Addidas">Reebok</li>
-                    <li><input type="checkbox" value="Addidas">Saucony</li>
-                    <li><input type="checkbox" value="Addidas">Sperry</li>
-                    <li><input type="checkbox" value="Addidas">Supra</li>
-                    <li><input type="checkbox" value="Addidas">Timberland</li>
-                    <li><input type="checkbox" value="Addidas">Toms</li>
-                    <li><input type="checkbox" value="Addidas">Vans</li>
-                    <li><input type="checkbox" value="Addidas">Under Armour</li>
-                </ul> -->
                 <ul class="searchRefineCondition">
                     <p class="searchRefineHeadings">Condition</p>
                     <li><input type="checkbox" value="New">New</li>
@@ -125,17 +101,8 @@
                     </li>
                 </ul>
                 <ul class="searchRefineStyle">
-                    <p class="searchRefineHeadings">Type</p>
+                    <p class="searchRefineHeadings typeChoose">Type</p>
                     <!-- TASK - Depends on checks for categories. If one cat checked, show all dependent Types -->
-                    <li><input type="checkbox" value="Basketball">Basketball</li>
-                    <li><input type="checkbox" value="Athletic">Baseball</li>
-                    <li><input type="checkbox" value="Running">Running</li>
-                    <li><input type="checkbox" value="Athletic">Athletic</li>
-                    <li><input type="checkbox" value="Athletic">Casual</li>
-                    <li><input type="checkbox" value="Athletic">Football</li>
-                    <li><input type="checkbox" value="Athletic">Skate</li>
-                    <li><input type="checkbox" value="Athletic">Soccer</li>
-                    <li><input type="checkbox" value="Athletic">Walking</li>
                 </ul>
               <!--   <ul class="searchRefineColor">
                     <p class="searchRefineHeadings">Color</p>
@@ -145,29 +112,28 @@
                 </ul>  -->
                 <ul class="searchRefinePrice">
                     <p class="searchRefineHeadings">Price Range</p>
+                    <!-- TODO - Price Range slider -->
                     <li>$<input type="text" class="listprice" placeholder=""/></li>
                     <li class="searchRefineDash">to</li>
                     <li>$<input type="text" class="listprice" placeholder=""/></li>
                 </ul>
                 <ul class="searchRefineLocation">
                     <p class="searchRefineHeadings">Location</p>
-                    <li><input type="checkbox" value="Manhattan">Manhattan</li>
-                    <li><input type="checkbox" value="Queens">Queens</li>
-                    <li><input type="checkbox" value="Brooklyn">Brooklyn</li>
-                    <li><input type="checkbox" value="Bronx">Bronx</li>
-                    <li><input type="checkbox" value="SI">Staten Island</li>
+                    <li><input type="checkbox" value="1">1 Mile Away</li>
+                    <li><input type="checkbox" value="2">2 Mile Away</li>
+                    <li><input type="checkbox" value="3">3 Mile Away</li>
+                    <li><input type="checkbox" value="4">4 Mile Away</li>
+                    <li><input type="checkbox" value="5">5 Mile Away</li>
                 </ul>
                 <ul class="searchRefineTrades">
                     <p class="searchRefineHeadings">Accepts Trades</p>
                     <!-- TASK - Radio button is broken. Accepts two inputs -->
-                    <li><input type="radio" name="Yes" value="Yes">Yes</li>
-                    <li><input type="radio" name="No" value="No">No</li>
+                    <li><input type="radio" name="tradeChoose" value="Yes">Yes</li>
+                    <li><input type="radio" name="tradeChoose" value="No">No</li>
                 </ul> 
-                <ul class="searchRefineRating">
+<!--                 <ul class="searchRefineRating">
                     <p class="searchRefineHeadings">Seller Rating</p>
                     <li>
-                    <!-- TASK - Make seperate template for star ratings -->
-
                        <fieldset class="rating">
                             <input type="radio" id="star5" name="rating" value="5" />
                             <label class = "full" for="star5"></label>
@@ -191,7 +157,7 @@
                             <label class="half" for="starhalf"></label>
                         </fieldset>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <div class="searchResultsCards">
                 <ul class="searchResultsCardUl">

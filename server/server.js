@@ -17,7 +17,7 @@ if (Meteor.isServer) {
       sort: {
         isoScore: -1
       },
-      limit: 20
+      limit: 40
     };
 
     // TASK - Get the selector to use || instead of AND
@@ -53,6 +53,8 @@ if (Meteor.isServer) {
       var selectorState = {
         state: regExp
       }
+
+      console.log(options);
 
       var query = Listing.find({
         $or: [selectorTitle, selectorBrand, selectorPrice, selectorCategory, selectorUserName, selectorCity, selectorState]
@@ -114,8 +116,6 @@ if (Meteor.isServer) {
     }
   });
 
-  // console.log(process.env.MONGO_URL);
-
   //           //
   // Amazon S3 //
   //           //
@@ -157,8 +157,6 @@ if (Meteor.isServer) {
       // Let other method calls from the same client start running,
       // without waiting for the email sending to complete.
       this.unblock();
-
-      console.log(to, from, subject, text);
 
       Email.send({
         to: to,
@@ -285,7 +283,6 @@ if (Meteor.isServer) {
      * @locus Server
      */
     searchFilter: function(options) {
-      // console.log(options.Categories);
 
       //   var selectorCat = {
       //   category: options.Categories
@@ -491,10 +488,8 @@ if (Meteor.isServer) {
     ipLocate: function() {
       HTTP.get("http://ipinfo.io", function(error, result) {
         var place = JSON.parse(result.content);
-        console.log(place);
         var city = place.city;
         var state = place.region;
-        console.log(city, state);
       });
     },
     /*
@@ -503,10 +498,8 @@ if (Meteor.isServer) {
      */
     colorName: function(color) {
       var Namer = Meteor.npmRequire('color-namer');
-      console.log(color);
       var name = Namer(color);
       var color = name.basic[0].name;
-      console.log(color);
       return color;
     },
 
