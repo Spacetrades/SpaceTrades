@@ -89,7 +89,7 @@ console.log("setlocate")
         setLocate();
       },4000)
       });
-
+      document.location.reload();
     }
   });
 
