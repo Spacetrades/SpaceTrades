@@ -10,7 +10,7 @@ if (Meteor.isServer) {
   // Accounts.config({'sendVerificationEmail': true});
 
   // Kadira
-  Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
+  // Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
 
   SearchSource.defineSource('listing', function(searchText, options) {
     var options = {

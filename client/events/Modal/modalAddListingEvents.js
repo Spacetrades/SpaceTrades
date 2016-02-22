@@ -22,7 +22,6 @@ if (Meteor.isClient) {
 				size: $(".listsize option:selected").val() || $(".listcapacity option:selected").val(),
 				// Information
 				condition: $(".condition option:selected").val(),
-				color: $("#colorpicker").val(),
 				description: $(".listdescription").val(),
 				// Location
 				lat: Meteor.user().profile.lat,
@@ -53,22 +52,6 @@ if (Meteor.isClient) {
 					}
 				}
 
-        var color = options.color;
-
-				Meteor.call('colorName', color, function(err, result) {
-					if (!err) {
-            console.log(result);
-            options.cool = result;
-					}
-
-          return result
-				});
-
-        console.log(options.cool);
-
-        console.log(options.color);
-        console.log(color);
-
 				return status;
 			}
 
@@ -86,6 +69,22 @@ if (Meteor.isClient) {
 			}
 
 			if (addListingValidate()) {
+
+      var color = $("#colorpicker").val();
+
+          Meteor.call('colorName', color, function(err, result) {
+          if (!err) {
+            console.log(result);
+            options.color = result;
+            debugger;
+          }
+
+          return result
+        });
+
+          console.log(options)
+
+
         Meteor.call('addListing', options);
 
         // console.log(options.urlKey);
@@ -93,8 +92,6 @@ if (Meteor.isClient) {
         // var newUrl = Listing.find({urlKey: options.urlKey}).fetch();
         // console.log(newUrl);
         Router.go('/');
-
-        debugger;
 
 				successMessage();
 			}

@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-	Template.ModalLocationRadius.helpers({
+	Template.mapPage.helpers({
 		locationRadiusMapOptions: function() {
 			if (GoogleMaps.loaded()) {
 
