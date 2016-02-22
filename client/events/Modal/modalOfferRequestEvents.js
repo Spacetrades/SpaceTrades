@@ -24,7 +24,7 @@ if (Meteor.isClient) {
                 // By Default
                 status: "Pending",
                 // Notification flags
-                action: "Offer Received"
+                action: "Received an Offer"
             }
 
             options.destination = [ options.listing_creator_id ];
