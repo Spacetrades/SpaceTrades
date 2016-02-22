@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-  Template.ModalLocationRadius.onRendered(function() {
+  Template.mapPage.onRendered(function() {
 
     GoogleMaps.ready();
 
