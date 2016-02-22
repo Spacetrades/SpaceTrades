@@ -15,6 +15,10 @@ if (Meteor.isClient) {
 		}
 	});
 
+  Template.registerHelper('current', function(){
+    return Router.current().path;
+  });
+
   Template.registerHelper('nameLookup', function (idParam){
     var param = idParam.hash.idParam;
     return Meteor.users.find({_id: param}).fetch()[0].profile.name;
@@ -26,17 +30,17 @@ if (Meteor.isClient) {
 
   Template.registerHelper('pictureLookup', function (idParam){
     var param = idParam.hash.idParam;
-    return Meteor.users.find({ _id: param}).fetch()[0].profile.picturesm;
+    return Meteor.users.find({ id: param}).fetch()[0].profile.picturesm;
   });
 
 // L1
-	if (Meteor.userId()){
+  if (Meteor.userId()){
 
 
-	// Template.registerHelper('nameLookup', function(id) {
-	// 	return Meteor.users.find({_id: id}).fetch()[0].profile.name;
-	// });
-
+  // Template.registerHelper('nameLookup', function(id) {
+  //  return Meteor.users.find({_id: id}).fetch()[0].profile.name;
+  // });
+_
 	Template.registerHelper('usernameCurrent', function () {
 		return Meteor.user().profile.name.split(" ")[0];
 	});
