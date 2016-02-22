@@ -84,9 +84,11 @@ console.log("setlocate")
     'click .modJoinFB-Btn ': function() {
       locate();
       fbLogin();
-      Meteor.setTimeout( function(){
+      $(function(){
+         Meteor.setTimeout( function(){
         setLocate();
       },4000)
+      });
 
     }
   });
