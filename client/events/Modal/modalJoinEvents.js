@@ -4,21 +4,37 @@ if (Meteor.isClient) {
     Meteor.loginWithFacebook({
       requestPermissions: ['public_profile', 'email', 'user_location']
     }, function(err) {
+
       if (err) {
         // redirect to register if popup comes and user isn't on register
         Session.set('errorMessage', err.reason || 'Unknown Eror');
         console.log(Session.get('errorMessage'));
       } else {
-        var userId = Meteor.userId();
-        var locator = response.city + " " + response.region;
-        console.log(locator);
-        Meteor.call('saveLocation', response, userId, locator, function(err, res) {
-          if (err) {
-            console.log(err);
-          }
-        });
+
       };
     });
+  }
+
+  setLocate = function() {
+
+console.log("setlocate")
+        var userId = Meteor.userId();
+        var response = Session.get("response");
+
+         Session.set('locator', response['city'] + " " + response['region']);
+        var locator = Session.get("locator");
+
+        var options = {
+          userId: userId,
+          response: response,
+          locator: locator
+        }
+
+        Meteor.setTimeout(function(){
+
+            Meteor.call('saveLocation', options);
+        }, 2000);
+
   }
 
 
@@ -36,7 +52,9 @@ if (Meteor.isClient) {
           for (var prop in response) {
             result += prop + ": " + response[prop] + "<br>";
           }
+          console.log(result);
 
+ console.log(response);
           var selectedResponse = {
             city: response.city,
             region: response.region,
@@ -44,7 +62,9 @@ if (Meteor.isClient) {
             ip: response.ip,
             latLng: response.loc
           }
+
           console.log(selectedResponse);
+          Session.set('response', selectedResponse);
           whenDone(selectedResponse);
 
           return selectedResponse
@@ -64,15 +84,10 @@ if (Meteor.isClient) {
     'click .modJoinFB-Btn ': function() {
       locate();
       fbLogin();
+      Meteor.setTimeout( function(){
+        setLocate();
+      },4000)
 
-          var userId = Meteor.userId();
-        var locator = response.city + " " + response.region;
-        console.log(locator);
-        Meteor.call('saveLocation', response, userId, locator, function(err, res) {
-          if (err) {
-            console.log(err);
-          }
-        });
     }
   });
 
