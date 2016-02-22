@@ -63,7 +63,7 @@ if (Meteor.isClient) {
 					html: "true",
 					type: "success",
 					timer: 3000,
-					showConfirmButton: true
+					showConfirmButton: false
 				});
 
 			}
