@@ -1,7 +1,7 @@
 <!-- This modal can be accessed from Item Page, or Your Listings | Post Auth -->
-<template name="ModalEditListing">
+<template name="EditListing">
 	<!-- Modal -->
-	<div class="modEditListing modal" id="editListingModal">
+	<div class="modEditListing">
 		<div class="modEditListingDialog modal-dialog" role="document">
 			<div class="modEditListingContent modal-content">
 				<div class="modEditListingBody modal-body">
@@ -15,16 +15,16 @@
 							<li><label>Quantity</label>
                                 <div class="styled-select">
                                     <select class="listquantity">
-                                        <option value="1">1</option>option>
-                                        <option value="2">2</option>option>
-                                        <option value="3">3</option>option>
-                                        <option value="4">4</option>option>
-                                        <option value="5">5</option>option>
-                                        <option value="6">6</option>option>
-                                        <option value="7">7</option>option>
-                                        <option value="8">8</option>option>
-                                        <option value="9">9</option>option>
-                                        <option value="10">10 +</option>option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10 +</option>
                                     </select>
                                 </div>
                             </li>
@@ -81,9 +81,6 @@
                                 </div>
                             </li> -->
                             <br>
-<!--                             <li><label>Color</label>
-                                <input type="text" id="colorpicker"> 
-                            </li> -->
                             <br>
                             <div class="modOfferRequestPageOne">
                                 <ul class="modOfferRequestPageOneUl">     
@@ -108,15 +105,15 @@
                                         <h2>Payment Method</h2>
                                         <ul>
                                             <li class="modOfferRequestPaymentCash">
-                                                <input type="radio" id="modEditCashRadio" name="offerPayment" value="Morning" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditCashRadio" name="offerPayment" value="Cash" class="radioWrapElement"/>
                                                 <label for="modEditCashRadio">Cash</label>
                                             </li>
                                             <li class="modOfferRequestPaymentPaypal">
-                                                <input type="radio" id="modEditPaypalRadio" name="offerPayment" value="Afternoon" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditPaypalRadio" name="offerPayment" value="Paypal" class="radioWrapElement"/>
                                                 <label for="modEditPaypalRadio">Paypal</label>
                                             </li>
                                             <li class="modOfferRequestPaymentPaypal">
-                                                <input type="radio" id="modEditEitherRadio" name="offerPayment" value="Night" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditEitherRadio" name="offerPayment" value="Either" class="radioWrapElement"/>
                                                 <label for="modEditEitherRadio">Either</label>
                                             </li>
                                         </ul>

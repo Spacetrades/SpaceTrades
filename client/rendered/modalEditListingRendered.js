@@ -1,6 +1,6 @@
 if (Meteor.isClient){
 
-  Template.ModalEditListing.onRendered(function () {
+  Template.EditListing.onRendered(function () {
 
    var brands = {
         'Apparel': ['Bape', 'Supreme'],

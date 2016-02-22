@@ -21,7 +21,7 @@ if (Meteor.isClient) {
     },
     'click .modDeleteListingTrigger': function(){
      Session.set("listingSelected", this);
-$("#listingDeleteModal").modal();
+      $("#listingDeleteModal").modal();
     },
     'click .itemUnsave': function() {
       var optionsA = Saves.find({
@@ -30,8 +30,8 @@ $("#listingDeleteModal").modal();
 
       Meteor.call('actionUnsave', optionsA);
     },
-    'click .modReportTrigger': function() {
-      $(".modReport").attr("style", "display: block");
+    'click .modEditListingTrigger': function(){
+      Session.set('listingSelected', this);
     },
     'click .deleteButton': function() {
       // var query = Listing.find({

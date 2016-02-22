@@ -11,6 +11,7 @@ if (Meteor.isServer) {
 
   // Kadira
   // Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
+  // prerenderio.set('prerenderToken', '4jWuCKjUUuJRuJYWDnWB');
 
   SearchSource.defineSource('listing', function(searchText, options) {
     var options = {
@@ -342,6 +343,7 @@ if (Meteor.isServer) {
         listing_title: options.listing_title,
         offer_price: options.offerprice,
         creator_id: options.creator_id,
+        creator_name: options.creator_name,
         listingId: options.listingId,
         destination: options.destination,
         listing_creator_id: options.listing_creator_id

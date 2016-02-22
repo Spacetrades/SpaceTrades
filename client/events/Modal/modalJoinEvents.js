@@ -64,6 +64,15 @@ if (Meteor.isClient) {
     'click .modJoinFB-Btn ': function() {
       locate();
       fbLogin();
+
+          var userId = Meteor.userId();
+        var locator = response.city + " " + response.region;
+        console.log(locator);
+        Meteor.call('saveLocation', response, userId, locator, function(err, res) {
+          if (err) {
+            console.log(err);
+          }
+        });
     }
   });
 
