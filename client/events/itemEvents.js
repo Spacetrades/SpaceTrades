@@ -15,13 +15,13 @@ if (Meteor.isClient) {
         $(className).click();
       }, 500)
 
-      Meteor.setTimeout(function() {
-        $(".modReceivedOffersTrigger").click();
-      }, 1000);
-
     },
     'click .profileBtn': function() {
       Session.set('recipientId', this.creator_id);
+    },
+    'click .modDeleteListingTrigger': function(){
+     Session.set("listingSelected", this);
+$("#listingDeleteModal").modal();
     },
     'click .itemUnsave': function() {
       var optionsA = Saves.find({
@@ -34,18 +34,18 @@ if (Meteor.isClient) {
       $(".modReport").attr("style", "display: block");
     },
     'click .deleteButton': function() {
-      var query = Listing.find({
-        _id: id
-      }).fetch()[0];
-      var options = query;
-      Meteor.call('removeListing', options);
-      sweetAlert({
-        title: "Listing Removed",
-        type: "success",
-        timer: 3000,
-        showConfirmButton: false
-      });
-      Router.go("/");
+      // var query = Listing.find({
+      //   _id: id
+      // }).fetch()[0];
+      // var options = query;
+      // Meteor.call('removeListing', options);
+      // sweetAlert({
+      //   title: "Listing Removed",
+      //   type: "success",
+      //   timer: 3000,
+      //   showConfirmButton: false
+      // });
+      // Router.go("/");
     },
     'click .itemSave': function() {
       var optionsA = Listing.find({

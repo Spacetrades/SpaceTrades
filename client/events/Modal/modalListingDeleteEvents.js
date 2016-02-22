@@ -5,6 +5,7 @@ if (Meteor.isClient) {
       var id = Session.get('listingSelected')._id;
       var creator_id = Session.get('listingSelected').creator_id;
 
+
       var options = {
         id: id,
         creator_id: creator_id
@@ -12,13 +13,15 @@ if (Meteor.isClient) {
 
       Meteor.call('removeListing', options);
 
+      $("#listingDeleteModal").modal('toggle');
+
       sweetAlert({
         title: "Listing Removed",
         type: "success",
         timer: 3000,
         showConfirmButton: false
       });
-
+      Router.go("/");
 
     }
   });

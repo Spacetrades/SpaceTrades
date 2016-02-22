@@ -1,5 +1,5 @@
 <template name="ModalListingDelete">
-	<div class="modSentOffer modal" id="listingDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<form class="modAddListingModal modal multi-step fade" id="listingDeleteModal">
 		<div class="modSentOfferDialog modal-dialog" role="document">
 			<div class="modSendOfferContent modal-content">
 				<div class="modSentOfferBody modal-body">
@@ -11,7 +11,7 @@
 									<li id="receivedContinueBtn">
 										<ul id="profileReceivedButtonsUl">
 											<li class="receivedGoBack"><a data-dismiss="modal">Go Back</a></li>
-											<li id="profileDelete"><a data-dismiss="modal" data-toggle="modal" data-target="#receivedAccept">Yes</a></li>
+											<li id="profileDelete"><button type="button" data-dismiss="modal">Yes</button></li>
 										</ul>
 									</li>
 								</ul>
@@ -21,5 +21,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</form>
 </template>

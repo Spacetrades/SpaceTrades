@@ -8,7 +8,7 @@
 	      	<div class="profileReceivedOffers">
 		        <ul class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Created: {{createdAt}}</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Created: {{dateFormatted}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
 		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
@@ -19,7 +19,7 @@
 		                    <li id="profileReceivedName" class="profileReceivedName">{{offers}} Offers Received</li>
 		                    <li class="profileReceivedPrice"><span class="money">${{price}}</span></li>
 		                    <li class="profileReceivedPayment"><b>Condition:</b> {{condition}}</li>
-		                    <li class="profileReceivedDate"><b>Color:</b> {{color}}</li>
+		                    <li class="profileReceivedDate"><b>Color:</b> <span style="color: {{color}}">{{color}} </span></li>
 		                    <li class="profileReceivedLocation"><b>Size:</b> {{size}}</li>
 		                    <li class="modListingManagerButtons">
 	                            <ul id="profileListingManagerButtonsUl">

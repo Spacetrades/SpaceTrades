@@ -187,6 +187,7 @@ if (Meteor.isServer) {
         // Status
         status: "Pending",
         offerAccepted: "",
+        urlKey: options.urlKey,
         // Id
         creator_id: options.creator_id,
         creator_image: options.creator_image,
@@ -226,7 +227,7 @@ if (Meteor.isServer) {
     removeListing: function(options) {
       if (Meteor.userId() == options.creator_id) {
         Listing.remove({
-          _id: options._id
+          _id: options.id
         });
       } else {
         throw new Meteor.Error("Not Authorized");
@@ -343,8 +344,7 @@ if (Meteor.isServer) {
         creator_id: options.creator_id,
         listingId: options.listingId,
         destination: options.destination,
-        seller_id: options.seller_id,
-        buyer_id: options.buyer_id
+        listing_creator_id: options.listing_creator_id
       });
     },
     /*
