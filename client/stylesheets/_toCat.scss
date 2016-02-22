@@ -2518,9 +2518,9 @@ i:hover {
     @include headerUsername;
 } */
 
-.headerUsername{
-    color: #404040 !important;
-}
+// .headerUsername{
+//     color: #404040 !important;
+// }
 
 .headerNavMax {
 	margin: 0 auto;
@@ -2781,10 +2781,6 @@ i:hover {
 
 .headerNameOptions {
     margin: 11px 2px 7px 2px !important;
-}
-
-.headerNameOptions a:hover, .headerNameOptions a:active, .headerNameOptions a:visited, .headerNameOptions a:link {
-    color: #fff !important;
 }
 
 .headerNameOptions li img {
@@ -5970,9 +5966,25 @@ textarea {
     overflow: scroll !important;
 }
 
+.headerHomeButton {
+    margin-top: 10px !important;
+}
 
+.headerHomeButton a {
+    color: #404040 !important;
+}
 
+.headerHomeButton a:hover {
+    color: #fff !important;
+}
 
+.headerNameOptions li a {
+    color: #404040 !important;
+}
+
+.headerNameOptions li a:hover {
+    color: #fff !important;
+}
 
 
 
