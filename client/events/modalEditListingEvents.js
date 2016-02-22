@@ -26,6 +26,8 @@ if (Meteor.isClient) {
 
       Meteor.call('updateListing', options);
 
+      Router.go("/");
+
     }
   });
 
