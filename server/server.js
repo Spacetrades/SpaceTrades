@@ -261,21 +261,21 @@ if (Meteor.isServer) {
         _id: optionsA._id
       })
     },
-    saveLocation: function(response, userId, locator) {
+    saveLocation: function(options) {
 
-      var locations = response.latLng.split(",", 2);
+      var locations = options.response.latLng.split(",", 2);
       var lat = locations[0];
       var lng = locations[1];
-      Meteor.users.update(userId, {
+      Meteor.users.update(options.userId, {
         $set: {
-          'profile.city': response.city,
-          'profile.state': response.region,
-          'profile.country': response.country,
-          'profile.ip': response.ip,
+          'profile.city': options.response.city,
+          'profile.state': options.response.region,
+          'profile.country': options.response.country,
+          'profile.ip': options.response.ip,
           'profile.lat': lat,
           'profile.lng': lng,
           'profile.mapRadius': 5,
-          'profile.locationString': locator
+          'profile.locationString': options.locator
         }
       })
     },
@@ -329,6 +329,23 @@ if (Meteor.isServer) {
         listing_creator_id: options.listing_creator_id,
         payment: options.payment,
         status: options.status
+      });
+    },
+    updateListing: function(options) {
+      Listing.update({
+        _id: options.id
+      }, {
+        $set: {
+          listing_title: options.listing_title,
+          brand: options.brand,
+          quantity: options.quantity,
+          price: options.price,
+          payment: options.payment,
+          trade: options.trade,
+          size: options.size,
+          condition: options.condition,
+          description: options.description
+        }
       });
     },
     // For: Report, Add offer, Accept Offer, Badge, new Follower, TB system

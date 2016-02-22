@@ -2,19 +2,19 @@
 <template name="EditListing">
 	<!-- Modal -->
 	<div class="modEditListing">
-		<div class="modEditListingDialog modal-dialog" role="document">
-			<div class="modEditListingContent modal-content">
-				<div class="modEditListingBody modal-body">
+		<div class="modEditListingDialog">
+			<div class="modEditListingContent ">
+				<div class="modEditListingBody">
 					<div class="modEditListingDiv">
 						<h2>Edit Listing</h2>
 						<ul>
-							<li>Title <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="{{listing_title}}" maxlength="50"></li>
-							<li>Price <input type="text" class="listprice" placeholder="{{price}}" maxlength="5"></li>
+							<li>Title <input type="text" class="modAddListingTitleInput listtitle edittitle" id="listtitlebox" placeholder="{{listing_title}}" maxlength="50"></li>
+							<li>Price <input type="text" class="listprice editprice" placeholder="{{price}}" maxlength="5"></li>
                             <br>
 
 							<li><label>Quantity</label>
                                 <div class="styled-select">
-                                    <select class="listquantity">
+                                    <select class="listquantity editquantity">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -30,7 +30,7 @@
                             </li>
                             <li><label>Brand</label>
                                 <div class="styled-select">
-                                    <select class="brandSelect">
+                                    <select class="brandSelect editbrand">
                                          <option value="" disabled selected >Select Brand</option>
                                     </select>
                                 </div>
@@ -38,7 +38,7 @@
                             <br>
                             <li><label>Condition</label>
                                 <div class="styled-select">
-                                    <select class="condition">
+                                    <select class="condition editcondition">
                                         <option value="New">New</option>
                                         <option value="Like New">Like New</option>
                                         <option value="Used">Used</option>
@@ -48,8 +48,8 @@
                             </li>
                             <li class="listsizeli"><label>Size</label>
                                 <div class="styled-select">
-                                    <select class="listsize">
-                                        <option value="" disabled selected>Select Size</option>option>
+                                    <select class="listsize editsize">
+                                        <option value="" disabled selected>Select Size</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -88,11 +88,11 @@
                                         <h2>Trade Offers</h2>
                                         <ul>
                                             <li class="modOfferRequestPaymentCash">
-                                                <input type="radio" id="modEditTradeYesRadio" name="offerTime" value="Morning" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditTradeYesRadio" name="offerTime" value="true" class="radioWrapElement"/>
                                                 <label for="modEditTradeYesRadio">Yes</label>
                                             </li>
                                             <li class="modOfferRequestPaymentPaypal">
-                                                <input type="radio" id="modEditTradeNoRadio" name="offerTime" value="Afternoon" class="radioWrapElement"/>
+                                                <input type="radio" id="modEditTradeNoRadio" name="offerTime" value="false" class="radioWrapElement"/>
                                                 <label for="modEditTradeNoRadio">No</label>
                                             </li>
                                         </ul>
@@ -122,10 +122,10 @@
                             </div>
                             <br>
                             <li>Description
-                        		<textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
+                        		<textarea class="listdescription editdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
                             </li>
                             <li>
-                                <button type="button" data-dismiss="modal" class="btn btn-primary modalSubmitBtn modalSubmitAdd"><input type="submit" class="add ph-button" value="Update"></button>
+                                <button type="button" class="btn btn-primary modalSubmitBtn modalSubmitAdd"><input type="submit" class="add ph-button" value="Update"></button>
                             </li>
 						</ul>
 					</div>

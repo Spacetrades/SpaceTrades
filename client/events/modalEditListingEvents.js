@@ -1,28 +1,30 @@
-if (Meteor.isClient){
+if (Meteor.isClient) {
 
   Template.EditListing.events({
-    'click .submit': function () {
+    'click .add': function() {
 
       var options = {
         // User Info
-        listing_title: $(".listtitle").val(),
+        id: id,
+        listing_title: $(".edittitle").val(),
         // Category
-        category: $(".listcategory option:selected").val(),
-        type: $(".listtype option:selected").val(),
-        brand: $(".listbrand").val(),
-        quantity: $(".listquantity option:selected").val(),
+        brand: $(".editbrand option:selected").val(),
+        quantity: $(".editquantity option:selected").val(),
         // Payment
-        price: $(".listprice").val(),
+        price: $(".editprice").val(),
         payment: $("input[name='addListingPayment']:checked").val(),
         trade: $("input[name='offerTime']:checked").val(),
-        size: $(".listsize option:selected").val() || $(".listcapacity option:selected").val(),
+        size: $(".editsize option:selected").val() || $(".listcapacity option:selected").val(),
         // Information
         condition: $(".condition option:selected").val(),
-        description: $(".listdescription").val()
+        description: $(".editdescription").val()
 
       }
+      console.log(options);
 
+      sAlert.success("Listing updated");
 
+      Meteor.call('updateListing', options);
 
     }
   });
