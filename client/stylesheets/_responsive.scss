@@ -55,7 +55,7 @@
         margin-right: 2rem !important;
     }
 
-    input[type="radio"] + label {
+    .profileUserFeedbackViewStars input[type="radio"] + label {
         font-size: 12px;
     }
 
@@ -73,6 +73,10 @@
 @media (max-width: 1025px) {
     .profileUser {
        width: 90% !important;
+    }
+
+    .profileDesc {
+        width: 85% !important;
     }
 }
 
@@ -216,6 +220,13 @@
         height: 28px !important;
     }
 
+    .profileUser {
+        margin-bottom: -1rem !important;
+    }
+
+    .profileDesc p {
+        font-size: 0.9rem !important;
+    }
 }
 
 @media (max-width: 880px) {
@@ -296,7 +307,7 @@
 }
 
 @media (max-width: 805px) {
-    .full {
+    .profileUserFeedbackViewStars fieldset label[class="full"] {
         width: 18px !important;
     }
 }
@@ -354,6 +365,18 @@
 
     .desc-box p {
         padding: 5px 10px 7px 10px !important;
+    }
+
+    .profileUserFeedbackView {
+        margin: 2rem auto !important;
+    }
+
+    .profileDesc p {
+        font-size: 0.85rem !important;
+    }
+
+    .profileUserMore li a i {
+        font-size: 3rem !important;
     }
 }
 
@@ -449,6 +472,19 @@
 
     .profileUserCardsUl li {
         width: 22%;
+    }
+
+    .profileDesc p {
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .profileDesc, .profileUserButtonUl {
+        margin-top: 10px !important;
+    }
+
+    .profileUser {
+        margin-top: 2rem !important;
     }
 
 }
@@ -572,7 +608,7 @@
         font-size: 0.9rem !important;
     }
 
-    input[type="radio"] + label {
+    .profileUserFeedbackViewStars input[type="radio"] + label {
         font-size: 11px;
     }
 
@@ -607,6 +643,35 @@
         font-size: 0.85rem !important;
     }
 
+    .profileUserFeedbackViewResponse li p {
+        font-size: 0.8rem !important;
+    }
+
+    .profileUserFeedbackViewResponse li b {
+        font-size: 0.9rem !important;
+    }
+
+    .profileUserFeedbackViewResponse li i {
+        font-size: 0.7rem !important;
+    } 
+
+    .profileUser {
+        margin-bottom: -2rem !important;
+    }
+
+    .profileStars fieldset {
+        margin-bottom: 0 !important;
+    }
+
+    .profileUserAmount ul {
+        margin: 5px 0 !important;
+        margin-top: 5px !important;
+    }
+
+    .profileUserInfo ul {
+        margin-top: 0 !important;
+    }
+
 }
 
 @media (max-width: 589px) {
@@ -619,7 +684,7 @@
     }
 
     .profileDesc {
-        width: 100%;
+        width: 100% !important;
     }
 
     .profileUserRating ul li i {
@@ -688,10 +753,10 @@
 }
 
 @media (max-width: 551px) {
-    input[type="radio"] + label {
+    .profileUserFeedbackViewStars input[type="radio"] + label {
         font-size: 10px !important;
     }
-    .full {
+    .profileUserFeedbackViewStars fieldset label[class="full"] {
         width: 16px !important;
     }
 }
@@ -699,6 +764,39 @@
 @media (max-width: 530px) {
     .profileUserLeft {
         margin-left: 2% !important;
+    }
+}
+
+
+@media (max-width: 528px) {
+    .profileUserFeedbackViewCriteria > li {
+        margin: 8px 0 !important;
+        display: block !important;
+    }
+
+    .profileUserFeedbackViewStars fieldset label[class="full"] {
+        width: 24px !important;
+    }
+
+    .profileUserFeedbackViewStars input[type="radio"]+label {
+        font-size: 14px !important;
+    }
+
+    .profileUserFeedbackViewCriteria {
+        width: 267px !important;
+        text-align: left !important;
+    }
+
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-left: 5px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaTwo li[class="profileUserFeedbackViewStars"] {
+        margin-left: 16px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaFour li[class="profileUserFeedbackViewStars"] {
+        margin-left: 27px !important;
     }
 }
 
@@ -791,6 +889,14 @@
         width: 150px !important;
     }
 
+    .profileUserCardsUl li:nth-child(3), .profileUserCardsUl li:nth-child(4) {
+        display: none !important;
+    }
+
+    .profileUserMore li a i {
+        font-size: 2.5rem !important;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -810,12 +916,19 @@
         font-size: 0.75rem !important;
     }
 
-    .full {
+    .profileStars fieldset label[class="full"] {
         width: 20px !important;
+    }
+
+    .profileStars input[type="radio"] + label {
+        font-size: 12px !important;
     }
 
     .profileUserRating ul li span {
         margin-left: 10px !important;
+    }
+    .profileUserName h1 {
+        font-size: 1.7rem !important;
     }
 }
 
@@ -864,6 +977,43 @@
     }
 }
 
+@media (max-width: 415px) {
+    .profileUserAmount, .profileDesc, .profileUserButtons {
+        display: none !important;
+    }
+
+    .hiddenProfileUserRight, .hiddenProfileUserAmount, .hiddenProfileDesc, .hiddenProfileUserButtons {
+        display: block !important;
+    }
+
+    .hiddenProfileUserRight {
+        width: 85% !important;
+        margin: auto !important;
+    }
+
+    .hiddenProfileDesc {
+        width: 100% !important;
+    }
+
+    .hiddenProfileUserButtons {
+        float: right !important;
+    }
+
+    .profileUserName h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .profileUser {
+        margin-bottom: 4rem !important;
+    }
+}
+
+@media (max-width: 403px) {
+    .profileUserRating ul li span {
+        margin-left: 5px !important;
+    }
+}
+
 @media (max-width: 400px) {
     .helpAboutUl > li:nth-child(1), .helpAboutUl > li:nth-child(3), .helpAboutUl > li:nth-child(4), .helpAboutUl > li:nth-child(5) {
         width: 90%;
@@ -898,6 +1048,14 @@
         font-size: 0.75rem !important;
     }
 
+    .profileUserFeedbackView {
+        margin: 0rem auto !important;
+    }
+
+    .profileUserFeedbackViewResponse li b {
+        font-size: 0.88rem !important;
+    }
+
 }
 
 @media (max-width: 395px) {
@@ -914,12 +1072,16 @@
         width: 80% !important;
     }
 
-    .full {
+    .profileStars fieldset label[class="full"] {
         width: 18px !important;
     }
 
     .profileUserRating ul li i {
         font-size: 0.8rem !important;
+    }
+
+    .hiddenProfileUserRight {
+        width: 88% !important;
     }
 }
 
@@ -979,6 +1141,10 @@
 
     .managerOfferView {
         margin-top: 15px !important;
+    }
+
+    .profileUserName h1 {
+        font-size: 1.4rem !important;
     }
 }
 
@@ -1065,6 +1231,12 @@
 
 }
 
+@media (max-width: 342px) {
+    .profileUserName h1 {
+        font-size: 1.5rem !important;
+    }
+}
+
 @media (max-width: 340px) {
     .footerCopy {
         width: 160px;
@@ -1095,6 +1267,10 @@
     .homeCardLi {
         width: 110px;
     }
+
+    .profileUserRatingUl li:nth-child(2) {
+        display: none !important;
+    }
 }
 
 @media (max-width: 319px) {
@@ -1111,9 +1287,9 @@
 }
 
 @media (max-width: 306px) {
-    .profileUserRatingUl li:nth-child(2) {
-        display: none !important;
-    }
+    // .profileUserRatingUl li:nth-child(2) {
+    //     display: none !important;
+    // }
 
 }
 

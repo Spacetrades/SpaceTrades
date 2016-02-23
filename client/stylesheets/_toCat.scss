@@ -3763,8 +3763,7 @@ On click the images will be displayed at normal size to complete the effect
 
 
 .profileUser {
-    border-bottom: 1px solid #00bfff;
-    padding-bottom: 2rem;
+
 }
 
 .profileUser > div {
@@ -4067,6 +4066,7 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserCards {
     text-align: center;
     border-bottom: 1px solid #00bfff;
+    border-top: 1px solid #00bfff;
 }
 
 .profileUserCards h2 {
@@ -4093,7 +4093,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserMore {
-    margin: 2rem 0 4rem 0;
+    margin: 0 0 1rem 0 !important;
     text-align: center !important;
 }
 
@@ -5986,11 +5986,73 @@ textarea {
     color: #fff !important;
 }
 
+.hiddenProfileUserRight {
+    display: none !important;
+}
 
+.modEditListingDiv h2 {
+    font-weight: 400 !important;
+    font-size: 2rem !important;
+}
 
+.modEditListingDiv>ul>li {
+    font-size: 1.1rem !important;
+}
 
+.edittitle, .editprice {
+    margin-left: 5px !important;
+    padding: 5px 10px !important;
+    border-radius: 3px !important;
+    border: 1px solid #d3d3d3 !important;
+    width: 200px !important;
+    font-size: 0.9rem !important;
+    height: 20px !important;
+}
 
+.editprice {
+    width: 50px !important;
+}
 
+.modEditListingDiv ul li:nth-child(2) {
+    margin-left: 25px !important;
+}
+
+.modEditListingDiv ul li:nth-child(5), .modEditListingDiv ul li:nth-child(8) {
+    margin-left: 35px !important;
+}
+
+.modEditListingDiv li div {
+    margin-top: 5px !important;
+}
+
+.modEditListingDiv ul li:nth-child(4), .modEditListingDiv ul li:nth-child(5) {
+    margin-top: 30px !important;
+}
+
+.modEditListingDiv {
+    width: 970px !important;
+}
+
+#editListDesc {
+    display: block !important;
+    width: 66% !important;
+    margin-top: 35px !important;
+}
+
+#editListDesc textarea {
+    margin-top: 5px !important;
+    font-size: 0.9rem !important;
+}
+
+#editListUpdate {
+    display: block !important;
+    width: 48.8% !important;
+    float: right;
+}
+
+#editListUpdate input {
+    font-weight: 400 !important;
+}
 
 
 
