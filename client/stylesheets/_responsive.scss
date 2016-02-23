@@ -374,6 +374,10 @@
     .profileDesc p {
         font-size: 0.85rem !important;
     }
+
+    .profileUserMore li a i {
+        font-size: 3rem !important;
+    }
 }
 
 @media (max-width: 781px) {
@@ -477,6 +481,10 @@
 
     .profileDesc, .profileUserButtonUl {
         margin-top: 10px !important;
+    }
+
+    .profileUser {
+        margin-top: 2rem !important;
     }
 
 }
@@ -885,6 +893,10 @@
         display: none !important;
     }
 
+    .profileUserMore li a i {
+        font-size: 2.5rem !important;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -965,7 +977,7 @@
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 415px) {
     .profileUserAmount, .profileDesc, .profileUserButtons {
         display: none !important;
     }
@@ -1066,6 +1078,10 @@
 
     .profileUserRating ul li i {
         font-size: 0.8rem !important;
+    }
+
+    .hiddenProfileUserRight {
+        width: 88% !important;
     }
 }
 
