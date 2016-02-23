@@ -4,6 +4,7 @@ if (Meteor.isClient) {
         'click .offerRequestBtn': function() {
             options = {
                 date: options.date,
+                meetupTime: options.meetupTime.unix(),
                 delayTime: options.delayTime,
                 expireKey: Random.id(10),
                 hourTime: options.hourTime,
@@ -12,6 +13,7 @@ if (Meteor.isClient) {
                 listing_title: $(".listingItemTitle").text(),
                 img: $(".slider img:first").attr("src"),
                 price: $(".itemMoney").text().replace(/\D/g, ''),
+                payment: $("input[name='OfferPayment']:checked").val(),
                 offerprice: $("#mroffer").val(),
                 location: $("#pac-input").val(),
                 listingId: id,
@@ -20,11 +22,12 @@ if (Meteor.isClient) {
                 listing_creator_id: Listing.find({_id: id}).fetch()[0].creator_id,
                 creator_id: Meteor.userId(),
                 creator_name:  Meteor.user().profile.name,
+                seller_name: Listing.find({_id: id}).fetch()[0].username,
                 creator_image:  Meteor.user().profile.picturesm,
                 // By Default
                 status: "Pending",
                 // Notification flags
-                action: "Received an Offer"
+                action: "sent you an offer"
             }
 
             options.destination = [ options.listing_creator_id ];

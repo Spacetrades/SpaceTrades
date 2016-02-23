@@ -16,6 +16,9 @@ if (Meteor.isClient) {
       }, 500)
 
     },
+    'click .modOfferRequestTrigger': function(){
+      Session.set('scope', this);
+    },
     'click .profileBtn': function() {
       Session.set('recipientId', this.creator_id);
     },
@@ -34,18 +37,6 @@ if (Meteor.isClient) {
       Session.set('listingSelected', this);
     },
     'click .deleteButton': function() {
-      // var query = Listing.find({
-      //   _id: id
-      // }).fetch()[0];
-      // var options = query;
-      // Meteor.call('removeListing', options);
-      // sweetAlert({
-      //   title: "Listing Removed",
-      //   type: "success",
-      //   timer: 3000,
-      //   showConfirmButton: false
-      // });
-      // Router.go("/");
     },
     'click .itemSave': function() {
       var optionsA = Listing.find({

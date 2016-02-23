@@ -46,10 +46,10 @@ if (Meteor.isClient) {
     // GLOBAL: set options
     options = {};
 
-    $(".paymentRadio li input[type='radio']").change(function(event) {
-      var valPayment = $(this).val();
-      options.payment = valPayment;
-    });
+    // $(".paymentRadio li input[type='radio']").change(function(event) {
+    //   var valPayment = $(this).val();
+    //   options.payment = valPayment;
+    // });
 
     // Set time period
     $(".timeRadio li input[type='radio']").change(function() {
