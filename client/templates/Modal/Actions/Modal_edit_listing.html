@@ -8,7 +8,7 @@
 					<div class="modEditListingDiv">
 						<h2>Edit Listing</h2>
 						<ul>
-							<li>Title <input type="text" class="modAddListingTitleInput listtitle edittitle" id="listtitlebox" placeholder="{{listing_title}}" maxlength="50"></li>
+							<li>Listing Title <input type="text" class="modAddListingTitleInput listtitle edittitle" id="listtitlebox" placeholder="{{listing_title}}" maxlength="50"></li>
 							<li>Price <input type="text" class="listprice editprice" placeholder="{{price}}" maxlength="5"></li>
                             <br>
 
@@ -82,10 +82,10 @@
                             </li> -->
                             <br>
                             <br>
-                            <div class="modOfferRequestPageOne">
+                            <div class="modOfferRequestPageOne editListTrade editListRadio">
                                 <ul class="modOfferRequestPageOneUl">     
                                     <li class="radioWrap timeRadio">
-                                        <h2>Trade Offers</h2>
+                                        <h2>Allow Trade Offers</h2>
                                         <ul>
                                             <li class="modOfferRequestPaymentCash">
                                                 <input type="radio" id="modEditTradeYesRadio" name="offerTime" value="true" class="radioWrapElement"/>
@@ -99,7 +99,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="modOfferRequestPageOne">
+                            <div class="modOfferRequestPageOne editListRadio">
                                 <ul class="modOfferRequestPageOneUl">     
                                     <li class="radioWrap paymentRadio">
                                         <h2>Payment Method</h2>
@@ -121,10 +121,10 @@
                                 </ul>
                             </div>
                             <br>
-                            <li>Description
+                            <li id="editListDesc">Description
                         		<textarea class="listdescription editdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
                             </li>
-                            <li>
+                            <li id="editListUpdate">
                                 <button type="button" class="btn btn-primary modalSubmitBtn modalSubmitAdd"><input type="submit" class="add ph-button" value="Update"></button>
                             </li>
 						</ul>
