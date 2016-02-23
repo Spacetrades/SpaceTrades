@@ -74,6 +74,10 @@
     .profileUser {
        width: 90% !important;
     }
+
+    .profileDesc {
+        width: 85% !important;
+    }
 }
 
 
@@ -622,11 +626,6 @@
     .profileUserFeedbackViewResponse li i {
         font-size: 0.7rem !important;
     } 
-
-    .profileUserFeedbackViewResponse {
-        margin: 15px auto 25px auto !important;
-    }
-
 }
 
 @media (max-width: 589px) {

@@ -3763,7 +3763,6 @@ On click the images will be displayed at normal size to complete the effect
 
 
 .profileUser {
-    border-bottom: 1px solid #00bfff;
     padding-bottom: 2rem;
 }
 
@@ -4067,6 +4066,8 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserCards {
     text-align: center;
     border-bottom: 1px solid #00bfff;
+    border-top: 1px solid #00bfff;
+    padding-top: 2rem !important;
 }
 
 .profileUserCards h2 {
