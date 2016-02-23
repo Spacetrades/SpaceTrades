@@ -122,21 +122,7 @@
             <li class="listingItemUserName"><a href="/profile/{{creator_id}}">{{username}}</a></li>
             <li class="rating">☆☆☆☆☆</li>
             <ul class="listingPayment">
-                {{#if paymentSwitch }}
-                <li class="listingPayCash">Cashflash<i class="fa fa-usd"></i></li>
-                {{/if}}
-                {{#if paymentSwitch.cash }}
-                <li class="listingPayCash">Cash<i class="fa fa-usd"></i></li>
-                {{/if}}
-                {{#if paymentSwitch.cash }}
-                <li class="listingPayCash">Cash<i class="fa fa-usd"></i></li>
-                {{/if}}
-                {{#if paymentSwitch.amazon }}
-                <li class="listingPayPal">Amazon<i class="fa fa-cc-paypal"></i></li>
-                {{/if}}
-                {{#if paymentSwitch.both }}
-                <li class="listingPayPal">GUCKE<i class="fa fa-cc-paypal"></i></li>
-                {{/if}}
+                Payment: {{payment}}
             </ul>
         </ul>
     </div>

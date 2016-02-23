@@ -1,16 +1,9 @@
 <template name="Notification">
 	<div class="notificationBody">
-		<b> You {{action}}</b>
+		{{creator_name}} <b>{{action}}</b>
 		of
 		<span class="money"> ${{offer_price}} </span>
-		from
-		{{creator_name}}
 		for
 		<a href="">{{listing_title}}</a>
 	</div>
-<!-- 	<ul class="notificationBody">
-		<li>{{action}} of {{offer_price}} from {{creator_name}} for {{listing_title}}</li>
-	</ul> -->
-
-	<!-- You received an offer of $240 from Nathan C. for Nike Air Max Retro 99x -->
 </template>
