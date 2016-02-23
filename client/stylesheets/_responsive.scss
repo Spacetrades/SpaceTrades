@@ -623,6 +623,10 @@
         font-size: 0.7rem !important;
     } 
 
+    .profileUserFeedbackViewResponse {
+        margin: 15px auto 25px auto !important;
+    }
+
 }
 
 @media (max-width: 589px) {
@@ -945,6 +949,14 @@
 
     .profileDesc p {
         font-size: 0.75rem !important;
+    }
+
+    .profileUserFeedbackView {
+        margin: 0rem auto !important;
+    }
+
+    .profileUserFeedbackViewResponse li b {
+        font-size: 0.88rem !important;
     }
 
 }
