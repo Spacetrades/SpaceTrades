@@ -15,7 +15,11 @@ if (Meteor.isClient) {
 					zoom: 10
 				};
 			}
-		}
+		},
+    payment: function(payment){
+      var status = payment == Session.get("scope").payment;
+      return status
+    }
 	});
 
 }

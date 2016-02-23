@@ -1,8 +1,8 @@
 <template name="ModalSentOffer"> 
 	<!-- Modal -->
+<form class="modSentOffer modal" id="sentOfferModal">
 	{{#with listingOffers}}
-	<div class="modSentOffer modal" id="sentOfferModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modSentOfferDialog modal-dialog" role="document">
+	  <div class="modSentOfferDialog modal-dialog">
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
@@ -16,12 +16,12 @@
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
-		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{creator_id}}">{{creator}}</a></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{listing_creator_id}}">{{seller_name}}</a></li>
 		                    <li class="profileReceivedPrice">
 		                    	<b>Offered Amount: </b> <span class="money">${{offerprice}}</span>
 		                    	<span class="profileReceivedPriceOriginal">(Originally <span class="money">${{price}})</span></span>
 		                    </li>
-		                    <li class="profileReceivedPayment"><b>Payment: </b> Paypal</li>
+		                    <li class="profileReceivedPayment"><b>Payment: </b> {{payment}}</li>
 		                    <li class="profileReceivedDate"><b>Date of Meetup: </b>{{dateFormatted}}</li>
 		                    <li class="profileReceivedLocation"><b>Location: </b>{{location}}</li>
 		                    {{#if offerStatus }}
@@ -39,6 +39,6 @@
 	      </div>
 	    </div> 
 	  </div>
-	</div>
 	{{/with}} 
+	</form>
 </template>

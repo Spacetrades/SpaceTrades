@@ -76,7 +76,6 @@ if (Meteor.isClient) {
           if (!err) {
             console.log(result);
             options.color = result;
-            debugger;
           }
 
           return result

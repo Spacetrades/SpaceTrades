@@ -10,29 +10,25 @@ Template.ModalReceivedAccept.events({
         showConfirmButton: false
       });
 
-
       var offerBlock = Session.get('offerSelected');
 
       options = {
-        action: "Offer Accepted",
+        action: "has accepted your offer",
         listing_title: offerBlock.listing_title,
         offer_price: offerBlock.offerprice,
         creator_id: offerBlock.creator_id,
+        creator_name: Meteor.user().name,
         time: offerBlock.date,
         offer_id: offerBlock._id,
         listingId: offerBlock.listingId,
-        destination: [offerBlock.creator_id, Meteor.userId()],
+        listing_creator_id: offerBlock.listing_creator_id,
+        destination: [offerBlock.creator_id],
         seller_id: Meteor.userId(),
         buyer_id:offerBlock.creator_id
       }
 
       Meteor.call('acceptOffer', options);
       Meteor.call('pulseNotify', options);
-
-      //   var userA = Listing.find({
-      //   _id: this.listingId
-      // }).fetch()[0].creator_id;
-
 
       // Time Value Scheduling
       // IF Morning 2pm, Afternoon: 7pm, Night 12am
@@ -41,7 +37,7 @@ Template.ModalReceivedAccept.events({
 
        // Reminder time = - 31 hours hours
 
-       var reminderTime = 1.116 * math.pow(10,8);
+       var reminderTime = 1.116 * Math.pow(10,8);
        reminderTime = delayTime - subtractTime;
 
    reminderOptions = {
@@ -91,11 +87,21 @@ Template.ModalReceivedAccept.events({
         showConfirmButton: false
       });
 
-      var id = Session.get('offerSelected')._id;
-      var listing = Session.get('offerSelected').listingId;
-      var options = {
-        id: id,
-        listingId: listing
+      var offerBlock = Session.get('offerSelected');
+
+      options = {
+        action: "has declined your offer",
+        listing_title: offerBlock.listing_title,
+        offerprice: offerBlock.offerprice,
+        creator_id: offerBlock.creator_id,
+        creator_name: Meteor.user().name,
+        time: offerBlock.date,
+        offer_id: offerBlock._id,
+        listingId: offerBlock.listingId,
+        listing_creator_id: offerBlock.listing_creator_id,
+        destination: [offerBlock.creator_id],
+        seller_id: Meteor.userId(),
+        buyer_id:offerBlock.creator_id
       }
 
       Meteor.call('declineOffer', options);

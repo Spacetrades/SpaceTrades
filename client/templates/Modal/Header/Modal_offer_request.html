@@ -11,8 +11,22 @@
                         </li>     
                         <li class="radioWrap paymentRadio">
                             <h2>How Would You Like To Pay?</h2>
-                            <ul>
+                                   <ul>
+                            {{#if payment "Cash"}}
                                 <li class="modOfferRequestPaymentCash">
+                                    <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="radioWrapElement"/>
+                                    <label for="modOfferRequestPaymentCashRadio">Cash</label>
+                                </li>
+                                {{/if}}
+                                {{#if payment "Paypal"}}
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="OfferPayment" value="Paypal" class="radioWrapElement"/>
+                                    <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
+                                </li>
+                                {{/if}}
+
+                                   {{#if payment "Both"}}
+                                  <li class="modOfferRequestPaymentCash">
                                     <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="radioWrapElement"/>
                                     <label for="modOfferRequestPaymentCashRadio">Cash</label>
                                 </li>
@@ -20,6 +34,8 @@
                                     <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="OfferPayment" value="Paypal" class="radioWrapElement"/>
                                     <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
                                 </li>
+                                {{/if}}
+
                             </ul>
                         </li>
                     </ul>

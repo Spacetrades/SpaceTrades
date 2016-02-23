@@ -325,6 +325,7 @@ if (Meteor.isServer) {
         lng: options.lng,
         creator_id: options.creator_id,
         creator_name: options.creator_name,
+        seller_name: options.seller_name,
         creator_image: options.creator_image,
         listing_creator_id: options.listing_creator_id,
         payment: options.payment,
@@ -402,6 +403,10 @@ if (Meteor.isServer) {
         $set: {
           status: "Accepted",
           offerAccepted: options.offer_id,
+          offer_creator: options.offer_creator,
+          offerprice: options.offerprice,
+          date: options.date,
+          location:options.location,
           timePeriod: options.time
         }
       });
