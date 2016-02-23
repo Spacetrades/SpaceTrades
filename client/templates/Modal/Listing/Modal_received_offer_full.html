@@ -7,7 +7,7 @@
 					<div class="profileReceivedOffers">
 						<ul id="profileReceivedModalUl" class="profileReceivedUl">
 							<li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-								<p class="homeCardOfferRecieved profileSentOfferStatus">{{dateCreated}}</p>
+								<p class="homeCardOfferRecieved profileSentOfferStatus">{{timeSinceCreation}}</p>
 								<ul class="profileReceivedCardLeft">
 									<li class="profileReceivedImage">
 										<a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
@@ -18,7 +18,7 @@
 									<li id="profileReceivedName" class="profileReceivedName">You received an offer from <a href="/profile/{{creator_id}}">{{creator_name}}</a></li>
 									<li class="profileReceivedPrice"><b>Offered Price: </b> <span class="money">${{offerprice}}</span></li>
 									<li class="profileReceivedPayment"><b>Payment: </b>{{payment}}</li>
-									<li class="profileReceivedDate"><b>Date of Meetup: </b>{{date}}</li>
+									<li class="profileReceivedDate"><b>Date of Meetup: </b>{{dateFormatted}}</li>
 									<li class="profileReceivedLocation"><b>Location: </b>{{location}}</li>
 									<li id="profileReceivedButtons">
 										<ul id="profileReceivedButtonsUl">
