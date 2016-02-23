@@ -355,6 +355,10 @@
     .desc-box p {
         padding: 5px 10px 7px 10px !important;
     }
+
+    .profileUserFeedbackView {
+        margin: 2rem auto !important;
+    }
 }
 
 @media (max-width: 781px) {
@@ -607,6 +611,18 @@
         font-size: 0.85rem !important;
     }
 
+    .profileUserFeedbackViewResponse li p {
+        font-size: 0.8rem !important;
+    }
+
+    .profileUserFeedbackViewResponse li b {
+        font-size: 0.9rem !important;
+    }
+
+    .profileUserFeedbackViewResponse li i {
+        font-size: 0.7rem !important;
+    } 
+
 }
 
 @media (max-width: 589px) {
@@ -705,7 +721,33 @@
 
 @media (max-width: 528px) {
     .profileUserFeedbackViewCriteria > li {
-        margin: 5px 0 !important;
+        margin: 8px 0 !important;
+        display: block !important;
+    }
+
+    .profileUserFeedbackViewStars fieldset label[class="full"] {
+        width: 24px !important;
+    }
+
+    .profileUserFeedbackViewStars input[type="radio"]+label {
+        font-size: 14px !important;
+    }
+
+    .profileUserFeedbackViewCriteria {
+        width: 267px !important;
+        text-align: left !important;
+    }
+
+    .profileUserFeedbackViewCriteriaOne li[class="profileUserFeedbackViewStars"] {
+        margin-left: 5px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaTwo li[class="profileUserFeedbackViewStars"] {
+        margin-left: 16px !important;
+    }
+
+    .profileUserFeedbackViewCriteriaFour li[class="profileUserFeedbackViewStars"] {
+        margin-left: 27px !important;
     }
 }
 
@@ -817,7 +859,7 @@
         font-size: 0.75rem !important;
     }
 
-    .profileStars fieldset label[class="full"] { {
+    .profileStars fieldset label[class="full"] {
         width: 20px !important;
     }
 
@@ -921,7 +963,7 @@
         width: 80% !important;
     }
 
-    .profileStars fieldset label[class="full"] { {
+    .profileStars fieldset label[class="full"] {
         width: 18px !important;
     }
 
