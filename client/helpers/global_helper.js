@@ -19,6 +19,12 @@ if (Meteor.isClient) {
     return Router.current().path;
   });
 
+  Template.registerHelper('timestamp', function(){
+  var time = this.createdAt;
+  var now = moment();
+  return now.diff(time);
+  });
+
   Template.registerHelper('nameLookup', function (idParam){
     var param = idParam.hash.idParam;
     return Meteor.users.find({_id: param}).fetch()[0].profile.name;

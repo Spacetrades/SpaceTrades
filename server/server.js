@@ -357,6 +357,7 @@ if (Meteor.isServer) {
      */
     pulseNotify: function(options) {
       Notification.insert({
+        createdAt: new Date(),
         action: options.action,
         listing_title: options.listing_title,
         offer_price: options.offerprice,
