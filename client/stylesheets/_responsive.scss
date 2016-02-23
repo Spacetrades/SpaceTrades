@@ -296,7 +296,7 @@
 }
 
 @media (max-width: 805px) {
-    .full {
+    .profileUserFeedbackViewStars fieldset label[class="full"] {
         width: 18px !important;
     }
 }
@@ -691,7 +691,7 @@
     input[type="radio"] + label {
         font-size: 10px !important;
     }
-    .full {
+    .profileUserFeedbackViewStars fieldset label[class="full"] {
         width: 16px !important;
     }
 }
@@ -703,7 +703,7 @@
 }
 
 
-@media (max-width: 530px) {
+@media (max-width: 528px) {
     .profileUserFeedbackViewCriteria > li {
         margin: 5px 0 !important;
     }
@@ -817,7 +817,7 @@
         font-size: 0.75rem !important;
     }
 
-    .full {
+    .profileStars fieldset label[class="full"] { {
         width: 20px !important;
     }
 
@@ -921,7 +921,7 @@
         width: 80% !important;
     }
 
-    .full {
+    .profileStars fieldset label[class="full"] { {
         width: 18px !important;
     }
 
