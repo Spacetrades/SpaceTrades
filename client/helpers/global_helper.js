@@ -27,7 +27,7 @@ if (Meteor.isClient) {
   diff = diff / 60 / 1000;
   diff = Math.round(diff);
 
-  var min = diff + " minutes ago"
+  var min = diff-4 + " minutes ago"
 
   return min
   });

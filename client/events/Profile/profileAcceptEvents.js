@@ -29,9 +29,9 @@ if (Meteor.isClient) {
 
 
         reminderOptions = {
-          action: "Reminder:, you have a meetup scheduled in ",
+          action: "Reminder: you have a meetup scheduled for tommorow",
           listing_title: offerBlock.listing_title,
-          offer_price: offerBlock.offerprice,
+          offerprice: offerBlock.offerprice,
           creator_id: offerBlock.creator_id,
           time: offerBlock.date,
           offer_id: offerBlock._id,
@@ -63,7 +63,7 @@ if (Meteor.isClient) {
         offer_creator: offerBlock.creator_id,
         offerprice: offerBlock.offerprice,
         creator_id: offerBlock.creator_id,
-        creator_name: Meteor.user().name,
+        creator_name: Meteor.user().profile.name,
         time: offerBlock.date,
         offer_id: offerBlock._id,
         listingId: offerBlock.listingId,
@@ -117,7 +117,7 @@ if (Meteor.isClient) {
         offer_creator_name: offerBlock.creator_name,
         offerprice: offerBlock.offerprice,
         creator_id: offerBlock.creator_id,
-        creator_name: Meteor.user().name,
+        creator_name: Meteor.user().profile.name,
         time: offerBlock.date,
         offer_id: offerBlock._id,
         listingId: offerBlock.listingId,

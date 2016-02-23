@@ -50,7 +50,7 @@
             </div>
             <div class="profileUserInfo">
                 <ul class="profileUserArea">
-                    <li>{{locationFull}}</li>
+                    <li>{{locationString}}</li>
                     <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                 </ul>
             </div>
@@ -68,15 +68,18 @@
             </div>
             <div class="profileUserButtons">
                 <ul class="profileUserButtonUl">
-                    <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+                 {{#if isOwner}}
+                 <!-- Nothing -->
+                 {{else}}
+                 <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+                 {{/if}}
                     <li class="optionsProClick click-nav">
                         <ul class="no-js">
                             <li>
                                 <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
                                 <ul class="optionsItems">
-                                    <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
                                     {{#if isOwner}}
-                                    <!-- Nothing -->
+                                     <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
                                     {{else}}
                                     <li>
                                         <button type="button" class="modReportTrigger btn btn-primary btn-lg" >
