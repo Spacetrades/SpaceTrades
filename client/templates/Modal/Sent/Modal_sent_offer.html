@@ -16,15 +16,15 @@
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
-		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer To <a href="/profile/{{listing_creator_id}}">{{seller_name}}</a></li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You sent an Offer to <a href="/profile/{{listing_creator_id}}">{{seller_name}}</a></li>
 		                    <li class="profileReceivedPrice">
 		                    	<b>Offered Amount: </b> <span class="money">${{offerprice}}</span>
-		                    	<span class="profileReceivedPriceOriginal">(Originally <span class="money">${{price}})</span></span>
+		                    	<span class="profileReceivedPriceOriginal">(Originally: <span class="money">${{price}}</span>)</span>
 		                    </li>
 		                    <li class="profileReceivedPayment"><b>Payment: </b> {{payment}}</li>
 		                    <li class="profileReceivedDate"><b>Date of Meetup: </b>{{dateFormatted}}</li>
 		                    <li class="profileReceivedLocation"><b>Location: </b>{{location}}</li>
-		                    {{#if offerStatus }}
+		                    {{#if offerStatus}}
 		                    <li id="profileReceivedCancel"><a href="#" data-dismiss="modal">Cancel Offer</a></li>
 		                    {{else}}
 		                    <li id="profileReceivedCancel"><a href="#">Go to Meetup</a></li>

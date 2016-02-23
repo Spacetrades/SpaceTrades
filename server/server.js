@@ -10,8 +10,8 @@ if (Meteor.isServer) {
   // Accounts.config({'sendVerificationEmail': true});
 
   // Kadira
-  // Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
-  // prerenderio.set('prerenderToken', '4jWuCKjUUuJRuJYWDnWB');
+  Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
+  prerenderio.set('prerenderToken', '4jWuCKjUUuJRuJYWDnWB');
 
   SearchSource.defineSource('listing', function(searchText, options) {
     var options = {
@@ -405,6 +405,7 @@ if (Meteor.isServer) {
           status: "Accepted",
           offerAccepted: options.offer_id,
           offer_creator: options.offer_creator,
+          offer_creator_name: options.offer_creator_name,
           offerprice: options.offerprice,
           date: options.date,
           location:options.location,

@@ -10,7 +10,7 @@ if (Meteor.isClient){
       }
 try {
 
-var selected = Session.get("listingSelected").category || this.data.category;
+var selected = Session.get("listingSelected").category || Session.get("scope").category;
 console.log(selected);
 
       _.each(brands[selected], function(val){
