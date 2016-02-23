@@ -314,12 +314,12 @@ if (Meteor.isServer) {
       Offer.insert({
         createdAt: new Date(),
         listing_title: options.listing_title,
+        meetupTime: options.meetupTime,
         img: options.img,
         price: options.price,
         offerprice: options.offerprice,
         date: options.date,
         location: options.location,
-        delayTime: options.delayTime,
         listingId: options.listingId,
         lat: options.lat,
         lng: options.lng,

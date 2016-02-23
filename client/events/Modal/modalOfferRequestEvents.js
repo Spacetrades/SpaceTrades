@@ -4,6 +4,7 @@ if (Meteor.isClient) {
         'click .offerRequestBtn': function() {
             options = {
                 date: options.date,
+                meetupTime: options.meetupTime.unix(),
                 delayTime: options.delayTime,
                 expireKey: Random.id(10),
                 hourTime: options.hourTime,
