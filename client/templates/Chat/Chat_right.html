@@ -23,17 +23,45 @@
 				<span class="timestamp">{{createdAt}}</span>
 			</ul>
 			{{/each}}
-			
-			</li>
-			<li class="chatBottomSection">
-				<ul class="chatInputText">
-					<li><input type="text" class="chatText"></li>
-				</ul>
-				<ul class="chatSend">
-					<!-- TASK - ADD attachments PL -->
-					<!-- <li><i class=" fa fa-paperclip"></i></li> -->
-					<input type="submit" class="contactButton chatSendButton" value="Send">
-				</ul>
-			</li>
-		</ul>
-	</template>
+		</li>
+		<li class="chatBottomSection">
+			<ul class="chatInputText">
+				<li><input type="text" class="chatText"></li>
+			</ul>
+			<ul class="chatSend">
+				<!-- TASK - ADD attachments PL -->
+				<!-- <li><i class=" fa fa-paperclip"></i></li> -->
+				<input type="submit" class="chatSendButton" value="Send">
+			</ul>
+		</li>
+	</ul>
+</template>
+
+<!-- ORIGINAL CHAT RIGHT -->
+<!-- <template name="chatRight">
+	<ul class="chatRight">
+		<li class="chatTopSection">
+			<ul>
+			<li><h3><a href="">{{conversation}}</a></h3></li>
+			</ul>
+		</li>
+		<li class="chatMessages">
+			<div class="circle" style="background-color: {{online.color}}"></div>
+			{{#each messages}}
+			<ul class="chatUserSent">
+				<li>{{message}}</li>
+				<li><a href=""><img src="{{pictureLookup idParam=sender}}"></a></li>
+				<span class="timestamp">{{createdAt}}</span>
+			</ul>
+			{{/each}}
+		</li>
+		<li class="chatBottomSection">
+			<ul class="chatInputText">
+				<li><input type="text" class="chatText"></li>
+			</ul>
+			<ul class="chatSend">
+				<input type="submit" class="chatSendButton" value="Send">
+			</ul>
+		</li>
+	</ul>
+</template> -->
