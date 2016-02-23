@@ -405,6 +405,7 @@ if (Meteor.isServer) {
           status: "Accepted",
           offerAccepted: options.offer_id,
           offer_creator: options.offer_creator,
+          offer_creator_name: options.offer_creator_name,
           offerprice: options.offerprice,
           date: options.date,
           location:options.location,

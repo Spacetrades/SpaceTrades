@@ -8,6 +8,9 @@ if (Meteor.isClient) {
       GoogleMaps.ready();
       console.log("click");
     },
+    'click .notificationBody': function(){
+
+    },
 		'click .headerNavSearchButton': function(e) {
 			navSearch();
 		},

@@ -22,7 +22,18 @@ if (Meteor.isClient) {
   Template.registerHelper('timestamp', function(){
   var time = this.createdAt;
   var now = moment();
-  return now.diff(time);
+
+  var diff = now.diff(time);
+  diff = diff / 60 / 1000;
+  diff = Math.round(diff);
+
+  var min = diff + " minutes ago"
+
+  return min
+  });
+
+  Template.registerHelper('timeLeft', function(){
+
   });
 
   Template.registerHelper('nameLookup', function (idParam){

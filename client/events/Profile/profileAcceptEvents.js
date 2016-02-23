@@ -18,14 +18,18 @@ if (Meteor.isClient) {
         }
 
         Meteor.call('pulseNotify', feedbackOptions);
+        Meteor.call('transferListing', feedbackOptions);
 
       }
       ////////////////////////////////////////////////////////////////////
 
       function sendReminder() {
 
+            var offerBlock = Session.get('offerSelected');
+
+
         reminderOptions = {
-          action: "Offer Accepted",
+          action: "Reminder:, you have a meetup scheduled in ",
           listing_title: offerBlock.listing_title,
           offer_price: offerBlock.offerprice,
           creator_id: offerBlock.creator_id,
@@ -110,6 +114,7 @@ if (Meteor.isClient) {
         date: offerBlock.date,
         location: offerBlock.location,
         offer_creator: offerBlock.creator_id,
+        offer_creator_name: offerBlock.creator_name,
         offerprice: offerBlock.offerprice,
         creator_id: offerBlock.creator_id,
         creator_name: Meteor.user().name,
