@@ -9,14 +9,6 @@
                 <div class="spin"> {{> spinner}} </div>
                 <img src="{{profile.picturelrg}}" class="profileUserImg">
             </div>
-            <div class="profileUserName profileUserNameHidden">
-                <ul>
-                    <li><h1>{{name}}</h1></li>
-                    <li>
-                        <div class="circle" style="background-color: {{online.color}}"></div>
-                    </li>
-                </ul>
-            </div>
             <!-- <div class="profileUserGraph">
                 <label for="myChart"><b>Meetup Graph</b>
                 <br>
@@ -98,25 +90,54 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="profileUserGraph profileUserGraphHidden">
-                <label for="myChart"><b>Meetup Graph</b>
-                <br>
-                <span class="profileMonth"> {{month}} </span>
-                <br>
-                    <canvas id="myChart"></canvas>
-                </label>
-            </div> -->
+        </div>
+        <!-- This is hidden until a certain point and than it shown and the original one is hidden-->
+        <div class="hiddenProfileUserRight">
+            <div class="profileUserAmount hiddenProfileUserAmount">
+                <ul>
+                    <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
+                    </li>
+                    <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="desc-box profileDesc hiddenProfileDesc">
+                <h4 class="box-title">Description</h4>
+                <p>{{about}}</p>
+            </div>
+            <div class="profileUserButtons hiddenProfileUserButtons">
+                <ul class="profileUserButtonUl">
+                    <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+                    <li class="optionsProClick click-nav">
+                        <ul class="no-js">
+                            <li>
+                                <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+                                <ul class="optionsItems">
+                                    <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
+                                    {{#if isOwner}}
+                                    <!-- Nothing -->
+                                    {{else}}
+                                    <li>
+                                        <button type="button" class="modReportTrigger btn btn-primary btn-lg" >
+                                            <i class="fa fa-gavel"></i>Report User
+                                        </button>
+                                    </li>
+                                    {{/if}}
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="profileUserCards oneDiv">
         <ul class="profileUserCardsUl">
-
        {{#each listing}}
             <li>
                 <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
             </li>
         {{/each}}
-            
         </ul>
         <ul class="profileUserMore">
         <!-- This takes you to search  -->

@@ -3763,7 +3763,7 @@ On click the images will be displayed at normal size to complete the effect
 
 
 .profileUser {
-    padding-bottom: 2rem;
+
 }
 
 .profileUser > div {
@@ -5987,8 +5987,9 @@ textarea {
     color: #fff !important;
 }
 
-
-
+.hiddenProfileUserRight {
+    display: none !important;
+}
 
 
 

@@ -55,7 +55,7 @@
         margin-right: 2rem !important;
     }
 
-    input[type="radio"] + label {
+    .profileUserFeedbackViewStars input[type="radio"] + label {
         font-size: 12px;
     }
 
@@ -220,6 +220,13 @@
         height: 28px !important;
     }
 
+    .profileUser {
+        margin-bottom: -1rem !important;
+    }
+
+    .profileDesc p {
+        font-size: 0.9rem !important;
+    }
 }
 
 @media (max-width: 880px) {
@@ -363,6 +370,10 @@
     .profileUserFeedbackView {
         margin: 2rem auto !important;
     }
+
+    .profileDesc p {
+        font-size: 0.85rem !important;
+    }
 }
 
 @media (max-width: 781px) {
@@ -457,6 +468,15 @@
 
     .profileUserCardsUl li {
         width: 22%;
+    }
+
+    .profileDesc p {
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .profileDesc, .profileUserButtonUl {
+        margin-top: 10px !important;
     }
 
 }
@@ -580,7 +600,7 @@
         font-size: 0.9rem !important;
     }
 
-    input[type="radio"] + label {
+    .profileUserFeedbackViewStars input[type="radio"] + label {
         font-size: 11px;
     }
 
@@ -626,6 +646,24 @@
     .profileUserFeedbackViewResponse li i {
         font-size: 0.7rem !important;
     } 
+
+    .profileUser {
+        margin-bottom: -2rem !important;
+    }
+
+    .profileStars fieldset {
+        margin-bottom: 0 !important;
+    }
+
+    .profileUserAmount ul {
+        margin: 5px 0 !important;
+        margin-top: 5px !important;
+    }
+
+    .profileUserInfo ul {
+        margin-top: 0 !important;
+    }
+
 }
 
 @media (max-width: 589px) {
@@ -638,7 +676,7 @@
     }
 
     .profileDesc {
-        width: 100%;
+        width: 100% !important;
     }
 
     .profileUserRating ul li i {
@@ -707,7 +745,7 @@
 }
 
 @media (max-width: 551px) {
-    input[type="radio"] + label {
+    .profileUserFeedbackViewStars input[type="radio"] + label {
         font-size: 10px !important;
     }
     .profileUserFeedbackViewStars fieldset label[class="full"] {
@@ -843,6 +881,10 @@
         width: 150px !important;
     }
 
+    .profileUserCardsUl li:nth-child(3), .profileUserCardsUl li:nth-child(4) {
+        display: none !important;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -866,8 +908,15 @@
         width: 20px !important;
     }
 
+    .profileStars input[type="radio"] + label {
+        font-size: 12px !important;
+    }
+
     .profileUserRating ul li span {
         margin-left: 10px !important;
+    }
+    .profileUserName h1 {
+        font-size: 1.7rem !important;
     }
 }
 
@@ -913,6 +962,43 @@
     .profileSettingsPhoto img {
         width: 70px !important;
         height: 70px !important;
+    }
+}
+
+@media (max-width: 410px) {
+    .profileUserAmount, .profileDesc, .profileUserButtons {
+        display: none !important;
+    }
+
+    .hiddenProfileUserRight, .hiddenProfileUserAmount, .hiddenProfileDesc, .hiddenProfileUserButtons {
+        display: block !important;
+    }
+
+    .hiddenProfileUserRight {
+        width: 85% !important;
+        margin: auto !important;
+    }
+
+    .hiddenProfileDesc {
+        width: 100% !important;
+    }
+
+    .hiddenProfileUserButtons {
+        float: right !important;
+    }
+
+    .profileUserName h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .profileUser {
+        margin-bottom: 4rem !important;
+    }
+}
+
+@media (max-width: 403px) {
+    .profileUserRating ul li span {
+        margin-left: 5px !important;
     }
 }
 
@@ -1040,6 +1126,10 @@
     .managerOfferView {
         margin-top: 15px !important;
     }
+
+    .profileUserName h1 {
+        font-size: 1.4rem !important;
+    }
 }
 
 @media (max-width: 364px) {
@@ -1125,6 +1215,12 @@
 
 }
 
+@media (max-width: 342px) {
+    .profileUserName h1 {
+        font-size: 1.5rem !important;
+    }
+}
+
 @media (max-width: 340px) {
     .footerCopy {
         width: 160px;
@@ -1155,6 +1251,10 @@
     .homeCardLi {
         width: 110px;
     }
+
+    .profileUserRatingUl li:nth-child(2) {
+        display: none !important;
+    }
 }
 
 @media (max-width: 319px) {
@@ -1171,9 +1271,9 @@
 }
 
 @media (max-width: 306px) {
-    .profileUserRatingUl li:nth-child(2) {
-        display: none !important;
-    }
+    // .profileUserRatingUl li:nth-child(2) {
+    //     display: none !important;
+    // }
 
 }
 
