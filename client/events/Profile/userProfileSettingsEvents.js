@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
 
-	Template.UserProfileSettings.events({
-    'change .profileSettingsSelectImg': function(event){
+  Template.UserProfileSettings.events({
+    'change .profileSettingsSelectImg': function(event) {
       var pics = [];
       var img1;
 
@@ -46,25 +46,35 @@ if (Meteor.isClient) {
           if (error) {
             console.error("Error Uploading", uploader.xhr.response);
             alert(error);
-          } else {
-          }
+          } else {}
         });
       });
 
     },
-		'click .profileSettingsSubmit': function() {
+    'click .profileSettingsSubmit': function() {
 
-			var options = {
-				photo: $("#profileImage").attr("src") || Session.get("img1url"),
-				about: $(".profileSettingsAboutInput").val(),
-				email: $(".profileSettingsEmailInput").val(),
-				link: "PL"
-			}
-      console.log(options);
+      $.fn.extend({
+        animateCss: function(animationName) {
+          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+          $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+          });
+        }
+      });
 
-			Meteor.call("addProfileInfo", options);
-			sAlert.success("Saved");
-		}
-	});
+      var options = {
+        photo: Session.get("img1url"),
+        about: $(".profileSettingsAboutInput").val(),
+        email: $(".profileSettingsEmailInput").val(),
+        link: "PL"
+      }
+
+      Meteor.call("addProfileInfo", options);
+      Router.go("/profile/" + Meteor.userId());
+
+      animateCss("flash")
+      sAlert.success("Saved");
+    }
+  });
 
 }

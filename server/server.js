@@ -10,7 +10,7 @@ if (Meteor.isServer) {
   // Accounts.config({'sendVerificationEmail': true});
 
   // Kadira
-  Kadira.connect('e7vxrDFKiZPbqkg6h', '81154d3d-0f90-47ce-9142-984584c37c20');
+  Kadira.connect('vJ7Dq44oj6HuY8q2c', 'fd9872bc-e750-4a40-93e7-b326ccd1249b');
   prerenderio.set('prerenderToken', '4jWuCKjUUuJRuJYWDnWB');
 
   SearchSource.defineSource('listing', function(searchText, options) {
@@ -222,6 +222,21 @@ if (Meteor.isServer) {
       });
     },
     /*
+     * @summary Transfer Listing to history
+     * @locus Server
+     */
+    transferListing: function(options) {
+
+      Listing.update({
+        _id: options.listingId
+      }, {
+        $set: {
+          status: "Completed"
+        }
+      });
+
+    },
+    /*
      * @summary Remove a listing
      * @locus Server
      */
@@ -408,7 +423,7 @@ if (Meteor.isServer) {
           offer_creator_name: options.offer_creator_name,
           offerprice: options.offerprice,
           date: options.date,
-          location:options.location,
+          location: options.location,
           timePeriod: options.time
         }
       });

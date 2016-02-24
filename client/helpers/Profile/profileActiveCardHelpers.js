@@ -1,13 +1,12 @@
-if (Meteor.isClient){
+if (Meteor.isClient) {
 
   Template.ProfileActiveCard.helpers({
-    nameOther: function () {
-      if ( Meteor.userId() == this.creator_id ){
-        return this.offer_creator_name;
-      }
-      else {
-        return this.username;
-      }
+    nameOther: function() {
+
+      var idSelf = Meteor.userId();
+      var other = idSelf == this.creator_id ? this.offer_creator_name : this.username;
+      return other
+
     }
   });
 
