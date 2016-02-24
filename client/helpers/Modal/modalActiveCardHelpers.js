@@ -5,11 +5,9 @@ if (Meteor.isClient) {
       return Session.get('activeSelected');
     },
     nameOther: function() {
-      if (Meteor.userId() == this.creator_id) {
-        return this.offer_creator_name;
-      } else {
-        return this.username;
-      }
+      var idSelf = Meteor.userId();
+      var other = idSelf == this.creator_id ? this.offer_creator_name : this.username;
+    return other
     },
     timeUntil: function() {
 

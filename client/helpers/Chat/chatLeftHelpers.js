@@ -36,7 +36,7 @@ if (Meteor.isClient) {
       _.map(convos, function(x) {
         sample = Message.find({
           conversation: x
-        }).fetch()[0]
+        }).fetch()[0];
 
         var sender = sample.sender;
         var receiver = sample.receiver;
