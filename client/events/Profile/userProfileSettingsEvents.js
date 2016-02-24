@@ -55,7 +55,7 @@ if (Meteor.isClient) {
 		'click .profileSettingsSubmit': function() {
 
 			var options = {
-				photo: $("#profileImage").attr("src") || Session.get("img1url"),
+				photo: Session.get("img1url"),
 				about: $(".profileSettingsAboutInput").val(),
 				email: $(".profileSettingsEmailInput").val(),
 				link: "PL"
