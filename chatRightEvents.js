@@ -7,7 +7,7 @@ if (Meteor.isClient) {
       if ($(".chatText").val()) {
 
         try {
-          // First Message Sets Seller and Buyer /////////////////////
+          ///////////////////////
           var query = Message.find({
             conversation: id_sell
           }, {
@@ -22,7 +22,7 @@ if (Meteor.isClient) {
         } catch (e) {
           console.log("error");
         }
-
+        // IF Message is at least #2
         if (Meteor.userId() == seller) {
 
           var options = {
@@ -48,7 +48,7 @@ if (Meteor.isClient) {
 
 
         } else {
-          console.log("creator");
+          // First Message
           var options = {
             message: $(".chatText").val(),
             sender: Meteor.userId(),

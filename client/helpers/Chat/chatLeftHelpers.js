@@ -34,16 +34,21 @@ if (Meteor.isClient) {
     username: function() {
 
       _.map(convos, function(x) {
-        person = Message.find({
-          conversation: convos[0]
-        }, {
-          sort: {
-            createdAt: 1
-          }
-        }).fetch()[0].sender;
+        sample = Message.find({
+          conversation: x
+        }).fetch()[0]
+
+        var sender = sample.sender;
+        var receiver = sample.receiver;
+        var you = Meteor.userId();
+
+        var other = you == sender ? receiver : sender;
+        console.log(other);
+
       });
-      return person
+      return other
 
     }
   })
 };
+

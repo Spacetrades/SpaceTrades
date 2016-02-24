@@ -7,7 +7,7 @@
         <div class="profileUserLeft">
             <div class="profileUserImage">
                 <div class="spin"> {{> spinner}} </div>
-                <img src="{{profile.picturelrg}}" class="profileUserImg">
+                <img src="{{profile.picturelrg}}" class="profileUserImg settingsChange">
             </div>
             <!-- <div class="profileUserGraph">
                 <label for="myChart"><b>Meetup Graph</b>
@@ -62,9 +62,10 @@
                     </li>
                 </ul>
             </div>
+            <!-- TODO - Meetups held use "settingsChange" class on info -->
             <div class="desc-box profileDesc">
                 <h4 class="box-title">Description</h4>
-                <p>{{about}}</p>
+                <p class="settingsChange">{{about}}</p>
             </div>
             <div class="profileUserButtons">
                 <ul class="profileUserButtonUl">
