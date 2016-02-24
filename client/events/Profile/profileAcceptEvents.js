@@ -86,6 +86,9 @@ if (Meteor.isClient) {
       var subtractTime = 1.116 * Math.pow(10, 8);
       var reminderTime = delayTime - subtractTime;
 
+      console.log(reminderTime);
+      console.log(delayTime);
+
       // Reminder
       Meteor.setTimeout(function() {
         sendReminder();
@@ -95,6 +98,11 @@ if (Meteor.isClient) {
       Meteor.setTimeout(function() {
         sendFeedback();
       }, delayTime);
+
+      console.log(reminderTime);
+      console.log(delayTime);
+
+
 
     },
     'click #profileReceivedDecline': function() {
