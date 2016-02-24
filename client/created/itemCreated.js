@@ -15,15 +15,6 @@ if (Meteor.isClient) {
 			});
 		});
 
-     paymentSwitch = {
-      cash : Boolean(this.data.payment == "Cash"),
-      amazon : Boolean(this.data.payment == "Amazon"),
-      paypal : Boolean(this.data.payment == "Paypal"),
-      both : Boolean(this.data.payment == "Both")
-    }
-
-
-
           $('.click-nav > ul').toggleClass('no-js js');
           $('.click-nav .js ul').hide();
 

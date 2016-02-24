@@ -92,16 +92,7 @@ if (Meteor.isClient) {
         var convo_id = Random.id(10);
         return convo_id
       }
-    },
-    paymentBoth: function() {
-      if (this.payment == "Both") {
-        var out = true;
-      } else {
-        var out = false;
-      }
-      return out
     }
-
   });
 
 }

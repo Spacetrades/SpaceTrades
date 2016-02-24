@@ -20,127 +20,131 @@
  |____/| .__/ \__,_|\___\___|\__|_|  \__,_|\__,_|\___||___/
        |_|                                                 
             * * * * Buy and Sell Locally * * * *  
--->
-</head> 
-<!-- TASK - We can use the spinner again -->
-<template name="LayoutHome">
-{{> sAlert}}
-    {{#if currentUser}}
-    {{> homeheaderpost}}
-    {{> ModalNotifications}}
-    {{> ModalAddListing}}
-    {{> yield}}
-    {{else}}
-    {{> homeheaderpre}}
-    {{> ModalJoin}}
-    {{> yield}} 
-{{/if}}
-</template>
+        -->
+    </head> 
+    <!-- TASK - We can use the spinner again -->
+    <template name="LayoutHome">
+        {{> sAlert}}
+        {{#if currentUser}}
+        {{> homeheaderpost}}
+        {{> ModalNotifications}}
+        {{> ModalAddListing}}
+        {{> yield}}
+        {{else}}
+        {{> homeheaderpre}}
+        {{> ModalJoin}}
+        {{> yield}} 
+        {{/if}}
+    </template>
 
-<!-- TASK - Make template for Messages -->
-<template name="LayoutMessages">
-{{> sAlert}}
-    {{#if currentUser}}
-    {{messageShow}}
-    {{> headerpost}}
-    {{> ModalNotifications}}
-    {{> ModalAddListing}}
-    {{> yield}}
-{{/if}}
-</template>
+    <!-- TASK - Make template for Messages -->
+    <template name="LayoutMessages">
+        {{> sAlert}}
+        {{#if currentUser}}
+        {{messageShow}}
+        {{> headerpost}}
+        {{> ModalNotifications}}
+        {{> ModalAddListing}}
+        {{> yield}}
+        {{/if}}
+    </template>
 
-<template name="LayoutSearch">
-{{> sAlert}}
-    {{#if currentUser}} 
-    {{> headersearchpost}}
-    {{> ModalNotifications}}
-    {{> ModalAddListing}}
-    {{> yield}}
-    {{else}}
-    {{> headersearchpre}}
-    {{> ModalJoin}}
-    {{> yield}}
-{{/if}}
-</template>
+    <template name="LayoutSearch">
+        {{> sAlert}}
+        {{#if currentUser}} 
+        {{> headersearchpost}}
+        {{> ModalNotifications}}
+        {{> ModalAddListing}}
+        {{> yield}}
+        {{else}}
+        {{> headersearchpre}}
+        {{> ModalJoin}}
+        {{> yield}}
+        {{/if}}
+    </template>
 
-<template name="LayoutHelp">
-{{> sAlert}}
-    {{#if currentUser}}
-    {{> headerpost}}
-    {{> HelpCenterNav}}
-    {{> ModalNotifications}}
-    {{> ModalAddListing}}
-    {{> yield}}
-    {{else}}
-    {{> headerpre}}
-    {{> ModalJoin}}
-    {{> HelpCenterNav}}
-    {{> yield}}
-{{/if}}
-</template>
+    <template name="LayoutHelp">
+        {{> sAlert}}
+        {{#if currentUser}}
+        {{> headerpost}}
+        {{> HelpCenterNav}}
+        {{> ModalNotifications}}
+        {{> ModalAddListing}}
+        {{> yield}}
+        {{else}}
+        {{> headerpre}}
+        {{> ModalJoin}}
+        {{> HelpCenterNav}}
+        {{> yield}}
+        {{/if}}
+    </template>
 
-<template name="LayoutProfile">
-{{> sAlert}}
- {{#if currentUser}}
-    <!-- MODALS -->
-    {{> headerpost}}
-    {{> ProfileCenterNav}}
-    {{> ModalListingManager}}
-    {{> ModalAddListing}}
-    {{> ModalReceivedOffers}}
-    {{> ModalReceivedOffersFull}}
-    {{> ModalReceivedAccept}}
-    {{> ModalReceivedDecline}}
-    {{> ModalListingDelete}}
+    <template name="LayoutProfile">
+        {{> sAlert}}
+        {{#if currentUser}}
+        <!-- MODALS -->
+        {{> headerpost}}
+        {{> ProfileCenterNav}}
+        {{> ModalListingManager}}
+        {{> ModalAddListing}}
+        {{> ModalReceivedOffers}}
+        {{> ModalReceivedOffersFull}}
+        {{> ModalReceivedAccept}}
+        {{> ModalReceivedDecline}}
+        {{> ModalListingDelete}}
 
-    {{> ModalHistoryDetails}}
-    {{> ModalFeedbackPrimaryBuyer}}
-    {{> ModalFeedbackPrimarySeller}}
-    {{> ModalFeedbackInitialBuyer}}
-    {{> ModalFeedbackInitialSeller}}
-    {{> ModalFeedbackNeverBuyer}}
-    {{> ModalFeedbackNeverSeller}}
-    {{> ModalFeedbackUnsuccessfulBuyer}}
-    {{> ModalFeedbackUnsuccessfulSeller}}
+        {{> ModalHistoryDetails}}
+        {{> ModalFeedbackPrimaryBuyer}}
+        {{> ModalFeedbackPrimarySeller}}
+        {{> ModalFeedbackInitialBuyer}}
+        {{> ModalFeedbackInitialSeller}}
+        {{> ModalFeedbackNeverBuyer}}
+        {{> ModalFeedbackNeverSeller}}
+        {{> ModalFeedbackUnsuccessfulBuyer}}
+        {{> ModalFeedbackUnsuccessfulSeller}}
 
-    {{> ModalProfileActive}}
-    {{> ModalProfileActive}}
-    {{> ModalProfileActiveDetails}}
-    {{> ModalProfileActiveDirections}}
+        {{> ModalProfileActive}}
+        {{> ModalProfileActive}}
+        {{> ModalProfileActiveDetails}}
+        {{> ModalProfileActiveDirections}}
 
-    {{> yield}}
-    {{else}}
-    {{> headerpre}}
-    {{> ModalJoin}}
-    {{> yield}}
-{{/if}}
-</template>
+        {{> yield}}
+        {{else}}
+        {{> headerpre}}
+        {{> ModalJoin}}
+        {{> yield}}
+        {{/if}}
+    </template>
 
-<template name="LayoutDefault">
-{{> sAlert}}
- {{#if currentUser}}
-    {{> headerpost}}
-    {{userShow}}
-    {{> ModalNotifications}}
-    {{> ModalAddListing}}
-    {{> ModalOfferRequest}}
-    {{> ModalReportListing}}
-    {{> ModalListingDelete}}
-    {{> yield}}
-    {{else}}
-    {{> headerpre}}
-    {{> ModalJoin}}
-    {{userShow}}
-    {{> yield}}
-{{/if}}
-</template>
+    <template name="LayoutListing">
+        {{> sAlert}}
+        {{#if currentUser}}
+        {{> headerpost}}
+        {{> ModalNotifications}}
 
-<template name="LayoutDefaultPost">
-    {{> homeheaderpost}}
-    {{> loginButtons}}
-    {{listingShow}}
-    {{> ModalNotifications}}
-    {{> ModalAddListing}}
-    {{> yield}}
-</template>
- 
+        {{> ModalAddListing}}
+        {{> ModalOfferRequest}}
+        {{> ModalReportListing}}
+        {{> ModalListingDelete}}
+        {{> yield}}
+        {{else}}
+        {{> headerpre}}
+        {{> ModalJoin}}
+        {{> yield}}
+        {{/if}}
+    </template>
+
+    <template name="LayoutDefault">
+        {{> sAlert}}
+        {{#if currentUser}}
+        {{> headerpost}}
+        {{> ModalNotifications}}
+        {{> ModalAddListing}}
+        {{> yield}}
+        {{else}}
+        {{> headerpre}}
+        {{> ModalJoin}}
+        {{> yield}}
+        {{/if}}
+    </template>
+

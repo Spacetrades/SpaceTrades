@@ -17,23 +17,23 @@ if (Meteor.isClient) {
 
   setLocate = function() {
 
-console.log("setlocate")
-        var userId = Meteor.userId();
-        var response = Session.get("response");
+    console.log("setlocate")
+    var userId = Meteor.userId();
+    var response = Session.get("response");
 
-         Session.set('locator', response['city'] + " " + response['region']);
-        var locator = Session.get("locator");
+    Session.set('locator', response['city'] + " " + response['region']);
+    var locator = Session.get("locator");
 
-        var options = {
-          userId: userId,
-          response: response,
-          locator: locator
-        }
+    var options = {
+      userId: userId,
+      response: response,
+      locator: locator
+    }
 
-        Meteor.setTimeout(function(){
+    Meteor.setTimeout(function() {
 
-            Meteor.call('saveLocation', options);
-        }, 2000);
+      Meteor.call('saveLocation', options);
+    }, 2000);
 
   }
 
@@ -54,7 +54,7 @@ console.log("setlocate")
           }
           console.log(result);
 
- console.log(response);
+          console.log(response);
           var selectedResponse = {
             city: response.city,
             region: response.region,
@@ -84,12 +84,12 @@ console.log("setlocate")
     'click .modJoinFB-Btn ': function() {
       locate();
       fbLogin();
-      $(function(){
-         Meteor.setTimeout( function(){
-        setLocate();
-      },4000)
+      $(function() {
+        Meteor.setTimeout(function() {
+          setLocate();
+        }, 4000)
       });
-      document.location.reload();
+      // document.location.reload();
     }
   });
 
