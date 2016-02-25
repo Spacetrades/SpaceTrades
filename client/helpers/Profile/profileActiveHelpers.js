@@ -15,10 +15,7 @@ if (Meteor.isClient){
 
 			var id = Meteor.userId();
 
-			var resultA = Listing.find({ creator_id: Meteor.userId(), status: "Accepted"});
-      var resultB = Offer.find({status: "Accepted", creator_id: Meteor.userId()});
-
-      var result = Listing.find({ $or:[ { creator_id: Meteor.userId(), status: "Accepted" }, { offer_creator: Meteor.userId() } ] });
+      var result = Listing.find({ $or:[ { creator_id: Meteor.userId(), status: "Accepted" }, { offer_creator: Meteor.userId(), status: "Accepted" } ] });
 
 			return Boolean(result.count());
 		}
