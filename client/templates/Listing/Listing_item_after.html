@@ -113,12 +113,7 @@
                 <li class="listingItemUserName"><a href="/profile/{{profile}}">{{username}}</a></li>
                 <li class="rating">☆☆☆☆☆</li>
                 <ul class="listingPayment">
-                {{#if paymentCash}}
-                    <li class="listingPayCash"><i class="fa fa-usd"></i></li>
-                {{/if}}
-                {{#if paymentPaypal}}
-                    <li class="listingPayPal"><i class="fa fa-cc-paypal"></i></li>
-                {{/if}}
+                Payment: {{payment}}
                 </ul>
             </ul>
         </div>

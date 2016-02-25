@@ -7,13 +7,6 @@ if (Meteor.isClient) {
         });
         $('[data-toggle="tooltip"]').tooltip();
 
-  paymentSwitch = {
-      cash : Boolean(this.data.payment == "Cash"),
-      amazon : Boolean(this.data.payment == "Amazon"),
-      paypal : Boolean(this.data.payment == "Paypal"),
-      both : Boolean(this.data.payment == "Both")
-    }
-
         //  $('.imgBreak').error( function(){
         //   $(this).attr('src', 'default-item-img.jpg');
         // });

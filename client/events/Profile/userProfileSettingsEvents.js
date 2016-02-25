@@ -63,16 +63,20 @@ if (Meteor.isClient) {
       });
 
       var options = {
-        photo: Session.get("img1url"),
         about: $(".profileSettingsAboutInput").val(),
         email: $(".profileSettingsEmailInput").val(),
         link: "PL"
       }
 
+      var photo =  typeof Session.get("img1url") != "undefined" ? options.photo = Session.get("img1url") : options.photo = Meteor.user().profile.picturesm;
+
+
       Meteor.call("addProfileInfo", options);
       Router.go("/profile/" + Meteor.userId());
+      Meteor.setTimeout(function(){
+        $(".settingsChange").animateCss("flash");
+      }, 1500);
 
-      animateCss("flash")
       sAlert.success("Saved");
     }
   });

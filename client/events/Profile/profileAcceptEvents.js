@@ -45,11 +45,7 @@ if (Meteor.isClient) {
       var subtractTime = 1.116 * Math.pow(10, 8);
       var reminderTime = delayTime - subtractTime;
 
-
-        ////////////////////////////////////////////////////////////////////
-      function sendFeedback() {
-
-        var feedbackOptions = {
+            var feedbackOptions = {
           action: "Fill out Feedback",
           listing_title: offerBlock.listing_title,
           offerprice: offerBlock.offerprice,
@@ -60,18 +56,7 @@ if (Meteor.isClient) {
           buyer_id: offerBlock.creator_id
         }
 
-        Meteor.call('pulseNotify', feedbackOptions);
-        Meteor.call('transferListing', feedbackOptions);
-
-      }
-      ////////////////////////////////////////////////////////////////////
-
-      function sendReminder() {
-
-            var offerBlock = Session.get('offerSelected');
-
-
-        reminderOptions = {
+          var reminderOptions = {
           action: "Reminder: you have a meetup scheduled for tommorow",
           listing_title: offerBlock.listing_title,
           offerprice: offerBlock.offerprice,
@@ -84,18 +69,17 @@ if (Meteor.isClient) {
           buyer_id: offerBlock.creator_id
         }
 
-        Meteor.call('pulseNotify', reminderOptions);
-      }
-      ////////////////////////////////////////////////////////////////////
-
       // Reminder Notification
       Meteor.setTimeout(function() {
-        sendReminder();
+        sAlert.success("Reminder");
+        Meteor.call('pulseNotify', reminderOptions);
       }, reminderTime);
 
       // Feedback Notification
       Meteor.setTimeout(function() {
-        sendFeedback();
+        sAlert.success("Fill out Feedback");
+        Meteor.call('pulseNotify', feedbackOptions);
+        Meteor.call('transferListing', feedbackOptions);
       }, delayTime);
 
       console.log(reminderTime);

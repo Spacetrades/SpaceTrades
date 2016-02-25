@@ -462,7 +462,6 @@ if (Meteor.isServer) {
     addProfileInfo: function(options) {
       Meteor.users.update(this.userId, {
         $set: {
-          'profile.picturelrg': options.photo,
           'profile.picturesm': options.photo,
           'profile.about': options.about,
           'profile.email': options.email,

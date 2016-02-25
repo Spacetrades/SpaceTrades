@@ -16,7 +16,7 @@ if (Meteor.isClient) {
         $('[data-toggle="tooltip"]').tooltip();
 
         // Get context with jQuery - using jQuery's .get() method.
-        var ctx = $("#myChart").get(0).getContext("2d");
+        // var ctx = $("#myChart").get(0).getContext("2d");
         // This will get the first returned node in the jQuery collection.
 
 
@@ -188,7 +188,7 @@ if (Meteor.isClient) {
             }]
         };
 
-        var myLineChart = new Chart(ctx).Line(data, options);
+        // var myLineChart = new Chart(ctx).Line(data, options);
 
     });
 
