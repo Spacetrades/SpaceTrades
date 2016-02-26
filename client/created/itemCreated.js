@@ -15,16 +15,48 @@ if (Meteor.isClient) {
 			});
 		});
 
-          $('.click-nav > ul').toggleClass('no-js js');
-          $('.click-nav .js ul').hide();
+    Tracker.autorun(function() {
+     console.log(offersGlobal);
+    })
 
-          $(document).click(function() {
-            if ($('.click-nav .js ul').is(':visible')) {
-              $('.click-nav .js ul', this).slideUp();
-              $('.clicker').removeClass('active');
-            }
-          });
+    this['offerReact'] = new ReactiveVar(offersGlobal, function(oldValue, newValue) {
 
-        });
+  console.log("eewww");
+
+      if (oldValue !== newValue){
+         // Animate CSS
+  $.fn.extend({
+    animateCss: function(animationName) {
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+      });
+    }
+  });
+  console.log("eewww");
+
+  Meteor.setTimeout(function() {
+    $(".offersReceivedCount").animateCss("bounce");
+  }, 500);
+
+      }
+      else {
+        return true
+      }
+});
+
+    console.log(this['offerReact'].get() );
+
+    $('.click-nav > ul').toggleClass('no-js js');
+    $('.click-nav .js ul').hide();
+
+    $(document).click(function() {
+      if ($('.click-nav .js ul').is(':visible')) {
+        $('.click-nav .js ul', this).slideUp();
+        $('.clicker').removeClass('active');
+      }
+    });
+
+  });
 
 }

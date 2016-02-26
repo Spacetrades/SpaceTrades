@@ -1,6 +1,7 @@
 <!-- This modal can be accessed from History | Post Auth -->
 <template name="ModalHistoryDetails">
 	<!-- Modal -->
+	{{#with scope}}
 	<div class="modSentOffer modal" id="historyDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
@@ -8,7 +9,7 @@
 	      	<div class="profileReceivedOffers">
 		        <ul id="profileReceivedModalUl" class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Met On Aug 19, 2015</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">{{dateFormatted}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
 		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
@@ -37,4 +38,5 @@
 	    </div>
 	  </div>
 	</div>
+	{{/with}}
 </template>

@@ -16,24 +16,6 @@ if (Meteor.isClient) {
       }, 500)
 
     },
-    'change .offersReceivedCount': function() {
-
-  // Animate CSS
-  $.fn.extend({
-        animateCss: function(animationName) {
-          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-          $(this).addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-          });
-        }
-      });
-
-  console.log("workds");
-
-      Meteor.setTimeout(function() {
-        $(".offersReceivedCount").animateCss("bounce");
-      }, 500);
-    },
     'click .modOfferRequestTrigger': function() {
       Session.set('scope', this);
     },

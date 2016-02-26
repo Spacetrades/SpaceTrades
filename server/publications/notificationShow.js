@@ -1,8 +1,8 @@
 Meteor.publish('notificationShow', function(id) {
 
   if (this.userId) {
-    Notification.find({
-      destination: Meteor.userId()
+    return Notification.find({
+      destination: this.userId
     }, {
       sort: {
         createdAt: -1
