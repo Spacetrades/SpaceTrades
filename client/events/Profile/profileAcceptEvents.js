@@ -23,7 +23,7 @@ if (Meteor.isClient) {
         creator_id: offerBlock.creator_id,
         offer_creator_name: offerBlock.creator_name,
         creator_name: Meteor.user().profile.name,
-        time: offerBlock.date,
+        time: offerBlock.meetupTime,
         offer_id: offerBlock._id,
         listingId: offerBlock.listingId,
         listing_creator_id: offerBlock.listing_creator_id,

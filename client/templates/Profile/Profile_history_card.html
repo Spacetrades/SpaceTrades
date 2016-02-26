@@ -1,8 +1,8 @@
 <template name="profileHistoryCard">
 	<li class="profileCardLi">
-	    <p><b>Met On {{date}}</b>You Bought From <a href="/profile/{{creator_id}}" class="profileCardBoughtSold">{{nameOther}}</a></p> 
+	    <p><b>Met On {{date}}</b>You met with<a href="/profile/{{idOther}}" class="profileCardBoughtSold">{{nameOther}}</a></p> 
 	    <ul class="profileCardImage">
-	        <a href="/listing/{{_id}}"><img src="{{img}}" class="profileCardImg"></a>
+	        <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
 	    </ul>
 	    <ul class="profileCardInfo">
 	        <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>

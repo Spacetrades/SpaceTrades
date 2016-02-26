@@ -42,7 +42,7 @@ if (Meteor.isClient) {
   });
 
 	Template.registerHelper('listing', function () {
-		return Listing.find({ _id: id });
+		return Listing.find({ _id: id }).fetch()[0];
 	});
 
   Template.registerHelper('pictureLookup', function (idParam){
@@ -70,7 +70,6 @@ _
 		return Meteor.user().profile.picturesm;
 	});
 
-
 	Template.registerHelper('profile', function () {
 		return Meteor.userId();
 	});
@@ -83,7 +82,7 @@ _
 	});
 
 	Template.registerHelper('Notification', function () {
-		return Notification.find({destination: Meteor.userId()});
+		return Notification.find();
 	});
 
 Template.registerHelper('chatCountUnread', function () {
