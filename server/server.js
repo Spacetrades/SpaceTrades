@@ -463,6 +463,7 @@ if (Meteor.isServer) {
       Meteor.users.update(this.userId, {
         $set: {
           'profile.picturesm': options.photo,
+          'profile.picturelrg': options.photo,
           'profile.about': options.about,
           'profile.email': options.email,
           'profile.link': options.link
@@ -526,7 +527,7 @@ if (Meteor.isServer) {
      * @locus Server
      */
     ipLocate: function() {
-      HTTP.get("http://ipinfo.io", function(error, result) {
+      return HTTP.get("http://ipinfo.io", function(error, result) {
         var place = JSON.parse(result.content);
         var city = place.city;
         var state = place.region;

@@ -20,9 +20,9 @@ if (Meteor.isClient) {
       var delayTimeMinutes = delayTime / 1000 / 60;
 
       var hours = Math.floor(delayTimeMinutes / 60);
-      var minutes = delayTimeMinutes % 60;
+      var minutes = Math.floor(delayTimeMinutes % 60);
 
-      var timeString = hours + "hours and" + minutes + "minutes";
+      var timeString = hours + " hours and" + minutes + " minutes";
 
       return timeString
 
