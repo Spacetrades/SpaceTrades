@@ -9,7 +9,22 @@ if (Meteor.isClient) {
       var other = idSelf == this.creator_id ? this.offer_creator_name : this.username;
     return other
     },
+    idOther: function() {
+      var idSelf = Meteor.userId();
+      var other  = idSelf == this.creator_id ? this.offer_creator_name : this.creator_id;
+      return other
+    },
     timeUntil: function() {
+        var original = moment.unix(this.meetup_time);
+      var delayTime = original.diff(moment());
+      var delayTimeMinutes = delayTime / 1000 / 60;
+
+      var hours = Math.floor(delayTimeMinutes / 60);
+      var minutes = delayTimeMinutes % 60;
+
+      var timeString = hours + "hours and" + minutes + "minutes";
+
+      return timeString
 
     },
     chatId: function() {

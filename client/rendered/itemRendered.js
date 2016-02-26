@@ -11,6 +11,7 @@ if (Meteor.isClient) {
         //   $(this).attr('src', 'default-item-img.jpg');
         // });
 
+
         $(function () {
       $('.click-nav > ul').toggleClass('no-js js');
       $('.click-nav .js ul').hide();

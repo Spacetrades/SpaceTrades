@@ -16,14 +16,32 @@ if (Meteor.isClient) {
       }, 500)
 
     },
-    'click .modOfferRequestTrigger': function(){
+    'change .offersReceivedCount': function() {
+
+  // Animate CSS
+  $.fn.extend({
+        animateCss: function(animationName) {
+          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+          $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+          });
+        }
+      });
+
+  console.log("workds");
+
+      Meteor.setTimeout(function() {
+        $(".offersReceivedCount").animateCss("bounce");
+      }, 500);
+    },
+    'click .modOfferRequestTrigger': function() {
       Session.set('scope', this);
     },
     'click .profileBtn': function() {
       Session.set('recipientId', this.creator_id);
     },
-    'click .modDeleteListingTrigger': function(){
-     Session.set("listingSelected", this);
+    'click .modDeleteListingTrigger': function() {
+      Session.set("listingSelected", this);
       $("#listingDeleteModal").modal();
     },
     'click .itemUnsave': function() {
@@ -33,11 +51,10 @@ if (Meteor.isClient) {
 
       Meteor.call('actionUnsave', optionsA);
     },
-    'click .modEditListingTrigger': function(){
+    'click .modEditListingTrigger': function() {
       Session.set('listingSelected', this);
     },
-    'click .deleteButton': function() {
-    },
+    'click .deleteButton': function() {},
     'click .itemSave': function() {
       var optionsA = Listing.find({
         _id: id

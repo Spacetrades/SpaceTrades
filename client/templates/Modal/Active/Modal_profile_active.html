@@ -8,7 +8,7 @@
 	      	<div class="profileReceivedOffers">
 		        <ul class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="#">{{nameOther}}</a> is in </p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="{{idOther}}">{{nameOther}}</a> is in  {{timeUntil}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
 		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
@@ -19,7 +19,7 @@
                         	<li id="profileReceivedName" class="profileReceivedName">You are exchanging this item for <span class="money">${{price}}</span></li>
 		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDetails">Meetup Details</button></li><!-- 
 		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDirections">Get Directions</button></li> -->
-		                    <li class="modProfileActiveBtn"><button href="{{chatId}}">Chat</button></li>
+		                    <li class="modProfileActiveBtn"><a href="{{chatId}}">Chat</a></li>
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
 		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}

@@ -7,7 +7,13 @@ if (Meteor.isClient) {
 			if (Session.get('listingSelected')) {
 				return Offer.find({
 					listingId: Session.get('listingSelected')._id
-				}).fetch();
+				},
+{
+  sort: {
+    createdAt: -1
+  }
+}
+        ).fetch();
 			}
 		},
 		userpic: function() {

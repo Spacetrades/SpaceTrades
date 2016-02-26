@@ -6,7 +6,7 @@
 
  <div class="listingItemDiv oneDiv">
     <h1 class="listingItemTitle">{{listing_title}}</h1>
-    <p class="listingItemOffersRecieved">Created {{dateFormatted}}<br>{{offers}} Offers Received</p>
+    <p class="listingItemOffersRecieved">Created {{dateFormatted}}<br><input class="offersReceivedCount" type="text" value="{{offers}}">Offers Received</p>
     <div class="listingItemLeft">
         <div class="listingItemPriceButtons">
             <ul class="listingItemPrice">
@@ -69,14 +69,14 @@
                     <li class="listingItemBrand">Brand:<a href="/search" class="searchProperty">{{brand}}</a></li>
                     <li class="listingItemType">Type:<a href="/search" class="searchProperty">{{type}}</a></li>
                     <li class="listingItemSize">Size: <span>{{size}}</span></li>
-                    <li class="listingItemColor">Color: <span style="color: {{color}}">{{color}}</span></li>
+                    <!-- <li class="listingItemColor">Color: <span style="color: {{color}}">{{color}}</span></li> -->
                 </ul>
             </li>
             <li class="listingItemDetailRight">
                 <ul>
                    <li class="listingItemCat">Category: <span>{{category}}</span></li>
                    <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
-                   <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li>
+                 <!--   <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li> -->
                    <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
                </ul>
            </li>
