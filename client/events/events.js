@@ -46,15 +46,15 @@ if (Meteor.isClient) {
   }
 
 
-  function ipLocate() {
+  // function ipLocate() {
 
-    HTTP.get("http://ipinfo.io", function(error, result) {
-      var place = JSON.parse(result.content);
-      var city = place.city;
-      var state = place.region;
-    });
+  //   HTTP.get("http://ipinfo.io", function(error, result) {
+  //     var place = JSON.parse(result.content);
+  //     var city = place.city;
+  //     var state = place.region;
+  //   });
 
-  }
+  // }
 
   // Custom Functions
   // Add 'user_birthday' after facebook has reviewed app

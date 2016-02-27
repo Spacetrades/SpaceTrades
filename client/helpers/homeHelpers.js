@@ -7,7 +7,10 @@ if (Meteor.isClient) {
 		defaultCheck: function(){
 			var results = Listing.find({ status: "Pending"});
 			return Boolean(results.count());
-		}
+		},
+    test: function(){
+      return Template.instance().selfId.get();
+    }
 
 	});
 
