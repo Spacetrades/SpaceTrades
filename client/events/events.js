@@ -50,10 +50,8 @@ if (Meteor.isClient) {
 
     HTTP.get("http://ipinfo.io", function(error, result) {
       var place = JSON.parse(result.content);
-      // console.log(place);
       var city = place.city;
       var state = place.region;
-      console.log(city, state);
     });
 
   }

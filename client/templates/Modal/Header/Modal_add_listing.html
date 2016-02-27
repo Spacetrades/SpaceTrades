@@ -1,30 +1,29 @@
 <template name="ModalAddListing">
-    <form class="modAddListingModal modal multi-step" id="addListingModal">
+    <!-- <form class="modAddListingModal modal multi-step" id="addListingModal"> -->
         <div class="modAddListingDialog modal-dialog">
             <div class="modAddListingContent modal-content">
                 <div class="modAddListingDiv modAddListingDivOne modal-body step step-1">
                 	<div class="modAddListingPageOne">
                         <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
                             <li class="modAddListingQNA modOfferRequestOfferWrap">
-                                <h2>What Are You Selling?</h2>
+                                <h2 class="listing_title">What Are You Selling?</h2>
                                 <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="Listing Title..." maxlength="50">
                             </li>
                             <li class="modAddListingQNA modOfferRequestOfferWrap">
-                                <h2>How Much Are You Selling It For?</h2>
+                                <h2 class="price">How Much Are You Selling It For?</h2>
                                 <input type="text" class="listprice" placeholder="Price..." maxlength="5">
                             </li>
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnSingle modMultiBtnAddListing modMultiBtnAddListingSingle modMultiBtnAddListingOne">
-                        <button type="button" class="btn btn-default modalExit" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="addListingJump2()">Next</button>
+                        <button type="button" class="btn btn-primary step step-1 modalNext">Next</button>
                     </div>
                 </div>
                 <div class="modAddListingDiv modAddListingDivTwo modal-body step step-2">
                 	<div class="modAddListingPageTwo">
                         <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
                             <li class="modAddListingQNA modOfferRequestOfferWrap">
-                                <h2>What Category Does It Belong To?</h2>
+                                <h2 class="category">What Category Does It Belong To?</h2>
                                 <div class="styled-select">
                                     <select class="listcategory">
                                         <option value="" disabled selected >Select Category</option>
@@ -35,7 +34,7 @@
                                 </div>
                             </li>
                             <li class="modAddListingQNA modOfferRequestOfferWrap">
-                                <h2>What Type Of Item Is It?</h2>
+                                <h2 class="type">What Type Of Item Is It?</h2>
                                 <div class="styled-select">
                                     <select class="listtype">
                                         <option value="" disabled selected >Select Type</option>
@@ -45,8 +44,8 @@
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingTwo">
-                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="addListingJump1()">Back</button>
-                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="addListingJump3()">Next</button>
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" >Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2">Next</button>
                     </div>
                 </div>
                 <div class="modAddListingDiv modAddListingDivThree modal-body step step-3">
@@ -61,15 +60,15 @@
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingThree">
-                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="addListingJump2()">Back</button>
-                        <button type="button" class="btn btn-primary step step-3 modalNext" data-step="3" onclick="addListingJump4()">Next</button>
+                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3">Back</button>
+                        <button type="button" class="btn btn-primary step step-3 modalNext" data-step="3">Next</button>
                     </div>
                 </div>
                 <div class="modAddListingDiv modAddListingDivFour modal-body step step-4">
                 	<div class="modAddListingPageFour">
                         <h2>Provide Details</h2>
                         <ul class="modAddListingPageFourUl">
-                             <li><label>Quantity</label>
+                         <!--     <li><label>Quantity</label>
                                 <div class="styled-select">
                                     <select class="listquantity">
                                         <option value="1">1</option>option>
@@ -84,7 +83,7 @@
                                         <option value="10">10 +</option>option>
                                     </select>
                                 </div>
-                            </li>
+                            </li> -->
                             <li><label>Brand</label>
                                 <div class="styled-select">
                                     <select class="listbrand">
@@ -142,8 +141,8 @@
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFour">
-                        <button type="button" class="btn btn-primary step step-4 modalBack" data-step="4" onclick="addListingJump3()">Back</button>
-                        <button type="button" class="btn btn-primary step step-4 modalNext" data-step="4" onclick="addListingJump5()">Next</button>
+                        <button type="button" class="btn btn-primary step step-4 modalBack" data-step="4">Back</button>
+                        <button type="button" class="btn btn-primary step step-4 modalNext" data-step="4">Next</button>
                     </div>
                 </div>
                 <div class="modAddListingDiv modAddListingDivFive modal-body step step-5">
@@ -184,13 +183,13 @@
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFive">
-                        <button type="button" class="btn btn-primary step step-5 modalBack" data-step="5" onclick="addListingJump4()">Back</button>
-                        <button type="button" class="btn btn-primary step step-5 modalNext" data-step="5" onclick="addListingJump6()">Next</button>
+                        <button type="button" class="btn btn-primary step step-5 modalBack" data-step="5" >Back</button>
+                        <button type="button" class="btn btn-primary step step-5 modalNext" data-step="5" >Next</button>
                     </div>
                 </div>
                 <div class="modAddListingDiv modAddListingDivSix modal-body step step-6">
                     <div class="modAddListingPageSix">
-                        <h2>Add Description</h2>
+                        <h2 class="description">Add Description</h2>
                         <textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingSix">
@@ -200,5 +199,5 @@
                 </div>
             </div>
         </div>
-    </form>
+<!--     </form> -->
 </template>

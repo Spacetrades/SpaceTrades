@@ -15,13 +15,11 @@ if (Meteor.isClient) {
 			});
 		});
 
-    Tracker.autorun(function() {
-     console.log(offersGlobal);
-    })
+    // Tracker.autorun(function() {
+    //  console.log(offersGlobal);
+    // })
 
     this['offerReact'] = new ReactiveVar(offersGlobal, function(oldValue, newValue) {
-
-  console.log("eewww");
 
       if (oldValue !== newValue){
          // Animate CSS
@@ -33,7 +31,6 @@ if (Meteor.isClient) {
       });
     }
   });
-  console.log("eewww");
 
   Meteor.setTimeout(function() {
     $(".offersReceivedCount").animateCss("bounce");

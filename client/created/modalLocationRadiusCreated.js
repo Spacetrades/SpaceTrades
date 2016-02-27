@@ -5,6 +5,7 @@ if (Meteor.isClient) {
 
       GoogleMaps.ready();
 
+
       var markers = [];
       var inputControl = $("#pac-input")[0];
       var saveControl = $(".locationRadiusSave")[0];
@@ -41,50 +42,12 @@ if (Meteor.isClient) {
         }
       }
 
-      // google.maps.event.addDomListener(geolocateControl, 'click', function() {
-      //   console.log("asda");
-      //   var mape = map.instance;
-      //   var geostr = Session.get('geo');
-      //   instance.setCenter(new google.maps.LatLng(geostr));
-
-          //    var areaCircle = new google.maps.Circle({
-          //   map: map.instance,
-          //   center: place.geometry.location,
-          //   zoom: 7,
-          //   // IDEAL - Radius should be dependent on radius set
-          //   radius: 8093.4,
-          //   strokeColor: "#f8504b",
-          //   strokeOpacity: 0.8,
-          //   strokeWeight: 2,
-          //   fillColor: "#f8504b",
-          //   fillOpacity: 0.4
-          // });
-
-          // var marker = new google.maps.Marker({
-          //   map: map.instance,
-          //   icon: image,
-          //   title: place.name,
-          //   draggable: true,
-          //   position: place.geometry.location,
-          //   animation: google.maps.Animation.DROP
-          // });
-
-          // Create a marker for each place.
-
-          // markers.push(marker);
-
-    // var mape = map.instance;
-    //       mape.setCenter(marker.getPosition());
-
-      // });
-
 
       // Search box value changes
       google.maps.event.addListener(searchBox, 'places_changed', function(m) {
 
         function geocodeLatLng(geocoder, map, information) {
           var geocoder = new google.maps.Geocoder();
-          console.log(google.maps.GeocoderStatus.OK);
 
           var userlat = Session.get('userlat');
           var userlng = Session.get('userlng');

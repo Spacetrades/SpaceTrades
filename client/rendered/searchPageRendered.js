@@ -23,7 +23,6 @@ if (Meteor.isClient) {
                 var key = e.which;
                 if (key == 13) {
                     var search = $("." + elem).val();
-                    console.log(search);
                     var options = {
                         search: search
                     }

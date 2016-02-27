@@ -12,8 +12,9 @@ if (Meteor.isClient) {
 				}
 
 				else {
-					var lat = 40.7127;
-					var lng = 74.0059;
+				   var lat = Geolocation.latLng().lat;
+           var lng = Geolocation.latLng().lng;
+
 				}
 
 

@@ -43,7 +43,6 @@ if (Meteor.isClient) {
         // Trades: $("input[type='radio']:checked").val()
         // SellerRating: 'red'
       }
-      console.log(refineOptions);
       btnSearch(refineOptions);
     },
     'mouseup .searchRefineCategories li input': function(event) {
@@ -54,12 +53,9 @@ if (Meteor.isClient) {
         'Other': ['Other']
       }
 
-      console.log(event);
       var clickedValue = event.target.value;
       var checkedStatus = event.target.checked;
       var typesList = categories[clickedValue];
-
-      console.log(checkedStatus);
 
       _.each(typesList, function(type) {
 
