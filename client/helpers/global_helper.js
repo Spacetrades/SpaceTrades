@@ -80,7 +80,7 @@ if (Meteor.isClient) {
       return Meteor.userId();
     });
     Template.registerHelper('Notification', function() {
-      return Notification.find();
+      return Notification.find({},{ sort: {createdAt: -1} } );
     });
 
     Template.registerHelper('chatCountUnread', function() {
