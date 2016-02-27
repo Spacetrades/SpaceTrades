@@ -61,8 +61,6 @@ if (Meteor.isClient) {
 					Session.set("offerlatlist", offerlat);
 					Session.set("offerlnglist", offerlng);
 
-					console.log(offerlat, offerlng);
-
 					var mape = map.instance;
 					mape.setCenter(marker.getPosition());
 

@@ -48,7 +48,6 @@ if (Meteor.isClient) {
 
         function geocodeLatLng(geocoder, map, information) {
           var geocoder = new google.maps.Geocoder();
-          console.log(google.maps.GeocoderStatus.OK);
 
           var userlat = Session.get('userlat');
           var userlng = Session.get('userlng');

@@ -31,7 +31,6 @@ ListingSearch.search( search );
 			}
 		},
 		'click .modLocationRadiusTrigger': function() {
-       console.log("click");
       GoogleMaps.ready();
 			// getLocation();
 		GoogleMaps.load({

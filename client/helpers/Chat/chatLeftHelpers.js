@@ -27,7 +27,6 @@ if (Meteor.isClient) {
         funk.push(x.conversation)
       });
       convos = _.uniq(funk);
-      console.log(convos);
       return convos
 
     },
@@ -43,7 +42,6 @@ if (Meteor.isClient) {
         var you = Meteor.userId();
 
         var other = you == sender ? receiver : sender;
-        console.log(other);
 
       });
       return other

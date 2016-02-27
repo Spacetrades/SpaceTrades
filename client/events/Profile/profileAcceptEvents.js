@@ -74,17 +74,17 @@ Meteor.call('reminderNotify', reminderOptions);
 Meteor.call('feedbackNotify', feedbackOptions);
 
       // Reminder Notification
-      Meteor.setTimeout(function() {
-        sAlert.success("Reminder");
-        Meteor.call('pulseNotify', reminderOptions);
-      }, reminderTime);
+      // Meteor.setTimeout(function() {
+      //   sAlert.success("Reminder");
+      //   Meteor.call('pulseNotify', reminderOptions);
+      // }, reminderTime);
 
       // Feedback Notification
-      Meteor.setTimeout(function() {
-        sAlert.success("Fill out Feedback");
-        Meteor.call('pulseNotify', feedbackOptions);
-        Meteor.call('transferListing', feedbackOptions);
-      }, delayTime);
+      // Meteor.setTimeout(function() {
+      //   sAlert.success("Fill out Feedback");
+      //   Meteor.call('pulseNotify', feedbackOptions);
+      //   Meteor.call('transferListing', feedbackOptions);
+      // }, delayTime);
 
     },
     'click #profileReceivedDecline': function() {

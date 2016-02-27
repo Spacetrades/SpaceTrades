@@ -10,7 +10,6 @@ if (Meteor.isClient) {
 				var options = {
 					search: search
 				}
-				console.log(options);
 				ListingSearch.search(search);
 			}
 		});

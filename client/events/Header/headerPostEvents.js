@@ -6,7 +6,6 @@ if (Meteor.isClient) {
 		},
     'click .modLocationRadiusTrigger': function(){
       GoogleMaps.ready();
-      console.log("click");
     },
     'click .notificationBody': function(){
 

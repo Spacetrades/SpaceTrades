@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-    Template.ModalOfferRequest.onCreated(function() {
+    Template.mapModal.onCreated(function() {
         GoogleMaps.ready('offerImage', function(map) {
             var markers = [];
             var input = $("#pac-input")[0];
@@ -29,8 +29,6 @@ if (Meteor.isClient) {
         });
 
             google.maps.event.addListener(searchBox, 'places_changed', function(m) {
-
-            	console.log("changed");
                 var places = searchBox.getPlaces();
                 if (places.length == 0) {
                     return;
@@ -61,12 +59,9 @@ if (Meteor.isClient) {
                     });
 
                     markers.push(marker);
-                    // console.log(marker);
 
                     var offerlat = marker.position.lat();
                     var offerlng = marker.position.lng();
-
-                    // console.log(offerlat, offerlng);
 
                     Session.set("offerlat", offerlat);
                     Session.set("offerlng", offerlng);

@@ -2,6 +2,17 @@ if (Meteor.isClient) {
 
 	Template.ModalAddListing.events({
 		'click .add': function(options) {
+
+  var color = $("#colorpicker").val();
+
+          Meteor.call('colorName', color, function(err, result) {
+          if (!err) {
+              Session.set('colorName', result);
+          }
+
+          return result
+        });
+
 			var options = {
 				// User Info
 				creator_id: Meteor.userId(),
@@ -22,6 +33,7 @@ if (Meteor.isClient) {
 				size: $(".listsize option:selected").val() || $(".listcapacity option:selected").val(),
 				// Information
 				condition: $(".condition option:selected").val(),
+        color : Session.get('colorName'),
 				description: $(".listdescription").val(),
 				// Location
 				lat: Meteor.user().profile.lat,
@@ -70,23 +82,8 @@ if (Meteor.isClient) {
 
 			if (addListingValidate()) {
 
-      var color = $("#colorpicker").val();
-
-          Meteor.call('colorName', color, function(err, result) {
-          if (!err) {
-            console.log(result);
-            options.color = result;
-          }
-
-          return result
-        });
-
-          console.log(options)
-
 
         Meteor.call('addListing', options);
-
-        // console.log(options.urlKey);
 
         // var newUrl = Listing.find({urlKey: options.urlKey}).fetch();
         // console.log(newUrl);
