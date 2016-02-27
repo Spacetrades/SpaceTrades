@@ -1,6 +1,6 @@
 if (Meteor.isClient){
+
 	Template.ProfileActive.helpers({
-		// TODO: Select Accepted listings that are of the users own id or have the acceptedOffer of the users offer
 
 		meetup: function () {
 			var offerid = this.offerAccepted;
@@ -20,4 +20,5 @@ if (Meteor.isClient){
 			return Boolean(result.count());
 		}
 	});
+
 }
