@@ -10,6 +10,11 @@ if (Meteor.isClient) {
     //  $('.imgBreak').error( function(){
     //   $(this).attr('src', 'default-item-img.jpg');
     // });
+    //
+
+    if (!Meteor.userId()){
+     $("button[data-target]").attr("data-target", "#JoinModal")
+    }
 
     $.fn.extend({
       animateCss: function(animationName) {

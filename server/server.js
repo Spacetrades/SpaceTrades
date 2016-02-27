@@ -347,6 +347,10 @@ if (Meteor.isServer) {
         status: options.status
       });
     },
+    /*
+     * @summary Edit listing
+     * @locus Server
+     */
     updateListing: function(options) {
       Listing.update({
         _id: options.id
@@ -382,6 +386,57 @@ if (Meteor.isServer) {
         destination: options.destination,
         listing_creator_id: options.listing_creator_id
       });
+    },
+    /*
+     * @summary Send reminder notification
+     * @locus Server
+     */
+    reminderNotify: function(reminderOptions) {
+
+      Meteor.setTimeout(function() {
+
+        Notification.insert({
+          createdAt: new Date(),
+          action: reminderOptions.action,
+          listing_title: reminderOptions.listing_title,
+          offer_price: reminderOptions.offerprice,
+          creator_id: reminderOptions.creator_id,
+          creator_name: reminderOptions.creator_name,
+          listingId: reminderOptions.listingId,
+          destination: reminderOptions.destination,
+          listing_creator_id: reminderOptions.listing_creator_id
+        });
+
+      }, reminderOptions.delay);
+    },
+    /*
+     * @summary Send feedback notification and Transfer
+     * @locus Server
+     */
+    feedbackNotify: function(feedbackOptions) {
+
+      Meteor.setTimeout(function() {
+        Notification.insert({
+          createdAt: new Date(),
+          action: feedbackOptions.action,
+          listing_title: feedbackOptions.listing_title,
+          offer_price: feedbackOptions.offerprice,
+          creator_id: feedbackOptions.creator_id,
+          creator_name: feedbackOptions.creator_name,
+          listingId: feedbackOptions.listingId,
+          destination: feedbackOptions.destination,
+          listing_creator_id: feedbackOptions.listing_creator_id
+        });
+
+        Listing.update({
+          _id: feedbackOptions.listingId
+        }, {
+          $set: {
+            status: "Completed"
+          }
+        });
+
+      }, feedbackOptions.delay);
     },
     /*
      * @summary Set Location
@@ -527,11 +582,12 @@ if (Meteor.isServer) {
      * @locus Server
      */
     ipLocate: function() {
-      return HTTP.get("http://ipinfo.io", function(error, result) {
+      HTTP.get("http://ipinfo.io", function(error, result) {
         var place = JSON.parse(result.content);
-        var city = place.city;
-        var state = place.region;
+        city = place.city;
+        state = place.region;
       });
+        return [city,state];
     },
     /*
      * @summary Get color

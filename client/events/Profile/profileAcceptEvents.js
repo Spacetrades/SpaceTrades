@@ -53,7 +53,8 @@ if (Meteor.isClient) {
           listingId: offerBlock.listingId,
           destination: [offerBlock.creator_id, Meteor.userId()],
           seller_id: Meteor.userId(),
-          buyer_id: offerBlock.creator_id
+          buyer_id: offerBlock.creator_id,
+          delay: delayTime
         }
 
           var reminderOptions = {
@@ -66,8 +67,11 @@ if (Meteor.isClient) {
           listingId: offerBlock.listingId,
           destination: [offerBlock.creator_id, Meteor.userId()],
           seller_id: Meteor.userId(),
-          buyer_id: offerBlock.creator_id
+          buyer_id: offerBlock.creator_id,
+          delay : reminderTime
         }
+Meteor.call('reminderNotify', reminderOptions);
+Meteor.call('feedbackNotify', feedbackOptions);
 
       // Reminder Notification
       Meteor.setTimeout(function() {
@@ -81,9 +85,6 @@ if (Meteor.isClient) {
         Meteor.call('pulseNotify', feedbackOptions);
         Meteor.call('transferListing', feedbackOptions);
       }, delayTime);
-
-      console.log(reminderTime);
-      console.log(delayTime);
 
     },
     'click #profileReceivedDecline': function() {
