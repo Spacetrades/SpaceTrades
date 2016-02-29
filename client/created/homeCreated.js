@@ -10,6 +10,22 @@
        Session.set('locate', string);
      })
 
+     var self = this
+
+     Tracker.autorun(function () {
+      self.me = new ReactiveVar(1242);
+console.log(Template.instance().me.get())
+     });
+
+console.log(Template.currentData())
+
+
+// Tracker.autorun(function(){
+
+  // Session.set('selfId', Meteor.userId());
+  // Session.set('selfPic', Meteor.user().profile.picturesm);
+
+// })
 
      // var self = this;
      //    self.myAsyncValue = new ReactiveVar("Waiting for response from server...");

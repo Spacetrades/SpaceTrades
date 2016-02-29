@@ -11,6 +11,14 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.registerHelper('profile', function() {
+    if (Meteor.userId()) {
+      return Meteor.userId();
+    } else {
+      return 12312312
+    }
+  });
+
   Template.registerHelper('current', function() {
     return Router.current().path;
   });
@@ -26,10 +34,6 @@ if (Meteor.isClient) {
     var min = diff - 4 + " minutes ago"
 
     return min
-  });
-
-  Template.registerHelper('timeLeft', function() {
-
   });
 
   Template.registerHelper('nameLookup', function(idParam) {
@@ -57,57 +61,47 @@ if (Meteor.isClient) {
   });
 
   // L1
-  if (Meteor.userId()) {
 
 
-    // Template.registerHelper('nameLookup', function(id) {
-    //  return Meteor.users.find({_id: id}).fetch()[0].profile.name;
-    // });
-    _
-    Template.registerHelper('usernameCurrent', function() {
-      return Meteor.user().profile.name.split(" ")[0];
-    });
+  // Template.registerHelper('nameLookup', function(id) {
+  //  return Meteor.users.find({_id: id}).fetch()[0].profile.name;
+  // });
+  _
+  Template.registerHelper('usernameCurrent', function() {
+    return Meteor.user().profile.name.split(" ")[0];
+  });
 
-    Template.registerHelper('picture', function() {
-      return Meteor.user().profile.picturelrg;
-    });
+  Template.registerHelper('picture', function() {
+    return Meteor.user().profile.picturelrg;
+  });
 
-    Template.registerHelper('picturesmall', function() {
-      return Meteor.user().profile.picturesm;
-    });
+  Template.registerHelper('picturesmall', function() {
+    return Meteor.user().profile.picturesm;
+  });
 
-    Template.registerHelper('profile', function() {
-      return Meteor.userId();
-    });
-    Template.registerHelper('Notification', function() {
-      return Notification.find({},{ sort: {createdAt: -1} } );
-    });
-
-    Template.registerHelper('chatCountUnread', function() {
-      // From each user, if messages oustanding are unread, +1 for every DIFFERENT user
-      return Message.find({
-        receiver: Meteor.userId()
-      }).count();
-    });
-
-    if (Session.get('offerSelected')) {
-
-      Template.registerHelper('nameOfferer', function() {
-        return Meteor.users.find({
-          _id: Session.get('offerSelected').creator_id
-        }).fetch()[0].profile.name;
-      });
-
-    }
-
-    // The user that has created the listing that has permissions to edit and delete the listing
-    // Check to see if the user of the item page matches the current user
-    Template.registerHelper('KnightedUser', function() {
-      if (id == Meteor.userId()) {
-        return true;
+  Template.registerHelper('Notification', function() {
+    return Notification.find({}, {
+      sort: {
+        createdAt: -1
       }
-      return false;
+    });
+  });
+
+  Template.registerHelper('chatCountUnread', function() {
+    // From each user, if messages oustanding are unread, +1 for every DIFFERENT user
+    return Message.find({
+      receiver: Meteor.userId()
+    }).count();
+  });
+
+  if (Session.get('offerSelected')) {
+
+    Template.registerHelper('nameOfferer', function() {
+      return Meteor.users.find({
+        _id: Session.get('offerSelected').creator_id
+      }).fetch()[0].profile.name;
     });
 
   }
+
 }
