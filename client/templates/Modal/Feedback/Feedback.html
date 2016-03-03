@@ -1,0 +1,222 @@
+<template name="ModalFeedbackInitial">
+    {{#with feedbackScope}}
+    <div class="modFeedbackInitialDialog modal-dialog">
+        <div class="modFeedbackInitialContent modal-content">
+            <div class="modFeedbackInitialDiv modFeedbackDivInitialOne modal-body step step-1">
+                <div class="modFeedbackInitialPageOne">
+                    <h2>Did This Meetup Happen?</h2>
+                    <ul class="modFeedbackInitialPageOneUl">
+                        <li><button type="button" class="btn btn-primary step step-1 yes" data-step="1" onclick="feedbackInitialBuyerJump3()">Yes</button></li>
+                        <li><button type="button" class="btn btn-primary step step-1 no" data-step="1" onclick="feedbackInitialBuyerJump2()">No</button></li>
+                    </ul>
+                    <ul class="modFeedbackInitialPageOneItem">
+                        <li class="modFeedbackInitialPageOneItemLeft">
+                            <ul>
+                                <li><img src="{{img1}}"></li>
+                            </ul>
+                        </li>
+                        <li class="modFeedbackInitialPageOneItemRight">
+                            <ul>
+                                <li><b>{{listing_title}}</b></li>
+                                <li>You met-up with <a href="{{idOther}}">{{nameOther}}</a></li>
+                                <li><b>Final Price:</b>    <span class="money">${{offerprice}}</span></li>
+                                <li><b>Payment:</b>        <span>{{payment}}</span></li>
+                                <li><b>Date Of Meetup:</b> <span>{{date}}</span></li>
+                                <li><b>Location:</b>       <span>{{location}}</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modFeedbackInitialDiv modFeedbackDivInitialTwo modal-body step step-2">
+                <div class="modFeedbackInitialPageTwo">
+                    <h2>Are You Sure You Want To Continue?</h2>
+                    <ul>
+                        <li>Only go through with this if the meetup did not happen</li>
+                        <li>Ex. The person flaked, You couldn't find each other, etc.</li>
+                        <li>There was no meetup</li>
+                        <li>WARNING: Lying on feedback can lead to a ban</li>
+                        <li>Only go through with this if the meetup was unsuccessful</li>
+                        <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                        <li>Things didn't go the way they were supposed to</li>
+                        <li>WARNING: Lying on feedback can lead to a ban</li>
+                        <li>Only go through with this if the meetup was unsuccessful</li>
+                        <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                        <li>Things didn't go the way they were supposed to</li>
+                        <li>WARNING: Lying on feedback can lead to a ban</li>
+                    </ul>
+                </div>
+                <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnFeedbackInitialSix">
+                    <button type="button" class="btn btn-primary step step-2 modalBack">Back</button>
+                    <button type="button" class="btn btn-primary step step-2 modalNext notNex
+                    " >Continue</button>
+                </div>
+            </div>
+            <div class="modFeedbackInitialDiv modFeedbackDivInitialThree modal-body step step-3">
+                <div class="modFeedbackInitialPageThree">
+                    <h2>How Was It?</h2>
+                    <ul class="modFeedbackInitialPageThreeUl">
+                        <li><button class="btn btn-primary step step-3 success" >Successful</button></li>
+                        <li><button type="button" class="btn btn-primary step step-3 nosuccess">Unsuccessful</button></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- STEP 4 IS MISSING BECAUSE IT REFUSES TO WORK | KEEP AS IS -->
+            <div class="modFeedbackInitialDiv modFeedbackDivInitialFive modal-body step step-5">
+                <div class="modFeedbackInitialPageFive">
+                    <h2>We're Sorry To Hear That</h2>
+                    <p>Here's what you can do</p> 
+                    <ul>
+                      <li>You can report <a href="{{idOther}}">{{nameOther}}</a></li>
+                  </ul>
+                  <p>Please be specific in the feedback</p>
+                  <p>If you report, please include all the details</p>
+                  <ul class="modFeedbackInitialPageFiveUl">
+                      <li>
+                        <button class="btn btn-primary step step-5" data-step="5" data-dismiss="modal" data-toggle="modal" data-target="#feedbackSellerUnsuccessfulModal">Feedback</button>
+                    </li>
+                    <li><a href="/help/report">Report</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="modFeedbackInitialDiv modFeedbackDivInitialSix modal-body step step-6">
+            <div class="modFeedbackInitialPageSix">
+                <h2>Are You Sure You Want To Continue?</h2>
+                <ul>
+                    <li>Only go through with this if the meetup was unsuccessful</li>
+                    <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                    <li>Things didn't go the way they were supposed to</li>
+                    <li>WARNING: Lying on feedback can lead to a ban</li>
+                    <li>Only go through with this if the meetup was unsuccessful</li>
+                    <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                    <li>Things didn't go the way they were supposed to</li>
+                    <li>WARNING: Lying on feedback can lead to a ban</li>
+                    <li>Only go through with this if the meetup was unsuccessful</li>
+                    <li>Ex. You met up but a sale was not made, you were robbed/assulted, etc.</li>
+                    <li>Things didn't go the way they were supposed to</li>
+                    <li>WARNING: Lying on feedback can lead to a ban</li>
+                </ul>
+            </div>
+            <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnFeedbackInitialSix">
+                <button type="button" class="btn btn-primary step step-6 modalBack" data-step="6" onclick="feedbackInitialBuyerJump3()">Back</button>
+                <button type="button" class="btn btn-primary step step-6 modalNext" data-step="6" onclick="feedbackInitialBuyerJump5()">Continue</button>
+            </div>
+        </div>
+        <div class="modFeedbackInitialDiv modFeedbackDivInitialSeven modal-body step step-7">
+            <div class="modFeedbackInitialPageSeven">
+                <h2>Aren't Flakers The Worst!</h2>
+                <p>We've All Been There :(</p>
+                <p>Luckily There Are Many Things You Can Do On SpaceTrades</p>
+                <p>You Can Report Yusuf Bagha</p>
+                <p>You Can Give Feedback</p>
+                <p>Bad Behavior Is Not Tolerated</p>
+                <ul class="modFeedbackInitialPageSevenUl">
+                    <li><button class="btn btn-primary step step-7" data-step="7" data-dismiss="modal" data-toggle="modal" data-target="#feedbackBuyerNeverModal">Continue Feedback</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="modFeedbackDiv modFeedbackDivOne modal-body step step-8">
+            <div class="modFeedbackPageOne">
+                <ul>
+                    <li>
+                        <h4>Purchase Satisfaction</h4>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
+                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"></label>
+                        </fieldset> 
+                        <br>
+                        <h4>Item As Described</h4>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5-1" name="rating-1" value="5" /><label class = "full" for="star5-1"></label>
+                            <input type="radio" id="star4half-1" name="rating-1" value="4 and a half" /><label class="half" for="star4half-1"></label>
+                            <input type="radio" id="star4-1" name="rating-1" value="4" /><label class = "full" for="star4-1"></label>
+                            <input type="radio" id="star3half-1" name="rating-1" value="3 and a half" /><label class="half" for="star3half-1"></label>
+                            <input type="radio" id="star3-1" name="rating-1" value="3" /><label class = "full" for="star3-1"></label>
+                            <input type="radio" id="star2half-1" name="rating-1" value="2 and a half" /><label class="half" for="star2half-1"></label>
+                            <input type="radio" id="star2-1" name="rating-1" value="2" /><label class = "full" for="star2-1"></label>
+                            <input type="radio" id="star1half-1" name="rating-1" value="1 and a half" /><label class="half" for="star1half-1"></label>
+                            <input type="radio" id="star1-1" name="rating-1" value="1" /><label class = "full" for="star1-1"></label>
+                            <input type="radio" id="starhalf-1" name="rating-1" value="half" /><label class="half" for="starhalf-1"></label>
+                        </fieldset>
+                        <br>
+                    </li>
+                    <li>
+                        <h4>Meetup Efficiency</h4>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5-2" name="rating-2" value="5" /><label class = "full" for="star5-2"></label>
+                            <input type="radio" id="star4half-2" name="rating-2" value="4 and a half" /><label class="half" for="star4half-2"></label>
+                            <input type="radio" id="star4-2" name="rating-2" value="4" /><label class = "full" for="star4-2"></label>
+                            <input type="radio" id="star3half-2" name="rating-2" value="3 and a half" /><label class="half" for="star3half-2"></label>
+                            <input type="radio" id="star3-2" name="rating-2" value="3" /><label class = "full" for="star3-2"></label>
+                            <input type="radio" id="star2half-2" name="rating-2" value="2 and a half" /><label class="half" for="star2half-2"></label>
+                            <input type="radio" id="star2-2" name="rating-2" value="2" /><label class = "full" for="star2-2"></label>
+                            <input type="radio" id="star1half-2" name="rating-2" value="1 and a half" /><label class="half" for="star1half-2"></label>
+                            <input type="radio" id="star1-2" name="rating-2" value="1" /><label class = "full" for="star1-2"></label>
+                            <input type="radio" id="starhalf-2" name="rating-2" value="half" /><label class="half" for="starhalf-2"></label>
+                        </fieldset>
+                        <br>
+                        <h4>Price Negotiation</h4>
+                        <fieldset class="rating">
+                            <input type="radio" id="star5-3" name="rating-3" value="5" /><label class = "full" for="star5-3"></label>
+                            <input type="radio" id="star4half-3" name="rating-3" value="4 and a half" /><label class="half" for="star4half-3"></label>
+                            <input type="radio" id="star4-3" name="rating-3" value="4" /><label class = "full" for="star4-3"></label>
+                            <input type="radio" id="star3half-3" name="rating-3" value="3 and a half" /><label class="half" for="star3half-3"></label>
+                            <input type="radio" id="star3-3" name="rating-3" value="3" /><label class = "full" for="star3-3"></label>
+                            <input type="radio" id="star2half-3" name="rating-3" value="2 and a half" /><label class="half" for="star2half-3"></label>
+                            <input type="radio" id="star2-3" name="rating-3" value="2" /><label class = "full" for="star2-3"></label>
+                            <input type="radio" id="star1half-3" name="rating-3" value="1 and a half" /><label class="half" for="star1half-3"></label>
+                            <input type="radio" id="star1-3" name="rating-3" value="1" /><label class = "full" for="star1-3"></label>
+                            <input type="radio" id="starhalf-3" name="rating-3" value="half" /><label class="half" for="starhalf-3"></label>
+                        </fieldset>
+                    </li>
+                </ul>
+                <br>
+            </div>
+            <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackOne">
+                <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1">Submit</button>
+            </div>
+        </div>
+        <div class="modFeedbackDiv modFeedbackDivTwo modal-body step step-9">
+            <div class="modFeedbackPageTwo">
+                        <!-- <div class="modFeedbackPageTwo1">
+                            <h2>Overall Experience</h2>
+                            <ul>
+                                <li>
+                                    <input type="radio" id="feedbackPositive" name="feedbackOverall" value="Positive" checked/>
+                                    <label for="feedbackPositive">Positive</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="feedbackNeutral" name="feedbackOverall" value="Neutral" />
+                                    <label for="feedbackNeutral">Neutral</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="feedbackNegative" name="feedbackOverall" value="Negative"/>
+                                    <label for="feedbackNegative">Negative</label>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <div class="modFeedbackPageTwo2">
+                            <h2>Tell Us More</h2>
+                            <ul>
+                                <li><textarea type="text" placeholder="Write a description about your experience!"></textarea></li>
+                            </ul>
+                        </div>  
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackTwo">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="feedbackBuyerPrimaryJump1()">Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalSubmitBtn" data-step="2"><input type="submit" class="" value="Send"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Each Multi Step Modal Has It's Own Triggers -->
+        {{/with}}
+    </template>
