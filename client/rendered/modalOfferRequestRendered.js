@@ -23,7 +23,6 @@ if (Meteor.isClient) {
       // SET Abstract meetup time
       var meetupTime = moment(options.date);
       meetupTime.hours(options.hourTime);
-      console.log(meetupTime);
 
       options.meetupTime = meetupTime;
       // SET Concrete difference delay

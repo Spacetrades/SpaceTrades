@@ -23,7 +23,7 @@ if (Meteor.isClient) {
         creator_id: offerBlock.creator_id,
         offer_creator_name: offerBlock.creator_name,
         creator_name: Meteor.user().profile.name,
-        time: offerBlock.date,
+        time: offerBlock.meetupTime,
         offer_id: offerBlock._id,
         listingId: offerBlock.listingId,
         listing_creator_id: offerBlock.listing_creator_id,
@@ -53,7 +53,8 @@ if (Meteor.isClient) {
           listingId: offerBlock.listingId,
           destination: [offerBlock.creator_id, Meteor.userId()],
           seller_id: Meteor.userId(),
-          buyer_id: offerBlock.creator_id
+          buyer_id: offerBlock.creator_id,
+          delay: delayTime
         }
 
           var reminderOptions = {
@@ -66,24 +67,24 @@ if (Meteor.isClient) {
           listingId: offerBlock.listingId,
           destination: [offerBlock.creator_id, Meteor.userId()],
           seller_id: Meteor.userId(),
-          buyer_id: offerBlock.creator_id
+          buyer_id: offerBlock.creator_id,
+          delay : reminderTime
         }
+Meteor.call('reminderNotify', reminderOptions);
+Meteor.call('feedbackNotify', feedbackOptions);
 
       // Reminder Notification
-      Meteor.setTimeout(function() {
-        sAlert.success("Reminder");
-        Meteor.call('pulseNotify', reminderOptions);
-      }, reminderTime);
+      // Meteor.setTimeout(function() {
+      //   sAlert.success("Reminder");
+      //   Meteor.call('pulseNotify', reminderOptions);
+      // }, reminderTime);
 
       // Feedback Notification
-      Meteor.setTimeout(function() {
-        sAlert.success("Fill out Feedback");
-        Meteor.call('pulseNotify', feedbackOptions);
-        Meteor.call('transferListing', feedbackOptions);
-      }, delayTime);
-
-      console.log(reminderTime);
-      console.log(delayTime);
+      // Meteor.setTimeout(function() {
+      //   sAlert.success("Fill out Feedback");
+      //   Meteor.call('pulseNotify', feedbackOptions);
+      //   Meteor.call('transferListing', feedbackOptions);
+      // }, delayTime);
 
     },
     'click #profileReceivedDecline': function() {

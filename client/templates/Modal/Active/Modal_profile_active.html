@@ -1,14 +1,14 @@
 <template name="ModalProfileActive">
+	<!-- Modal -->
 <form class="modSentOffer modal" id="ModalProfileActive">
 {{#with scope}}
-	<!-- <div class="modSentOffer modal" id="ModalProfileActive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
-	  <div class="modSentOfferDialog modal-dialog" role="document">
+	  <div class="modSentOfferDialog modal-dialog">
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
 		        <ul class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="#">{{nameOther}}</a> is in {{timeUntil}}</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="{{idOther}}" data-dismiss="modal">{{nameOther}}</a> is in  {{timeUntil}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
 		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
@@ -19,10 +19,10 @@
                         	<li id="profileReceivedName" class="profileReceivedName">You are exchanging this item for <span class="money">${{price}}</span></li>
 		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDetails">Meetup Details</button></li><!-- 
 		                    <li class="modProfileActiveBtn"><button href="#" data-toggle="modal" data-target="#ModalProfileActiveDirections">Get Directions</button></li> -->
-		                    <li class="modProfileActiveBtn"><button href="{{chatId}}">Chat</button></li>
+		                    <li class="modProfileActiveBtn"><a href="{{chatId}}">Chat</a></li>
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
-		                    {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+		          <!--           {{> googleMap name="itemoffermap" options=ItemOfferOptions}} -->
 		                </div>
 		            </li>
 		        </ul>
@@ -30,7 +30,6 @@
 	      </div>
 	    </div>
 	  </div> 
-<!-- 	</div> -->
 	{{/with}}
 	</form>
 </template>

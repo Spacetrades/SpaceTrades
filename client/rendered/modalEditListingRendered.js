@@ -10,8 +10,7 @@ if (Meteor.isClient){
       }
 try {
 
-var selected = Session.get("listingSelected").category || Session.get("scope").category;
-console.log(selected);
+var selected = Session.get("scope").category;
 
       _.each(brands[selected], function(val){
         $("<option>" + val + "</option>").appendTo('.brandSelect');
@@ -20,10 +19,8 @@ console.log(selected);
 }
 
 catch(e){
-  console.log("oh no");
 
   var selected = Session.get("listingSelected").category || this.data;
-console.log(selected);
 }
 
   });

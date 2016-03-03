@@ -1,5 +1,32 @@
 if (Meteor.isClient) {
 	Template.ModalAddListing.onCreated(function() {
+
+    addListingJump1 = function() {
+      $(".step-2").show()
+       $(".step-1").hide()
+       console.log("Asd");
+    }
+    addListingJump2 = function() {
+      $(".step-2").hide()
+      $(".step-3").show()
+    }
+    addListingJump3 = function() {
+      $(".step-3").hide()
+      $(".step-4").show()
+    }
+    addListingJump4 = function() {
+      $(".step-4").hide()
+      $(".step-5").show()
+    }
+    addListingJump5 = function() {
+      $(".step-5").hide()
+      $(".step-6").show()
+    }
+    addListingJump6 = function() {
+      $(".step-6").hide()
+      $(".step-7").show()
+    }
+
 		GoogleMaps.ready('addListingImage', function(map) {
 			var markers = [];
 			var input = $("#pac-input")[0];
@@ -60,8 +87,6 @@ if (Meteor.isClient) {
 
 					Session.set("offerlatlist", offerlat);
 					Session.set("offerlnglist", offerlng);
-
-					console.log(offerlat, offerlng);
 
 					var mape = map.instance;
 					mape.setCenter(marker.getPosition());

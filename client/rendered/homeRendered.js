@@ -3,7 +3,6 @@ if (Meteor.isClient) {
     Template.home.onRendered(function() {
 
         $('homeCardImg').error( function(){
-          console.log("broken");
           this.attr('src', 'default-item-img.jpg');
         });
 

@@ -35,11 +35,14 @@ if (Meteor.isClient) {
 			catChoice("catPants");
 		},
 		'click .catJacket': function() {
-			catChoice("catJacket");
+			catChoice("catJackets");
 		},
 		'click .catJeans': function() {
 			catChoice("catJeans");
 		},
+    'click .catTees': function() {
+      catChoice("catTees");
+    },
 		'click .catShorts': function() {
 			catChoice("catShorts");
 		},

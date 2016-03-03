@@ -1,27 +1,28 @@
-<!-- This modal can be accessed from History | Post Auth -->
 <template name="ModalHistoryDetails">
 	<!-- Modal -->
-	<div class="modSentOffer modal" id="historyDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<form class="modSentOffer modal" id="historyDetailsModal">
+	{{#with scope}}
+<!-- 	<div class="modSentOffer modal" id="historyDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
 	  <div class="modSentOfferDialog modal-dialog" role="document">
 	    <div class="modSendOfferContent modal-content">
 	      <div class="modSentOfferBody modal-body">
 	      	<div class="profileReceivedOffers">
 		        <ul id="profileReceivedModalUl" class="profileReceivedUl">
 		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
-		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Met On Aug 19, 2015</p>
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">{{dateFormatted}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
-		                        <a href="/listing/{{listingId}}"><img src="{{img}}" class="profileReceivedImg"></a>
+		                        <a href="/listing/{{otherId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
 		                    </li>
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
 		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
-		                    <li id="profileReceivedName" class="profileReceivedName">You bought from <a href="/profile/{{creator_id}}">{{creator}}</a></li>
-		                    <li class="profileReceivedPrice"><b>Final Price:</b> <span class="money">{{offerprice}}</span></li>
-		                    <li class="profileReceivedPayment"><b>Payment:</b> Paypal</li>
+		                    <li id="profileReceivedName" class="profileReceivedName">You bought from <a href="/profile/{{idOther}}">{{nameOther}}</a></li>
+		                    <li class="profileReceivedPrice"><b>Final Price:</b><span class="money">${{offerprice}}</span></li>
+		                    <li class="profileReceivedPayment"><b>Payment:</b> {{payment}}</li>
 		                    <li class="profileReceivedDate"><b>Condition:</b> {{condition}}</li>
 		                    <li class="profileReceivedDate"><b>Size:</b> {{size}}</li>
-		                    <li id="profileHistoryInitialFeedback"><button class="modFeedbackTrigger btn btn-default" data-toggle="modal" data-target="#feedbackBuyerInitialModal">Buyer Feedback</button></li>
+		                    <li id="profileHistoryInitialFeedback"><button class="modFeedbackTrigger btn btn-default" data-toggle="modal" data-target="#feedbackBuyerInitialModal">Fill Out Buyer Feedback</button></li>
 		                    <!--  I COMMENTED OUT SELLER FEEDBACK, USE ONLY ONE AT A TIME -->
 		                    <!-- <li id="profileHistoryInitialFeedback"><button class="modFeedbackTrigger btn btn-default" data-toggle="modal" data-target="#feedbackSellerInitialModal">Seller Feedback</button></li> -->
 		                    <!-- Give Feedback Or Inactive Button Feedback Given-->
@@ -36,5 +37,7 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
+<!-- 	</div> -->
+	{{/with}}
+	</form>
 </template>
