@@ -19,6 +19,15 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.registerHelper('locationFull', function(){
+    if (Meteor.userId()){
+    return Meteor.user().profile.locationString;
+  }
+  else {
+    return Session.get('locate');
+  }
+  });
+
   Template.registerHelper('current', function() {
     return Router.current().path;
   });
