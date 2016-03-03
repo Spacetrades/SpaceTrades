@@ -8,29 +8,42 @@
 	<ul class="chatRight">
 		<li class="chatTopSection">
 			<ul>
-			<li><h3><a href="">{{conversation}}</a></h3></li>
+				<li><h3><a href="">Mark Zuckerberg<!-- {{conversation}} --></a></h3></li>
 				<li>
-					<div class="circle" style="background-color:#24ec3d;"></div>
+					<!-- <div class="circle" style="background-color:#24ec3d;"></div> -->
+					<div class="circle" style="background-color: {{online.color}}"></div>
 				</li>
 			</ul>
 		</li>
 		<li class="chatMessages">
-			<div class="circle" style="background-color: {{online.color}}"></div>
 			{{#each messages}}
-			<ul class="chatUserSent">
-				<li>{{message}}</li>
+			<!-- <ul class="chatUserSent">
 				<li><a href=""><img src="{{pictureLookup idParam=sender}}"></a></li>
+				<li>{{message}}</li>
 				<span class="timestamp">{{createdAt}}</span>
 			</ul>
-			{{/each}}
+ -->
+ 			<ul class="chatUserSent">
+				<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+				<ul>
+					<li><h4>Yusuf Bagha</h4></li>
+					<li>
+						<ul>
+							<li>{{message}}</li>
+							<li><span class="timestamp">{{createdAt}}</span></li>
+						</ul>
+					</li>
+				</ul>
+			</ul>
+ 			{{/each}}
 		</li>
 		<li class="chatBottomSection">
 			<ul class="chatInputText">
 				<li><input type="text" class="chatText"></li>
 			</ul>
 			<ul class="chatSend">
-				<!-- <li><i class=" fa fa-paperclip"></i></li> -->
-				<input type="submit" class="chatSendButton" value="Send">
+				<li><i class=" fa fa-paperclip"></i></li>
+				<li><input type="submit" class="chatSendButton" value="Send"></li>
 			</ul>
 		</li>
 	</ul>

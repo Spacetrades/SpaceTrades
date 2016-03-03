@@ -6061,7 +6061,60 @@ textarea {
 
 /*** New Chat Css ***/
 
+.chatDiv > ul {
+    display: inline-block !important;
+}
 
+.chatLeft {
+    width: 25% !important;
+    vertical-align: top !important;
+}
+
+.chatRight {
+    width: 60% !important;
+}
+
+.chatPeople {
+    
+}
+
+.chatPerson {
+    padding: 10px 0 10px 20px!important;
+    border-top: 1px solid #d3d3d3 !important;
+}
+
+.chatPerson:first-child {
+    border-top: none !important;
+}
+
+.chatPerson li:nth-child(2) {
+    margin-left: 10px !important;
+}
+
+.chatPerson li:last-child {
+    margin-left: 5px !important;
+}
+
+.chatPerson > ul > li {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.chatPerson > ul > li > a > img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 2px !important;
+}
+
+.chatUserSent > li {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.chatUserSent > li > a > img {
+    width: 30px !important;
+    width: 30px !important;
+}
 
 /*** END END END ***/
 
