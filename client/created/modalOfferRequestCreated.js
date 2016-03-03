@@ -6,8 +6,8 @@ if (Meteor.isClient) {
             var input = $("#pac-input")[0];
             var submit = $("#offerRequestModalSubmit")[0];
             var searchBox = new google.maps.places.SearchBox((input));
-            var instance = GoogleMaps.maps.offerImage.instance;
-            instance.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(submit);
+            // var instance = GoogleMaps.maps.offerImage.instance;
+            // instance.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(submit);
 
             // var areaCircle = new google.maps.Circle({
             //     map: map.instance,
