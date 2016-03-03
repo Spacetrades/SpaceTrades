@@ -1,6 +1,6 @@
 <template name="chatLeft">
 	<ul class="chatLeft">
-		<li class="chatInbox">
+<!-- 		<li class="chatInbox">
 			<ul>
 				<li class="chatInboxTop">
 					<ul>
@@ -9,22 +9,67 @@
 					</ul>
 				</li>
 			</ul> 
-		</li>
+		</li> -->
 		{{#each conversations}}
 		<li class="chatPeople">
 			<ul>
 				<li class="chatPerson">
 					<ul>
-						<li><a href=""><img src="{{pictureLookup idParam=username}}"></a></li>
-						<li> <a href="/chat/{{conversations}}" class="profile-link">{{nameLookup idParam=username}}</a></li>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Edwardo Saverin</a></li>
 						<li><div class="circle" style="{{online}}"></div></li>
-						<!-- TASK - MAYBE - show a checked icon when meetup has been scheduled and hide on expiration -->
-						<!-- TASK - USE Message box cloud look around messages -->
-						<!-- TASK - ADD smart text autocomplete, locations, price... -->
+					</ul>
+				</li>
+				<li class="chatPerson">
+					<ul>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Harriot Tubman</a></li>
+						<li><div class="circle" style="{{online}}"></div></li>
+					</ul>
+				</li>
+				<li class="chatPerson">
+					<ul>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Mark Wahtney</a></li>
+						<li><div class="circle" style="{{online}}"></div></li>
+					</ul>
+				</li>
+				<li class="chatPerson">
+					<ul>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Nathan Chackerian</a></li>
+						<li><div class="circle" style="{{online}}"></div></li>
+					</ul>
+				</li>
+				<li class="chatPerson">
+					<ul>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Mark Zuckerberg</a></li>
+						<li><div class="circle" style="{{online}}"></div></li>
+					</ul>
+				</li>
+				<li class="chatPerson">
+					<ul>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Dustin Moscavitz</a></li>
+						<li><div class="circle" style="{{online}}"></div></li>
+					</ul>
+				</li>
+				<li class="chatPerson">
+					<ul>
+						<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+						<li><a href="/chat/{{conversations}}" class="profile-link">Yusuf Bagha</a></li>
+						<li><div class="circle" style="{{online}}"></div></li>
 					</ul>
 				</li>
 			</ul>
 		</li> 
 		{{/each}}
+		<!-- <li><a href=""><img src="{{pictureLookup idParam=username}}"></a></li>
+		<li> <a href="/chat/{{conversations}}" class="profile-link">{{nameLookup idParam=username}}</a></li>
+		<li><div class="circle" style="{{online}}"></div></li> -->
+		<!-- TASK - MAYBE - show a checked icon when meetup has been scheduled and hide on expiration -->
+		<!-- TASK - USE Message box cloud look around messages -->
+		<!-- TASK - ADD smart text autocomplete, locations, price... -->
 	</ul>
 </template>
