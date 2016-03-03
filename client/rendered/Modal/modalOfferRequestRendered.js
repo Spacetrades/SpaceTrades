@@ -2,6 +2,10 @@ if (Meteor.isClient) {
 
   Template.ModalOfferRequest.onRendered(function() {
 
+     for (i = 2; i < 7; i++) {
+      $(".step-" + i).hide()
+    }
+
     function setTimes() {
       // GET the time difference from now to the day and time
 

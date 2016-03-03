@@ -56,10 +56,6 @@ if (Meteor.isClient) {
     }).fetch()[0].profile.picturesm;
   });
 
-  Template.registerHelper('locationFull', function() {
-    return Session.get('locate');
-  });
-
   // L1
 
 
