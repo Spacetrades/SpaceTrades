@@ -1,4 +1,5 @@
 if (Meteor.isClient){
+
 	Template.ModalListingManager.events({
 		'click .editListing': function () {
       var url = "/listing/" + Session.get("listingSelected")._id + "/edit";
@@ -9,4 +10,5 @@ if (Meteor.isClient){
       $(".modal-backdrop").remove();
 		}
 	});
+
 }

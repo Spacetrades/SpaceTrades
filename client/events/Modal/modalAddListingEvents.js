@@ -43,15 +43,15 @@ if (Meteor.isClient) {
     },
     'click .add': function(options) {
 
-      var color = $("#colorpicker").val();
+      // var color = $("#colorpicker").val();
 
-      Meteor.call('colorName', color, function(err, result) {
-        if (!err) {
-          Session.set('colorName', result);
-        }
+      // Meteor.call('colorName', color, function(err, result) {
+      //   if (!err) {
+      //     Session.set('colorName', result);
+      //   }
 
-        return result
-      });
+      //   return result
+      // });
 
       var options = {
         // User Info
@@ -73,7 +73,7 @@ if (Meteor.isClient) {
         size: $(".listsize option:selected").val() || $(".listcapacity option:selected").val(),
         // Information
         condition: $(".condition option:selected").val(),
-        color: Session.get('colorName'),
+        // color: Session.get('colorName'),
         description: $(".listdescription").val(),
         // Location
         lat: Meteor.user().profile.lat,
