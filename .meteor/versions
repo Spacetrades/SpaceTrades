@@ -31,6 +31,7 @@ chart:chart@1.0.1-beta.4
 check@1.1.0
 chuangbo:cookie@1.1.0
 coffeescript@1.0.11
+dandv:jquery-rateit@1.0.22_2
 dburles:google-maps@1.1.5
 dburles:mongo-collection-instances@0.3.5
 ddp@1.2.2

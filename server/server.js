@@ -221,6 +221,32 @@ if (Meteor.isServer) {
         img3: options.img3
       });
     },
+    sendFeedbackSeller: function(options) {
+      Feedback.insert({
+        rater: options.rater,
+        rated: options.rated,
+        friendly_rate: options.friendly_rate,
+        efficiency_rate: options.efficiency_rate,
+        negotiatiate_rate: options.negotiatiate_rate,
+        comment_title: options.comment_title,
+        comment: options.comment,
+        // Diff
+        payment_rate: options.payment_rate
+      })
+    },
+    sendFeedbackBuyer: function(options) {
+      Feedback.insert({
+        rater: options.rater,
+        rated: options.rated,
+        friendly_rate: options.friendly_rate,
+        efficiency_rate: options.efficiency_rate,
+        negotiatiate_rate: options.negotiatiate_rate,
+        comment_title: options.comment_title,
+        comment: options.comment,
+        // Diff
+        described_rate: options.described_rate
+      })
+    },
     /*
      * @summary Transfer Listing to history
      * @locus Server
@@ -231,7 +257,8 @@ if (Meteor.isServer) {
         _id: options.listingId
       }, {
         $set: {
-          status: "Completed"
+          status: "Completed",
+          feedback_file: "Pending"
         }
       });
 
@@ -587,7 +614,7 @@ if (Meteor.isServer) {
         city = place.city;
         state = place.region;
       });
-        return [city,state];
+      return [city, state];
     },
     /*
      * @summary Get color

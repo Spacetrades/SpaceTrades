@@ -2,6 +2,7 @@ if (Meteor.isClient) {
 
 	Template.UserProfile.onRendered(function() {
 
+    $('.rateit').rateit();
         $(function () {
           $('.click-nav > ul').toggleClass('no-js js');
           $('.click-nav .js ul').hide();
