@@ -223,6 +223,8 @@ if (Meteor.isServer) {
     },
     sendFeedbackSeller: function(options) {
       Feedback.insert({
+        listing_id: options.listingId,
+        date: options.date,
         rater: options.rater,
         rated: options.rated,
         friendly_rate: options.friendly_rate,
@@ -233,9 +235,19 @@ if (Meteor.isServer) {
         // Diff
         payment_rate: options.payment_rate
       })
+      // mark feedback seller flag
+      Listing.update({
+        _id: options.listingId
+      }, {
+        $set: {
+          feedback_filed_seller: "Completed"
+        }
+      })
     },
     sendFeedbackBuyer: function(options) {
       Feedback.insert({
+        listing_id: options.listingId,
+        date: options.date,
         rater: options.rater,
         rated: options.rated,
         friendly_rate: options.friendly_rate,
@@ -245,6 +257,14 @@ if (Meteor.isServer) {
         comment: options.comment,
         // Diff
         described_rate: options.described_rate
+      })
+      // mark feedback buyer flag
+      Listing.update({
+        _id: options.listingId
+      }, {
+        $set: {
+          feedback_filed_buyer: "Completed"
+        }
       })
     },
     /*
@@ -258,7 +278,8 @@ if (Meteor.isServer) {
       }, {
         $set: {
           status: "Completed",
-          feedback_file: "Pending"
+          feedback_filed_seller: "Pending",
+          feedback_filed_buyer: "Pending"
         }
       });
 

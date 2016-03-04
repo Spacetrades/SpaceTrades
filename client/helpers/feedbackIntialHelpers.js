@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-  Template.ModalFeedbackIntial.helpers({
+  Template.ModalFeedbackInitial.helpers({
 
     isBuyer: function() {
       var seller = this.username;

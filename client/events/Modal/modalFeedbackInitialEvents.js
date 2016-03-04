@@ -44,7 +44,43 @@ if (Meteor.isClient) {
     },
     'click .sendFeedback': function() {
 
+
+      function validate() {
+        var status = true;
+        var keys = Object.keys(options);
+
+        for (i = 0; i < keys.length; i++) {
+          if (!options[keys[i]] || options[keys[i]] == "") {
+            status = false;
+            errorFields.push(keys[i]);
+          }
+        }
+
+        if (!status) {
+          sAlert.error("Review form");
+
+          _.each(errorFields, function(f) {
+            $("." + f).css("text-decoration", "underline");
+          });
+
+        }
+
+        return status;
+      }
+
+      function successMessage() {
+
+        sweetAlert({
+          title: "Feedback Filed",
+          type: "success",
+          timer: 3000,
+          showConfirmButton: false
+        });
+
+      }
+
       var options = {
+        listingId: this._id,
         rater: Meteor.user().profile.name,
         friendly_rate: $(".friendlyRate").rateit('value'),
         efficiency_rate: $(".efficiencyRate").rateit('value'),
@@ -52,6 +88,10 @@ if (Meteor.isClient) {
         comment_title: $("#listtitlebox").val(),
         comment: $(".feedbackComment").val()
       }
+
+      var date = this.date;
+      date = date.format("dddd, MMM DD");
+      options.date = date;
 
       var sellUniq = $(".describedRate").rateit('value');
       var buyUniq = $(".paymentRate").rateit('value');
@@ -68,13 +108,16 @@ if (Meteor.isClient) {
       console.log(this.username, this.offer_creator_name, options);
 
       options.rated = other;
+      if (validate()) {
 
-      if (Meteor.user().name == this.username) {
-        Meteor.call('sendFeedbackBuyer', options)
-      } else {
-        Meteor.call('sendFeedbackSeller', options)
+        successMessage()
+        if (Meteor.user().name == this.username) {
+          Meteor.call('sendFeedbackBuyer', options)
+        } else {
+          Meteor.call('sendFeedbackSeller', options)
+        }
+
       }
-
     }
 
   });

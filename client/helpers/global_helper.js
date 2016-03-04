@@ -3,7 +3,6 @@ if (Meteor.isClient) {
 
   // L0
   Template.registerHelper('mapRadius', function() {
-    // Check if user is logged in
     if (Meteor.userId()) {
       return Meteor.user().profile.mapRadius;
     } else {
@@ -63,12 +62,7 @@ if (Meteor.isClient) {
   });
 
   // L1
-
-
-  // Template.registerHelper('nameLookup', function(id) {
-  //  return Meteor.users.find({_id: id}).fetch()[0].profile.name;
-  // });
-  _
+  //
   Template.registerHelper('usernameCurrent', function() {
     return Meteor.user().profile.name.split(" ")[0];
   });
