@@ -243,6 +243,15 @@ if (Meteor.isServer) {
           feedback_filed_seller: "Completed"
         }
       })
+
+      Meteor.users.update({
+        _id: options.rated
+      }, {
+        $inc: {
+          reviewscount: 1,
+          amountbought: 1
+        }
+      })
     },
     sendFeedbackBuyer: function(options) {
       Feedback.insert({
@@ -264,6 +273,15 @@ if (Meteor.isServer) {
       }, {
         $set: {
           feedback_filed_buyer: "Completed"
+        }
+      })
+
+      Meteor.users.update({
+        _id: options.rated
+      }, {
+        $inc: {
+          reviewscount: 1,
+          amountsold: 1
         }
       })
     },

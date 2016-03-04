@@ -90,8 +90,9 @@ if (Meteor.isClient) {
       }
 
       var date = this.date;
-      date = date.format("dddd, MMM DD");
-      options.date = date;
+      console.log(date);
+      // date = date.format("dddd, MMM DD");
+      // options.date = date;
 
       var sellUniq = $(".describedRate").rateit('value');
       var buyUniq = $(".paymentRate").rateit('value');
