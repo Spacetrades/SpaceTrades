@@ -10,14 +10,6 @@
        Session.set('locate', string);
      })
 
-     var self = this
-
-     Tracker.autorun(function () {
-      self.me = new ReactiveVar(1242);
-console.log(Template.instance().me.get())
-     });
-
-console.log(Template.currentData())
 
 
 // Tracker.autorun(function(){

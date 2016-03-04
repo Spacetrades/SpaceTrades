@@ -6,6 +6,9 @@ if (Meteor.isClient) {
 				_id: id_user
 			}).fetch()[0].profile;
 		},
+    feedback: function(){
+      return Feedback.find({rated: this.name});
+    },
     isOwner: function(){
       // function user_check(){
        if (id_user == Meteor.userId()){

@@ -223,7 +223,11 @@ if (Meteor.isServer) {
     },
     sendFeedbackSeller: function(options) {
       Feedback.insert({
+        listing_id: options.listingId,
+        date: options.date,
         rater: options.rater,
+        rater_id: options.rater_Id,
+        rated_id: options.rated_Id,
         rated: options.rated,
         friendly_rate: options.friendly_rate,
         efficiency_rate: options.efficiency_rate,
@@ -233,10 +237,31 @@ if (Meteor.isServer) {
         // Diff
         payment_rate: options.payment_rate
       })
+      // mark feedback seller flag
+      Listing.update({
+        _id: options.listingId
+      }, {
+        $set: {
+          feedback_filed_seller: "Completed"
+        }
+      })
+
+      Meteor.users.update({
+        _id: options.rated_id
+      }, {
+        $inc: {
+          'profile.reviewscount': 1,
+          'profile.amountbought': options.price
+        }
+      })
     },
     sendFeedbackBuyer: function(options) {
       Feedback.insert({
+        listing_id: options.listingId,
+        date: options.date,
         rater: options.rater,
+        rater_id: options.rater_Id,
+        rated_id: options.rated_Id,
         rated: options.rated,
         friendly_rate: options.friendly_rate,
         efficiency_rate: options.efficiency_rate,
@@ -245,6 +270,23 @@ if (Meteor.isServer) {
         comment: options.comment,
         // Diff
         described_rate: options.described_rate
+      })
+      // mark feedback buyer flag
+      Listing.update({
+        _id: options.listingId
+      }, {
+        $set: {
+          feedback_filed_buyer: "Completed"
+        }
+      })
+
+      Meteor.users.update({
+        _id: options.rated_id
+      }, {
+        $inc: {
+          'profile.reviewscount': 1,
+          'profile.amountsold': options.price
+        }
       })
     },
     /*
@@ -258,7 +300,8 @@ if (Meteor.isServer) {
       }, {
         $set: {
           status: "Completed",
-          feedback_file: "Pending"
+          feedback_filed_seller: "Pending",
+          feedback_filed_buyer: "Pending"
         }
       });
 
