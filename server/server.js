@@ -226,6 +226,8 @@ if (Meteor.isServer) {
         listing_id: options.listingId,
         date: options.date,
         rater: options.rater,
+        rater_id: options.rater_Id,
+        rated_id: options.rated_Id,
         rated: options.rated,
         friendly_rate: options.friendly_rate,
         efficiency_rate: options.efficiency_rate,
@@ -245,11 +247,11 @@ if (Meteor.isServer) {
       })
 
       Meteor.users.update({
-        _id: options.rated
+        _id: options.rated_id
       }, {
         $inc: {
-          reviewscount: 1,
-          amountbought: 1
+          'profile.reviewscount': 1,
+          'profile.amountbought': options.price
         }
       })
     },
@@ -258,6 +260,8 @@ if (Meteor.isServer) {
         listing_id: options.listingId,
         date: options.date,
         rater: options.rater,
+        rater_id: options.rater_Id,
+        rated_id: options.rated_Id,
         rated: options.rated,
         friendly_rate: options.friendly_rate,
         efficiency_rate: options.efficiency_rate,
@@ -277,11 +281,11 @@ if (Meteor.isServer) {
       })
 
       Meteor.users.update({
-        _id: options.rated
+        _id: options.rated_id
       }, {
         $inc: {
-          reviewscount: 1,
-          amountsold: 1
+          'profile.reviewscount': 1,
+          'profile.amountsold': options.price
         }
       })
     },

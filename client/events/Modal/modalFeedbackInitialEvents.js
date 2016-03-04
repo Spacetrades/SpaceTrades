@@ -82,6 +82,7 @@ if (Meteor.isClient) {
       var options = {
         listingId: this._id,
         rater: Meteor.user().profile.name,
+        rater_id: Meteor.userId(),
         friendly_rate: $(".friendlyRate").rateit('value'),
         efficiency_rate: $(".efficiencyRate").rateit('value'),
         negotiatiate_rate: $(".negotiateRate").rateit('value'),
@@ -89,10 +90,13 @@ if (Meteor.isClient) {
         comment: $(".feedbackComment").val()
       }
 
-      var date = this.date;
-      console.log(date);
-      // date = date.format("dddd, MMM DD");
-      // options.date = date;
+        var price = Number(this.offerprice);
+        options.price = price;
+
+      var date = moment(this.date)
+      var formatdate = date.format("dddd, MMM DD");
+      console.log(formatdate);
+      options.date = formatdate;
 
       var sellUniq = $(".describedRate").rateit('value');
       var buyUniq = $(".paymentRate").rateit('value');
@@ -100,6 +104,7 @@ if (Meteor.isClient) {
 
       // IF described rate is object -- empty, set rating to alternative
       _.isObject(sellUniq) ? options.payment_rate = buyUniq : options.described_rate = sellUniq
+      this.creator_id == Meteor.userId() ? options.rated_id = this.offer_creator : options.rated_id = this.creator_id;
 
       // username or offer_creator_name
       var selfName = Meteor.user().profile.name;
