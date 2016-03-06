@@ -110,17 +110,35 @@ if (Meteor.isServer) {
       options.profile.sell_totalrating = 0;
 
       options.profile.sell_friendlyrating = 0;
+      options.profile.sell_friendlyratingArray = [];
+
       options.profile.sell_efficiencyrating = 0;
+      options.profile.sell_efficiencyratingArray = [];
+
       options.profile.sell_negotiationrating = 0;
+      options.profile.sell_negotiationratingArray = [];
+
       options.profile.sell_describedrating = 0;
+      options.profile.sell_describedratingArray = [];
+
 
       // Buyer Rating
       options.profile.buy_totalrating = 0;
 
       options.profile.buy_friendlyrating = 0;
+      options.profile.buy_friendlyratingArray = [];
+
+
       options.profile.buy_efficiencyrating = 0;
+      options.profile.buy_efficiencyratingArray = [];
+
+
       options.profile.buy_negotiationrating = 0;
+      options.profile.buy_negotiationratingArray = [];
+
+
       options.profile.buy_paymentrating = 0;
+      options.profile.buy_paymentratingArray = [];
 
       // Number of Reviews (AKA Meetups)
       options.profile.reviewscount = 0;
@@ -164,7 +182,7 @@ if (Meteor.isServer) {
      * @locus Server
      *
      */
-     sendEmail: function(to, from, subject, text) {
+    sendEmail: function(to, from, subject, text) {
       check([to, from, subject, text], [String]);
 
       // Let other method calls from the same client start running,
@@ -184,7 +202,7 @@ if (Meteor.isServer) {
      * @instancename collection
      * @class
      */
-     addListing: function(options) {
+    addListing: function(options) {
       if (!Meteor.userId()) {
         throw new Meteor.Error("Not Authorized");
       }
@@ -256,7 +274,7 @@ if (Meteor.isServer) {
         $set: {
           feedback_filed_seller: "Completed"
         }
-      })
+      });
 
       Meteor.users.update({
         _id: options.rated_id
@@ -264,8 +282,21 @@ if (Meteor.isServer) {
         $inc: {
           'profile.reviewscount': 1,
           'profile.amountbought': 1
+        },
+        $set: {
+          feedback_filed_seller: "Completed"
+        },
+        $push: {
+          'profile.sell_friendlyratingArray': options.friendly_rate,
+          'profile.sell_efficiencyratingArray': options.efficiency_rate,
+          'profile.sell_negotiationratingArray': options.negotiatiate_rate,
+          'profile.sell_describedratingArray': options.payment_rate,
         }
       })
+
+      // Calculate new average, average for cat and total average
+      var newFriendly;
+
     },
     sendFeedbackToBuyer: function(options) {
       Feedback.insert({
@@ -298,6 +329,12 @@ if (Meteor.isServer) {
         $inc: {
           'profile.reviewscount': 1,
           'profile.amountsold': 1
+        },
+        $push: {
+          'profile.buy_friendlyratingArray': options.friendly_rate,
+          'profile.buy_efficiencyratingArray': options.efficiency_rate,
+          'profile.buy_negotiationratingArray': options.negotiatiate_rate,
+          'profile.buy_describedratingArray': options.described_rate,
         }
       })
     },
@@ -305,7 +342,7 @@ if (Meteor.isServer) {
      * @summary Transfer Listing to history
      * @locus Server
      */
-     transferListing: function(options) {
+    transferListing: function(options) {
 
       Listing.update({
         _id: options.listingId
@@ -322,7 +359,7 @@ if (Meteor.isServer) {
      * @summary Remove a listing
      * @locus Server
      */
-     removeListing: function(options) {
+    removeListing: function(options) {
       if (Meteor.userId() == options.creator_id) {
         Listing.remove({
           _id: options.id
@@ -336,7 +373,7 @@ if (Meteor.isServer) {
      * @summary Save A Listing
      * @locus Server
      */
-     actionSave: function(optionsA) {
+    actionSave: function(optionsA) {
       Saves.insert({
         user: this.userId,
         listing_title: optionsA.listing_title,
@@ -353,7 +390,7 @@ if (Meteor.isServer) {
      * @summary Unsave A Listing
      * @locus Server
      */
-     actionUnsave: function(optionsA) {
+    actionUnsave: function(optionsA) {
       Saves.remove({
         _id: optionsA._id
       })
@@ -381,7 +418,7 @@ if (Meteor.isServer) {
      * @summary Search Filter
      * @locus Server
      */
-     searchFilter: function(options) {
+    searchFilter: function(options) {
 
       //   var selectorCat = {
       //   category: options.Categories
@@ -407,7 +444,7 @@ if (Meteor.isServer) {
      * @summary Add offer
      * @locus Server
      */
-     addOffer: function(options) {
+    addOffer: function(options) {
       Offer.insert({
         createdAt: new Date(),
         listing_title: options.listing_title,
@@ -435,7 +472,7 @@ if (Meteor.isServer) {
      * @summary Edit listing
      * @locus Server
      */
-     updateListing: function(options) {
+    updateListing: function(options) {
       Listing.update({
         _id: options.id
       }, {
@@ -458,7 +495,7 @@ if (Meteor.isServer) {
      * @summary Send Notification
      * @locus Server
      */
-     pulseNotify: function(options) {
+    pulseNotify: function(options) {
       Notification.insert({
         createdAt: new Date(),
         action: options.action,
@@ -476,7 +513,7 @@ if (Meteor.isServer) {
      * @summary Send reminder notification
      * @locus Server
      */
-     reminderNotify: function(reminderOptions) {
+    reminderNotify: function(reminderOptions) {
 
       Meteor.setTimeout(function() {
 
@@ -498,7 +535,7 @@ if (Meteor.isServer) {
      * @summary Send feedback notification and Transfer
      * @locus Server
      */
-     feedbackNotify: function(feedbackOptions) {
+    feedbackNotify: function(feedbackOptions) {
 
       Meteor.setTimeout(function() {
         Notification.insert({
@@ -527,7 +564,7 @@ if (Meteor.isServer) {
      * @summary Set Location
      * @locus Server
      */
-     setLocation: function(options) {
+    setLocation: function(options) {
       Meteor.users.update(this.userId, {
         $set: {
           'profile.lat': options.lat,
@@ -545,7 +582,7 @@ if (Meteor.isServer) {
      * @summary Accept Offer
      * @locus Server
      */
-     acceptOffer: function(options) {
+    acceptOffer: function(options) {
       Offer.update({
         _id: options.offer_id
       }, {
@@ -572,7 +609,7 @@ if (Meteor.isServer) {
      * @summary Decline Offer
      * @locus Server
      */
-     declineOffer: function(options) {
+    declineOffer: function(options) {
       Offer.update({
         _id: options.id
       }, {
@@ -590,7 +627,7 @@ if (Meteor.isServer) {
      * @summary Cancel Offer
      * @locus Server
      */
-     cancelOffer: function(options) {
+    cancelOffer: function(options) {
       Offer.remove({
         _id: options.id
       });
@@ -599,7 +636,7 @@ if (Meteor.isServer) {
      * @summary Add Profile Information
      * @locus Server
      */
-     addProfileInfo: function(options) {
+    addProfileInfo: function(options) {
       Meteor.users.update(this.userId, {
         $set: {
           'profile.picturesm': options.photo,
@@ -615,7 +652,7 @@ if (Meteor.isServer) {
      * @summary Add a report (Listing and User)
      * @locus Server
      */
-     addReport: function(options) {
+    addReport: function(options) {
       Report.insert({
         targetUser: options.targetUser,
         riskLevel: options.riskLevel,
@@ -634,7 +671,7 @@ if (Meteor.isServer) {
      * @summary Send a User
      * @locus Server
      */
-     sendMessage: function(options) {
+    sendMessage: function(options) {
       Message.insert({
         message: options.message,
         sender: options.sender,
@@ -647,14 +684,14 @@ if (Meteor.isServer) {
      * @summary Get User Status
      * @locus Server
      */
-     userStatus: function() {
+    userStatus: function() {
       return Meteor.user().status;
     },
     /*
      * @summary Set user city and state
      * @locus Server
      */
-     userLocate: function(city, state) {
+    userLocate: function(city, state) {
       Meteor.users.update(this.userId, {
         $set: {
           'profile.city': city,
@@ -666,7 +703,7 @@ if (Meteor.isServer) {
      * @summary Locate With IP
      * @locus Server
      */
-     ipLocate: function() {
+    ipLocate: function() {
       HTTP.get("http://ipinfo.io", function(error, result) {
         var place = JSON.parse(result.content);
         city = place.city;
@@ -678,7 +715,7 @@ if (Meteor.isServer) {
      * @summary Get color
      * @locus Server
      */
-     colorName: function(color) {
+    colorName: function(color) {
       var Namer = Meteor.npmRequire('color-namer');
       var name = Namer(color);
       var color = name.basic[0].name;
@@ -691,7 +728,7 @@ if (Meteor.isServer) {
      * @instancename collection
      * @class
      */
-     allDocs: function() {
+    allDocs: function() {
       return Listing.find().count();
     }
   });
