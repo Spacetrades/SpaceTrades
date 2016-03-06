@@ -29,31 +29,51 @@
             <div class="profileUserRating">
                 <ul class="profileUserRatingUl">
                     <li class="profileStars">
+                        {{> RatingSum}}
 
-                       <fieldset class="rating">
-                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
-                        <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"></label>
-                        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
-                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"></label>
-                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
-                        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"></label>
-                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
-                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"></label>
-                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
-                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"></label>
-                    </fieldset>
-
-                    <span>({{reviewscount}} Reviews)</span></li>
-                    <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
-                </ul>
-            </div>
-            <div class="profileUserInfo">
-                <ul class="profileUserArea">
-                    <li>{{locationString}}</li>
-                    <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                </ul>
-            </div>
-            <div class="profileUserAmount">
+                        <span>({{reviewscount}} Reviews)</span></li>
+                        <li><i class="fa fa-info-circle" data-toggle="tooltip" title="Member since {{memberSince}}"></i></li>
+                    </ul>
+                </div>
+                <div class="profileUserInfo">
+                    <ul class="profileUserArea">
+                        <li>{{locationString}}</li>
+                        <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="profileUserAmount">
+                    <ul>
+                    <li class="profileUserAmountBought">Bought: {{amountbought}}
+                        </li>
+                        <li class="profileUserAmountSold">Sold: {{amountsold}}
+                        </li>
+                    </ul>
+                </div>
+                <!-- TODO - Meetups held use "settingsChange" class on info -->
+                <div class="desc-box profileDesc">
+                    <h4 class="box-title">Description</h4>
+                    <p class="settingsChange">{{about}}</p>
+                </div>
+                <div class="profileUserButtons">
+                 <!--  <ul class="profileUserButtonUl"> -->
+                 {{#if isOwner}}
+                 <!-- Nothing -->
+                 {{else}}
+                 <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+                 <a class="followButton btn btn-primary btn-lg"> Follow </a>
+                 {{/if}}
+                 {{#if isOwner}}
+                 <a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a>
+                 {{else}}
+                 <!-- <a class="clicker">Options<i class="fa fa-caret-down"></i></a> -->
+                 <i class="fa fa-gavel"></i>Report User
+                 <!--       </ul> -->
+                 {{/if}}
+             </div>
+         </div>
+         <!-- This is hidden until a certain point and than it shown and the original one is hidden-->
+         <div class="hiddenProfileUserRight">
+            <div class="profileUserAmount hiddenProfileUserAmount">
                 <ul>
                     <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
                     </li>
@@ -61,82 +81,49 @@
                     </li>
                 </ul>
             </div>
-            <!-- TODO - Meetups held use "settingsChange" class on info -->
-            <div class="desc-box profileDesc">
+            <div class="desc-box profileDesc hiddenProfileDesc">
                 <h4 class="box-title">Description</h4>
-                <p class="settingsChange">{{about}}</p>
+                <p>{{about}}</p>
             </div>
-            <div class="profileUserButtons">
-               <!--  <ul class="profileUserButtonUl"> -->
-                   {{#if isOwner}}
-                   <!-- Nothing -->
-                   {{else}}
-                   <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
-                   <a class="followButton btn btn-primary btn-lg"> Follow </a>
-                   {{/if}}
-                   {{#if isOwner}}
-                   <a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a>
-                   {{else}}
-                   <!-- <a class="clicker">Options<i class="fa fa-caret-down"></i></a> -->
-                   <i class="fa fa-gavel"></i>Report User
-         <!--       </ul> -->
-           {{/if}}
-   </div>
-</div>
-<!-- This is hidden until a certain point and than it shown and the original one is hidden-->
-<div class="hiddenProfileUserRight">
-    <div class="profileUserAmount hiddenProfileUserAmount">
-        <ul>
-            <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
-            </li>
-            <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
-            </li>
-        </ul>
-    </div>
-    <div class="desc-box profileDesc hiddenProfileDesc">
-        <h4 class="box-title">Description</h4>
-        <p>{{about}}</p>
-    </div>
-    <div class="profileUserButtons hiddenProfileUserButtons">
-        <ul class="profileUserButtonUl">
-            <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
-            <li class="optionsProClick click-nav">
-                <ul class="no-js">
-                    <li>
-                        <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
-                        <ul class="optionsItems">
-                            <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
-                            {{#if isOwner}}
-                            <!-- Nothing -->
-                            {{else}}
+            <div class="profileUserButtons hiddenProfileUserButtons">
+                <ul class="profileUserButtonUl">
+                    <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+                    <li class="optionsProClick click-nav">
+                        <ul class="no-js">
                             <li>
-                                <button type="button" class="modReportTrigger btn btn-primary btn-lg" >
-                                    <i class="fa fa-gavel"></i>Report User
-                                </button>
+                                <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
+                                <ul class="optionsItems">
+                                    <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
+                                    {{#if isOwner}}
+                                    <!-- Nothing -->
+                                    {{else}}
+                                    <li>
+                                        <button type="button" class="modReportTrigger btn btn-primary btn-lg" >
+                                            <i class="fa fa-gavel"></i>Report User
+                                        </button>
+                                    </li>
+                                    {{/if}}
+                                </ul>
                             </li>
-                            {{/if}}
                         </ul>
                     </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-<div class="profileUserCards oneDiv">
-    <ul class="profileUserCardsUl">
-     {{#each listing}}
-     <li>
-        <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-    </li>
-    {{/each}}
-</ul>
-<ul class="profileUserMore">
-    <!-- This takes you to search  -->
-    <li>
-        <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
-    </li>
-</ul>
+    <div class="profileUserCards oneDiv">
+        <ul class="profileUserCardsUl">
+           {{#each listing}}
+           <li>
+            <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+        </li>
+        {{/each}}
+    </ul>
+    <ul class="profileUserMore">
+        <li>
+            <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
+        </li>
+    </ul>
 </div>
 <div class="profileUserFeedbackView oneDiv">
         <!-- <h2>Feedback</h2>
@@ -146,11 +133,10 @@
             <li class="profileUserFeedbackViewNegative"><i class="fa fa-minus"></i>{{downvotes}}</li>
         </ul> -->
         <h1> Seller Rating </h1>
-      {{> RatingSeller}}
-       <h1> Buyer Rating </h1>
-       {{> RatingBuyer}}
+        {{> RatingSeller}}
+        <h1> Buyer Rating </h1>
+        {{> RatingBuyer}}
         <ul class="profileUserFeedbackViewResponse">
-            <!-- Responses are limited to 80 characters in feedback -->
             <h1> Feedback</h1>
             {{#each feedback}}
             {{> feedbackCard}}

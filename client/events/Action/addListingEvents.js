@@ -60,7 +60,6 @@ if (Meteor.isClient) {
         creator_image: Meteor.user().profile.picturesm,
         username: Meteor.user().profile.name,
         listing_title: $(".listtitle").val(),
-        facebook_id: Meteor.user().services.facebook.id,
         // Category
         category: $(".listcategory option:selected").val(),
         type: $(".listtype option:selected").val(),
@@ -173,7 +172,7 @@ if (Meteor.isClient) {
           $(".listbrand").empty();
 
           $("listcapacity").hide();
-          $("<option value='' disabled selected>Select Type</option>").appendTo(" .listtype");
+          $("<option value='' disabled selected>Select Type</option>").appendTo(".listtype");
 
           // Iteration append loop for types
           for (i = 0; i < choiceType.length; i++) {
@@ -339,7 +338,7 @@ if (Meteor.isClient) {
 
           var reader = new FileReader();
           reader.onload = function(e) {
-            console.log(e.target.result);
+            // console.log(e.target.result);
             $("#img1").attr("src", e.target.result);
           }
           reader.readAsDataURL(event.currentTarget.files[0]);
@@ -365,7 +364,7 @@ if (Meteor.isClient) {
           reader.readAsDataURL(event.currentTarget.files[2]);
         }
 
-        console.log(images);
+        // console.log(images);
       }
 
       function buildURLs() {

@@ -97,21 +97,51 @@ if (Meteor.isServer) {
       options.profile.neutralvotes = 0;
       options.profile.downvotes = 0;
 
-      // Sold
+      options.profile.votes_score = 0;
+
+      // Bought and Sold count
       options.profile.amountsold = 0;
       options.profile.amountbought = 0;
 
-      // Ratings
+      // Rating Total
       options.profile.sumrating = 0;
-      options.profile.satisfactionrating = 0;
-      options.profile.describedrating = 0;
-      options.profile.efficiencyrating = 0;
-      options.profile.friendlyrating = 0;
-      options.profile.pointscore = 0;
-      options.profile.reviewscount = 0;
 
-      // IP
-      // ip = response.ip
+      // Seller Rating
+      options.profile.sell_totalrating = 0;
+
+      options.profile.sell_friendlyrating = 0;
+      options.profile.sell_friendlyratingArray = [];
+
+      options.profile.sell_efficiencyrating = 0;
+      options.profile.sell_efficiencyratingArray = [];
+
+      options.profile.sell_negotiationrating = 0;
+      options.profile.sell_negotiationratingArray = [];
+
+      options.profile.sell_describedrating = 0;
+      options.profile.sell_describedratingArray = [];
+
+
+      // Buyer Rating
+      options.profile.buy_totalrating = 0;
+
+      options.profile.buy_friendlyrating = 0;
+      options.profile.buy_friendlyratingArray = [];
+
+
+      options.profile.buy_efficiencyrating = 0;
+      options.profile.buy_efficiencyratingArray = [];
+
+
+      options.profile.buy_negotiationrating = 0;
+      options.profile.buy_negotiationratingArray = [];
+
+
+      options.profile.buy_paymentrating = 0;
+      options.profile.buy_paymentratingArray = [];
+
+      // Number of Reviews (AKA Meetups)
+      options.profile.reviewscount = 0;
 
       return user;
     }
@@ -221,7 +251,7 @@ if (Meteor.isServer) {
         img3: options.img3
       });
     },
-    sendFeedbackSeller: function(options) {
+    sendFeedbackToSeller: function(options) {
       Feedback.insert({
         listing_id: options.listingId,
         date: options.date,
@@ -244,18 +274,31 @@ if (Meteor.isServer) {
         $set: {
           feedback_filed_seller: "Completed"
         }
-      })
+      });
 
       Meteor.users.update({
         _id: options.rated_id
       }, {
         $inc: {
           'profile.reviewscount': 1,
-          'profile.amountbought': options.price
+          'profile.amountbought': 1
+        },
+        $set: {
+          feedback_filed_seller: "Completed"
+        },
+        $push: {
+          'profile.sell_friendlyratingArray': options.friendly_rate,
+          'profile.sell_efficiencyratingArray': options.efficiency_rate,
+          'profile.sell_negotiationratingArray': options.negotiatiate_rate,
+          'profile.sell_describedratingArray': options.payment_rate,
         }
       })
+
+      // Calculate new average, average for cat and total average
+      var newFriendly;
+
     },
-    sendFeedbackBuyer: function(options) {
+    sendFeedbackToBuyer: function(options) {
       Feedback.insert({
         listing_id: options.listingId,
         date: options.date,
@@ -285,7 +328,13 @@ if (Meteor.isServer) {
       }, {
         $inc: {
           'profile.reviewscount': 1,
-          'profile.amountsold': options.price
+          'profile.amountsold': 1
+        },
+        $push: {
+          'profile.buy_friendlyratingArray': options.friendly_rate,
+          'profile.buy_efficiencyratingArray': options.efficiency_rate,
+          'profile.buy_negotiationratingArray': options.negotiatiate_rate,
+          'profile.buy_describedratingArray': options.described_rate,
         }
       })
     },
@@ -417,7 +466,7 @@ if (Meteor.isServer) {
         status: options.status
       });
 
-       Meteor.call('pulseNotify', options);
+      Meteor.call('pulseNotify', options);
     },
     /*
      * @summary Edit listing
