@@ -1,0 +1,33 @@
+<template name="ModalProfileActive">
+	<!-- Modal -->
+<form class="modSentOffer modal" id="ModalProfileActive">
+{{#with scope}}
+	  <div class="modSentOfferDialog modal-dialog">
+	    <div class="modSendOfferContent modal-content">
+	      <div class="modSentOfferBody modal-body">
+	      	<div class="profileReceivedOffers">
+		        <ul class="profileReceivedUl">
+		            <li class="profileReceivedLi profileViewMeetupLi profileSentOfferLi">
+		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="{{idOther}}">{{nameOther}}</a> is in  {{timeUntil}}</p>
+		                <ul class="profileReceivedCardLeft">
+		                    <li class="profileReceivedImage">
+		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
+		                    </li>
+		                </ul>
+		                <ul class="profileReceivedCardRight profileViewMeetupRight">
+		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
+                        	<li id="profileReceivedName" class="profileReceivedName">You are exchanging this item for <span class="money">${{offerprice}}</span></li>
+		                    <li class="modProfileActiveBtn"><a href="/meetup/{{_id}}">Meetup Details</a></li>
+		                    <li class="modProfileActiveBtn"><a href="{{chatId}}">Chat</a></li>
+		                </ul>
+		                <div id="profileReceivedOffersMaps">
+		                </div>
+		            </li>
+		        </ul>
+		      </div>
+	      </div>
+	    </div>
+	  </div> 
+	{{/with}}
+	</form>
+</template>

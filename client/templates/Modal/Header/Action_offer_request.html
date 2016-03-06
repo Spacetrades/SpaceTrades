@@ -1,0 +1,90 @@
+<template name="ActionOfferRequest">
+    <div class="modOfferRequestDialog modal-dialog">
+        <div class="modOfferRequestContent modal-content">
+            <div class="modOfferRequestDiv modOfferRequestDivOne modal-body step step-1">
+                <div class="modOfferRequestPageOne">
+                    <ul class="modOfferRequestPageOneUl">
+                        <li class="modOfferRequestOfferWrap">
+                            <h2>How Much Would You Like To Offer?</h2>
+                            <input type="text" class="listprice" id="mroffer" placeholder="Price..." maxlength="5">
+                        </li>     
+                        <li class="radioWrap paymentRadio">
+                            <h2>How Would You Like To Pay?</h2>
+                                   <ul>
+                            {{#if payment "Cash"}}
+                                <li class="modOfferRequestPaymentCash">
+                                    <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="radioWrapElement"/>
+                                    <label for="modOfferRequestPaymentCashRadio">Cash</label>
+                                </li>
+                                {{/if}}
+                                {{#if payment "Paypal"}}
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="OfferPayment" value="Paypal" class="radioWrapElement"/>
+                                    <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
+                                </li>
+                                {{/if}}
+
+                                   {{#if payment "Both"}}
+                                  <li class="modOfferRequestPaymentCash">
+                                    <input type="radio" id="modOfferRequestPaymentCashRadio" name="OfferPayment" value="Cash" class="radioWrapElement"/>
+                                    <label for="modOfferRequestPaymentCashRadio">Cash</label>
+                                </li>
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestPaymentPaypalRadio" name="OfferPayment" value="Paypal" class="radioWrapElement"/>
+                                    <label for="modOfferRequestPaymentPaypalRadio">Paypal</label>
+                                </li>
+                                {{/if}}
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modMultiBtn modMultiBtnSingle modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestOne">
+                    <button type="button" class="btn btn-primary step step-1 modalNext" data-step="1" onclick="offerRequestJump2()">Next</button>
+                </div>
+            </div>
+            <div class="modOfferRequestDiv modOfferRequestDivTwo modal-body step step-2">
+                <div class="modOfferRequestPageOne">
+                    <ul class="modOfferRequestPageOneUl">
+                        <li class="modOfferRequestOfferWrap">
+                            <h2>When Would You Like To Meet?</h2>
+                            <input type="text" id="datepicker">
+                        </li>     
+                        <li class="radioWrap timeRadio">
+                            <h2>What Time Would You Like To Meet?</h2>
+                            <ul>
+                                <li class="modOfferRequestPaymentCash">
+                                    <input type="radio" id="modOfferRequestTimeMorningRadio" name="offerTime" value="Morning" class="radioWrapElement"/>
+                                    <label for="modOfferRequestTimeMorningRadio">Morning</label>
+                                </li>
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestTimeAfternoonRadio" name="offerTime" value="Afternoon" class="radioWrapElement"/>
+                                    <label for="modOfferRequestTimeAfternoonRadio">Afternoon</label>
+                                </li>
+                                <li class="modOfferRequestPaymentPaypal">
+                                    <input type="radio" id="modOfferRequestTimeNightRadio" name="offerTime" value="Night" class="radioWrapElement"/>
+                                    <label for="modOfferRequestTimeNightRadio">Night</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestTwo">
+                    <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="offerRequestJump1()">Back</button>
+                    <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="offerRequestJump3()">Next</button>
+                </div>
+            </div>
+            <div class="modOfferRequestDiv modOfferRequestDivThree modal-body step step-3">
+                <div class="modOfferRequestPageThree">
+                    <h2>Where Would You Like To Meetup?</h2>
+                   {{> mapModal}}
+                </div>
+                <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestThree">
+                    <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="offerRequestJump2()">Back</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-primary modalSubmitBtn" id="offerRequestModalSubmit"><input type="button" value="Send Offer" class="offerRequestBtn"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+

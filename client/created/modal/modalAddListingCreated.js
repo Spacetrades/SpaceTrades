@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-	Template.ModalAddListing.onCreated(function() {
+	Template.ActionAddListing.onCreated(function() {
 
     addListingJump1 = function() {
       $(".step-2").show()

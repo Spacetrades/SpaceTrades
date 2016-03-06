@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-  Template.ModalFeedbackInitial.events({
+  Template.ProfileHistoryFeedback.events({
 
     'click .step-1 .yes': function() {
       $('.step-1').hide();
@@ -90,8 +90,8 @@ if (Meteor.isClient) {
         comment: $(".feedbackComment").val()
       }
 
-        var price = Number(this.offerprice);
-        options.price = price;
+      var price = Number(this.offerprice);
+      options.price = price;
 
       var date = moment(this.date)
       var formatdate = date.format("dddd, MMM DD");

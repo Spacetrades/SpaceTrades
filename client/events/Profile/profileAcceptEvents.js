@@ -58,7 +58,7 @@ if (Meteor.isClient) {
         }
 
           var reminderOptions = {
-          action: "Reminder: you have a meetup scheduled for tommorow",
+          action: "Meetup scheduled for tommorow",
           listing_title: offerBlock.listing_title,
           offerprice: offerBlock.offerprice,
           creator_id: offerBlock.creator_id,

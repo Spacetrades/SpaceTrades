@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-  Template.ModalOfferRequest.events({
+  Template.ActionOfferRequest.events({
     'click .step-1 .modalNext': function() {
       $(".step-2").show()
       $(".step-1").hide()
@@ -80,7 +80,8 @@ if (Meteor.isClient) {
         // By Default
         status: "Pending",
         // Notification flags
-        action: "sent you an offer"
+        action: "sent you an offer",
+        notifyType: "offer"
       }
 
       options.destination = [options.listing_creator_id];

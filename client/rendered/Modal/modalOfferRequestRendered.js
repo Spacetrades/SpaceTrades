@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-  Template.ModalOfferRequest.onRendered(function() {
+  Template.ActionOfferRequest.onRendered(function() {
 
      for (i = 2; i < 7; i++) {
       $(".step-" + i).hide()

@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-  Template.ModalAddListing.events({
+  Template.ActionAddListing.events({
     'click .step-1 .modalNext': function() {
       $(".step-2").show()
       $(".step-1").hide()
