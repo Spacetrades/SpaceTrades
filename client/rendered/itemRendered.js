@@ -26,20 +26,6 @@ if (Meteor.isClient) {
     });
 
 
-    // Tracker.autorun(function(a) {
-
-    //     console.log(a);
-
-
-
-    //  Meteor.setTimeout(function() {
-    //    $(".offersReceivedCount").animateCss("bounce");
-    //  }, 500);
-
-
-
-    //    });
-
     Tracker.autorun(function() {
 
       var count = Offer.find().count()
