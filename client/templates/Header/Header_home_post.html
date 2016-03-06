@@ -46,7 +46,7 @@
                     <a href="#"><i class="fa fa-globe"></i></a>
                     <ul class="headerDropDownNav">
                     {{#each Notification}}
-                        <li><a href="#">{{> Notification}}</a></li>
+                        {{> Notification}}
                         {{/each}}
                          <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#notificationsModal">
                             View All Notifications

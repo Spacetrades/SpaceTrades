@@ -416,6 +416,8 @@ if (Meteor.isServer) {
         payment: options.payment,
         status: options.status
       });
+
+       Meteor.call('pulseNotify', options);
     },
     /*
      * @summary Edit listing
@@ -448,6 +450,7 @@ if (Meteor.isServer) {
       Notification.insert({
         createdAt: new Date(),
         action: options.action,
+        notifyType: options.notifyType,
         listing_title: options.listing_title,
         offer_price: options.offerprice,
         creator_id: options.creator_id,

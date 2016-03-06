@@ -8,25 +8,7 @@
        var region = data.region;
        var string = city + ", " + region;
        Session.set('locate', string);
-     })
-
-
-
-// Tracker.autorun(function(){
-
-  // Session.set('selfId', Meteor.userId());
-  // Session.set('selfPic', Meteor.user().profile.picturesm);
-
-// })
-
-     // var self = this;
-     //    self.myAsyncValue = new ReactiveVar("Waiting for response from server...");
-     //    Meteor.call('ipLocate', function (err, asyncValue) {
-     //        if (err)
-     //            console.log(err);
-     //        else
-     //            self.myAsyncValue.set(asyncValue);
-     //    });
+     });
 
    });
 
