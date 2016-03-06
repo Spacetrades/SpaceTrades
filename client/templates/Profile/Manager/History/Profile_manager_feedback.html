@@ -6,7 +6,7 @@
                 <div class="modFeedbackInitialPageOne">
                     <h2>Did This Meetup Happen?</h2>
                     <ul class="modFeedbackInitialPageOneUl">
-                    <li><button type="button" class="btn btn-primary step step-1 yes">Yes</button></li>
+                        <li><button type="button" class="btn btn-primary step step-1 yes">Yes</button></li>
                         <li><button type="button" class="btn btn-primary step step-1 no">No</button></li>
                     </ul>
                     <ul class="modFeedbackInitialPageOneItem">
@@ -70,12 +70,12 @@
                   </ul>
                   <ul class="modFeedbackInitialPageFiveUl">
                       <li>
-                    </li>
-                    <li><a href="/help/report"> How to Report</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="modFeedbackInitialDiv modFeedbackDivInitialSix modal-body step step-6">
+                      </li>
+                      <li><a href="/help/report"> How to Report</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="modFeedbackInitialDiv modFeedbackDivInitialSix modal-body step step-6">
             <div class="modFeedbackInitialPageSix">
                 <h2>Are You Sure You Want To Continue?</h2>
                 <ul>
@@ -116,16 +116,7 @@
                 <ul>
                     <li>
                         <h4>User Friendliness</h4>
-                    <div class="rateit friendlyRate"></div> 
-                        <br>
-                        {{#if isBuyer}}
-                        <h4>Item As Described</h4>
-                     <div class="rateit describedRate"></div>
-                     {{else}}
-                       <h4>Payment Satisfaction</h4>
-                     <div class="rateit paymentRate"></div>
-                     {{/if}}
-                        <br>
+                        <div class="rateit friendlyRate"></div> 
                     </li>
                     <li>
                         <h4>Meetup Efficiency</h4>
@@ -133,6 +124,15 @@
                         <br>
                         <h4>Price Negotiation</h4>
                         <div class="rateit negotiateRate"></div>
+                        <br>
+                        {{#if isBuyer}}
+                        <h4>Item As Described</h4>
+                        <div class="rateit describedRate"></div>
+                        {{else}}
+                        <h4>Payment Satisfaction</h4>
+                        <div class="rateit paymentRate"></div>
+                        {{/if}}
+                        <br>
                     </li>
                     <li><button type="button" class="btn btn-primary step step-8 modalNext notNext">Continue</button></li>
                 </ul>
@@ -140,37 +140,37 @@
         </div>
         <div class="modFeedbackDiv modFeedbackDiv modal-body step step-9">
             <div class="modFeedback">
-                        <div class="modFeedbackPageTwo1 radioWrap">
-                            <h2>Overall Experience</h2>
-                            <ul>
-                                <li>
-                                    <input type="radio" id="feedbackPositive" class="radioWrapElement" name="feedbackOverall" value="Positive" checked/>
-                                    <label for="feedbackPositive">Positive</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="feedbackNeutral" class="radioWrapElement"  name="feedbackOverall" value="Neutral" />
-                                    <label for="feedbackNeutral">Neutral</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="feedbackNegative" class="radioWrapElement"  name="feedbackOverall" value="Negative"/>
-                                    <label for="feedbackNegative">Negative</label>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="modFeedbackPageTwo2">
-                            <h2>Leave a comment</h2>
-                             <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="Comment Title" maxlength="50">
-                            <ul>
-                                <li><textarea class="feedbackComment" type="text" placeholder="Write a description about your experience!" max-length="80"></textarea></li>
-                            </ul>
-                        </div>  
-                    </div>
-                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackTwo">
-                        <button type="button" class="btn btn-primary step step-9 modalBack">Back</button>
-                        <button type="button" class="btn btn-primary step step-9 modalSubmitBtn"><input type="submit" class="sendFeedback" value="Send Feedback"></button>
-                    </div>
+                <div class="modFeedbackPageTwo1 radioWrap">
+                    <h2>Overall Experience</h2>
+                    <ul>
+                        <li>
+                            <input type="radio" id="feedbackPositive" class="radioWrapElement" name="feedbackOverall" value="Positive" checked/>
+                            <label for="feedbackPositive">Positive</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="feedbackNeutral" class="radioWrapElement"  name="feedbackOverall" value="Neutral" />
+                            <label for="feedbackNeutral">Neutral</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="feedbackNegative" class="radioWrapElement"  name="feedbackOverall" value="Negative"/>
+                            <label for="feedbackNegative">Negative</label>
+                        </li>
+                    </ul>
                 </div>
+                <div class="modFeedbackPageTwo2">
+                    <h2>Leave a comment</h2>
+                    <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="Comment Title" maxlength="50">
+                    <ul>
+                        <li><textarea class="feedbackComment" type="text" placeholder="Write a description about your experience!" max-length="80"></textarea></li>
+                    </ul>
+                </div>  
+            </div>
+            <div class="modMultiBtn modMultiBtnDouble modMultiBtnFeedback modMultiBtnFeedbackDouble modMultiBtnFeedbackTwo">
+                <button type="button" class="btn btn-primary step step-9 modalBack">Back</button>
+                <button type="button" class="btn btn-primary step step-9 modalSubmitBtn"><input type="submit" class="sendFeedback" value="Send Feedback"></button>
             </div>
         </div>
-        {{/with}}
-    </template>
+    </div>
+</div>
+{{/with}}
+</template>

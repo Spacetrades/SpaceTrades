@@ -117,10 +117,13 @@ if (Meteor.isClient) {
       if (validate()) {
 
         successMessage()
-        if (Meteor.user().name == this.username) {
-          Meteor.call('sendFeedbackBuyer', options)
+        if (Meteor.user().profile.name == this.username) {
+          // this is not being called
+          // User is seller
+          Meteor.call('sendFeedbackToBuyer', options)
         } else {
-          Meteor.call('sendFeedbackSeller', options)
+          // User is buyer
+          Meteor.call('sendFeedbackToSeller', options)
         }
 
       }
