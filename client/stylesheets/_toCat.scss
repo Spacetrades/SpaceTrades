@@ -6095,14 +6095,14 @@ textarea {
     margin-left: 5px !important;
 }
 
-.chatPerson > ul > li {
+.chatPerson > ul > a > li {
     display: inline-block !important;
     vertical-align: middle !important;
 }
 
 .chatPerson > ul > li > a > img {
-    width: 40px !important;
-    height: 40px !important;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 2px !important;
 }
 
@@ -6112,8 +6112,9 @@ textarea {
 }
 
 .chatUserSent > li > a > img {
-    width: 30px !important;
-    width: 30px !important;
+    width: 32px !important;
+    width: 32px !important;
+    vertical-align: top !important;
 }
 
 /*** END END END ***/
