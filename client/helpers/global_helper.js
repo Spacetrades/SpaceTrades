@@ -10,12 +10,16 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.registerHelper('profile', function() {
+  Template.registerHelper('profile', function(a,b) {
     if (Meteor.userId()) {
       return Meteor.userId();
     } else {
       return 12312312
     }
+  });
+
+  Template.registerHelper('equals', function() {
+   return a == b;
   });
 
   Template.registerHelper('locationFull', function(){
