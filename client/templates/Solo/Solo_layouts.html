@@ -27,7 +27,6 @@
         {{> sAlert}}
         {{#if currentUser}}
         {{> homeheaderpost}}
-        {{> ModalNotifications}}
         {{> yield}}
         {{else}}
         {{> homeheaderpre}}
@@ -42,7 +41,6 @@
         {{#if currentUser}}
         {{messageShow}}
         {{> headerpost}}
-        {{> ModalNotifications}}
         {{> yield}}
         {{/if}}
     </template>
@@ -51,7 +49,6 @@
         {{> sAlert}}
         {{#if currentUser}} 
         {{> headersearchpost}}
-        {{> ModalNotifications}}
         {{> yield}}
         {{else}}
         {{> headersearchpre}}
@@ -65,7 +62,6 @@
         {{#if currentUser}}
         {{> headerpost}}
         {{> HelpCenterNav}}
-        {{> ModalNotifications}}
         {{> yield}}
         {{else}}
         {{> headerpre}}
@@ -103,7 +99,6 @@
         {{> sAlert}}
         {{#if currentUser}}
         {{> headerpost}}
-        {{> ModalNotifications}}
 
         {{> ModalReportListing}}
         {{> ModalListingDelete}}
@@ -119,7 +114,6 @@
         {{> sAlert}}
         {{#if currentUser}}
         {{> headerpost}}
-        {{> ModalNotifications}}
         {{> yield}}
         {{else}}
         {{> headerpre}}

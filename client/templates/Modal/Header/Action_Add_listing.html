@@ -1,5 +1,4 @@
 <template name="ActionAddListing">
-    <!-- <form class="modAddListingModal modal multi-step" id="addListingModal"> -->
         <div class="modAddListingDialog modal-dialog">
             <div class="modAddListingContent modal-content">
                 <div class="modAddListingDiv modAddListingDivOne modal-body step step-1">
@@ -195,8 +194,8 @@
                         </ul>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFive">
-                        <button type="button" class="btn btn-primary step step-5 modalBack" data-step="5" >Back</button>
-                        <button type="button" class="btn btn-primary step step-5 modalNext" data-step="5" >Next</button>
+                        <button type="button" class="btn btn-primary step step-5 modalBack" >Back</button>
+                        <button type="button" class="btn btn-primary step step-5 modalNext" >Next</button>
                     </div>
                 </div>
                 <div class="modAddListingDiv modAddListingDivSix modal-body step step-6">
@@ -205,11 +204,10 @@
                         <textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
                     </div>
                     <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingSix">
-                        <button type="button" class="btn btn-primary step step-6 modalBack" data-step="6" onclick="addListingJump5()">Back</button>
+                        <button type="button" class="btn btn-primary step step-6 modalBack">Back</button>
                         <button type="button" data-dismiss="modal" class="btn btn-primary modalSubmitBtn modalSubmitAdd"><input type="submit" class="add ph-button" value="Create"></button>
                     </div>
                 </div>
             </div>
         </div>
-<!--     </form> -->
 </template>
