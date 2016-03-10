@@ -6155,11 +6155,23 @@ textarea {
     border-radius: 4px !important;
     outline: none !important;
     border: 1px solid #A2A2A2 !important;
-    margin-top: 5px !important;
+    padding: 3px !important;
 }
 
 .chatDiv {
     margin-top: 0 !important;
+}
+
+.chatBottomSection {
+    padding-top: 20px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #A2A2A2;
+    text-align: center !important;
+}
+
+.chatMessages {
+    height: 38rem !important;
+    overflow-y: scroll !important;
 }
 
 /*** END END END ***/
