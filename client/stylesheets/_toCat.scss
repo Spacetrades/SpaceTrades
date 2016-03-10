@@ -6072,10 +6072,16 @@ textarea {
 
 .chatRight {
     width: 60% !important;
+    margin-left: 25px !important;
 }
 
 .chatPeople {
-    
+    border-right: 1px solid #A2A2A2;
+    height: 46.5rem !important;
+}
+
+.chatPeople:hover {
+    overflow-y: scroll !important; 
 }
 
 .chatPerson {
