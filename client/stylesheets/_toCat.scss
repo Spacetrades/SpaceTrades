@@ -5912,153 +5912,6 @@ textarea {
     font-weight: 400 !important;
 }
 
-/*** Original Chat Css ***/
-
-// .chatSubText li {
-//  text-align: center;
-// }
-
-// .chatDiv {
-//     padding: 15px !important;
-//     border: 2px solid #00bfff !important;
-//     height: 520px;
-//     margin: 2rem 15% 3rem 15% !important;
-// }
-
-// .chatDiv > ul {
-//     display: inline-block;
-// }
-
-// .chatRight {
-//     width: 65%;
-//     vertical-align: top;
-//     margin: 0;
-//     float: right;
-// }
-
-// .chatLeft {
-//     width: 30%;
-//     vertical-align: top;
-//     margin: 0;
-// }
-
-// .chatMessages {
-//     height: 350px;
-//     overflow-y: scroll !important;
-//     overflow-x: hidden;
-//     margin-bottom: 20px;
-// }
-
-// .chatPeople {
-//     height: 430px;
-//     overflow-y: scroll !important;
-//     overflow-x: hidden;
-// }
-
-// .chatUserSent {
-//     text-align: right !important;
-//     margin-right: 20px !important;
-// }
-
-// .chatUserReceived {
-//     text-align: left !important;
-// }
-
-// .chatUserSent li, .chatUserReceived li {
-//     display: inline-block;
-// }
-
-// .chatUserSent li img, .chatUserReceived li img {
-//     vertical-align: middle;
-//     width: 30px;
-//     height: 30px;
-//     border-radius: 50%;
-// }
-
-// .chatMessages ul {
-//     margin: 10px 0;
-// }
-
-// .chatInboxTitle h3 {
-//     margin: 0 0 5px 0;
-// }
-
-// .chatInboxSearch input {
-//     margin-left: 10px;
-// }
-
-// .chatInbox {
-//     margin-bottom: 15px;
-// }
-
-// .chatPerson ul {
-//     width: 75%;
-//     margin: 5px;
-//     padding: 15px 10px;
-//     color: $color-spacered;
-
-//     // Nice outline
-//     border-top: 2px solid red;
-//     border-right: 2px solid red;
-//     border-bottom: 2px solid red;
-//     // background-color: #f8504b;
-// }
-
-// .chatPerson ul li {
-//     display: inline-block;
-// }
-
-// .chatPerson ul li img {
-//     width: 20px;
-//     height: 20px;
-//     border-radius: 50%;
-//     vertical-align: middle;
-//     margin: 0 5px 3px 0;
-// }
-
-// .chatPerson ul li a {
-// }
-
-// .chatPerson ul li:last-child {
-//     float: right !important;
-//     margin-right: 60px;
-// }
-
-// .chatTopSection ul li {
-//     display: inline-block;
-// }
-
-// .chatTopSection ul li h3 {
-//     margin: 10px 0 20px 0;
-// }
-
-// .chatText {
-//     width: 90%;
-//     height: 50px;
-// }
-
-// .chatSend {
-//     width: 91%;
-//     margin: 14px 0 20px 0;
-// }
-
-// .chatSend li {
-//     display: inline-block;
-// }
-
-// .chatSendButton {
-//     float: right !important;
-// }
-
-// .chatSendButton a {
-//     padding: 10px 16px;
-//     background-color: #f8504b;
-//     color: #fff;
-// }
-
-/*** END END END ***/
-
-
 /*** New Chat Css ***/
 
 .chatDiv > ul {
@@ -6072,15 +5925,20 @@ textarea {
 
 .chatRight {
     width: 60% !important;
+    margin-left: 25px !important;
 }
 
 .chatPeople {
-    
+    border-right: 1px solid #A2A2A2;
+    height: 46.5rem !important;
+}
+
+.chatPeople:hover {
+    overflow-y: scroll !important; 
 }
 
 .chatPerson {
     padding: 10px 0 10px 20px!important;
-    border-top: 1px solid #d3d3d3 !important;
 }
 
 .chatPerson:first-child {
@@ -6095,14 +5953,14 @@ textarea {
     margin-left: 5px !important;
 }
 
-.chatPerson > ul > li {
+.chatPerson > ul > a > li {
     display: inline-block !important;
     vertical-align: middle !important;
 }
 
 .chatPerson > ul > li > a > img {
-    width: 40px !important;
-    height: 40px !important;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 2px !important;
 }
 
@@ -6112,8 +5970,104 @@ textarea {
 }
 
 .chatUserSent > li > a > img {
-    width: 30px !important;
-    width: 30px !important;
+    width: 32px !important;
+    width: 32px !important;
+    vertical-align: top !important;
+}
+
+.chatUserSent > li:first-child {
+    vertical-align: top !important;
+}
+
+.chatUserSent > li:last-child {
+    margin-left: 6px !important;
+}
+
+.chatUserNameTime, .chatUserNameTime h4, .timestamp {
+    display: inline-block !important;
+}
+
+.timestamp {
+    margin-left: 230px !important;
+    font-size: 0.85rem !important;
+}
+
+.chatUserSent li h4 {
+    margin: 0 0 3px 0 !important;
+    font-size: 0.98rem !important;
+}
+
+.chatUserSent {
+    margin: 18px 5px !important;
+}
+
+.chatMessageTemp {
+    font-size: 0.9rem !important;
+    color: #333 !important;
+    line-height: 1.5 !important; 
+}
+
+.chatText {
+    width: 95% !important;
+    height: 50px !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    border: 1px solid #A2A2A2 !important;
+    padding: 3px !important;
+}
+
+.chatDiv {
+    margin-top: 0 !important;
+}
+
+.chatBottomSection {
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid #A2A2A2;
+    text-align: center !important;
+}
+
+.chatMessages {
+    height: 38rem !important;
+    overflow-y: scroll !important;
+}
+
+.chatSend {
+    margin-top: 8px !important;
+    text-align: right !important;
+    margin-right: 12px !important;
+}
+
+.chatSend li {
+    display: inline-block !important;
+}
+
+.chatSend li i {
+    color: #A2A2A2 !important;
+    margin-right: 5px !important;
+}
+
+.chatSendButton {
+    padding: 12px 25px;
+    border: none;
+    color: #fff;
+    background: #f8504b;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.chatPerson ul a li:nth-child(2) a {
+    font-style: normal !important;
+
+}
+
+.chatPerson ul a li:nth-child(2) a:hover {
+    color: #404040 !important;
+    text-decoration: none !important;
+}
+
+.chatPerson:hover {
+    background-color: #d3d3d3 !important;
 }
 
 /*** END END END ***/
