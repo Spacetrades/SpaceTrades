@@ -1,0 +1,213 @@
+<template name="ActionAddListing">
+        <div class="modAddListingDialog modal-dialog">
+            <div class="modAddListingContent modal-content">
+                <div class="modAddListingDiv modAddListingDivOne modal-body step step-1">
+                	<div class="modAddListingPageOne">
+                        <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2 class="listing_title">What Are You Selling?</h2>
+                                <input type="text" class="modAddListingTitleInput listtitle" id="listtitlebox" placeholder="Listing Title..." maxlength="50">
+                            </li>
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2 class="price">How Much Are You Selling It For?</h2>
+                                <input type="text" class="listprice" placeholder="Price..." maxlength="5">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnSingle modMultiBtnAddListing modMultiBtnAddListingSingle modMultiBtnAddListingOne">
+                        <button type="button" class="btn btn-primary step step-1 modalNext">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivTwo modal-body step step-2">
+                	<div class="modAddListingPageTwo">
+                        <ul class="modAddListingPageOneUl modOfferRequestPageOneUl">
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2 class="category">What Category Does It Belong To?</h2>
+                                <div class="styled-select">
+                                    <select class="listcategory">
+                                        <option value="" disabled selected >Select Category</option>
+                                        <option value="Apparel">Apparel</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Shoes">Shoes</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="modAddListingQNA modOfferRequestOfferWrap">
+                                <h2 class="type">What Type Of Item Is It?</h2>
+                                <div class="styled-select">
+                                    <select class="listtype">
+                                        <option value="" disabled selected >Select Type</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingTwo">
+                        <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" >Back</button>
+                        <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivThree modal-body step step-3">
+                	<div class="modAddListingPageThree">
+                        <h2>Add Images</h2>
+                        <input type="file" class="imageupload" multiple/>
+                        <ul class="addListImg">
+                            <li><img class="uploadimg" id="img1" src="img1" /></li>
+                            <li><img class="uploadimg" id="img2" src="img2" /></li>
+                            <li><img class="uploadimg" id="img3" src="img3" /></li>
+                            <li><img class="uploadimg" id="img4" src="img4" /></li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingThree">
+                        <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3">Back</button>
+                        <button type="button" class="btn btn-primary step step-3 modalNext" data-step="3">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivFour modal-body step step-4">
+                	<div class="modAddListingPageFour">
+                        <h2>Provide Details</h2>
+                        <ul class="modAddListingPageFourUl">
+                         <!--     <li><label>Quantity</label>
+                                <div class="styled-select">
+                                    <select class="listquantity">
+                                        <option value="1">1</option>option>
+                                        <option value="2">2</option>option>
+                                        <option value="3">3</option>option>
+                                        <option value="4">4</option>option>
+                                        <option value="5">5</option>option>
+                                        <option value="6">6</option>option>
+                                        <option value="7">7</option>option>
+                                        <option value="8">8</option>option>
+                                        <option value="9">9</option>option>
+                                        <option value="10">10 +</option>option>
+                                    </select>
+                                </div>
+                            </li> -->
+                            <li><label>Brand</label>
+                                <div class="styled-select">
+                                    <select class="listbrand">
+                                        <option value="" disabled selected >Select Brand</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li><label>Condition</label>
+                                <div class="styled-select">
+                                    <select class="condition">
+                                        <option value="New">New</option>
+                                        <option value="Like New">Like New</option>
+                                        <option value="Used">Used</option>
+                                        <option value="Needs Repair">Needs Repair</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="listsizenumberli"><label>Size</label>
+                                <div class="styled-select">
+                                    <select class="listsize">
+                                        <option value="" disabled selected>Select Size</option>option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </li>
+                             <li class="hidden listsizename"><label>Size</label>
+                                <div class="styled-select">
+                                    <select class="listsizename">
+                                        <option value="" disabled selected>Select Size</option>option>
+                                        <option value="Small">Small</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Large">Large</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="hidden listcapacity"><label>Capacity</label>
+                                <div class="styled-select capacity-select">
+                                    <select class="listspace">
+                                        <option value="" disabled selected>Select Size</option>option>
+                                        <option value="4 GB">4 GB</option>
+                                        <option value="8 GB">8 GB</option>
+                                        <option value="16 GB">16 GB</option>
+                                        <option value="32 GB">32 GB</option>
+                                        <option value="64 GB">64 GB</option>
+                                        <option value="128 GB">128 GB</option>
+                                        <option value="250 GB">250 GB</option>
+                                        <option value="500 GB">500 GB</option>
+                                        <option value="1 TB">1 TB</option>
+                                        <option value="1 TB +">1 TB +</option>
+                                    </select> 
+                                </div>
+                            </li>
+                            <li><label>Color</label>
+                                <input type="text" id="colorpicker"> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFour">
+                        <button type="button" class="btn btn-primary step step-4 modalBack" data-step="4">Back</button>
+                        <button type="button" class="btn btn-primary step step-4 modalNext" data-step="4">Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivFive modal-body step step-5">
+                	<div class="modAddListingPageFive">
+                        <ul class="modOfferRequestPageOneUl">
+                            <li class="radioWrap">
+                                <h2>Do You Want To Allow Trade Offers?</h2>
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="modAddListingTradeOffersNo" name="addListingTradeOffers" value="False" class="radioWrapElement"/>
+                                        <label for="modAddListingTradeOffersNo">No</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentCash">
+                                        <input type="radio" id="modAddListingTradeOffersYes" name="addListingTradeOffers" value="True" class="radioWrapElement"/>
+                                        <label for="modAddListingTradeOffersYes">Yes</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="radioWrap">
+                                <h2>Which Form Of Payment Will You Accept?</h2>
+                                <ul>
+                                <li id="payment">
+                                    <li class="modOfferRequestPaymentCash">
+                                        <input type="radio" id="modAddListingCashRadio" name="addListingPayment" value="Cash" class="radioWrapElement" checked/>
+                                        <label for="modAddListingCashRadio">Cash</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentPaypal">
+                                        <input type="radio" id="modAddListingPaypalRadio" name="addListingPayment" value="Paypal" class="radioWrapElement"/>
+                                        <label for="modAddListingPaypalRadio">Paypal</label>
+                                    </li>
+                                    <li class="modOfferRequestPaymentPaypal">
+                                        <input type="radio" id="modAddListingBothRadio" name="addListingPayment" value="Both" class="radioWrapElement"/>
+                                        <label for="modAddListingBothRadio">Both</label>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingFive">
+                        <button type="button" class="btn btn-primary step step-5 modalBack" >Back</button>
+                        <button type="button" class="btn btn-primary step step-5 modalNext" >Next</button>
+                    </div>
+                </div>
+                <div class="modAddListingDiv modAddListingDivSix modal-body step step-6">
+                    <div class="modAddListingPageSix">
+                        <h2 class="description">Add Description</h2>
+                        <textarea class="listdescription" placeholder="Briefly explain any other information helpful to buyers..."></textarea>
+                    </div>
+                    <div class="modMultiBtn modMultiBtnDouble modMultiBtnAddListing modMultiBtnAddListingDouble modMultiBtnAddListingSix">
+                        <button type="button" class="btn btn-primary step step-6 modalBack">Back</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-primary modalSubmitBtn modalSubmitAdd"><input type="submit" class="add ph-button" value="Create"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</template>

@@ -1,12 +1,12 @@
 <template name="item">
- <!-- TASK - Add Go to Manager button for your listing pages -->
-    {{#with listing}}
+   <!-- TASK - Add Go to Manager button for your listing pages -->
+   {{#with listing}}
 
- {{#if offerAccepted}}
- {{> itemAfter}}
- {{else}}
+   {{#if offerAccepted}}
+   {{> itemAfter}}
+   {{else}}
 
- <div class="listingItemDiv oneDiv">
+   <div class="listingItemDiv oneDiv">
     <h1 class="listingItemTitle">{{listing_title}}</h1>
     <p class="listingItemOffersRecieved">Created {{dateFormatted}}<br><h3 class="offersReceivedCount"> {{offers}} </h3> Offers Received</p>
     <div class="listingItemLeft">
@@ -16,8 +16,8 @@
             </ul>
             {{#if isCreator}}
             <ul class="listingItemButtons">
-               {{#if isCreatorEdit}}
-               <li>
+             {{#if isCreatorEdit}}
+             <li>
                 <a href="{{current}}/edit" class="modOfferRequestTrigger btn btn-default">Edit</a>
             </li>
             {{/if}}
@@ -28,63 +28,63 @@
         {{else}}
         <ul class="listingItemButtons">
             <li>
-                 <a class="btn btn-default profileBtn" href="{{_id}}/offer/">Offer</a>
-            </li>
-            <li>
-                <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
-            </li>
-        </ul>
-        {{/if}}
-    </div>
-    <div class="listingItemSlider">
-        <div class="slider">
-            <input type="radio" name="slide_switch" id="id1" checked="checked"/>
-            <label for="id1" class="sliderSmallOne">
-                <img class="imgBreak" src="{{img1}}" />
-            </label>
-            <img class="imgBreak" src="{{img1}}"/>
-
-            <input type="radio" name="slide_switch" id="id2" />
-            <label for="id2" class="sliderSmallTwo">
-                <img class="imgBreak" src="{{img2}}" />
-            </label>
-            <img class="imgBreak" src="{{img2}}"/>
-
-            <input type="radio" name="slide_switch" id="id3"/>
-            <label for="id3" class="sliderSmallThree">
-                <img class="imgBreak" src="{{img3}}" />
-            </label>
-            <img class="imgBreak" src="{{img3}}"/>
-
-            <input type="radio" name="slide_switch" id="id4"/>
-            <label for="id4" class="sliderSmallFour">
-                <img class="imgBreak" src="{{img4}}" />
-            </label>
-            <img class="imgBreak" src="{{img3}}"/>
-        </div>
-    </div>
-    <div class="desc-box-listing desc-width">
-        <h4 class="box-title-listing">Product Details</h4>
-        <ul class="listingItemDetailItems">
-            <li class="listingItemDetailLeft">
-                <ul>
-                    <li class="listingItemBrand">Brand:<a href="/search" class="searchProperty">{{brand}}</a></li>
-                    <li class="listingItemType">Type:<a href="/search" class="searchProperty">{{type}}</a></li>
-                    <li class="listingItemSize">Size: <span>{{size}}</span></li>
-                    <!-- <li class="listingItemColor">Color: <span style="color: {{color}}">{{color}}</span></li> -->
-                </ul>
-            </li>
-            <li class="listingItemDetailRight">
-                <ul>
-                   <li class="listingItemCat">Category: <span>{{category}}</span></li>
-                   <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
-                 <!--   <li class="listingItemQuantity">Quantity: <span>{{quantity}}</span></li> -->
-                   <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
-               </ul>
+               <a class="btn btn-default profileBtn" href="{{_id}}/offer/">Offer</a>
            </li>
-       </ul>
-   </div>
-   <div class="desc-box-listing nomar desc-width listingItemDescription">
+           <li>
+            <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
+        </li>
+    </ul>
+    {{/if}}
+</div>
+<div class="listingItemSlider">
+    <div class="slider">
+        <input type="radio" name="slide_switch" id="id1" checked="checked"/>
+        <label for="id1" class="sliderSmallOne">
+            <img class="imgBreak" src="{{img1}}" />
+        </label>
+        <img class="imgBreak" src="{{img1}}"/>
+
+        <input type="radio" name="slide_switch" id="id2" />
+        <label for="id2" class="sliderSmallTwo">
+            <img class="imgBreak" src="{{img2}}" />
+        </label>
+        <img class="imgBreak" src="{{img2}}"/>
+
+        <input type="radio" name="slide_switch" id="id3"/>
+        <label for="id3" class="sliderSmallThree">
+            <img class="imgBreak" src="{{img3}}" />
+        </label>
+        <img class="imgBreak" src="{{img3}}"/>
+
+        <input type="radio" name="slide_switch" id="id4"/>
+        <label for="id4" class="sliderSmallFour">
+            <img class="imgBreak" src="{{img4}}" />
+        </label>
+        <img class="imgBreak" src="{{img3}}"/>
+    </div>
+</div>
+<div class="desc-box-listing desc-width">
+    <h4 class="box-title-listing">Product Details</h4>
+    <ul class="listingItemDetailItems">
+        <li class="listingItemDetailLeft">
+            <ul>
+                <li class="listingItemBrand">Brand:<a href="/search" class="searchProperty">{{brand}}</a></li>
+                <li class="listingItemType">Type:<a href="/search" class="searchProperty">{{type}}</a></li>
+                <li class="listingItemSize">Size: <span>{{size}}</span></li>
+                <li class="listingItemColor">Color: <span style="color: {{color}}">{{color}}</span></li>
+            </ul>
+        </li>
+        <li class="listingItemDetailRight">
+            <ul>
+             <li class="listingItemCat">Category: <span>{{category}}</span></li>
+             <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
+               <li class="listingItemQuantity">Payment Accepted: <span>{{payment}}</span></li>
+             <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
+         </ul>
+     </li>
+ </ul>
+</div>
+<div class="desc-box-listing nomar desc-width listingItemDescription">
     <h4 class="box-title-listing">Description</h4>
     <p>{{{description}}}</p>
 </div>
@@ -123,28 +123,25 @@
         <ul class="listingItemUserInfo">
             <li class="listingItemUserName"><a href="/profile/{{creator_id}}">{{username}}</a></li>
             <li class="rating">☆☆☆☆☆</li>
-            <ul class="listingPayment">
-                Payment: {{payment}}
-            </ul>
+            <!-- <ul class="listingPayment"> -->
+                Payment Accepted: {{payment}}
+   <!--          </ul> -->
         </ul>
     </div>
     <div class="listingItemLocationString">
         <p>{{locationString}}</p>
     </div>
+    {{#if isCreator}}
+    <!-- Nothing -->
+    {{else}}
     <div class="optionsListClick click-nav">
         <ul class="no-js">
             <li>
                 <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
 
                 <ul class="optionsItems">
-                    {{#if isCreator}}
-                    <li>
-                    <button type="button" class="modDeleteListingTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#listingDeleteModal">Delete</button>
-                   </li>
 
-                   {{else}}
-
-                   <li>
+                 <li>
                     <button class="modReportTrigger btn btn-primary btn-lg">
                         <i class="fa fa-gavel"></i>Report Listing
                     </button>
@@ -160,12 +157,12 @@
 
                 {{/if}}
 
-                {{/if}}
             </ul>
 
         </li>
     </ul>
 </div>
+    {{/if}}
 </div>
 </div>
 <div class="hidden">

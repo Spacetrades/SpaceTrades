@@ -1,0 +1,36 @@
+<template name="Notification">
+	<li><a href="{{link}}">
+	{{#if type equals "offer"}}
+		<div class="notificationBody">
+			{{creator_name}} <b>{{action}}</b>
+			<br/>
+			of
+			<span class="money"> ${{offer_price}} </span>
+			for
+			{{listing_title}}
+			<br/>
+			{{timestamp}}
+		</div>
+		{{/if}}
+		{{#if type equals "reminder"}}
+		<div class="notificationBody">
+			<b>{{action}}</b>
+			<br/>
+			for
+			{{listing_title}}
+			<br/>
+			{{timestamp}}
+		</div>
+		{{/if}}
+		{{#if type equals "feedback"}}
+		<div class="notificationBody">
+			<b>{{action}}</b>
+			<br/>
+			for
+			{{listing_title}}
+			<br/>
+			{{timestamp}}
+		</div>
+		{{/if}}
+	</a> </li>
+</template>

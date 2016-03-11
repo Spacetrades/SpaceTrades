@@ -3,7 +3,7 @@
         <ul class="homeCardUl">
             {{#if defaultCheck}}
             {{#each listing}}
-            {{> card}}
+            {{> HomeCard}}
             {{/each}}
             {{else}}
             {{> DefaultHome}}
@@ -15,8 +15,6 @@
             <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
         </li>
     </ul>  
-    {{> ModalLocationRadius}}
-    {{> ModalJoin}}
 
     {{#if currentUser}}
     {{> footer}}

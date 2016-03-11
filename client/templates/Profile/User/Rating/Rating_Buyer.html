@@ -1,0 +1,46 @@
+  <template name="RatingBuyer">
+  {{#with buyRating}}
+      <ul class="profileUserFeedbackViewCriteria">
+        <li>
+            <ul class="profileUserFeedbackViewCriteriaOne">
+                <li class="profileUserFeedbackViewQuestion">Overall Rating</li>
+                <li class="profileUserFeedbackViewStars">
+                   <div class="rateit" data-rateit-value="{{buy_totalrating}}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+               </li>
+           </ul>
+       </li>
+       <li>
+    <ul class="profileUserFeedbackViewCriteriaFour">
+        <li class="profileUserFeedbackViewQuestion">User friendliness</li>
+        <li class="profileUserFeedbackViewStars">
+           <div class="rateit" data-rateit-value="{{buy_friendlyrating}}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+       </li>
+   </ul>
+</li>
+   <li>
+    <ul class="profileUserFeedbackViewCriteriaThree">
+        <li class="profileUserFeedbackViewQuestion">Meetup Efficiency</li>
+        <li class="profileUserFeedbackViewStars">
+            <div class="rateit" data-rateit-value="{{buy_efficiencyrating}}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+        </li>
+    </ul>
+</li>
+ <li>
+        <ul class="profileUserFeedbackViewCriteriaTwo">
+            <li class="profileUserFeedbackViewQuestion">Price Negotiation</li>
+            <li class="profileUserFeedbackViewStars">
+               <div class="rateit" data-rateit-value="{{buy_negotiationrating}}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+           </li>
+       </ul>
+   </li>
+       <li>
+        <ul class="profileUserFeedbackViewCriteriaTwo">
+            <li class="profileUserFeedbackViewQuestion">Payment Satisfaction</li>
+            <li class="profileUserFeedbackViewStars">
+               <div class="rateit" data-rateit-value="{{paymentrating}}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+           </li>
+       </ul>
+   </li>
+</ul>
+{{/with}}
+</template>
