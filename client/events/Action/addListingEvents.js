@@ -107,9 +107,9 @@ if (Meteor.isClient) {
         if (!status){
           sAlert.error("Review form");
 
-        _.each(errorFields, function(f){
-          $("." + f).css("text-decoration", "underline");
-        });
+          _.each(errorFields, function(f){
+            $("." + f).css("text-decoration", "underline");
+          });
 
         }
 
@@ -152,9 +152,9 @@ if (Meteor.isClient) {
       };
 
       var brands = {
-        'Apparel': ['Bape', 'Supreme'],
-        'Electronics': ['Apple', 'Asus', 'Beats by Dr Dre', 'Blackberry', 'Bose', 'Cannon', 'Dell', 'Go Pro', 'Google', 'HP', 'Lenovo', 'Logitech', 'Microsoft', 'Nikon', 'Nintendo', 'Panasonic', 'Samsung', 'Sandisk', 'Sharp', 'Sony', 'Turtle Beach', 'Vizio'],
-        'Shoes': ['Asics', 'Jordans', 'Converse', 'Ewing Athletics', 'Fila', 'Li Ning', 'New Balance', 'Nike', 'Puma', 'Radii', 'Reebok', 'Saucony', 'Sperry', 'Supra', 'Timberland', 'Toms', 'Vans', 'Under Armour'],
+        'Apparel': ['Bape', 'Supreme', 'Other'],
+        'Electronics': ['Apple', 'Asus', 'Beats by Dr Dre', 'Blackberry', 'Bose', 'Cannon', 'Dell', 'Go Pro', 'Google', 'HP', 'Lenovo', 'Logitech', 'Microsoft', 'Nikon', 'Nintendo', 'Panasonic', 'Samsung', 'Sandisk', 'Sharp', 'Sony', 'Turtle Beach', 'Vizio', 'Other'],
+        'Shoes': ['Asics', 'Jordans', 'Converse', 'Ewing Athletics', 'Fila', 'Li Ning', 'New Balance', 'Nike', 'Puma', 'Radii', 'Reebok', 'Saucony', 'Sperry', 'Supra', 'Timberland', 'Toms', 'Vans', 'Under Armour', 'Other'],
         'Other': ['Other']
       }
 
@@ -165,7 +165,7 @@ if (Meteor.isClient) {
 
       switch (choice) {
         case "Apparel":
-          $(".listsizeli").show();
+        $(".listsizeli").show();
 
           // Remove appended options
           $(".listtype").empty();
@@ -186,7 +186,7 @@ if (Meteor.isClient) {
 
           break
 
-        case "Electronics":
+          case "Electronics":
 
           // Remove appended options
           $(".listtype").empty();
@@ -208,7 +208,7 @@ if (Meteor.isClient) {
 
           break
 
-        case "Shoes":
+          case "Shoes":
           $(".listsizeli").show();
 
 
@@ -231,7 +231,7 @@ if (Meteor.isClient) {
 
           break
 
-        case "Other":
+          case "Other":
           $(".listsizeli").show();
 
           // Remove appended options
@@ -253,74 +253,87 @@ if (Meteor.isClient) {
 
 
           break
-      }
-
-      function sizeChange() {
-        if (choiceType == "Electronics") {
-          $(".sizeshoe").hide();
-          $(".sizelectron").show();
-        } else {
-          $(".sizelectron").hide();
-          $(".sizeshoe").show();
         }
-      }
 
-    },
-    'change .listtype': function(event) {
+        function sizeChange() {
+          if (choiceType == "Electronics") {
+            $(".sizeshoe").hide();
+            $(".sizelectron").show();
+          } else {
+            $(".sizelectron").hide();
+            $(".sizeshoe").show();
+          }
+        }
 
-      var categories = {
-        'Apparel': ['Bape', 'Supreme', 'Medium', 'Large', 'X Large'],
-        'Electronics': ['Apple', 'Asus', 'Beats by Dr. Dre', 'Blackberry', 'Bose', 'Cannon', 'Dell', 'Go Pro', 'Google', 'HP', 'Lenovo', 'Logitech', 'Microsoft', 'Nikon', 'Nintendo', 'Panasonic', 'Samsung', 'Sandisk', 'Sharp', 'Sony', 'Turtle Beach', 'Vizio'],
-        'Shoes': ['Asics', 'Jordan', 'Converse', 'Ewing Athletics', 'Fila', 'Li Ning', 'New Balance', 'Nike', 'Puma', 'Radii', 'Reebok', 'Saucony', 'Sperry', 'Supra', 'Timberland', 'Toms', 'Vans', 'Under Armor'],
-        'Other': ['X Small', 'Small', 'Medium', 'Large', 'X Large']
-      }
+      },
+      'change .listtype': function(event) {
 
-      var choice = event.target.value;
-      var choiceType = categories['sizesReg']
+        function hideAll(){
+          $(".listcapacity").hide();
+          $(".listsizename").hide();
+          $(".listsizenumber").hide();
+        }
+
+        var choice = event.target.value;
+        console.log(choice);
+
+      // 3 Types of Sizes
+      // Name Sizes
+      // Shoe Sizes - Men and Women
+      // Electronics Sizes
 
       // Fall through method
       switch (choice) {
-        // Select all these cases for one action
-        case "Shirt":
-        case "Hoodie":
-        case "Sweater":
-        case "Jacket":
-        case "Socks":
-          $(".listsize").empty();
-          $("<option value='' disabled selected>Select Size</option>").appendTo(".listsize");
 
-          // Iteration loop
-          for (i = 0; i < choiceType.length; i++) {
-            $("<option>" + choiceType[i] + "</option>").appendTo(".listsize");
-          }
+      // Name Size
+      case "Shirt":
+      case "Hoodie":
+      case "Sweater":
+      case "Pants":
+      case "Jacket":
+      case "Hat":
+      case "Socks":
+      hideAll();
+      $(".listsizename").show();
+      break;
 
-          break
+      case "Backpack":
+      hideAll();
+      break;
 
-        case "Game":
-          $(".listcapacity").hide();
-          break
+      case "Game":
+      hideAll();
+      break;
 
-        case "Phone":
-        case "Tablet":
-        case "Laptop":
-        case "Game Console":
-          $(".listcapacity").show();
-          break
-      }
-    },
-    'change .imageupload': function(event, template, pics) {
-      var images = event.currentTarget.files;
-      var pics = [];
-      var img1;
-      var img2;
-      var img3;
+      case "Basketball":
+      case "Boots":
+      case "Running":
+      case "Casual":
+      case "Sandals":
+      case "Training":
+      case "Skateboarding":
+      hideAll();
+      $(".listsizenumber").show();
+      break;
 
-      function readURL() {
+      case "Phone":
+      case "Tablet":
+      case "Laptop":
+      case "Game Console":
+      hideAll();
+      $(".listcapacity").show();
+      break;
+    }
+  },
+  'change .imageupload': function(event, template, pics) {
+    var images = event.currentTarget.files;
+    var pics = [];
+    var img1, img2, img3;
+
+    function readURL() {
         // This value needs to be the new optimized photos
         var images = event.currentTarget.files;
-
         var img1 = images[0].name;
-
 
         if (images[1]) {
           var img2 = images[1].name;
@@ -331,9 +344,6 @@ if (Meteor.isClient) {
         };
 
         Session.set("img1", img1);
-
-        // console.log( event.currentTarget.files[0] );
-
         if (event.currentTarget.files[0]) {
 
           var reader = new FileReader();

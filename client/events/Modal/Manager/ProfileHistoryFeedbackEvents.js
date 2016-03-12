@@ -77,6 +77,8 @@ if (Meteor.isClient) {
           showConfirmButton: false
         });
 
+        Router.go("/");
+
       }
 
       var options = {
