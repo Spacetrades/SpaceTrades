@@ -15,6 +15,13 @@ if (Meteor.isClient) {
     // Bootstrap Tooltips
     $('[data-toggle="tooltip"]').tooltip();
 
+    renderOptions = {};
+
+$(".listsizing").change(function(event) {
+
+ renderOptions.size = $(".listsizing option:selected").val();
+});
+
     keyPress.int("listprice");
 
     $(".listdescription").editable({

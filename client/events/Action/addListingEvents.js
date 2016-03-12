@@ -69,7 +69,7 @@ if (Meteor.isClient) {
         price: $(".listprice").val(),
         payment: $("input[name='addListingPayment']:checked").val(),
         trade: $("input[type='radio']:checked").val(),
-        size: $(".listsize option:selected").val() || $(".listcapacity option:selected").val(),
+        size: renderOptions.size,
         // Information
         condition: $(".condition option:selected").val(),
         // color: Session.get('colorName'),

@@ -631,6 +631,7 @@ if (Meteor.isServer) {
           creator_name: reminderOptions.creator_name,
           listingId: reminderOptions.listingId,
           destination: reminderOptions.destination,
+          notifyType: "reminder",
           listing_creator_id: reminderOptions.listing_creator_id
         });
 
@@ -652,6 +653,7 @@ if (Meteor.isServer) {
           creator_name: feedbackOptions.creator_name,
           listingId: feedbackOptions.listingId,
           destination: feedbackOptions.destination,
+          notifyType: "feedback",
           listing_creator_id: feedbackOptions.listing_creator_id
         });
 
