@@ -1,10 +1,25 @@
 if (Meteor.isServer) {
 
+  // Sum mixin
+  _.mixin({
+    sum: function(Object) {
+      if (!$.isArray(Object) ||
+        Object.length == 0) {
+        return (0)
+      }
+      return (
+        _.reduce(
+          Object, function(Sum, Number) {
+            return (Sum += Number)
+          }))
+    }
+  })
+
+ Number.prototype.starRound = function(x){
+  return (Math.round(this * (1/x)) / (1/x));
+};
+
   process.env.MAIL_URL = "smtp://postmaster@sandboxde84ff01a1c04de28f27e03ecec45a00.mailgun.org:49c4081bc210fdb4d41e2f37a69efcaa@smtp.mailgun.org:587";
-
-  // Get the region
-
-  // Roles.addUsersToRoles('KrNfLAaXw7Tm3NXzg', ['admin']);
 
   // New users receive a verification email
   // Accounts.config({'sendVerificationEmail': true});
@@ -20,9 +35,6 @@ if (Meteor.isServer) {
       },
       limit: 40
     };
-
-    // TASK - Get the selector to use || instead of AND
-    // When searching Nike returns listing where either brand is nike or all listing_title is Nike
 
     if (searchText) {
       var regExp = buildRegExp(searchText);
@@ -104,7 +116,7 @@ if (Meteor.isServer) {
       options.profile.amountbought = 0;
 
       // Rating Total
-      options.profile.sumrating = 0;
+      options.profile.totalrating = 0;
 
       // Seller Rating
       options.profile.sell_totalrating = 0;
@@ -272,7 +284,7 @@ if (Meteor.isServer) {
         _id: options.listingId
       }, {
         $set: {
-          feedback_filed_seller: "Completed"
+          'profile.feedback_filed_seller': "Completed"
         }
       });
 
@@ -284,7 +296,7 @@ if (Meteor.isServer) {
           'profile.amountbought': 1
         },
         $set: {
-          feedback_filed_seller: "Completed"
+          'profile.feedback_filed_seller': "Completed"
         },
         $push: {
           'profile.sell_friendlyratingArray': options.friendly_rate,
@@ -292,10 +304,54 @@ if (Meteor.isServer) {
           'profile.sell_negotiationratingArray': options.negotiatiate_rate,
           'profile.sell_describedratingArray': options.payment_rate,
         }
-      })
+      });
 
-      // Calculate new average, average for cat and total average
-      var newFriendly;
+      // Ratings
+      var friendlyTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.sell_friendlyratingArray;
+
+      var efficiencyTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.sell_efficiencyratingArray;
+
+      var negotiationTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.sell_negotiationratingArray;
+
+      var describedTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.sell_describedratingArray;
+
+      // Each Rating Sum
+      var sumFriendly = _.sum(friendlyTotal) / friendlyTotal.length;
+      sumFriendly = sumFriendly.starRound(0.5);
+
+      var sumEfficiency = _.sum(efficiencyTotal) / efficiencyTotal.length;
+      sumEfficiency = sumEfficiency.starRound(0.5);
+
+      var sumNegotiate = _.sum(negotiationTotal) / negotiationTotal.length;
+      sumNegotiate = sumNegotiate.starRound(0.5);
+
+      var sumDescribed = _.sum(describedTotal) / describedTotal.length;
+      sumDescribed = sumDescribed.starRound(0.5);
+
+      var sumSeller = (sumFriendly + sumEfficiency + sumNegotiate + sumDescribed) / 4;
+      sumSeller = sumSeller.starRound(0.5);
+
+  Meteor.users.update({
+        _id: options.rated_id
+      }, {
+        $set: {
+          'profile.sell_friendlyrating': sumFriendly,
+          'profile.sell_efficiencyrating': sumEfficiency,
+          'profile.sell_negotiationrating': sumNegotiate,
+          'profile.sell_describedrating': sumDescribed,
+          // Totals
+          'profile.sell_totalrating': sumSeller,
+          'profile.totalrating': sumSeller
+        }
+      })
 
     },
     sendFeedbackToBuyer: function(options) {
@@ -337,6 +393,55 @@ if (Meteor.isServer) {
           'profile.buy_describedratingArray': options.described_rate,
         }
       })
+
+            // Ratings
+      var friendlyTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.buy_friendlyratingArray;
+
+      var efficiencyTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.buy_efficiencyratingArray;
+
+      var negotiationTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.buy_negotiationratingArray;
+
+      var describedTotal = Meteor.users.find({
+        _id: options.rated_id
+      }).fetch()[0].profile.buy_describedratingArray;
+
+      // Each Rating Sum
+      var sumFriendly = _.sum(friendlyTotal) / friendlyTotal.length;
+      sumFriendly = sumFriendly.starRound(0.5);
+
+      var sumEfficiency = _.sum(efficiencyTotal) / efficiencyTotal.length;
+      sumEfficiency = sumEfficiency.starRound(0.5);
+
+      var sumNegotiate = _.sum(negotiationTotal) / negotiationTotal.length;
+      sumNegotiate = sumNegotiate.starRound(0.5);
+
+      var sumRated = _.sum(describedTotal) / describedTotal.length;
+      sumDescribed = sumDescribed.starRound(0.5);
+
+      var sumSeller = (sumFriendly + sumEfficiency + sumNegotiate + sumDescribed) / 4;
+      sumSeller = sumSeller.starRound(0.5);
+
+
+  Meteor.users.update({
+        _id: options.rated_id
+      }, {
+        $set: {
+          'profile.buy_friendlyrating': sumFriendly,
+          'profile.buy_efficiencyrating': sumEfficiency,
+          'profile.buy_negotiationrating': sumNegotiate,
+          'profile.buy_describedrating': sumDescribed,
+          // Totals
+          'profile.buy_totalrating': sumSeller,
+        }
+      })
+
+
     },
     /*
      * @summary Transfer Listing to history
@@ -526,6 +631,7 @@ if (Meteor.isServer) {
           creator_name: reminderOptions.creator_name,
           listingId: reminderOptions.listingId,
           destination: reminderOptions.destination,
+          notifyType: "reminder",
           listing_creator_id: reminderOptions.listing_creator_id
         });
 
@@ -547,6 +653,7 @@ if (Meteor.isServer) {
           creator_name: feedbackOptions.creator_name,
           listingId: feedbackOptions.listingId,
           destination: feedbackOptions.destination,
+          notifyType: "feedback",
           listing_creator_id: feedbackOptions.listing_creator_id
         });
 
