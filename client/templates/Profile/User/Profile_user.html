@@ -126,6 +126,7 @@
     </ul>
 </div>
 <div class="profileUserFeedbackView oneDiv">
+{{#if feedbackExists}}
         <!-- <h2>Feedback</h2>
         <ul class="profileUserFeedbackViewSymbols">
             <li class="profileUserFeedbackViewPositive"><i class="fa fa-plus"></i>{{upvotes}}</li>
@@ -141,7 +142,11 @@
             {{#each feedback}}
             {{> feedbackCard}}
             {{/each}}
-        </ul>        
-    </div>  
+        </ul>       
+
+    {{else}}
+    This user has not completed any meetups. No feedback yet.
+{{/if}} 
+</div> 
     {{/with}}
 </template>

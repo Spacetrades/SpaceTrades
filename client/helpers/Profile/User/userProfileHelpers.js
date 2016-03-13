@@ -20,6 +20,13 @@ if (Meteor.isClient) {
      // }
      // return user_check();
     },
+    feedbackExists: function() {
+
+      var count = Meteor.users.find({_id: id_user}).fetch()[0].profile.reviewscount;
+      var state = count > 0 ? state = true : state = false;
+
+      return state
+    },
 		profimg: function() {
 			return Meteor.users.find({
 				_id: id_user
