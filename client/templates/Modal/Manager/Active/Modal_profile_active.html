@@ -11,13 +11,13 @@
 		            	<p class="homeCardOfferRecieved profileSentOfferStatus">Your meetup with <a class="modActiveCreator" href="{{idOther}}">{{nameOther}}</a> is in  {{timeUntil}}</p>
 		                <ul class="profileReceivedCardLeft">
 		                    <li class="profileReceivedImage">
-		                        <a href="/listing/{{listingId}}"><img src="{{img1}}" class="profileReceivedImg"></a>
+		                        <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileReceivedImg"></a>
 		                    </li>
 		                </ul>
 		                <ul class="profileReceivedCardRight profileViewMeetupRight">
-		                    <li><a href="/listing/{{listingId}}"><h3>{{listing_title}}</h3></a></li>
-                        	<li id="profileReceivedName" class="profileReceivedName">This item is being exchanged for <span class="money">${{offerprice}}</span></li>
-		                    <li class="modProfileActiveBtn"><a href="/meetup/{{_id}}">Meetup Details</a></li>
+		                    <li><a href="/listing/{{_id}}"><h3>{{listing_title}}</h3></a></li>
+                        	<li id="profileReceivedName" class="profileReceivedName">This item is being sold for <span class="money">${{offerprice}}</span></li>
+		                    <li class="modProfileActiveBtn"><a href="/meetup/{{_id}}">Get Directions</a></li>
 		                    <li class="modProfileActiveBtn"><a href="{{chatId}}">Chat</a></li>
 		                </ul>
 		                <div id="profileReceivedOffersMaps">
