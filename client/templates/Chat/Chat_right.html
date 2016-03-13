@@ -3,31 +3,24 @@
 <!-- TASK - Include down arrow to go down to most recent message -->
 <!-- TASK - Include context of chat so, what items are you chatting about selling and display to right of userprofile -->
 <!-- TASK - ADD attachments PL -->
-<!-- TASK - Each for your own messages match your and for alternate user messages -->
-<!-- TASK - Add divider between sidebar and right -->
 	<ul class="chatRight">
 		<li class="chatTopSection">
 			<ul>
-				<li><h3><a href="">Mark Zuckerberg<!-- NAME OF THE PERSON YOU ARE CHATTING WITH HERE --><!-- {{conversation}} --></a></h3></li>
+				<li><h3><a href="">{{conversation}}</a></h3></li>
 				<li>
-					<!-- <div class="circle" style="background-color:#24ec3d;"></div> -->
 					<div class="circle" style="background-color: {{online.color}}"></div>
 				</li>
 			</ul>
 		</li>
 		<li class="chatMessages">
 			{{#each messages}}
-			<!-- <ul class="chatUserSent">
-				<li><a href=""><img src="{{pictureLookup idParam=sender}}"></a></li>
-				<li>{{message}}</li>
-				<span class="timestamp">{{createdAt}}</span>
-			</ul>
- -->
+			
  			<ul class="chatUserSent">
-				<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
+				<li><a href=""><img src="{{pictureLookup idParam=sender}}"></a></li>
 				<li class="chatMessageTempWrap">
 					<ul>
-						<li class="chatUserNameTime"><h4>Yusuf Bagha <!-- PUT NAME OF PERSON WHO SENT THE MESSAGE --> </h4></li>
+						<li class="chatUserNameTime"><h4>{{username}}</h4></li>
+
 						<span class="timestamp">{{createdAt}}</span>
 						<li>
 							<ul>

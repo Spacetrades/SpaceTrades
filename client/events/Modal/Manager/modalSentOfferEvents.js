@@ -9,7 +9,10 @@ if (Meteor.isClient) {
     		}
 
     		Meteor.call('cancelOffer', options);
-    	}
+    	},
+      'click .profileReceivedName': function(){
+        $("#sentOfferModal").modal('hide');
+      }
     });
 
 }

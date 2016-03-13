@@ -16,7 +16,6 @@ if (Meteor.isClient) {
         _id: id
       }).fetch()[0].picturesm;
     },
-
     conversations: function() {
       var funk = [];
       var frog = Message.find({}, {
@@ -30,8 +29,8 @@ if (Meteor.isClient) {
       return convos
 
     },
-    username: function() {
-
+    other: function() {
+      other = "";
       _.map(convos, function(x) {
         sample = Message.find({
           conversation: x
@@ -41,12 +40,16 @@ if (Meteor.isClient) {
         var receiver = sample.receiver;
         var you = Meteor.userId();
 
-        var other = you == sender ? receiver : sender;
-
+        other = you == sender ? receiver : sender;
+        Session.set('otherId', other);
       });
-      return other
+      return Meteor.users.find({
+        _id: other
+      }).fetch()[0].profile;
 
-    }
+    },
+    otherId: function() {
+      return other
+    },
   })
 };
-
