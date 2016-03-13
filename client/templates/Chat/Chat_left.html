@@ -1,111 +1,23 @@
 <template name="chatLeft">
 	<ul class="chatLeft">
-<!-- 		<li class="chatInbox">
-			<ul>
-				<li class="chatInboxTop">
-					<ul>
-						<li class="chatInboxTitle"><h3>Inbox</h3></li>
-						<li class="chatInboxSearch"><i class="fa fa-search"></i><input type="text" class="chatInboxSeachInput"></li>
-					</ul>
-				</li>
-			</ul> 
-		</li> -->
-		{{#each conversations}}
 		<h3 class="chatConvoTab">Inbox</h3>
+		<!--  -->
+		{{#each conversations}}
+		{{#with other}}
+		<a href="/chat/{{conversations}}">
 		<li class="chatPeople">
 			<ul>
 				<li class="chatPerson">
 					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Edwardo Saverin</a></li>
+							<li><a><img src="{{picturesm}}"></a></li>
+							<li><a class="profile-link" href="/profile/{{otherId}}">{{name}}</a></li>
 							<li><div class="circle" style="green"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Harriot Tubman</a></li>
-							<li><div class="circle" style="green"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Mark Wahtney</a></li>
-							<li><div class="circle" style="{{online}}"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Nathan Chackerian</a></li>
-							<li><div class="circle" style="green"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a href=""><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Mark Zuckerberg</a></li>
-							<li><div class="circle" style="{{online}}"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Dustin Moscavitz</a></li>
-							<li><div class="circle" style="{{online}}"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Yusuf Bagha</a></li>
-							<li><div class="circle" style="green"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Ryan Gosling</a></li>
-							<li><div class="circle" style="{{online}}"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">James Bond</a></li>
-							<li><div class="circle" style="{{online}}"></div></li>
-						</a>
-					</ul>
-				</li>
-				<li class="chatPerson">
-					<ul>
-						<a href="/chat/{{conversations}}">
-							<li><a><img src="https://scontent-lga3-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p50x50/11046819_726055314180186_3792506880073062985_n.jpg?oh=80665c51e5c74ba007d9635cd32195dd&amp;oe=576973DD"></a></li>
-							<li><a class="profile-link">Ethan Klein</a></li>
-							<li><div class="circle" style="green"></div></li>
-						</a>
 					</ul>
 				</li>
 			</ul>
-		</li> 
+		</li>
+		</a>
+		{{/with}} 
 		{{/each}}
 		<!-- <li><a href=""><img src="{{pictureLookup idParam=username}}"></a></li>
 		<li> <a href="/chat/{{conversations}}" class="profile-link">{{nameLookup idParam=username}}</a></li>

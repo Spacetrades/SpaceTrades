@@ -34,12 +34,12 @@
                 <li class="headerDropDown navGlobal">
                     <a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="headerDropDownNav">
-                        <li><a href="/add">Add Listing</a></li>
-                        <li><a href="/profile/active">Active Meetups</a></li>
-                        <li><a href="/profile/offers">Sent Offers</a></li>
-                        <li><a href="/profile/listings">Your Listings</a></li>
-                        <li><a href="/profile/saved">Saved Products</a></li>
-                        <li><a href="/profile/history">History</a></li>
+                        <a href="/add"><li>Add Listing</li></a>
+                        <a href="/profile/active"><li>Active Meetups</li></a>
+                        <a href="/profile/offers"><li>Sent Offers</li></a>
+                        <a href="/profile/listings"><li>Your Listings</li></a>
+                        <a href="/profile/saved"><li>Saved Products</li></a>
+                        <a href="/profile/history"><li>History</li></a>  
                        
                     </ul>
                 </li>
@@ -55,17 +55,18 @@
                     </ul>
                 </li> 
                 <li class="headerDropDown navMessages clickDropper">
-                    <span class="badge">{{chatCountUnread}}</span><a href="#"><i class="material-icons">chat</i></a>
+                    <span class="badge" style="display: block">{{chatCountUnread}}</span><a href="/chat"><i class="material-icons">chat</i></a>
 
                 </li> 
                 <li class="headerDropDown navGeneral clickDropper">
                     <a href="#"><i class="fa fa-caret-down"></i></a>
                     <ul class="headerDropDownNav">
-                        <li><a href="/help">Help Center</a></li>
-                        <li><a href="/advertise">Advertise</a></li>
-                        <li><a href="/help/report">Report</a></li>
-                        <li><a href="/profile/settings">Profile Settings</a></li>
-                        <li><a href="#" class="logout">Logout</a></li>
+                       <a href="/help"><li>Help Center</li></a>
+                       <a href="/help"><li>Go Premium</li></a>
+                        <a href="/advertise"><li>Advertise</li></a>
+                       <a href="/help/report"><li>Report</li></a>
+                        <a href="/profile/settings"><li>Profile Settings</li></a>
+                        <a href="#" class="logout"><li>Logout</li></a>
                     </ul>
                 </li>
             </ul>
