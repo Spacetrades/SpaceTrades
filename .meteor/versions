@@ -134,6 +134,7 @@ ordered-dict@1.0.4
 package-version-parser@3.0.4
 percolate:synced-cron@1.3.0
 percolatestudio:segment.io@3.0.0
+poetic:jquery.appear@0.0.6
 practicalmeteor:chai@2.1.0_1
 practicalmeteor:loglevel@1.2.0_2
 promise@0.5.1
