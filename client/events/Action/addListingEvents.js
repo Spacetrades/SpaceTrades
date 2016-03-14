@@ -104,11 +104,11 @@ if (Meteor.isClient) {
           }
         }
 
-        if (!status){
+        if (!status) {
           sAlert.error("Review form");
           console.log(options);
 
-          _.each(errorFields, function(f){
+          _.each(errorFields, function(f) {
             $("." + f).css("text-decoration", "underline");
           });
 
@@ -166,7 +166,7 @@ if (Meteor.isClient) {
 
       switch (choice) {
         case "Apparel":
-        $(".listsizeli").show();
+          $(".listsizeli").show();
 
           // Remove appended options
           $(".listtype").empty();
@@ -188,7 +188,7 @@ if (Meteor.isClient) {
 
           break
 
-          case "Electronics":
+        case "Electronics":
 
           // Remove appended options
           $(".listtype").empty();
@@ -211,7 +211,7 @@ if (Meteor.isClient) {
 
           break
 
-          case "Shoes":
+        case "Shoes":
           $(".listsizeli").show();
 
           // Remove appended options
@@ -235,7 +235,7 @@ if (Meteor.isClient) {
 
           break
 
-          case "Other":
+        case "Other":
           $(".listsizeli").show();
 
           // Remove appended options
@@ -257,29 +257,29 @@ if (Meteor.isClient) {
 
 
           break
+      }
+
+      function sizeChange() {
+        if (choiceType == "Electronics") {
+          $(".sizeshoe").hide();
+          $(".sizelectron").show();
+        } else {
+          $(".sizelectron").hide();
+          $(".sizeshoe").show();
         }
+      }
 
-        function sizeChange() {
-          if (choiceType == "Electronics") {
-            $(".sizeshoe").hide();
-            $(".sizelectron").show();
-          } else {
-            $(".sizelectron").hide();
-            $(".sizeshoe").show();
-          }
-        }
+    },
+    'change .listtype': function(event) {
 
-      },
-      'change .listtype': function(event) {
+      function hideAll() {
+        $(".listcapacity").hide();
+        $(".listsizename").hide();
+        $(".listsizenumber").hide();
+      }
 
-        function hideAll(){
-          $(".listcapacity").hide();
-          $(".listsizename").hide();
-          $(".listsizenumber").hide();
-        }
-
-        var choice = event.target.value;
-        console.log(choice);
+      var choice = event.target.value;
+      console.log(choice);
 
       // 3 Types of Sizes
       // Name Sizes
@@ -289,52 +289,53 @@ if (Meteor.isClient) {
       // Fall through method
       switch (choice) {
 
-      // Name Size
-      case "Shirt":
-      case "Hoodie":
-      case "Sweater":
-      case "Pants":
-      case "Jacket":
-      case "Hat":
-      case "Socks":
-      hideAll();
-      $(".listsizename").show();
-      break;
+        // Name Size
+        case "Shirt":
+        case "Hoodie":
+        case "Sweater":
+        case "Pants":
+        case "Jacket":
+        case "Hat":
+        case "Socks":
+          hideAll();
+          $(".listsizename").show();
+          break;
 
-      case "Backpack":
-      hideAll();
-      break;
+        case "Backpack":
+          hideAll();
+          break;
 
-      case "Game":
-      hideAll();
-      break;
+        case "Game":
+          hideAll();
+          break;
 
-      case "Basketball":
-      case "Boots":
-      case "Running":
-      case "Casual":
-      case "Sandals":
-      case "Training":
-      case "Skateboarding":
-      hideAll();
-      $(".listsizenumber").show();
-      break;
+        case "Basketball":
+        case "Boots":
+        case "Running":
+        case "Casual":
+        case "Sandals":
+        case "Training":
+        case "Skateboarding":
+          hideAll();
+          $(".listsizenumber").show();
+          break;
 
-      case "Phone":
-      case "Tablet":
-      case "Laptop":
-      case "Game Console":
-      hideAll();
-      $(".listcapacity").show();
-      break;
-    }
-  },
-  'change .imageupload': function(event, template, pics) {
-    var images = event.currentTarget.files;
-    var pics = [];
-    var img1, img2, img3;
+        case "Phone":
+        case "Tablet":
+        case "Laptop":
+        case "Game Console":
+          hideAll();
+          $(".listcapacity").show();
+          break;
+      }
+    },
+    'change .imageupload': function(event, template, pics) {
+      var images = event.currentTarget.files;
+      console.log(images);
+      var pics = [];
+      var img1, img2, img3;
 
-    function readURL() {
+      function readURL() {
         // This value needs to be the new optimized photos
         var images = event.currentTarget.files;
         var img1 = images[0].name;
@@ -396,24 +397,32 @@ if (Meteor.isClient) {
 
       function resizeImages() {}
 
-      function optimizeImages() {}
-
       readURL(this);
       buildURLs();
 
       // Layout of images on S3 = UserNameIDFolder/ListingFolder/ Images Go Here
       // Use downloadURL in the future
       var uploads = _.map(event.currentTarget.files, function(file) {
+        console.log(file);
+
         var uploader = new Slingshot.Upload("listingImages");
 
-        uploader.send(file, function(error, downloadUrl) {
+        Meteor.call('convertImage', file, function(err, response) {
 
-          var url = downloadUrl;
-          if (error) {
-            console.error("Error Uploading", uploader.xhr.response);
-            alert(error);
-          } else {}
+          file = response;
+          console.log(response);
+
+          uploader.send(file, function(error, downloadUrl) {
+
+            var url = downloadUrl;
+            if (error) {
+              console.error("Error Uploading", uploader.xhr.response);
+              alert(error);
+            } else {}
+          });
+
         });
+
       })
     }
   });

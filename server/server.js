@@ -208,6 +208,12 @@ if (Meteor.isServer) {
         text: text
       });
     },
+    convertImage: function(image){
+        var file = gm(image).setFormat("jpg");
+        file = gm(image).quality(20);
+        console.log(file);
+        return file;
+    },
     /**
      * @summary Add listing
      * @locus Server
@@ -611,6 +617,7 @@ if (Meteor.isServer) {
         creator_name: options.creator_name,
         listingId: options.listingId,
         destination: options.destination,
+        link: options.link,
         listing_creator_id: options.listing_creator_id
       });
     },
