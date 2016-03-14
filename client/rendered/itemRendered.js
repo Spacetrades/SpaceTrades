@@ -7,6 +7,8 @@ if (Meteor.isClient) {
     });
     $('[data-toggle="tooltip"]').tooltip();
 
+    $('.rateit').rateit();
+
     //  $('.imgBreak').error( function(){
     //   $(this).attr('src', 'default-item-img.jpg');
     // });

@@ -45,25 +45,25 @@
                 <li class="headerDropDown navNotifications clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
                     <ul class="headerDropDownNav">
-                    {{#each Notification}}
+                        {{#each Notification}}
                         {{> Notification}}
                         {{/each}}
-                         <a href="/notifications" class="modNotificationsTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#notificationsModal">
+                        <a href="/notifications" class="modNotificationsTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#notificationsModal">
                             View All Notifications
                         </a> 
                     </ul>
                 </li> 
                 <li class="headerDropDown navMessage clickDropper">
-                <!-- Shows Name at top when message received. Click goes to that person name -->
+                    <!-- Shows Name at top when message received. Click goes to that person name -->
                     <span class="badge" style="display: block">{{chatCountUnread}}</span><a href="/chat"><i class="material-icons">chat</i></a>
                 </li> 
                 <li class="headerDropDown navGeneral clickDropper">
                     <a href="#"><i class="fa fa-caret-down"></i></a>
                     <ul class="headerDropDownNav">
                         <a href="/help"><li>Help Center</li></a>
-                       <a href="/help"><li>Go Premium</li></a>
+                        <a href="/help"><li>Go Premium</li></a>
                         <a href="/advertise"><li>Advertise</li></a>
-                       <a href="/help/report"><li>Report</li></a>
+                        <a href="/help/report"><li>Report</li></a>
                         <a href="/profile/settings"><li>Profile Settings</li></a>
                         <a href="#" class="logout"><li>Logout</li></a>
                     </ul>
@@ -74,8 +74,8 @@
     <h1 class="logo"><a href="/">SpaceTrades</a></h1>
     <!-- Teddy Bear System -->
     <div class="searchfield job oneDiv">
-       <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
-      <a href="/search" class="homesearchbtn">Search</a>
-</div>
+     <input type="text" id="search" class="search" placeholder="Brand, Name, Neighborhood, Size, Price...">
+     <a href="/search" class="homesearchbtn">Search</a>
+ </div>
 
 </template>

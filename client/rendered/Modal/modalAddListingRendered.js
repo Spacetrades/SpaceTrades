@@ -2,6 +2,7 @@ if (Meteor.isClient) {
 
   Template.ActionAddListing.onRendered(function() {
 
+// Hide further divs
     for (i = 2; i < 7; i++) {
       $(".step-" + i).hide()
     }
@@ -17,10 +18,20 @@ if (Meteor.isClient) {
 
     renderOptions = {};
 
-$(".listsizing").change(function(event) {
+    $(".listsizeshoe").change(function(event) {
 
- renderOptions.size = $(".listsizing option:selected").val();
-});
+      renderOptions.size = $(".listsizeshoe option:selected").text();
+    });
+
+    $(".listsizename").change(function(event) {
+
+      renderOptions.size = $(".listsizename option:selected").text();
+    });
+
+    $(".listspace").change(function(event) {
+
+      renderOptions.size = $(".listspace option:selected").text();
+    });
 
     keyPress.int("listprice");
 
