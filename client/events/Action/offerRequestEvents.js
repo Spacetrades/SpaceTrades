@@ -120,8 +120,8 @@ if (Meteor.isClient) {
 
         Meteor.setTimeout(expireOffer, options.delayTime);
 
-        // Notification
-        Meteor.call('pulseNotify', options);
+        // // Notification
+        // Meteor.call('pulseNotify', options);
 
         sweetAlert({
           title: "Offer Created",
