@@ -692,6 +692,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .mainnav ul li a:hover {
     color: #fff;
     background-color: $color-spacegrey;
+    text-shadow: none;
 }
 
 .meetupitems {
@@ -2089,6 +2090,7 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
 
 i:hover {
     color: black !important;
+    text-shadow: none !important;
     transition: 1s;
 }
 

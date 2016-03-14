@@ -1,6 +1,7 @@
 <template name="Notification">
 	<a href="{{link}}"><li>
 	{{#if type equals "offer"}}
+	offer
 		<div class="notificationBody">
 			{{creator_name}} <b>{{action}}</b>
 			{{type}}
@@ -14,6 +15,7 @@
 		</div>
 		{{/if}}
 		{{#if type equals "reminder"}}
+		reminder
 		<div class="notificationBody">
 			<b>{{action}}</b>
 				{{type}}
@@ -25,6 +27,7 @@
 		</div>
 		{{/if}}
 		{{#if type equals "feedback"}}
+		feedback
 		<div class="notificationBody">
 			<b>{{action}}</b>
 				{{type}}

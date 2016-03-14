@@ -208,6 +208,12 @@ if (Meteor.isServer) {
         text: text
       });
     },
+    convertImage: function(image){
+        var file = gm(image).setFormat("jpg");
+        file = gm(image).quality(20);
+        console.log(file);
+        return file;
+    },
     /**
      * @summary Add listing
      * @locus Server
