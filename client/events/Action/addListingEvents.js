@@ -106,6 +106,7 @@ if (Meteor.isClient) {
 
         if (!status){
           sAlert.error("Review form");
+          console.log(options);
 
           _.each(errorFields, function(f){
             $("." + f).css("text-decoration", "underline");
@@ -173,6 +174,7 @@ if (Meteor.isClient) {
 
           $("listcapacity").hide();
           $("<option value='' disabled selected>Select Type</option>").appendTo(".listtype");
+          $("<option>Other</option>").appendTo(".listtype");
 
           // Iteration append loop for types
           for (i = 0; i < choiceType.length; i++) {
@@ -200,6 +202,7 @@ if (Meteor.isClient) {
           for (i = 0; i < choiceType.length; i++) {
             $("<option>" + choiceType[i] + "</option>").appendTo(".listtype");
           }
+          $("<option>Other</option>").appendTo(".listtype");
 
           // Iteration append loop for brands
           for (i = 0; i < choiceBrand.length; i++) {
@@ -211,18 +214,19 @@ if (Meteor.isClient) {
           case "Shoes":
           $(".listsizeli").show();
 
-
           // Remove appended options
           $(".listtype").empty();
           $(".listbrand").empty();
-
           $("listcapacity").hide();
+
           $("<option value='' disabled selected>Select Type</option>").appendTo(".listtype");
+          $("<option>Other</option>").appendTo(".listtype");
 
           // Iteration append loop for types
           for (i = 0; i < choiceType.length; i++) {
             $("<option>" + choiceType[i] + "</option>").appendTo(".listtype");
           }
+          $("<option>Other</option>").appendTo(".listtype");
 
           // Iteration append loop for brands
           for (i = 0; i < choiceBrand.length; i++) {

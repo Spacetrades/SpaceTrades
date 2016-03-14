@@ -1,12 +1,12 @@
 <template name="item">
-   <!-- TASK - Add Go to Manager button for your listing pages -->
-   {{#with listing}}
+ <!-- TASK - Add Go to Manager button for your listing pages -->
+ {{#with listing}}
 
-   {{#if offerAccepted}}
-   {{> itemAfter}}
-   {{else}}
+ {{#if offerAccepted}}
+ {{> itemAfter}}
+ {{else}}
 
-   <div class="listingItemDiv oneDiv">
+ <div class="listingItemDiv oneDiv">
     <h1 class="listingItemTitle">{{listing_title}}</h1>
     <p class="listingItemOffersRecieved">Created {{dateFormatted}}<br><h3 class="offersReceivedCount"> {{offers}} </h3> Offers Received</p>
     <div class="listingItemLeft">
@@ -16,8 +16,8 @@
             </ul>
             {{#if isCreator}}
             <ul class="listingItemButtons">
-             {{#if isCreatorEdit}}
-             <li>
+               {{#if isCreatorEdit}}
+               <li>
                 <a href="{{current}}/edit" class="modOfferRequestTrigger btn btn-default">Edit</a>
             </li>
             {{/if}}
@@ -28,9 +28,9 @@
         {{else}}
         <ul class="listingItemButtons">
             <li>
-               <a class="btn btn-default profileBtn" href="{{_id}}/offer/">Offer</a>
-           </li>
-           <li>
+             <a class="btn btn-default profileBtn" href="{{_id}}/offer/">Offer</a>
+         </li>
+         <li>
             <a class="btn btn-default profileBtn" href="/chat/{{chatId}}">Chat</a>
         </li>
     </ul>
@@ -76,13 +76,13 @@
         </li>
         <li class="listingItemDetailRight">
             <ul>
-             <li class="listingItemCat">Category: <span>{{category}}</span></li>
-             <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
+               <li class="listingItemCat">Category: <span>{{category}}</span></li>
+               <li class="listingItemCondition">Condition: <span>{{condition}}</span></li>
                <li class="listingItemQuantity">Payment Accepted: <span>{{payment}}</span></li>
-             <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
-         </ul>
-     </li>
- </ul>
+               <li class="listingItemTrade">Trade Offers: <span>{{trade}}</span></li> 
+           </ul>
+       </li>
+   </ul>
 </div>
 <div class="desc-box-listing nomar desc-width listingItemDescription">
     <h4 class="box-title-listing">Description</h4>
@@ -123,7 +123,9 @@
         </ul>
         <ul class="listingItemUserInfo">
             <li class="listingItemUserName"><a href="/profile/{{creator_id}}">{{username}}</a></li>
-            <li class="rating">☆☆☆☆☆</li>
+            <li class="rating">
+                <div class="rateit" data-rateit-value="{{totalrating}}" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+            </li>
         </ul>
     </div>
     <div class="listingItemLocationString">
@@ -139,7 +141,7 @@
 
                 <ul class="optionsItems">
 
-                 <li>
+                   <li>
                     <button class="modReportTrigger btn btn-primary btn-lg">
                         <i class="fa fa-gavel"></i>Report Listing
                     </button>
@@ -160,7 +162,7 @@
         </li>
     </ul>
 </div>
-    {{/if}}
+{{/if}}
 </div>
 </div>
 <div class="hidden">

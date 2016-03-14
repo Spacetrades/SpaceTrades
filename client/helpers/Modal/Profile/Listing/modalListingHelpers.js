@@ -19,7 +19,7 @@
        isCreatorEdit: function() {
 
          var noOffers = Offer.find({
-           listingId: id
+           listingId: Session.get('listingSelected')._id
          }).count() == 0;
          if (this.creator_id == Meteor.userId() && noOffers) {
            return true;
@@ -27,14 +27,14 @@
            return false;
          }
        },
-       // isCreator: function(){
-       //     if (this.creator_id == Meteor.userId()){
-       //     return true;
-       //   }
-       //   else {
-       //     return false;
-       //   }
-       // },
+       isCreator: function(){
+           if (this.creator_id == Meteor.userId()){
+           return true;
+         }
+         else {
+           return false;
+         }
+       },
        offers: function() {
          return Offer.find({
            listingId: Session.get('listingSelected')._id

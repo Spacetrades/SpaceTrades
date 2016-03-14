@@ -4,12 +4,11 @@
             <input type="text" id="search" class=" search search2" value="{{search}}" placeholder="Brand, Name, Neighborhood, Size, Price..."  >
             <a href="/search" class="homesearchbtn">Search</a>
         </div>
-
          
         <div class="searchResultsDiv oneDiv">
             <ul class="searchResultsOptions">
                 <li class="searchResultsCount">{{getListings.length}} results for "{{search}}"</li>
-                <li class="sortClick click-nav">
+                <!-- <li class="sortClick click-nav">
                     <ul class="no-js">
                         <li>
                             <a class="clicker sortClicker">Sort: Best Match<i class="fa fa-caret-down"></i></a>
@@ -24,17 +23,17 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <div class="searchResultsRefine">
-                <!-- <p class="searchRefineTitle">Refine Search</p> -->
-            <!--     <ul class="searchRefineCategories">
+                <p class="searchRefineTitle">Refine Search</p>
+                <ul class="searchRefineCategories">
                     <p class="searchRefineHeadings">Categories</p>
                     <li><input class="apparelCheck" type="checkbox" value="Apparel">Apparel</li>
                     <li><input class="electronicsCheck" type="checkbox" value="Electronics">Electronics</li>
                     <li><input class="shoesCheck" type="checkbox" value="Shoes">Shoes</li>
                     <li><input class="otherCheck" type="checkbox" value="Other">Other</li>
-                </ul> -->
+                </ul>
                <!--  <ul class="searchRefineCondition">
                     <p class="searchRefineHeadings">Condition</p>
                     <li><input type="checkbox" value="New">New</li>
@@ -101,7 +100,7 @@
                     </li>
                 </ul>
                 <ul class="searchRefineStyle">
-                    <p class="searchRefineHeadings typeChoose">Type</p>
+                    <!-- <p class="searchRefineHeadings typeChoose">Type</p> -->
                     <!-- TASK - Depends on checks for categories. If one cat checked, show all dependent Types -->
                 </ul>
               <!--   <ul class="searchRefineColor">

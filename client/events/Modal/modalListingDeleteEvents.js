@@ -10,14 +10,13 @@ if (Meteor.isClient) {
         creator_id: creator_id
       }
       Meteor.call('removeListing', options);
-      // $("#listingDeleteModal").modal('toggle');
+      $("#listingDeleteModal").modal('toggle');
 
-      // sweetAlert({
-      //   title: "Listing Removed",
-      //   type: "success",
-      //   timer: 3000,
-      //   showConfirmButton: false
-      // });
+      sweetAlert({
+        title: "Listing Removed",
+        type: "success",
+        showConfirmButton: false
+      });
       // Router.go("/");
 
     }
