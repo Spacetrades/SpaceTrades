@@ -617,6 +617,7 @@ if (Meteor.isServer) {
         creator_name: options.creator_name,
         listingId: options.listingId,
         destination: options.destination,
+        link: options.link,
         listing_creator_id: options.listing_creator_id
       });
     },

@@ -81,7 +81,8 @@ if (Meteor.isClient) {
         status: "Pending",
         // Notification flags
         action: "sent you an offer",
-        notifyType: "offer"
+        notifyType: "offer",
+        link: "/profile/listings/"
       }
 
       options.destination = [options.listing_creator_id];
