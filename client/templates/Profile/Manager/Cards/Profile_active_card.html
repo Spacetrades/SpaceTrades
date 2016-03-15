@@ -1,6 +1,6 @@
 <template name="ProfileActiveCard">
    <li class="profileCardLi">
-        <p>Meetup With {{nameOther}}</p>
+        <p>Meetup With <a href="/profile/{{idOther}}" class="profileCardBoughtSold">{{nameOther}}</a></p>
         <ul class="profileCardImage">
             <a href="/listing/{{_id}}"><img src="{{img1}}" class="profileCardImg"></a>
         </ul>

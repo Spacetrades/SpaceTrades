@@ -19,7 +19,7 @@
 				<li><a href=""><img src="{{pictureLookup idParam=sender}}"></a></li>
 				<li class="chatMessageTempWrap">
 					<ul>
-						<li class="chatUserNameTime"><h4>{{username}}</h4></li>
+						<li class="chatUserNameTime"><h4>{{nameLookup sender}}</h4></li>
 
 						<span class="timestamp">{{createdAt}}</span>
 						<li>
@@ -37,7 +37,7 @@
 				<li><input type="text" class="chatText"></li>
 			</ul>
 			<ul class="chatSend">
-				<li><i class=" fa fa-paperclip"></i></li>
+				<!-- <li><i class=" fa fa-paperclip"></i></li> -->
 				<li><input type="submit" class="chatSendButton" value="Send"></li>
 			</ul>
 		</li>

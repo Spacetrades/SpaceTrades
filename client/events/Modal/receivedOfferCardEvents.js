@@ -1,9 +1,10 @@
 if (Meteor.isClient){
 
-	Template.receivedOfferCard.events({
+	Template.modalreceivedOfferCard.events({
 		'click .profileReceivedOffersHover': function () {
 			Session.set('offerSelected', this);
+      $("#receivedOffersModal").modal('hide');
 		}
 	});
-	
+
 }

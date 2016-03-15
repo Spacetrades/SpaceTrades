@@ -42,15 +42,15 @@
                         <a href="/profile/history"><li>History</li></a>                    
                     </ul>
                 </li>
-                <li class="headerDropDown navNotifications clickDropper">
+               <li class="headerDropDown navNotifications clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
                     <ul class="headerDropDownNav">
                         {{#each Notification}}
-                        {{> Notification}}
+                        <li>{{> Notification}}</li>
                         {{/each}}
-                        <a href="/notifications" class="modNotificationsTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#notificationsModal">
+                         <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg">
                             View All Notifications
-                        </a> 
+                        </button> 
                     </ul>
                 </li> 
                 <li class="headerDropDown navMessage clickDropper">
