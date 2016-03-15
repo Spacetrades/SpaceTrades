@@ -45,46 +45,35 @@ if (Meteor.isClient) {
       var subtractTime = 1.116 * Math.pow(10, 8);
       var reminderTime = delayTime - subtractTime;
 
-            var feedbackOptions = {
-          action: "Fill out Feedback",
-          listing_title: offerBlock.listing_title,
-          offerprice: offerBlock.offerprice,
-          creator_id: offerBlock.creator_id,
-          listingId: offerBlock.listingId,
-          destination: [offerBlock.creator_id, Meteor.userId()],
-          seller_id: Meteor.userId(),
-          buyer_id: offerBlock.creator_id,
-          delay: delayTime
-        }
+      var feedbackOptions = {
+        action: "Fill out Feedback",
+        listing_title: offerBlock.listing_title,
+        offerprice: offerBlock.offerprice,
+        creator_id: offerBlock.creator_id,
+        listingId: offerBlock.listingId,
+        destination: [offerBlock.creator_id, Meteor.userId()],
+        seller_id: Meteor.userId(),
+        buyer_id: offerBlock.creator_id,
+        delay: delayTime
+      }
 
-          var reminderOptions = {
-          action: "Meetup scheduled for tommorow",
-          listing_title: offerBlock.listing_title,
-          offerprice: offerBlock.offerprice,
-          creator_id: offerBlock.creator_id,
-          time: offerBlock.date,
-          offer_id: offerBlock._id,
-          listingId: offerBlock.listingId,
-          destination: [offerBlock.creator_id, Meteor.userId()],
-          seller_id: Meteor.userId(),
-          buyer_id: offerBlock.creator_id,
-          delay : reminderTime
-        }
-Meteor.call('reminderNotify', reminderOptions);
-Meteor.call('feedbackNotify', feedbackOptions);
+      var reminderOptions = {
+        action: "Meetup scheduled for tommorow",
+        listing_title: offerBlock.listing_title,
+        offerprice: offerBlock.offerprice,
+        creator_id: offerBlock.creator_id,
+        time: offerBlock.date,
+        offer_id: offerBlock._id,
+        listingId: offerBlock.listingId,
+        destination: [offerBlock.creator_id, Meteor.userId()],
+        seller_id: Meteor.userId(),
+        buyer_id: offerBlock.creator_id,
+        delay: reminderTime
+      }
+      Meteor.call('reminderNotify', reminderOptions);
+      Meteor.call('feedbackNotify', feedbackOptions);
 
-      // Reminder Notification
-      // Meteor.setTimeout(function() {
-      //   sAlert.success("Reminder");
-      //   Meteor.call('pulseNotify', reminderOptions);
-      // }, reminderTime);
-
-      // Feedback Notification
-      // Meteor.setTimeout(function() {
-      //   sAlert.success("Fill out Feedback");
-      //   Meteor.call('pulseNotify', feedbackOptions);
-      //   Meteor.call('transferListing', feedbackOptions);
-      // }, delayTime);
+      Router.go("/");
 
     },
     'click #profileReceivedDecline': function() {
@@ -119,6 +108,8 @@ Meteor.call('feedbackNotify', feedbackOptions);
 
       Meteor.call('declineOffer', options);
       Meteor.call('pulseNotify', options);
+
+      Router.go("/");
     }
   });
 }

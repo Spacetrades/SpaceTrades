@@ -33,7 +33,7 @@
             <ul class="headerPostOptions headerLine clickDropper">
                 <li class="headerDropDown navGlobal">
                     <a href="#"><i class="fa fa-bars"></i></a>
-                    <ul class="headerDropDownNav">
+                    <ul class="headerDropDownNav managerDropdown">
                         <a href="/add"><li>Add Listing</li></a>
                         <a href="/profile/active"><li>Active Meetups</li></a>
                         <a href="/profile/offers"><li>Sent Offers</li></a>
@@ -44,7 +44,7 @@
                 </li>
                 <li class="headerDropDown navNotifications clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
-                    <ul class="headerDropDownNav">
+                    <ul class="headerDropDownNav notifyDropdown">
                         {{#each Notification}}
                         <li>{{> Notification}}</li>
                         {{/each}}
@@ -58,7 +58,7 @@
                 </li> 
                 <li class="headerDropDown navGeneral clickDropper">
                     <a href="#"><i class="fa fa-caret-down"></i></a>
-                    <ul class="headerDropDownNav">
+                    <ul class="headerDropDownNav otherDropdown">
                        <a href="/help"><li>Help Center</li></a>
                        <a href="/help"><li>Go Premium</li></a>
                         <a href="/advertise"><li>Advertise</li></a>
