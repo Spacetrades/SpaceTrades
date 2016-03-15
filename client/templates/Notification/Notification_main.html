@@ -2,7 +2,8 @@
 	<a href="{{link}}"><li>
 		{{#if equals type "offer"}}
 		<div class="notificationBody">
-			{{creator_name}} <b>{{action}}</b>
+			<a href="/profile/{{creator_id}}" class="profile-link">{{creator_name}}</a>
+			<b>{{action}}</b>
 			<br/>
 			of
 			<span class="money"> ${{offer_price}} </span>

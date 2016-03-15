@@ -40,7 +40,6 @@
                         <a href="/profile/listings"><li>Your Listings</li></a>
                         <a href="/profile/saved"><li>Saved Products</li></a>
                         <a href="/profile/history"><li>History</li></a>  
-                       
                     </ul>
                 </li>
                 <li class="headerDropDown navNotifications clickDropper">
@@ -49,14 +48,13 @@
                         {{#each Notification}}
                         <li>{{> Notification}}</li>
                         {{/each}}
-                         <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#notificationsModal">
+                         <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg" >
                             View All Notifications
                         </button> 
                     </ul>
                 </li> 
                 <li class="headerDropDown navMessages clickDropper">
                    <a href="/chat"><i class="material-icons">chat</i></a>
-
                 </li> 
                 <li class="headerDropDown navGeneral clickDropper">
                     <a href="#"><i class="fa fa-caret-down"></i></a>

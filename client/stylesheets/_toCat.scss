@@ -15,6 +15,11 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
     background-color: rgba(255, 255, 0, 0.67);
 }
 
+.notificationHighlight {
+    color: deepskyblue;
+    text-shadow: 1px 1px black;
+}
+
 .tooltip > .tooltip-inner {
     background-color: $color-spacegrey !important;
     height: 30% !important;
@@ -170,9 +175,9 @@ GLOBAL | GLOBAL DIVS | HEADER | FOOTER **/
 	margin: 0 10px 0 0 !important;
 }
 
-.addListing i:hover {
-	color: $color-spacered !important;
-}
+// .addListing i:hover {
+// 	color: $color-spacered !important;
+// }
 
 .usernameChat {
     color: $color-blue2;
@@ -689,11 +694,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-weight: 400;
 }
 
-.mainnav ul li a:hover {
-    color: #fff;
-    background-color: $color-spacegrey;
-    text-shadow: none;
-}
+// .mainnav ul li a:hover {
+//     color: #fff;
+//     background-color: $color-spacegrey;
+//     text-shadow: none;
+// }
 
 .meetupitems {
     color: $color-spacered;
@@ -705,10 +710,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-weight: 400 !important;
 }
 
-.navbox a:hover {
-    background-color: #fff !important;
-    color: $color-spacegrey !important;
-}
+// .navbox a:hover {
+//     background-color: #fff !important;
+//     color: $color-spacegrey !important;
+// }
 
 .navverify {
     margin-right: 0.5rem;
@@ -771,11 +776,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     color: #fff !important;
     background-color: $color-spacegrey !important;
     padding: 4px 6px !important;
-}
-
-.navdown:hover {
-    background-color: $color-spacegrey !important;
-    color: #fff !important;
 }
 
 /** Header Post **/
@@ -896,10 +896,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     border-radius: 0.3em;
 }
 
-.chatButton {
-
-
-}
 
 .btn,
 .btn-default {
@@ -1753,15 +1749,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
   float: right; 
 }
 
-/* CSS Magic to Highlight Stars on Hover */
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
-
 /* Star 2*/
 
  .rating2 { 
@@ -1787,15 +1774,6 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
   color: #ddd; 
   float: right; 
 }
-
-/* CSS Magic to Highlight Stars on Hover */
-.rating2 > input:checked ~ label, /* show gold star when clicked */
-.rating2:not(:checked) > label:hover, /* hover current star */
-.rating2:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-.rating2 > input:checked + label:hover, /* hover current star when changing rating */
-.rating2 > input:checked ~ label:hover,
-.rating2 > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating2 > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
 /* Star 3*/
 .rating3 > input { display: none; } 
@@ -1985,10 +1963,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-weight: 400;
 }
 
-.mainnav ul li a:hover {
-    color: #fff;
-    background-color: $color-spacegrey;
-}
+// .mainnav ul li a:hover {
+//     color: #fff;
+//     background-color: $color-spacegrey;
+// }
 
 .meetupitems {
     color: $color-spacered;
@@ -2000,10 +1978,10 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
     font-weight: 400 !important;
 }
 
-.navbox a:hover {
-    background-color: #fff !important;
-    color: $color-spacegrey !important;
-}
+// .navbox a:hover {
+//     background-color: #fff !important;
+//     color: $color-spacegrey !important;
+// }
 
 .navverify {
     margin-right: 0.5rem;
@@ -2108,11 +2086,6 @@ i:hover {
     color: #fff !important;
     background-color: $color-spacegrey !important;
     padding: 4px 6px !important;
-}
-
-.navdown:hover {
-    background-color: $color-spacegrey !important;
-    color: #fff !important;
 }
 
 /**********
@@ -2598,21 +2571,13 @@ i:hover {
     padding: 12px !important;
 }
 
-.headerNotDrop a:hover {
-    padding-bottom: 10px !important;
-    color: white !important;
-    background-color: #404040 !important;
+.headerAuth li a:hover {
+    // background-color: #fff;
+    // color: $color-spacegrey !important;
 }
 
-/* .headerCat li a:hover {
-    background-color: $color-spacegrey;
-    color: #fff;
-    padding-bottom: 15px;
-} */
-
-.headerAuth li a:hover {
-    background-color: #fff;
-    color: $color-spacegrey !important;
+.headerDropDownNav a li:hover {
+    text-decoration: underline;
 }
 
 .headerDropDown {
@@ -2625,15 +2590,16 @@ i:hover {
         margin-left: -12px;
         display: none;
         position: absolute;
-        background-color: #404040 !important;
+        background-color: white !important;
+
         // transition: all 0.1s linear;
         font-size: 0.8rem;
         z-index: 3;
-        border: 6px solid #404040;
+        border: 6px solid $color-spacered;
 
         li {
             margin: 0 10px;
-            color: #fff;
+            color: black;
             text-align: left !important;
             width: 150px;
             padding: 18px 50px 18px 0px;
@@ -2641,7 +2607,7 @@ i:hover {
             font-size: 0.8rem !important;
 
             a {
-                color: #fff;
+                color: black;
                 margin: 0 !important;
                 padding: 0;
                 padding:15px 80px 15px 15px !important;
@@ -2667,13 +2633,13 @@ i:hover {
 	margin-left: -180px;
 }
 
-.clickDropper li ul li:first-child::before {
-	color: #404040;
-   content: '▲';
-   float: right;
-   margin: -50px -43px 0 0;
-   font-size: 1.3rem;
-}
+// .clickDropper li ul li:first-child::before {
+// 	color: #404040;
+//    content: '▲';
+//    float: right;
+//    margin: -50px -43px 0 0;
+//    font-size: 1.3rem;
+// }
 
 .clickDropper li ul li a {
 	padding: 15px 0px 15px 15px !important;
@@ -2687,10 +2653,10 @@ i:hover {
 	padding: 12px !important;
 }
 
-.hoverDropper:hover {
-	color: #fff !important;
-	background-color: #404040;
-}
+// .hoverDropper:hover {
+// 	color: #fff !important;
+// 	background-color: #404040;
+// }
 
 .hoverDropper span {
 	font-size: 0.9rem;
@@ -2700,16 +2666,16 @@ i:hover {
 	margin: 0 0 0 0;
 }
 
-// .hoverDropDown {
-//     max-height: 400px !important;
-//     overflow-y: scroll !important;
-// }
-
-.hoverDropDown:hover > .headerDropDownNav {
-    display: block;
-    position: absolute;
-    z-index: 2;
+.hoverDropDown {
+    max-height: 400px !important;
+    overflow-y: scroll !important;
 }
+
+// .hoverDropDown:hover > .headerDropDownNav {
+//     display: block;
+//     position: absolute;
+//     z-index: 2;
+// }
 
 .headerPreDrop {
     margin-left: -172px !important;
@@ -2719,15 +2685,15 @@ i:hover {
     margin-left: -192px !important;
 }
 
-.headerDropDown ul li:hover {
-    color: #fff;
-    background-color: #555;
-}
+// .headerDropDown ul li:hover {
+//     color: #fff;
+//     background-color: #555;
+// }
 
-.headerDropDown ul li a:hover {
-    background-color: #555;
-    transition: none !important;   
-}
+// .headerDropDown ul li a:hover {
+//     background-color: #555;
+//     transition: none !important;   
+// }
 
 .headerBigCat {
 	border: 1px solid #404040 !important;
@@ -2749,28 +2715,6 @@ i:hover {
     float: left !important;
 }
 
-/* .headerNavSearch {
-    vertical-align: middle;
-    width: 18rem;
-    height: 32px; 
-    border: 1px solid #fff;
-    outline: none;
-    padding-left: 10px;
-    font-size: 0.8rem;
-    background-color: #fff;
-}
-
-.headerNavSearchButton {
-    color: #fff !important;
-    border: 1px solid #fff;
-    margin: 0;
-    padding: 9px 10px !important;
-}
-
-.headerNavSearchButton:hover {
-    background-color: #f73c37;
-} */
-
 .headerNavLogo {
     margin: 0;
     margin-left: 20px;
@@ -2779,7 +2723,6 @@ i:hover {
     font-weight: 700;
     color: $color-spacegrey !important;
 }
-
 
 .headerNameOptions {
     margin: 11px 2px 7px 2px !important;
@@ -2792,37 +2735,6 @@ i:hover {
     vertical-align: middle;
     margin-right: 3px;
 }
-
-/* .headerBigCat li {
-    // margin: 0 2px;
-    margin-right: 0 !important;
-}
-
-.headerBigCat li a {
-    padding: 12px 14px;
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-.headerBigCat li ul li a {
-    border: none;
-    border-bottom: 1px solid #555;
-}
-
-.headerBigCat li a:hover  {
-    background-color: $color-spacegrey;
-    color: #fff;
-    border: $color-spacegrey;
-    margin-bottom: 0;
-    padding-bottom: 20px !important;
-    margin-bottom: 20px;
-}
-
-.headerBigCat li ul li a:hover {
-    padding-bottom: 10px !important;
-}
-
-*/
 
 .headerNameOptions li {
     margin: 0 2px;
@@ -2848,7 +2760,7 @@ i:hover {
 
 .headerNameOptions li a:hover, .headerHomeButton li a:hover {
     color: #fff;
-    background-color: $color-spacegrey !important;
+    // background-color: $color-spacegrey !important;
 } 
 
 .headerPostOptions {
@@ -2871,9 +2783,9 @@ i:hover {
     padding-bottom: 20px !important;
 }
 
-.headerPostOptions li ul li a:hover {
-    padding-bottom: 10px !important;
-}
+// .headerPostOptions li ul li a:hover {
+//     padding-bottom: 10px !important;
+// }
 
 // .addListDiv div {
 //     display: inline-block !important;
@@ -2993,10 +2905,10 @@ i:hover {
     background-color: white;
 }
 
-.managerNavTabs li a:hover {
-    color: #fff !important;
-    background-color: #f73c37;
-}
+// .managerNavTabs li a:hover {
+//     color: #fff !important;
+//     background-color: #f73c37;
+// }
 
 .navTabSelected {
     // background-color: $color-spacered !important;
@@ -3128,9 +3040,9 @@ i:hover {
     border-radius: 4px !important;
 }
 
-.managerOfferView a:hover {
-    background-color: #f73c37 !important;
-}
+// .managerOfferView a:hover {
+//     background-color: #f73c37 !important;
+// }
 
 .money {
     color: #396;
@@ -3211,10 +3123,10 @@ i:hover {
 	padding: 12px 8px !important;
 }
 
-.optionsListCardClick ul .clicker i {
-	color: #fff !important;
-	margin: 0 0 -3px 4px !important;
-}
+// .optionsListCardClick ul .clicker i {
+// 	color: #fff !important;
+// 	margin: 0 0 -3px 4px !important;
+// }
 
 .optionsListCardClick ul .clicker:hover,.click-nav ul .active {
 	background:#F39D00 !important;
@@ -3529,9 +3441,9 @@ On click the images will be displayed at normal size to complete the effect
     overflow: hidden;   
 }
 
-.listingItemButtons li a:hover {
-    background-color: #f73c37;
-}
+// .listingItemButtons li a:hover {
+//     background-color: #f73c37;
+// }
 
 .itemMoney {
     font-size: 1.5rem !important;
@@ -4031,9 +3943,9 @@ On click the images will be displayed at normal size to complete the effect
 	margin: 0 0 -3px 8px;
 }
 
-.optionsProClick ul .clicker:hover,.click-nav ul .active {
-	background:#F39D00;
-}
+// .optionsProClick ul .clicker:hover,.click-nav ul .active {
+// 	background:#F39D00;
+// }
 
 .optionsProClick img {
 	position:absolute;
@@ -4049,9 +3961,9 @@ On click the images will be displayed at normal size to complete the effect
 	text-decoration:none;
 }
 
-.optionsProClick ul li a:hover {
-	background:#F2F2F2;
-}
+// .optionsProClick ul li a:hover {
+// 	background:#F2F2F2;
+// }
 
 /* Fallbacks */
 .optionsProClick .no-js ul {
@@ -4107,23 +4019,6 @@ On click the images will be displayed at normal size to complete the effect
 .profileUserMore li a i:hover {
 	color: #04B2EC !important;
 }
-
-/*
-.profileUserMore li a {
-    font-size: 1.2rem;
-    padding: 16px 22px;
-    color: $color-spacered;
-    border: 1px solid $color-spacered;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;    
-    border-radius: 6px;
-    overflow: hidden;
-} 
-
-.profileUserMore li a:hover {
-    color: $color-spaceblue;
-    border-color: $color-spaceblue;
-}
-*/
 
 .headerSearchLogo {
     vertical-align: middle !important;
@@ -4339,17 +4234,6 @@ On click the images will be displayed at normal size to complete the effect
     text-align: left !important;
 }
 
-/*.profileHistoryCardUl {
-    background-color: gainsboro;
-}
-
-.profileHistoryTimestamp {
-    border: none !important;
-}
-
-.profileHistoryTimestamp::hover {
-      border: none !important;
-} */
 
 .profileCardLi {
      background-color: white;
@@ -4449,9 +4333,9 @@ On click the images will be displayed at normal size to complete the effect
     border-radius: 4px;
 }
 
-.profileCardView a:hover {
-    background-color: #f73c37; 
-}
+// .profileCardView a:hover {
+//     background-color: #f73c37; 
+// }
 
 .profileCardItem {
     font-size: 0.9rem;
@@ -4661,26 +4545,26 @@ On click the images will be displayed at normal size to complete the effect
     overflow: hidden;
     float: right;
 }
-.profileReceivedButtons li a:hover {
-    color: #fff !important;
-    text-decoration: none;
-}
+// .profileReceivedButtons li a:hover {
+//     color: #fff !important;
+//     text-decoration: none;
+// }
 
 .profileReceivedAccept a {
     background-color: #49E20E !important;
 }
 
-.profileReceivedAccept a:hover {
-    background-color: #3BCE02 !important;
-}
+// .profileReceivedAccept a:hover {
+//     background-color: #3BCE02 !important;
+// }
 
 .profileReceivedDecline {
     margin: 0 0 0 10px !important; 
 }
 
-.profileReceivedDecline a:hover {
-    background-color: #f73c37;
-}
+// .profileReceivedDecline a:hover {
+//     background-color: #f73c37;
+// }
 
 
 #profileReceivedOffersMaps {
@@ -4799,7 +4683,7 @@ On click the images will be displayed at normal size to complete the effect
 .sortClick ul li a {
 	display:block;padding:10px 10px;background:#FFF;color:#333;text-decoration:none;
 }
-.sortClick ul li a:hover {background:#04b2ec;}
+// .sortClick ul li a:hover {background:#04b2ec;}
 
 /* Fallbacks */
 .sortClick .no-js ul {display:none;}
@@ -5118,9 +5002,9 @@ On click the images will be displayed at normal size to complete the effect
     float: right;
 }
 
-.profileSettingsButton input:hover {
-    background-color: #f73c37 !important;
-}
+// .profileSettingsButton input:hover {
+//     background-color: #f73c37 !important;
+// }
 
 /* View Feedback */
 
@@ -5290,7 +5174,9 @@ On click the images will be displayed at normal size to complete the effect
   outline: none !important;
 }
 
-.share-btn.twitter     { background: #55acee !important; }
+.share-btn.twitter     { 
+    background: #55acee !important; 
+}
 .share-btn.google-plus { background: #dd4b39 !important; }
 .share-btn.facebook    { background: #3B5998 !important; }
 .share-btn.linkedin    { background: #4875B4 !important; }
@@ -5405,9 +5291,9 @@ On click the images will be displayed at normal size to complete the effect
 	margin: 0 0 -3px 8px;
 }
 
-.optionsListClick ul .clicker:hover,.click-nav ul .active {
-	background:#F39D00;
-}
+// .optionsListClick ul .clicker:hover,.click-nav ul .active {
+// 	background:#F39D00;
+// }
 
 .optionsListClick img {
 	position:absolute;
@@ -5423,9 +5309,9 @@ On click the images will be displayed at normal size to complete the effect
     margin: 0 !important;
 }
 
-.optionsItems li a:hover {
-	background-color: #d3d3d3 !important;
-}
+// .optionsItems li a:hover {
+// 	background-color: #d3d3d3 !important;
+// }
 
 .optionsItems li a i {
 	margin-right: 12px;
@@ -5443,9 +5329,9 @@ ul button a {
 	text-decoration:none;
 }
 
-.optionsListClick ul li a:hover {
-	background:#F2F2F2;
-}
+// .optionsListClick ul li a:hover {
+// 	background:#F2F2F2;
+// }
 
 /* Fallbacks */
 .optionsListClick .no-js ul {
@@ -5713,10 +5599,10 @@ textarea {
     border-radius: 4px;
 }
 
-.defaultProfileButton a:hover {
-    background-color: #f73c37 !important;
-    color: #fff !important;
-}
+// .defaultProfileButton a:hover {
+//     background-color: #f73c37 !important;
+//     color: #fff !important;
+// }
 
 /*~~~~ Home No Listings ~~~~*/
 
@@ -5750,10 +5636,10 @@ textarea {
     border-radius: 4px;
 }
 
-.homeNoListingsButton a:hover {
-    background-color: #f73c37 !important;
-    color: #fff !important;
-}
+// .homeNoListingsButton a:hover {
+//     // background-color: #f73c37 !important;
+//     color: #fff !important;
+// }
 
 /*~~~~ Default Search ~~~~*/
 
@@ -5834,17 +5720,17 @@ textarea {
     color: #404040 !important;
 }
 
-.headerHomeButton a:hover {
-    color: #fff !important;
-}
+// .headerHomeButton a:hover {
+//     color: #fff !important;
+// }
 
 .headerNameOptions li a {
     color: #404040 !important;
 }
 
-.headerNameOptions li a:hover {
-    color: #fff !important;
-}
+// .headerNameOptions li a:hover {
+//     color: #fff !important;
+// }
 
 .hiddenProfileUserRight {
     display: none !important;

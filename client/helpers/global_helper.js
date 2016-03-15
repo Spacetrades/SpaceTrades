@@ -18,6 +18,27 @@ if (Meteor.isClient) {
     }
   });
 
+   Template.registerHelper('notificationReceived', function() {
+    // if Message received and chat button not clicked
+    if (Meteor.userId()) {
+      return Meteor.userId();
+    } else {
+      return 12312312
+    }
+  });
+
+    Template.registerHelper('messagereceived', function() {
+      // if Message received and chat button not clicked
+
+      Tracker.autorun(function(){
+
+var messageNew = Message.find({receiver: Meteor.userId()}, {})
+
+      })
+ var newNotification = Session.get("newMessage")
+  });
+
+
   Template.registerHelper('equals', function(a, b) {
    return a == b;
   });
