@@ -43,90 +43,70 @@
                 </div>
                 <div class="profileUserAmount">
                     <ul>
-                    <li class="profileUserAmountBought">Items Bought: {{amountbought}}
+                        <li class="profileUserAmountBought">Items Bought: {{amountbought}}
                         </li>
                         <li class="profileUserAmountSold">Items Sold: {{amountsold}}
                         </li>
                     </ul>
                 </div>
-                <!-- TODO - Meetups held use "settingsChange" class on info -->
                 <div class="desc-box profileDesc">
                     <h4 class="box-title">Description</h4>
                     <p class="settingsChange">{{about}}</p>
                 </div>
-                <div class="profileUserButtons">
-                 <!--  <ul class="profileUserButtonUl"> -->
+                <div class="profileUserButtons" style="margin-top: 2em">
                  {{#if isOwner}}
-                 <!-- Nothing -->
-                 {{else}}
-                 <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
-                 <a class="followButton btn btn-primary btn-lg"> Follow </a>
-                 {{/if}}
-                 {{#if isOwner}}
-                 <a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a>
-                 {{else}}
-                 <!-- <a class="clicker">Options<i class="fa fa-caret-down"></i></a> -->
-                 <i class="fa fa-gavel"></i>Report User
-                 <!--       </ul> -->
-                 {{/if}}
-             </div>
+                   <ul class="listingItemButtons" style="float: left">
+                 <li style="list-style-type: none">
+                 <a href="/profile/settings">Edit Settings</a>
+             </li>
+             </ul>
+             {{else}}
+             <ul class="listingItemButtons" style="float: left">
+                 <li class="profileChatBtn" style="list-style-type: none">
+                 <a href="/chat/{{chatId}}">Chat</a></li>
+                 <!--  <li class="profileChatBtn"><a class="followButton btn btn-primary btn-lg"> Follow </a></li> -->
+                  <li style="list-style-type: none">Report User</li>
+             </ul>
+             {{/if}}
          </div>
-         <!-- This is hidden until a certain point and than it shown and the original one is hidden-->
-         <div class="hiddenProfileUserRight">
-            <div class="profileUserAmount hiddenProfileUserAmount">
-                <ul>
-                    <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
-                    </li>
-                    <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="desc-box profileDesc hiddenProfileDesc">
-                <h4 class="box-title">Description</h4>
-                <p>{{about}}</p>
-            </div>
-            <div class="profileUserButtons hiddenProfileUserButtons">
-                <ul class="profileUserButtonUl">
-                    <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
-                    <li class="optionsProClick click-nav">
-                        <ul class="no-js">
-                            <li>
-                                <a class="clicker">Options<i class="fa fa-caret-down"></i></a>
-                                <ul class="optionsItems">
-                                    <li><a href="/profile/settings"><i class="fa fa-pencil"></i>Edit Settings</a></li>
-                                    {{#if isOwner}}
-                                    <!-- Nothing -->
-                                    {{else}}
-                                    <li>
-                                        <button type="button" class="modReportTrigger btn btn-primary btn-lg" >
-                                            <i class="fa fa-gavel"></i>Report User
-                                        </button>
-                                    </li>
-                                    {{/if}}
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+     </div>
+     <!-- This is hidden until a certain point and than it shown and the original one is hidden-->
+     <div class="hiddenProfileUserRight">
+        <div class="profileUserAmount hiddenProfileUserAmount">
+            <ul>
+                <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
+                </li>
+                <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="desc-box profileDesc hiddenProfileDesc">
+            <h4 class="box-title">Description</h4>
+            <p>{{about}}</p>
+        </div>
+        <div class="profileUserButtons hiddenProfileUserButtons">
+            <ul class="profileUserButtonUl">
+                <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+            </ul>
         </div>
     </div>
-    <div class="profileUserCards oneDiv">
-        <ul class="profileUserCardsUl">
-           {{#each listing}}
-           <li>
-            <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-        </li>
-        {{/each}}
-    </ul>
-    <ul class="profileUserMore">
-        <li>
-            <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
-        </li>
-    </ul>
+</div>
+<div class="profileUserCards oneDiv">
+    <ul class="profileUserCardsUl">
+       {{#each listing}}
+       <li>
+        <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+    </li>
+    {{/each}}
+</ul>
+<ul class="profileUserMore">
+    <li>
+        <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
+    </li>
+</ul>
 </div>
 <div class="profileUserFeedbackView oneDiv">
-{{#if feedbackExists}}
+    {{#if feedbackExists}}
         <!-- <h2>Feedback</h2>
         <ul class="profileUserFeedbackViewSymbols">
             <li class="profileUserFeedbackViewPositive"><i class="fa fa-plus"></i>{{upvotes}}</li>
@@ -143,10 +123,9 @@
             {{> feedbackCard}}
             {{/each}}
         </ul>       
-
-    {{else}}
-    This user has not completed any meetups. No feedback yet.
-{{/if}} 
-</div> 
+        {{else}}
+        This user has not completed any meetups. No feedback or Ratings yet.
+        {{/if}} 
+    </div> 
     {{/with}}
 </template>

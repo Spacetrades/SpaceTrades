@@ -70,8 +70,8 @@
                     </ul>
                 </div>
                 <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestTwo">
-                    <button type="button" class="btn btn-primary step step-2 modalBack" data-step="2" onclick="offerRequestJump1()">Back</button>
-                    <button type="button" class="btn btn-primary step step-2 modalNext" data-step="2" onclick="offerRequestJump3()">Next</button>
+                    <button type="button" class="btn btn-primary step step-2 modalBack">Back</button>
+                    <button type="button" class="btn btn-primary step step-2 modalNext">Next</button>
                 </div>
             </div>
             <div class="modOfferRequestDiv modOfferRequestDivThree modal-body step step-3">
@@ -79,8 +79,10 @@
                     <h2>Where Would You Like To Meetup?</h2>
                    {{> mapModal}}
                 </div>
-                <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestThree">
-                    <button type="button" class="btn btn-primary step step-3 modalBack" data-step="3" onclick="offerRequestJump2()">Back</button>
+                <div class="modMultiBtn modMultiBtnDouble modMultiBtnOfferRequest modMultiBtnOfferRequestDouble modMultiBtnOfferRequestThree" style="
+    margin-top: 8em"
+    >
+                    <button type="button" class="btn btn-primary step step-3 modalBack">Back</button>
                     <button type="button" data-dismiss="modal" class="btn btn-primary modalSubmitBtn" id="offerRequestModalSubmit"><input type="button" value="Send Offer" class="offerRequestBtn"></button>
                 </div>
             </div>
