@@ -49,7 +49,12 @@ if (Meteor.isClient) {
         libraries: 'geometry,places'
       });
     },
+     'click .navMessages': function() {
+      $(".material-icons").removeClass('notificationHighlight');
+    },
     'click .navNotifications': function(options) {
+
+      $(".fa-globe").removeClass('notificationHighlight');
 
       $(".otherDropdown").css({
         "display": "none"
