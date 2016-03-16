@@ -294,6 +294,7 @@ code {
 
 .black {
     color: black;
+    text-shadow: none;
 }
 
 
@@ -2595,7 +2596,7 @@ i:hover {
         // transition: all 0.1s linear;
         font-size: 0.8rem;
         z-index: 3;
-        border: 6px solid $color-spacered;
+        border: 6px solid #ee4641;
 
         li {
             margin: 0 10px;

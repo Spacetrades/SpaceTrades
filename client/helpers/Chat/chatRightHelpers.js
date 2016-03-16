@@ -7,7 +7,7 @@ if (Meteor.isClient) {
         conversation: id_sell
       }, {
         sort: {
-          createdAt: 1
+          timestamp: 1
         }
       });
     },

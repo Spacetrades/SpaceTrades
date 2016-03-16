@@ -27,16 +27,16 @@ if (Meteor.isClient) {
     }
   });
 
-    Template.registerHelper('messagereceived', function() {
-      // if Message received and chat button not clicked
+//     Template.registerHelper('messagereceived', function() {
+//       // if Message received and chat button not clicked
 
-      Tracker.autorun(function(){
+//       Tracker.autorun(function(){
 
-var messageNew = Message.find({receiver: Meteor.userId()}, {})
+// var messageNew = Message.find({receiver: Meteor.userId()}, {})
 
-      })
- var newNotification = Session.get("newMessage")
-  });
+//       })
+//  var newNotification = Session.get("newMessage")
+//   });
 
 
   Template.registerHelper('equals', function(a, b) {

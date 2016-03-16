@@ -1,5 +1,6 @@
 <template name="profileActiveTicket">
         <!-- Ticket After Meetup Accepted -->
+        {{#with active}}
         <div class="profileReceivedOffers oneDiv">
             <ul class="profileReceivedUl">
                 <li class="profileReceivedLi profileViewMeetupLi">
@@ -10,15 +11,15 @@
                     </ul>
                     <ul class="profileReceivedCardRight profileViewMeetupRight">
                         <li><a href="/listing/{{_id}}"><h3>{{listing_title}}</h3></a></li>
-                        <li class="profileReceivedName">Nathan Chackerian Bought This From Yusuf Bagha</li>
                         <li class="profileReceivedPrice">Final Price: <span class="money">${{price}}</span></li>
-                        <li class="profileReceivedDate">Date of Meetup: {{date}}</li>
+                        <li class="profileReceivedDate">Date: {{date}}</li>
                         <li class="profileReceivedLocation">Location: {{location}}</li>
                     </ul>
                     <div id="profileReceivedOffersMaps">
-                        {{> googleMap name="itemoffermap" options=ItemOfferOptions}}
+                        {{> googleMap name="ticketmap" options=activeTicketOptions}}
                     </div>
                 </li>
             </ul>
         </div>
+        {{/with}}
 </template>

@@ -30,6 +30,7 @@ if (Meteor.isClient) {
             sender: Meteor.userId(),
             receiver: buyer,
             conversation: id_sell,
+            timestamp : new Date(),
             createdAt: new Date()
           };
 
@@ -54,6 +55,7 @@ if (Meteor.isClient) {
             sender: Meteor.userId(),
             receiver: id,
             conversation: id_sell,
+            timestamp : new Date(),
             createdAt: new Date()
           };
 

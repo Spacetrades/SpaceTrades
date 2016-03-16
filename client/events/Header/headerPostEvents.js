@@ -13,69 +13,112 @@ if (Meteor.isClient) {
 		'click .headerNavSearchButton': function(e) {
 			navSearch();
 		},
-		'click .navGlobal': function(options) {
-			var state = $(".navGlobal > .headerDropDownNav").is(":visible");
+		 'click .navGlobal': function(options) {
 
-			if (state === false) {
-				$(".fa").removeClass("black");
-				$(".fa-bars").addClass("black");
-				$(".navGeneral > .headerDropDownNav").css({
-					"display": "none"
-				});
-				$(".navGlobal > .headerDropDownNav").css({
-					"display": "block"
-				});
-			}
+      $(".otherDropdown").css({
+        "display": "none"
+      });
 
-			if (state === true) {
-				$(".fa-bars").removeClass("black");
-				$(".navGlobal > .headerDropDownNav").css({
-					"display": "none"
-				});
-			}
-		},
-		'click .navNotifications': function(options) {
-			var state = $(".navNotifications > .headerDropDownNav").is(":visible");
+      $(".notifyDropdown").css({
+        "display": "none"
+      });
 
-			if (state === false) {
-				$(".fa").removeClass("black");
-				$(".fa-globe").addClass("black");
-				$(".navNotifications > .headerDropDownNav").css({
-					"display": "none"
-				});
-				$(".navNotifications > .headerDropDownNav").css({
-					"display": "block"
-				});
-			}
+      var state = $(".navGlobal > .headerDropDownNav").is(":visible");
 
-			if (state === true) {
-				$(".fa-globe").removeClass("black");
-				$(".navNotifications > .headerDropDownNav").css({
-					"display": "none"
-				});
-			}
-		},
-		'click .navGeneral': function(options) {
-			var state = $(".navGeneral > .headerDropDownNav").is(":visible");
+      if (state === false) {
+        $(".fa").removeClass("black");
+        $(".fa-bars").addClass("black");
+        $(".navGeneral > .headerDropDownNav").css({
+          "display": "none"
+        });
+        $(".navGlobal > .headerDropDownNav").css({
+          "display": "block"
+        });
+      }
 
-			if (state === false) {
-				$(".fa").removeClass("black");
-				$(".fa-caret-square-o-down").addClass("black");
-				$(".navGlobal > .headerDropDownNav").css({
-					"display": "none"
-				});
-				$(".navGeneral > .headerDropDownNav").css({
-					"display": "block"
-				});
-			}
+      if (state === true) {
+        $(".fa-bars").removeClass("black");
+        $(".navGlobal > .headerDropDownNav").css({
+          "display": "none"
+        });
+      }
+    },
+    'click .modLocationRadiusTrigger': function() {
+      GoogleMaps.ready();
+      // getLocation();
+      GoogleMaps.load({
+        v: '3',
+        key: 'AIzaSyAi0bRmwNIWv24KjjeiG0DlcU-jFLPJ9FQ',
+        libraries: 'geometry,places'
+      });
+    },
+    'click .navMessages': function() {
+      $(".material-icons").removeClass('notificationHighlight');
+    },
+    'click .navNotifications': function(options) {
 
-			if (state === true) {
-				$(".fa-caret-square-o-down").removeClass("black");
-				$(".navGeneral > .headerDropDownNav").css({
-					"display": "none"
-				});
-			}
-		},
+      $(".fa-globe").removeClass('notificationHighlight');
+
+      $(".otherDropdown").css({
+        "display": "none"
+      });
+
+      $(".managerDropdown").css({
+        "display": "none"
+      });
+
+
+      var state = $(".navNotifications > .headerDropDownNav").is(":visible");
+
+      if (state === false) {
+        $(".fa").removeClass("black");
+        $(".fa-globe").addClass("black");
+        $(".navNotifications > .headerDropDownNav").css({
+          "display": "none"
+        });
+        $(".navNotifications > .headerDropDownNav").css({
+          "display": "block"
+        });
+      }
+
+      if (state === true) {
+        $(".fa-globe").removeClass("black");
+        $(".navNotifications > .headerDropDownNav").css({
+          "display": "none"
+        });
+      }
+    },
+    'click .navGeneral': function(options) {
+
+      $(".managerDropdown").css({
+        "display": "none"
+      });
+
+      $(".notifyDropdown").css({
+        "display": "none"
+      });
+
+      var state = $(".navGeneral > .headerDropDownNav").is(":visible");
+
+      if (state === false) {
+        $(".fa").removeClass("black");
+        $(".fa-caret-square-o-down").addClass("black");
+        $(".navGlobal > .headerDropDownNav").css({
+          "display": "none"
+        });
+        $(".navGeneral > .headerDropDownNav").css({
+          "display": "block"
+        });
+      }
+
+      if (state === true) {
+        $(".fa-caret-square-o-down").removeClass("black");
+        $(".navGeneral > .headerDropDownNav").css({
+          "display": "none"
+        });
+      }
+
+    },
 		'click .logout': function(e) {
 			Meteor.logout();
 		},
