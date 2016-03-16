@@ -29,7 +29,8 @@ if (Meteor.isClient) {
         listing_creator_id: offerBlock.listing_creator_id,
         destination: [offerBlock.creator_id],
         seller_id: Meteor.userId(),
-        buyer_id: offerBlock.creator_id
+        buyer_id: offerBlock.creator_id,
+        link: "/profile/active"
       }
 
       Meteor.call('acceptOffer', options);
@@ -72,6 +73,8 @@ if (Meteor.isClient) {
       }
       Meteor.call('reminderNotify', reminderOptions);
       Meteor.call('feedbackNotify', feedbackOptions);
+
+      $(".receivedAccept").modal('hide');
 
       Router.go("/");
 

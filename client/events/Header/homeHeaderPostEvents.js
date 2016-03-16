@@ -114,7 +114,6 @@ if (Meteor.isClient) {
           "display": "none"
         });
       }
-
     },
     'click .logout': function(e) {
       Meteor.logout();

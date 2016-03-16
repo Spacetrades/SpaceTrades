@@ -1,6 +1,6 @@
  if (Meteor.isClient) {
 
-   Template.headerpost.onCreated(function() {
+   Template.homeheaderpost.onCreated(function() {
 
     Tracker.autorun(function() {
 
