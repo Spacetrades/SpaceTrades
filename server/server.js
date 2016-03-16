@@ -715,6 +715,8 @@ if (Meteor.isServer) {
           offerprice: options.offerprice,
           date: options.date,
           location: options.location,
+          offerlat: options.lat,
+          offerlat: options.lng,
           meetup_time: options.time
         }
       });
