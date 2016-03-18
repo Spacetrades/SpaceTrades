@@ -2527,6 +2527,7 @@ i:hover {
 .headerNav ul li {
     display: inline-block;
     vertical-align: middle !important;
+    padding: 1em;
 }
 
 .headerNav ul li a {
@@ -2672,7 +2673,7 @@ i:hover {
     overflow-y: scroll !important;
 }
 
-// .hoverDropDown:hover > .headerDropDownNav {
+// .hoverDropDownPre:hover > .headerDropDownNav {
 //     display: block;
 //     position: absolute;
 //     z-index: 2;
@@ -2706,9 +2707,11 @@ i:hover {
 	z-index: 5 !important;
 }
 
-// .headerDropDown:hover > .headerDropDownNav {
-//     display: block;
-// }
+.headerDropDownPre:hover > .headerDropDownNav {
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
 
 .headerSearch {
     margin-top: 10px !important;
@@ -2760,8 +2763,8 @@ i:hover {
 }
 
 .headerNameOptions li a:hover, .headerHomeButton li a:hover {
-    color: #fff;
-    // background-color: $color-spacegrey !important;
+    color: #fff !important;
+    background-color: $color-spacegrey !important;
 } 
 
 .headerPostOptions {
@@ -5810,6 +5813,7 @@ textarea {
 .chatLeft {
     width: 16% !important;
     vertical-align: top !important;
+    margin-left: -17em;
 }
 
 .chatRight {
