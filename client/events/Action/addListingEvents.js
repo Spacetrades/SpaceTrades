@@ -407,7 +407,7 @@ if (Meteor.isClient) {
 
         var uploader = new Slingshot.Upload("listingImages");
 
-        Meteor.call('convertImage', file, function(err, response) {
+        // Meteor.call('convertImage', file, function(err, response) {
 
           file = response;
           console.log(response);
@@ -421,7 +421,7 @@ if (Meteor.isClient) {
             } else {}
           });
 
-        });
+        // });
 
       })
     }
