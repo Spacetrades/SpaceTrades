@@ -16,6 +16,9 @@ if (Meteor.isClient) {
       }, 500)
 
     },
+    'click .modReportTrigger': function(){
+      $("#reportListingModal").modal()
+    },
     'click .modOfferRequestTrigger': function() {
       Session.set('scope', this);
     },
