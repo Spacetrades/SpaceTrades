@@ -39,6 +39,9 @@ if (Meteor.isClient) {
           time = time.format("h:mm, dddd MMM, DD");
           options.createdAt = time;
 
+          // Scroll Down
+          $(".chatMessages").scrollTop($(this).height());
+
           Meteor.call('sendMessage', options);
 
           // IF message is a divider - new message after other person talking or just new from the start
@@ -65,6 +68,9 @@ if (Meteor.isClient) {
           options.createdAt = time;
 
           Meteor.call('sendMessage', options);
+
+          // Scroll Down
+          $(".chatMessages").scrollTop($(this).height());
 
           // IF message is a divider - new message after other person talking or just new from the start
           // if ();
