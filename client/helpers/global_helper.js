@@ -58,12 +58,16 @@ if (Meteor.isClient) {
     var now = moment();
 
     var diff = now.diff(time);
-    diff = diff / 60 / 1000;
-    diff = Math.round(diff);
 
-    var min = diff - 4 + " minutes ago"
+    var hour = Math.floor(diff / 60 );
+    var minute = Math.floor(diff % 60);
 
-    return min
+    var min = minute - 4 + " minutes ago"
+    var hr = hour + "hours and "
+
+    var time = min.concat(hr);
+
+    return time
   });
 
   Template.registerHelper('nameLookup', function(idParam) {
