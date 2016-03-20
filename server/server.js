@@ -164,7 +164,7 @@ if (Meteor.isServer) {
   //           //
 
   Slingshot.fileRestrictions("listingImages", {
-    allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
+    allowedFileTypes: ["image/png", "image/jpeg", "image/gif", "image/jpg"],
     maxSize: 10 * 1024 * 1024 // 10 MB
   });
 

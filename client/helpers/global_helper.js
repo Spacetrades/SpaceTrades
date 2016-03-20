@@ -65,10 +65,14 @@ if (Meteor.isClient) {
     var min = minute - 4 + " minutes ago"
     var hr = hour + "hours and "
 
-    var time = min.concat(hr);
+    var time = hr.concat(min);
 
     return time
   });
+
+  // Template.registerHelper("imgix", function(url, def){
+  //   url = encodeURIComponent(url) (new imgix.URL("https://#{imgix.source.name}.imgix.net/#{url}", {w:200}, imgix.source.token)).getUrl()
+
 
   Template.registerHelper('nameLookup', function(idParam) {
     var param = idParam.hash.idParam;
