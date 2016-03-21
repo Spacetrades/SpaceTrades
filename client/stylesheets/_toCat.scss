@@ -2205,6 +2205,7 @@ i:hover {
     height: auto;
     max-height: 200px;
     border-radius: 6px;
+    background-color: #F8504B !important;
 }
 
 /**********
@@ -2644,7 +2645,7 @@ i:hover {
 // }
 
 .clickDropper li ul li a {
-	padding: 15px 0px 15px 15px !important;
+	padding: 15px 0px 15px 0px !important;
     font-size: 0.8rem !important;
 }
 
@@ -3180,7 +3181,7 @@ i:hover {
     border-radius: 5px;
     margin: 10px;
     padding: 0px 10px 10px 10px;
-    width: 20.2%;
+    // width: 20.2%;
 }
 
 .homeCardLi:hover {
@@ -3190,12 +3191,12 @@ i:hover {
 }
 
 .homeCardImg {
-    width: 100%;
+    // width: 100%;
     border-radius: 4px;
 }
 
 .homeCardImg {
-    height: 100% !important;
+    // height: 100% !important;
 }
 
 .searchResultsCardImg {

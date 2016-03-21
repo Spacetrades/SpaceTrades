@@ -10,7 +10,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.registerHelper('profile', function(a,b) {
+  Template.registerHelper('profile', function(a, b) {
     if (Meteor.userId()) {
       return Meteor.userId();
     } else {
@@ -18,34 +18,20 @@ if (Meteor.isClient) {
     }
   });
 
-   Template.registerHelper('notificationReceived', function() {
-    // if Message received and chat button not clicked
-    if (Meteor.userId()) {
-      return Meteor.userId();
-    } else {
-      return 12312312
-    }
+
+
+  Template.registerHelper('cur', function() {
+    var current = Router.current().route.path();
+    return current;
   });
-
-//     Template.registerHelper('messagereceived', function() {
-//       // if Message received and chat button not clicked
-
-//       Tracker.autorun(function(){
-
-// var messageNew = Message.find({receiver: Meteor.userId()}, {})
-
-//       })
-//  var newNotification = Session.get("newMessage")
-//   });
-
 
   Template.registerHelper('equals', function(a, b) {
-   return a == b;
+    return a == b;
   });
 
-  Template.registerHelper('locationFull', function(){
+  Template.registerHelper('locationFull', function() {
     var locationRet;
-    Meteor.userId() ? locationRet =  Meteor.user().profile.locationString : locationRet = Session.get('locate');
+    Meteor.userId() ? locationRet = Meteor.user().profile.locationString : locationRet = Session.get('locate');
     return locationRet;
   });
 
@@ -58,13 +44,21 @@ if (Meteor.isClient) {
     var now = moment();
 
     var diff = now.diff(time);
-    diff = diff / 60 / 1000;
-    diff = Math.round(diff);
 
-    var min = diff - 4 + " minutes ago"
+    var hour = Math.floor(diff / 60);
+    var minute = Math.floor(diff % 60);
 
-    return min
+    var min = minute - 4 + " minutes ago"
+    var hr = hour + "hours and "
+
+    var time = hr.concat(min);
+
+    return time
   });
+
+  // Template.registerHelper("imgix", function(url, def){
+  //   url = encodeURIComponent(url) (new imgix.URL("https://#{imgix.source.name}.imgix.net/#{url}", {w:200}, imgix.source.token)).getUrl()
+
 
   Template.registerHelper('nameLookup', function(idParam) {
     var param = idParam.hash.idParam;
@@ -73,10 +67,14 @@ if (Meteor.isClient) {
     }).fetch()[0].profile.name;
   });
 
+  Template.registerHelper('hasNotifications', function() {
+    return Boolean(Notification.find().fetch()[0]);
+  });
+
   Template.registerHelper('listing', function() {
-    return Listing.find({
+    return Listing.findOne({
       _id: id
-    }).fetch()[0];
+    });
   });
 
   Template.registerHelper('pictureLookup', function(idParam) {
@@ -118,9 +116,9 @@ if (Meteor.isClient) {
   if (Session.get('offerSelected')) {
 
     Template.registerHelper('nameOfferer', function() {
-      return Meteor.users.find({
+      return Meteor.users.findOne({
         _id: Session.get('offerSelected').creator_id
-      }).fetch()[0].profile.name;
+      }).profile.name;
     });
 
   }

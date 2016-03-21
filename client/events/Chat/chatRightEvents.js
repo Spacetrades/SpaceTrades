@@ -40,7 +40,7 @@ if (Meteor.isClient) {
           options.createdAt = time;
 
           // Scroll Down
-          $(".chatMessages").scrollTop($(this).height());
+          $(".chatMessages").scrollTop($(".chatMessages").height());
 
           Meteor.call('sendMessage', options);
 
@@ -70,7 +70,7 @@ if (Meteor.isClient) {
           Meteor.call('sendMessage', options);
 
           // Scroll Down
-          $(".chatMessages").scrollTop($(this).height());
+          $(".chatMessages").scrollTop($(".chatMessages").height());
 
           // IF message is a divider - new message after other person talking or just new from the start
           // if ();

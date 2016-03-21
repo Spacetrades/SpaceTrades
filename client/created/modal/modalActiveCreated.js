@@ -4,7 +4,8 @@
 
        Tracker.autorun(function() {
 
-         Meteor.setInterval(function() {
+        try {
+
            var original = moment.unix(Session.get('activeSelected').meetup_time);
            var delayTime = original.diff(moment());
            var delayTimeMinutes = delayTime / 1000 / 60;
@@ -16,9 +17,11 @@
 
            Session.set('timeString', timeString);
 
+         }
 
-         }, 60000)
-
+         catch(e){
+;
+         }
 
        })
 

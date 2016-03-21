@@ -2,6 +2,8 @@ if (Meteor.isClient) {
 
   Template.ProfileHistoryFeedback.events({
 
+  // Use vars
+
     'click .step-1 .yes': function() {
       $('.step-1').hide();
       $('.step-3').show();

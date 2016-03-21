@@ -43,9 +43,9 @@ if (Meteor.isClient) {
         other = you == sender ? receiver : sender;
         Session.set('otherId', other);
       });
-      return Meteor.users.find({
+      return Meteor.users.findOne({
         _id: other
-      }).fetch()[0].profile;
+      }).profile;
 
     },
     otherId: function() {
