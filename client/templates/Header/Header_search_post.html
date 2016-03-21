@@ -49,9 +49,11 @@
                 <li class="headerDropDown clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
                     <ul class="headerDropDownNav">
+                    {{#if hasNotifications}}
                          {{#each Notification}}
                         <li><a href="#">{{> Notification}}</a></li>
                         {{/each}}
+                        {{/if}}
                     </ul>
                 </li> 
                 <li class="headerDropDown clickDropper">

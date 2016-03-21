@@ -18,6 +18,8 @@ if (Meteor.isClient) {
     }
   });
 
+
+
   Template.registerHelper('cur', function() {
     var current = Router.current().route.path();
     return current;
@@ -65,7 +67,7 @@ if (Meteor.isClient) {
     }).fetch()[0].profile.name;
   });
 
-  Template.registerHelper('asNotifications', function() {
+  Template.registerHelper('hasNotifications', function() {
     return Boolean(Notification.find().fetch()[0]);
   });
 

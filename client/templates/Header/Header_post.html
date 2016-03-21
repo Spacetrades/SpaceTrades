@@ -45,12 +45,14 @@
                 <li class="headerDropDown navNotifications clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
                     <ul class="headerDropDownNav notifyDropdown">
+                    {{#if hasNotifications}}
                         {{#each Notification}}
                         <li>{{> Notification}}</li>
                         {{/each}}
                          <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg" >
                             View All Notifications
                         </button> 
+                        {{/if}}
                     </ul>
                 </li> 
                 <li class="headerDropDown navMessages clickDropper">
