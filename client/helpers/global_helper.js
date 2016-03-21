@@ -10,7 +10,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.registerHelper('profile', function(a,b) {
+  Template.registerHelper('profile', function(a, b) {
     if (Meteor.userId()) {
       return Meteor.userId();
     } else {
@@ -18,34 +18,18 @@ if (Meteor.isClient) {
     }
   });
 
-   Template.registerHelper('notificationReceived', function() {
-    // if Message received and chat button not clicked
-    if (Meteor.userId()) {
-      return Meteor.userId();
-    } else {
-      return 12312312
-    }
+  Template.registerHelper('cur', function() {
+    var current = Router.current().route.path();
+    return current;
   });
-
-//     Template.registerHelper('messagereceived', function() {
-//       // if Message received and chat button not clicked
-
-//       Tracker.autorun(function(){
-
-// var messageNew = Message.find({receiver: Meteor.userId()}, {})
-
-//       })
-//  var newNotification = Session.get("newMessage")
-//   });
-
 
   Template.registerHelper('equals', function(a, b) {
-   return a == b;
+    return a == b;
   });
 
-  Template.registerHelper('locationFull', function(){
+  Template.registerHelper('locationFull', function() {
     var locationRet;
-    Meteor.userId() ? locationRet =  Meteor.user().profile.locationString : locationRet = Session.get('locate');
+    Meteor.userId() ? locationRet = Meteor.user().profile.locationString : locationRet = Session.get('locate');
     return locationRet;
   });
 
@@ -59,7 +43,7 @@ if (Meteor.isClient) {
 
     var diff = now.diff(time);
 
-    var hour = Math.floor(diff / 60 );
+    var hour = Math.floor(diff / 60);
     var minute = Math.floor(diff % 60);
 
     var min = minute - 4 + " minutes ago"
@@ -81,10 +65,14 @@ if (Meteor.isClient) {
     }).fetch()[0].profile.name;
   });
 
+  Template.registerHelper('asNotifications', function() {
+    return Boolean(Notification.find().fetch()[0]);
+  });
+
   Template.registerHelper('listing', function() {
-    return Listing.find({
+    return Listing.findOne({
       _id: id
-    }).fetch()[0];
+    });
   });
 
   Template.registerHelper('pictureLookup', function(idParam) {
@@ -126,9 +114,9 @@ if (Meteor.isClient) {
   if (Session.get('offerSelected')) {
 
     Template.registerHelper('nameOfferer', function() {
-      return Meteor.users.find({
+      return Meteor.users.findOne({
         _id: Session.get('offerSelected').creator_id
-      }).fetch()[0].profile.name;
+      }).profile.name;
     });
 
   }
