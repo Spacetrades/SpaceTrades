@@ -387,11 +387,10 @@ if (Meteor.isClient) {
 
         // Ideally I would be taking the value of downloadUrl from the _.map code block but how would I set this to an img # ???
         var imagePrefix = "http://spacetrades.imgix.net/";
-        var imageSuffix = "?colorquant=16";
 
-        var img1url = imagePrefix + Meteor.userId() + "/" + Session.get("img1") + imageSuffix;
-        var img2url = imagePrefix + Meteor.userId() + "/" + Session.get("img2") + imageSuffix;
-        var img3url = imagePrefix + Meteor.userId() + "/" + Session.get("img3") + imageSuffix;
+        var img1url = imagePrefix + Meteor.userId() + "/" + Session.get("img1");
+        var img2url = imagePrefix + Meteor.userId() + "/" + Session.get("img2");
+        var img3url = imagePrefix + Meteor.userId() + "/" + Session.get("img3");
 
 
         Session.set("img1url", img1url);

@@ -3,14 +3,14 @@
     <li class="homeCardLi">
         <p class="homeCardOfferRecieved">{{offers}} Offers Received</p>
         <ul class="homeCardItem">
-            <li><a href="/listing/{{_id}}"><img src="{{img1}}" class="homeCardImg"></a></li>
+            <li><a href="/listing/{{_id}}"><img src="{{img1}}?colorquant=19&crop=left&fit=crop&w=200&h=200" class="homeCardImg"></a></li>
             <li><a href="/listing/{{_id}}"><h4>{{listing_title}}</h4></a></li>
         </ul>
         <ul class="homeCardDetails">
             <li class="homeCardLeft">
                 <ul>
                     <li class="money homePrice">${{price}}</li>
-                    <li class="homeCardSize"><b>Size</b> {{size}}</li>
+                    <li class="homeCardSize"><b>Size:</b> {{size}}</li>
                 </ul>
             </li>
             <li class="homeCardRight">
