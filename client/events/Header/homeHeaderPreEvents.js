@@ -25,62 +25,10 @@ if (Meteor.isClient) {
 		'click .headerDropDownNav': function(){
 			console.log(this);
 		},
-		'click .catBags': function() {
-			catChoice("catBags");
+		'click .catPre': function(event) {
+      var catClicked = $(event.target);
+			catChoice(catClicked);
 		},
-		'click .catHoodies': function() {
-			catChoice("catHoodies");
-		},
-		'click .catPants': function() {
-			catChoice("catPants");
-		},
-		'click .catJacket': function() {
-			catChoice("catJackets");
-		},
-		'click .catJeans': function() {
-			catChoice("catJeans");
-		},
-    'click .catTees': function() {
-      catChoice("catTees");
-    },
-		'click .catShorts': function() {
-			catChoice("catShorts");
-		},
-
-		'click .catPhones': function() {
-			catChoice("catPhones");
-		},
-		'click .catTablets': function() {
-			catChoice("catTablets");
-		},
-		'click .catComputers': function() {
-			catChoice("catComputers");
-		},
-		'click .catTvs': function() {
-			catChoice("catTvs");
-		},
-		'click .catHeadphones': function() {
-			catChoice("catHeadphones");
-		},
-
-		'click .catShoes': function() {
-			catChoice("catShoes");
-		},
-		'click .catAsics': function() {
-			catChoice("catAsics");
-		},
-		'click .catAddidas': function() {
-			catChoice("catAddidas");
-		},
-		'click .catConverse': function() {
-			catChoice("catConverse");
-		},
-		'click .catNike': function() {
-			catChoice("catNike");
-		},
-		'click .catJordan': function() {
-			catChoice("catJordan");
-		}
 	});
 
 }

@@ -18,8 +18,6 @@ if (Meteor.isClient) {
     }
   });
 
-
-
   Template.registerHelper('cur', function() {
     var current = Router.current().route.path();
     return current;
@@ -44,6 +42,9 @@ if (Meteor.isClient) {
     var now = moment();
 
     var diff = now.diff(time);
+
+    // Convert to seconds
+    diff = diff / 1000 / 60
 
     var hour = Math.floor(diff / 60);
     var minute = Math.floor(diff % 60);

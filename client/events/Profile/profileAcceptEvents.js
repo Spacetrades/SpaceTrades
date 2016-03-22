@@ -31,7 +31,7 @@ if (Meteor.isClient) {
         seller_id: Meteor.userId(),
         buyer_id: offerBlock.creator_id,
         link: "/profile/active",
-        notifyType: "reminder"
+        notifyType: "accepted"
       }
 
       Meteor.call('acceptOffer', options);
