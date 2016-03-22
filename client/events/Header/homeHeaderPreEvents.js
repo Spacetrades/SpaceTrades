@@ -26,7 +26,8 @@ if (Meteor.isClient) {
 			console.log(this);
 		},
 		'click .catPre': function(event) {
-      var catClicked = $(event.target);
+      var catClicked = $(event.target).context.classList[0];
+      console.log(catClicked);
 			catChoice(catClicked);
 		},
 	});
