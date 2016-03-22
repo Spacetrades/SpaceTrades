@@ -13,6 +13,19 @@
 			{{timestamp}}
 		</div>
 		{{/if}}
+		{{#if equals type "accepted"}}
+		<div class="notificationBody">
+			<a href="/profile/{{creator_id}}" class="profile-link">{{creator_name}}</a>
+			<b>{{action}}</b>
+			<br/>
+			of
+			<span class="money"> ${{offer_price}} </span>
+			for
+			{{listing_title}}
+			<br/>
+			{{timestamp}}
+		</div>
+		{{/if}}
 		{{#if equals type "reminder"}}
 		<div class="notificationBody">
 			<b>{{action}}</b>

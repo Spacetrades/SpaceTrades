@@ -1,5 +1,8 @@
 	<template name="Messages">
 		<div class="chatDiv oneDiv">
 			{{> chatLeft }}
+			{{#if hasNoConversations }}
+			{{> DefaultChat}}
+			{{/if}}
 		</div>
 	</template> 

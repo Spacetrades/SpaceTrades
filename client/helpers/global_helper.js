@@ -18,8 +18,6 @@ if (Meteor.isClient) {
     }
   });
 
-
-
   Template.registerHelper('cur', function() {
     var current = Router.current().route.path();
     return current;
@@ -45,6 +43,9 @@ if (Meteor.isClient) {
 
     var diff = now.diff(time);
 
+    // Convert to seconds
+    diff = diff / 1000 / 60
+
     var hour = Math.floor(diff / 60);
     var minute = Math.floor(diff % 60);
 
@@ -59,7 +60,6 @@ if (Meteor.isClient) {
   // Template.registerHelper("imgix", function(url, def){
   //   url = encodeURIComponent(url) (new imgix.URL("https://#{imgix.source.name}.imgix.net/#{url}", {w:200}, imgix.source.token)).getUrl()
 
-
   Template.registerHelper('nameLookup', function(idParam) {
     var param = idParam.hash.idParam;
     return Meteor.users.find({
@@ -69,6 +69,10 @@ if (Meteor.isClient) {
 
   Template.registerHelper('hasNotifications', function() {
     return Boolean(Notification.find().fetch()[0]);
+  });
+
+   Template.registerHelper('hasNoConversations', function() {
+    return !Boolean(Message.find().fetch()[0]);
   });
 
   Template.registerHelper('listing', function() {
