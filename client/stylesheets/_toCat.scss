@@ -2597,14 +2597,14 @@ i:hover {
         // transition: all 0.1s linear;
         font-size: 0.8rem;
         z-index: 3;
-        border: 6px solid #ee4641;
+        border: 6px solid #404040;
 
         li {
-            margin: 0 10px;
+            margin: 0 !important;
             color: black;
             text-align: left !important;
             width: 150px;
-            padding: 18px 50px 18px 0px;
+            padding: 18px 50px 18px 10px;
             border-top: 1px solid #555;
             font-size: 0.8rem !important;
 
@@ -2623,12 +2623,10 @@ i:hover {
 
 .headerDropDown ul li:first-child {
 	border-top: none !important;
-	margin-top: 10px;
 }
 
 .headerDropDown ul li:last-child {
 	border-bottom: none !important;
-	margin-bottom: 10px;
 } 
 
 .clickDropper li ul {
@@ -5977,8 +5975,6 @@ textarea {
     padding: 12px !important;
     border: 1px solid #404040 !important;
 }
-
-
 
 
 
