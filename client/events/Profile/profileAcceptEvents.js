@@ -30,7 +30,8 @@ if (Meteor.isClient) {
         destination: [offerBlock.creator_id],
         seller_id: Meteor.userId(),
         buyer_id: offerBlock.creator_id,
-        link: "/profile/active"
+        link: "/profile/active",
+        notifyType: "reminder"
       }
 
       Meteor.call('acceptOffer', options);
@@ -74,7 +75,7 @@ if (Meteor.isClient) {
       Meteor.call('reminderNotify', reminderOptions);
       Meteor.call('feedbackNotify', feedbackOptions);
 
-      $(".receivedAccept").modal('hide');
+      $("#receivedAccept").modal('hide');
 
       Router.go("/");
 
@@ -113,6 +114,7 @@ if (Meteor.isClient) {
       Meteor.call('pulseNotify', options);
 
       Router.go("/");
+      $("#receivedAccept").modal('hide')
     }
   });
 }
