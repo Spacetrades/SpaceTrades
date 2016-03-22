@@ -74,7 +74,7 @@ if (Meteor.isClient) {
       Meteor.call('reminderNotify', reminderOptions);
       Meteor.call('feedbackNotify', feedbackOptions);
 
-      $(".receivedAccept").modal('hide');
+      $("#receivedAccept").modal('hide');
 
       Router.go("/");
 
@@ -113,6 +113,7 @@ if (Meteor.isClient) {
       Meteor.call('pulseNotify', options);
 
       Router.go("/");
+      $("#receivedAccept").modal('hide')
     }
   });
 }
