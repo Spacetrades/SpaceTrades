@@ -2604,7 +2604,7 @@ i:hover {
             color: black;
             text-align: left !important;
             width: 150px;
-            padding: 18px 50px 18px 10px;
+            padding: 18px 50px 18px 20px;
             border-top: 1px solid #555;
             font-size: 0.8rem !important;
 
@@ -2633,13 +2633,13 @@ i:hover {
 	margin-left: -180px;
 }
 
-// .clickDropper li ul li:first-child::before {
-// 	color: #404040;
-//    content: '▲';
-//    float: right;
-//    margin: -50px -43px 0 0;
-//    font-size: 1.3rem;
-// }
+.clickDropper > li > ul > a:first-child::before {
+	color: #404040;
+   content: '▲';
+   float: right;
+   margin: -23px 9px 0 0;
+   font-size: 1.3rem;
+}
 
 .clickDropper li ul li a {
 	padding: 15px 0px 15px 0px !important;
