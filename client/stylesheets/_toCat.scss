@@ -2637,7 +2637,7 @@ i:hover {
 	color: #404040;
    content: '▲';
    float: right;
-   margin: -23px 9px 0 0;
+   margin: -23px 20px 0 0;
    font-size: 1.3rem;
 }
 
@@ -5971,11 +5971,19 @@ textarea {
     padding: 0 !important;
 }
 
+.headerCatDrop:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
 .headerCatDropLi {
     padding: 12px !important;
     border: 1px solid #404040 !important;
 }
 
+.headerCatDropDown {
+    margin-left: -151px !important;
+}
 
 
 
