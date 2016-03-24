@@ -2528,7 +2528,6 @@ i:hover {
 .headerNav ul li {
     display: inline-block;
     vertical-align: middle !important;
-    padding: 1em;
 }
 
 .headerNav ul li a {
@@ -2598,14 +2597,14 @@ i:hover {
         // transition: all 0.1s linear;
         font-size: 0.8rem;
         z-index: 3;
-        border: 6px solid #ee4641;
+        border: 6px solid #404040;
 
         li {
-            margin: 0 10px;
+            margin: 0 !important;
             color: black;
             text-align: left !important;
             width: 150px;
-            padding: 18px 50px 18px 0px;
+            padding: 18px 50px 18px 20px;
             border-top: 1px solid #555;
             font-size: 0.8rem !important;
 
@@ -2624,25 +2623,23 @@ i:hover {
 
 .headerDropDown ul li:first-child {
 	border-top: none !important;
-	margin-top: 10px;
 }
 
 .headerDropDown ul li:last-child {
 	border-bottom: none !important;
-	margin-bottom: 10px;
 } 
 
 .clickDropper li ul {
 	margin-left: -180px;
 }
 
-// .clickDropper li ul li:first-child::before {
-// 	color: #404040;
-//    content: '▲';
-//    float: right;
-//    margin: -50px -43px 0 0;
-//    font-size: 1.3rem;
-// }
+.clickDropper > li > ul > a:first-child::before {
+	color: #404040;
+   content: '▲';
+   float: right;
+   margin: -23px 20px 0 0;
+   font-size: 1.3rem;
+}
 
 .clickDropper li ul li a {
 	padding: 15px 0px 15px 0px !important;
@@ -5355,7 +5352,7 @@ ul button a {
 .headerLocationRadius {
 	float: left;
 	margin-left: 16px !important;
-	margin-top: 8px !important;
+	margin-top: 14px !important;
 	vertical-align: middle !important;
 	font-size: 0.9rem;
 }
@@ -5967,4 +5964,30 @@ textarea {
 }
 
 /*** END END END ***/
+
+.headerCatDrop {
+    margin: 0 !important;
+    border: none !important;
+    font-size: 0.9rem !important;
+    padding: 0 !important;
+}
+
+.headerCatDrop:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+.headerCatDropLi {
+    padding: 12px !important;
+    border: 1px solid #404040 !important;
+}
+
+.headerCatDropDown {
+    margin-left: -151px !important;
+}
+
+
+
+
+
 

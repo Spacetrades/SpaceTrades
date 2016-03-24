@@ -9,14 +9,14 @@
                    <!--  <li class="headerRadius">{{mapRadius}} <span>Miles From You</span></li> -->
                 </button>
             </ul>
-            <ul class="headerBigCat">
-                <li class="headerDropDown hoverDropDown hoverDropper">
+            <ul class="headerPostOptions headerLine clickDropper headerCatDrop">
+                <li class="headerDropDown headerDropDownPre headerCatDropLi">
                     <span>Categories</span>
-                    <ul class="headerDropDownNav hoverDropDown">
-                        <li><a href="/search" class="catApparel">Apparel</a></li>
-                        <li><a href="/search" class="catElectronics">Electronics</a></li>
-                        <li><a href="/search" class="catShoes">Shoes</a></li>
-                        <li><a href="/search" class="catOther">Other</a></li>
+                    <ul class="headerDropDownNav headerCatDropDown">
+                        <a href="/search" class="catApparel"><li>Apparel</li></a>
+                        <a href="/search" class="catElectronics"><li>Electronics</li></a>
+                        <a href="/search" class="catShoes"><li>Shoes</li></a>
+                        <a href="/search" class="catOther"><li>Other</li></a>
                     </ul>
                 </li>
             </ul>
@@ -34,40 +34,38 @@
             <ul class="headerPostOptions headerLine clickDropper">
                 <li class="headerDropDown navGlobal">
                     <a href="#"><i class="fa fa-bars"></i></a>
-                    <ul class="headerDropDownNav">
+                    <ul class="headerDropDownNav managerDropdown">
                         <a href="/add"><li>Add Listing</li></a>
                         <a href="/profile/active"><li>Active Meetups</li></a>
                         <a href="/profile/offers"><li>Sent Offers</li></a>
                         <a href="/profile/listings"><li>Your Listings</li></a>
                         <a href="/profile/saved"><li>Saved Products</li></a>
-                        <a href="/profile/history"><li>History</li></a> 
-                        <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg" data-toggle="modal" data-target="#notificationsModal">
-                            View All Notifications
-                        </button> 
+                        <a href="/profile/history"><li>History</li></a>  
                     </ul>
                 </li>
-                <li class="headerDropDown clickDropper">
+                <li class="headerDropDown navNotifications clickDropper">
                     <a href="#"><i class="fa fa-globe"></i></a>
-                    <ul class="headerDropDownNav">
+                    <ul class="headerDropDownNav notifyDropdown">
                     {{#if hasNotifications}}
-                         {{#each Notification}}
-                        <li><a href="#">{{> Notification}}</a></li>
+                        {{#each Notification}}
+                        <li>{{> Notification}}</li>
                         {{/each}}
+                         <button type="button" class="modNotificationsTrigger btn btn-primary btn-lg" >
+                            View All Notifications
+                        </button> 
                         {{/if}}
                     </ul>
                 </li> 
-                <li class="headerDropDown clickDropper">
-                    <a href="/chat"><i class="material-icons">chat</i></a>
-                    <ul class="headerDropDownNav">
-                    </ul>
+                <li class="headerDropDown navMessages clickDropper">
+                   <a href="/chat"><i class="material-icons">chat</i></a>
                 </li> 
                 <li class="headerDropDown navGeneral clickDropper">
                     <a href="#"><i class="fa fa-caret-down"></i></a>
-                    <ul class="headerDropDownNav">
-                        <a href="/help"><li>Help Center</li></a>
-                        <a href="/help"><li>Go Premium</li></a>
+                    <ul class="headerDropDownNav otherDropdown">
+                       <a href="/help"><li>Help Center</li></a>
+                       <a href="/help"><li>Go Premium</li></a>
                         <a href="/advertise"><li>Advertise</li></a>
-                        <a href="/help/report"><li>Report</li></a>
+                       <a href="/help/report"><li>Report</li></a>
                         <a href="/profile/settings"><li>Profile Settings</li></a>
                         <a href="#" class="logout"><li>Logout</li></a>
                     </ul>
