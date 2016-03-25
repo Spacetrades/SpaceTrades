@@ -2605,7 +2605,6 @@ i:hover {
             text-align: left !important;
             width: 150px;
             padding: 18px 50px 18px 20px;
-            border-top: 1px solid #555;
             font-size: 0.8rem !important;
 
             a {
@@ -2710,6 +2709,23 @@ i:hover {
     position: absolute;
     z-index: 2;
 }
+
+.headerDropDownPre {
+    padding: 12px;
+}
+
+.headerDropDownPre:hover {
+    background-color: #404040 !important;
+    color: #fff !important;
+}
+
+.headerDropDownPre ul {
+    margin-left: -169px !important;
+}
+
+.headerDropDownPre span {
+    font-size: 0.9rem !important;
+} 
 
 .headerSearch {
     margin-top: 10px !important;
@@ -5986,7 +6002,17 @@ textarea {
     margin-left: -151px !important;
 }
 
+.headerNotDrop a {
+    font-size: 0.9rem !important;
+}
 
+.headerDropShoes > ul {
+    margin-left: -182px !important;
+}
+
+.headerDropApparel > ul {
+    margin-left: -170px !important;
+}
 
 
 
