@@ -18,15 +18,16 @@ if (Meteor.isClient) {
         // Information
         condition: $(".condition option:selected").val(),
         description: $(".editdescription").val()
-
       }
-      console.log(options);
 
-      sAlert.success("Listing updated");
+      // if (validate()) {
+
+      // }
 
       Meteor.call('updateListing', options);
 
       Router.go("/");
+      sAlert.success("Listing updated");
 
     }
   });
