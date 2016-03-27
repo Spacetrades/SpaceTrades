@@ -8,7 +8,7 @@ if (Meteor.isClient) {
             var text = $(".message").val();
             var name = Meteor.user().profile.name;
             sAlert.success('Message sent');
-           
+
 
             Meteor.call('sendEmail',
                 'nchackerian@gmail.com',

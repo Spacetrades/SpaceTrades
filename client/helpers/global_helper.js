@@ -49,8 +49,8 @@ if (Meteor.isClient) {
     var hour = Math.floor(diff / 60);
     var minute = Math.floor(diff % 60);
 
-    var min = minute - 4 + " minutes ago"
-    var hr = hour + "hours and "
+    var min = minute + " minutes ago"
+    var hr = hour + " hours and "
 
     var time = hr.concat(min);
 
