@@ -100,6 +100,7 @@ meteorhacks:meteorx@1.4.1
 meteorhacks:npm@1.5.0
 meteorhacks:picker@1.0.3
 meteorhacks:search-source@1.4.2
+meteoric:ionic@0.2.0
 meteoric:ionic-sass@0.1.8
 meteoric:ionicons-sass@0.1.5
 mike:mocha@0.6.6
@@ -155,7 +156,6 @@ session@1.1.1
 sha@1.0.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
-spiderable@1.0.9
 srp@1.0.4
 standard-minifiers@1.0.2
 templating@1.1.5
