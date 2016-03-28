@@ -15,6 +15,7 @@ if (Meteor.isClient) {
       sweetAlert({
         title: "Listing Removed",
         type: "success",
+        timer: 2000,
         showConfirmButton: false
       });
       // Router.go("/");

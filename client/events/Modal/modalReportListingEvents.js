@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 	// Implement some system for validation
-	// Choices: Is, Angular forms, validate js ... 
+	// Choices: Is, Angular forms, validate js ...
 	// Determine how things will be investigated
 
 	Template.ModalReportListing.events({
@@ -42,7 +42,7 @@ if (Meteor.isClient) {
 					text: "",
 					html: "true",
 					type: "success",
-					timer: 3000,
+					timer: 2000,
 					showConfirmButton: false
 				});
 			}
