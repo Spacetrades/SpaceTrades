@@ -110,29 +110,7 @@ if (Meteor.isClient) {
 
       if (OfferValidate()) {
         Meteor.call('addOffer', options);
-
-        function expireOffer() {
-
-          Offer.remove({
-            expireKey: options.expireKey
-          });
-        }
-
-        Meteor.setTimeout(expireOffer, options.delayTime);
-
-        // // Notification
-        // Meteor.call('pulseNotify', options);
-
-        sweetAlert({
-          title: "Offer Created",
-          text: "<span style='font-weight: bold;'>Offer:</span> " + "<span style='color: #f8504b'>" + options.listing_title + "</span>" + "<span> Created </span>",
-          html: "true",
-          type: "success",
-          timer: 3000,
-          showConfirmButton: false
-        });
-
-        Router.go("/");
+        Meteor.call('expireOffer', options);
 
       };
     }
