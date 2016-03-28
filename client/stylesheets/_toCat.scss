@@ -1796,6 +1796,11 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
   float: right; 
 }
 
+.currentLocation {
+   color: #F8504B !important;
+   background-color: #F8504B !important;
+}
+
 /* CSS Magic to Highlight Stars on Hover */
 .rating3 > input:checked ~ label, /* show gold star when clicked */
 .rating3:not(:checked) > label:hover, /* hover current star */
@@ -4748,7 +4753,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCards {
     vertical-align: top !important;
-    margin-top: -956px !important;
+    margin-top: 2px !important;
     float: right;
 }
 
@@ -5356,6 +5361,11 @@ ul button a {
 	margin-top: 14px !important;
 	vertical-align: middle !important;
 	font-size: 0.9rem;
+}
+
+.locationRadiusSave{
+    background: none !important;
+    height: 6em !important;
 }
 
 .headerRadius {
