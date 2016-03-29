@@ -55,59 +55,59 @@
                     <p class="settingsChange">{{about}}</p>
                 </div>
                 <div class="profileUserButtons" style="margin-top: 2em">
-                 {{#if isOwner}}
+                   {{#if isOwner}}
                    <ul class="listingItemButtons" style="float: left">
-                 <li style="list-style-type: none">
-                 <a href="/profile/settings">Edit Settings</a>
-             </li>
-             </ul>
-             {{else}}
-             <ul class="listingItemButtons" style="float: left">
-                 <li class="profileChatBtn" style="list-style-type: none">
-                 <a href="/chat/{{chatId}}">Chat</a></li>
-                 <!--  <li class="profileChatBtn"><a class="followButton btn btn-primary btn-lg"> Follow </a></li> -->
-                  <li class="profileChatBtn modReportTrigger"style="list-style-type: none"><a href>Report User</a></li>
-             </ul>
-             {{/if}}
-         </div>
-     </div>
-     <!-- This is hidden until a certain point and than it shown and the original one is hidden-->
-     <div class="hiddenProfileUserRight">
-        <div class="profileUserAmount hiddenProfileUserAmount">
-            <ul>
-                <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
-                </li>
-                <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
-                </li>
-            </ul>
+                       <li style="list-style-type: none">
+                           <a href="/profile/settings">Edit Settings</a>
+                       </li>
+                   </ul>
+                   {{else}}
+                   <ul class="listingItemButtons" style="float: left">
+                       <li class="profileChatBtn" style="list-style-type: none">
+                           <a href="/chat/{{chatId}}">Chat</a></li>
+                           <!--  <li class="profileChatBtn"><a class="followButton btn btn-primary btn-lg"> Follow </a></li> -->
+                           <li class="modReportTrigger"><a href>Report User</a></li>
+                       </ul>
+                       {{/if}}
+                   </div>
+               </div>
+               <!-- This is hidden until a certain point and than it shown and the original one is hidden-->
+               <div class="hiddenProfileUserRight">
+                <div class="profileUserAmount hiddenProfileUserAmount">
+                    <ul>
+                        <li class="profileUserAmountBought">Bought: $<span class="money">{{amountbought}}</span>
+                        </li>
+                        <li class="profileUserAmountSold">Sold: $<span class="money">{{amountsold}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="desc-box profileDesc hiddenProfileDesc">
+                    <h4 class="box-title">Description</h4>
+                    <p>{{about}}</p>
+                </div>
+                <div class="profileUserButtons hiddenProfileUserButtons">
+                    <ul class="profileUserButtonUl">
+                        <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="desc-box profileDesc hiddenProfileDesc">
-            <h4 class="box-title">Description</h4>
-            <p>{{about}}</p>
-        </div>
-        <div class="profileUserButtons hiddenProfileUserButtons">
-            <ul class="profileUserButtonUl">
-                <li class="profileChatBtn"><a href="/chat/{{chatId}}">Chat</a></li>
-            </ul>
-        </div>
+        <div class="profileUserCards oneDiv">
+            <ul class="profileUserCardsUl">
+             {{#each listing}}
+             <li>
+                <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
+            </li>
+            {{/each}}
+        </ul>
+        <ul class="profileUserMore">
+            <li>
+                <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
+            </li>
+        </ul>
     </div>
-</div>
-<div class="profileUserCards oneDiv">
-    <ul class="profileUserCardsUl">
-       {{#each listing}}
-       <li>
-        <a href="/listing/{{_id}}"><img src="{{img1}}"></a>
-    </li>
-    {{/each}}
-</ul>
-<ul class="profileUserMore">
-    <li>
-        <a href="#" class="homeLoadMore"><i class="fa fa-chevron-circle-down"></i></a>
-    </li>
-</ul>
-</div>
-<div class="profileUserFeedbackView oneDiv">
-    {{#if feedbackExists}}
+    <div class="profileUserFeedbackView oneDiv">
+        {{#if feedbackExists}}
         <!-- <h2>Feedback</h2>
         <ul class="profileUserFeedbackViewSymbols">
             <li class="profileUserFeedbackViewPositive"><i class="fa fa-plus"></i>{{upvotes}}</li>
