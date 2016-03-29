@@ -5732,7 +5732,8 @@ textarea {
 }
 
 .modReportTrigger{
-    background-color: #E87600;
+    background-color: #E87600 !important;
+    display: initial !important;
 }
 
 .headerHomeButton a {
