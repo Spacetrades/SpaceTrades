@@ -3591,7 +3591,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemUser {
     margin-top: 47px;
-    padding: 20px;
+    padding: 0 20px !important;
     height: 156px;
     border-radius: 4px;
     text-align: center;
@@ -6017,6 +6017,33 @@ textarea {
 .headerDropElectronics > ul {
     margin-left: -150px !important;
 }
+
+.modTriggerJoin {
+    font-family: $font_stack-header !important;
+}
+
+.profileBtn:hover {
+    background-color: #ee4641 !important;
+}
+
+.listingItemPriceButtons ul {
+    margin-top: 25px !important;
+}
+
+.listingItemUser {
+    background-color: #f8504b !important;
+}
+
+.listingItemUserImg {
+    margin-top: 10px !important;
+}
+
+.listingItemUserImg ul li a img {
+    height: 80px !important;
+    width: 80px !important;
+}
+
+
 
 
 
