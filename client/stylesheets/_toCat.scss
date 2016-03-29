@@ -3432,7 +3432,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemButtons li {
     display: inline-block;
-    margin: auto 3px;
+    margin: initial;
 }
 
 .listingItemButtons li:last-child {
@@ -5729,6 +5729,10 @@ textarea {
 
 .headerHomeButton {
     margin-top: 10px !important;
+}
+
+.modReportTrigger{
+    background-color: #E87600;
 }
 
 .headerHomeButton a {
