@@ -31,9 +31,9 @@ if (Meteor.isClient) {
     },
     other: function() {
       other = "";
-      _.map(convos, function(x) {
+      // _.map(convos, function(x) {
         sample = Message.find({
-          conversation: x
+          conversation: this
         }).fetch()[0];
 
         var sender = sample.sender;
@@ -41,8 +41,8 @@ if (Meteor.isClient) {
         var you = Meteor.userId();
 
         other = you == sender ? receiver : sender;
-        Session.set('otherId', other);
-      });
+        // Session.set('otherId', other);
+      // });
       return Meteor.users.findOne({
         _id: other
       }).profile;

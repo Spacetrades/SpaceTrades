@@ -5,7 +5,7 @@ if (Meteor.isClient) {
 			$(".spin").hide();
 		},
     'click .modReportTrigger': function(){
-      $(".modReport").attr("style", "display: block");
+     $("#reportUserModal").modal();
     },
     'click .profileChatBtn': function(){
       Session.set('recipientId', id_user);

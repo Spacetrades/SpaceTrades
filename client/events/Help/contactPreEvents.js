@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 
-    Template.contact.events({
+    Template.contactPre.events({
         'click .contactButton': function(e) {
             e.preventDefault();
 

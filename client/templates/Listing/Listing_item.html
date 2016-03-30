@@ -1,7 +1,6 @@
 <template name="item">
  <!-- TASK - Add Go to Manager button for your listing pages -->
  {{#with listing}}
-
  {{#if offerAccepted}}
  {{> itemAfter}}
  {{else}}
@@ -22,7 +21,7 @@
             </li>
             {{/if}}
             <li>
-                <a href="" class="modViewOffers modOfferRequestTrigger btn btn-default">Manage</a>
+                <a class="modViewOffers modOfferRequestTrigger btn btn-default">Manage</a>
             </li>
         </ul>
         {{else}}

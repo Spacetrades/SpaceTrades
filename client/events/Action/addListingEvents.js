@@ -124,7 +124,7 @@ if (Meteor.isClient) {
           text: "<span style='font-weight: bold;'>Listing:</span> " + "<span style='color: #f8504b'>" + options.listing_title + "</span>" + "<span> Created </span>",
           html: "true",
           type: "success",
-          timer: 3000,
+          timer: 2000,
           showConfirmButton: false
         });
 

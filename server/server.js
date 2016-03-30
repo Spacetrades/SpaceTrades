@@ -26,7 +26,7 @@ if (Meteor.isServer) {
 
   // Kadira
   Kadira.connect('vJ7Dq44oj6HuY8q2c', 'fd9872bc-e750-4a40-93e7-b326ccd1249b');
-  // prerenderio.set('prerenderToken', '4jWuCKjUUuJRuJYWDnWB');
+  prerenderio.set('prerenderToken', '4jWuCKjUUuJRuJYWDnWB');
 
   SearchSource.defineSource('listing', function(searchText, options) {
     var options = {

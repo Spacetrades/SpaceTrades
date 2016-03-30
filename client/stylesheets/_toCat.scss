@@ -1796,6 +1796,11 @@ HELP | ABOUT | FAQ | SAFETY | PRIVACY | CONTACT **/
   float: right; 
 }
 
+.currentLocation {
+   color: #F8504B !important;
+   background-color: #F8504B !important;
+}
+
 /* CSS Magic to Highlight Stars on Hover */
 .rating3 > input:checked ~ label, /* show gold star when clicked */
 .rating3:not(:checked) > label:hover, /* hover current star */
@@ -3224,6 +3229,7 @@ i:hover {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     font-weight: 400;
+    max-width: 15em;
 }
 
 .homeCardItem li a h4:hover {
@@ -3442,7 +3448,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .listingItemButtons li {
     display: inline-block;
-    margin: auto 3px;
+    margin: initial;
 }
 
 .listingItemButtons li:last-child {
@@ -4763,7 +4769,7 @@ On click the images will be displayed at normal size to complete the effect
 
 .searchResultsCards {
     vertical-align: top !important;
-    margin-top: -956px !important;
+    margin-top: 2px !important;
     float: right;
 }
 
@@ -5373,6 +5379,11 @@ ul button a {
 	font-size: 0.9rem;
 }
 
+.locationRadiusSave{
+    background: none !important;
+    height: 6em !important;
+}
+
 .headerRadius {
 	width: 150px;
 	margin-left: 10px;
@@ -5734,6 +5745,11 @@ textarea {
 
 .headerHomeButton {
     margin-top: 10px !important;
+}
+
+.modReportTrigger{
+    background-color: #E87600 !important;
+    display: initial !important;
 }
 
 .headerHomeButton a {
