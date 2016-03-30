@@ -63,6 +63,8 @@
         {{#if currentUser}}
         {{> headerpost}}
         {{> HelpCenterNav}}
+<!-- MODALS -->
+        {{> ModalReportUser}}
         {{> yield}}
         {{else}}
         {{> headerpre}}
@@ -100,7 +102,6 @@
         {{> sAlert}}
         {{#if currentUser}}
         {{> headerpost}}
-
         {{> ModalReportListing}}
         {{> ModalListingDelete}}
         {{> yield}}
