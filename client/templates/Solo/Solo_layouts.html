@@ -29,10 +29,12 @@
         {{#if currentUser}}
         {{> homeheaderpost}}
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> homeheaderpre}}
         {{> ModalJoin}}
-        {{> yield}} 
+        {{> yield}}
+        {{> footerPre}} 
         {{/if}}
     </template>
 
@@ -51,10 +53,12 @@
         {{#if currentUser}} 
         {{> headersearchpost}}
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> headersearchpre}}
         {{> ModalJoin}}
         {{> yield}}
+        {{> footerPre}}
         {{/if}}
     </template>
 
@@ -66,11 +70,13 @@
 <!-- MODALS -->
         {{> ModalReportUser}}
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> headerpre}}
         {{> ModalJoin}}
         {{> HelpCenterNav}}
         {{> yield}}
+        {{> footerPre}}
         {{/if}}
     </template>
 
@@ -91,10 +97,12 @@
         {{> ModalProfileActive}}
 
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> headerpre}}
         {{> ModalJoin}}
         {{> yield}}
+        {{> footerPre}}
         {{/if}}
     </template>
 
@@ -105,10 +113,12 @@
         {{> ModalReportListing}}
         {{> ModalListingDelete}}
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> headerpre}}
         {{> ModalJoin}}
         {{> yield}}
+        {{> footerPre}}
         {{/if}}
     </template>
 
