@@ -113,6 +113,7 @@
         {{> ModalReportListing}}
         {{> ModalListingDelete}}
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> headerpre}}
         {{> ModalJoin}}
@@ -126,10 +127,12 @@
         {{#if currentUser}}
         {{> headerpost}}
         {{> yield}}
+        {{> footer}}
         {{else}}
         {{> headerpre}}
         {{> ModalJoin}}
         {{> yield}}
+        {{> footerPre}}
         {{/if}}
     </template>
 
