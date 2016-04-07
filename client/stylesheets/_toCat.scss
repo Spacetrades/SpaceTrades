@@ -6067,6 +6067,12 @@ textarea {
     margin-top: 0 !important;
 }
 
+.homeCardItem li:nth-child(2) {
+    width: 12.6rem !important;
+}
 
-
-
+.homeCardItem li a h4 {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
