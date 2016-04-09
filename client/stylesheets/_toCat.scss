@@ -3048,7 +3048,7 @@ i:hover {
 }
 
 .managerOfferView {
-    margin-top: 23px !important;
+    margin-top: 16px !important;
     margin-bottom: 8px !important;
     text-align: right;
 }
@@ -3209,12 +3209,12 @@ i:hover {
 }
 
 .homeCardImg {
-    // width: 100%;
+    width: 100% !important;
     border-radius: 4px;
 }
 
 .homeCardImg {
-    // height: 100% !important;
+    height: 100% !important;
 }
 
 .searchResultsCardImg {
@@ -3245,7 +3245,7 @@ i:hover {
 }
 
 .homeCardDetails li ul li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 2px auto; 
 }
 
@@ -4032,7 +4032,7 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .profileUserMore {
-    margin: 0 0 1rem 0 !important;
+    margin: 0 0 4rem 0 !important;
     text-align: center !important;
 }
 
@@ -4315,7 +4315,6 @@ On click the images will be displayed at normal size to complete the effect
 .profileCardImage img {
     width: 100%; 
     height: 100%;
-    min-height: 10em;
     border-radius: 4px !important;
 }
 
@@ -4406,6 +4405,7 @@ On click the images will be displayed at normal size to complete the effect
 .footerItems li h3 a {
     color: #fff !important;
     font-weight: 400;
+    font-size: 1rem !important;
 }
 
 .footerItems li h4 {
@@ -4415,10 +4415,15 @@ On click the images will be displayed at normal size to complete the effect
 
 .footerItems li h4 a, .footerItems li h4 a:visited, .footerItems li h4 a:link {
     color: #404040 !important;
+    font-size: 0.9rem !important;
 }
 
 .footerItems li h4 a:hover {
     color: #000 !important;
+}
+
+.footerCopy {
+    font-size: 0.9rem !important;
 }
 
 .footerSocial li {
@@ -4439,8 +4444,17 @@ On click the images will be displayed at normal size to complete the effect
 }
 
 .footerSocial ul li i {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #404040 !important;
+}
+
+.footerSocial ul li:nth-child(5) {
+    margin-bottom: -4px !important;
+}
+
+
+.footerSocial ul li:nth-child(4) {
+    margin-bottom: 3px !important;
 }
 
 .footerSocial ul li i:hover {
@@ -5628,7 +5642,7 @@ textarea {
     color: #fff;
     background-color: #f8504b;
     border-radius: 4px;
-    border-bottom: 4px solid #EE4641;
+    border-bottom: 2px solid #EE4641;
 }
 
 // .defaultProfileButton a:hover {
@@ -6068,14 +6082,11 @@ textarea {
     margin-top: 0 !important;
 }
 
-.homeCardItem li:nth-child(2) {
-    width: 12.6rem !important;
-}
-
 .homeCardItem li a h4 {
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
+    font-size: 0.9rem !important;
 }
 
 #itemFooter {
