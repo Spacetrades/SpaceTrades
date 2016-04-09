@@ -3209,12 +3209,12 @@ i:hover {
 }
 
 .homeCardImg {
-    // width: 100%;
+    width: 100% !important;
     border-radius: 4px;
 }
 
 .homeCardImg {
-    // height: 100% !important;
+    height: 100% !important;
 }
 
 .searchResultsCardImg {
@@ -6080,10 +6080,6 @@ textarea {
 
 .defaultProfileUserDiv {
     margin-top: 0 !important;
-}
-
-.homeCardItem li:nth-child(2) {
-    width: 12.6rem !important;
 }
 
 .homeCardItem li a h4 {
