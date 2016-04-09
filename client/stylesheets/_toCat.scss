@@ -2536,7 +2536,7 @@ i:hover {
 }
 
 .headerNav ul li a {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
 }
 
 .headerNav a {
@@ -2561,7 +2561,7 @@ i:hover {
 
 .headerAuth {
     margin-right: 20px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
     margin-top: 8px !important;
 }
 
@@ -2573,10 +2573,6 @@ i:hover {
 	margin: 5px !important;
 }
 
-.headerNotDrop a {
-    color: $color-spacegrey !important;
-    padding: 12px !important;
-}
 
 .headerAuth li a:hover {
     // background-color: #fff;
@@ -2725,11 +2721,11 @@ i:hover {
 }
 
 .headerDropDownPre ul {
-    margin-left: -151px !important;
+    margin-left: -158px !important;
 }
 
 .headerDropDownPre span {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
 } 
 
 .headerSearch {
@@ -3234,10 +3230,6 @@ i:hover {
 
 .homeCardItem li a h4:hover {
     text-decoration: underline;
-}
-
-.homeCardDetails {
-    margin-top: 5px;
 }
 
 .homeCardDetails > li {
@@ -6038,15 +6030,15 @@ textarea {
 }
 
 .headerDropShoes > ul {
-    margin-left: -182px !important;
+    margin-left: -192px !important;
 }
 
 .headerDropApparel > ul {
-    margin-left: -170px !important;
+    margin-left: -180px !important;
 }
 
 .headerDropElectronics > ul {
-    margin-left: -150px !important;
+    margin-left: -160px !important;
 }
 
 .modTriggerJoin {
@@ -6094,3 +6086,68 @@ textarea {
     width: 100% !important;
     margin-top: 1000px !important;
 }
+
+.headerNotDrop a {
+    color: $color-spacegrey !important;
+    padding: 12px !important;
+    font-size: 0.8rem !important;
+}
+
+.login:hover {
+    background-color: #fff !important;
+    color: #404040 !important;
+}
+
+.headerAuth li:nth-child(2) {
+    margin-top: -4px !important;
+}
+
+.headerAuth li:nth-child(1) {
+    margin-top: -2px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
