@@ -227,6 +227,19 @@
     .profileDesc p {
         font-size: 0.9rem !important;
     }
+
+    .headerLine {
+        padding-right: 0em important;
+        padding: 0 !important;
+    }
+
+    .headerLine {
+        margin: 4px 10px 3px 5px !important;
+    }
+
+    .headerCatDrop {
+        margin: 4px 0px 3px 5px !important;
+    }
 }
 
 @media (max-width: 880px) {
@@ -291,6 +304,17 @@
     .searchResultsCardSize, 
     .searchResultsCardCondition, .searchResultsCardLocation {
         font-size: 0.9rem !important;
+    }
+}
+
+
+@media (max-width: 830px) {
+    .headerSearchNavLogo {
+        margin-left: 10px !important;
+    }
+
+    .headerSearchRadiusLogo {
+        margin-right: 20px;
     }
 }
 
@@ -377,6 +401,19 @@
 
     .profileUserMore li a i {
         font-size: 3rem !important;
+    }
+
+    .headerCatDropLi {
+        padding: 12px 10px !important;
+    }
+
+    .headerNameOptions li a, .headerHomeButton li a {
+        padding: 12px 10px !important;
+    }
+
+    .headerPostOptions li a i {
+        font-size: 0.9rem !important; 
+        padding: 5px !important;
     }
 }
 
