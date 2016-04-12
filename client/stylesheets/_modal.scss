@@ -1240,6 +1240,10 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 	margin-bottom: 0;
 }
 
+.modJoinWrapper > ul {
+	margin-bottom: 24px !important;
+}
+
 .modJoinWrapper ul li {
 	line-height: 2;
 }
@@ -1352,6 +1356,41 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
 .editListRadio h2 {
 	 font-size: 1.8rem !important;
 }
+
+.modAddListingContent {
+    border: none !important;
+    box-shadow: none !important;
+    overflow-y: hidden !important;
+}
+
+.modAddListingQNA h2, .modOfferRequestPageOneUl li h2:first-child {
+	margin: 0 0 20px 0 !important
+}
+
+.modOfferRequestPageOneUl li h2 {
+	width: 100% !important;
+}
+
+.joinAgreeSmall {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 0.75rem !important;
+	color: #444 !important;
+	margin-top: 15px !important;
+}
+
+.joinAgreeSmall a {
+	color: #6c54b3 !important;
+}
+
+.joinAgreeSmall a:hover {
+	text-decoration: underline !important;
+}
+
+
+
+
+
 
 
 
