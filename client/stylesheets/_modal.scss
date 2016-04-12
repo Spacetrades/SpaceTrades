@@ -1359,8 +1359,13 @@ div[class="sp-replacer sp-light full-spectrum sp-active"] {
     overflow-y: hidden !important;
 }
 
+.modAddListingQNA h2, .modOfferRequestPageOneUl li h2:first-child {
+	margin: 0 0 20px 0 !important
+}
 
-
+.modOfferRequestPageOneUl li h2 {
+	width: 100% !important;
+}
 
 
 
